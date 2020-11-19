@@ -1,0 +1,47 @@
+site_name: HuangFuSL's Blog
+nav:
+  - Home: index.md
+  - About: about.md
+theme:
+  name: material
+  language: zh
+  palette:  # 颜色
+    primary: 'pink'
+    accent: 'red'
+    feature:
+      tabs: true  # 横向导航
+  font:
+    code: Source Code Pro
+    text: PingFang SC
+markdown_extensions:
+  - pymdownx.arithmatex
+  - pymdownx.details
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.extra
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
