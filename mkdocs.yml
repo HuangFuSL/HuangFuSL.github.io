@@ -1,18 +1,22 @@
 site_name: HuangFuSL's Blog
 nav:
   - Home: index.md
-  - About: about.md
+  - 一些很喜欢的推送: weixin.md
+  - 关于我: about.md
 theme:
   name: material
   language: zh
   palette:  # 颜色
-    primary: 'pink'
-    accent: 'red'
+    primary: 'teal'
+    accent: 'green'
     feature:
       tabs: true  # 横向导航
   font:
     code: Source Code Pro
     text: PingFang SC
+  favicon: img/favicon.png
+  icon:
+    logo: material/book-variant
 markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.details
@@ -45,3 +49,4 @@ markdown_extensions:
 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  - js/love.js

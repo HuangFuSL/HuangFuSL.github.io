@@ -1,1 +1,0 @@
-mkdocs build -d ../HuangFuSL.github.io --no-directory-urls
