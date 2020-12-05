@@ -2,6 +2,7 @@ site_name: HuangFuSL's Blog
 nav:
   - Home: index.md
   - 一些很喜欢的推送: weixin.md
+  - 写代码: coding.md
   - 关于我: about.md
 theme:
   name: material
