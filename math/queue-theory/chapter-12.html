@@ -39,8 +39,6 @@
     
     
     
-      <link rel="stylesheet" href="../../css/1.css">
-    
     
       
     
@@ -372,9 +370,99 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Chapter 12
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="chapter-12.html" class="md-nav__link md-nav__link--active">
       Chapter 12
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    排队模型的描述
+  </a>
+  
+    <nav class="md-nav" aria-label="排队模型的描述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    进入系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    实体排队与处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    系统的符号表示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    系统的观测指标
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    随机过程
+  </a>
+  
+    <nav class="md-nav" aria-label="随机过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markov" class="md-nav__link">
+    Markov 过程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    生灭过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -482,6 +570,82 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    排队模型的描述
+  </a>
+  
+    <nav class="md-nav" aria-label="排队模型的描述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    进入系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    实体排队与处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    系统的符号表示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    系统的观测指标
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    随机过程
+  </a>
+  
+    <nav class="md-nav" aria-label="随机过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markov" class="md-nav__link">
+    Markov 过程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    生灭过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -498,6 +662,149 @@
                 
                 
                 <h1 id="_1">常见排队模型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>一个排队模型主要由以下部分组成</p>
+<ul>
+<li>顾客（实体）进入系统</li>
+<li>实体开始处理</li>
+<li>实体排队等待处理（系统的排队策略可能不同，损失制不允许排队、混合制允许排有限长度的队列）</li>
+<li>实体处理完毕，离开系统</li>
+</ul>
+<h2 id="_2">排队模型的描述<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">进入系统<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>假设进入系统的实体数量无限，每个时刻至多有一个实体进入系统。考察相邻两个实体进入系统的时间差：</p>
+<ol>
+<li>对于定长分布，实体进入系统的时间差为常量<span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>，<span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>概率密度函数为：</li>
+</ol>
+<div>
+<div class="MathJax_Preview">
+f(t; \alpha)=\left\{
+\begin{aligned}
+    &amp; 1 &amp; t=\alpha \\
+    &amp; 0 &amp; t\not =\alpha
+\end{aligned}
+\right .
+</div>
+<script type="math/tex; mode=display">
+f(t; \alpha)=\left\{
+\begin{aligned}
+    & 1 & t=\alpha \\
+    & 0 & t\not =\alpha
+\end{aligned}
+\right .
+</script>
+</div>
+<ol>
+<li>Poisson 流，实体进入系统的时间差独立同分布，服从参数为<span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>的指数分布</li>
+</ol>
+<div>
+<div class="MathJax_Preview">
+f_{\xi_i}(t; \lambda)=\left\{
+\begin{aligned}
+    &amp; \lambda e^{-\lambda t} &amp; t\geq 0 \\
+    &amp; 0 &amp; t &lt; 0
+\end{aligned}
+\right .
+</div>
+<script type="math/tex; mode=display">
+f_{\xi_i}(t; \lambda)=\left\{
+\begin{aligned}
+    & \lambda e^{-\lambda t} & t\geq 0 \\
+    & 0 & t < 0
+\end{aligned}
+\right .
+</script>
+</div>
+<ol>
+<li>Erlang 分布，实体进入系统的时间差独立同分布，服从如下公式所示的分布。若某个系统中有<span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>个并联的服务台，输入实体为 Poisson 流，则第<span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>个服务台的顾客流为 Erlang 流，前面所有<span><span class="MathJax_Preview">K - 1</span><script type="math/tex">K - 1</script></span>个服务台在第一个实体到达以后的输入流同样为 Erlang 流。</li>
+</ol>
+<div>
+<div class="MathJax_Preview">
+f(t; \lambda, K)=\left\{
+\begin{aligned}
+    &amp; \frac{\lambda(\lambda t)^{K-1}}{(K-1)!} &amp; t\geq 0 \\
+    &amp; 0 &amp; t &lt; 0
+\end{aligned}
+\right .
+</div>
+<script type="math/tex; mode=display">
+f(t; \lambda, K)=\left\{
+\begin{aligned}
+    & \frac{\lambda(\lambda t)^{K-1}}{(K-1)!} & t\geq 0 \\
+    & 0 & t < 0
+\end{aligned}
+\right .
+</script>
+</div>
+<h3 id="_4">实体排队与处理<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>系统中可能有一个或多个服务台。在系统中的所有服务台都处于运行状态时，新进入的实体无法立即进行处理，而是进入队列或直接离开，取决于系统的排队策略。排队策略可以分为损失制、等待制与混合制。  </p>
+<p>在损失制系统中，如果新进入的实体不能被立即处理，则会离开系统。<br />
+在等待制系统中，如果新进入的实体不能被立即处理，则会在队列中等待，直到被处理。<br />
+在混合制系统中，如果新进入的实体不能被立即处理且此时的队列长度大于某一常数值，则会离开系统，否则会进入队列等待。</p>
+<p>实体在排队过程中的行为可以分为如下类型：</p>
+<ul>
+<li>离开：当实体得知需要等待或没有耐心继续等待时，实体可能退出队列</li>
+<li>变换：即实体为减少排队时间而在不同服务台的队列之间移动</li>
+</ul>
+<p>服务台会按照如下可能的方式进行服务：</p>
+<ul>
+<li>FCFS：先进入队列的先进行处理</li>
+<li>LCFS：后进入队列的先进行处理</li>
+<li>随机处理</li>
+<li>PS：优先级高的实体先进行处理</li>
+<li>断续处理：在处理某个实体一段时间后，转而处理另一个实体，不断循环直到实体处理完成</li>
+</ul>
+<p>在系统中的服务台的服务时间是一个随机变量，概率分布为常数、指数分布、K级 Erlang 分布、一般分布等。</p>
+<h3 id="_5">系统的符号表示<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>Kendall记号，格式为<span><span class="MathJax_Preview">X/Y/Z/A/B/C</span><script type="math/tex">X/Y/Z/A/B/C</script></span></p>
+<ul>
+<li><span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>表示实体到达间隔时间的分布</li>
+<li><span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>表示到达过程为 Poisson 过程（间隔时间服从指数分布）或负指数分布</li>
+<li><span><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>表示间隔时间为常数</li>
+<li><span><span class="MathJax_Preview">E_k</span><script type="math/tex">E_k</script></span>表示间隔时间服从<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>阶 Erlang 分布</li>
+<li><span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>表示间隔时间服从一般、相互独立的随机分布</li>
+<li><span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span>表示服务台单次服务时间的分布，记号与<span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>的含义相同</li>
+<li><span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span>表示服务台个数</li>
+<li><span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>表示系统的等待空间容量，<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>为损失制系统，<span><span class="MathJax_Preview">\infty</span><script type="math/tex">\infty</script></span>为等待制系统，否则为混合制系统。</li>
+<li><span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>表示实体的总数量，<span><span class="MathJax_Preview">\infty</span><script type="math/tex">\infty</script></span>表示实体源无限</li>
+<li><span><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>表示服务规则</li>
+</ul>
+<p><span><span class="MathJax_Preview">A, B, C</span><script type="math/tex">A, B, C</script></span>参数可以省略。分别等价于<span><span class="MathJax_Preview">\infty, \infty, \mathit{FCFS}</span><script type="math/tex">\infty, \infty, \mathit{FCFS}</script></span></p>
+<h3 id="_6">系统的观测指标<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>衡量系统性能的常用观测指标为：</p>
+<ul>
+<li><span><span class="MathJax_Preview">N(L)</span><script type="math/tex">N(L)</script></span>：稳态系统的队长（指系统内所有的实体数量）</li>
+<li><span><span class="MathJax_Preview">N_q(L_q)</span><script type="math/tex">N_q(L_q)</script></span>稳态系统的排队长</li>
+<li><span><span class="MathJax_Preview">T(W)</span><script type="math/tex">T(W)</script></span>：顾客在稳态系统中的停留时间（处理+等待）</li>
+<li><span><span class="MathJax_Preview">T_q(W_q)</span><script type="math/tex">T_q(W_q)</script></span>：顾客在稳态系统中的等待时间</li>
+<li><span><span class="MathJax_Preview">p_n</span><script type="math/tex">p_n</script></span>：稳态系统任意时刻状态为<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的概率，<span><span class="MathJax_Preview">p_n=P(N=n)=\lim_{t\rightarrow \infty}P(N(t) = n)</span><script type="math/tex">p_n=P(N=n)=\lim_{t\rightarrow \infty}P(N(t) = n)</script></span></li>
+<li><span><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>：利用率</li>
+<li><span><span class="MathJax_Preview">p_D</span><script type="math/tex">p_D</script></span>：实体进入系统时需要等待的概率</li>
+</ul>
+<p>若将系统视为管道，系统中实体的数量等于实体进入系统的速度与系统平均响应（处理）时间之积。</p>
+<p>对于<span><span class="MathJax_Preview">M/M/s</span><script type="math/tex">M/M/s</script></span>系统，令<span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>为实体进入系统的速度，<span><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>为服务台处理实体的速度，<span><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>为服务台的数量，则：</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+L &amp;= \lambda_e W \\
+L_q &amp;= \lambda_e W_q
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+L &= \lambda_e W \\
+L_q &= \lambda_e W_q
+\end{aligned}
+</script>
+</div>
+<h2 id="_7">随机过程<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>常见的随机过程有 Markov 过程、生灭过程、 Poisson 过程等。</p>
+<h3 id="markov">Markov 过程<a class="headerlink" href="#markov" title="Permanent link">&para;</a></h3>
+<p>特点：<strong><span><span class="MathJax_Preview">t_0</span><script type="math/tex">t_0</script></span>时刻的状态与任意<span><span class="MathJax_Preview">t&lt;t_0</span><script type="math/tex">t<t_0</script></span>时的状态无关</strong></p>
+<p>Markov 链由马尔可夫过程中的离散状态组合。对于 Markov 过程，系统无记忆性，当前的状态不会对后面的状态产生影响。</p>
+<p><span><span class="MathJax_Preview">M/M/s</span><script type="math/tex">M/M/s</script></span>系统可以使用 Markov 过程建模。队列中实体的数量是一个 Markov 链。</p>
+<h3 id="_8">生灭过程<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>生灭过程按如下图进行描述：</p>
+<p><img alt="" src="img/1.svg" /></p>
                 
               
               
