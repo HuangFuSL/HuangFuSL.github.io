@@ -455,8 +455,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#poisson" class="md-nav__link">
+    Poisson 过程
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    生灭过程
+  </a>
   
 </li>
       
@@ -639,8 +653,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#poisson" class="md-nav__link">
+    Poisson 过程
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    生灭过程
+  </a>
   
 </li>
       
@@ -664,14 +692,13 @@
                 <h1 id="_1">常见排队模型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>一个排队模型主要由以下部分组成</p>
 <ul>
-<li>顾客（实体）进入系统</li>
-<li>实体开始处理</li>
+<li>顾客（实体）处理</li>
 <li>实体排队等待处理（系统的排队策略可能不同，损失制不允许排队、混合制允许排有限长度的队列）</li>
 <li>实体处理完毕，离开系统</li>
 </ul>
 <h2 id="_2">排队模型的描述<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="_3">进入系统<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>假设进入系统的实体数量无限，每个时刻至多有一个实体进入系统。考察相邻两个实体进入系统的时间差：</p>
+<p>假设进入系统的实体数量无限。考察相邻两个实体进入系统的时间差：</p>
 <ol>
 <li>对于定长分布，实体进入系统的时间差为常量<span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>，<span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>概率密度函数为：</li>
 </ol>
@@ -797,14 +824,27 @@ L_q &= \lambda_e W_q
 </script>
 </div>
 <h2 id="_7">随机过程<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<p>常见的随机过程有 Markov 过程、生灭过程、 Poisson 过程等。</p>
+<p>常见的随机过程有 Markov 过程、生灭过程、 Poisson 过程等。所有的 Poisson 过程都是生灭过程，所有的生灭过程都是 Markov 过程。</p>
 <h3 id="markov">Markov 过程<a class="headerlink" href="#markov" title="Permanent link">&para;</a></h3>
 <p>特点：<strong><span><span class="MathJax_Preview">t_0</span><script type="math/tex">t_0</script></span>时刻的状态与任意<span><span class="MathJax_Preview">t&lt;t_0</span><script type="math/tex">t<t_0</script></span>时的状态无关</strong></p>
 <p>Markov 链由马尔可夫过程中的离散状态组合。对于 Markov 过程，系统无记忆性，当前的状态不会对后面的状态产生影响。</p>
 <p><span><span class="MathJax_Preview">M/M/s</span><script type="math/tex">M/M/s</script></span>系统可以使用 Markov 过程建模。队列中实体的数量是一个 Markov 链。</p>
 <h3 id="_8">生灭过程<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>生灭过程按如下图进行描述：</p>
-<p><img alt="" src="img/1.svg" /></p>
+<p>生灭过程按如下图进行描述（状态转移图）：</p>
+<p><img alt="Birt-Death Process" src="img/1.svg" /></p>
+<p>假设实体离散进入的<span><span class="MathJax_Preview">M/M/s</span><script type="math/tex">M/M/s</script></span>系统，队列中的实体数量服从生灭过程</p>
+<h3 id="poisson">Poisson 过程<a class="headerlink" href="#poisson" title="Permanent link">&para;</a></h3>
+<p>实体进入的时间差相互独立且服从同一指数分布的过程</p>
+<h2 id="_9">生灭过程<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>对于生灭过程，有如下假设</p>
+<ul>
+<li>每个时刻只有一个实体进入系统</li>
+<li>定义系统的状态为系统中的实体数量<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span></li>
+<li>一个实体进入系统，系统的状态由<span><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span>转变为<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span></li>
+<li>一个实体离开系统，系统的状态由<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>转变为<span><span class="MathJax_Preview">n+1</span><script type="math/tex">n+1</script></span></li>
+<li>系统处于状态<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>时，实体进入的速度为<span><span class="MathJax_Preview">\lambda _n</span><script type="math/tex">\lambda _n</script></span>，系统的处理速度为<span><span class="MathJax_Preview">\mu_n</span><script type="math/tex">\mu_n</script></span></li>
+</ul>
+<p>问题：系统处于稳定状态时，生灭系统处于状态<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的概率<span><span class="MathJax_Preview">p_n</span><script type="math/tex">p_n</script></span>？</p>
                 
               
               
