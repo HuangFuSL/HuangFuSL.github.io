@@ -61,9 +61,6 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.tilde
 
-extra_css:
-  - css/1.css
-
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   - js/love.js
