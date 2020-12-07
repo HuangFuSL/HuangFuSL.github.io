@@ -2,7 +2,7 @@ import time
 import os
 import subprocess
 
-SOURCE_DIR = r"C:\Users\huang\Documents\GitHub\BlogSource"
+SOURCE_DIR = "."
 HTML_DIR = os.path.join("..", "HuangFuSL.github.io")
 
 COMMAND_LIST = {

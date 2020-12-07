@@ -124,7 +124,7 @@ $M/M/s$系统可以使用 Markov 过程建模。队列中实体的数量是一�
 
 生灭过程按如下图进行描述（状态转移图）：
 
-![Birt-Death Process](img/1.svg)
+![Birt-Death Process](img/12-1.svg)
 
 假设实体离散进入的$M/M/s$系统，队列中的实体数量服从生灭过程
 
@@ -140,7 +140,129 @@ $M/M/s$系统可以使用 Markov 过程建模。队列中实体的数量是一�
 * 定义系统的状态为系统中的实体数量$n$
   * 一个实体进入系统，系统的状态由$n-1$转变为$n$
   * 一个实体离开系统，系统的状态由$n$转变为$n+1$
-* 系统处于状态$n$时，实体进入的速度为$\lambda _n$，系统的处理速度为$\mu_n$
+* 系统处于状态$n$时，定义实体进入的速度为$\lambda _n$，系统的处理速度为$\mu_n$。对于$\lambda_n$，$n\geq 0$；对于$\mu_n$，$n>0$
 
 问题：系统处于稳定状态时，生灭系统处于状态$n$的概率$p_n$？
 
+对于处于状态$j$的系统，考察一个极短的时间间隔$\Delta t$，由于$\Delta t$极短，可以忽略$\Delta t$时间内两个实体同时进入/离开系统或一个实体进入、一个实体离开系统的情况。$\Delta t$时间内系统发生变化的概率如下：
+
+* 一个实体进入系统：$P(n(t+\Delta t)=j+1 | n(t) = j)=\lambda_j\Delta t$
+* 一个实体离开系统：$P(n(t+\Delta t)=j-1| n(t) = j) = \mu_j\Delta t$
+* 系统在$\Delta t$时间内没有发生状态改变：$P(n(t+\Delta t) = j | n(t)=j) = 1 - (\lambda_j+\mu_j)\Delta t$
+
+根据假设，处于状态$i$的系统在$t+\Delta t$时只可能处于$i-1, i, i+1$三种状态中的一种。也即，处于状态$i$的系统在$t-\Delta t$时只可能处于$i-1, i, i+1$三种状态中的一种。由此，可以列式如下：
+
+$$
+\begin{aligned}
+  p_0(t+\Delta t) &= (1-\lambda_0\Delta t)p_0(t) + \mu_1\Delta tp_1(t) \\
+  p_j(t+\Delta t) &= \lambda_{j-1}\Delta tp_{j-1}(t)+(1-\mu_j\Delta t-\lambda_j\Delta t)p_j(t)+\mu_{j+1}\Delta tp_{j+1}(t)
+\end{aligned}
+$$
+
+整理后取极限$\Delta t\rightarrow 0$，上式变为导数形式：
+
+$$
+\begin{aligned}
+  &\lim_{\Delta t\rightarrow 0} \frac{p_j(t+\Delta t)-p_j(t)}{\Delta t}=\lambda_{j-1}p_{j-1}(t)+\mu_{j+1}p_{j+1}(t) - (\mu_j+\lambda_j)p_j(t) \\
+  \Rightarrow &\frac{\mathrm dp_j(t)}{\mathrm dt}=\lambda_{j-1}p_{j-1}(t)+\mu_{j+1}p_{j+1}(t) - (\mu_j+\lambda_j)p_j(t)
+\end{aligned}
+$$
+
+当$t\rightarrow \infty$时，系统趋于稳态，则有$\lim_{t\rightarrow \infty}p_j(t) = p_j$，收敛的充分必要条件为$\lim_{t\rightarrow\infty} \frac{\mathrm dp_j(t)}{\mathrm dt}=0$。即$\lambda_{j-1}p_{j-1}(t)+\mu_{j+1}p_{j+1}(t) - (\mu_j+\lambda_j)p_j(t)=0$。
+
+解$p_{j+1}$，解得：
+
+$$
+p_{j+1} = \left(\frac{\mu_j+\lambda_j}{\mu{j+1}}\right)p_j-\frac{\lambda_{j-1}}{\mu_{j+1}}p_{j-1}
+$$
+
+对于$p_1$，有$p_1=\frac{\lambda_0}{\mu_1}p_0$。
+
+根据递推公式，可以用$p_0$表示出$p_j$：
+
+$$
+\begin{aligned}
+  p_2&=\left(\frac{\mu_1+\lambda_1}{\mu_2}\right)p_1-\frac{\lambda _0}{\mu_2}p_0 = \frac{\lambda_0(\mu_1+\lambda_1)}{\mu_1\mu_2}p_0-\frac{\lambda_0}{\mu_2}p_0=\frac{\lambda_0\lambda_1}{\mu_1\mu_2}p_0 \\
+  p_3&=\left(\frac{\mu_2+\lambda_2}{\mu_3}\right)p_2-\frac{\lambda_1}{\mu_3}p_1=\frac{\lambda_0\lambda_1(\mu_2+\lambda_2)}{\mu_1\mu_2\mu_3}p_0-\frac{\lambda_0\lambda_1}{\mu_1\mu_3}p_0=\frac{\lambda_0\lambda_1\lambda_2}{\mu_1\mu_2\mu_3}p_0 \\
+  &\vdots \\
+  &p_j = \frac{\lambda_0\lambda_1\cdots\lambda_{j-1}}{\mu_1\mu_2\cdots\mu_j}p_0=p_0\prod_{i = 1}^{j}\frac{\lambda_{i-1}}{\mu_j}
+\end{aligned}
+$$
+
+由于系统的状态只可能取$0\sim\infty$之间的整数值，概率之和为$1$，可以计算出$p_0$：
+
+$$
+p_0=\frac{1}{1+\sum_{n=1}^\infty \prod_{i=0}^{n}\frac{\lambda_{i-1}}{\mu_i}}
+$$
+
+***
+
+对于$M/M/1$系统，$\lambda_0=\lambda_1=\cdots=\lambda_n=\lambda, \mu_1=\cdots=\mu_n=\mu$。
+
+由此，计算出$M/M/1$系统在稳态时处于$p_0$的概率：
+
+$$
+p_0=\frac{1}{1+\sum_{n=1}^\infty \prod_{i=0}^{n}\frac{\lambda}{\mu}} = \frac{1}{1+\sum_{n=1}^\infty \rho^n}=\frac{1}{\sum_{n=0}^\infty \rho^n}=1-\rho
+$$
+
+概率分布为：$P(N=n)=\rho^n(1-\rho)$
+
+***
+
+对于$M/M/s$系统，$\lambda_i, \mu_i$服从如下规律：
+
+* $\lambda_i = \lambda \qquad i=0, 1\cdots, \infty$
+* $\mu_i = \max\{i, s\}\mu \qquad i=1, 2, \cdots, \infty$
+
+计算出$M/M/s$系统在稳态时处于$p_0$的概率，令$\rho_0=\frac{\lambda}{\mu}$：
+
+$$
+\begin{aligned}
+  p_0&=\frac{1}{1+\sum_{n=1}^\infty \prod_{i=0}^{n}\frac{\lambda}{\max\{i, s\}\mu}} \\
+  &= \frac{1}{\sum_{i=0}^{s-1}\frac{\rho_0^i}{i!}+\sum_{i=s}^\infty \frac{\rho_0^i}{s!s^{i-s}}} \\
+  &=\frac{1}{\sum_{i=0}^{s-1}\frac{\rho_0^i}{i!}+\frac{\rho_0^s}{s!}\sum_{i=0}^\infty \frac{\rho_0^i}{s^i}} \\
+  &=\frac{1}{\sum_{i=0}^{s-1}\frac{\rho_0^i}{i!}+\frac{\rho_0^s}{(s-1)!(s-\rho_0)}}
+\end{aligned}
+$$
+
+$p_i$可以通过$p_0$推导得：
+
+$$
+p_i=\frac{\lambda_0\lambda_1\cdots\lambda_{i-1}}{\mu_1\mu_2\cdots\mu_i}p_0=\left\{
+\begin{aligned}
+& \frac{\rho_0^i}{i!}p_0 & i\leq s \\
+& \frac{\rho_0^i}{s!s^{i-s}}p_0 & i > s
+\end{aligned}
+\right.
+$$
+
+当$n \geq s$时，顾客到达系统时需要等待，则有：
+
+$$
+p_D=1-\sum_{i=0}^s p_i
+$$
+
+当$N\leq s$时，系统中没有队列，$L_q=0$，当$N>s$时，队列长度为$N-s$，因此稳态时的平均排队长为：
+
+$$
+L_q=\sum_{i=s + 1}^\infty (i - s)p_i
+$$
+
+状态为$n$的稳态时系统接受服务的实体数量为：
+
+$$
+\left\{
+\begin{aligned}
+&n & n\leq s \\
+&s & n> s
+\end{aligned}
+\right .
+$$
+
+因此，稳态系统中接受服务的实体平均数量为：
+
+$$
+L-L_q=\sum_{i=0}^s ip_i+\sum_{i=s+1}^\infty sp_i
+$$
+
+顾客的平均逗留时间$W=\frac{L}{\lambda}$
