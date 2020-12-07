@@ -1,23 +1,35 @@
 site_name: HuangFuSL's Blog
+repo_name: 'HuangFuSL/BlogSource'
+repo_url: 'https://github.com/HuangFuSL/BlogSource'
+edit_uri: 'https://github.com/HuangFuSL/BlogSource/edit/main'
+
 nav:
   - Home: index.md
-  - 一些很喜欢的推送: weixin.md
-  - 写代码: coding.md
-  - 关于我: about.md
+  - 推送:
+    - 2020: weixin-2020.md
+  - 数学:
+    - 对策、决策与排队论:
+      - Chapter 12: math/queue-theory/chapter-12.md
+  - 写代码:
+    - Intro: coding.md
+  - 关于我:
+    - About: about.md
 theme:
   name: material
   language: zh
   palette:  # 颜色
     primary: 'teal'
     accent: 'green'
-    feature:
-      tabs: true  # 横向导航
+  features:
+    - navigation.tabs
   font:
     code: Source Code Pro
     text: PingFang SC
   favicon: img/favicon.png
   icon:
     logo: material/book-variant
+extra:
+  pagetime: 'on'
 markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.details
@@ -46,7 +58,11 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed
   - pymdownx.tilde
+
+extra_css:
+  - css/1.css
 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
