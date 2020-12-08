@@ -195,7 +195,7 @@ $$
 p_0=\frac{1}{1+\sum_{n=1}^\infty \prod_{i=0}^{n}\frac{\lambda_{i-1}}{\mu_i}}
 $$
 
-***
+### $M/M/1$队列
 
 对于$M/M/1$系统，$\lambda_0=\lambda_1=\cdots=\lambda_n=\lambda, \mu_1=\cdots=\mu_n=\mu$。
 
@@ -207,7 +207,7 @@ $$
 
 概率分布为：$P(N=n)=\rho^n(1-\rho)$
 
-***
+### $M/M/s$队列
 
 对于$M/M/s$系统，$\lambda_i, \mu_i$服从如下规律：
 
@@ -281,4 +281,14 @@ $$
 \end{aligned}
 $$
 
-顾客的平均逗留时间$W=\frac{L}{\lambda}$
+顾客的平均逗留时间$W=\frac{L}{\lambda}$：
+
+$$
+\begin{aligned}
+  W&=\frac{L}{\lambda} \\
+  &= \frac{\sum_{i=0}^\infty ip_i}{\lambda} \\
+  &= \frac{\sum_{i=1}^s \left(\frac{\rho_0^i}{(i-1)!\left(T+\frac{\rho_0^s}{(s-1)!(s-\rho_0)}\right)}\right) + \sum_{i=s+1}^\infty \left(i\frac{\rho_0^i}{s!s^{i-s}\left(T+\frac{\rho_0^s}{(s-1)!(s-\rho_0)}\right)}\right) }{\lambda} \\
+  &= \frac{\frac{T(s-1)!(s-\rho_0)}{T(s-1)!(s-\rho_0) + \rho_0^s} + \frac{\rho_0^{s+1}(s-\rho_0+1)/(s-\rho_0)}{T(s-1)!(s-\rho_0) + \rho_0^s}}{\lambda} \\
+  &= \frac{T(s-1)!(s-\rho_0) + \rho_0^{s+1}(s-\rho_0+1)/(s-\rho_0)}{\lambda(T(s-1)!(s-\rho_0) + \rho_0^s)}
+\end{aligned}
+$$
