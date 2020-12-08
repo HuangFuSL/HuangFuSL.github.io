@@ -39,6 +39,8 @@
     
     
     
+      <link rel="stylesheet" href="/css/timeago.css">
+    
     
       
     
@@ -1151,12 +1153,16 @@
       <script>
         app = initialize({
           base: "/",
-          features: ['navigation.tabs'],
+          features: ['navigation.tabs', 'navigation.expand', 'search.suggest'],
           search: Object.assign({
             worker: "/assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
+      
+        <script src="/js/timeago.min.js"></script>
+      
+        <script src="/js/timeago_mkdocs_material.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
