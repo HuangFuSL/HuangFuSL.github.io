@@ -9,6 +9,7 @@ COMMAND_LIST = {
     'build': 'mkdocs build -d %s --no-directory-urls' % (HTML_DIR),
     'check': 'git status',
     'push': 'git push',
+    'pull': 'git pull',
     'add': 'git add --all',
     'commit': 'git commit -a --message="%s"'
 }
@@ -34,8 +35,10 @@ if __name__ == "__main__":
             cwd=os.getcwd()
         )
         subprocess.run(COMMAND_LIST['push'], cwd=os.getcwd())
-        subprocess.run(COMMAND_LIST['build'], cwd=os.getcwd())
+        src = os.getcwd()
         os.chdir(HTML_DIR)
+        subprocess.run(COMMAND_LIST['pull'], cwd=os.getcwd())
+        subprocess.run(COMMAND_LIST['build'], cwd=src)
         ret2 = subprocess.run(
             COMMAND_LIST['check'], text=True, capture_output=True, cwd=os.getcwd())
         if 'clean' not in ret2.stdout:

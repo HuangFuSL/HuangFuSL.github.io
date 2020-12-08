@@ -225,13 +225,13 @@ $$
 \end{aligned}
 $$
 
-$p_i$可以通过$p_0$推导得：
+设$\sum_{i=0}^{s-1}\frac{\rho_0^i}{i!}=T$，$p_i$可以通过$p_0$推导得：
 
 $$
 p_i=\frac{\lambda_0\lambda_1\cdots\lambda_{i-1}}{\mu_1\mu_2\cdots\mu_i}p_0=\left\{
 \begin{aligned}
-& \frac{\rho_0^i}{i!}p_0 & i\leq s \\
-& \frac{\rho_0^i}{s!s^{i-s}}p_0 & i > s
+& \frac{\rho_0^i}{i!}p_0=\frac{\rho_0^i}{i!\left(T+\frac{\rho_0^s}{(s-1)!(s-\rho_0)}\right)} & i\leq s \\
+& \frac{\rho_0^i}{s!s^{i-s}}p_0=\frac{\rho_0^i}{s!s^{i-s}\left(T+\frac{\rho_0^s}{(s-1)!(s-\rho_0)}\right)} & i > s
 \end{aligned}
 \right.
 $$
@@ -239,7 +239,7 @@ $$
 当$n \geq s$时，顾客到达系统时需要等待，则有：
 
 $$
-p_D=\sum_{i=s}^\infty p_i= \sum_{i=s}^\infty \frac{\rho^i_0}{s!s^{i-s}}p_0 = \frac{\rho^s_0p_0}{(s-1)!(s-\rho_0)}
+p_D=\sum_{i=s}^\infty p_i= \sum_{i=s}^\infty \frac{\rho^i_0}{s!s^{i-s}}p_0 = \frac{\rho^s_0p_0}{(s-1)!(s-\rho_0)}=\frac{\rho^s_0}{(s-1)!(s-\rho_0)T+\rho_0^s}
 $$
 
 当$N\leq s$时，系统中没有队列，$L_q=0$，当$N>s$时，队列长度为$N-s$，因此稳态时的平均排队长为：
@@ -272,7 +272,12 @@ $$
 \begin{aligned}
   L-L_q&=\sum_{i=0}^s ip_i+\sum_{i=s+1}^\infty sp_i \\
   &=\sum_{i=0}^s \frac{\rho_0^i}{(i-1)!}p_0+s\sum_{i=s+1}^\infty \frac{\rho_0^i}{s!s^{i-s}}p_0 \\
-  &= \sum_{i=0}^s \frac{\rho_0^i}{(i-1)!}p_0 + \frac{\rho_0^sp_0}{(s-1)!}\sum_{i=1}^\infty \frac{\rho_0^i}{s^i}
+  &= \sum_{i=0}^s \frac{\rho_0^i}{(i-1)!}p_0 + \frac{\rho_0^sp_0}{(s-1)!}\sum_{i=1}^\infty \frac{\rho_0^i}{s^i} \\
+  &= \sum_{i=0}^s \frac{\rho_0^i}{(i-1)!}p_0 + \frac{\rho_0^{s+1}p_0}{(s-1)!(s-\rho_0)} \\
+  &= \frac{\sum_{i=0}^s \frac{\rho_0^i}{(i-1)!}}{\left(T+\frac{\rho_0^s}{(s-1)!(s-\rho_0)}\right)} + \frac{\rho_0^{s+1}p_0}{(s-1)!(s-\rho_0)} \\
+  &= \frac{\rho_0 T+1}{T+\frac{\rho_0^s}{(s-1)!(s-\rho_0)}} + \frac{\rho_0^{s+1}}{(s-1)!(s-\rho_0)T+\rho_0^s} \\
+  &= \frac{(\rho_0 T+1)(s-1)!(s-\rho_0) + \rho_0^{s+1}}{(s-1)!(s-\rho_0)T+\rho_0^s}\\
+  &= \rho_0 + \frac{(s-1)!(s-\rho_0)}{(s-1)!(s-\rho_0)T+\rho_0^s}
 \end{aligned}
 $$
 
