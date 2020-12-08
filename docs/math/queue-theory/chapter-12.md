@@ -239,13 +239,20 @@ $$
 当$n \geq s$时，顾客到达系统时需要等待，则有：
 
 $$
-p_D=1-\sum_{i=0}^s p_i
+p_D=\sum_{i=s}^\infty p_i= \sum_{i=s}^\infty \frac{\rho^i_0}{s!s^{i-s}}p_0 = \frac{\rho^s_0p_0}{(s-1)!(s-\rho_0)}
 $$
 
 当$N\leq s$时，系统中没有队列，$L_q=0$，当$N>s$时，队列长度为$N-s$，因此稳态时的平均排队长为：
 
 $$
-L_q=\sum_{i=s + 1}^\infty (i - s)p_i
+\begin{aligned}
+  L_q&=\sum_{i=s + 1}^\infty (i - s)p_i \\
+  &=\sum_{i=s}^\infty (i-s)\frac{\rho^i_0}{s!s^{i-s}}p_0 \\
+  &= \frac{\rho^s_0p_0}{s!}\sum_{i=0}^\infty \frac{i\rho_0^i}{s^i} \\
+  &= \frac{\rho^s_0p_0}{s!}\sum_{i=1}^\infty \left(\frac{\rho_0}{s}\right)^i\frac{s}{s-\rho_0} \\
+  &= \frac{\rho^s_0p_0}{(s-1)!(s-\rho)}\frac{\rho_0/s}{1-\rho_0/s} \\
+  &= \frac{\rho^{s+1}_0p_0}{(s-1)!(s-\rho_0)^2}
+\end{aligned}
 $$
 
 状态为$n$的稳态时系统接受服务的实体数量为：
@@ -262,7 +269,11 @@ $$
 因此，稳态系统中接受服务的实体平均数量为：
 
 $$
-L-L_q=\sum_{i=0}^s ip_i+\sum_{i=s+1}^\infty sp_i
+\begin{aligned}
+  L-L_q&=\sum_{i=0}^s ip_i+\sum_{i=s+1}^\infty sp_i \\
+  &=\sum_{i=0}^s \frac{\rho_0^i}{(i-1)!}p_0+s\sum_{i=s+1}^\infty \frac{\rho_0^i}{s!s^{i-s}}p_0 \\
+  &= \sum_{i=0}^s \frac{\rho_0^i}{(i-1)!}p_0 + \frac{\rho_0^sp_0}{(s-1)!}\sum_{i=1}^\infty \frac{\rho_0^i}{s^i}
+\end{aligned}
 $$
 
 顾客的平均逗留时间$W=\frac{L}{\lambda}$
