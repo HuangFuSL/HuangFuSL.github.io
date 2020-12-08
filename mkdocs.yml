@@ -68,12 +68,15 @@ nav:
     - About: about.md
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   palette:  # 颜色
     primary: 'teal'
     accent: 'green'
   features:
     - navigation.tabs
+    - navigation.expand
+    - search.suggest
   font:
     code: Source Code Pro
     text: PingFang SC
@@ -82,6 +85,12 @@ theme:
     logo: material/book-variant
 extra:
   pagetime: 'on'
+plugins:
+  - search:
+      prebuild_index: true
+  - git-revision-date
+  - git-revision-date-localized:
+      type: timeago
 markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.details
@@ -116,3 +125,4 @@ markdown_extensions:
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   - js/love.js
+  # - js/canvas-nest.js
