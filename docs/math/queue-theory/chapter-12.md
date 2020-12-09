@@ -195,7 +195,7 @@ $$
 p_0=\frac{1}{1+\sum_{n=1}^\infty \prod_{i=0}^{n}\frac{\lambda_{i-1}}{\mu_i}}
 $$
 
-### $M/M/1$队列
+### M/M/1队列
 
 对于$M/M/1$系统，$\lambda_0=\lambda_1=\cdots=\lambda_n=\lambda, \mu_1=\cdots=\mu_n=\mu$。
 
@@ -207,7 +207,7 @@ $$
 
 概率分布为：$P(N=n)=\rho^n(1-\rho)$
 
-### $M/M/s$队列
+### M/M/s队列
 
 对于$M/M/s$系统，$\lambda_i, \mu_i$服从如下规律：
 
