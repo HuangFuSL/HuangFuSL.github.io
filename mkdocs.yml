@@ -64,6 +64,9 @@ nav:
     - Python:
       - 目录: coding/python.md
       - 关闭运行的线程: coding/python/killable-thread.md
+    - 数据结构:
+      - 目录: coding/dsa.md
+      - 向量与列表: coding/dsa/vector-and-list.md
   - 关于我:
     - About: about.md
 theme:

@@ -4,7 +4,7 @@
 
 * [Leetcode](leetcode.md)
 * [Python](python.md)
-* 数据结构
+* [数据结构](dsa.md)
 * 深度学习
 * 机器学习
 * 系统配置
