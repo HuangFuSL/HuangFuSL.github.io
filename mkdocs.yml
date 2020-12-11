@@ -7,6 +7,10 @@ nav:
   - Home: index.md
   - 推送:
     - 2020: weixin-2020.md
+  - LaTeX:
+    - 目录: latex/index.md
+    - 数学公式: latex/cheatsheet.md
+    - 幻灯片: latex/slides.md
   - 数学:
     - 目录: math/index.md
     - 对策、决策与排队论:
