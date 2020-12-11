@@ -14,6 +14,7 @@
 * `\boldsymbol{A}`：$\boldsymbol A$
 * `\mathit{A}`：$\mathit A$（无效果）
 * `\mathrm{A}`：$\mathrm A$
+* `\mathscr{A}`：$\mathscr A$（需要引入宏包`mathrsfs`）
 
 ## 希腊字母
 
