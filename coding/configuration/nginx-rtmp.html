@@ -1427,10 +1427,10 @@
                 <h1 id="nginxrtmp">源码编译nginx并添加RTMP模块<a class="headerlink" href="#nginxrtmp" title="Permanent link">&para;</a></h1>
 <h2 id="_1">先决条件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>nginx源代码，需要从<a href="https://github.com/nginx/nginx/tags">GitHub Release</a>下载，从<a href="http://nginx.org/">nginx官网</a>下载的源代码在后序编译时会报如下错误：
+<li>nginx源代码，需要从<a href="https://github.com/nginx/nginx/tags">GitHub Release</a>下载，从<a href="http://nginx.org/">nginx官网</a>下载的源代码在后续编译时会报如下错误：
   <div class="highlight"><pre><span></span><code>NMAKE : fatal error U1073: don&#39;t know how to make &#39;src/os/win32/ngx_win32_config.h&#39;
 </code></pre></div></li>
-<li>openssl源代码，可以从<a href="https://github.com/openssl/openssl/tags">GitHub Release</a>下载或直接克隆openssl仓库</li>
+<li>openssl源代码，可以从<a href="https://github.com/openssl/openssl/tags">GitHub Release</a>下载</li>
 <li>zlib源代码，GitHub仓库：<a href="https://github.com/madler/zlib">https://github.com/madler/zlib</a></li>
 <li>pcre源代码，官网提供各版本的下载链接：<a href="https://ftp.pcre.org/pub/pcre/">https://ftp.pcre.org/pub/pcre/</a></li>
 <li>RMTP插件：<a href="https://github.com/arut/nginx-rtmp-module">https://github.com/arut/nginx-rtmp-module</a></li>
@@ -1947,6 +1947,7 @@
 <li>访问<code>http://localhost:8080</code>可以查看服务器端的统计信息</li>
 <li>客户端（如VLC等）可以访问<code>rtmp://localhost:1935/live</code>接收流，<code>localhost</code>可以更改为本机的IP地址</li>
 </ul>
+<p>使用命令<code>.\nginx.exe -s stop</code>关闭服务器</p>
                 
                   
                     
@@ -1955,7 +1956,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-12-13T04:41:35+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-12-13</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-12-13T04:53:35+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-12-13</span>
     
   </small>
 </div>
