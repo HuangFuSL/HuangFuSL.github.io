@@ -2,11 +2,11 @@
 
 ## 先决条件
 
-* nginx源代码，需要从[GitHub Release](https://github.com/nginx/nginx/tags)下载，从[nginx官网](http://nginx.org/)下载的源代码在后序编译时会报如下错误：
+* nginx源代码，需要从[GitHub Release](https://github.com/nginx/nginx/tags)下载，从[nginx官网](http://nginx.org/)下载的源代码在后续编译时会报如下错误：
   ```
   NMAKE : fatal error U1073: don't know how to make 'src/os/win32/ngx_win32_config.h'
   ```
-* openssl源代码，可以从[GitHub Release](https://github.com/openssl/openssl/tags)下载或直接克隆openssl仓库
+* openssl源代码，可以从[GitHub Release](https://github.com/openssl/openssl/tags)下载
 * zlib源代码，GitHub仓库：[https://github.com/madler/zlib](https://github.com/madler/zlib)
 * pcre源代码，官网提供各版本的下载链接：[https://ftp.pcre.org/pub/pcre/](https://ftp.pcre.org/pub/pcre/)
 * RMTP插件：[https://github.com/arut/nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module)
@@ -550,3 +550,5 @@ all:
 * 推流使用的RTMP服务器地址为：`rtmp://localhost:1935/live`
 * 访问`http://localhost:8080`可以查看服务器端的统计信息
 * 客户端（如VLC等）可以访问`rtmp://localhost:1935/live`接收流，`localhost`可以更改为本机的IP地址
+
+使用命令`.\nginx.exe -s stop`关闭服务器
