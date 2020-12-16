@@ -136,7 +136,7 @@ extra_css:
   - css/button.css
   - css/colors.css
   - css/gitalk.css
-  - css/commenticon.css
+  # - css/commenticon.css
   
 
 extra_javascript:
