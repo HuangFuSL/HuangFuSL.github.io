@@ -783,6 +783,7 @@
     display: inline-block;
     width: 3.125em;
     height: 3.125em;
+    overflow: hidden;
 }
 
 @media (max-width: 479px) {

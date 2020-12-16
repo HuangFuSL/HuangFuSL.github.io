@@ -387,6 +387,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../latex/environ.html" class="md-nav__link">
+      环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../latex/slides.html" class="md-nav__link">
       幻灯片
     </a>
@@ -1432,7 +1444,7 @@
 <h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><strong>基本思路：</strong> 将下一个节点的值复制到当前节点，然后删去下一个节点。（已知当前节点一定不是末尾节点）</p>
 <p>代码如下：</p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">deleteNode</span><span class="p">(</span><span class="k">struct</span> <span class="nc">ListNode</span><span class="o">*</span> <span class="n">node</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">deleteNode</span><span class="p">(</span><span class="k">struct</span> <span class="n">ListNode</span><span class="o">*</span> <span class="n">node</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">node</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span>
     <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 <span class="p">}</span>

@@ -387,6 +387,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../latex/environ.html" class="md-nav__link">
+      环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../latex/slides.html" class="md-nav__link">
       幻灯片
     </a>
@@ -1458,7 +1470,7 @@
     <span class="p">}</span>
     <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="kt">int</span><span class="o">**</span> <span class="nf">levelOrder</span><span class="p">(</span><span class="k">struct</span> <span class="nc">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">returnSize</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">returnColumnSizes</span><span class="p">){</span>
+<span class="kt">int</span><span class="o">**</span> <span class="nf">levelOrder</span><span class="p">(</span><span class="k">struct</span> <span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">returnSize</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">returnColumnSizes</span><span class="p">){</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="o">*</span><span class="n">returnSize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -1478,9 +1490,9 @@
         <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">leftBranchSize</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">rightBranchSize</span><span class="p">)</span>
             <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">leftColumnSizes</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">rightBranch</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">rightColumnSizes</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">returnCols</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
         <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">leftBranchSize</span><span class="p">)</span>
-            <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span> <span class="n">leftColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">returnCols</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+            <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">leftColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">returnCols</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
         <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">rightBranchSize</span><span class="p">)</span>
-            <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rightBranch</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span> <span class="n">rightColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span> <span class="n">returnCols</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+            <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rightBranch</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rightColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">returnCols</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="n">free</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">);</span>
     <span class="n">free</span><span class="p">(</span><span class="n">rightBranch</span><span class="p">);</span>

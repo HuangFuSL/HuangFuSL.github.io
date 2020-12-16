@@ -387,6 +387,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../latex/environ.html" class="md-nav__link">
+      环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../latex/slides.html" class="md-nav__link">
       幻灯片
     </a>
@@ -1487,7 +1499,7 @@ F(N) = F(N - 1) + F(N - 2), 其中 N &gt; 1.
         <span class="p">(</span><span class="o">*</span><span class="n">cache</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">N</span> <span class="o">&gt;</span> <span class="o">*</span><span class="n">lenCache</span> <span class="o">&amp;&amp;</span> <span class="n">N</span> <span class="o">&lt;=</span> <span class="o">*</span><span class="n">fullCache</span><span class="p">)</span>
-        <span class="p">(</span><span class="o">*</span><span class="n">cache</span><span class="p">)[</span><span class="n">N</span><span class="mi">-1</span><span class="p">]</span> <span class="o">=</span> <span class="n">fib_cache</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cache</span><span class="p">,</span> <span class="n">lenCache</span><span class="p">,</span> <span class="n">fullCache</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib_cache</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cache</span><span class="p">,</span> <span class="n">lenCache</span><span class="p">,</span> <span class="n">fullCache</span><span class="p">);</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">cache</span><span class="p">)[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">fib_cache</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cache</span><span class="p">,</span> <span class="n">lenCache</span><span class="p">,</span> <span class="n">fullCache</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib_cache</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cache</span><span class="p">,</span> <span class="n">lenCache</span><span class="p">,</span> <span class="n">fullCache</span><span class="p">);</span>
         <span class="o">*</span><span class="n">lenCache</span> <span class="o">=</span> <span class="n">N</span><span class="p">;</span>
     <span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="n">cache</span><span class="p">)[</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
 <span class="p">}</span>

@@ -387,6 +387,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../latex/environ.html" class="md-nav__link">
+      环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../latex/slides.html" class="md-nav__link">
       幻灯片
     </a>
@@ -1433,7 +1445,7 @@
 <p><strong>基本思路：</strong> 使用哈希表存储数组中各元素出现的次数，注意数值在交集中可以重复出现。</p>
 <p>代码如下：</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define MIN(x, y) (x &gt; y ? y : x)</span>
-<span class="k">struct</span> <span class="nc">cell</span>
+<span class="k">struct</span> <span class="n">cell</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">times1</span><span class="p">;</span>
@@ -1442,10 +1454,10 @@
 <span class="kt">int</span><span class="o">*</span> <span class="nf">intersect</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nums1Size</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">nums2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nums2Size</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">returnSize</span><span class="p">){</span>
     <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cur</span><span class="p">,</span> <span class="n">mapSize</span> <span class="o">=</span> <span class="n">nums1Size</span> <span class="o">+</span> <span class="n">nums2Size</span><span class="p">,</span> <span class="o">*</span><span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">nums1Size</span> <span class="o">+</span> <span class="n">nums2Size</span><span class="p">));</span>
     <span class="o">*</span><span class="n">returnSize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">struct</span> <span class="nc">cell</span> <span class="o">*</span><span class="n">hashMap</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="nc">cell</span> <span class="o">*</span><span class="p">)</span><span class="n">memset</span><span class="p">(</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="nc">cell</span><span class="p">)</span> <span class="o">*</span> <span class="n">mapSize</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="nc">cell</span><span class="p">)</span> <span class="o">*</span> <span class="n">mapSize</span><span class="p">);</span>
+    <span class="k">struct</span> <span class="n">cell</span> <span class="o">*</span><span class="n">hashMap</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">cell</span> <span class="o">*</span><span class="p">)</span><span class="n">memset</span><span class="p">(</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">cell</span><span class="p">)</span> <span class="o">*</span> <span class="n">mapSize</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">cell</span><span class="p">)</span> <span class="o">*</span> <span class="n">mapSize</span><span class="p">);</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums1Size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">cur</span> <span class="o">=</span> <span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">-1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="n">mapSize</span><span class="p">);</span>
+        <span class="n">cur</span> <span class="o">=</span> <span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="n">mapSize</span><span class="p">);</span>
         <span class="k">while</span><span class="p">((</span><span class="n">hashMap</span><span class="p">[</span><span class="n">cur</span><span class="p">].</span><span class="n">times1</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">hashMap</span><span class="p">[</span><span class="n">cur</span><span class="p">].</span><span class="n">times2</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">hashMap</span><span class="p">[</span><span class="n">cur</span><span class="p">].</span><span class="n">value</span> <span class="o">!=</span> <span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
         <span class="p">{</span>
             <span class="n">cur</span><span class="o">++</span><span class="p">;</span>
@@ -1457,7 +1469,7 @@
     <span class="p">}</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums2Size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">cur</span> <span class="o">=</span> <span class="p">(</span><span class="n">nums2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">-1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">nums2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="n">mapSize</span><span class="p">);</span>
+        <span class="n">cur</span> <span class="o">=</span> <span class="p">(</span><span class="n">nums2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">nums2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="n">mapSize</span><span class="p">);</span>
         <span class="k">while</span><span class="p">((</span><span class="n">hashMap</span><span class="p">[</span><span class="n">cur</span><span class="p">].</span><span class="n">times1</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">hashMap</span><span class="p">[</span><span class="n">cur</span><span class="p">].</span><span class="n">times2</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">hashMap</span><span class="p">[</span><span class="n">cur</span><span class="p">].</span><span class="n">value</span> <span class="o">!=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
         <span class="p">{</span>
             <span class="n">cur</span><span class="o">++</span><span class="p">;</span>

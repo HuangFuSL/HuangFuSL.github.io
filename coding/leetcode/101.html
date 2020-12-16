@@ -387,6 +387,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../latex/environ.html" class="md-nav__link">
+      环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../latex/slides.html" class="md-nav__link">
       幻灯片
     </a>
@@ -1437,7 +1449,7 @@
 <span class="cm"> *     struct TreeNode *right;</span>
 <span class="cm"> * };</span>
 <span class="cm"> */</span>
-<span class="kt">bool</span> <span class="nf">isMirrored</span><span class="p">(</span><span class="k">struct</span> <span class="nc">TreeNode</span> <span class="o">*</span><span class="n">root1</span><span class="p">,</span> <span class="k">struct</span> <span class="nc">TreeNode</span> <span class="o">*</span><span class="n">root2</span><span class="p">)</span>
+<span class="kt">bool</span> <span class="nf">isMirrored</span><span class="p">(</span><span class="k">struct</span> <span class="n">TreeNode</span> <span class="o">*</span><span class="n">root1</span><span class="p">,</span> <span class="k">struct</span> <span class="n">TreeNode</span> <span class="o">*</span><span class="n">root2</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">root1</span> <span class="o">||</span> <span class="o">!</span><span class="n">root2</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">root1</span> <span class="o">==</span> <span class="n">root2</span><span class="p">;</span>
@@ -1446,7 +1458,7 @@
     <span class="k">return</span> <span class="n">isMirrored</span><span class="p">(</span><span class="n">root1</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">root2</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">isMirrored</span><span class="p">(</span><span class="n">root2</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">root1</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kt">bool</span> <span class="nf">isSymmetric</span><span class="p">(</span><span class="k">struct</span> <span class="nc">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">){</span>
+<span class="kt">bool</span> <span class="nf">isSymmetric</span><span class="p">(</span><span class="k">struct</span> <span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">){</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
     <span class="k">return</span> <span class="n">isMirrored</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>

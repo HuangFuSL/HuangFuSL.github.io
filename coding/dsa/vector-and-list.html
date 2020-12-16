@@ -387,6 +387,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../latex/environ.html" class="md-nav__link">
+      环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../latex/slides.html" class="md-nav__link">
       幻灯片
     </a>
@@ -1466,7 +1478,7 @@
 <p>C/C++语言中的数组数据结构可以视为简单的向量。但数组不提供插入、删除等具体的操作接口，需要在程序代码中手动实现。将数组封装成类可以提供更多的操作接口，并且保证数据被合法地访问及修改。</p>
 <p>向量是数组的抽象泛化、支持所有数组的功能，对于不同类型的元素提供了统一的操作接口。</p>
 <p>C++提供了模板类的功能用来针对不同类型的元素提供相同的功能。对于某个ADT（以向量为例），其属性和接口的组织方式可遵循如下规则：</p>
-<div class="highlight"><pre><span></span><code><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">Vector</span> <span class="p">{</span> <span class="c1">//向量模板类</span>
+<div class="highlight"><pre><span></span><code><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">Vector</span> <span class="p">{</span> <span class="c1">//向量模板类</span>
 <span class="k">private</span><span class="o">:</span> <span class="n">Rank</span> <span class="n">_size</span><span class="p">;</span> <span class="kt">int</span> <span class="n">_capacity</span><span class="p">;</span> <span class="n">T</span><span class="o">*</span> <span class="n">_elem</span><span class="p">;</span> <span class="c1">//规模、容量、数据区</span>
 <span class="k">protected</span><span class="o">:</span>
 <span class="cm">/* ... 内部函数 */</span>
