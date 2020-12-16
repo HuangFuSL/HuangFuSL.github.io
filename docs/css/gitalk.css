@@ -795,6 +795,7 @@
 .gt-container .gt-avatar img {
     width: 100%;
     height: auto;
+    display: inline-block;
     border-radius: 3px;
     overflow: hidden;
     border: 0.1px solid transparent;
