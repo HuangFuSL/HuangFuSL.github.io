@@ -65,6 +65,9 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
   Array.prototype.forEach.call(buttons, function(button) {
     button.addEventListener("click", function() {
       document.body.dataset.mdColorAccent = this.dataset.mdColorAccent;
+      var icons = document.querySelectorAll(".gt-container .gt-avatar img[data-md-color-accent]");
+      for (icon in icons)
+        icon.dataset["mdColorAccent"] = this.dataset.mdColorAccent;
       localStorage.setItem("data-md-color-accent",this.dataset.mdColorAccent);
     })
   })
