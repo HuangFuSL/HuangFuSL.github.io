@@ -797,7 +797,7 @@
     height: auto;
     border-radius: 3px;
     overflow: hidden;
-    border-right: 20px solid transparent;
+    border: 0.1px solid transparent;
 }
 
 .gt-container .gt-avatar-github {
