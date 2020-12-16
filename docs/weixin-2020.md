@@ -17,3 +17,5 @@
 [《文艺是一场骗局吗？》](https://mp.weixin.qq.com/s/LjBeE76puYumTWCz5ZV1Vw) by 人物
 
 [《一碗米豆腐，穿越山海》](https://mp.weixin.qq.com/s/HjXm5AcNKIRIvHSKXoHSOA) by 人物
+
+[《保研失败以后，我又考了次清华》](https://mp.weixin.qq.com/s/nTYT_7kOPwP_nTbh0U1JDg) by 清华研读间
