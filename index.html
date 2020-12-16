@@ -1471,6 +1471,9 @@
   Array.prototype.forEach.call(buttons, function(button) {
     button.addEventListener("click", function() {
       document.body.dataset.mdColorAccent = this.dataset.mdColorAccent;
+      var icons = document.querySelectorAll(".gt-container .gt-avatar img[data-md-color-accent]");
+      for (icon in icons)
+        icon.dataset["mdColorAccent"] = this.dataset.mdColorAccent;
       localStorage.setItem("data-md-color-accent",this.dataset.mdColorAccent);
     })
   })
@@ -1498,7 +1501,7 @@ docs/
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-12-09T09:03:49+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-12-09</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-12-16T10:17:50+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-12-16</span>
     
   </small>
 </div>
