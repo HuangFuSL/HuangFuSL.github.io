@@ -135,7 +135,7 @@ markdown_extensions:
 extra_css:
   - css/button.css
   - css/colors.css
-  - https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
+  - css/gitalk.css
   
 
 extra_javascript:
