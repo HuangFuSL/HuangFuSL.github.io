@@ -20,8 +20,9 @@ if __name__ == "__main__":
     # check the status of the source
     # if the working tree is clean,
     # no rebuild and commit required.
+    src = os.getcwd()
     ret = subprocess.run(
-        COMMAND_LIST['check'], text=True, capture_output=True, cwd=os.getcwd())
+        COMMAND_LIST['check'], text=True, capture_output=True, cwd=src)
     if 'clean' not in ret.stdout:
         subprocess.run(COMMAND_LIST['add'], cwd=os.getcwd())
         subprocess.run(
@@ -34,27 +35,26 @@ if __name__ == "__main__":
             ),
             cwd=os.getcwd()
         )
-        subprocess.run(COMMAND_LIST['push'], cwd=os.getcwd())
-        src = os.getcwd()
+        subprocess.run(COMMAND_LIST['push'], cwd=src)
         os.chdir(HTML_DIR)
-        subprocess.run(COMMAND_LIST['pull'], cwd=os.getcwd())
-        subprocess.run(COMMAND_LIST['build'], cwd=src)
-        ret2 = subprocess.run(
-            COMMAND_LIST['check'], text=True, capture_output=True, cwd=os.getcwd())
-        if 'clean' not in ret2.stdout:
-            subprocess.run(COMMAND_LIST['add'], cwd=os.getcwd())
-            subprocess.run(
-                COMMAND_LIST['commit'] % (
-                    "Update on " +
-                    time.strftime(
-                        "%Y/%m/%d %H:%M:%S",
-                        time.localtime(time.time())
-                    ),
-                ),
-                cwd=os.getcwd()
-            )
-            subprocess.run(COMMAND_LIST['push'], cwd=os.getcwd())
-        else:
-            print("HTML files not updated.")
     else:
         print("Source not updated.")
+    subprocess.run(COMMAND_LIST['pull'], cwd=os.getcwd())
+    subprocess.run(COMMAND_LIST['build'], cwd=src)
+    ret2 = subprocess.run(
+        COMMAND_LIST['check'], text=True, capture_output=True, cwd=os.getcwd())
+    if 'clean' not in ret2.stdout:
+        subprocess.run(COMMAND_LIST['add'], cwd=os.getcwd())
+        subprocess.run(
+            COMMAND_LIST['commit'] % (
+                "Update on " +
+                time.strftime(
+                    "%Y/%m/%d %H:%M:%S",
+                    time.localtime(time.time())
+                ),
+            ),
+            cwd=os.getcwd()
+        )
+        subprocess.run(COMMAND_LIST['push'], cwd=os.getcwd())
+    else:
+        print("HTML files not updated.")
