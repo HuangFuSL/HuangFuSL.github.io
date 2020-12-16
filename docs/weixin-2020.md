@@ -9,3 +9,11 @@
 [《总不能丧气太久吧。》](https://mp.weixin.qq.com/s/BVQZALvjdyi3pTUKMxaL1g) by 概率论
 
 [《我们把这场初雪做成了电影海报》](https://mp.weixin.qq.com/s/AU7zRYV3jKfRMIkatdOLtw) by 清华大学清新时报
+
+[《困于人脸识别》](https://mp.weixin.qq.com/s/M6sfo-r2mkrQ2RPJCosJKw) by 人物
+
+[《新的十年，人生的奇幻漂流》](https://mp.weixin.qq.com/s/dMCb31nc5wF3mT-s0Ffl_Q) by 人物
+
+[《文艺是一场骗局吗？》](https://mp.weixin.qq.com/s/LjBeE76puYumTWCz5ZV1Vw) by 人物
+
+[《一碗米豆腐，穿越山海》](https://mp.weixin.qq.com/s/HjXm5AcNKIRIvHSKXoHSOA) by 人物
