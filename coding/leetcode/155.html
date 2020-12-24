@@ -1452,13 +1452,13 @@ minStack.getMin();   --&gt; 返回 -2.
 <p><strong>基本思路：</strong> 使用两个域分别存储当前数值和当前栈中的最小值。</p>
 <p>代码如下：</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define MIN(x, y) (x &lt; y ? x : y)</span>
-<span class="k">struct</span> <span class="n">cell</span>
+<span class="k">struct</span> <span class="nc">cell</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">curMin</span><span class="p">;</span>
 <span class="p">};</span>
 <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-    <span class="k">struct</span> <span class="n">cell</span> <span class="n">values</span><span class="p">[</span><span class="mi">10000</span><span class="p">];</span>
+    <span class="k">struct</span> <span class="nc">cell</span> <span class="n">values</span><span class="p">[</span><span class="mi">10000</span><span class="p">];</span>
     <span class="kt">int</span> <span class="n">top</span><span class="p">;</span>
 <span class="p">}</span> <span class="n">MinStack</span><span class="p">;</span>
 <span class="cm">/** initialize your data structure here. */</span>
@@ -1613,6 +1613,7 @@ minStack.getMin();   --&gt; 返回 -2.
     
 <script type="text/javascript" color="68,198,142" opacity='0.7' zIndex="-2" count="99"
     src="/js/canvas-nest.js"></script>
+<script type="text/javascript" src="/js/loadColor.js"></script>
 <script type="text/javascript">
     const gitalk = new Gitalk({
         clientID: 'dffa82e50165bec0527d',

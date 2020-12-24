@@ -1448,7 +1448,7 @@
         <span class="n">ret</span> <span class="o">+=</span> <span class="n">testcase</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
         <span class="n">testcase</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="p">((</span><span class="n">ret</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">ret</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">((</span><span class="n">ret</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">ret</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">-1</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
                 
@@ -1562,6 +1562,7 @@
     
 <script type="text/javascript" color="68,198,142" opacity='0.7' zIndex="-2" count="99"
     src="/js/canvas-nest.js"></script>
+<script type="text/javascript" src="/js/loadColor.js"></script>
 <script type="text/javascript">
     const gitalk = new Gitalk({
         clientID: 'dffa82e50165bec0527d',

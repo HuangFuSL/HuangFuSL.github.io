@@ -1785,10 +1785,10 @@ L_q &= \lambda_e W_q
 <p>解<span><span class="MathJax_Preview">p_{j+1}</span><script type="math/tex">p_{j+1}</script></span>，解得：</p>
 <div>
 <div class="MathJax_Preview">
-p_{j+1} = \left(\frac{\mu_j+\lambda_j}{\mu{j+1}}\right)p_j-\frac{\lambda_{j-1}}{\mu_{j+1}}p_{j-1}
+p_{j+1} = \left(\frac{\mu_j+\lambda_j}{\mu_{j+1}}\right)p_j-\frac{\lambda_{j-1}}{\mu_{j+1}}p_{j-1}
 </div>
 <script type="math/tex; mode=display">
-p_{j+1} = \left(\frac{\mu_j+\lambda_j}{\mu{j+1}}\right)p_j-\frac{\lambda_{j-1}}{\mu_{j+1}}p_{j-1}
+p_{j+1} = \left(\frac{\mu_j+\lambda_j}{\mu_{j+1}}\right)p_j-\frac{\lambda_{j-1}}{\mu_{j+1}}p_{j-1}
 </script>
 </div>
 <p>对于<span><span class="MathJax_Preview">p_1</span><script type="math/tex">p_1</script></span>，有<span><span class="MathJax_Preview">p_1=\frac{\lambda_0}{\mu_1}p_0</span><script type="math/tex">p_1=\frac{\lambda_0}{\mu_1}p_0</script></span>。</p>
@@ -1799,7 +1799,7 @@ p_{j+1} = \left(\frac{\mu_j+\lambda_j}{\mu{j+1}}\right)p_j-\frac{\lambda_{j-1}}{
   p_2&amp;=\left(\frac{\mu_1+\lambda_1}{\mu_2}\right)p_1-\frac{\lambda _0}{\mu_2}p_0 = \frac{\lambda_0(\mu_1+\lambda_1)}{\mu_1\mu_2}p_0-\frac{\lambda_0}{\mu_2}p_0=\frac{\lambda_0\lambda_1}{\mu_1\mu_2}p_0 \\
   p_3&amp;=\left(\frac{\mu_2+\lambda_2}{\mu_3}\right)p_2-\frac{\lambda_1}{\mu_3}p_1=\frac{\lambda_0\lambda_1(\mu_2+\lambda_2)}{\mu_1\mu_2\mu_3}p_0-\frac{\lambda_0\lambda_1}{\mu_1\mu_3}p_0=\frac{\lambda_0\lambda_1\lambda_2}{\mu_1\mu_2\mu_3}p_0 \\
   &amp;\vdots \\
-  &amp;p_j = \frac{\lambda_0\lambda_1\cdots\lambda_{j-1}}{\mu_1\mu_2\cdots\mu_j}p_0=p_0\prod_{i = 1}^{j}\frac{\lambda_{i-1}}{\mu_j}
+  &amp;p_j = \frac{\lambda_0\lambda_1\cdots\lambda_{j-1}}{\mu_1\mu_2\cdots\mu_j}p_0=p_0\prod_{i = 1}^{j}\frac{\lambda_{i-1}}{\mu_i}
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
@@ -1807,7 +1807,7 @@ p_{j+1} = \left(\frac{\mu_j+\lambda_j}{\mu{j+1}}\right)p_j-\frac{\lambda_{j-1}}{
   p_2&=\left(\frac{\mu_1+\lambda_1}{\mu_2}\right)p_1-\frac{\lambda _0}{\mu_2}p_0 = \frac{\lambda_0(\mu_1+\lambda_1)}{\mu_1\mu_2}p_0-\frac{\lambda_0}{\mu_2}p_0=\frac{\lambda_0\lambda_1}{\mu_1\mu_2}p_0 \\
   p_3&=\left(\frac{\mu_2+\lambda_2}{\mu_3}\right)p_2-\frac{\lambda_1}{\mu_3}p_1=\frac{\lambda_0\lambda_1(\mu_2+\lambda_2)}{\mu_1\mu_2\mu_3}p_0-\frac{\lambda_0\lambda_1}{\mu_1\mu_3}p_0=\frac{\lambda_0\lambda_1\lambda_2}{\mu_1\mu_2\mu_3}p_0 \\
   &\vdots \\
-  &p_j = \frac{\lambda_0\lambda_1\cdots\lambda_{j-1}}{\mu_1\mu_2\cdots\mu_j}p_0=p_0\prod_{i = 1}^{j}\frac{\lambda_{i-1}}{\mu_j}
+  &p_j = \frac{\lambda_0\lambda_1\cdots\lambda_{j-1}}{\mu_1\mu_2\cdots\mu_j}p_0=p_0\prod_{i = 1}^{j}\frac{\lambda_{i-1}}{\mu_i}
 \end{aligned}
 </script>
 </div>
@@ -1983,7 +1983,7 @@ p_D=\sum_{i=s}^\infty p_i= \sum_{i=s}^\infty \frac{\rho^i_0}{s!s^{i-s}}p_0 = \fr
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-12-09T03:11:45+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-12-09</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-12-24T06:29:54+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-12-24</span>
     
   </small>
 </div>
@@ -2086,6 +2086,7 @@ p_D=\sum_{i=s}^\infty p_i= \sum_{i=s}^\infty \frac{\rho^i_0}{s!s^{i-s}}p_0 = \fr
     
 <script type="text/javascript" color="68,198,142" opacity='0.7' zIndex="-2" count="99"
     src="/js/canvas-nest.js"></script>
+<script type="text/javascript" src="/js/loadColor.js"></script>
 <script type="text/javascript">
     const gitalk = new Gitalk({
         clientID: 'dffa82e50165bec0527d',

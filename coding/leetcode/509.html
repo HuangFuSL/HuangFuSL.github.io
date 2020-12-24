@@ -1499,7 +1499,7 @@ F(N) = F(N - 1) + F(N - 2), 其中 N &gt; 1.
         <span class="p">(</span><span class="o">*</span><span class="n">cache</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">N</span> <span class="o">&gt;</span> <span class="o">*</span><span class="n">lenCache</span> <span class="o">&amp;&amp;</span> <span class="n">N</span> <span class="o">&lt;=</span> <span class="o">*</span><span class="n">fullCache</span><span class="p">)</span>
-        <span class="p">(</span><span class="o">*</span><span class="n">cache</span><span class="p">)[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">fib_cache</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cache</span><span class="p">,</span> <span class="n">lenCache</span><span class="p">,</span> <span class="n">fullCache</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib_cache</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cache</span><span class="p">,</span> <span class="n">lenCache</span><span class="p">,</span> <span class="n">fullCache</span><span class="p">);</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">cache</span><span class="p">)[</span><span class="n">N</span><span class="mi">-1</span><span class="p">]</span> <span class="o">=</span> <span class="n">fib_cache</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cache</span><span class="p">,</span> <span class="n">lenCache</span><span class="p">,</span> <span class="n">fullCache</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib_cache</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cache</span><span class="p">,</span> <span class="n">lenCache</span><span class="p">,</span> <span class="n">fullCache</span><span class="p">);</span>
         <span class="o">*</span><span class="n">lenCache</span> <span class="o">=</span> <span class="n">N</span><span class="p">;</span>
     <span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="n">cache</span><span class="p">)[</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
 <span class="p">}</span>
@@ -1636,6 +1636,7 @@ F(N) = F(N - 1) + F(N - 2), 其中 N &gt; 1.
     
 <script type="text/javascript" color="68,198,142" opacity='0.7' zIndex="-2" count="99"
     src="/js/canvas-nest.js"></script>
+<script type="text/javascript" src="/js/loadColor.js"></script>
 <script type="text/javascript">
     const gitalk = new Gitalk({
         clientID: 'dffa82e50165bec0527d',

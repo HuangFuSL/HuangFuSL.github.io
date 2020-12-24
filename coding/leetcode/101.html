@@ -1449,7 +1449,7 @@
 <span class="cm"> *     struct TreeNode *right;</span>
 <span class="cm"> * };</span>
 <span class="cm"> */</span>
-<span class="kt">bool</span> <span class="nf">isMirrored</span><span class="p">(</span><span class="k">struct</span> <span class="n">TreeNode</span> <span class="o">*</span><span class="n">root1</span><span class="p">,</span> <span class="k">struct</span> <span class="n">TreeNode</span> <span class="o">*</span><span class="n">root2</span><span class="p">)</span>
+<span class="kt">bool</span> <span class="nf">isMirrored</span><span class="p">(</span><span class="k">struct</span> <span class="nc">TreeNode</span> <span class="o">*</span><span class="n">root1</span><span class="p">,</span> <span class="k">struct</span> <span class="nc">TreeNode</span> <span class="o">*</span><span class="n">root2</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">root1</span> <span class="o">||</span> <span class="o">!</span><span class="n">root2</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">root1</span> <span class="o">==</span> <span class="n">root2</span><span class="p">;</span>
@@ -1458,7 +1458,7 @@
     <span class="k">return</span> <span class="n">isMirrored</span><span class="p">(</span><span class="n">root1</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">root2</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">isMirrored</span><span class="p">(</span><span class="n">root2</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">root1</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kt">bool</span> <span class="nf">isSymmetric</span><span class="p">(</span><span class="k">struct</span> <span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">){</span>
+<span class="kt">bool</span> <span class="nf">isSymmetric</span><span class="p">(</span><span class="k">struct</span> <span class="nc">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">){</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
     <span class="k">return</span> <span class="n">isMirrored</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
@@ -1575,6 +1575,7 @@
     
 <script type="text/javascript" color="68,198,142" opacity='0.7' zIndex="-2" count="99"
     src="/js/canvas-nest.js"></script>
+<script type="text/javascript" src="/js/loadColor.js"></script>
 <script type="text/javascript">
     const gitalk = new Gitalk({
         clientID: 'dffa82e50165bec0527d',
