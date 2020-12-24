@@ -173,7 +173,7 @@ $$
 解$p_{j+1}$，解得：
 
 $$
-p_{j+1} = \left(\frac{\mu_j+\lambda_j}{\mu{j+1}}\right)p_j-\frac{\lambda_{j-1}}{\mu_{j+1}}p_{j-1}
+p_{j+1} = \left(\frac{\mu_j+\lambda_j}{\mu_{j+1}}\right)p_j-\frac{\lambda_{j-1}}{\mu_{j+1}}p_{j-1}
 $$
 
 对于$p_1$，有$p_1=\frac{\lambda_0}{\mu_1}p_0$。
@@ -185,7 +185,7 @@ $$
   p_2&=\left(\frac{\mu_1+\lambda_1}{\mu_2}\right)p_1-\frac{\lambda _0}{\mu_2}p_0 = \frac{\lambda_0(\mu_1+\lambda_1)}{\mu_1\mu_2}p_0-\frac{\lambda_0}{\mu_2}p_0=\frac{\lambda_0\lambda_1}{\mu_1\mu_2}p_0 \\
   p_3&=\left(\frac{\mu_2+\lambda_2}{\mu_3}\right)p_2-\frac{\lambda_1}{\mu_3}p_1=\frac{\lambda_0\lambda_1(\mu_2+\lambda_2)}{\mu_1\mu_2\mu_3}p_0-\frac{\lambda_0\lambda_1}{\mu_1\mu_3}p_0=\frac{\lambda_0\lambda_1\lambda_2}{\mu_1\mu_2\mu_3}p_0 \\
   &\vdots \\
-  &p_j = \frac{\lambda_0\lambda_1\cdots\lambda_{j-1}}{\mu_1\mu_2\cdots\mu_j}p_0=p_0\prod_{i = 1}^{j}\frac{\lambda_{i-1}}{\mu_j}
+  &p_j = \frac{\lambda_0\lambda_1\cdots\lambda_{j-1}}{\mu_1\mu_2\cdots\mu_j}p_0=p_0\prod_{i = 1}^{j}\frac{\lambda_{i-1}}{\mu_i}
 \end{aligned}
 $$
 

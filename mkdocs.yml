@@ -137,11 +137,9 @@ extra_css:
   - css/button.css
   - css/colors.css
   - css/gitalk.css
-  # - css/commenticon.css
   
 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   - js/love.js
   - js/mermaid-min.js
-  # - js/canvas-nest.js
