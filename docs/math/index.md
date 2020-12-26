@@ -4,7 +4,7 @@
 
 1. 微积分
 2. 线性代数
-3. 离散数学
+3. [离散数学](discrete-mathematics/index.md)
 4. 概率论与数理统计
 5. 运筹学
 6. [对策、决策与排队论](queue-theory/index.md)
