@@ -71,3 +71,111 @@ $A=B$的充分必要条件是$A\leftrightarrow B$为重言式。
 置换：对公式$A$的子公式$B$，使用与之等值的公式进行代换称为置换
 
 设置换后的公式为$C$，则必有$A=C$
+
+## 从真值表计算生成命题公式
+
+从真值表生成命题公式有两种方法，既可以通过值为$T$的行生成，也可以通过值为$F$的行生成
+
+### 从值为$T$的行生成
+
+对于包含$n$个命题变元$P_1, \dots, P_n$的命题公式，写出如下合取式：
+
+$$
+P_1\land P_2\land \dots \land P_n
+$$
+
+对于真值表的每个取值为$T$的行，若对应的$P_i$为$F$，则将合取式中的对应$P_i$替换为$\lnot P_i$。将所得的公式使用析取运算符连接即得符合真值表的命题公式。
+
+### 从值为$F$的行生成
+
+对于包含$n$个命题变元$P_1, \dots, P_n$的命题公式，写出如下析取式：
+
+$$
+P_1\lor P_2\lor \dots \lor P_n
+$$
+
+对于真值表的每个取值为$F$的行，若对应的$P_i$为$T$，则将析取式中的对应$P_i$替换为$\lnot P_i$。将所得的公式使用合取运算符连接即得符合真值表的命题公式。
+
+### 联结词的完备集
+
+设集合$A$为由联结词组成的集合，若任意命题公式都有通过命题公式使用$A$中的联结词组合而成的公式与之等值，则$A$是联结词的完备集
+
+通过如上对真值表的分析，任何真值表都能使用$\{\land, \lor, \lnot\}$三个运算符表示出一个命题公式。假设存在一个公式$P$，不存在$\{\land, \lor, \lnot\}$组成的公式与之等值。但通过$P$的真值表可以构造出一个命题公式$Q$，则$Q$与$P$的真值表相同，$P=Q$，矛盾。因此$\{\land, \lor, \lnot\}$是完备的。
+
+以下列出了一部分联结词的最小完备集：
+
+* $\{\lor, \lnot\}$
+* $\{\land, \lnot\}$
+* $\{\uparrow\}$
+* $\{\downarrow\}$
+* $\{\lnot, \rightarrow\}$
+
+如果$A$是联结词的完备集，集合$B$中的联结词可以通过组合得到与$A$中联结词等价的联结词，则$B$也是联结词的完备集。
+
+***
+
+证明：$\{\lor, \lnot\}$是联结词的完备集：
+
+$$
+P\land Q = \lnot (\lnot P\lor \lnot Q)
+$$
+
+***
+
+证明：$\{\land, \lnot\}$是联结词的完备集：
+
+$$
+P\lor Q = \lnot (\lnot P\land \lnot Q)
+$$
+
+***
+
+证明：$\{\uparrow\}$是联结词的完备集：
+
+* 证明$\lnot P$可以仅使用$\uparrow$运算符表示：
+
+  $$
+  \begin{aligned}
+  \lnot P &= \lnot (P\land P) \\
+  &= P\uparrow P
+  \end{aligned}
+  $$
+
+* 证明$P\land Q$可以仅使用$\uparrow$运算符表示：
+  
+  $$
+  \begin{aligned}
+  P\land Q&= \lnot \lnot (P\land Q) \\
+  &= \lnot (P\uparrow Q) \\
+  &= (P\uparrow Q) \uparrow (P\uparrow Q)
+  \end{aligned}
+  $$
+
+***
+
+证明：$\{\downarrow\}$是联结词的完备集：
+
+* 证明$\lnot P$可以仅使用$\downarrow$运算符表示：
+  
+  $$
+  \begin{aligned}
+  \lnot P &= \lnot (P\lor P) \\
+  &= P\downarrow P
+  \end{aligned}
+  $$
+
+* 证明$P\lor Q$可以仅使用$\downarrow$运算符表示：
+  
+  $$
+  \begin{aligned}
+  P\lor Q&= \lnot \lnot (P\lor Q) \\
+  &= \lnot (P\downarrow Q) \\
+  &= (P\downarrow Q) \downarrow (P\downarrow Q)
+  \end{aligned}
+  $$
+
+***
+
+证明：$\{\rightarrow, \lnot\}$是联结词的完备集：
+
+$P\lor Q = \lnot \lnot P\lor Q = \lnot P\rightarrow Q$
