@@ -533,6 +533,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    从真值表计算生成命题公式
+  </a>
+  
+    <nav class="md-nav" aria-label="从真值表计算生成命题公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tt" class="md-nav__link">
+    从值为TT的行生成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ff" class="md-nav__link">
+    从值为FF的行生成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    联结词的完备集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1440,6 +1474,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    从真值表计算生成命题公式
+  </a>
+  
+    <nav class="md-nav" aria-label="从真值表计算生成命题公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tt" class="md-nav__link">
+    从值为TT的行生成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ff" class="md-nav__link">
+    从值为FF的行生成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    联结词的完备集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1527,6 +1595,107 @@
 <p>由公式2的直接推论：<span><span class="MathJax_Preview">P\rightarrow (Q\rightarrow R) = Q\rightarrow (P\rightarrow R)</span><script type="math/tex">P\rightarrow (Q\rightarrow R) = Q\rightarrow (P\rightarrow R)</script></span></p>
 <p>置换：对公式<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>的子公式<span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>，使用与之等值的公式进行代换称为置换</p>
 <p>设置换后的公式为<span><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>，则必有<span><span class="MathJax_Preview">A=C</span><script type="math/tex">A=C</script></span></p>
+<h2 id="_3">从真值表计算生成命题公式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>从真值表生成命题公式有两种方法，既可以通过值为<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>的行生成，也可以通过值为<span><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span>的行生成</p>
+<h3 id="tt">从值为<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>的行生成<a class="headerlink" href="#tt" title="Permanent link">&para;</a></h3>
+<p>对于包含<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个命题变元<span><span class="MathJax_Preview">P_1, \dots, P_n</span><script type="math/tex">P_1, \dots, P_n</script></span>的命题公式，写出如下合取式：</p>
+<div>
+<div class="MathJax_Preview">
+P_1\land P_2\land \dots \land P_n
+</div>
+<script type="math/tex; mode=display">
+P_1\land P_2\land \dots \land P_n
+</script>
+</div>
+<p>对于真值表的每个取值为<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>的行，若对应的<span><span class="MathJax_Preview">P_i</span><script type="math/tex">P_i</script></span>为<span><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span>，则将合取式中的对应<span><span class="MathJax_Preview">P_i</span><script type="math/tex">P_i</script></span>替换为<span><span class="MathJax_Preview">\lnot P_i</span><script type="math/tex">\lnot P_i</script></span>。将所得的公式使用析取运算符连接即得符合真值表的命题公式。</p>
+<h3 id="ff">从值为<span><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span>的行生成<a class="headerlink" href="#ff" title="Permanent link">&para;</a></h3>
+<p>对于包含<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个命题变元<span><span class="MathJax_Preview">P_1, \dots, P_n</span><script type="math/tex">P_1, \dots, P_n</script></span>的命题公式，写出如下析取式：</p>
+<div>
+<div class="MathJax_Preview">
+P_1\lor P_2\lor \dots \lor P_n
+</div>
+<script type="math/tex; mode=display">
+P_1\lor P_2\lor \dots \lor P_n
+</script>
+</div>
+<p>对于真值表的每个取值为<span><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span>的行，若对应的<span><span class="MathJax_Preview">P_i</span><script type="math/tex">P_i</script></span>为<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>，则将析取式中的对应<span><span class="MathJax_Preview">P_i</span><script type="math/tex">P_i</script></span>替换为<span><span class="MathJax_Preview">\lnot P_i</span><script type="math/tex">\lnot P_i</script></span>。将所得的公式使用合取运算符连接即得符合真值表的命题公式。</p>
+<h3 id="_4">联结词的完备集<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>设集合<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>为由联结词组成的集合，若任意命题公式都有通过命题公式使用<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>中的联结词组合而成的公式与之等值，则<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>是联结词的完备集</p>
+<p>通过如上对真值表的分析，任何真值表都能使用<span><span class="MathJax_Preview">\{\land, \lor, \lnot\}</span><script type="math/tex">\{\land, \lor, \lnot\}</script></span>三个运算符表示出一个命题公式。假设存在一个公式<span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>，不存在<span><span class="MathJax_Preview">\{\land, \lor, \lnot\}</span><script type="math/tex">\{\land, \lor, \lnot\}</script></span>组成的公式与之等值。但通过<span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>的真值表可以构造出一个命题公式<span><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span>，则<span><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span>与<span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>的真值表相同，<span><span class="MathJax_Preview">P=Q</span><script type="math/tex">P=Q</script></span>，矛盾。因此<span><span class="MathJax_Preview">\{\land, \lor, \lnot\}</span><script type="math/tex">\{\land, \lor, \lnot\}</script></span>是完备的。</p>
+<p>以下列出了一部分联结词的最小完备集：</p>
+<ul>
+<li><span><span class="MathJax_Preview">\{\lor, \lnot\}</span><script type="math/tex">\{\lor, \lnot\}</script></span></li>
+<li><span><span class="MathJax_Preview">\{\land, \lnot\}</span><script type="math/tex">\{\land, \lnot\}</script></span></li>
+<li><span><span class="MathJax_Preview">\{\uparrow\}</span><script type="math/tex">\{\uparrow\}</script></span></li>
+<li><span><span class="MathJax_Preview">\{\downarrow\}</span><script type="math/tex">\{\downarrow\}</script></span></li>
+<li><span><span class="MathJax_Preview">\{\lnot, \rightarrow\}</span><script type="math/tex">\{\lnot, \rightarrow\}</script></span></li>
+</ul>
+<p>如果<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>是联结词的完备集，集合<span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>中的联结词可以通过组合得到与<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>中联结词等价的联结词，则<span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>也是联结词的完备集。</p>
+<hr />
+<p>证明：<span><span class="MathJax_Preview">\{\lor, \lnot\}</span><script type="math/tex">\{\lor, \lnot\}</script></span>是联结词的完备集：</p>
+<div>
+<div class="MathJax_Preview">
+P\land Q = \lnot (\lnot P\lor \lnot Q)
+</div>
+<script type="math/tex; mode=display">
+P\land Q = \lnot (\lnot P\lor \lnot Q)
+</script>
+</div>
+<hr />
+<p>证明：<span><span class="MathJax_Preview">\{\land, \lnot\}</span><script type="math/tex">\{\land, \lnot\}</script></span>是联结词的完备集：</p>
+<div>
+<div class="MathJax_Preview">
+P\lor Q = \lnot (\lnot P\land \lnot Q)
+</div>
+<script type="math/tex; mode=display">
+P\lor Q = \lnot (\lnot P\land \lnot Q)
+</script>
+</div>
+<hr />
+<p>证明：<span><span class="MathJax_Preview">\{\uparrow\}</span><script type="math/tex">\{\uparrow\}</script></span>是联结词的完备集：</p>
+<ul>
+<li>证明<span><span class="MathJax_Preview">\lnot P</span><script type="math/tex">\lnot P</script></span>可以仅使用<span><span class="MathJax_Preview">\uparrow</span><script type="math/tex">\uparrow</script></span>运算符表示：</li>
+</ul>
+<p>$$
+  \begin{aligned}
+  \lnot P &amp;= \lnot (P\land P) \
+  &amp;= P\uparrow P
+  \end{aligned}
+  $$</p>
+<ul>
+<li>证明<span><span class="MathJax_Preview">P\land Q</span><script type="math/tex">P\land Q</script></span>可以仅使用<span><span class="MathJax_Preview">\uparrow</span><script type="math/tex">\uparrow</script></span>运算符表示：</li>
+</ul>
+<p>$$
+  \begin{aligned}
+  P\land Q&amp;= \lnot \lnot (P\land Q) \
+  &amp;= \lnot (P\uparrow Q) \
+  &amp;= (P\uparrow Q) \uparrow (P\uparrow Q)
+  \end{aligned}
+  $$</p>
+<hr />
+<p>证明：<span><span class="MathJax_Preview">\{\downarrow\}</span><script type="math/tex">\{\downarrow\}</script></span>是联结词的完备集：</p>
+<ul>
+<li>证明<span><span class="MathJax_Preview">\lnot P</span><script type="math/tex">\lnot P</script></span>可以仅使用<span><span class="MathJax_Preview">\downarrow</span><script type="math/tex">\downarrow</script></span>运算符表示：</li>
+</ul>
+<p>$$
+  \begin{aligned}
+  \lnot P &amp;= \lnot (P\lor P) \
+  &amp;= P\downarrow P
+  \end{aligned}
+  $$</p>
+<ul>
+<li>证明<span><span class="MathJax_Preview">P\lor Q</span><script type="math/tex">P\lor Q</script></span>可以仅使用<span><span class="MathJax_Preview">\downarrow</span><script type="math/tex">\downarrow</script></span>运算符表示：</li>
+</ul>
+<p>$$
+  \begin{aligned}
+  P\lor Q&amp;= \lnot \lnot (P\lor Q) \
+  &amp;= \lnot (P\downarrow Q) \
+  &amp;= (P\downarrow Q) \downarrow (P\downarrow Q)
+  \end{aligned}
+  $$</p>
+<hr />
+<p>证明：<span><span class="MathJax_Preview">\{\rightarrow, \lnot\}</span><script type="math/tex">\{\rightarrow, \lnot\}</script></span>是联结词的完备集：</p>
+<p><span><span class="MathJax_Preview">P\lor Q = \lnot \lnot P\lor Q = \lnot P\rightarrow Q</span><script type="math/tex">P\lor Q = \lnot \lnot P\lor Q = \lnot P\rightarrow Q</script></span></p>
                 
                   
                     
@@ -1535,7 +1704,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-12-26T09:37:41+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-12-26</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-12-26T17:16:14+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-12-26</span>
     
   </small>
 </div>
