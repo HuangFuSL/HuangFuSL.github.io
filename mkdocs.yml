@@ -79,6 +79,7 @@ nav:
     - 系统配置:
       - 目录: coding/configuration.md
       - 源码编译nginx并添加RTMP模块: coding/configuration/nginx-rtmp.md
+  - COVID-2019: covid.md
   - 关于我:
     - About: about.md
 theme:
