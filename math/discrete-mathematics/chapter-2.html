@@ -569,6 +569,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    对偶式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    范式
+  </a>
+  
+    <nav class="md-nav" aria-label="范式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    主范式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    推理形式
+  </a>
+  
+    <nav class="md-nav" aria-label="推理形式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    基本的推理公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    推理演算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    归结推理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1522,6 +1583,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    对偶式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    范式
+  </a>
+  
+    <nav class="md-nav" aria-label="范式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    主范式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    推理形式
+  </a>
+  
+    <nav class="md-nav" aria-label="推理形式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    基本的推理公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    推理演算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    归结推理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1710,6 +1832,102 @@ P\lor Q = \lnot (\lnot P\land \lnot Q)
 <hr />
 <p>证明：<span><span class="MathJax_Preview">\{\rightarrow, \lnot\}</span><script type="math/tex">\{\rightarrow, \lnot\}</script></span>是联结词的完备集：</p>
 <p><span><span class="MathJax_Preview">P\lor Q = \lnot \lnot P\lor Q = \lnot P\rightarrow Q</span><script type="math/tex">P\lor Q = \lnot \lnot P\lor Q = \lnot P\rightarrow Q</script></span></p>
+<h2 id="_5">对偶式<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>设<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>为命题公式，将<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>中出现的<span><span class="MathJax_Preview">\lor, \land, T, F</span><script type="math/tex">\lor, \land, T, F</script></span>分别使用<span><span class="MathJax_Preview">\land, \lor, F, T</span><script type="math/tex">\land, \lor, F, T</script></span>进行替换，所得到的公式称为<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>的对偶式，记为<span><span class="MathJax_Preview">A^*</span><script type="math/tex">A^*</script></span></p>
+<p>设<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>为命题公式，将<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>中出现的所有命题变项<span><span class="MathJax_Preview">P_1,\dots, P_n</span><script type="math/tex">P_1,\dots, P_n</script></span>替换为<span><span class="MathJax_Preview">\lnot P_1, \dots, \lnot P_n</span><script type="math/tex">\lnot P_1, \dots, \lnot P_n</script></span>，所得到的公式称为<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>的否命题，记为<span><span class="MathJax_Preview">A^-</span><script type="math/tex">A^-</script></span></p>
+<p>则取对偶式运算、取否命题运算有如下性质：</p>
+<ol>
+<li><span><span class="MathJax_Preview">\lnot (A^*) = (\lnot A)^*, \lnot (A^-) = (\lnot A)^-</span><script type="math/tex">\lnot (A^*) = (\lnot A)^*, \lnot (A^-) = (\lnot A)^-</script></span></li>
+<li><span><span class="MathJax_Preview">(A^*)^*=A, (A^-)^- =A</span><script type="math/tex">(A^*)^*=A, (A^-)^- =A</script></span></li>
+<li><span><span class="MathJax_Preview">A^{*-}=\lnot A</span><script type="math/tex">A^{*-}=\lnot A</script></span></li>
+<li><span><span class="MathJax_Preview">A=B\Rightarrow A^*=B^*</span><script type="math/tex">A=B\Rightarrow A^*=B^*</script></span></li>
+<li>对<span><span class="MathJax_Preview">A\rightarrow B</span><script type="math/tex">A\rightarrow B</script></span>取对偶式可得<span><span class="MathJax_Preview">A\rightarrow B=T\Rightarrow B^*\rightarrow A^*=T</span><script type="math/tex">A\rightarrow B=T\Rightarrow B^*\rightarrow A^*=T</script></span></li>
+</ol>
+<hr />
+<p>根据对偶式和否命题的定义，2式自然成立。1式和3式可以通过数学归纳法进行证明。</p>
+<h2 id="_6">范式<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>定义如下概念：</p>
+<ul>
+<li>文字：简单命题<span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>及其否定形式</li>
+<li>合取式：一些文字的合取，形如<span><span class="MathJax_Preview">P_1\land \dots \land P_n</span><script type="math/tex">P_1\land \dots \land P_n</script></span></li>
+<li>析取式（子句）：一些文字的析取，形如<span><span class="MathJax_Preview">P_1\lor \dots\lor P_n</span><script type="math/tex">P_1\lor \dots\lor P_n</script></span></li>
+<li>互补对：文字与其对应的否定形式</li>
+<li>析取范式：合取式通过析取联结词连接的公式，形如<span><span class="MathJax_Preview">A_1\lor \dots\lor A_n</span><script type="math/tex">A_1\lor \dots\lor A_n</script></span>，其中<span><span class="MathJax_Preview">A_i</span><script type="math/tex">A_i</script></span>为合取式</li>
+<li>合取范式：析取式通过合取联结词连接的公式，形如<span><span class="MathJax_Preview">A_1\land \dots \land A_n</span><script type="math/tex">A_1\land \dots \land A_n</script></span>，其中<span><span class="MathJax_Preview">A_i</span><script type="math/tex">A_i</script></span>为析取式</li>
+</ul>
+<p>由此，可以导出范式定理，即任一命题公式都存在有与之等值的合取范式与析取范式。范式定理的正确性可以通过列写命题公式的真值表与从真值表列写命题公式证明。</p>
+<p>计算合取范式与析取范式：</p>
+<ol>
+<li>消去逻辑联结词<span><span class="MathJax_Preview">A\rightarrow B</span><script type="math/tex">A\rightarrow B</script></span>与<span><span class="MathJax_Preview">A\leftrightarrow B</span><script type="math/tex">A\leftrightarrow B</script></span>，替换为<span><span class="MathJax_Preview">\lnot A\lor B</span><script type="math/tex">\lnot A\lor B</script></span>与<span><span class="MathJax_Preview">(\lnot A\lor B)\land (A\lor \lnot B)</span><script type="math/tex">(\lnot A\lor B)\land (A\lor \lnot B)</script></span></li>
+<li>使用摩根律与双重否定律消除<span><span class="MathJax_Preview">\lor</span><script type="math/tex">\lor</script></span>或<span><span class="MathJax_Preview">\land</span><script type="math/tex">\land</script></span>，并消除多余的<span><span class="MathJax_Preview">\lnot</span><script type="math/tex">\lnot</script></span></li>
+<li>将所有的<span><span class="MathJax_Preview">\lnot</span><script type="math/tex">\lnot</script></span>移动到命题变项<span><span class="MathJax_Preview">P_i</span><script type="math/tex">P_i</script></span>前</li>
+<li>使用分配律将公式化为范式</li>
+</ol>
+<h3 id="_7">主范式<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>对于公式<span><span class="MathJax_Preview">Q = Q_1\land \dots \land Q_n</span><script type="math/tex">Q = Q_1\land \dots \land Q_n</script></span>，式中<span><span class="MathJax_Preview">Q_i=P_i</span><script type="math/tex">Q_i=P_i</script></span>或<span><span class="MathJax_Preview">Q_i=\lnot P_i</span><script type="math/tex">Q_i=\lnot P_i</script></span>。则<span><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span>为<strong>极小项</strong>，记为<span><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span>。</p>
+<ul>
+<li>极小项中必须出现所有的命题变项</li>
+<li><span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个命题变项可以组成<span><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span>个极小项，依次表示为<span><span class="MathJax_Preview">m_1, \dots m_{2^n}</span><script type="math/tex">m_1, \dots m_{2^n}</script></span></li>
+</ul>
+<p>对于公式<span><span class="MathJax_Preview">R = R_1\lor \dots \lor R_n</span><script type="math/tex">R = R_1\lor \dots \lor R_n</script></span>，式中<span><span class="MathJax_Preview">R_i = P_i</span><script type="math/tex">R_i = P_i</script></span>或<span><span class="MathJax_Preview">R_i = \lnot P_i</span><script type="math/tex">R_i = \lnot P_i</script></span>。则<span><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>为<strong>极大项</strong>，记为<span><span class="MathJax_Preview">M_i</span><script type="math/tex">M_i</script></span></p>
+<p>与极小项相同，所有的命题变项必须都出现在极大项中，且<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个命题变项可以组成<span><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span>个极大项。</p>
+<p>任意公式<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>的范式中，仅由极小项构成的析取范式为主析取范式，仅由极大项构成的合取范式为主合取范式。主析取范式与主合取范式都是唯一的。</p>
+<p>极大项、极小项满足如下性质</p>
+<ol>
+<li>极大项、极小项的数量等于公式可能的解释数量，即<span><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span></li>
+<li>每个极小项仅在公式的一个解释下为<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>，每个极大项仅在公式的一个解释下为<span><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span></li>
+<li>极小项、极大项两两不等值，有<span><span class="MathJax_Preview">m_i\land m_j\leftrightarrow i=j, M_i\lor M_j\leftrightarrow i\not= j</span><script type="math/tex">m_i\land m_j\leftrightarrow i=j, M_i\lor M_j\leftrightarrow i\not= j</script></span>。</li>
+<li>任一含有<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个命题变项的公式都可以用<span><span class="MathJax_Preview">k\leq n</span><script type="math/tex">k\leq n</script></span>个极小项或<span><span class="MathJax_Preview">k\leq n</span><script type="math/tex">k\leq n</script></span>个极大项表示。</li>
+<li><span><span class="MathJax_Preview">\bigwedge _{i=0} ^{2^n-1} M_i=F, \bigvee _{i=0}^{2^n-1} m_i = T</span><script type="math/tex">\bigwedge _{i=0} ^{2^n-1} M_i=F, \bigvee _{i=0}^{2^n-1} m_i = T</script></span></li>
+</ol>
+<h2 id="_8">推理形式<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>将自然语句描述的推理关系经抽象化后使用条件式的表示</p>
+<p>若<span><span class="MathJax_Preview">A\rightarrow B=T</span><script type="math/tex">A\rightarrow B=T</script></span>，称<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>重言蕴含<span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>，记作<span><span class="MathJax_Preview">A\Rightarrow B</span><script type="math/tex">A\Rightarrow B</script></span>。重言蕴含关系具有如下性质：</p>
+<ol>
+<li>若<span><span class="MathJax_Preview">A=T</span><script type="math/tex">A=T</script></span>，且<span><span class="MathJax_Preview">A\Rightarrow B</span><script type="math/tex">A\Rightarrow B</script></span>，则<span><span class="MathJax_Preview">B=T</span><script type="math/tex">B=T</script></span></li>
+<li>若<span><span class="MathJax_Preview">A\Rightarrow B\land B\Rightarrow A</span><script type="math/tex">A\Rightarrow B\land B\Rightarrow A</script></span>，则<span><span class="MathJax_Preview">A=B</span><script type="math/tex">A=B</script></span></li>
+<li>若<span><span class="MathJax_Preview">A\Rightarrow B\land B\Rightarrow C</span><script type="math/tex">A\Rightarrow B\land B\Rightarrow C</script></span>，则<span><span class="MathJax_Preview">A\Rightarrow C</span><script type="math/tex">A\Rightarrow C</script></span></li>
+<li>若<span><span class="MathJax_Preview">A\Rightarrow B\land A\Rightarrow C</span><script type="math/tex">A\Rightarrow B\land A\Rightarrow C</script></span>，则<span><span class="MathJax_Preview">A\Rightarrow (B\land C)</span><script type="math/tex">A\Rightarrow (B\land C)</script></span></li>
+<li>若<span><span class="MathJax_Preview">A\Rightarrow C\land B\Rightarrow C</span><script type="math/tex">A\Rightarrow C\land B\Rightarrow C</script></span>，则<span><span class="MathJax_Preview">(A\lor B)\Rightarrow C</span><script type="math/tex">(A\lor B)\Rightarrow C</script></span></li>
+</ol>
+<p>要证明一个式子为重言蕴含式，可以证明<span><span class="MathJax_Preview">A\rightarrow B</span><script type="math/tex">A\rightarrow B</script></span>为重言式或<span><span class="MathJax_Preview">\lnot A\land B</span><script type="math/tex">\lnot A\land B</script></span>为矛盾式。</p>
+<h3 id="_9">基本的推理公式<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>如下列出一些基本的推理公式，式中<span><span class="MathJax_Preview">P,Q,R,S</span><script type="math/tex">P,Q,R,S</script></span>均为任意命题变项</p>
+<ul>
+<li><span><span class="MathJax_Preview">P\land Q\Rightarrow P</span><script type="math/tex">P\land Q\Rightarrow P</script></span></li>
+<li><span><span class="MathJax_Preview">\lnot(P\rightarrow Q)\Rightarrow P</span><script type="math/tex">\lnot(P\rightarrow Q)\Rightarrow P</script></span></li>
+<li><span><span class="MathJax_Preview">\lnot(P\rightarrow Q)\Rightarrow \lnot Q</span><script type="math/tex">\lnot(P\rightarrow Q)\Rightarrow \lnot Q</script></span></li>
+<li><span><span class="MathJax_Preview">P\Rightarrow P\lor Q</span><script type="math/tex">P\Rightarrow P\lor Q</script></span></li>
+<li><span><span class="MathJax_Preview">\lnot P\Rightarrow P\rightarrow Q</span><script type="math/tex">\lnot P\Rightarrow P\rightarrow Q</script></span></li>
+<li><span><span class="MathJax_Preview">Q\Rightarrow P\rightarrow Q</span><script type="math/tex">Q\Rightarrow P\rightarrow Q</script></span></li>
+<li><span><span class="MathJax_Preview">\lnot P \land(P\lor Q)\Rightarrow Q</span><script type="math/tex">\lnot P \land(P\lor Q)\Rightarrow Q</script></span></li>
+<li><span><span class="MathJax_Preview">P\land (P\rightarrow Q) \Rightarrow Q</span><script type="math/tex">P\land (P\rightarrow Q) \Rightarrow Q</script></span>，分离规则</li>
+<li><span><span class="MathJax_Preview">\lnot Q\land (P\rightarrow Q)\Rightarrow \lnot P</span><script type="math/tex">\lnot Q\land (P\rightarrow Q)\Rightarrow \lnot P</script></span></li>
+<li><span><span class="MathJax_Preview">(P\rightarrow Q)\land (Q\rightarrow R)\Rightarrow P\rightarrow R</span><script type="math/tex">(P\rightarrow Q)\land (Q\rightarrow R)\Rightarrow P\rightarrow R</script></span>，三段论</li>
+<li><span><span class="MathJax_Preview">(P\leftrightarrow Q)\land (Q\leftrightarrow R)\Rightarrow P\leftrightarrow R</span><script type="math/tex">(P\leftrightarrow Q)\land (Q\leftrightarrow R)\Rightarrow P\leftrightarrow R</script></span></li>
+<li><span><span class="MathJax_Preview">(P\rightarrow R)\land (Q\rightarrow R)\land (P\lor Q)\Rightarrow R</span><script type="math/tex">(P\rightarrow R)\land (Q\rightarrow R)\land (P\lor Q)\Rightarrow R</script></span></li>
+<li><span><span class="MathJax_Preview">(R\rightarrow Q)\land (R\rightarrow S)\land (P\lor R)\Rightarrow Q\lor S</span><script type="math/tex">(R\rightarrow Q)\land (R\rightarrow S)\land (P\lor R)\Rightarrow Q\lor S</script></span></li>
+<li><span><span class="MathJax_Preview">(P\rightarrow Q)\land (R\rightarrow S)\land (\lnot Q\lor \lnot S)\Rightarrow (\lnot P\lor \lnot R)</span><script type="math/tex">(P\rightarrow Q)\land (R\rightarrow S)\land (\lnot Q\lor \lnot S)\Rightarrow (\lnot P\lor \lnot R)</script></span></li>
+<li><span><span class="MathJax_Preview">Q\rightarrow R\Rightarrow ((P\lor Q)\rightarrow (P\lor R))</span><script type="math/tex">Q\rightarrow R\Rightarrow ((P\lor Q)\rightarrow (P\lor R))</script></span></li>
+<li><span><span class="MathJax_Preview">Q\rightarrow R\Rightarrow ((P\rightarrow Q)\rightarrow (P\rightarrow R))</span><script type="math/tex">Q\rightarrow R\Rightarrow ((P\rightarrow Q)\rightarrow (P\rightarrow R))</script></span></li>
+</ul>
+<h3 id="_10">推理演算<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>推理演算过程中，有如下规则可以使用：</p>
+<ul>
+<li>前提引入规则：推理过程中可以随时引入前提</li>
+<li>结论引用规则：推理过程中的中间结论可以作为后续推理的前提</li>
+<li>代入规则：推理过程中对重言式的命题变项可以使用代入规则</li>
+<li>置换规则：推理过程中任何部分都可以用与之等值的命题公式进行替换</li>
+<li>分离规则：若<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>且<span><span class="MathJax_Preview">A\rightarrow B</span><script type="math/tex">A\rightarrow B</script></span>则<span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span></li>
+<li>条件证明规则：<span><span class="MathJax_Preview">A_1\land A_2\Rightarrow B \Leftrightarrow A_1\Rightarrow A_2\rightarrow B</span><script type="math/tex">A_1\land A_2\Rightarrow B \Leftrightarrow A_1\Rightarrow A_2\rightarrow B</script></span></li>
+</ul>
+<h3 id="_11">归结推理<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>思路：要证明<span><span class="MathJax_Preview">A\Rightarrow B</span><script type="math/tex">A\Rightarrow B</script></span>，可证明<span><span class="MathJax_Preview">A\land \lnot B=F</span><script type="math/tex">A\land \lnot B=F</script></span>。</p>
+<ul>
+<li>将<span><span class="MathJax_Preview">C = A\land \lnot B</span><script type="math/tex">C = A\land \lnot B</script></span>化为合取范式<span><span class="MathJax_Preview">Q_1\land \dots \land Q_n</span><script type="math/tex">Q_1\land \dots \land Q_n</script></span>，式中的所有析取式构成子句集合<span><span class="MathJax_Preview">\{Q_1,\dots, Q_n\}</span><script type="math/tex">\{Q_1,\dots, Q_n\}</script></span></li>
+<li>消去子句集合中的互补对，如<span><span class="MathJax_Preview">P\lor R</span><script type="math/tex">P\lor R</script></span>与<span><span class="MathJax_Preview">\lnot P\lor \lnot Q</span><script type="math/tex">\lnot P\lor \lnot Q</script></span>归结得到<span><span class="MathJax_Preview">R\lor \lnot Q</span><script type="math/tex">R\lor \lnot Q</script></span>。不断重复消去过程。</li>
+<li>直到子句集合为空，得到空子句<span><span class="MathJax_Preview">\square</span><script type="math/tex">\square</script></span>，证明<span><span class="MathJax_Preview">A\land \lnot B</span><script type="math/tex">A\land \lnot B</script></span>是矛盾式</li>
+</ul>
                 
                   
                     
@@ -1718,7 +1936,7 @@ P\lor Q = \lnot (\lnot P\land \lnot Q)
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-12-26T17:16:14+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-12-26</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-01-05T13:45:53+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-01-05</span>
     
   </small>
 </div>
