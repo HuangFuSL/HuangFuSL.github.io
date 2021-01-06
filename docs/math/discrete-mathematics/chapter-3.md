@@ -142,6 +142,6 @@ $$
     * $P=1$表示$P$假
     * $0<P<1$表示$P$为真的概率为$1-P$ 
 2. 三值逻辑
-   1. Kleene逻辑：$T, F, U$，$U$表示未知
-   2. Lukasiewicz逻辑：$T, F, I$，$I$表示将来可能，目前不具备真值
-   3. Bochvar逻辑：$T, F, M$，$M$表示悖论
+    * Kleene逻辑：$T, F, U$，$U$表示未知
+    * Lukasiewicz逻辑：$T, F, I$，$I$表示将来可能，目前不具备真值
+    * Bochvar逻辑：$T, F, M$，$M$表示悖论

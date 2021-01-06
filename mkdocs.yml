@@ -19,6 +19,7 @@ nav:
       - 命题逻辑的基本概念: math/discrete-mathematics/chapter-1.md
       - 命题逻辑的等值和推理演算: math/discrete-mathematics/chapter-2.md
       - 命题逻辑的公理化: math/discrete-mathematics/chapter-3.md
+      - 谓词逻辑的基本概念: math/discrete-mathematics/chapter-4.md
     - 对策、决策与排队论:
       - 目录: math/queue-theory/index.md
       - Chapter 12: math/queue-theory/chapter-12.md
