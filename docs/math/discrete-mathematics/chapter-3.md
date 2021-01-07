@@ -28,9 +28,9 @@ $\vdash$表明一个公式是永真式
 
 为简化其他合式公式的表达，引入如下所示的公式：
 
-* $(A\rightarrow B)\coloneqq (\lnot A\lor B)$
-* $(A\land B)\coloneqq \lnot (\lnot A\lor \lnot B)$
-* $(A\leftrightarrow B)\coloneqq ((A\rightarrow B)\land (B\rightarrow A))$
+* $(A\rightarrow B):= (\lnot A\lor B)$
+* $(A\land B):= \lnot (\lnot A\lor \lnot B)$
+* $(A\leftrightarrow B):= ((A\rightarrow B)\land (B\rightarrow A))$
 
 ### 公理
 
