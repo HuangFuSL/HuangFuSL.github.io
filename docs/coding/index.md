@@ -10,3 +10,4 @@
 * 深度学习
 * 机器学习
 * [系统配置](configuration.md)
+* SVG(svg.md)
