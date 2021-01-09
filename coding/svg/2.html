@@ -1433,6 +1433,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#svg_1" class="md-nav__link">
+    常见的SVG动画效果
+  </a>
+  
+    <nav class="md-nav" aria-label="常见的SVG动画效果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    位移
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    变换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1700,6 +1727,33 @@
   <a href="#_3" class="md-nav__link">
     交互动画
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svg_1" class="md-nav__link">
+    常见的SVG动画效果
+  </a>
+  
+    <nav class="md-nav" aria-label="常见的SVG动画效果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    位移
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    变换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2069,6 +2123,124 @@
 </details>
 <h2 id="_3">交互动画<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><code>begin</code>属性的取值可以为<code>click</code>或<code>touch</code>以响应用户输入。<code>click</code>既可以响应鼠标点击事件，也可以响应用户触摸。<code>touch</code>只能响应用户触摸。</p>
+<h2 id="svg_1">常见的SVG动画效果<a class="headerlink" href="#svg_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>位移</li>
+<li>变换</li>
+<li>淡入淡出</li>
+<li>描边</li>
+<li>路径变化</li>
+<li>颜色变化</li>
+</ol>
+<h3 id="_4">位移<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>位移操作可以通过使用<code>&lt;animate&gt;</code>控制对象的<code>x</code>、<code>y</code>属性与<code>width</code>、<code>height</code>属性实现。可能的应用场景如下：</p>
+<ul>
+<li>进度条、直方图等用于交互的数据图表</li>
+<li>交通工具或其他对象的移动</li>
+</ul>
+<p>进度条示例：</p>
+<details class="note" open="open"><summary>进度条</summary><div class="tabbed-set" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><label for="__tabbed_11_1">渲染图像</label><div class="tabbed-content">
+<p><svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" width="700" height="195" viewBox="0 0 700 195"><rect x="0.5" y="0.5" width="699" height="58" fill="#fff"/><path d="M699,1V58H1V1H699m1-1H0V59H700V0Z"/><rect x="1" y="1" width="446" height="57" fill="red"><animate attributeName="width" values="0;698" keytimes="0;1" calcmode="spline" keysplines="0.44 0.27 0.21 0.99" begin="click" dur="1s" fill="freeze" repeatcount="3"/></rect><rect x="0.5" y="68.5" width="699" height="58" fill="#fff"/><path d="M699,69v57H1V69H699m1-1H0v59H700V68Z"/><rect x="1" y="69" width="446" height="57" fill="#dd2"><animate attributeName="width" values="0;698" keytimes="0;1" calcmode="spline" keysplines="0 0 0.5 1" begin="click" dur="1s" fill="freeze" repeatcount="3"/></rect><rect x="0.5" y="136.5" width="699" height="58" fill="#fff"/><path d="M699,137v57H1V137H699m1-1H0v59H700V136Z"/><rect x="1" y="137" width="446" height="57" fill="lime"><animate attributeName="width" values="0;698" keytimes="0;1" calcmode="spline" keysplines="0.5 0 1 1" begin="click" dur="1s" fill="freeze" repeatcount="3"/></rect></svg></p>
+</div>
+<input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><label for="__tabbed_11_2">SVG代码</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&lt;svg id=&quot;图层_1&quot; data-name=&quot;图层 1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;700&quot; height=&quot;195&quot; viewBox=&quot;0 0 700 195&quot;&gt;
+    &lt;rect x=&quot;0.5&quot; y=&quot;0.5&quot; width=&quot;699&quot; height=&quot;58&quot; fill=&quot;#fff&quot;/&gt;&lt;path d=&quot;M699,1V58H1V1H699m1-1H0V59H700V0Z&quot;/&gt;
+    &lt;rect x=&quot;1&quot; y=&quot;1&quot; width=&quot;446&quot; height=&quot;57&quot; fill=&quot;red&quot;&gt;
+        &lt;animate attributeName=&quot;width&quot; values=&quot;0;698&quot; keytimes=&quot;0;1&quot; calcmode=&quot;spline&quot; keysplines=&quot;0.44 0.27 0.21 0.99&quot; begin=&quot;click&quot; dur=&quot;1s&quot; fill=&quot;freeze&quot; repeatcount=&quot;3&quot;/&gt;
+    &lt;/rect&gt;
+    &lt;rect x=&quot;0.5&quot; y=&quot;68.5&quot; width=&quot;699&quot; height=&quot;58&quot; fill=&quot;#fff&quot;/&gt;
+    &lt;path d=&quot;M699,69v57H1V69H699m1-1H0v59H700V68Z&quot;/&gt;
+    &lt;rect x=&quot;1&quot; y=&quot;69&quot; width=&quot;446&quot; height=&quot;57&quot; fill=&quot;#dd2&quot;&gt;
+        &lt;animate attributeName=&quot;width&quot; values=&quot;0;698&quot; keytimes=&quot;0;1&quot; calcmode=&quot;spline&quot; keysplines=&quot;0 0 0.5 1&quot; begin=&quot;click&quot; dur=&quot;1s&quot; fill=&quot;freeze&quot; repeatcount=&quot;3&quot;/&gt;
+    &lt;/rect&gt;
+    &lt;rect x=&quot;0.5&quot; y=&quot;136.5&quot; width=&quot;699&quot; height=&quot;58&quot; fill=&quot;#fff&quot;/&gt;
+    &lt;path d=&quot;M699,137v57H1V137H699m1-1H0v59H700V136Z&quot;/&gt;
+    &lt;rect x=&quot;1&quot; y=&quot;137&quot; width=&quot;446&quot; height=&quot;57&quot; fill=&quot;lime&quot;&gt;
+        &lt;animate attributeName=&quot;width&quot; values=&quot;0;698&quot; keytimes=&quot;0;1&quot; calcmode=&quot;spline&quot; keysplines=&quot;0.5 0 1 1&quot; begin=&quot;click&quot; dur=&quot;1s&quot; fill=&quot;freeze&quot; repeatcount=&quot;3&quot;/&gt;
+    &lt;/rect&gt;
+&lt;/svg&gt;
+</code></pre></div>
+
+</div>
+</div>
+</details>
+<p>一个移动的圆点：</p>
+<details class="note" open="open"><summary>圆点动画</summary><div class="tabbed-set" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><label for="__tabbed_12_1">渲染图像</label><div class="tabbed-content">
+<p><svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 700 195"><rect width="700" height="195" fill="none"/><circle cx="279.5" cy="97.5" r="25.5"><animate attributeName="cx" values="0;90;0" keytimes="0;0.5;1" calcmode="spline" keysplines="0.5 0 0.5 1; 0.5 0 0.5 1" begin="0s" dur="2s" fill="freeze" repeatcount="indefinite" additive="sum"/></circle></svg></p>
+</div>
+<input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><label for="__tabbed_12_2">SVG代码</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&lt;svg id=&quot;图层_1&quot; data-name=&quot;图层 1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;150&quot; viewBox=&quot;0 0 700 195&quot;&gt;
+    &lt;rect width=&quot;700&quot; height=&quot;195&quot; fill=&quot;none&quot;/&gt;
+    &lt;circle cx=&quot;279.5&quot; cy=&quot;97.5&quot; r=&quot;25.5&quot;&gt;
+        &lt;animate attributeName=&quot;cx&quot; values=&quot;0;90;0&quot; keytimes=&quot;0;0.5;1&quot; calcmode=&quot;spline&quot; keysplines=&quot;0.5 0 0.5 1; 0.5 0 0.5 1&quot; begin=&quot;0s&quot; dur=&quot;2s&quot; fill=&quot;freeze&quot; repeatcount=&quot;indefinite&quot; additive=&quot;sum&quot;/&gt;
+    &lt;/circle&gt;
+&lt;/svg&gt;
+</code></pre></div>
+
+</div>
+</div>
+</details>
+<p>此外，部分位移可以使用<code>&lt;animateMotion&gt;</code>标签进行控制，<code>&lt;animateMotion&gt;</code>标签支持对象按照路径进行位移。</p>
+<p>复杂的位移需要控制对象的<code>translate</code>属性。</p>
+<h3 id="_5">变换<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>以下属性影响图形的变换：</p>
+<ul>
+<li><code>r</code>：半径（对于圆）</li>
+<li><code>rotate</code>：旋转（以中心点）</li>
+<li><code>skewX</code>、<code>skewY</code>：倾斜</li>
+<li><code>transform</code>：复杂变换</li>
+</ul>
+<p>以下给出<code>r</code>变换的示例：</p>
+<details class="note" open="open"><summary>r变换</summary><div class="tabbed-set" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><label for="__tabbed_13_1">渲染图像</label><div class="tabbed-content">
+<p><svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" width="350"  viewBox="0 0 749 1334"><rect width="749" height="1334" fill="#fff"/><text transform="translate(221.4 1070.91)" font-size="21" font-family="PingFang-SC-Regular, PingFang SC">
+    &gt;&gt;&gt; 点击圆点 查看隐藏内容 &lt;&lt;&lt;
+</text><circle cx="375" cy="992" r="29" fill="#ed1e79"><animate attributeName="r" values="0;1100" keytimes="0;1" calcmode="spline" keysplines="0 0 0.5 1" begin="click" dur="0.75s" fill="freeze" additive="sum" restart="never"></circle><text transform="translate(0 295.12)" font-size="192" fill="#fff" font-family="PingFang-SC-Heavy, PingFang SC" font-weight="800">
+    Hello
+    <tspan x="0" y="230.4">
+        World!
+    </tspan>
+</text>
+</svg></p>
+</div>
+<input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><label for="__tabbed_13_2">SVG代码</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&lt;svg id=&quot;图层_1&quot; data-name=&quot;图层 1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;350&quot; viewBox=&quot;0 0 749 1334&quot;&gt;
+    &lt;rect width=&quot;749&quot; height=&quot;1334&quot; fill=&quot;#fff&quot;/&gt;
+    &lt;text transform=&quot;translate(221.4 1070.91)&quot; font-size=&quot;21&quot; font-family=&quot;PingFang-SC-Regular, PingFang SC&quot;&gt;
+        &amp;gt;&amp;gt;&amp;gt; 点击圆点 查看隐藏内容 &amp;lt;&amp;lt;&amp;lt;
+    &lt;/text&gt;
+    &lt;circle cx=&quot;375&quot; cy=&quot;992&quot; r=&quot;29&quot; fill=&quot;#ed1e79&quot;&gt;
+        &lt;animate attributeName=&quot;r&quot; values=&quot;0;1100&quot; keytimes=&quot;0;1&quot; calcmode=&quot;spline&quot; keysplines=&quot;0 0 0.5 1&quot; begin=&quot;click&quot; dur=&quot;0.75s&quot; fill=&quot;freeze&quot; additive=&quot;sum&quot; restart=&quot;never&quot;&gt;
+    &lt;/circle&gt;
+    &lt;text transform=&quot;translate(0 295.12)&quot; font-size=&quot;192&quot; fill=&quot;#fff&quot; font-family=&quot;PingFang-SC-Heavy, PingFang SC&quot; font-weight=&quot;800&quot;&gt;
+        Hello
+        &lt;tspan x=&quot;0&quot; y=&quot;230.4&quot;&gt;
+            World!
+        &lt;/tspan&gt;
+    &lt;/text&gt;
+&lt;/svg&gt;
+</code></pre></div>
+
+</div>
+</div>
+</details>
+<p><code>transform</code>属性在<code>animateTransform</code>标签中更改，可以实现较为复杂的变换，如绕某一个特定点进行旋转：</p>
+<details class="note" open="open"><summary>transform变换</summary><div class="tabbed-set" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">渲染图像</label><div class="tabbed-content">
+<p><svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 749 1340" width="350"><rect y="6" width="749" height="1334" fill="#fff"/><g><animateTransform attributeName="transform" type="rotate" values="0 375 0; -10 375 0; 10 375 0; 0 375 0" keytimes="0;0.25;0.75;1" calcmode="spline" keysplines="0 0 0.5 1; 0.5 0 0.5 1; 0.5 0 1 1" start="0s" dur="2s" repeatcount="indefinite" /><line x1="375" y1="6" x2="375" y2="969.5" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="12"/><circle cx="375" cy="969" r="45" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="12"/></g></svg></p>
+</div>
+<input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><label for="__tabbed_14_2">SVG代码</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&lt;svg id=&quot;图层_1&quot; data-name=&quot;图层 1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 749 1340&quot; width=&quot;350&quot;&gt;
+    &lt;rect y=&quot;6&quot; width=&quot;749&quot; height=&quot;1334&quot; fill=&quot;#fff&quot;/&gt;
+    &lt;g&gt;
+        &lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; values=&quot;0 375 0; -10 375 0; 10 375 0; 0 375 0&quot; keytimes=&quot;0;0.25;0.75;1&quot; calcmode=&quot;spline&quot; keysplines=&quot;0 0 0.5 1; 0.5 0 0.5 1; 0.5 0 1 1&quot; start=&quot;0s&quot; dur=&quot;2s&quot; repeatcount=&quot;indefinite&quot; /&gt;
+        &lt;line x1=&quot;375&quot; y1=&quot;6&quot; x2=&quot;375&quot; y2=&quot;969.5&quot; fill=&quot;none&quot; stroke=&quot;#000&quot; stroke-linecap=&quot;round&quot; stroke-miterlimit=&quot;10&quot; stroke-width=&quot;12&quot;/&gt;
+        &lt;circle cx=&quot;375&quot; cy=&quot;969&quot; r=&quot;45&quot; stroke=&quot;#000&quot; stroke-linecap=&quot;round&quot; stroke-miterlimit=&quot;10&quot; stroke-width=&quot;12&quot;/&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+</code></pre></div>
+
+</div>
+</div>
+</details>
                 
                   
                     
@@ -2077,7 +2249,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-01-08T17:37:00+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-01-08</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-01-09T15:50:31+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-01-09</span>
     
   </small>
 </div>
