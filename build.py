@@ -1,6 +1,18 @@
 import time
 import os
 import subprocess
+import doctest
+import sys
+
+def check_doc(cwd: str):
+    for _ in os.listdir(cwd):
+        curPath = os.path.join(cwd, _)
+        if os.path.isdir(curPath):
+            check_doc(curPath)
+        elif os.path.isfile(curPath):
+            if _[-2:] == "md":
+                doctest.testfile(curPath, verbose=True, raise_on_error=True)
+
 
 SOURCE_DIR = "."
 HTML_DIR = os.path.join("..", "HuangFuSL.github.io")
@@ -16,6 +28,12 @@ COMMAND_LIST = {
 
 if __name__ == "__main__":
     os.chdir(SOURCE_DIR)
+
+    try:
+        check_doc(SOURCE_DIR)
+    except:
+        print("doctest failed")
+        sys.exit(-1)
 
     # check the status of the source
     # if the working tree is clean,
