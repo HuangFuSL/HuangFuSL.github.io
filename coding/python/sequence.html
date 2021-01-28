@@ -1541,6 +1541,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    排序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    其他序列类型
+  </a>
+  
+    <nav class="md-nav" aria-label="其他序列类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    数组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    内存视图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    队列
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1652,6 +1693,14 @@
 <p>在NumPy数组的切片中有时会出现省略的情况，此时可以使用<code>...</code>。<code>...</code>符号会被Python解释为<code>EllipsisType</code>类型的常量。</p>
 <h2 id="_5">序列运算<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>序列通常支持<code>+</code>运算与<code>*</code>运算。与切片不同，这两个运算直接创建一个新的序列。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="ow">is</span> <span class="n">a</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
 <p><code>+</code>运算局限于相同类型，对于<code>list</code>等可变类型，<code>a + b</code>等价于<code>a.extend(b)</code>。但<code>a.extend(b)</code>方法对<code>b</code>的类型无要求，仅需要<code>b</code>可迭代。</p>
 <p><code>*</code>运算符的第二个操作数<code>y</code>必须为整数，表示将序列重复<code>y</code>次。若<code>y&lt;=0</code>，则返回空列表</p>
 <p><strong>注意</strong>，<code>*</code>运算符得到的列表中，列表多次重复的部分以引用的形式存储，如下所示：</p>
@@ -1675,6 +1724,212 @@
 </code></pre></div>
 
 <p>因此要避免使用<code>*</code>运算符处理包含可变对象的列表。建议使用列表推导创建嵌套列表。</p>
+<p>与序列的运算不同，（可变）序列的增量运算<code>+=</code>、<code>*=</code>是在原序列的基础上进行的，不会创建新的序列对象。不可变序列不支持增量运算。</p>
+<hr />
+<p>考虑如下代码：</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<p>可变序列通过<code>__setitem__</code>方法实现了切片的修改。若<code>a</code>为不可变序列，执行结果应为何？</p>
+<p>对于不可变序列，其本身不支持对元素进行的修改，因此序列本身的值不会改变。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">5</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;tuple&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<p>但如果要修改的元素本身是引用，如一个可变序列，此时对可变序列的修改不会影响到引用本身，因此<code>+=</code>运算仍会正常作用。增量操作不是原子操作。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">]</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;tuple&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<p>如果使用<code>append</code>或<code>extend</code>方法，则可以避免异常的产生。可变序列被 <strong>正常修改</strong> 。为保证数据不被错误地修改，应避免在不可变序列中容纳可变对象。</p>
+<h2 id="_6">排序<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><code>list.sort</code>方法作用与列表本身而不返回（返回值为<code>None</code>）。要产生一个新的已排序列表而不影响原列表，可以使用<code>sorted()</code>内置函数。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="ow">is</span> <span class="n">a</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<p><code>sorted</code>与<code>list.sort</code>支持按照其他规则对序列进行排序，即<code>key</code>参数。<code>key</code>参数为只有一个参数的函数，如<code>key=len</code>即为对字符串长度升序排序，<code>key=lower</code>即为忽略字符串大小写进行升序排序。</p>
+<p>Python的<code>bisect</code>模块提供了对二分查找的支持。<code>bisect.bisect</code>为二分查找函数，返回在目标数组中大于待查元素的第一个值的位置。<code>bisect.insort</code>为插入函数，在<code>bisect</code>函数查询位置插入元素。</p>
+<p><code>bisect</code>与<code>insort</code>函数有变种<code>bisect_left</code>与<code>insort_left</code>。<code>bisect_left</code>返回在目标数组中不大于待查元素的最后一个值的位置。</p>
+<h2 id="_7">其他序列类型<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8">数组<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><code>array</code>模块提供了数组结构的支持。数组是只能存储一种类型元素的可变序列，支持<code>list</code>的多数方法。同时数组提供了<code>fromfile, tofile</code>与<code>frombytes, tobytes</code>，从而支持直接读写文件或比特流。</p>
+<p>在创建数组时需要指定类型码，即数组中存储的数据类型。每一个类型码对应的类型只占用有限的内存空间。在存储大量数据时优于列表等其他可变序列。</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型码</th>
+<th align="center">C 类型</th>
+<th align="center">Python 类型</th>
+<th align="center">字宽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>'b'</code></td>
+<td align="center"><code>signed char</code></td>
+<td align="center"><code>int</code></td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center"><code>'B'</code></td>
+<td align="center"><code>unsigned char</code></td>
+<td align="center"><code>int</code></td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center"><code>'u'</code></td>
+<td align="center"><code>wchar_t</code></td>
+<td align="center">Unicode character</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center"><code>'h'</code></td>
+<td align="center"><code>signed short</code></td>
+<td align="center"><code>int</code></td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center"><code>'H'</code></td>
+<td align="center"><code>unsigned short</code></td>
+<td align="center"><code>int</code></td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center"><code>'i'</code></td>
+<td align="center"><code>signed int</code></td>
+<td align="center"><code>int</code></td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center"><code>'I'</code></td>
+<td align="center"><code>unsigned int</code></td>
+<td align="center"><code>int</code></td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center"><code>'l'</code></td>
+<td align="center"><code>signed long</code></td>
+<td align="center"><code>int</code></td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center"><code>'L'</code></td>
+<td align="center"><code>unsigned long</code></td>
+<td align="center"><code>int</code></td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center"><code>'q'</code></td>
+<td align="center"><code>signed long long</code></td>
+<td align="center"><code>int</code></td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center"><code>'Q'</code></td>
+<td align="center"><code>unsigned long long</code></td>
+<td align="center"><code>int</code></td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center"><code>'f'</code></td>
+<td align="center"><code>float</code></td>
+<td align="center"><code>float</code></td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center"><code>'d'</code></td>
+<td align="center"><code>double</code></td>
+<td align="center"><code>float</code></td>
+<td align="center">8</td>
+</tr>
+</tbody>
+</table>
+<p>数组不支持列表的如下方法：</p>
+<ul>
+<li><code>clear</code></li>
+<li><code>copy</code></li>
+<li><code>sort</code></li>
+</ul>
+<p>但数组支持从列表添加对象，即<code>fromlist</code>方法。当列表中一个元素在添加过程中出错，则所有的添加都会被回滚。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">array</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="n">array</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">fromlist</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">must</span> <span class="n">be</span> <span class="n">real</span> <span class="n">number</span><span class="p">,</span> <span class="ow">not</span> <span class="nb">str</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="n">array</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<p>数组是bytes-like object，因此可以用于内存视图中。</p>
+<h3 id="_9">内存视图<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p><code>memoryview</code>允许使用不同的方式读写同一块内存的数据。</p>
+<p>如下创建一个映射到字节序列的<code>memoryview</code>，在不执行操作时，<code>memory</code>的数据内容与原序列的数据内容相同。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">memoryview</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<p>使用<code>memoryview.cast</code>方法可以将<code>memoryview</code>映射的内存区域以不同的方式进行解释。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<p><code>memoryview</code>的可变性取决于其所映射内存区域的性质，若使用不可变序列创建<code>memoryview</code>，则<code>memoryview</code>为不可变序列。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">memoryview</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;abc&quot;</span><span class="p">)</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;d&quot;</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">cannot</span> <span class="n">modify</span> <span class="n">read</span><span class="o">-</span><span class="n">only</span> <span class="n">memory</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<p>作为可变序列的<code>memoryview</code>可以被修改，再转换为原来的解释方式，即可实现对序列中某个特定字节的修改。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">257</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<h3 id="_10">队列<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>列表的<code>append</code>与<code>pop</code>方法组合使用可以实现对栈或队列的模拟。<code>collection.deque</code>提供了队列的更高效的实现，并且满足线程安全的条件。</p>
+<p>在创建队列时，可选提供队列的最大长度<code>maxlen</code>。该参数只能在构造函数中指定，在对象中只读。</p>
+<p>队列提供如下方法：</p>
+<ul>
+<li><code>rotate</code>，当参数<code>n &gt; 0</code>时将队列右侧的<code>n</code>个元素移动到队列左侧，反之将队列左侧的<code>n</code>个元素移动到队列右侧</li>
+<li><code>appendleft</code>，在队列的左侧添加元素（当超出队列长度时，会从队列另一侧删除）</li>
+<li><code>extendleft</code>，在队列的左侧添加一组元素（当超出队列长度时，会从队列另一侧删除）</li>
+<li>队列支持列表的大多数方法，除<code>copy</code>、<code>sort</code>、<code>insert</code>、<code>index</code>等方法，队列仅支持<code>+=</code>运算符的作用。</li>
+</ul>
                 
                   
                     
@@ -1683,7 +1938,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-01-27T15:38:11+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-01-27</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-01-28T09:32:13+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-01-28</span>
     
   </small>
 </div>
