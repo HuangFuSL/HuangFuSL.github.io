@@ -77,6 +77,9 @@ nav:
     - Python:
       - 目录: coding/python.md
       - 关闭运行的线程: coding/python/killable-thread.md
+      - 魔术方法: coding/python/magic-functions.md
+      - Python中的序列类型: coding/python/sequence.md
+      - Python中的映射类型: coding/python/mapping.md
     - SVG:
       - 目录: coding/svg.md
       - SVG动画: coding/svg/2.md
