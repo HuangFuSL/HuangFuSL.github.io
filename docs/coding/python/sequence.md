@@ -125,6 +125,15 @@ Point(x=2, y=3)
 
 序列通常支持`+`运算与`*`运算。与切片不同，这两个运算直接创建一个新的序列。
 
+```python
+>>> a = [1]
+>>> b = [2] 
+>>> c = a + b
+>>> c is a
+False
+>>>
+```
+
 `+`运算局限于相同类型，对于`list`等可变类型，`a + b`等价于`a.extend(b)`。但`a.extend(b)`方法对`b`的类型无要求，仅需要`b`可迭代。
 
 `*`运算符的第二个操作数`y`必须为整数，表示将序列重复`y`次。若`y<=0`，则返回空列表
@@ -154,3 +163,171 @@ Point(x=2, y=3)
 ```
 
 因此要避免使用`*`运算符处理包含可变对象的列表。建议使用列表推导创建嵌套列表。
+
+与序列的运算不同，（可变）序列的增量运算`+=`、`*=`是在原序列的基础上进行的，不会创建新的序列对象。不可变序列不支持增量运算。
+
+***
+
+考虑如下代码：
+
+```python
+>>> a = [1, 2, 3]
+>>> a[2] += 5
+>>> a
+[1, 2, 8]
+>>>
+```
+
+可变序列通过`__setitem__`方法实现了切片的修改。若`a`为不可变序列，执行结果应为何？
+
+对于不可变序列，其本身不支持对元素进行的修改，因此序列本身的值不会改变。
+
+```python
+>>> a = (1, 2, 3)
+>>> a[2] += 5
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> a
+(1, 2, 3)
+>>>
+```
+
+但如果要修改的元素本身是引用，如一个可变序列，此时对可变序列的修改不会影响到引用本身，因此`+=`运算仍会正常作用。增量操作不是原子操作。
+
+```python
+>>> t = (1, 2, [30, 40])
+>>> t[2] += [50, 60]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> t
+(1, 2, [30, 40, 50, 60])
+>>>
+```
+
+如果使用`append`或`extend`方法，则可以避免异常的产生。可变序列被 **正常修改** 。为保证数据不被错误地修改，应避免在不可变序列中容纳可变对象。
+
+## 排序
+
+`list.sort`方法作用与列表本身而不返回（返回值为`None`）。要产生一个新的已排序列表而不影响原列表，可以使用`sorted()`内置函数。
+
+```python
+>>> a = [6, 3, 2, 1]
+>>> b = sorted(a)
+>>> b is a
+False
+>>>
+```
+
+`sorted`与`list.sort`支持按照其他规则对序列进行排序，即`key`参数。`key`参数为只有一个参数的函数，如`key=len`即为对字符串长度升序排序，`key=lower`即为忽略字符串大小写进行升序排序。
+
+Python的`bisect`模块提供了对二分查找的支持。`bisect.bisect`为二分查找函数，返回在目标数组中大于待查元素的第一个值的位置。`bisect.insort`为插入函数，在`bisect`函数查询位置插入元素。
+
+`bisect`与`insort`函数有变种`bisect_left`与`insort_left`。`bisect_left`返回在目标数组中不大于待查元素的最后一个值的位置。
+
+## 其他序列类型
+
+### 数组
+
+`array`模块提供了数组结构的支持。数组是只能存储一种类型元素的可变序列，支持`list`的多数方法。同时数组提供了`fromfile, tofile`与`frombytes, tobytes`，从而支持直接读写文件或比特流。
+
+在创建数组时需要指定类型码，即数组中存储的数据类型。每一个类型码对应的类型只占用有限的内存空间。在存储大量数据时优于列表等其他可变序列。
+
+|类型码|C 类型|Python 类型|字宽|
+|:-:|:-:|:-:|:-:|
+|`'b'`|`signed char`|`int`|1|
+|`'B'`|`unsigned char`|`int`|1|
+|`'u'`|`wchar_t`|Unicode character|2|
+|`'h'`|`signed short`|`int`|2|
+|`'H'`|`unsigned short`|`int`|2|
+|`'i'`|`signed int`|`int`|2|
+|`'I'`|`unsigned int`|`int`|2|
+|`'l'`|`signed long`|`int`|4|
+|`'L'`|`unsigned long`|`int`|4|
+|`'q'`|`signed long long`|`int`|8|
+|`'Q'`|`unsigned long long`|`int`|8|
+|`'f'`|`float`|`float`|4|
+|`'d'`|`double`|`float`|8|
+
+数组不支持列表的如下方法：
+
+* `clear`
+* `copy`
+* `sort`
+
+但数组支持从列表添加对象，即`fromlist`方法。当列表中一个元素在添加过程中出错，则所有的添加都会被回滚。
+
+```python
+>>> import array
+>>> a = array.array('f')
+>>> b = [1.0, 2.0, 'a']
+>>> a
+array('f')
+>>> a.fromlist(b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be real number, not str
+>>> a
+array('f')
+>>>
+```
+
+数组是bytes-like object，因此可以用于内存视图中。
+
+### 内存视图
+
+`memoryview`允许使用不同的方式读写同一块内存的数据。
+
+如下创建一个映射到字节序列的`memoryview`，在不执行操作时，`memory`的数据内容与原序列的数据内容相同。
+
+```python
+>>> a = [1, 2, 3, 4]
+>>> b = memoryview(array.array('i', a))
+>>> b[0]
+1
+>>>
+```
+
+使用`memoryview.cast`方法可以将`memoryview`映射的内存区域以不同的方式进行解释。
+
+```python
+>>> c = b.cast('B')
+>>> list(c)
+[1, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 0, 4, 0, 0, 0]
+>>>
+```
+
+`memoryview`的可变性取决于其所映射内存区域的性质，若使用不可变序列创建`memoryview`，则`memoryview`为不可变序列。
+
+```python
+>>> d = memoryview(b"abc") 
+>>> d[0] = "d"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot modify read-only memory
+>>>
+```
+
+作为可变序列的`memoryview`可以被修改，再转换为原来的解释方式，即可实现对序列中某个特定字节的修改。
+
+```python
+>>> c[1] = 1 
+>>> b = c.cast("i")
+>>> list(b)
+[257, 2, 3, 4]
+>>>
+```
+
+### 队列
+
+列表的`append`与`pop`方法组合使用可以实现对栈或队列的模拟。`collection.deque`提供了队列的更高效的实现，并且满足线程安全的条件。
+
+在创建队列时，可选提供队列的最大长度`maxlen`。该参数只能在构造函数中指定，在对象中只读。
+
+队列提供如下方法：
+
+* `rotate`，当参数`n > 0`时将队列右侧的`n`个元素移动到队列左侧，反之将队列左侧的`n`个元素移动到队列右侧
+* `appendleft`，在队列的左侧添加元素（当超出队列长度时，会从队列另一侧删除）
+* `extendleft`，在队列的左侧添加一组元素（当超出队列长度时，会从队列另一侧删除）
+* 队列支持列表的大多数方法，除`copy`、`sort`、`insert`、`index`等方法，队列仅支持`+=`运算符的作用。
