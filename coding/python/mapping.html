@@ -1359,12 +1359,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     变种
   </a>
@@ -1396,6 +1391,38 @@
           <li class="md-nav__item">
   <a href="#counter" class="md-nav__link">
     Counter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    扩展
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    集合
+  </a>
+  
+    <nav class="md-nav" aria-label="集合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    运算
   </a>
   
 </li>
@@ -1663,12 +1690,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     变种
   </a>
@@ -1708,6 +1730,38 @@
     </nav>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    扩展
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    集合
+  </a>
+  
+    <nav class="md-nav" aria-label="集合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    运算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
@@ -1733,8 +1787,15 @@
 <p>Python中最常见的映射类型是字典。本文将从字典入手对Python中的映射类型进行探讨。</p>
 <h2 id="_1">字典<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>字典类型<code>dict</code>对应的抽象基类为<code>MutableMapping</code>。而<code>MutableMapping</code>是<code>Mapping</code>的子类。</p>
-<p><code>dict</code>中的数据组织为键-值对的形式，字典对值的类型没有要求，但要求键的类型必须可散列（hashable）。由此可见，字典结构的底层实现类似散列表，以加快字典内元素的访问速度。</p>
-<p>Python 3.6及以后，<code>dict</code>类型在实现上是有序的，但标准并没有规定<code>dict</code>类型的有序性。</p>
+<p><code>dict</code>中的数据组织为键-值对的形式，字典对值的类型没有要求，但要求键的类型必须可散列（hashable）。由此可见，字典结构的底层实现类似散列表，以加快字典内元素的访问速度。字典的执行效率远高于列表。</p>
+<p>Python 3.6及以后，<code>dict</code>类型在实现上是有序的，键的顺序取决于添加顺序，但标准并没有规定<code>dict</code>类型的有序性。因此两个键顺序不同的字典被视为相同。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
 <blockquote>
 <p>Python 3.9中，字典对象支持<code>|</code>运算符，用于将两个字典合并为一个。当两个字典中出现重复值时右侧字典中的值优先。
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">sys</span> 
@@ -1747,11 +1808,27 @@
 <span class="o">&gt;&gt;&gt;</span>
 </code></pre></div></p>
 </blockquote>
+<p>映射类型通常是可修改的，使用<code>types.MappingProxyType</code>会创建一个原映射的视图。对原映射的任何修改都会反映在视图中，但不能对视图进行任何直接的修改。此方法间接地创建一个不可修改的映射类型。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">MappingProxyType</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">MappingProxyType</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="n">mappingproxy</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">})</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="n">mappingproxy</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;mappingproxy&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
 <h3 id="_2">可散列类型<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>满足如下条件的对象称为可散列对象：</p>
 <ol>
 <li>如果该对象可散列，则在其生命周期中，该散列值不变</li>
-<li>对象实现了<code>__hash__()</code>与<code>__eq__()</code>方法</li>
+<li>对象实现了<code>__hash__()</code>与<code>__eq__()</code>方法（没有实现<code>__eq__()</code>方法的对象不应实现<code>__hash__()</code>方法）</li>
 <li>如果它和另一个对象相等，则两者有相同的散列值</li>
 </ol>
 <p>如：</p>
@@ -1764,11 +1841,16 @@
 <span class="o">&gt;&gt;&gt;</span>
 </code></pre></div>
 
+<p>注：若一个自定义类型定义了<code>__eq__</code>，且没有定义<code>__hash__</code>，<code>__hash__</code>会被设为<code>None</code>。可散列的自定义对象必须有<code>__hash__</code>方法。</p>
+<blockquote>
+<p>以下内容来自于Python文档
+<iframe srcdoc="&lt;link href=&quot;https://docs.python.org/3/_static/classic.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;&lt;link href=&quot;https://docs.python.org/3/_static/basic.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;&lt;link href=&quot;https://docs.python.org/3/_static/pydoctheme.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;&lt;p&gt;If a class does not define an &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__eq__&quot; title=&quot;object.__eq__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__eq__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; method it should not define a&lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__hash__&quot; title=&quot;object.__hash__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__hash__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; operation either; if it defines &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__eq__&quot; title=&quot;object.__eq__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__eq__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; but not&lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__hash__&quot; title=&quot;object.__hash__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__hash__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;, its instances will not be usable as items in hashablecollections.  If a class defines mutable objects and implements an&lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__eq__&quot; title=&quot;object.__eq__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__eq__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; method, it should not implement &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__hash__&quot; title=&quot;object.__hash__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__hash__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;, since theimplementation of hashable collections requires that a key’s hash value isimmutable (if the object’s hash value changes, it will be in the wrong hashbucket).&lt;/p&gt;&lt;p&gt;User-defined classes have &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__eq__&quot; title=&quot;object.__eq__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__eq__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; and &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__hash__&quot; title=&quot;object.__hash__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__hash__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; methodsby default; with them, all objects compare unequal (except with themselves)and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;x.__hash__()&lt;/span&gt;&lt;/code&gt; returns an appropriate value such that &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;y&lt;/span&gt;&lt;/code&gt;implies both that &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;y&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;hash(x)&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;hash(y)&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;A class that overrides &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__eq__&quot; title=&quot;object.__eq__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__eq__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; and does not define &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__hash__&quot; title=&quot;object.__hash__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__hash__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;will have its &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__hash__&quot; title=&quot;object.__hash__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__hash__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; implicitly set to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;None&lt;/span&gt;&lt;/code&gt;.  When the&lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__hash__&quot; title=&quot;object.__hash__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__hash__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; method of a class is &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;None&lt;/span&gt;&lt;/code&gt;, instances of the class willraise an appropriate &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/library/exceptions.html#TypeError&quot; title=&quot;TypeError&quot;&gt;&lt;code class=&quot;xref py py-exc docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;TypeError&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; when a program attempts to retrievetheir hash value, and will also be correctly identified as unhashable whenchecking &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;isinstance(obj,&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;collections.abc.Hashable)&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If a class that overrides &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__eq__&quot; title=&quot;object.__eq__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__eq__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; needs to retain the implementationof &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__hash__&quot; title=&quot;object.__hash__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__hash__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; from a parent class, the interpreter must be told thisexplicitly by setting &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__hash__&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;&lt;ParentClass&gt;.__hash__&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If a class that does not override &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__eq__&quot; title=&quot;object.__eq__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__eq__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; wishes to suppress hashsupport, it should include &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__hash__&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;None&lt;/span&gt;&lt;/code&gt; in the class definition.A class which defines its own &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/reference/datamodel.html#object.__hash__&quot; title=&quot;object.__hash__&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;__hash__()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; that explicitly raisesa &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/library/exceptions.html#TypeError&quot; title=&quot;TypeError&quot;&gt;&lt;code class=&quot;xref py py-exc docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;TypeError&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; would be incorrectly identified as hashable byan &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;isinstance(obj,&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;collections.abc.Hashable)&lt;/span&gt;&lt;/code&gt; call.&lt;/p&gt;" style="border-width: 0px; display: block;" width="100%" height="300px"></iframe></p>
+</blockquote>
 <p>根据如上规则可以判断一些内置数据结构是否为可散列对象</p>
 <ul>
-<li>可变序列在生命周期中序列的内容可能发生变化，因此可变序列（如<code>list</code>）不是可散列对象。</li>
+<li>可变序列在生命周期中序列的内容可能发生变化，因此可变序列（如<code>list</code>、<code>set</code>等）不是可散列对象。</li>
 <li>原子不可变数据类型满足如上所有条件，是可散列对象</li>
-<li>容器<code>frozenset</code>要求其中的所有元素均为可散列对象，因此本身是可散列对象</li>
+<li>容器<code>frozenset</code>要求其中的所有元素均为可散列对象，并且其中内容在整个生命周期中不会发生变化，因此是可散列对象</li>
 <li>容器<code>tuple</code>中可以容纳不可散列对象，因此<code>tuple</code>不是可散列对象，但不含可散列对象的元组是可散列对象。</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t1</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
@@ -1779,6 +1861,8 @@
 <span class="o">&gt;&gt;&gt;</span>
 </code></pre></div>
 
+<p>使用<code>hash</code>函数可以取得可散列对象的散列值。为了避免DOS攻击，在计算散列值时会加上一个随机的噪声。噪声的值仅在同一Python实例中相同。对于一个整数，若它的值小于散列值所允许的最大值（即可以被放进散列值所限定的空间内），则散列的值就是该整数的值。</p>
+<p>散列表的使用是“空间换时间”策略的典型体现。为了尽可能减少冲突，散列表必须有较低的装填因子，这意味着散列表会占用更多的内存空间。</p>
 <h3 id="_3">构造<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>字典提供了多种构造方式，如下构造字典<code>{'a': 1, 'b': 2}</code></p>
 <ol>
@@ -1788,9 +1872,9 @@
 <li>通过<code>zip</code>打包构造，如<code>dict(zip(['a', 'b'], [1, 2]))</code></li>
 <li>通过字典推导构造，如<code>{chr(97 + _): _ + 1 for _ in range(2)}</code></li>
 </ol>
-<h2 id="_4">变种<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_4">变种<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p><code>collections</code>提供了字典的两个变种，即<code>defaultdict</code>与<code>OrderDict</code></p>
-<h3 id="defaultdict">defaultdict<a class="headerlink" href="#defaultdict" title="Permanent link">&para;</a></h3>
+<h4 id="defaultdict">defaultdict<a class="headerlink" href="#defaultdict" title="Permanent link">&para;</a></h4>
 <p>当在一个字典<code>d</code>中找不到键<code>k</code>时，Python会产生<code>KeyError</code>异常。使用<code>d.get(k, default)</code>可以为找不到的键设置默认返回值。但<code>dict.get</code>函数不会对字典进行更新，插入找不到的键。</p>
 <p><code>dict.setdefault</code>提供了另一种从字典中获取值的方法。<code>setdefault</code>接收两个参数，第一个参数为<code>key</code>，第二个参数为可选的默认值<code>default</code>。当字典中找到<code>key</code>所对应的元素时，<code>setdefault</code>直接返回该值，否则<code>setdefault</code>会在字典中添加键值对<code>key: default</code>，然后返回<code>default</code>。</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{}</span>
@@ -1876,10 +1960,10 @@
 <span class="o">&gt;&gt;&gt;</span>
 </code></pre></div>
 
-<h3 id="ordereddict">OrderedDict<a class="headerlink" href="#ordereddict" title="Permanent link">&para;</a></h3>
+<h4 id="ordereddict">OrderedDict<a class="headerlink" href="#ordereddict" title="Permanent link">&para;</a></h4>
 <p><code>OrderedDict</code>是严格（在任何版本中）保持顺序的字典。在迭代过程中键的顺序保持一致。</p>
 <p><code>OrderedDict</code>新增了<code>popitem</code>方法，默认移除并返回字典中最后添加的一个元素。如果手动指定<code>last</code>参数为<code>False</code>，则移除并返回字典中第一个添加的元素。同时，<code>move_to_end</code>是与之配合的移动方法，可以将字典中的键值对（由<code>key</code>参数指定）移动到字典一端（由<code>last</code>参数指定）。</p>
-<h3 id="chainmap">ChainMap<a class="headerlink" href="#chainmap" title="Permanent link">&para;</a></h3>
+<h4 id="chainmap">ChainMap<a class="headerlink" href="#chainmap" title="Permanent link">&para;</a></h4>
 <p><code>ChainMap</code>可以视为一种容纳映射的序列。相比于使用<code>dict.update()</code>或<code>|</code>运算符逐个合并映射，<code>ChainMap</code>有更高的效率。</p>
 <p><code>ChainMap</code>也可以被视为映射，当在<code>ChainMap</code>对象中查询时，<code>ChainMap</code>会逐个查询其中的映射。当同一个键出现在不同的映射中时，<code>ChainMap</code>返回查询到的第一个结果。</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">ChainMap</span>
@@ -1899,8 +1983,22 @@
 <span class="o">&gt;&gt;&gt;</span>
 </code></pre></div>
 
-<h3 id="counter">Counter<a class="headerlink" href="#counter" title="Permanent link">&para;</a></h3>
+<h4 id="counter">Counter<a class="headerlink" href="#counter" title="Permanent link">&para;</a></h4>
 <p><code>Counter</code>提供了对一系列值的统计方法。可以使用可迭代对象初始化<code>Counter</code>类型，<code>Counter</code>会自动统计可迭代对象中每个值的出现顺序。</p>
+<blockquote>
+<p><code>Counter</code>不会对输入的值进行检查，如果使用字典初始化并提供非整数类型的值，在调用<code>Counter.most_common()</code>方法或迭代<code>Counter.elements()</code>的返回值时会抛出<code>TypeError</code>异常。
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">({</span><span class="s1">&#39;0&#39;</span><span class="p">:</span> <span class="s1">&#39;0&#39;</span><span class="p">})</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">elements</span><span class="p">():</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span> <span class="nb">object</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="n">an</span> <span class="n">integer</span>
+</code></pre></div></p>
+<p>这一点在Python文档中有相应说明：</p>
+<p><iframe style="border-width: 0px;" width="100%" height="360px" scrolling="no" srcdoc="&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://docs.python.org/3/_static/classic.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://docs.python.org/3/_static/basic.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://docs.python.org/3/_static/pydoctheme.css&quot; /&gt;&lt;div class=&quot;admonition note&quot;&gt;&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;highlighted&quot;&gt;Counter&lt;/span&gt;s were primarily designed to work with positive integers to represent running counts; however, care was taken to not unnecessarily preclude use cases needing other types or negative values.  To help with those use cases, this section documents the minimum range and type restrictions.&lt;/p&gt;&lt;ul class=&quot;simple&quot;&gt;&lt;li&gt;&lt;p&gt;The &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/library/collections.html#collections.Counter&quot; title=&quot;collections.Counter&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&lt;span class=&quot;highlighted&quot;&gt;Counter&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; class itself is a dictionary subclass with no restrictions on its keys and values.  The values are intended to be numbers representing counts, but you &lt;em&gt;could&lt;/em&gt; store anything in the value field.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;The &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/library/collections.html#collections.Counter.most_common&quot; title=&quot;collections.Counter.most_common&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;most_common()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; method requires only that the values be orderable.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;For in-place operations such as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;c[key]&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;1&lt;/span&gt;&lt;/code&gt;, the value type need only support addition and subtraction.  So fractions, floats, and decimals would work and negative values are supported.  The same is also true for&lt;a class=&quot;reference internal&quot; href=&quot;https://docs.python.org/3/library/collections.html#collections.Counter.update&quot; title=&quot;collections.Counter.update&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;update()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; and &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/library/collections.html#collections.Counter.update&quot; title=&quot;collections.Counter.subtract&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;subtract()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; which allow negative and zero values for both inputs and outputs.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;The multiset methods are designed only for use cases with positive values. The inputs may be negative or zero, but only outputs with positive values are created.  There are no type restrictions, but the value type needs to support addition, subtraction, and comparison.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;The &lt;a class=&quot;reference internal&quot; target=&quot;_blank&quot; href=&quot;https://docs.python.org/3/library/collections.html#collections.Counter.update&quot; title=&quot;collections.Counter.elements&quot;&gt;&lt;code class=&quot;xref py py-meth docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;elements()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; method requires integer counts.  It ignores zero and negative counts.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;../_static/switchers.js&quot;&gt;&lt;/script&gt;"></iframe></p>
+</blockquote>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span> 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>          
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
@@ -1914,6 +2012,58 @@
 <span class="n">Counter</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
 <span class="o">&gt;&gt;&gt;</span>
 </code></pre></div>
+
+<p><code>Counter.elements()</code>方法返回一个迭代器，每个元素按照其出现次数重复。<code>Counter.most_common</code>方法返回计数器中出现次数最多的元素。</p>
+<p><code>Counter</code>类型提供了<code>+</code>、<code>-</code>、<code>&amp;</code>和<code>|</code>运算符，分别对应计数器的相加、相减、交和并操作。当<code>+</code>、<code>-</code>被用作一元运算符时，另一个操作数默认为空计数器。</p>
+<h3 id="_5">扩展<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><code>collections.UserDict</code>类是对<code>dict</code>的Python实现，可以用于自定义映射类型的实现。</p>
+<p><code>UserDict</code>不是<code>dict</code>的子类，但<code>UserDict</code>中有一个<code>dict</code>类型的<code>data</code>属性，是<code>UserDict</code>存储数据的最终位置。相比于直接对<code>dict</code>类型进行扩展，<code>data</code>属性保证了<code>__getitem__</code>方法不会产生循环递归的情况。</p>
+<p><code>UserDict</code>类继承自<code>_collections_abc.MutableMapping</code>与<code>_collections_abc.Mapping</code>类。<code>MutableMapping</code>提供了<code>update()</code>方法。方法的内部实现表明，<code>update()</code>在内部通过<code>__setitem__</code>实现。<code>Mapping</code>提供了<code>get()</code>方法，该方法在内部通过<code>__getitem__</code>实现。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">UserDict</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">myDict</span><span class="p">(</span><span class="n">UserDict</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="o">...</span>             <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  
+<span class="o">...</span>     <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="o">...</span>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Modification: &quot;</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>             <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setitem__</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="o">...</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">myDict</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">Modification</span><span class="p">:</span>  <span class="n">a</span> <span class="p">:</span> <span class="mi">5</span>
+<span class="n">Modification</span><span class="p">:</span>  <span class="n">b</span> <span class="p">:</span> <span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<h2 id="_6">集合<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>集合<code>set</code>是一种序列类型，集合中的各个元素最多只能出现一次。任何非空集合可以使用字面表示法<code>{}</code>进行表示，空集只能用<code>set()</code>表示。集合同样适用于与列表推导相似的推导方式。</p>
+<p>集合有对应的只读变种<code>frozenset</code>。<code>set</code>可以通过字面表示法进行构造，或使用可迭代对象进行构造。<code>frozenset</code>只能使用可迭代对象构造。</p>
+<blockquote>
+<p>可以利用<code>set</code>中元素的唯一性去除列表中的重复值：</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">src_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">src_list</span><span class="p">))</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<p>另一种方法是通过<code>collections.Counter</code>去重。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">src_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">src_list</span><span class="p">)</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+</blockquote>
+<p>和字典的键一样，集合中的元素必须是可散列的。<code>set</code>类型本身不可散列，<code>frozenset</code>类型可散列。</p>
+<h3 id="_7">运算<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>集合有如下运算，由于集合的底层数据结构是散列表，这些运算方法有较高的计算效率。</p>
+<ul>
+<li>交集、并集、差集、对称差，即<code>&amp;</code>、<code>|</code>、<code>-</code>与<code>^</code>；</li>
+<li>子集、真子集、超集、真超集，即<code>&lt;=</code>、<code>&lt;</code>、<code>&gt;=</code>与<code>&gt;</code>；</li>
+<li>属于，即<code>in</code></li>
+</ul>
+<p>以<code>in</code>操作为例，<code>set</code>可以直接查询散列表获取结果，但<code>list</code>必须扫描一遍列表才能获取结果。对于含有许多元素的序列，两者在执行速度上有明显的差别。</p>
+<p><code>set</code>还支持<code>add</code>、<code>clear</code>、<code>copy</code>、<code>pop</code>、<code>remove</code>等方法。</p>
                 
                   
                     
@@ -1922,7 +2072,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-01-29T16:07:17+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-01-29</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-01-30T08:33:58+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-01-30</span>
     
   </small>
 </div>
