@@ -319,6 +319,8 @@ TypeError: cannot modify read-only memory
 >>>
 ```
 
+`memoryview`的切片是一个新的`memoryview`对象（基于原字节序列）
+
 ### 队列
 
 列表的`append`与`pop`方法组合使用可以实现对栈或队列的模拟。`collection.deque`提供了队列的更高效的实现，并且满足线程安全的条件。
