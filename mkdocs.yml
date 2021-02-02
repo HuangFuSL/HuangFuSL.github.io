@@ -81,6 +81,7 @@ nav:
       - Python中的序列类型: coding/python/sequence.md
       - Python中的映射类型: coding/python/mapping.md
       - Python中的字节类型: coding/python/bytes.md
+      - Python中的函数: coding/python/functions.md
     - SVG:
       - 目录: coding/svg.md
       - SVG动画: coding/svg/2.md

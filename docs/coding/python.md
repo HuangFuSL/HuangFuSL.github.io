@@ -5,4 +5,4 @@
 * [序列类型](python/sequence.md)
 * [映射类型](python/mapping.md)
 * [字节类型](python/bytes.md)
-* 
+* [函数](python/fucntions.md)
