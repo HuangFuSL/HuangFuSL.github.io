@@ -10,8 +10,8 @@ def check_doc(cwd: str):
         if os.path.isdir(curPath):
             check_doc(curPath)
         elif os.path.isfile(curPath):
-            if _[-2:] == "md":
-                doctest.testfile(curPath, verbose=True, raise_on_error=True)
+            if _[-2:] == "md" and "pyguide" not in _:
+                doctest.testfile(curPath, verbose=True, raise_on_error=True, optionflags=doctest.ELLIPSIS)
 
 
 SOURCE_DIR = "."

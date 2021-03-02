@@ -76,12 +76,14 @@ nav:
         - 779. 第K个语法符号: coding/leetcode/779.md
     - Python:
       - 目录: coding/python.md
+      - Python Style Guide: coding/python/pyguide.md
       - 关闭运行的线程: coding/python/killable-thread.md
       - 魔术方法: coding/python/magic-functions.md
       - Python中的序列类型: coding/python/sequence.md
       - Python中的映射类型: coding/python/mapping.md
       - Python中的字节类型: coding/python/bytes.md
       - Python中的函数: coding/python/functions.md
+      - 函数装饰器与闭包: coding/python/decorator.md
     - SVG:
       - 目录: coding/svg.md
       - SVG动画: coding/svg/2.md
