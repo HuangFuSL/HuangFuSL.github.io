@@ -1,0 +1,170 @@
+site_name: HuangFuSL's Blog
+repo_name: 'https://github.com/HuangFuSL/HuangFuSL.github.io'
+repo_url: 'https://github.com/HuangFuSL/HuangFuSL.github.io'
+edit_uri: 'https://github.com/HuangFuSL/HuangFuSL.github.io/edit/main/docs'
+
+nav:
+  - Home: index.md
+  - 推送:
+    - 2020: weixin-2020.md
+  - LaTeX:
+    - 目录: latex/index.md
+    - 数学公式: latex/cheatsheet.md
+    - 环境: latex/environ.md
+    - 幻灯片: latex/slides.md
+  - 数学:
+    - 目录: math/index.md
+    - 离散数学:
+      - 目录: math/discrete-mathematics/index.md
+      - 命题逻辑的基本概念: math/discrete-mathematics/chapter-1.md
+      - 命题逻辑的等值和推理演算: math/discrete-mathematics/chapter-2.md
+      - 命题逻辑的公理化: math/discrete-mathematics/chapter-3.md
+      - 谓词逻辑的基本概念: math/discrete-mathematics/chapter-4.md
+      - 谓词逻辑的等值和推理演算: math/discrete-mathematics/chapter-5.md
+      - 集合: math/discrete-mathematics/chapter-9.md
+    - 对策、决策与排队论:
+      - 目录: math/queue-theory/index.md
+      - Chapter 12: math/queue-theory/chapter-12.md
+    - 线性代数:
+      - 目录: math/linear-algebra/index.md
+      - 第一章：行列式: math/linear-algebra/chapter-1.md
+  - 写代码:
+    - 目录: coding/index.md
+    - Leetcode题解: 
+      - 目录: coding/leetcode.md
+      - 题目列表:
+        - 1. 两数之和: coding/leetcode/1.md
+        - 7. 整数反转: coding/leetcode/7.md
+        - 8. 字符串转换整数 (atoi): coding/leetcode/8.md
+        - 9. 回文数: coding/leetcode/9.md
+        - 13. 罗马数字转整数: coding/leetcode/13.md
+        - 14. 最长公共前缀: coding/leetcode/14.md
+        - 19. 删除链表的倒数第N个节点: coding/leetcode/19.md
+        - 21. 合并两个有序链表: coding/leetcode/21.md
+        - 24. 两两交换链表中的节点: coding/leetcode/24.md
+        - 26. 删除排序数组中的重复项: coding/leetcode/26.md
+        - 28. 实现 strStr(): coding/leetcode/28.md
+        - 36. 有效的数独: coding/leetcode/36.md
+        - 38. 外观数列: coding/leetcode/38.md
+        - 48. 旋转图像: coding/leetcode/48.md
+        - 50. Pow(x, n): coding/leetcode/50.md
+        - 66. 加一: coding/leetcode/66.md
+        - 70. 爬楼梯: coding/leetcode/70.md
+        - 88. 合并两个有序数组: coding/leetcode/88.md
+        - 98. 验证二叉搜索树: coding/leetcode/98.md
+        - 101. 对称二叉树: coding/leetcode/101.md
+        - 102. 二叉树的层序遍历: coding/leetcode/102.md
+        - 118. 杨辉三角: coding/leetcode/118.md
+        - 119. 杨辉三角 II: coding/leetcode/119.md
+        - 120. 三角形最小路径和: coding/leetcode/120.md
+        - 121. 买卖股票的最佳时机: coding/leetcode/121.md
+        - 122. 买卖股票的最佳时机 II: coding/leetcode/122.md
+        - 125. 验证回文串: coding/leetcode/125.md
+        - 136. 只出现一次的数字: coding/leetcode/136.md
+        - 155. 最小栈: coding/leetcode/155.md
+        - 189. 旋转数组: coding/leetcode/189.md
+        - 198. 打家劫舍: coding/leetcode/198.md
+        - 204. 计数质数: coding/leetcode/204.md
+        - 206. 反转链表: coding/leetcode/206.md
+        - 217. 存在重复元素: coding/leetcode/217.md
+        - 234. 回文链表: coding/leetcode/234.md
+        - 237. 删除链表中的节点: coding/leetcode/237.md
+        - 242. 有效的字母异位词: coding/leetcode/242.md
+        - 315. 计算右侧小于当前元素的个数: coding/leetcode/315.md
+        - 344. 反转字符串: coding/leetcode/344.md
+        - 350. 两个数组的交集 II: coding/leetcode/350.md
+        - 384. 打乱数组: coding/leetcode/384.md
+        - 387. 字符串中的第一个唯一字符: coding/leetcode/387.md
+        - 509. 斐波那契数: coding/leetcode/509.md
+        - 779. 第K个语法符号: coding/leetcode/779.md
+    - Python:
+      - 目录: coding/python.md
+      - Python Style Guide: coding/python/pyguide.md
+      - 关闭运行的线程: coding/python/killable-thread.md
+      - 魔术方法: coding/python/magic-functions.md
+      - Python中的序列类型: coding/python/sequence.md
+      - Python中的映射类型: coding/python/mapping.md
+      - Python中的字节类型: coding/python/bytes.md
+      - Python中的函数: coding/python/functions.md
+      - 函数装饰器与闭包: coding/python/decorator.md
+    - SVG:
+      - 目录: coding/svg.md
+      - SVG动画: coding/svg/2.md
+    - 数据结构:
+      - 目录: coding/dsa.md
+      - 向量与列表: coding/dsa/vector-and-list.md
+    - 系统配置:
+      - 目录: coding/configuration.md
+      - 源码编译nginx并添加RTMP模块: coding/configuration/nginx-rtmp.md
+  - COVID-2019: covid.md
+  - 关于我:
+    - About: about.md
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  palette:  # 颜色
+    primary: 'teal'
+    accent: 'green'
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - search.suggest
+  font:
+    code: Source Code Pro
+    text: PingFang SC
+  favicon: img/favicon.png
+  icon:
+    logo: material/book-variant
+extra:
+  pagetime: 'on'
+plugins:
+  - search:
+      prebuild_index: true
+  - git-revision-date
+  - git-revision-date-localized:
+      type: timeago
+  - mkdocs-jupyter:
+      include_source: True
+      execute: True
+markdown_extensions:
+  - pymdownx.arithmatex
+  - pymdownx.details
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.extra
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+
+extra_css:
+  - css/button.css
+  - css/colors.css
+  - css/gitalk.css
+  
+
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  - js/love.js
+  - js/mermaid-min.js

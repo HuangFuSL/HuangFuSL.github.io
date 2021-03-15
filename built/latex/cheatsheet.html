@@ -1,0 +1,2598 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>数学公式 - HuangFuSL's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+<script src="/js/gitalk.min.js"></script>
+
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PingFang+SC:300,400,400i,700%7CSource+Code+Pro&display=fallback">
+        <style>body,input{font-family:"PingFang SC",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/timeago.css">
+    
+      <link rel="stylesheet" href="../css/button.css">
+    
+      <link rel="stylesheet" href="../css/colors.css">
+    
+      <link rel="stylesheet" href="../css/gitalk.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="green">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#latex" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../index.html" title="HuangFuSL&#39;s Blog" class="md-header-nav__button md-logo" aria-label="HuangFuSL's Blog">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h5v8l-2.5-1.5L6 12M18 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            HuangFuSL's Blog
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              数学公式
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/HuangFuSL/HuangFuSL.github.io/" title="前往 GitHub 仓库" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    https://github.com/HuangFuSL/HuangFuSL.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+    
+    <a href="../index.html" class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../weixin-2020.html" class="md-tabs__link">
+        推送
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+        
+      
+      <a href="index.html" class="md-tabs__link md-tabs__link--active">
+        LaTeX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../math/index.html" class="md-tabs__link">
+        数学
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../coding/index.html" class="md-tabs__link">
+        写代码
+      </a>
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../about.html" class="md-tabs__link">
+        关于我
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+    <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+            
+
+  
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="HuangFuSL&#39;s Blog" class="md-nav__button md-logo" aria-label="HuangFuSL's Blog">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h5v8l-2.5-1.5L6 12M18 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg>
+
+    </a>
+    HuangFuSL's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/HuangFuSL/HuangFuSL.github.io/" title="前往 GitHub 仓库" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    https://github.com/HuangFuSL/HuangFuSL.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      推送
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="推送" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        推送
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../weixin-2020.html" class="md-nav__link">
+      2020
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    <label class="md-nav__link" for="nav-3">
+      LaTeX
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="LaTeX" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        LaTeX
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="index.html" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        数学公式
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="cheatsheet.html" class="md-nav__link md-nav__link--active">
+      数学公式
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    字母变体
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    希腊字母
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    运算符
+  </a>
+  
+    <nav class="md-nav" aria-label="运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数学运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    集合运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    关系运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    逻辑运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    函数与复杂运算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    括号
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="environ.html" class="md-nav__link">
+      环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="slides.html" class="md-nav__link">
+      幻灯片
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      数学
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="数学" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/index.html" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
+    <label class="md-nav__link" for="nav-4-2">
+      离散数学
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        离散数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/discrete-mathematics/index.html" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/discrete-mathematics/chapter-1.html" class="md-nav__link">
+      命题逻辑的基本概念
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/discrete-mathematics/chapter-2.html" class="md-nav__link">
+      命题逻辑的等值和推理演算
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/discrete-mathematics/chapter-3.html" class="md-nav__link">
+      命题逻辑的公理化
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/discrete-mathematics/chapter-4.html" class="md-nav__link">
+      谓词逻辑的基本概念
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/discrete-mathematics/chapter-5.html" class="md-nav__link">
+      谓词逻辑的等值和推理演算
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/discrete-mathematics/chapter-9.html" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
+    <label class="md-nav__link" for="nav-4-3">
+      对策、决策与排队论
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="对策、决策与排队论" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        对策、决策与排队论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/queue-theory/index.html" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/queue-theory/chapter-12.html" class="md-nav__link">
+      Chapter 12
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" >
+    <label class="md-nav__link" for="nav-4-4">
+      线性代数
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="线性代数" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        线性代数
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/linear-algebra/index.html" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../math/linear-algebra/chapter-1.html" class="md-nav__link">
+      第一章：行列式
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      写代码
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="写代码" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        写代码
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/index.html" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2" >
+    <label class="md-nav__link" for="nav-5-2">
+      Leetcode题解
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Leetcode题解" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-2">
+        <span class="md-nav__icon md-icon"></span>
+        Leetcode题解
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode.html" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2-2" type="checkbox" id="nav-5-2-2" >
+    <label class="md-nav__link" for="nav-5-2-2">
+      题目列表
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="题目列表" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        题目列表
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/1.html" class="md-nav__link">
+      1. 两数之和
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/7.html" class="md-nav__link">
+      7. 整数反转
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/8.html" class="md-nav__link">
+      8. 字符串转换整数 (atoi)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/9.html" class="md-nav__link">
+      9. 回文数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/13.html" class="md-nav__link">
+      13. 罗马数字转整数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/14.html" class="md-nav__link">
+      14. 最长公共前缀
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/19.html" class="md-nav__link">
+      19. 删除链表的倒数第N个节点
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/21.html" class="md-nav__link">
+      21. 合并两个有序链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/24.html" class="md-nav__link">
+      24. 两两交换链表中的节点
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/26.html" class="md-nav__link">
+      26. 删除排序数组中的重复项
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/28.html" class="md-nav__link">
+      28. 实现 strStr()
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/36.html" class="md-nav__link">
+      36. 有效的数独
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/38.html" class="md-nav__link">
+      38. 外观数列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/48.html" class="md-nav__link">
+      48. 旋转图像
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/50.html" class="md-nav__link">
+      50. Pow(x, n)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/66.html" class="md-nav__link">
+      66. 加一
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/70.html" class="md-nav__link">
+      70. 爬楼梯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/88.html" class="md-nav__link">
+      88. 合并两个有序数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/98.html" class="md-nav__link">
+      98. 验证二叉搜索树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/101.html" class="md-nav__link">
+      101. 对称二叉树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/102.html" class="md-nav__link">
+      102. 二叉树的层序遍历
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/118.html" class="md-nav__link">
+      118. 杨辉三角
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/119.html" class="md-nav__link">
+      119. 杨辉三角 II
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/120.html" class="md-nav__link">
+      120. 三角形最小路径和
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/121.html" class="md-nav__link">
+      121. 买卖股票的最佳时机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/122.html" class="md-nav__link">
+      122. 买卖股票的最佳时机 II
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/125.html" class="md-nav__link">
+      125. 验证回文串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/136.html" class="md-nav__link">
+      136. 只出现一次的数字
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/155.html" class="md-nav__link">
+      155. 最小栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/189.html" class="md-nav__link">
+      189. 旋转数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/198.html" class="md-nav__link">
+      198. 打家劫舍
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/204.html" class="md-nav__link">
+      204. 计数质数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/206.html" class="md-nav__link">
+      206. 反转链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/217.html" class="md-nav__link">
+      217. 存在重复元素
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/234.html" class="md-nav__link">
+      234. 回文链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/237.html" class="md-nav__link">
+      237. 删除链表中的节点
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/242.html" class="md-nav__link">
+      242. 有效的字母异位词
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/315.html" class="md-nav__link">
+      315. 计算右侧小于当前元素的个数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/344.html" class="md-nav__link">
+      344. 反转字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/350.html" class="md-nav__link">
+      350. 两个数组的交集 II
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/384.html" class="md-nav__link">
+      384. 打乱数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/387.html" class="md-nav__link">
+      387. 字符串中的第一个唯一字符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/509.html" class="md-nav__link">
+      509. 斐波那契数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/leetcode/779.html" class="md-nav__link">
+      779. 第K个语法符号
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3" >
+    <label class="md-nav__link" for="nav-5-3">
+      Python
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Python" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        <span class="md-nav__icon md-icon"></span>
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/python.html" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/python/pyguide.html" class="md-nav__link">
+      Python Style Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/python/killable-thread.html" class="md-nav__link">
+      关闭运行的线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/python/magic-functions.html" class="md-nav__link">
+      魔术方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/python/sequence.html" class="md-nav__link">
+      Python中的序列类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/python/mapping.html" class="md-nav__link">
+      Python中的映射类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/python/bytes.html" class="md-nav__link">
+      Python中的字节类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/python/functions.html" class="md-nav__link">
+      Python中的函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/python/decorator.html" class="md-nav__link">
+      函数装饰器与闭包
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4" >
+    <label class="md-nav__link" for="nav-5-4">
+      SVG
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="SVG" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-4">
+        <span class="md-nav__icon md-icon"></span>
+        SVG
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/svg.html" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/svg/2.html" class="md-nav__link">
+      SVG动画
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5" >
+    <label class="md-nav__link" for="nav-5-5">
+      数据结构
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="数据结构" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
+        <span class="md-nav__icon md-icon"></span>
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/dsa.html" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/dsa/vector-and-list.html" class="md-nav__link">
+      向量与列表
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-6" type="checkbox" id="nav-5-6" >
+    <label class="md-nav__link" for="nav-5-6">
+      系统配置
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="系统配置" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-6">
+        <span class="md-nav__icon md-icon"></span>
+        系统配置
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/configuration.html" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coding/configuration/nginx-rtmp.html" class="md-nav__link">
+      源码编译nginx并添加RTMP模块
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../covid.html" class="md-nav__link">
+      COVID-2019
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
+    <label class="md-nav__link" for="nav-7">
+      关于我
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="关于我" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        关于我
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about.html" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+        </div>
+    </div>
+</div>
+
+
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+    <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+            
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    字母变体
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    希腊字母
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    运算符
+  </a>
+  
+    <nav class="md-nav" aria-label="运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数学运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    集合运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    关系运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    逻辑运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    函数与复杂运算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    括号
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+        </div>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=360
+            src="//music.163.com/outchain/player?type=0&id=5371395831&auto=1&height=430"></iframe>
+    </div>
+</div>
+
+
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+
+
+                
+                  <a href="https://github.com/HuangFuSL/HuangFuSL.github.io/edit/main/docs/latex/cheatsheet.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="latex">LaTeX 数学公式<a class="headerlink" href="#latex" title="Permanent link">&para;</a></h1>
+<p>收集<span><span class="MathJax_Preview">\LaTeX</span><script type="math/tex">\LaTeX</script></span>常用的数学公式命令</p>
+<h2 id="_1">字母变体<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>常用命令有：<code>\mathcal</code>、<code>\mathbb</code>、<code>\mathfrak</code>、<code>\mathsf</code>、<code>\mathbf</code>、<code>\boldsymbol</code>、<code>\mathit</code>、<code>\mathrm</code>等。其中<code>\mathcal</code>、<code>\mathbb</code>仅适用于大写字母，其余命令大写、小写字母通用</p>
+<ul>
+<li><code>\mathcal{A}</code>：<span><span class="MathJax_Preview">\mathcal A</span><script type="math/tex">\mathcal A</script></span></li>
+<li><code>\mathbb{A}</code>：<span><span class="MathJax_Preview">\mathbb A</span><script type="math/tex">\mathbb A</script></span></li>
+<li><code>\mathfrak{A}</code>：<span><span class="MathJax_Preview">\mathfrak A</span><script type="math/tex">\mathfrak A</script></span></li>
+<li><code>\mathsf{A}</code>：<span><span class="MathJax_Preview">\mathsf A</span><script type="math/tex">\mathsf A</script></span></li>
+<li><code>\mathbf{A}</code>：<span><span class="MathJax_Preview">\mathbf A</span><script type="math/tex">\mathbf A</script></span></li>
+<li><code>\boldsymbol{A}</code>：<span><span class="MathJax_Preview">\boldsymbol A</span><script type="math/tex">\boldsymbol A</script></span></li>
+<li><code>\mathit{A}</code>：<span><span class="MathJax_Preview">\mathit A</span><script type="math/tex">\mathit A</script></span>（无效果）</li>
+<li><code>\mathrm{A}</code>：<span><span class="MathJax_Preview">\mathrm A</span><script type="math/tex">\mathrm A</script></span></li>
+<li><code>\mathscr{A}</code>：<span><span class="MathJax_Preview">\mathscr A</span><script type="math/tex">\mathscr A</script></span>（需要引入宏包<code>mathrsfs</code>）</li>
+</ul>
+<h2 id="_2">希腊字母<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">小写</th>
+<th align="center">命令</th>
+<th align="center">大写</th>
+<th align="center">命令</th>
+<th align="center">变体</th>
+<th align="center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span></td>
+<td align="center"><code>\alpha</code></td>
+<td align="center"><span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></td>
+<td align="center"><code>A</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\beta</span><script type="math/tex">\beta</script></span></td>
+<td align="center"><code>\beta</code></td>
+<td align="center"><span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span></td>
+<td align="center"><code>B</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\gamma</span><script type="math/tex">\gamma</script></span></td>
+<td align="center"><code>\gamma</code></td>
+<td align="center"><span><span class="MathJax_Preview">\Gamma</span><script type="math/tex">\Gamma</script></span></td>
+<td align="center"><code>\Gamma</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varGamma</span><script type="math/tex">\varGamma</script></span></td>
+<td align="center"><code>\varGamma</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span></td>
+<td align="center"><code>\delta</code></td>
+<td align="center"><span><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span></td>
+<td align="center"><code>\Delta</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varDelta</span><script type="math/tex">\varDelta</script></span></td>
+<td align="center"><code>\varDelta</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span></td>
+<td align="center"><code>\epsilonn</code></td>
+<td align="center"><span><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span></td>
+<td align="center"><code>E</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varepsilon</span><script type="math/tex">\varepsilon</script></span></td>
+<td align="center"><code>\varepsilon</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\zeta</span><script type="math/tex">\zeta</script></span></td>
+<td align="center"><code>\zeta</code></td>
+<td align="center"><span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span></td>
+<td align="center"><code>Z</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\eta</span><script type="math/tex">\eta</script></span></td>
+<td align="center"><code>\eta</code></td>
+<td align="center"><span><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span></td>
+<td align="center"><code>H</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span></td>
+<td align="center"><code>\theta</code></td>
+<td align="center"><span><span class="MathJax_Preview">\Theta</span><script type="math/tex">\Theta</script></span></td>
+<td align="center"><code>\Theta</code></td>
+<td align="center"><span><span class="MathJax_Preview">\vartheta,\varTheta</span><script type="math/tex">\vartheta,\varTheta</script></span></td>
+<td align="center"><code>\vartheta,\varTheta</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\iota</span><script type="math/tex">\iota</script></span></td>
+<td align="center"><code>\iota</code></td>
+<td align="center"><span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></td>
+<td align="center"><code>I</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\kappa</span><script type="math/tex">\kappa</script></span></td>
+<td align="center"><code>\kappa</code></td>
+<td align="center"><span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span></td>
+<td align="center"><code>K</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varkappa</span><script type="math/tex">\varkappa</script></span></td>
+<td align="center"><code>\varkappa</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span></td>
+<td align="center"><code>\lambda</code></td>
+<td align="center"><span><span class="MathJax_Preview">\Lambda</span><script type="math/tex">\Lambda</script></span></td>
+<td align="center"><code>\Lambda</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varLambda</span><script type="math/tex">\varLambda</script></span></td>
+<td align="center"><code>\varLambda</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span></td>
+<td align="center"><code>\mu</code></td>
+<td align="center"><span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span></td>
+<td align="center"><code>M</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\nu</span><script type="math/tex">\nu</script></span></td>
+<td align="center"><code>\nu</code></td>
+<td align="center"><span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span></td>
+<td align="center"><code>N</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\xi</span><script type="math/tex">\xi</script></span></td>
+<td align="center"><code>\xi</code></td>
+<td align="center"><span><span class="MathJax_Preview">\Xi</span><script type="math/tex">\Xi</script></span></td>
+<td align="center"><code>\Xi</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varXi</span><script type="math/tex">\varXi</script></span></td>
+<td align="center"><code>\varXi</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">o</span><script type="math/tex">o</script></span></td>
+<td align="center"><code>o</code></td>
+<td align="center"><span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span></td>
+<td align="center"><code>O</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span></td>
+<td align="center"><code>\pi</code></td>
+<td align="center"><span><span class="MathJax_Preview">\Pi</span><script type="math/tex">\Pi</script></span></td>
+<td align="center"><code>\Pi</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varpi, \varPi</span><script type="math/tex">\varpi, \varPi</script></span></td>
+<td align="center"><code>\varpi,\varPi</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></td>
+<td align="center"><code>\rho</code></td>
+<td align="center"><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span></td>
+<td align="center"><code>P</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varrho</span><script type="math/tex">\varrho</script></span></td>
+<td align="center"><code>\varrho</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span></td>
+<td align="center"><code>\sigma</code></td>
+<td align="center"><span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span></td>
+<td align="center"><code>\Sigma</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varsigma, \varSigma</span><script type="math/tex">\varsigma, \varSigma</script></span></td>
+<td align="center"><code>\varsigma,\varSigma</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span></td>
+<td align="center"><code>\tau</code></td>
+<td align="center"><span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span></td>
+<td align="center"><code>T</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\upsilon</span><script type="math/tex">\upsilon</script></span></td>
+<td align="center"><code>\upsilon</code></td>
+<td align="center"><span><span class="MathJax_Preview">\Upsilon</span><script type="math/tex">\Upsilon</script></span></td>
+<td align="center"><code>\Upsilon</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varUpsilon</span><script type="math/tex">\varUpsilon</script></span></td>
+<td align="center"><code>\varUpsilon</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span></td>
+<td align="center"><code>\phi</code></td>
+<td align="center"><span><span class="MathJax_Preview">\Phi</span><script type="math/tex">\Phi</script></span></td>
+<td align="center"><code>\Phi</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varphi, \varPhi</span><script type="math/tex">\varphi, \varPhi</script></span></td>
+<td align="center"><code>\varphi,\varPhi</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\chi</span><script type="math/tex">\chi</script></span></td>
+<td align="center"><code>\chi</code></td>
+<td align="center"><span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span></td>
+<td align="center"><code>X</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\psi</span><script type="math/tex">\psi</script></span></td>
+<td align="center"><code>\psi</code></td>
+<td align="center"><span><span class="MathJax_Preview">\Psi</span><script type="math/tex">\Psi</script></span></td>
+<td align="center"><code>\Psi</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varPsi</span><script type="math/tex">\varPsi</script></span></td>
+<td align="center"><code>\varPsi</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span></td>
+<td align="center"><code>\omega</code></td>
+<td align="center"><span><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span></td>
+<td align="center"><code>\Omega</code></td>
+<td align="center"><span><span class="MathJax_Preview">\varOmega</span><script type="math/tex">\varOmega</script></span></td>
+<td align="center"><code>\varOmega</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">运算符<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>常见运算符列于下表：</p>
+<h3 id="_4">数学运算<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\times</span><script type="math/tex">\times</script></span></td>
+<td align="center"><code>\times</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\div</span><script type="math/tex">\div</script></span></td>
+<td align="center"><code>\div</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\odot</span><script type="math/tex">\odot</script></span></td>
+<td align="center"><code>\odot</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\oplus</span><script type="math/tex">\oplus</script></span></td>
+<td align="center"><code>\oplus</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\otimes</span><script type="math/tex">\otimes</script></span></td>
+<td align="center"><code>\otimes</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">集合运算<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\in</span><script type="math/tex">\in</script></span></td>
+<td align="center"><code>\in</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\ni</span><script type="math/tex">\ni</script></span></td>
+<td align="center"><code>\ni</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\subset</span><script type="math/tex">\subset</script></span></td>
+<td align="center"><code>\subset</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\subseteq</span><script type="math/tex">\subseteq</script></span></td>
+<td align="center"><code>\subseteq</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\subseteqq</span><script type="math/tex">\subseteqq</script></span></td>
+<td align="center"><code>\oplsubseteqqu</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\subsetneq</span><script type="math/tex">\subsetneq</script></span></td>
+<td align="center"><code>\subsetneq</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\subsetneqq</span><script type="math/tex">\subsetneqq</script></span></td>
+<td align="center"><code>\subsetneqq</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\supset</span><script type="math/tex">\supset</script></span></td>
+<td align="center"><code>\subset</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\supseteq</span><script type="math/tex">\supseteq</script></span></td>
+<td align="center"><code>\subseteq</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\supseteqq</span><script type="math/tex">\supseteqq</script></span></td>
+<td align="center"><code>\oplsubseteqqu</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\supsetneq</span><script type="math/tex">\supsetneq</script></span></td>
+<td align="center"><code>\subsetneq</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\supsetneqq</span><script type="math/tex">\supsetneqq</script></span></td>
+<td align="center"><code>\subsetneqq</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span></td>
+<td align="center"><code>\cap</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span></td>
+<td align="center"><code>\cup</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">关系运算符<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\geq</span><script type="math/tex">\geq</script></span></td>
+<td align="center"><code>\geq</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\geqq</span><script type="math/tex">\geqq</script></span></td>
+<td align="center"><code>\geqq</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\geqslant</span><script type="math/tex">\geqslant</script></span></td>
+<td align="center"><code>\geqslant</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\gg</span><script type="math/tex">\gg</script></span></td>
+<td align="center"><code>\gg</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\ggg</span><script type="math/tex">\ggg</script></span></td>
+<td align="center"><code>\ggg</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\leq</span><script type="math/tex">\leq</script></span></td>
+<td align="center"><code>\leq</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\leqq</span><script type="math/tex">\leqq</script></span></td>
+<td align="center"><code>\leqq</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\leqslant</span><script type="math/tex">\leqslant</script></span></td>
+<td align="center"><code>\leqslant</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\ll</span><script type="math/tex">\ll</script></span></td>
+<td align="center"><code>\ll</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\lll</span><script type="math/tex">\lll</script></span></td>
+<td align="center"><code>\lll</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\sim</span><script type="math/tex">\sim</script></span></td>
+<td align="center"><code>\sim</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\approx</span><script type="math/tex">\approx</script></span></td>
+<td align="center"><code>\approx</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">逻辑运算符<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\lnot</span><script type="math/tex">\lnot</script></span></td>
+<td align="center"><code>\lnot</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\land</span><script type="math/tex">\land</script></span></td>
+<td align="center"><code>\land</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\lor</span><script type="math/tex">\lor</script></span></td>
+<td align="center"><code>\lor</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\forall</span><script type="math/tex">\forall</script></span></td>
+<td align="center"><code>\forall</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\exists</span><script type="math/tex">\exists</script></span></td>
+<td align="center"><code>\exists</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_8">函数与复杂运算<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\frac ab</span><script type="math/tex">\frac ab</script></span></td>
+<td align="center"><code>\frac{a}{b}</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\sum_i^n f</span><script type="math/tex">\sum_i^n f</script></span></td>
+<td align="center"><code>\sum_{i}^{n} f</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\prod_i^n f</span><script type="math/tex">\prod_i^n f</script></span></td>
+<td align="center"><code>\prod_{i}^{n} f</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\sqrt[x]{y}</span><script type="math/tex">\sqrt[x]{y}</script></span></td>
+<td align="center"><code>\sqrt[x]{y}</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\int_a^bf(x)\mathrm dx</span><script type="math/tex">\int_a^bf(x)\mathrm dx</script></span></td>
+<td align="center"><code>\int_a^bf(x)\mathrm dx</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\oint_Df(x)\mathrm dx</span><script type="math/tex">\oint_Df(x)\mathrm dx</script></span></td>
+<td align="center"><code>\oint_Df(x)\mathrm dx</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\iint_Df(x)\mathrm dx</span><script type="math/tex">\iint_Df(x)\mathrm dx</script></span></td>
+<td align="center"><code>\iint_Df(x)\mathrm dx</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\iiint_Df(x)\mathrm dx</span><script type="math/tex">\iiint_Df(x)\mathrm dx</script></span></td>
+<td align="center"><code>\iiint_Df(x)\mathrm dx</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\partial</span><script type="math/tex">\partial</script></span></td>
+<td align="center"><code>\partial</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\log</span><script type="math/tex">\log</script></span></td>
+<td align="center"><code>\log</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\ln</span><script type="math/tex">\ln</script></span></td>
+<td align="center"><code>\ln</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\lg</span><script type="math/tex">\lg</script></span></td>
+<td align="center"><code>\lg</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\exp</span><script type="math/tex">\exp</script></span></td>
+<td align="center"><code>\exp</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">a\mod b</span><script type="math/tex">a\mod b</script></span></td>
+<td align="center"><code>a\mod b</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\max</span><script type="math/tex">\max</script></span></td>
+<td align="center"><code>\max</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\min</span><script type="math/tex">\min</script></span></td>
+<td align="center"><code>\min</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\arg</span><script type="math/tex">\arg</script></span></td>
+<td align="center"><code>\arg</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\sin</span><script type="math/tex">\sin</script></span></td>
+<td align="center"><code>\sin</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\cos</span><script type="math/tex">\cos</script></span></td>
+<td align="center"><code>\cos</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\tan</span><script type="math/tex">\tan</script></span></td>
+<td align="center"><code>\tan</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\cot</span><script type="math/tex">\cot</script></span></td>
+<td align="center"><code>\cot</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\sinh</span><script type="math/tex">\sinh</script></span></td>
+<td align="center"><code>\sinh</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\cosh</span><script type="math/tex">\cosh</script></span></td>
+<td align="center"><code>\cosh</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\tanh</span><script type="math/tex">\tanh</script></span></td>
+<td align="center"><code>\tanh</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\coth</span><script type="math/tex">\coth</script></span></td>
+<td align="center"><code>\coth</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\arcsin</span><script type="math/tex">\arcsin</script></span></td>
+<td align="center"><code>\arcsin</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\arccos</span><script type="math/tex">\arccos</script></span></td>
+<td align="center"><code>\arccos</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\arctan</span><script type="math/tex">\arctan</script></span></td>
+<td align="center"><code>\arctan</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\ker</span><script type="math/tex">\ker</script></span></td>
+<td align="center"><code>\ker</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\dim</span><script type="math/tex">\dim</script></span></td>
+<td align="center"><code>\dim</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\det</span><script type="math/tex">\det</script></span></td>
+<td align="center"><code>\det</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\lim</span><script type="math/tex">\lim</script></span></td>
+<td align="center"><code>\lim</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\inf</span><script type="math/tex">\inf</script></span></td>
+<td align="center"><code>\inf</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_9">括号<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\{</span><script type="math/tex">\{</script></span></td>
+<td align="center"><code>\{</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\}</span><script type="math/tex">\}</script></span></td>
+<td align="center"><code>\}</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\langle</span><script type="math/tex">\langle</script></span></td>
+<td align="center"><code>\langle</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\rangle</span><script type="math/tex">\rangle</script></span></td>
+<td align="center"><code>\rangle</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\lceil</span><script type="math/tex">\lceil</script></span></td>
+<td align="center"><code>\lceil</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\rceil</span><script type="math/tex">\rceil</script></span></td>
+<td align="center"><code>\rceil</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\lfloor</span><script type="math/tex">\lfloor</script></span></td>
+<td align="center"><code>\lfloor</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\rfloor</span><script type="math/tex">\rfloor</script></span></td>
+<td align="center"><code>\rfloor</code></td>
+</tr>
+<tr>
+<td align="center"><span><span class="MathJax_Preview">\|</span><script type="math/tex">\|</script></span></td>
+<td align="center"><code>\|</code></td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-15T12:48:01+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-15</span>
+    
+  </small>
+</div>
+                  
+                
+              
+<div id="gitalk-container"></div>
+<style>
+    .jp-RenderedHTMLCommon p {
+        font-size: .8rem;
+        line-height: 1.6;
+    }
+
+    .jp-RenderedHTMLCommon li {
+        font-size: .8rem;
+        line-height: 1.6;
+    }
+
+    .jp-RenderedHTMLCommon h1 {
+        margin: 0 0 1.25em;
+        color: var(--md-default-fg-color--light);
+        font-weight: 300;
+        font-size: 2em;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+    }
+
+    .jp-RenderedHTMLCommon h2 {
+        margin: 1.6em 0 .64em;
+        font-weight: 300;
+        font-size: 1.965em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+    }
+
+    .jp-RenderedHTMLCommon h3 {
+        margin: 1.6em 0 .8em;
+        font-weight: 400;
+        font-size: 1.57em;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+    }
+
+    .jp-RenderedHTMLCommon hr {
+        border: none;
+    }
+</style>
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+<footer class="md-footer">
+    
+    <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+            
+            <a href="index.html" class="md-footer-nav__link md-footer-nav__link--prev"
+                rel="prev">
+                <div class="md-footer-nav__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+                </div>
+                <div class="md-footer-nav__title">
+                    <div class="md-ellipsis">
+                        <span class="md-footer-nav__direction">
+                            上一页
+                        </span>
+                        目录
+                    </div>
+                </div>
+            </a>
+            
+            
+            <a href="environ.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+                <div class="md-footer-nav__title">
+                    <div class="md-ellipsis">
+                        <span class="md-footer-nav__direction">
+                            下一页
+                        </span>
+                        环境
+                    </div>
+                </div>
+                <div class="md-footer-nav__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+                </div>
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class="md-footer-copyright">
+                
+                Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            
+            <script
+                id="_wauv47">var _wau = _wau || []; _wau.push(["dynamic", "fp0cxv3a9u", "v47", "161616ffffff", "small"]);</script>
+            <script async src="//waust.at/d.js"></script>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.tabs', 'navigation.expand', 'search.suggest'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../js/timeago.min.js"></script>
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="../js/love.js"></script>
+      
+        <script src="../js/mermaid-min.js"></script>
+      
+    
+<script type="text/javascript" color="68,198,142" opacity='0.7' zIndex="-2" count="99"
+    src="/js/canvas-nest.js"></script>
+<script type="text/javascript" src="/js/loadColor.js"></script>
+<script type="text/javascript">
+    const gitalk = new Gitalk({
+        clientID: 'dffa82e50165bec0527d',
+        clientSecret: '9e7dcbda7d2d391997baed627c4c8b9037ebba25',
+        repo: 'HuangFuSL.github.io',      // The repository of store comments,
+        owner: 'HuangFuSL',
+        admin: ['HuangFuSL'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+  </body>
+</html>
