@@ -6,7 +6,8 @@ edit_uri: 'https://github.com/HuangFuSL/BlogSource/edit/main/docs'
 nav:
   - Home: index.md
   - 推送:
-    - 2020: weixin-2020.md
+    - 2020: wechat/2020.md
+    - 2021: wechat/2021.md
   - LaTeX:
     - 目录: latex/index.md
     - 数学公式: latex/cheatsheet.md
