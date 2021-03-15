@@ -34,7 +34,12 @@ if __name__ == "__main__":
     msg = "Update on " + \
         time.strftime("%Y/%m/%d %H:%M:%S", time.localtime(time.time()))
     subprocess.run(
-        'mkdocs gh-deploy -d built --message "%s" --no-directory-urls' % (msg, ),
+        'mkdocs gh-deploy -d built --message "%s"' % (msg, ),
         cwd=src
     )
-    
+    subprocess.run('git add --all', cwd=src)
+    subprocess.run(
+        'git commit -a --message="%s"' % (msg, ),
+        cwd=src
+    )
+    subprocess.run('git push', cwd=src)
