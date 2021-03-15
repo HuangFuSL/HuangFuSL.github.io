@@ -1,0 +1,21 @@
+# 一些很喜欢的推送
+
+[《昨晚》](https://mp.weixin.qq.com/s/m4FIb0fy3MbuHzI0nGbBtg) by 老鼠什么都知道
+
+[《杀死无聊的同时，你也在杀死自己》](https://mp.weixin.qq.com/s/Vue3qPJ5MbfJIXBA-fPGyQ) by 人物
+
+[《痛苦的一百张底片》](https://mp.weixin.qq.com/s/5d19fmfseT7nCt_w8mmJNg) by 人物
+
+[《总不能丧气太久吧。》](https://mp.weixin.qq.com/s/BVQZALvjdyi3pTUKMxaL1g) by 概率论
+
+[《我们把这场初雪做成了电影海报》](https://mp.weixin.qq.com/s/AU7zRYV3jKfRMIkatdOLtw) by 清华大学清新时报
+
+[《困于人脸识别》](https://mp.weixin.qq.com/s/M6sfo-r2mkrQ2RPJCosJKw) by 人物
+
+[《新的十年，人生的奇幻漂流》](https://mp.weixin.qq.com/s/dMCb31nc5wF3mT-s0Ffl_Q) by 人物
+
+[《文艺是一场骗局吗？》](https://mp.weixin.qq.com/s/LjBeE76puYumTWCz5ZV1Vw) by 人物
+
+[《一碗米豆腐，穿越山海》](https://mp.weixin.qq.com/s/HjXm5AcNKIRIvHSKXoHSOA) by 人物
+
+[《保研失败以后，我又考了次清华》](https://mp.weixin.qq.com/s/nTYT_7kOPwP_nTbh0U1JDg) by 清华研读间

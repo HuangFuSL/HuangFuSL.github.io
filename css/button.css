@@ -1,0 +1,21 @@
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline-style: none;
+    background: transparent;
+    font-size: inherit;
+}
+
+button[data-md-color-accent], button[data-md-color-primary] {
+    width: 6.5rem;
+    margin-bottom: .2rem;
+    padding: 1.2rem .4rem .2rem;
+    -webkit-transition: background-color .25s, opacity .25s;
+    transition: background-color .25s, opacity .25s;
+    border-radius: .1rem;
+    color: #fff;
+    font-size: .64rem;
+    text-align: left;
+    cursor: pointer;
+}
