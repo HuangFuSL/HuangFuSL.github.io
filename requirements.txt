@@ -1,0 +1,6 @@
+mkdocs
+mkdocs-git-revision-date-localized-plugin
+mkdocs-git-revision-date-plugin
+mkdocs-material
+mkdocs-material-extensions
+mkdocs-jupyter
