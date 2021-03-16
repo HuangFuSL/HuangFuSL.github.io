@@ -4,3 +4,5 @@ mkdocs-git-revision-date-plugin
 mkdocs-material
 mkdocs-material-extensions
 mkdocs-jupyter
+matplotlib
+pandas
