@@ -33,7 +33,7 @@ if __name__ == "__main__":
     src = os.getcwd()
     msg = "Update on " + \
         time.strftime("%Y/%m/%d %H:%M:%S", time.localtime(time.time()))
-    if sys.argv[1] == "github-actions":
+    if len(sys.argv) > 1 and sys.argv[1] == "github-actions":
         subprocess.run(
             'mkdocs gh-deploy -d built --message "%s"' % (msg, ),
             cwd=src, shell=True
@@ -42,5 +42,9 @@ if __name__ == "__main__":
         subprocess.run('git add --all', cwd=src)
         subprocess.run(
             'git commit -a --message="%s"' % (msg, ),
+            cwd=src
+        )
+        subprocess.run(
+            'git push',
             cwd=src
         )
