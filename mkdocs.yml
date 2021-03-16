@@ -35,6 +35,8 @@ nav:
       - 目录: coding/leetcode.md
       - 题目列表:
         - 1. 两数之和: coding/leetcode/1.md
+        - 2. 两数相加: coding/leetcode/2.md
+        - 3. 无重复字符的最长子串: coding/leetcode/3.md
         - 7. 整数反转: coding/leetcode/7.md
         - 8. 字符串转换整数 (atoi): coding/leetcode/8.md
         - 9. 回文数: coding/leetcode/9.md
@@ -49,6 +51,7 @@ nav:
         - 38. 外观数列: coding/leetcode/38.md
         - 48. 旋转图像: coding/leetcode/48.md
         - 50. Pow(x, n): coding/leetcode/50.md
+        - 59. 螺旋矩阵 II: coding/leetcode/59.md
         - 66. 加一: coding/leetcode/66.md
         - 70. 爬楼梯: coding/leetcode/70.md
         - 88. 合并两个有序数组: coding/leetcode/88.md
@@ -125,13 +128,16 @@ plugins:
   - git-revision-date
   - git-revision-date-localized:
       type: timeago
+  - mkdocs-jupyter:
+      include_source: true
+      execute: true
 markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.details
   - admonition
   - codehilite:
-      guess_lang: false
-      linenums: false
+      guess_lang: true
+      linenums: true
   - toc:
       permalink: true
   - footnotes
