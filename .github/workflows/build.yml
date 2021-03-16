@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout Master
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
@@ -31,4 +33,5 @@ jobs:
 
       - name: Deploy
         run: |
+          git pull
           python3 ./build.py github-actions
