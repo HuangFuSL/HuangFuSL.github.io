@@ -14,7 +14,7 @@
     
     
       
-        <title>155. 最小栈 - HuangFuSL's Blog</title>
+        <title>59. 螺旋矩阵 II - HuangFuSL's Blog</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#155" class="md-skip">
+        <a href="#59-ii" class="md-skip">
           跳转至
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              155. 最小栈
+              59. 螺旋矩阵 II
             
           </span>
         </div>
@@ -1022,11 +1022,56 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../59/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          59. 螺旋矩阵 II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         59. 螺旋矩阵 II
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1190,56 +1235,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          155. 最小栈
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../155/" class="md-nav__link">
         155. 最小栈
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    题目
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    题解
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1840,96 +1840,80 @@
 
 
                 
-                  <a href="https://github.com/HuangFuSL/HuangFuSL.github.io/edit/main/docs/coding/leetcode/155.md" title="编辑此页" class="md-content__button md-icon">
+                  <a href="https://github.com/HuangFuSL/HuangFuSL.github.io/edit/main/docs/coding/leetcode/59.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="155">155. 最小栈<a class="headerlink" href="#155" title="Permanent link">&para;</a></h1>
-<p>难度：<font color=green><strong>简单</strong></font></p>
+                <h1 id="59-ii">59. 螺旋矩阵 II<a class="headerlink" href="#59-ii" title="Permanent link">&para;</a></h1>
+<p>难度：<font color=orange><strong>中等</strong></font></p>
 <h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>设计一个支持 <code>push</code>，<code>pop</code>，<code>top</code>操作，并能在常数时间内检索到最小元素的栈。</p>
-<ul>
-<li><code>push(x)</code> —— 将元素 x 推入栈中。</li>
-<li><code>pop()</code> —— 删除栈顶的元素。</li>
-<li><code>top()</code> —— 获取栈顶元素。</li>
-<li><code>getMin()</code> —— 检索栈中的最小元素。
- </li>
-</ul>
-<p><strong>示例：</strong></p>
-<div class="highlight"><pre><span></span><code>输入：
-[&quot;MinStack&quot;,&quot;push&quot;,&quot;push&quot;,&quot;push&quot;,&quot;getMin&quot;,&quot;pop&quot;,&quot;top&quot;,&quot;getMin&quot;]
-[[],[-2],[0],[-3],[],[],[],[]]
-
-输出：
-[null,null,null,null,-3,null,0,-2]
-
-解释：
-MinStack minStack = new MinStack();
-minStack.push(-2);
-minStack.push(0);
-minStack.push(-3);
-minStack.getMin();   --&gt; 返回 -3.
-minStack.pop();
-minStack.top();      --&gt; 返回 0.
-minStack.getMin();   --&gt; 返回 -2.
+<p>给你一个正整数 <code>n</code> ，生成一个包含 <code>1</code> 到 <code>n^2</code> 所有元素，且元素按顺时针顺序螺旋排列的 <code>n x n</code> 正方形矩阵 <code>matrix</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<div class="highlight"><pre><span></span><code>输入：n = 3
+输出：[[1,2,3],[8,9,4],[7,6,5]]
+</code></pre></div>
+<p><strong>示例 2：</strong></p>
+<div class="highlight"><pre><span></span><code>输入：n = 1
+输出：[[1]]
 </code></pre></div>
 <p><strong>提示：</strong></p>
-<p><code>pop</code>、<code>top</code> 和 <code>getMin</code> 操作总是在 <strong>非空栈</strong> 上调用。</p>
-<p><a href="https://leetcode-cn.com/problems/min-stack">Reference</a></p>
+<ul>
+<li><code>1 &lt;= n &lt;= 20</code></li>
+</ul>
 <h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><strong>基本思路：</strong> 使用两个域分别存储当前数值和当前栈中的最小值。</p>
-<p>代码如下：</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#define MIN(x, y) (x &lt; y ? x : y)</span>
-<span class="k">struct</span> <span class="nc">cell</span>
+<p>按顺序填充矩阵，当超出矩阵或遇到已填充元素时转向。</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Return an array of arrays of size *returnSize.</span>
+<span class="cm"> * The sizes of the arrays are returned as *returnColumnSizes array.</span>
+<span class="cm"> * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">change</span><span class="p">(</span><span class="kt">int</span> <span class="n">direction</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">j</span><span class="p">,</span> <span class="kt">int</span> <span class="n">incre</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">curMin</span><span class="p">;</span>
-<span class="p">};</span>
-<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-    <span class="k">struct</span> <span class="nc">cell</span> <span class="n">values</span><span class="p">[</span><span class="mi">10000</span><span class="p">];</span>
-    <span class="kt">int</span> <span class="n">top</span><span class="p">;</span>
-<span class="p">}</span> <span class="n">MinStack</span><span class="p">;</span>
-<span class="cm">/** initialize your data structure here. */</span>
-<span class="n">MinStack</span> <span class="o">*</span><span class="nf">minStackCreate</span><span class="p">()</span> 
-<span class="p">{</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">MinStack</span> <span class="o">*</span><span class="p">)</span><span class="n">memset</span><span class="p">(</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">MinStack</span><span class="p">)),</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">MinStack</span><span class="p">));</span>
+    <span class="k">switch</span><span class="p">(</span><span class="n">direction</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+            <span class="o">*</span><span class="n">j</span> <span class="o">+=</span> <span class="n">incre</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+            <span class="o">*</span><span class="n">i</span> <span class="o">+=</span> <span class="n">incre</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+            <span class="o">*</span><span class="n">j</span> <span class="o">-=</span> <span class="n">incre</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+            <span class="o">*</span><span class="n">i</span> <span class="o">-=</span> <span class="n">incre</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
 <span class="p">}</span>
-<span class="kt">void</span> <span class="nf">minStackPush</span><span class="p">(</span><span class="n">MinStack</span><span class="o">*</span> <span class="n">obj</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">obj</span><span class="o">-&gt;</span><span class="n">values</span><span class="p">[</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span><span class="p">].</span><span class="n">val</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
-    <span class="n">obj</span><span class="o">-&gt;</span><span class="n">values</span><span class="p">[</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span><span class="p">].</span><span class="n">curMin</span> <span class="o">=</span> <span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">MIN</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">obj</span><span class="o">-&gt;</span><span class="n">values</span><span class="p">[</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="n">curMin</span><span class="p">)</span> <span class="o">:</span> <span class="n">x</span><span class="p">;</span>
-    <span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span><span class="o">++</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">void</span> <span class="nf">minStackPop</span><span class="p">(</span><span class="n">MinStack</span> <span class="o">*</span><span class="n">obj</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span><span class="o">--</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">int</span> <span class="nf">minStackTop</span><span class="p">(</span><span class="n">MinStack</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="n">obj</span><span class="o">-&gt;</span><span class="n">values</span><span class="p">[</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="n">val</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">int</span> <span class="nf">minStackGetMin</span><span class="p">(</span><span class="n">MinStack</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="n">obj</span><span class="o">-&gt;</span><span class="n">values</span><span class="p">[</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="n">curMin</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">void</span> <span class="nf">minStackFree</span><span class="p">(</span><span class="n">MinStack</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">free</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="cm">/**</span>
-<span class="cm"> * Your MinStack struct will be instantiated and called as such:</span>
-<span class="cm"> * MinStack* obj = minStackCreate();</span>
-<span class="cm"> * minStackPush(obj, x);</span>
+<span class="kt">int</span><span class="o">**</span> <span class="nf">generateMatrix</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">returnSize</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">returnColumnSizes</span><span class="p">){</span>
+    <span class="o">*</span><span class="n">returnSize</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">returnColumnSizes</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span><span class="p">);</span>
 
-<span class="cm"> * minStackPop(obj);</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">**</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="p">(</span><span class="o">*</span><span class="n">returnColumnSizes</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+        <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span><span class="p">);</span>
+        <span class="n">memset</span><span class="p">(</span><span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span><span class="p">);</span>
+    <span class="p">}</span>
 
-<span class="cm"> * int param_3 = minStackTop(obj);</span>
-
-<span class="cm"> * int param_4 = minStackGetMin(obj);</span>
-
-<span class="cm"> * minStackFree(obj);</span>
-<span class="cm">*/</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">m</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+        <span class="n">change</span><span class="p">(</span><span class="n">direction</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">j</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="n">m</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">n</span> <span class="o">||</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="n">n</span> <span class="o">||</span> <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+        <span class="p">{</span>
+            <span class="n">change</span><span class="p">(</span><span class="n">direction</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">j</span><span class="p">,</span> <span class="mi">-1</span><span class="p">);</span>
+            <span class="n">direction</span> <span class="o">=</span> <span class="p">(</span><span class="n">direction</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">3</span><span class="p">;</span>
+            <span class="n">m</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
                 
                   
@@ -1939,7 +1923,7 @@ minStack.getMin();   --&gt; 返回 -2.
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-15T12:48:36+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-15</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-16T08:46:52+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-16</span>
     
   </small>
 </div>
@@ -2003,7 +1987,7 @@ minStack.getMin();   --&gt; 返回 -2.
     <div class="md-footer-nav">
         <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
             
-            <a href="../136/" class="md-footer-nav__link md-footer-nav__link--prev"
+            <a href="../50/" class="md-footer-nav__link md-footer-nav__link--prev"
                 rel="prev">
                 <div class="md-footer-nav__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -2013,19 +1997,19 @@ minStack.getMin();   --&gt; 返回 -2.
                         <span class="md-footer-nav__direction">
                             上一页
                         </span>
-                        136. 只出现一次的数字
+                        50. Pow(x, n)
                     </div>
                 </div>
             </a>
             
             
-            <a href="../189/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../66/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
                 <div class="md-footer-nav__title">
                     <div class="md-ellipsis">
                         <span class="md-footer-nav__direction">
                             下一页
                         </span>
-                        189. 旋转数组
+                        66. 加一
                     </div>
                 </div>
                 <div class="md-footer-nav__button md-icon">

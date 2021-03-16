@@ -14,7 +14,7 @@
     
     
       
-        <title>155. 最小栈 - HuangFuSL's Blog</title>
+        <title>3. 无重复字符的最长子串 - HuangFuSL's Blog</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#155" class="md-skip">
+        <a href="#3" class="md-skip">
           跳转至
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              155. 最小栈
+              3. 无重复字符的最长子串
             
           </span>
         </div>
@@ -842,11 +842,56 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          3. 无重复字符的最长子串
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         3. 无重复字符的最长子串
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1190,56 +1235,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          155. 最小栈
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../155/" class="md-nav__link">
         155. 最小栈
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    题目
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    题解
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1840,96 +1840,61 @@
 
 
                 
-                  <a href="https://github.com/HuangFuSL/HuangFuSL.github.io/edit/main/docs/coding/leetcode/155.md" title="编辑此页" class="md-content__button md-icon">
+                  <a href="https://github.com/HuangFuSL/HuangFuSL.github.io/edit/main/docs/coding/leetcode/3.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="155">155. 最小栈<a class="headerlink" href="#155" title="Permanent link">&para;</a></h1>
-<p>难度：<font color=green><strong>简单</strong></font></p>
+                <h1 id="3">3. 无重复字符的最长子串<a class="headerlink" href="#3" title="Permanent link">&para;</a></h1>
+<p><font color=orange><strong>中等</strong></font></p>
 <h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>设计一个支持 <code>push</code>，<code>pop</code>，<code>top</code>操作，并能在常数时间内检索到最小元素的栈。</p>
-<ul>
-<li><code>push(x)</code> —— 将元素 x 推入栈中。</li>
-<li><code>pop()</code> —— 删除栈顶的元素。</li>
-<li><code>top()</code> —— 获取栈顶元素。</li>
-<li><code>getMin()</code> —— 检索栈中的最小元素。
- </li>
-</ul>
-<p><strong>示例：</strong></p>
-<div class="highlight"><pre><span></span><code>输入：
-[&quot;MinStack&quot;,&quot;push&quot;,&quot;push&quot;,&quot;push&quot;,&quot;getMin&quot;,&quot;pop&quot;,&quot;top&quot;,&quot;getMin&quot;]
-[[],[-2],[0],[-3],[],[],[],[]]
-
-输出：
-[null,null,null,null,-3,null,0,-2]
-
-解释：
-MinStack minStack = new MinStack();
-minStack.push(-2);
-minStack.push(0);
-minStack.push(-3);
-minStack.getMin();   --&gt; 返回 -3.
-minStack.pop();
-minStack.top();      --&gt; 返回 0.
-minStack.getMin();   --&gt; 返回 -2.
+<p>给定一个字符串，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p>
+<p><strong>示例 1:</strong></p>
+<div class="highlight"><pre><span></span><code>输入: s = &quot;abcabcbb&quot;
+输出: 3 
+解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。
+</code></pre></div>
+<p><strong>示例 2:</strong></p>
+<div class="highlight"><pre><span></span><code>输入: s = &quot;bbbbb&quot;
+输出: 1
+解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。
+</code></pre></div>
+<p><strong>示例 3:</strong></p>
+<div class="highlight"><pre><span></span><code>输入: s = &quot;pwwkew&quot;
+输出: 3
+解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。
+     请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。
+</code></pre></div>
+<p><strong>示例 4:</strong></p>
+<div class="highlight"><pre><span></span><code>输入: s = &quot;&quot;
+输出: 0
 </code></pre></div>
 <p><strong>提示：</strong></p>
-<p><code>pop</code>、<code>top</code> 和 <code>getMin</code> 操作总是在 <strong>非空栈</strong> 上调用。</p>
-<p><a href="https://leetcode-cn.com/problems/min-stack">Reference</a></p>
+<ul>
+<li><code>0 &lt;= s.length &lt;= 5 * 104</code></li>
+<li><code>s</code> 由英文字母、数字、符号和空格组成</li>
+</ul>
 <h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><strong>基本思路：</strong> 使用两个域分别存储当前数值和当前栈中的最小值。</p>
-<p>代码如下：</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#define MIN(x, y) (x &lt; y ? x : y)</span>
-<span class="k">struct</span> <span class="nc">cell</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">curMin</span><span class="p">;</span>
-<span class="p">};</span>
-<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-    <span class="k">struct</span> <span class="nc">cell</span> <span class="n">values</span><span class="p">[</span><span class="mi">10000</span><span class="p">];</span>
-    <span class="kt">int</span> <span class="n">top</span><span class="p">;</span>
-<span class="p">}</span> <span class="n">MinStack</span><span class="p">;</span>
-<span class="cm">/** initialize your data structure here. */</span>
-<span class="n">MinStack</span> <span class="o">*</span><span class="nf">minStackCreate</span><span class="p">()</span> 
-<span class="p">{</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">MinStack</span> <span class="o">*</span><span class="p">)</span><span class="n">memset</span><span class="p">(</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">MinStack</span><span class="p">)),</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">MinStack</span><span class="p">));</span>
+<p><strong>基本思路</strong> ：用一个数组存储各字母出现的次数（哈希表）。当不存在重复字母时滑动窗口不断向右延伸，直到出现重复字母或到达字符串结尾。检测到重复字母后，从左向右收缩滑动窗口，每次收缩都对哈希表进行更新。直到不存在重复字母时，滑动窗口才停止收缩，继续向右延伸。</p>
+<p><strong>时间复杂度</strong> ：<span><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span></p>
+<p><strong>空间复杂度</strong> ：<span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>，与字符串长度无关，但与单个字符的宽度有关。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">lengthOfLongestSubstring</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span> <span class="n">s</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">hashMap</span><span class="p">[</span><span class="mi">256</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">},</span> <span class="o">*</span><span class="n">cur</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">cur</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">hashMap</span><span class="p">[</span><span class="o">*</span><span class="n">cur</span><span class="p">])</span>
+        <span class="p">{</span>
+            <span class="n">hashMap</span><span class="p">[</span><span class="o">*</span><span class="p">(</span><span class="n">cur</span> <span class="o">-</span> <span class="n">length</span><span class="p">)]</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">length</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">hashMap</span><span class="p">[</span><span class="o">*</span><span class="n">cur</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">length</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">ret</span> <span class="o">&gt;</span> <span class="n">length</span> <span class="o">?</span> <span class="nl">ret</span> <span class="p">:</span> <span class="n">length</span><span class="p">;</span>
+        <span class="n">cur</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="kt">void</span> <span class="nf">minStackPush</span><span class="p">(</span><span class="n">MinStack</span><span class="o">*</span> <span class="n">obj</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">obj</span><span class="o">-&gt;</span><span class="n">values</span><span class="p">[</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span><span class="p">].</span><span class="n">val</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
-    <span class="n">obj</span><span class="o">-&gt;</span><span class="n">values</span><span class="p">[</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span><span class="p">].</span><span class="n">curMin</span> <span class="o">=</span> <span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">MIN</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">obj</span><span class="o">-&gt;</span><span class="n">values</span><span class="p">[</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="n">curMin</span><span class="p">)</span> <span class="o">:</span> <span class="n">x</span><span class="p">;</span>
-    <span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span><span class="o">++</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">void</span> <span class="nf">minStackPop</span><span class="p">(</span><span class="n">MinStack</span> <span class="o">*</span><span class="n">obj</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span><span class="o">--</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">int</span> <span class="nf">minStackTop</span><span class="p">(</span><span class="n">MinStack</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="n">obj</span><span class="o">-&gt;</span><span class="n">values</span><span class="p">[</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="n">val</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">int</span> <span class="nf">minStackGetMin</span><span class="p">(</span><span class="n">MinStack</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="n">obj</span><span class="o">-&gt;</span><span class="n">values</span><span class="p">[</span><span class="n">obj</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="n">curMin</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">void</span> <span class="nf">minStackFree</span><span class="p">(</span><span class="n">MinStack</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">free</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="cm">/**</span>
-<span class="cm"> * Your MinStack struct will be instantiated and called as such:</span>
-<span class="cm"> * MinStack* obj = minStackCreate();</span>
-<span class="cm"> * minStackPush(obj, x);</span>
-
-<span class="cm"> * minStackPop(obj);</span>
-
-<span class="cm"> * int param_3 = minStackTop(obj);</span>
-
-<span class="cm"> * int param_4 = minStackGetMin(obj);</span>
-
-<span class="cm"> * minStackFree(obj);</span>
-<span class="cm">*/</span>
 </code></pre></div>
                 
                   
@@ -1939,7 +1904,7 @@ minStack.getMin();   --&gt; 返回 -2.
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-15T12:48:36+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-15</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-16T08:46:52+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-16</span>
     
   </small>
 </div>
@@ -2003,7 +1968,7 @@ minStack.getMin();   --&gt; 返回 -2.
     <div class="md-footer-nav">
         <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
             
-            <a href="../136/" class="md-footer-nav__link md-footer-nav__link--prev"
+            <a href="../2/" class="md-footer-nav__link md-footer-nav__link--prev"
                 rel="prev">
                 <div class="md-footer-nav__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -2013,19 +1978,19 @@ minStack.getMin();   --&gt; 返回 -2.
                         <span class="md-footer-nav__direction">
                             上一页
                         </span>
-                        136. 只出现一次的数字
+                        2. 两数相加
                     </div>
                 </div>
             </a>
             
             
-            <a href="../189/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../7/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
                 <div class="md-footer-nav__title">
                     <div class="md-ellipsis">
                         <span class="md-footer-nav__direction">
                             下一页
                         </span>
-                        189. 旋转数组
+                        7. 整数反转
                     </div>
                 </div>
                 <div class="md-footer-nav__button md-icon">

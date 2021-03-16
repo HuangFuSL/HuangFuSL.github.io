@@ -1,8 +1,10 @@
 # Leetcode 题解
 
 * [1. 两数之和](leetcode/1.md)  
+* [2. 两数相加](leetcode/2.md)
+* [3. 无重复字符的最长子串](leetcode/3.md)
 * [7. 整数反转](leetcode/7.md)  
-* [8. 字符串转换整数 (leetcode/atoi)](leetcode/8.md)  
+* [8. 字符串转换整数](leetcode/8.md)  
 * [9. 回文数](leetcode/9.md)
 * [13. 罗马数字转整数](leetcode/13.md)  
 * [14. 最长公共前缀](leetcode/14.md)  
@@ -14,6 +16,7 @@
 * [38. 外观数列](leetcode/38.md)  
 * [48. 旋转图像](leetcode/48.md)  
 * [50. Pow(x, n)](leetcode/50.md)
+* [59. 螺旋矩阵 II](leetcode/59.md)
 * [66. 加一](leetcode/66.md)  
 * [70. 爬楼梯](leetcode/70.md)  
 * [118. 杨辉三角](leetcode/118.md)  
