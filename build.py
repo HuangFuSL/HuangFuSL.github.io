@@ -13,7 +13,7 @@ def check_doc(cwd: str):
         elif os.path.isfile(curPath):
             if _[-2:] == "md" and "pyguide" not in _:
                 doctest.testfile(
-                    curPath, verbose=True, raise_on_error=True, optionflags=doctest.ELLIPSIS)
+                    curPath, verbose=True, optionflags=doctest.ELLIPSIS)
 
 
 SOURCE_DIR = "."
