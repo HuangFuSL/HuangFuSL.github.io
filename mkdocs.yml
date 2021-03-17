@@ -29,6 +29,9 @@ nav:
     - 线性代数:
       - 目录: math/linear-algebra/index.md
       - 第一章：行列式: math/linear-algebra/chapter-1.md
+    - 生产与运作管理:
+      - 目录: math/pom/index.md
+      - 预测技术: math/pom/forecast.md
   - 写代码:
     - 目录: coding/index.md
     - Leetcode题解: 

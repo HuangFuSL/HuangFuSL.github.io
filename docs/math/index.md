@@ -9,3 +9,4 @@
 5. 运筹学
 6. [对策、决策与排队论](queue-theory/index.md)
 7. 动态系统分析与控制
+8. [生产与运作管理](pom/index.md)
