@@ -91,6 +91,8 @@ nav:
       - Python中的字节类型: coding/python/bytes.md
       - Python中的函数: coding/python/functions.md
       - 函数装饰器与闭包: coding/python/decorator.md
+      - Matplotlib:
+        - 三维图表: coding/python/matplotlib/3dplots.ipynb
     - SVG:
       - 目录: coding/svg.md
       - SVG动画: coding/svg/2.md
