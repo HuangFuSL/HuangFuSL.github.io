@@ -1,7 +1,7 @@
 site_name: HuangFuSL's Blog
-repo_name: 'https://github.com/HuangFuSL/HuangFuSL.github.io'
-repo_url: 'https://github.com/HuangFuSL/HuangFuSL.github.io'
-edit_uri: 'https://github.com/HuangFuSL/HuangFuSL.github.io/edit/main/docs'
+repo_name: HuangFuSL/HuangFuSL.github.io
+repo_url: https://github.com/HuangFuSL/HuangFuSL.github.io
+edit_uri: https://github.com/HuangFuSL/HuangFuSL.github.io/edit/main/docs
 
 nav:
   - Home: index.md
@@ -140,6 +140,7 @@ theme:
   favicon: img/favicon.png
   icon:
     logo: material/book-variant
+    repo: fontawesome/brands/git-alt
 extra:
   pagetime: 'on'
   social:
