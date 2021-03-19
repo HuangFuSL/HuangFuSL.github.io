@@ -494,7 +494,7 @@ all:
 
 `conf/nginx.conf`写入如下内容：
 
-??? question "conf/nginx.conf文件内容"
+!!! question "conf/nginx.conf文件内容"
 
     ```properties
     worker_processes  8;
