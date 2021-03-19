@@ -160,3 +160,95 @@ $$
 * 预测结果乘以季节因子，得到最终的预测值
 
 缺点：在获得新的观测值后，需要重新计算所有的季节因子。
+
+### 三重指数平滑
+
+假设需求为$D_t = (\mu +G_t)c_t + \epsilon_t$（乘积型）。该形式使用三个指数平滑对序列（截距）、趋势（斜率）和季节因子（周期）分别进行拟合。
+
+* 序列：$S_t = \alpha \frac{D_t}{c_{t-N}} + (1-\alpha) (S_{t-1} + G_{t-1})$，$c_{t-N}$用于消除季节因子的影响。
+* 趋势：$G_t = \beta(S_t - S_{t-1}) + (1-\beta) G_{t-1}$
+* 季节因子：$c_t = \gamma\frac{D_t}{S_t} + (1-\gamma) c_{t-N}$
+
+## Box-Jenkins模型：ARIMA
+
+ARIMA模型是利用时间序列的自相关结构：
+
+> Auto Regressive Integrated Moving Average
+
+构建步骤：
+
+1. 数据转换
+2. 模型识别
+3. 参数估计
+4. 预测
+5. 评价
+
+### 自回归过程：AR(p)
+
+对于平稳序列：
+
+1. 间隔相同的任意一组需求的联合边际分布相同->协方差相同
+2. 任意两个观测的协方差仅取决于相隔的周期数
+
+$$
+\mathrm{Cov}(D_{t+m}, D_{t+m+k}) = E(D_{t+m}D_{t+m+k}) - E(D_{t+m})E(D_{t+m+k})
+$$
+
+相关系数：滞后$k$期的自相关系数
+
+$$
+\rho_k = \frac{\mathrm {Cov}(D_{t+m}, D_{t+m+k})}{\sqrt{\mathrm {Var}(D_{t+m})}\sqrt{\mathrm {Var}(D_{t+m+k})}}
+$$
+
+样本的自相关函数：
+
+$$
+r_k = \frac{\sum_{t=k+1} ^ n(D_t - \overline D)(D_{t-k} - \overline D)}{\sum_{t=1} ^ n(D_t - \overline D)^2}
+$$
+
+$$
+D_t = a_0 + a_1D_{t-1} + \dots + a_pD_{t-p} + \epsilon_t
+$$
+
+$p$为自回归过程的阶数，一阶自回归模型$AR(1)$：
+
+$$
+D_t = a_0 + a_1 D_{t-1} + \epsilon_t
+$$
+
+自相关函数为：$\rho_j = a_1^j$
+
+将样本的自相关函数与理论的自相关函数进行比较，判断ARIMA的拟合效果。
+
+### 移动平均过程：MA(q)
+
+$$
+D_t = b_0 - b_1\epsilon_{t-1} -\dots - b_q\epsilon{t-q} +\epsilon_t
+$$
+
+$AR(1)$过程本质上是$MA(\infty)$过程。
+
+$MA(1)$过程：$D_t = b_0 - b_1\epsilon_{t-1} + \epsilon_t$
+
+对应于$AR(1)$过程的自相关函数：
+
+$$
+\left\{\begin{aligned}
+  \rho_1 &= \frac{-b_1}{1+b_1^2} \\
+  \rho_2 &= \rho_3 = \dots = 0
+\end{aligned}\right.
+$$
+
+### ARMA模型
+
+$ARMA(p, q)$模型是$AR(p)$模型与$MA(q)$模型的结合，如$ARMA(1, 1)$：
+
+$$
+D_t = c+a_1D_{t-1} - b_1\epsilon_{t-1} + \epsilon_t
+$$
+
+如果序列不是平稳序列，而存在趋势性和/或季节性，需要将非平稳过程转换为平稳过程。
+
+* 当$D_t$存在线性趋势时，使用差分方法消除趋势性：$U_t = D_t - D_{t-1}$，$U_t$是平稳序列。
+* 当$D_t$存在季节性趋势时，使用差分方法消除趋势性：$U_t = D_t - D_{t-N}$
+* 对$U_t$进行加和，得到初始的$D_t$

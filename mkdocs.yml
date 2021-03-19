@@ -32,60 +32,74 @@ nav:
     - 生产与运作管理:
       - 目录: math/pom/index.md
       - 预测技术: math/pom/forecast.md
+      - 销售与经营计划: math/pom/planning.md
   - 写代码:
     - 目录: coding/index.md
     - Leetcode题解: 
       - 目录: coding/leetcode.md
       - 题目列表:
-        - 1. 两数之和: coding/leetcode/1.md
-        - 2. 两数相加: coding/leetcode/2.md
-        - 3. 无重复字符的最长子串: coding/leetcode/3.md
-        - 7. 整数反转: coding/leetcode/7.md
-        - 8. 字符串转换整数 (atoi): coding/leetcode/8.md
-        - 9. 回文数: coding/leetcode/9.md
-        - 11. 盛最多水的容器: coding/leetcode/11.md
-        - 13. 罗马数字转整数: coding/leetcode/13.md
-        - 14. 最长公共前缀: coding/leetcode/14.md
-        - 19. 删除链表的倒数第N个节点: coding/leetcode/19.md
-        - 21. 合并两个有序链表: coding/leetcode/21.md
-        - 24. 两两交换链表中的节点: coding/leetcode/24.md
-        - 26. 删除排序数组中的重复项: coding/leetcode/26.md
-        - 28. 实现 strStr(): coding/leetcode/28.md
-        - 36. 有效的数独: coding/leetcode/36.md
-        - 38. 外观数列: coding/leetcode/38.md
-        - 48. 旋转图像: coding/leetcode/48.md
-        - 50. Pow(x, n): coding/leetcode/50.md
-        - 59. 螺旋矩阵 II: coding/leetcode/59.md
-        - 66. 加一: coding/leetcode/66.md
-        - 70. 爬楼梯: coding/leetcode/70.md
-        - 88. 合并两个有序数组: coding/leetcode/88.md
-        - 98. 验证二叉搜索树: coding/leetcode/98.md
-        - 101. 对称二叉树: coding/leetcode/101.md
-        - 102. 二叉树的层序遍历: coding/leetcode/102.md
-        - 115. 不同的子序列: coding/leetcode/115.md
-        - 118. 杨辉三角: coding/leetcode/118.md
-        - 119. 杨辉三角 II: coding/leetcode/119.md
-        - 120. 三角形最小路径和: coding/leetcode/120.md
-        - 121. 买卖股票的最佳时机: coding/leetcode/121.md
-        - 122. 买卖股票的最佳时机 II: coding/leetcode/122.md
-        - 125. 验证回文串: coding/leetcode/125.md
-        - 136. 只出现一次的数字: coding/leetcode/136.md
-        - 155. 最小栈: coding/leetcode/155.md
-        - 189. 旋转数组: coding/leetcode/189.md
-        - 198. 打家劫舍: coding/leetcode/198.md
-        - 204. 计数质数: coding/leetcode/204.md
-        - 206. 反转链表: coding/leetcode/206.md
-        - 217. 存在重复元素: coding/leetcode/217.md
-        - 234. 回文链表: coding/leetcode/234.md
-        - 237. 删除链表中的节点: coding/leetcode/237.md
-        - 242. 有效的字母异位词: coding/leetcode/242.md
-        - 315. 计算右侧小于当前元素的个数: coding/leetcode/315.md
-        - 344. 反转字符串: coding/leetcode/344.md
-        - 350. 两个数组的交集 II: coding/leetcode/350.md
-        - 384. 打乱数组: coding/leetcode/384.md
-        - 387. 字符串中的第一个唯一字符: coding/leetcode/387.md
-        - 509. 斐波那契数: coding/leetcode/509.md
-        - 779. 第K个语法符号: coding/leetcode/779.md
+        - 1-50:
+          - 1. 两数之和: coding/leetcode/1.md
+          - 2. 两数相加: coding/leetcode/2.md
+          - 3. 无重复字符的最长子串: coding/leetcode/3.md
+          - 7. 整数反转: coding/leetcode/7.md
+          - 8. 字符串转换整数 (atoi): coding/leetcode/8.md
+          - 9. 回文数: coding/leetcode/9.md
+          - 11. 盛最多水的容器: coding/leetcode/11.md
+          - 13. 罗马数字转整数: coding/leetcode/13.md
+          - 14. 最长公共前缀: coding/leetcode/14.md
+          - 17. 电话号码的字母组合: coding/leetcode/17.md
+          - 19. 删除链表的倒数第N个节点: coding/leetcode/19.md
+          - 21. 合并两个有序链表: coding/leetcode/21.md
+          - 24. 两两交换链表中的节点: coding/leetcode/24.md
+          - 26. 删除排序数组中的重复项: coding/leetcode/26.md
+          - 28. 实现 strStr(): coding/leetcode/28.md
+          - 36. 有效的数独: coding/leetcode/36.md
+          - 38. 外观数列: coding/leetcode/38.md
+          - 48. 旋转图像: coding/leetcode/48.md
+          - 50. Pow(x, n): coding/leetcode/50.md
+        - 51-100:
+          - 59. 螺旋矩阵 II: coding/leetcode/59.md
+          - 66. 加一: coding/leetcode/66.md
+          - 70. 爬楼梯: coding/leetcode/70.md
+          - 88. 合并两个有序数组: coding/leetcode/88.md
+          - 92. 反转链表 II: coding/leetcode/92.md
+          - 98. 验证二叉搜索树: coding/leetcode/98.md
+        - 101-150:
+          - 101. 对称二叉树: coding/leetcode/101.md
+          - 102. 二叉树的层序遍历: coding/leetcode/102.md
+          - 115. 不同的子序列: coding/leetcode/115.md
+          - 118. 杨辉三角: coding/leetcode/118.md
+          - 119. 杨辉三角 II: coding/leetcode/119.md
+          - 120. 三角形最小路径和: coding/leetcode/120.md
+          - 121. 买卖股票的最佳时机: coding/leetcode/121.md
+          - 122. 买卖股票的最佳时机 II: coding/leetcode/122.md
+          - 125. 验证回文串: coding/leetcode/125.md
+          - 136. 只出现一次的数字: coding/leetcode/136.md
+        - 151-200:
+          - 155. 最小栈: coding/leetcode/155.md
+          - 189. 旋转数组: coding/leetcode/189.md
+          - 198. 打家劫舍: coding/leetcode/198.md
+        - 201-250:
+          - 204. 计数质数: coding/leetcode/204.md
+          - 206. 反转链表: coding/leetcode/206.md
+          - 217. 存在重复元素: coding/leetcode/217.md
+          - 234. 回文链表: coding/leetcode/234.md
+          - 237. 删除链表中的节点: coding/leetcode/237.md
+          - 242. 有效的字母异位词: coding/leetcode/242.md
+        - 301-350:
+          - 315. 计算右侧小于当前元素的个数: coding/leetcode/315.md
+          - 344. 反转字符串: coding/leetcode/344.md
+          - 350. 两个数组的交集 II: coding/leetcode/350.md
+        - 351-400:
+          - 384. 打乱数组: coding/leetcode/384.md
+          - 387. 字符串中的第一个唯一字符: coding/leetcode/387.md
+        - 501-550:
+          - 509. 斐波那契数: coding/leetcode/509.md
+        - 751-800:
+          - 779. 第K个语法符号: coding/leetcode/779.md
+        - 1601-1650:
+          - 1603. 设计停车系统: coding/leetcode/1603.md
     - Python:
       - 目录: coding/python.md
       - Python Style Guide: coding/python/pyguide.md
@@ -119,7 +133,6 @@ theme:
     accent: 'green'
   features:
     - navigation.tabs
-    - navigation.expand
     - search.suggest
   font:
     code: Source Code Pro
@@ -129,6 +142,9 @@ theme:
     logo: material/book-variant
 extra:
   pagetime: 'on'
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/HuangFuSL
 plugins:
   - search:
       prebuild_index: true
@@ -160,6 +176,7 @@ markdown_extensions:
       emoji_generator: !!python/name:pymdownx.emoji.to_png
   - pymdownx.extra
   - pymdownx.inlinehilite
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
