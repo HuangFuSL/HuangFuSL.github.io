@@ -32,16 +32,16 @@ if __name__ == "__main__":
     # no rebuild and commit required.
     src = os.getcwd()
     msg = "Update on " + \
-        time.strftime("%Y/%m/%d %H:%M:%S", time.localtime(time.time()))
+        time.strftime("%Y/%m/%d %H:%M:%S", time.gmtime(time.time() + 3600 * 8))
     if len(sys.argv) > 1 and sys.argv[1] == "github-actions":
         subprocess.run(
-            ['mkdocs', 'gh-deploy', '-d', 'built', '--message', msg],
+            'mkdocs gh-deploy -d built --message "%s"' % (msg, ),
             cwd=src, shell=True
         )
     else:
         subprocess.run('git add --all'.split(), cwd=src)
         subprocess.run(
-            ['git', 'commit', '-a', '--message=%s' % (msg, )],
+            ['git', 'commit', '-a', '--message="%s"' % (msg, )],
             cwd=src
         )
         subprocess.run(
