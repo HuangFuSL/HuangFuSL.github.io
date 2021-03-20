@@ -1,9 +1,11 @@
-name: Build Documentation using MkDocs
+name: Build Documentation
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
 
 jobs:
@@ -30,3 +32,12 @@ jobs:
         run: |
           git pull
           python3 ./build.py github-actions
+
+  docker:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build Docker
+        run: docker build .
