@@ -41,7 +41,7 @@ if __name__ == "__main__":
     else:
         subprocess.run('git add --all'.split(), cwd=src)
         subprocess.run(
-            ['git', 'commit', '-a', '--message="%s"' % (msg, )],
+            ['git', 'commit', '-a', '--message=%s' % (msg, )],
             cwd=src
         )
         subprocess.run(
