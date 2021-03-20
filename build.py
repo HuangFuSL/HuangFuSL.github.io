@@ -35,16 +35,16 @@ if __name__ == "__main__":
         time.strftime("%Y/%m/%d %H:%M:%S", time.localtime(time.time()))
     if len(sys.argv) > 1 and sys.argv[1] == "github-actions":
         subprocess.run(
-            'mkdocs gh-deploy -d built --message "%s"' % (msg, ),
+            'mkdocs gh-deploy -d built --message'.split() + [msg],
             cwd=src, shell=True
         )
     else:
-        subprocess.run('git add --all', cwd=src)
+        subprocess.run('git add --all'.split(), cwd=src)
         subprocess.run(
-            'git commit -a --message="%s"' % (msg, ),
+            ['git', 'commit', '-a', '--message="%s"' % (msg, )],
             cwd=src
         )
         subprocess.run(
-            'git push',
+            'git push'.split(),
             cwd=src
         )
