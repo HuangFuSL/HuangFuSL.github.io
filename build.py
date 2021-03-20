@@ -35,7 +35,7 @@ if __name__ == "__main__":
         time.strftime("%Y/%m/%d %H:%M:%S", time.localtime(time.time()))
     if len(sys.argv) > 1 and sys.argv[1] == "github-actions":
         subprocess.run(
-            'mkdocs gh-deploy -d built --message'.split() + [msg],
+            ['mkdocs','gh-deploy', '-d', 'built', '--message', msg],
             cwd=src, shell=True
         )
     else:
