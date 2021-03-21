@@ -76,6 +76,7 @@ nav:
           - 122. 买卖股票的最佳时机 II: coding/leetcode/122.md
           - 125. 验证回文串: coding/leetcode/125.md
           - 136. 只出现一次的数字: coding/leetcode/136.md
+          - 150. 逆波兰表达式求值: coding/leetcode/150.md
         - 151-200:
           - 155. 最小栈: coding/leetcode/155.md
           - 189. 旋转数组: coding/leetcode/189.md
