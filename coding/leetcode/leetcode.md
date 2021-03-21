@@ -26,6 +26,7 @@
 * [122. 买卖股票的最佳时机 II](leetcode/122.md)  
 * [125. 验证回文串](leetcode/125.md)  
 * [136. 只出现一次的数字](leetcode/136.md)  
+* [150. 逆波兰表达式求值](leetcode/150.md)  
 * [189. 旋转数组](leetcode/189.md)  
 * [206. 反转链表](leetcode/206.md)  
 * [217. 存在重复元素](leetcode/217.md)  
