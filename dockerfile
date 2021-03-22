@@ -4,20 +4,30 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /root
 
-RUN pip install pip -U \
-    && pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN apk add --no-cache --virtual \
+    .build \
+    gcc g++ libgcc musl-dev \
+    jpeg-dev zlib-dev make libffi-dev libtool zeromq-dev \
+    && pip install --no-input --no-cache-dir -r requirements.txt \
+    && apk del \
+    .build \
+    gcc g++ libgcc musl-dev \
+    jpeg-dev zlib-dev make libffi-dev libtool zeromq-dev
+
+RUN apk add --no-cache libzmq libjpeg nodejs
 
 # RUN mkdir HuangFuSL.github.io
 # WORKDIR /root/HuangFuSL.github.io
 # ADD . .
-RUN git clone https://github.com/HuangFuSL/HuangFuSL.github.io
+
+RUN git clone https://github.com/HuangFuSL/HuangFuSL.github.io --depth=1
 WORKDIR /root/HuangFuSL.github.io
 
 
 EXPOSE 8000
 
-CMD git pull \
-    && mkdocs serve --dev-addr=0.0.0.0:8000
+ENTRYPOINT ["mkdocs"]
+CMD ["serve", "--dev-addr=0.0.0.0:8000"]
