@@ -4,8 +4,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /root
 
-RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-
 COPY requirements.txt .
 RUN apk add --no-cache --virtual \
     .build \
@@ -18,10 +16,6 @@ RUN apk add --no-cache --virtual \
     jpeg-dev zlib-dev make libffi-dev libtool zeromq-dev
 
 RUN apk add --no-cache libzmq libjpeg nodejs
-
-# RUN mkdir HuangFuSL.github.io
-# WORKDIR /root/HuangFuSL.github.io
-# ADD . .
 
 RUN git clone https://github.com/HuangFuSL/HuangFuSL.github.io --depth=1
 WORKDIR /root/HuangFuSL.github.io
