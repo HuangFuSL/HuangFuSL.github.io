@@ -6,3 +6,7 @@
 * [映射类型](python/mapping.md)
 * [字节类型](python/bytes.md)
 * [函数](python/functions.md)
+
+## Matplotlib
+
+* [三维图表](python/matplotlib/3dplots.ipynb)

@@ -62,7 +62,9 @@ nav:
           - 59. 螺旋矩阵 II: coding/leetcode/59.md
           - 66. 加一: coding/leetcode/66.md
           - 70. 爬楼梯: coding/leetcode/70.md
+          - 78. 子集: coding/leetcode/78.md
           - 88. 合并两个有序数组: coding/leetcode/88.md
+          - 90. 子集 II: coding/leetcode/90.md
           - 92. 反转链表 II: coding/leetcode/92.md
           - 98. 验证二叉搜索树: coding/leetcode/98.md
         - 101-150:
@@ -90,6 +92,7 @@ nav:
           - 242. 有效的字母异位词: coding/leetcode/242.md
         - 301-350:
           - 315. 计算右侧小于当前元素的个数: coding/leetcode/315.md
+          - 341. 扁平化嵌套列表迭代器: coding/leetcode/341.md
           - 344. 反转字符串: coding/leetcode/344.md
           - 350. 两个数组的交集 II: coding/leetcode/350.md
         - 351-400:
