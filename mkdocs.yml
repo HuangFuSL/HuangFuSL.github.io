@@ -99,14 +99,24 @@ nav:
         - 351-400:
           - 384. 打乱数组: coding/leetcode/384.md
           - 387. 字符串中的第一个唯一字符: coding/leetcode/387.md
+        - 401-450:
+          - 433. 最小基因变化: coding/leetcode/433.md
         - 501-550:
           - 509. 斐波那契数: coding/leetcode/509.md
         - 751-800:
           - 779. 第K个语法符号: coding/leetcode/779.md
+          - 781. 森林中的兔子: coding/leetcode/781.md
+        - 901-950:
+          - 917. 仅仅反转字母: coding/leetcode/917.md
         - 1000-1050:
           - 1006. 笨阶乘: coding/leetcode/1006.md 
+        - 1251-1300:
+          - 1283. 使结果不超过阈值的最小除数: coding/leetcode/1283.md 
+          - 1300. 转变数组后最接近目标值的数组和: coding/leetcode/1300.md
         - 1601-1650:
           - 1603. 设计停车系统: coding/leetcode/1603.md
+        - 面试题:
+          - 面试题 17.21. 直方图的水量: coding/leetcode/17.21.md
     - Python:
       - 目录: coding/python.md
       - Python Style Guide: coding/python/pyguide.md
