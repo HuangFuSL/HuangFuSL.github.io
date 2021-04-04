@@ -763,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/pom/fdm.md" class="md-nav__link">
+      <a href="../../../math/pom/fdm/" class="md-nav__link">
         预测与需求建模
       </a>
     </li>
@@ -1034,9 +1034,45 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          17. 电话号码的字母组合
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         17. 电话号码的字母组合
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1830,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1006.md" class="md-nav__link">
+      <a href="../1006/" class="md-nav__link">
         1006. 笨阶乘
       </a>
     </li>
@@ -2301,6 +2337,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
         </div>
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=360
@@ -2321,6 +2379,8 @@
                 
                 
                 <h1 id="17">17. 电话号码的字母组合<a class="headerlink" href="#17" title="Permanent link">&para;</a></h1>
+<p>难度：<font color=orange><strong>中等</strong></font></p>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>给定一个仅包含数字 <code>2-9</code> 的字符串，返回所有它能表示的字母组合。答案可以按 <strong>任意顺序</strong> 返回。</p>
 <p>给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。</p>
 <p><img alt="Example" src="../img/17_example.png" /></p>
@@ -2342,6 +2402,49 @@
 <li>digits[i] 是范围 ['2', '9'] 的一个数字。</li>
 </ul>
 <p><a href="https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number">Reference</a></p>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Note: The returned array must be malloced, assume caller calls free().</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">digits</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">ret</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">subscript</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">current</span><span class="p">,</span> <span class="kt">int</span> <span class="n">end</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">map</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">digits</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">strcpy</span><span class="p">(</span><span class="n">ret</span><span class="p">[(</span><span class="o">*</span><span class="n">subscript</span><span class="p">)</span><span class="o">++</span><span class="p">],</span> <span class="n">current</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="o">*</span><span class="n">digits</span> <span class="o">-</span> <span class="sc">&#39;2&#39;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">cur</span> <span class="o">=</span> <span class="n">map</span><span class="p">[</span><span class="n">target</span><span class="p">];</span>
+    <span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">cur</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">current</span><span class="p">[</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="o">*</span><span class="n">cur</span><span class="p">;</span>
+        <span class="n">dfs</span><span class="p">(</span><span class="n">digits</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ret</span><span class="p">,</span> <span class="n">subscript</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">end</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">map</span><span class="p">);</span>
+        <span class="n">cur</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">char</span> <span class="o">**</span> <span class="nf">letterCombinations</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span> <span class="n">digits</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">returnSize</span><span class="p">){</span>
+    <span class="o">*</span><span class="n">returnSize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">cur</span> <span class="o">=</span> <span class="n">digits</span><span class="p">,</span> <span class="n">len</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="n">charMap</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;abc&quot;</span><span class="p">,</span> <span class="s">&quot;def&quot;</span><span class="p">,</span> <span class="s">&quot;ghi&quot;</span><span class="p">,</span> <span class="s">&quot;jkl&quot;</span><span class="p">,</span> <span class="s">&quot;mno&quot;</span><span class="p">,</span> <span class="s">&quot;pqrs&quot;</span><span class="p">,</span> <span class="s">&quot;tuv&quot;</span><span class="p">,</span> <span class="s">&quot;wxyz&quot;</span><span class="p">};</span>
+    <span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">cur</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="n">returnSize</span> <span class="o">*=</span> <span class="p">(</span><span class="o">*</span><span class="n">cur</span> <span class="o">==</span> <span class="sc">&#39;7&#39;</span> <span class="o">||</span> <span class="o">*</span><span class="n">cur</span> <span class="o">==</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">4</span> <span class="o">:</span> <span class="mi">3</span><span class="p">;</span>
+        <span class="n">cur</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">len</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">len</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="n">returnSize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">char</span> <span class="o">**</span><span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">**</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span> <span class="o">*</span> <span class="o">*</span><span class="n">returnSize</span><span class="p">),</span>
+         <span class="o">*</span><span class="n">current</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">memset</span><span class="p">(</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="o">*</span><span class="n">returnSize</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">memset</span><span class="p">(</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span>
+    <span class="kt">int</span> <span class="n">subscript</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">dfs</span><span class="p">(</span><span class="n">digits</span><span class="p">,</span> <span class="n">ret</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">subscript</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">charMap</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
                 
                   
                     
@@ -2350,7 +2453,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-17T08:55:09+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-17</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-04T14:58:22+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-04</span>
     
   </small>
 </div>

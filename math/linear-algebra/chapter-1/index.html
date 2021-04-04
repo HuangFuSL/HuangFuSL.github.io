@@ -741,6 +741,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 行列式的性质
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -805,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pom/fdm.md" class="md-nav__link">
+      <a href="../../pom/fdm/" class="md-nav__link">
         预测与需求建模
       </a>
     </li>
@@ -1855,7 +1862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/leetcode/1006.md" class="md-nav__link">
+      <a href="../../../coding/leetcode/1006/" class="md-nav__link">
         1006. 笨阶乘
       </a>
     </li>
@@ -2339,6 +2346,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 行列式的性质
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2439,7 +2453,7 @@ a_{31} & a_{32} & a_{33}
 <p>定义排列中的逆序对与逆序数：</p>
 <blockquote>
 <p><strong>定义</strong> 对于一个<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>阶排列<span><span class="MathJax_Preview">a_1, \dots, a_n</span><script type="math/tex">a_1, \dots, a_n</script></span>，逆序对<span><span class="MathJax_Preview">a_i, a_j:=a_j&lt;a_i, i&lt;j</span><script type="math/tex">a_i, a_j:=a_j<a_i, i<j</script></span>。<br />
-<strong>定义：</strong> 对于一个<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>阶排列<span><span class="MathJax_Preview">a_1, \dots, a_n</span><script type="math/tex">a_1, \dots, a_n</script></span>，定义该排列的逆序数等于排列中逆序对的个数。称逆序数为奇数的排列为奇排列，逆序数为偶数的排列为偶排列，逆序数为0的排列为自然排列。</p>
+<strong>定义</strong> 对于一个<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>阶排列<span><span class="MathJax_Preview">a_1, \dots, a_n</span><script type="math/tex">a_1, \dots, a_n</script></span>，定义该排列的逆序数等于排列中逆序对的个数。称逆序数为奇数的排列为奇排列，逆序数为偶数的排列为偶排列，逆序数为0的排列为自然排列。</p>
 </blockquote>
 <p>对于排列，有如下结论：</p>
 <blockquote>
@@ -2451,6 +2465,59 @@ a_{31} & a_{32} & a_{33}
 <blockquote>
 <p><strong>定理1.4</strong> 将任意排列转变为自然排列所需要的最少交换次数等于排列的逆序数，交换次数的奇偶性和排列的奇偶性相同。</p>
 </blockquote>
+<p>定义排列的概念后，<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>阶行列式可以作如下定义：</p>
+<div>
+<div class="MathJax_Preview">
+\boxed{
+\begin{aligned}
+    \begin{vmatrix}
+    a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+    a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
+    \end{vmatrix} = \sum_{j_1j_2\cdots j_n}(-1)^{\mathrm r(j_1j_2\cdots j_n)}a_{1j_1}a_{2j_2}\cdots a_{nj_n}
+\end{aligned}}
+</div>
+<script type="math/tex; mode=display">
+\boxed{
+\begin{aligned}
+    \begin{vmatrix}
+    a_{11} & a_{12} & \cdots & a_{1n} \\
+    a_{21} & a_{22} & \cdots & a_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{n1} & a_{n2} & \cdots & a_{nn}
+    \end{vmatrix} = \sum_{j_1j_2\cdots j_n}(-1)^{\mathrm r(j_1j_2\cdots j_n)}a_{1j_1}a_{2j_2}\cdots a_{nj_n}
+\end{aligned}}
+</script>
+</div>
+<p>其中：</p>
+<ol>
+<li><span><span class="MathJax_Preview">j_1j_2\cdots j_n</span><script type="math/tex">j_1j_2\cdots j_n</script></span>为<span><span class="MathJax_Preview">1, 2, \cdots, n</span><script type="math/tex">1, 2, \cdots, n</script></span>组成的一组排列，等式右侧对所有可能的排列进行求和</li>
+<li>函数<span><span class="MathJax_Preview">\mathrm r(j_1j_2\cdots j_n)</span><script type="math/tex">\mathrm r(j_1j_2\cdots j_n)</script></span>定义为计算一个排列的逆序数</li>
+</ol>
+<h2 id="12">1.2 行列式的性质<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
+<p>根据行列式的计算规则，行列式具有如下性质：</p>
+<blockquote>
+<p><strong>定义</strong> 形如下式的行列式称为上三角行列式，即<span><span class="MathJax_Preview">(\forall i)(\forall j)(j&lt; i\rightarrow a_{ij} = 0)</span><script type="math/tex">(\forall i)(\forall j)(j< i\rightarrow a_{ij} = 0)</script></span>
+<span><span class="MathJax_Preview">\begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\   0      &amp; a_{22} &amp; \cdots &amp; a_{2n} \\   \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\   0      &amp; 0      &amp; \cdots &amp; a_{nn} \\  \end{vmatrix}</span><script type="math/tex">\begin{vmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\   0      & a_{22} & \cdots & a_{2n} \\   \vdots & \vdots & \ddots & \vdots \\   0      & 0      & \cdots & a_{nn} \\  \end{vmatrix}</script></span><br />
+同理可以定义下三角行列式为各元素<span><span class="MathJax_Preview">a_{ij}</span><script type="math/tex">a_{ij}</script></span>满足<span><span class="MathJax_Preview">(\forall i)(\forall j)(j&gt; i\rightarrow a_{ij} = 0)</span><script type="math/tex">(\forall i)(\forall j)(j> i\rightarrow a_{ij} = 0)</script></span>的行列式。</p>
+</blockquote>
+<p>上三角行列式是结构较为简单的行列式：</p>
+<blockquote>
+<p><strong>定理2.1</strong> 上三角行列式等于主对角线上元素的乘积，即：
+<span><span class="MathJax_Preview">\begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ 0      &amp; a_{22} &amp; \cdots &amp; a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0      &amp; 0      &amp; \cdots &amp; a_{nn} \\ \end{vmatrix} = a_{11}a_{22}\cdots a_{nn} = \prod _{i=1}^na_{ii}</span><script type="math/tex">\begin{vmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ 0      & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ 0      & 0      & \cdots & a_{nn} \\ \end{vmatrix} = a_{11}a_{22}\cdots a_{nn} = \prod _{i=1}^na_{ii}</script></span></p>
+</blockquote>
+<p>特殊地，对角行列式（除主对角线元素以外其余元素均为0的行列式）等于主对角线上元素的乘积。</p>
+<p>以下不加证明地给出行列式的部分性质：</p>
+<blockquote>
+<p><strong>定理2.2</strong> 转置操作不改变行列式的值，即<br />
+<span><span class="MathJax_Preview">\begin{vmatrix}a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} = \begin{vmatrix} a_{11} &amp; a_{21} &amp; \cdots &amp; a_{n1} \\ a_{12} &amp; a_{22} &amp; \cdots &amp; a_{n2} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{1n} &amp; a_{2n} &amp; \cdots &amp; a_{nn} \end{vmatrix}</span><script type="math/tex">\begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1} & a_{n2} & \cdots & a_{nn} \end{vmatrix} = \begin{vmatrix} a_{11} & a_{21} & \cdots & a_{n1} \\ a_{12} & a_{22} & \cdots & a_{n2} \\ \vdots & \vdots & \ddots & \vdots \\ a_{1n} & a_{2n} & \cdots & a_{nn} \end{vmatrix}</script></span></p>
+<p><strong>定理2.3</strong> 若行列式的某行（或某列）有公因子时，该公因子可以提取出行列式，即：<br />
+<span><span class="MathJax_Preview">\begin{vmatrix}a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\\vdots &amp; \vdots &amp;        &amp; \vdots \\ka_{p1} &amp; ka_{p2} &amp; \cdots &amp; ka_{pn} \\\vdots &amp; \vdots &amp;        &amp; \vdots \\a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}\end{vmatrix} = k\begin{vmatrix}a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\\vdots &amp; \vdots &amp;        &amp; \vdots \\a_{p1} &amp; a_{p2} &amp; \cdots &amp; a_{pn} \\\vdots &amp; \vdots &amp;        &amp; \vdots \\a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}\end{vmatrix}</span><script type="math/tex">\begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\ka_{p1} & ka_{p2} & \cdots & ka_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix} = k\begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\a_{p1} & a_{p2} & \cdots & a_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix}</script></span></p>
+<p><strong>定理2.4</strong> （ <strong>定理2.3</strong> 推论）若行列式的某行（或某列）全为0，则行列式为0  </p>
+<p><strong>定理2.5</strong> 行列式可以按下式分为两个行列式之和
+<span><span class="MathJax_Preview">\begin{vmatrix}a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\\vdots &amp; \vdots &amp;        &amp; \vdots \\a_{p1} + a'_{p1} &amp; a_{p2} + a'_{p2} &amp; \cdots &amp; a_{pn} + a'_{pn} \\\vdots &amp; \vdots &amp;        &amp; \vdots \\a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}\end{vmatrix} = \begin{vmatrix}a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\\vdots &amp; \vdots &amp;        &amp; \vdots \\a_{p1} &amp; a_{p2} &amp; \cdots &amp; a_{pn} \\\vdots &amp; \vdots &amp;        &amp; \vdots \\a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}\end{vmatrix} + \begin{vmatrix}a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\\vdots &amp; \vdots &amp;        &amp; \vdots \\a'_{p1} &amp; a'_{p2} &amp; \cdots &amp; a'_{pn} \\\vdots &amp; \vdots &amp;        &amp; \vdots \\a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}\end{vmatrix}</span><script type="math/tex">\begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\a_{p1} + a'_{p1} & a_{p2} + a'_{p2} & \cdots & a_{pn} + a'_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix} = \begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\a_{p1} & a_{p2} & \cdots & a_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix} + \begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\a'_{p1} & a'_{p2} & \cdots & a'_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix}</script></span></p>
+</blockquote>
                 
                   
                     
@@ -2459,7 +2526,7 @@ a_{31} & a_{32} & a_{33}
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-15T12:48:36+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-15</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-04T14:58:22+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-04</span>
     
   </small>
 </div>
