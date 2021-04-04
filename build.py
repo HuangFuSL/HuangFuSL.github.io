@@ -15,11 +15,26 @@ def check_doc(cwd: str):
                 doctest.testfile(
                     curPath, verbose=True, optionflags=doctest.ELLIPSIS)
 
+def apply_token(token: str):
+    new = os.path.join("overrides", "main.html")
+    old = os.path.join("overrides", "_main.html")
+    _output = open(new, "w", encoding='utf-8')
+    _input = open(old, "r", encoding="utf-8")
+    for line in _input.readlines():
+        if "clientSecret" in line:
+            line = line % (token, )
+        _output.write(line)
+    _input.close()
+    _output.close()
+    
 
 SOURCE_DIR = "."
 
 if __name__ == "__main__":
     os.chdir(SOURCE_DIR)
+
+    if "GITALK_SECRET" in os.environ:
+        apply_token(os.environ["GITALK_SECRET"])
 
     try:
         check_doc(SOURCE_DIR)

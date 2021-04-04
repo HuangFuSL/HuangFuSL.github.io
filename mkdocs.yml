@@ -32,6 +32,7 @@ nav:
     - 生产与运作管理:
       - 目录: math/pom/index.md
       - 预测技术: math/pom/forecast.md
+      - 预测与需求建模: math/pom/fdm.md
       - 销售与经营计划: math/pom/planning.md
   - 写代码:
     - 目录: coding/index.md
@@ -102,6 +103,8 @@ nav:
           - 509. 斐波那契数: coding/leetcode/509.md
         - 751-800:
           - 779. 第K个语法符号: coding/leetcode/779.md
+        - 1000-1050:
+          - 1006. 笨阶乘: coding/leetcode/1006.md 
         - 1601-1650:
           - 1603. 设计停车系统: coding/leetcode/1603.md
     - Python:
