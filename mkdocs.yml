@@ -51,8 +51,12 @@ nav:
           - 14. 最长公共前缀: coding/leetcode/14.md
           - 17. 电话号码的字母组合: coding/leetcode/17.md
           - 19. 删除链表的倒数第N个节点: coding/leetcode/19.md
+          - 20. 有效的括号: coding/leetcode/20.md
           - 21. 合并两个有序链表: coding/leetcode/21.md
+          - 22. 括号生成: coding/leetcode/22.md
+          - 23. 合并K个升序链表: coding/leetcode/23.md
           - 24. 两两交换链表中的节点: coding/leetcode/24.md
+          - 25. K 个一组翻转链表: coding/leetcode/25.md
           - 26. 删除排序数组中的重复项: coding/leetcode/26.md
           - 28. 实现 strStr(): coding/leetcode/28.md
           - 36. 有效的数独: coding/leetcode/36.md
@@ -146,10 +150,26 @@ theme:
   custom_dir: overrides
   language: zh
   palette:  # 颜色
-    primary: 'teal'
-    accent: 'green'
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
   features:
     - navigation.tabs
+    - navigation.top
     - search.suggest
   font:
     code: Source Code Pro
@@ -163,6 +183,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/HuangFuSL
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/huangfusl
 plugins:
   - search:
       prebuild_index: true
