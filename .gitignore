@@ -4,3 +4,4 @@ overrides/main.html
 *.aux
 *.log
 *.xdv
+*.pyc
