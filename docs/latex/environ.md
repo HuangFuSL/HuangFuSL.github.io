@@ -1,5 +1,22 @@
 # LaTeX语句块（环境）
 
+## 表格环境
+
+`tabular`用于定义表格，用法如下：
+
+```tex
+\begin{tabular}{|c|c|c|}
+\hline 2&9&4\\
+\hline 7&5&3\\
+\hline 6&1&8\\
+\hline
+\end{tabular}
+```
+
+该语句渲染一个3x3的表格，每个单元格都具有四周的框线，单元格内内容居中。
+
+关于详细的`tabular`环境使用，参见[`tabular`环境介绍](tabular.md)
+
 ## 列表环境
 
 在LaTeX中，`enumerate`环境定义了编号列表，`itemize`环境与`description`环境定义了符号列表。所有的列表使用`\item`命令定义列表项。列表可以自定义使用的编号与符号。
