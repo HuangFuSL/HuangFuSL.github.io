@@ -11,7 +11,9 @@ nav:
   - LaTeX:
     - 目录: latex/index.md
     - 数学公式: latex/cheatsheet.md
-    - 环境: latex/environ.md
+    - 环境:
+      - 概览: latex/environ.md
+      - tabular环境: latex/tabular.md
     - 幻灯片: latex/slides.md
   - 数学:
     - 目录: math/index.md
