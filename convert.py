@@ -45,7 +45,6 @@ project recursively, convert all `.tex` files to `.svg` files.
 '''
 
 import os
-import shutil
 import subprocess
 
 
@@ -56,8 +55,18 @@ XELATEX_CMD = [
     '-file-line-error', 
     '-no-pdf'
 ]
-DVISVGM_CMD = ['dvisvgm', '--page=1-', '--font-format=woff']
+DVISVGM_CMD = ['dvisvgm', '--page=1-', '--scale=2', '--font-format=woff']
 
+
+def _cleanup(filename: str):
+    remove_ext = ['pdf', 'aux', 'synctex.gz', 'xdv', 'log']
+    for ext in remove_ext:
+        try:
+            to_remove = filename[:-3] + ext
+            if os.path.exists(to_remove):
+                os.remove(to_remove)
+        except:
+            pass
 
 def _conversion(filename: str, cwd: str = '.'):
     '''
@@ -65,13 +74,14 @@ def _conversion(filename: str, cwd: str = '.'):
 
     ```bash
     xelatex -synctex=1 -interaction=nonstopmode -file-line-error -no-pdf input.tex
-    dvisvgm --page=1- --font-format=woff input.xdv
+    dvisvgm --page=1- --scale=2 --font-format=woff input.xdv
     ```
     '''
     print('Converting: ', filename)
     dvi_name = filename[:-3] + 'xdv'
     subprocess.run(XELATEX_CMD + [filename], cwd=cwd)
     subprocess.run(DVISVGM_CMD + [dvi_name], cwd=cwd)
+    _cleanup(filename)
 
 
 def tex2svg(cwd: str = '.'):
