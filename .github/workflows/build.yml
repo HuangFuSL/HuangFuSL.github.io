@@ -5,8 +5,6 @@ name: Build Documentation
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   build:
@@ -33,4 +31,4 @@ jobs:
           GITALK_SECRET: ${{ secrets.GITALK_SECRET }}
         run: |
           git pull
-          python3 ./build.py github-actions
+          python3 ./ci/deploy.py

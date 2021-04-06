@@ -1,3 +1,6 @@
 .vscode/
 built/
 overrides/main.html
+*.aux
+*.log
+*.xdv
