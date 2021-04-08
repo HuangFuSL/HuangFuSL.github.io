@@ -21,6 +21,13 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Set up texlive
+        - name: Setup TeXLive
+          uses: DanySK/setup-texlive-action@0.1.1
+          with:
+            requirements-file: .github/texlive/requirements.txt
+
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip

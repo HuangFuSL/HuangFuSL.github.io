@@ -24,7 +24,7 @@ Here is a latex document whose name is `test.tex`
 If you want to embed this document in markdown, you should import it as an SVG
 image.
 
-![This is an test image](test.svg)
+![This is a test image](test.svg)
 
 Remember to add `\pagestyle{empty}` in the document if it's used for 
 demonstrating purposes and you don't want the page numbers to be rendered.
@@ -40,12 +40,14 @@ filename of the SVG file would change. The filename is in the following format:
 For example, the SVG file corresponds to the first page of `test.tex` is
 `test-1.svg`. You should match each page manually.
 
-Execute the script in the root directory, and the script will scan the whold
+Execute the script in the root directory, and the script will scan the whole
 project recursively, convert all `.tex` files to `.svg` files.
 '''
 
 import os
 import subprocess
+import multiprocessing
+from typing import Tuple
 
 
 XELATEX_CMD = [
@@ -59,6 +61,9 @@ DVISVGM_CMD = ['dvisvgm', '--page=1-', '--scale=2', '--font-format=woff']
 
 
 def _cleanup(filename: str):
+    '''
+    Clean up the pdf, aux, synctex.gz, xdv, log files as they are not needed.
+    '''
     remove_ext = ['pdf', 'aux', 'synctex.gz', 'xdv', 'log']
     for ext in remove_ext:
         try:
@@ -68,7 +73,7 @@ def _cleanup(filename: str):
         except:
             pass
 
-def _conversion(filename: str, cwd: str = '.'):
+def _conversion(arg: Tuple[str]):
     '''
     Execute the following command to convert the file:
 
@@ -77,6 +82,7 @@ def _conversion(filename: str, cwd: str = '.'):
     dvisvgm --page=1- --scale=2 --font-format=woff input.xdv
     ```
     '''
+    filename, cwd = arg
     print('Converting: ', filename)
     dvi_name = filename[:-3] + 'xdv'
     subprocess.run(XELATEX_CMD + [filename], cwd=cwd)
@@ -84,18 +90,22 @@ def _conversion(filename: str, cwd: str = '.'):
     _cleanup(filename)
 
 
-def tex2svg(cwd: str = '.'):
+def get_tex_path(cwd: str = '.', force: bool = False) -> str:
     '''
     Convert the `.tex` file recursively.
     '''
     for _ in os.listdir(cwd):
         curPath = os.path.join(cwd, _)
         if os.path.isdir(curPath):
-            tex2svg(curPath)
+            yield from get_tex_path(curPath)
         elif os.path.isfile(curPath):
             if _.split('.')[-1] == 'tex':
-                _conversion(curPath, cwd)
+                yield curPath, cwd
 
+
+def tex2svg(cwd: str = '.'):
+    pool = multiprocessing.Pool()
+    pool.map(_conversion, get_tex_path(cwd))
 
 if __name__ == '__main__':
     tex2svg(os.getcwd())

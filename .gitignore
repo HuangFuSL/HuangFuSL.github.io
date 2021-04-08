@@ -5,3 +5,5 @@ overrides/main.html
 *.log
 *.xdv
 *.pyc
+__pycache__/*
+*.svg

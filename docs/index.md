@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Welcome to HuangFuSL's blog
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+[![Build Docker Image](https://github.com/HuangFuSL/HuangFuSL.github.io/actions/workflows/docker.yml/badge.svg)](https://github.com/HuangFuSL/HuangFuSL.github.io/actions/workflows/docker.yml) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/HuangFuSL/HuangFuSL.github.io?color=brightgreen&logo=github&logoColor=lightgrey) ![Docker Pulls](https://img.shields.io/docker/pulls/huangfusl/huangfusl.github.io?color=brightgreen&logo=docker) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/huangfusl/huangfusl.github.io?logo=docker) [![URL](https://img.shields.io/badge/URL-huangfusl.github.io-brightgreen)](https://huangfusl.github.io/index.html)
 
 ## Customization
 
@@ -74,16 +74,30 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
   document.getElementsByClassName('md-nav__title')[1].click()
 </script>
 
-## Commands
+## Building documentation
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Run `git clone https://github.com/HuangFuSL/HuangFuSL.github.io.git` or
+`docker push huangfusl/huangfusl.github.io:latest` to get the code.
 
-## Project layout
+### GitHub workflow
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+After cloning the repository, install the dependencies stored in `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+Execute `mkdocs serve`, the built site will appear at [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+### Docker workflow
+
+Start a container using the pulled image, remember to properly set the port
+publishing.
+
+```bash
+docker run -p 8000:8000 huangfusl/huangfusl.github.io
+```
+
+If you want to edit the content of the blog, remember your changes will LOSE if
+the image is deleted as the data is not stored in a data volume. You should
+switch to the forked branch and perform a commit on that branch.
