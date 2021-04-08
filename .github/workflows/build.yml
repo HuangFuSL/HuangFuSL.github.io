@@ -25,7 +25,7 @@ jobs:
         run: |
           sudo apt install texlive-base texlive-extra-utils texlive-lang-chinese
           sudo apt install texlive-latex-base texlive-latex-extra
-          sudo apt install texlive-latex-recommended
+          sudo apt install texlive-latex-recommended texlive-xetex
 
 
 
