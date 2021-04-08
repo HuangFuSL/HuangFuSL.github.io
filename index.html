@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#welcome-to-huangfusls-blog" class="md-skip">
           跳转至
         </a>
       
@@ -381,16 +381,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#building-documentation" class="md-nav__link">
+    Building documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Building documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-workflow" class="md-nav__link">
+    GitHub workflow
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+        
+          <li class="md-nav__item">
+  <a href="#docker-workflow" class="md-nav__link">
+    Docker workflow
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2635,16 +2648,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#building-documentation" class="md-nav__link">
+    Building documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Building documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-workflow" class="md-nav__link">
+    GitHub workflow
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+        
+          <li class="md-nav__item">
+  <a href="#docker-workflow" class="md-nav__link">
+    Docker workflow
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2669,8 +2695,8 @@
                   </a>
                 
                 
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">&para;</a></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+                <h1 id="welcome-to-huangfusls-blog">Welcome to HuangFuSL's blog<a class="headerlink" href="#welcome-to-huangfusls-blog" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/HuangFuSL/HuangFuSL.github.io/actions/workflows/docker.yml"><img alt="Build Docker Image" src="https://github.com/HuangFuSL/HuangFuSL.github.io/actions/workflows/docker.yml/badge.svg" /></a> <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/HuangFuSL/HuangFuSL.github.io?color=brightgreen&amp;logo=github&amp;logoColor=lightgrey" /> <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/huangfusl/huangfusl.github.io?color=brightgreen&amp;logo=docker" /> <img alt="Docker Image Size (latest by date)" src="https://img.shields.io/docker/image-size/huangfusl/huangfusl.github.io?logo=docker" /> <a href="https://huangfusl.github.io/index.html"><img alt="URL" src="https://img.shields.io/badge/URL-huangfusl.github.io-brightgreen" /></a></p>
 <h2 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">&para;</a></h2>
 <p>点击下面的颜色按钮可以切换主题颜色：</p>
 <div id="color-button">
@@ -2740,23 +2766,22 @@
   document.getElementsByClassName('md-nav__title')[1].click()
 </script>
 
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<h2 id="building-documentation">Building documentation<a class="headerlink" href="#building-documentation" title="Permanent link">&para;</a></h2>
+<p>Run <code>git clone https://github.com/HuangFuSL/HuangFuSL.github.io.git</code> or
+<code>docker push huangfusl/huangfusl.github.io:latest</code> to get the code.</p>
+<h3 id="github-workflow">GitHub workflow<a class="headerlink" href="#github-workflow" title="Permanent link">&para;</a></h3>
+<p>After cloning the repository, install the dependencies stored in <code>requirements.txt</code>:</p>
+<div class="highlight"><pre><span></span><code>pip install -r requirements.txt
 </code></pre></div>
-</td></tr></table>
+<p>Execute <code>mkdocs serve</code>, the built site will appear at <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a></p>
+<h3 id="docker-workflow">Docker workflow<a class="headerlink" href="#docker-workflow" title="Permanent link">&para;</a></h3>
+<p>Start a container using the pulled image, remember to properly set the port
+publishing.</p>
+<div class="highlight"><pre><span></span><code>docker run -p <span class="m">8000</span>:8000 huangfusl/huangfusl.github.io
+</code></pre></div>
+<p>If you want to edit the content of the blog, remember your changes will LOSE if
+the image is deleted as the data is not stored in a data volume. You should
+switch to the forked branch and perform a commit on that branch.</p>
                 
                   
                     
@@ -2765,7 +2790,7 @@ docs/
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-15T12:48:36+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-15</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-08T02:49:04+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-08</span>
     
   </small>
 </div>
