@@ -23,8 +23,8 @@ jobs:
 
       - name: Setup texlive
         run: |
-          apt install texlive-base texlive-extra-utils texlive-lang-chinese
-          tlmgr install dvisvgm dvisvgm-def ctex amsmath multirow booktabs colortbl diagbox
+          sudo apt install texlive-base texlive-extra-utils texlive-lang-chinese
+          sudo tlmgr install dvisvgm dvisvgm-def ctex amsmath multirow booktabs colortbl diagbox
 
 
 
