@@ -1,12 +1,9 @@
 import time
 import os
 import subprocess
-import convert
-
 
 
 if __name__ == "__main__":
-    convert.tex2svg(os.getcwd())
     # check the status of the source
     # if the working tree is clean,
     # no rebuild and commit required.

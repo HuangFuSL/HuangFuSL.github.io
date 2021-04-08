@@ -2,6 +2,7 @@ import time
 import os
 import subprocess
 import sys
+import convert
 
 
 def apply_token(token: str):
@@ -28,6 +29,7 @@ if __name__ == "__main__":
         apply_token(os.environ["GITALK_SECRET"])
 
     src = os.getcwd()
+    convert.tex2svg(src)
     msg = "Update on " + time.strftime("%Y/%m/%d %H:%M:%S", time.gmtime(time.time() + 3600 * 8))
     subprocess.run(
         'mkdocs gh-deploy -d built --message "%s"' % (msg, ),

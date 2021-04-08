@@ -1,7 +1,6 @@
 FROM squidfunk/mkdocs-material
 
-ENV DEBIAN_FRONTEND=noninteractive
-
+# Install dependencies
 WORKDIR /root
 
 COPY requirements.txt .
