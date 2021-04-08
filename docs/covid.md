@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # COVID-2019 Trend
 
 如下展示了新型冠状病毒疫情的发展趋势：
