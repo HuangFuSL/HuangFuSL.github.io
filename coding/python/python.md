@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Python
 
 * [关闭Python线程](python/killable-thread.md)

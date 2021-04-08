@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Leetcode 题解
 
 * [1. 两数之和](leetcode/1.md)  

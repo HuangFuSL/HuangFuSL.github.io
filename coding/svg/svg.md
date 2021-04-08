@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # SVG
 
 1. SVG结构与基本语法

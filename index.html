@@ -402,6 +402,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#latex-support" class="md-nav__link">
+    LaTeX support
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2669,6 +2676,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#latex-support" class="md-nav__link">
+    LaTeX support
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2782,6 +2796,24 @@ publishing.</p>
 <p>If you want to edit the content of the blog, remember your changes will LOSE if
 the image is deleted as the data is not stored in a data volume. You should
 switch to the forked branch and perform a commit on that branch.</p>
+<h3 id="latex-support">LaTeX support<a class="headerlink" href="#latex-support" title="Permanent link">&para;</a></h3>
+<p>The site uses <code>xelatex</code> and <code>dvisvgm</code> to render tex document to SVG images
+embedded in the markdown files. However, as the SVG images are ignored by
+<code>.gitignore</code>, you have to manually perform the conversion.</p>
+<p>For GitHub repository clones:</p>
+<ul>
+<li>Make sure you have installed and correctly configured <code>xelatex</code> and <code>dvisvgm</code>.</li>
+<li>Execute the <code>ci/convert.py</code> in the root directory of the repository.</li>
+<li>Run <code>mkdocs serve</code> to view the images.</li>
+</ul>
+<p>For Docker containers:</p>
+<ul>
+<li>To reduce docker image size, texlive environment is not installed. You should
+  install texlive manually.</li>
+<li>Open the terminal and execute <code>ci/convert.py</code>.</li>
+<li>Wait for <code>mkdocs</code> building the site.</li>
+<li>View the site at <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a></li>
+</ul>
                 
                   
                     
@@ -2790,7 +2822,7 @@ switch to the forked branch and perform a commit on that branch.</p>
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-08T02:49:04+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-08</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-08T15:55:49+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-08</span>
     
   </small>
 </div>

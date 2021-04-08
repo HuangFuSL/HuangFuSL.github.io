@@ -2731,7 +2731,9 @@
 <p><code>tabular</code>环境是<span><span class="MathJax_Preview">\LaTeX{}</span><script type="math/tex">\LaTeX{}</script></span>用于创建表格的环境。</p>
 <h2 id="_1">基本使用<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>如下代码演示了<code>tabular</code>语句的使用方法,生成一个3行3列的表格。</p>
-<details class="tldr" open="open"><summary>tabular基本使用</summary><div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">tex代码</label><div class="tabbed-content">
+<div class="admonition tldr">
+<p class="admonition-title">tabular基本使用</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">tex代码</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>|c|c|c|<span class="nb">}</span>
     <span class="k">\hline</span> 2    <span class="nb">&amp;</span> 9     <span class="nb">&amp;</span> 4     <span class="k">\\</span>
     <span class="k">\hline</span> 7    <span class="nb">&amp;</span> 5     <span class="nb">&amp;</span> 3     <span class="k">\\</span>
@@ -2744,7 +2746,7 @@
 <p><img alt="tabular" src="../tabular-1.svg" /></p>
 </div>
 </div>
-</details>
+</div>
 <h3 id="_2">导言区<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><code>\begin{tabular}</code>其后紧跟的一对括号内是导言区，导言区规定了单元格的纵向边框和单元格内元素的对齐方式。</p>
 <ul>
@@ -2755,7 +2757,9 @@
 <li><code>p{len}</code>将对应的列放入一个parbox中</li>
 </ul>
 <p>根据如上表述，导言区<code>{|c|c|c|}</code>等价于<code>{*{3}{|c}|}</code></p>
-<details class="tldr" open="open"><summary>导言区</summary><div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">tex代码</label><div class="tabbed-content">
+<div class="admonition tldr">
+<p class="admonition-title">导言区</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">tex代码</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>||l|c|r||<span class="nb">}</span>
     <span class="k">\hline</span> 2    <span class="nb">&amp;</span> 91    <span class="nb">&amp;</span> 4     <span class="k">\\</span>
     <span class="k">\hline</span> 71   <span class="nb">&amp;</span> 5     <span class="nb">&amp;</span> 32    <span class="k">\\</span>
@@ -2768,14 +2772,16 @@
 <p><img alt="tabular" src="../tabular-2.svg" /></p>
 </div>
 </div>
-</details>
+</div>
 <h3 id="_3">合并单元格<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>横向合并单元格可以使用<code>\multicolumn</code>命令，纵向合并单元格需要使用<code>multirow</code>宏包中的<code>\multirow</code>命令：</p>
 <ul>
 <li><code>\multicolumn</code>命令的第一个参数指定合并列的数量，第二个参数是合并后单元格的导言列</li>
 <li><code>\multirow</code>命令的第一个参数指定合并行的数量，第二个参数指定LaTeX自行设置宽度，第三个参数为单元格内容</li>
 </ul>
-<details class="tldr" open="open"><summary>合并单元格</summary><div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">tex代码</label><div class="tabbed-content">
+<div class="admonition tldr">
+<p class="admonition-title">合并单元格</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">tex代码</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>|ccc|<span class="nb">}</span>
     <span class="k">\hline</span>
     2   <span class="nb">&amp;</span> 9     <span class="nb">&amp;</span> 4<span class="k">\\</span>
@@ -2789,10 +2795,12 @@
 <p><img alt="tabular" src="../tabular-2-1.svg" /></p>
 </div>
 </div>
-</details>
+</div>
 <h2 id="_4">三线表<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>LaTeX中使用三线表需要用到<code>booktabs</code>宏包，加入宏包后可以使用<code>\toprule</code>、<code>\midrule</code>与<code>\bottomrule</code>画线（不应再使用<code>\hline</code>命令）。</p>
-<details class="tldr" open="open"><summary>三线表</summary><div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">tex代码</label><div class="tabbed-content">
+<div class="admonition tldr">
+<p class="admonition-title">三线表</p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">tex代码</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>ccc<span class="nb">}</span>
     <span class="k">\toprule</span>
     2   <span class="nb">&amp;</span> 91    <span class="nb">&amp;</span> 4     <span class="k">\\</span>
@@ -2807,10 +2815,12 @@
 <p><img alt="tabular" src="../tabular-3.svg" /></p>
 </div>
 </div>
-</details>
+</div>
 <h2 id="_5">颜色填充<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>颜色填充需要使用<code>colortbl</code>宏包，使用<code>\rowcolor</code>命令指定行的填充颜色，或<code>\cellcolor</code>命令指定单元格的填充颜色。填充颜色可以选择灰度<code>[gray]</code>或彩色<code>[rgb]</code>。</p>
-<details class="tldr" open="open"><summary>颜色填充</summary><div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">tex代码</label><div class="tabbed-content">
+<div class="admonition tldr">
+<p class="admonition-title">颜色填充</p>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">tex代码</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>ccc<span class="nb">}</span>
     <span class="k">\rowcolor</span><span class="na">[gray]</span><span class="nb">{</span>0.6<span class="nb">}</span> 2    <span class="nb">&amp;</span> 9     <span class="nb">&amp;</span> 4     <span class="k">\\</span>
     <span class="k">\rowcolor</span><span class="na">[gray]</span><span class="nb">{</span>0.7<span class="nb">}</span> 7    <span class="nb">&amp;</span> 5     <span class="nb">&amp;</span> 3     <span class="k">\\</span>
@@ -2822,10 +2832,12 @@
 <p><img alt="tabular" src="../tabular-4.svg" /></p>
 </div>
 </div>
-</details>
+</div>
 <h2 id="_6">斜线表头<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>斜线表头由<code>diagbox</code>宏包提供，使用方法如下：</p>
-<details class="tldr" open="open"><summary>斜线表头</summary><div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">tex代码</label><div class="tabbed-content">
+<div class="admonition tldr">
+<p class="admonition-title">斜线表头</p>
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">tex代码</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>|l|ccc|<span class="nb">}</span>
     <span class="k">\hline</span>
     <span class="k">\diagbox</span><span class="nb">{</span>Time<span class="nb">}{</span>Room<span class="nb">}{</span>Day<span class="nb">}</span> <span class="nb">&amp;</span> Mon <span class="nb">&amp;</span> Tue <span class="nb">&amp;</span> Wed <span class="k">\\</span>
@@ -2840,7 +2852,7 @@
 <p><img alt="tabular" src="../tabular-5.svg" /></p>
 </div>
 </div>
-</details>
+</div>
                 
                   
                     
@@ -2849,7 +2861,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-06T15:47:06+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-06</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-08T15:55:49+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-08</span>
     
   </small>
 </div>

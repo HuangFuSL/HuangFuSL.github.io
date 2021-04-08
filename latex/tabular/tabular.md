@@ -6,7 +6,7 @@
 
 如下代码演示了`tabular`语句的使用方法,生成一个3行3列的表格。
 
-???+ tldr "tabular基本使用"
+!!! tldr "tabular基本使用"
     === "tex代码"
         ```tex
         \begin{tabular}{|c|c|c|}
@@ -32,7 +32,7 @@
 
 根据如上表述，导言区`{|c|c|c|}`等价于`{*{3}{|c}|}`
 
-???+ tldr "导言区"
+!!! tldr "导言区"
     === "tex代码"
         ```tex
         \begin{tabular}{||l|c|r||}
@@ -53,7 +53,7 @@
 * `\multicolumn`命令的第一个参数指定合并列的数量，第二个参数是合并后单元格的导言列
 * `\multirow`命令的第一个参数指定合并行的数量，第二个参数指定LaTeX自行设置宽度，第三个参数为单元格内容
 
-???+ tldr "合并单元格"
+!!! tldr "合并单元格"
     === "tex代码"
         ```tex
         \begin{tabular}{|ccc|}
@@ -72,7 +72,7 @@
 
 LaTeX中使用三线表需要用到`booktabs`宏包，加入宏包后可以使用`\toprule`、`\midrule`与`\bottomrule`画线（不应再使用`\hline`命令）。
 
-???+ tldr "三线表"
+!!! tldr "三线表"
     === "tex代码"
         ```tex
         \begin{tabular}{ccc}
@@ -92,7 +92,7 @@ LaTeX中使用三线表需要用到`booktabs`宏包，加入宏包后可以使�
 
 颜色填充需要使用`colortbl`宏包，使用`\rowcolor`命令指定行的填充颜色，或`\cellcolor`命令指定单元格的填充颜色。填充颜色可以选择灰度`[gray]`或彩色`[rgb]`。
 
-???+ tldr "颜色填充"
+!!! tldr "颜色填充"
     === "tex代码"
         ```tex
         \begin{tabular}{ccc}
@@ -109,7 +109,7 @@ LaTeX中使用三线表需要用到`booktabs`宏包，加入宏包后可以使�
 
 斜线表头由`diagbox`宏包提供，使用方法如下：
 
-???+ tldr "斜线表头"
+!!! tldr "斜线表头"
     === "tex代码"
         ```tex
         \begin{tabular}{|l|ccc|}
