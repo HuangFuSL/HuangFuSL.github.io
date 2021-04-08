@@ -21,10 +21,11 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Setup TeXLive
-        uses: DanySK/setup-texlive-action@0.1.1
-        with:
-          requirements-file: .github/texlive/requirements.txt
+      - name: Setup texlive
+        run: |
+          apt install texlive-base texlive-extra-utils texlive-lang-chinese
+          tlmgr install dvisvgm dvisvgm-def ctex amsmath multirow booktabs colortbl diagbox
+
 
 
       - name: Install dependencies
