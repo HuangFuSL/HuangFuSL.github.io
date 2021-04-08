@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # LaTeX
 
 记录LaTeX的使用。

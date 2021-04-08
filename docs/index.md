@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Welcome to HuangFuSL's blog
 
 [![Build Docker Image](https://github.com/HuangFuSL/HuangFuSL.github.io/actions/workflows/docker.yml/badge.svg)](https://github.com/HuangFuSL/HuangFuSL.github.io/actions/workflows/docker.yml) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/HuangFuSL/HuangFuSL.github.io?color=brightgreen&logo=github&logoColor=lightgrey) ![Docker Pulls](https://img.shields.io/docker/pulls/huangfusl/huangfusl.github.io?color=brightgreen&logo=docker) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/huangfusl/huangfusl.github.io?logo=docker) [![URL](https://img.shields.io/badge/URL-huangfusl.github.io-brightgreen)](https://huangfusl.github.io/index.html)
@@ -101,3 +107,23 @@ docker run -p 8000:8000 huangfusl/huangfusl.github.io
 If you want to edit the content of the blog, remember your changes will LOSE if
 the image is deleted as the data is not stored in a data volume. You should
 switch to the forked branch and perform a commit on that branch.
+
+### LaTeX support
+
+The site uses `xelatex` and `dvisvgm` to render tex document to SVG images
+embedded in the markdown files. However, as the SVG images are ignored by
+`.gitignore`, you have to manually perform the conversion.
+
+For GitHub repository clones:
+
+* Make sure you have installed and correctly configured `xelatex` and `dvisvgm`.
+* Execute the `ci/convert.py` in the root directory of the repository.
+* Run `mkdocs serve` to view the images.
+
+For Docker containers:
+
+* To reduce docker image size, texlive environment is not installed. You should
+  install texlive manually.
+* Open the terminal and execute `ci/convert.py`.
+* Wait for `mkdocs` building the site.
+* View the site at [http://127.0.0.1:8000](http://127.0.0.1:8000)
