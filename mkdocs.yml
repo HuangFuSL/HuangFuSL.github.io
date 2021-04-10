@@ -232,6 +232,8 @@ extra_css:
   - css/button.css
   - css/colors.css
   - css/gitalk.css
+  - css/codecolor.css
+  - css/codedef_custom.css
   
 
 extra_javascript:
