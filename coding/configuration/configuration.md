@@ -2,6 +2,7 @@
 hide:
   - navigation
   - toc
+template: _toc.html
 ---
 
 # 系统配置

@@ -2,6 +2,7 @@
 hide:
   - navigation
   - toc
+template: _toc.html
 ---
 
 # 对策、决策与排队论
