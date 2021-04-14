@@ -187,12 +187,16 @@ extra:
       link: https://github.com/HuangFuSL
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/huangfusl
+    - icon: fontawesome/brands/steam
+      link: https://steamcommunity.com/id/huangfusl/
 plugins:
   - search:
       prebuild_index: true
+      lang: 'jp'
   - git-revision-date
   - git-revision-date-localized:
       type: timeago
+  - macros
   - mkdocs-jupyter:
       include_source: true
       execute: true
@@ -227,6 +231,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tabbed
   - pymdownx.tilde
+  - attr_list
 
 extra_css:
   - css/button.css
@@ -234,6 +239,7 @@ extra_css:
   - css/gitalk.css
   - css/codecolor.css
   - css/codedef_custom.css
+  - css/admonitions.css
   
 
 extra_javascript:
