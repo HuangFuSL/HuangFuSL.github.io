@@ -95,6 +95,7 @@ button[data-md-color-primary=blue-grey] {
 button[data-md-color-primary=white] {
     box-shadow: inset 0 0 .05rem rgba(0, 0, 0, .54);
     color: rgba(0, 0, 0, .87);
+    background-color: white;
 }
 
 button[data-md-color-accent=red] {

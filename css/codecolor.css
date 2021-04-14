@@ -35,7 +35,7 @@
     --override-code-hl-preprocessor-color: #ff9070;
     --override-code-fg-color: #9DA5B3;
     --override-code-bg-color: #282c34;
-    --override-code-hl-color: #0080997F;
+    --override-code-hl-color: #9900267F;
 }
 
 :root>[data-md-color-scheme=default] {
@@ -73,7 +73,7 @@
     --override-code-hl-punctuation-color: #696b6e;
     /* 预处理 */
     --override-code-hl-preprocessor-color: #ff9070;
-    --override-code-fg-color: #5D5D5F;
+    --override-code-fg-color: #5e5c5d;
     --override-code-bg-color: #EBEEF5;
-    --override-code-hl-color: #00BEC459;
+    --override-code-hl-color: #c4003159;
 }
