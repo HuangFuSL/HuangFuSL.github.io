@@ -99,7 +99,7 @@ Execute `mkdocs serve`, the built site will appear at [http://127.0.0.1:8000](ht
 ### Docker workflow
 
 Start a container using the pulled image, remember to properly set the port
-publishing.
+to be published.
 
 ```bash
 docker run -p 8000:8000 huangfusl/huangfusl.github.io
@@ -128,3 +128,7 @@ For Docker containers:
 * Open the terminal and execute `ci/convert.py`.
 * Wait for `mkdocs` building the site.
 * View the site at [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+## Version information
+
+<div style="white-space: pre-line;">{{ git.raw }}</div>

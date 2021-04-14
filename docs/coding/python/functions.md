@@ -88,11 +88,11 @@ Python中，函数的参数可以按照如下方式传递：
 * 逗号分隔，按函数声明顺序传入参数
 * 关键字参数，即参数名=参数值
 * 有默认值的参数可以省略
-* `*`解包可迭代对象或`**`解包映射对象
+* `*`解包可迭代对象（按参数位置传递）或`**`解包映射对象（按关键字传递）
 
 对应地，函数对参数有如下处理方式：
 
-* 按照参数名获取参数
+* 按照参数位置与参数名获取参数
 * 其他的无记名参数被`*`参数获取，单个`*`或`*`参数后的普通参数只能按照关键字参数的方式传递
 * 其他的记名参数被`**`参数获取
 
@@ -204,7 +204,27 @@ kwargs <class 'inspect._empty'> VAR_KEYWORD
 * `KEYWORD_ONLY`，只能通过关键字参数传入
 * `VAR_KEYWORD`，多余的关键字参数组成的字典
 
-另一种参数类型是只能通过定位参数传入的参数，即`POSITIONAL_ONLY`，Python语法不支持声明这种类型的参数，在C语言API中可能出现。
+另一种参数类型是只能通过定位参数传入的参数，即`POSITIONAL_ONLY`，{--Python语法不支持声明这种类型的参数，--}在C语言API中可能出现。
+
+!!! update "Changed in version 3.8"
+    在函数定义中可以使用`/`分隔参数列表，出现在`/`之前的参数必须通过定位参数传入。
+
+    ```python
+    >>> def test(a, /, b, *args, c, **kwargs):
+    ...     pass
+    ...
+    >>> import inspect
+    >>> sig = inspect.signature(test)
+    >>> for val in sig.parameters.values():
+    ...     print(val.name, val.kind)
+    ...
+    a POSITIONAL_ONLY
+    b POSITIONAL_OR_KEYWORD
+    args VAR_POSITIONAL
+    c KEYWORD_ONLY
+    kwargs VAR_KEYWORD
+    >>>
+    ```
 
 ### 参数的类型限制
 
@@ -229,6 +249,12 @@ Python中对函数参数的类型检查以函数注解的形式实现。函数�
 
 所有的注解存储在函数的`__annotations__`属性中。
 
+```python
+>>> another_dummy.__annotations__
+{'x': <class 'int'>, 'return': <class 'int'>}
+>>>
+```
+
 ## 函数式编程
 
 ### operator模块
@@ -242,7 +268,20 @@ Python中对函数参数的类型检查以函数注解的形式实现。函数�
 >>>
 ```
 
-此外，`__getitem__`、`__getattribute__`方法在`operator`模块中也有对应实现，为`itemgetter`、`attrgetter`。`methodcaller`可以用于调用对象内的某个方法。
+此外，`__getitem__`、`__getattribute__`方法在`operator`模块中也有对应实现，为`itemgetter`、`attrgetter`。`methodcaller`可以用于调用对象内的某个方法，与`operator`模块中的其他函数不同，调用该函数会返回一个可调用对象。
+
+```python
+>>> sort = operator.methodcaller('sort')
+>>> sort_rev = operator.methodcaller('sort', reverse=True)
+>>> a = [1, 3, 2]
+>>> sort(a)
+>>> a
+[1, 2, 3]
+>>> sort_rev(a)
+>>> a
+[3, 2, 1]
+>>>
+```
 
 ### functools模块
 
