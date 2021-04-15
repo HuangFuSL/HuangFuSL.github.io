@@ -9,9 +9,18 @@ template: _toc.html
 
 [![Build Docker Image](https://github.com/HuangFuSL/HuangFuSL.github.io/actions/workflows/docker.yml/badge.svg)](https://github.com/HuangFuSL/HuangFuSL.github.io/actions/workflows/docker.yml) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/HuangFuSL/HuangFuSL.github.io?color=brightgreen&logo=github&logoColor=lightgrey) ![Docker Pulls](https://img.shields.io/docker/pulls/huangfusl/huangfusl.github.io?color=brightgreen&logo=docker) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/huangfusl/huangfusl.github.io?logo=docker) [![URL](https://img.shields.io/badge/URL-huangfusl.github.io-brightgreen)](https://huangfusl.github.io/index.html)
 
+## :material-table-of-contents: Table of contents
+
+* [推送](wechat/2020.md)
+* [LaTeX](latex/index.md)
+* [数学](math/index.md)
+* [写代码](coding/index.md)
+* [COVID-19](covid.md)
+* [关于我](about.md)
+
 ## :material-palette: Customization
 
-点击下面的颜色按钮可以切换主题颜色：
+Click on the buttons to change the primary color.
 
 <div id="color-button">
 <button data-md-color-primary="red">Red</button>
@@ -46,7 +55,7 @@ template: _toc.html
   })
 </script>
 
-点击下面的按钮可以切换强调颜色：
+Click on the buttons to change the accent color.
 
 <div id="color-button">
 <button data-md-color-accent="red">Red</button>
@@ -81,15 +90,21 @@ template: _toc.html
   document.getElementsByClassName('md-nav__title')[1].click()
 </script>
 
+However, if you try to switch from dark mode to light mode or reversed, changes
+to the primary color and accent color will lose.
+
 ## :material-tools: Building documentation
 
 Run `git clone https://github.com/HuangFuSL/HuangFuSL.github.io.git` or
 `docker push huangfusl/huangfusl.github.io:latest` to get the code.
 
+> Docker image is built at 8:00 AM (UTC) every two days, starting from the first
+>  day of each month
+
 ### :bootstrap-bootstrap-fill: Bootstrap icon installation
 
 The site uses bootstrap icons, which are neither shipped with `mkdocs-material`
-nor synced in this repo. You have for manually install these icons.
+nor synced in this repo. You have to manually install these icons.
 
 For GitHub repository clones:
 
