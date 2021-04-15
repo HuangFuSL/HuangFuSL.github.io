@@ -7,3 +7,4 @@ overrides/main.html
 *.pyc
 __pycache__/*
 *.svg
+.icons/

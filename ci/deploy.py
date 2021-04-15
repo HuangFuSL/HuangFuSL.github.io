@@ -3,6 +3,7 @@ import os
 import subprocess
 import sys
 import convert
+import bootstrap
 
 
 def apply_token(token: str):
@@ -30,6 +31,7 @@ if __name__ == "__main__":
 
     src = os.getcwd()
     convert.tex2svg(src)
+    bootstrap.get_icon()
     msg = "Update on " + time.strftime("%Y/%m/%d %H:%M:%S", time.gmtime(time.time() + 3600 * 8))
     subprocess.run(
         'mkdocs gh-deploy -d built --message "%s"' % (msg, ),
