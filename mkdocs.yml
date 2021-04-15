@@ -178,7 +178,8 @@ theme:
     text: PingFang SC
   favicon: img/favicon.png
   icon:
-    logo: material/book-variant
+    # logo: material/book-variant
+    logo: bootstrap/journal-bookmark-fill
     repo: fontawesome/brands/git-alt
 extra:
   pagetime: 'on'
@@ -219,7 +220,11 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_png
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - pymdownx.extra
   - pymdownx.inlinehilite
   - pymdownx.keys

@@ -19,6 +19,8 @@ RUN apk add --no-cache libzmq libjpeg nodejs
 RUN git clone https://github.com/HuangFuSL/HuangFuSL.github.io --depth=1
 WORKDIR /root/HuangFuSL.github.io
 
+RUN pip install BeautifulSoup4 \
+    && python ci/bootstrap.py
 
 EXPOSE 8000
 
