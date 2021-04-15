@@ -1,0 +1,81 @@
+.jp-RenderedHTMLCommon {
+    color: var(--md-default-fg-color) !important;
+    font-family: var(--md-text-font-family, _), -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !important;
+}
+
+.jp-CodeMirrorEditor, .jp-Editor, .jp-InputArea-editor {
+    background-color: var(--md-default-bg-color) !important;
+    border-radius: 0.25rem !important;
+    border-width: 0.1rem !important;
+    border-color: rgba(119, 119, 119, 0.2) !important;
+}
+
+.jp-Editor .highlight {
+    margin: 0.4em;
+    background: inherit !important;
+    color: var(--jp-mirror-editor-variable-color);
+}
+
+.jp-RenderedHTMLCommon pre, .jp-RenderedHTMLCommon code {
+    background-color: var(--override-code-bg-color) !important;
+    color: var(--override-code-fg-color) !important;
+    font-family: var(--md-code-font-family) !important;
+    font-size: .85em !important;
+}
+
+body {
+    background-color: var(--md-default-bg-color) !important;
+    color: var(--md-typeset-color) !important;
+    font-family: var(--md-text-font-family, _), -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !important;
+    font-feature-settings: "kern", "liga" !important;
+}
+
+.jp-RenderedHTMLCommon p {
+    color: inherit;
+    font-size: .8rem;
+    line-height: 1.6;
+    font-family: inherit;
+}
+
+.jp-RenderedHTMLCommon li {
+    color: inherit;
+    font-size: .8rem;
+    line-height: 1.6;
+    font-family: inherit;
+}
+
+.jp-RenderedHTMLCommon h1 {
+    color: inherit;
+    margin: 0 0 1.25em;
+    font-weight: 300;
+    font-size: 2em;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    font-family: inherit;
+}
+
+.jp-RenderedHTMLCommon h2 {
+    color: inherit;
+    margin: 1.6em 0 .64em;
+    font-weight: 300;
+    font-size: 1.965em;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    font-family: inherit;
+}
+
+.jp-RenderedHTMLCommon h3 {
+    color: inherit;
+    margin: 1.6em 0 .8em;
+    font-weight: 400;
+    font-size: 1.57em;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    font-family: inherit;
+}
+
+.jp-RenderedHTMLCommon hr {
+    color: inherit;
+    font-family: inherit;
+    border: none;
+}
