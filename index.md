@@ -9,7 +9,7 @@ template: _toc.html
 
 [![Build Docker Image](https://github.com/HuangFuSL/HuangFuSL.github.io/actions/workflows/docker.yml/badge.svg)](https://github.com/HuangFuSL/HuangFuSL.github.io/actions/workflows/docker.yml) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/HuangFuSL/HuangFuSL.github.io?color=brightgreen&logo=github&logoColor=lightgrey) ![Docker Pulls](https://img.shields.io/docker/pulls/huangfusl/huangfusl.github.io?color=brightgreen&logo=docker) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/huangfusl/huangfusl.github.io?logo=docker) [![URL](https://img.shields.io/badge/URL-huangfusl.github.io-brightgreen)](https://huangfusl.github.io/index.html)
 
-## Customization
+## :material-palette: Customization
 
 点击下面的颜色按钮可以切换主题颜色：
 
@@ -81,12 +81,25 @@ template: _toc.html
   document.getElementsByClassName('md-nav__title')[1].click()
 </script>
 
-## Building documentation
+## :material-tools: Building documentation
 
 Run `git clone https://github.com/HuangFuSL/HuangFuSL.github.io.git` or
 `docker push huangfusl/huangfusl.github.io:latest` to get the code.
 
-### GitHub workflow
+### :bootstrap-bootstrap-fill: Bootstrap icon installation
+
+The site uses bootstrap icons, which are neither shipped with `mkdocs-material`
+nor synced in this repo. You have for manually install these icons.
+
+For GitHub repository clones:
+
+* Execute the `ci/bootstrap.py` in the root directory of the repository.
+
+For Docker containers:
+
+* No addition setup required.
+
+### :fontawesome-brands-github: GitHub workflow
 
 After cloning the repository, install the dependencies stored in `requirements.txt`:
 
@@ -96,7 +109,7 @@ pip install -r requirements.txt
 
 Execute `mkdocs serve`, the built site will appear at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-### Docker workflow
+### :fontawesome-brands-docker: Docker workflow
 
 Start a container using the pulled image, remember to properly set the port
 to be published.
@@ -129,6 +142,6 @@ For Docker containers:
 * Wait for `mkdocs` building the site.
 * View the site at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-## Version information
+## :material-update: Version information
 
 <div style="white-space: pre-line;">{{ git.raw }}</div>
