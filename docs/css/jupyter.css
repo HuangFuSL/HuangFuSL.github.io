@@ -1,33 +1,18 @@
-.jp-RenderedHTMLCommon {
-    color: var(--md-default-fg-color) !important;
-    font-family: var(--md-text-font-family, _), -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !important;
-}
-
-.jp-CodeMirrorEditor, .jp-Editor, .jp-InputArea-editor {
-    background-color: var(--md-default-bg-color) !important;
-    border-radius: 0.25rem !important;
-    border-width: 0.1rem !important;
-    border-color: rgba(119, 119, 119, 0.2) !important;
-}
-
-.jp-Editor .highlight {
-    margin: 0.4em;
-    background: inherit !important;
-    color: var(--jp-mirror-editor-variable-color);
-}
-
-.jp-RenderedHTMLCommon pre, .jp-RenderedHTMLCommon code {
-    background-color: var(--override-code-bg-color) !important;
-    color: var(--override-code-fg-color) !important;
-    font-family: var(--md-code-font-family) !important;
-    font-size: .85em !important;
-}
-
 body {
     background-color: var(--md-default-bg-color) !important;
-    color: var(--md-typeset-color) !important;
-    font-family: var(--md-text-font-family, _), -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !important;
-    font-feature-settings: "kern", "liga" !important;
+    color: var(--md-default-fg-color) !important;
+    --jp-content-font-color1: var(--md-default-fg-color);
+    --jp-layout-color2: var(--override-code-bg-color);
+    --jp-layout-color0: var(--override-code-bg-color);
+    --jp-cell-prompt-not-active-font-color: var(--override-code-fg-color);
+    --jp-cell-editor-background: var(--override-code-bg-color);
+    --jp-cell-prompt-not-active-opacity: 1;
+    --jp-code-font-family: var(--md-code-font-family);
+    --jp-content-font-family: var(--md-text-font-family);
+    --jp-ui-font-family: var(--md-text-font-family);
+    --jp-border-width: 0px;
+    --jp-cell-editor-border-color: transparent;
+    --jp-rendermime-error-background: var(--override-code-err-color);
 }
 
 .jp-RenderedHTMLCommon p {
@@ -35,6 +20,16 @@ body {
     font-size: .8rem;
     line-height: 1.6;
     font-family: inherit;
+}
+
+.jp-RenderedHTMLCommon pre, .jp-RenderedHTMLCommon code {
+    font-size: .8rem;
+    line-height: 1.6;
+    font-family: inherit;
+}
+
+small {
+    font-size: 80% !important;
 }
 
 .jp-RenderedHTMLCommon li {

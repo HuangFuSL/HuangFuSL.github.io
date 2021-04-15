@@ -25,21 +25,21 @@
 /* Name, entity */
 
     {
-    color: var(--override-code-hl-keyword-color);
+    color: var(--override-code-hl-keyword-color) !important;
 }
 
 .highlight .p
 /* Punctuation */
 
     {
-    color: var(--override-code-hl-punctuation-color);
+    color: var(--override-code-hl-punctuation-color) !important;
 }
 
 .highlight .cpf
 /* Comment, preprocessor file */
 
     {
-    color: var(--override-code-hl-preprocessor-color);
+    color: var(--override-code-hl-preprocessor-color) !important;
 }
 
 .highlight .l,
@@ -64,7 +64,7 @@
 /* Literal, string symbol */
 
     {
-    color: var(--override-code-hl-string-color);
+    color: var(--override-code-hl-string-color) !important;
 }
 
 .highlight .si,
@@ -86,7 +86,7 @@
 /* Literal, string other */
 
     {
-    color: var(--override-code-hl-escape-color);
+    color: var(--override-code-hl-escape-color) !important;
 }
 
 .highlight .m,
@@ -111,14 +111,14 @@
 /* Number, octal */
 
     {
-    color: var(--override-code-hl-number-color);
+    color: var(--override-code-hl-number-color) !important;
 }
 
 .highlight .nn
 /* Name, namespace */
 
     {
-    color: var(--override-code-hl-namespace-color);
+    color: var(--override-code-hl-namespace-color) !important;
 }
 
 .highlight .kp,
@@ -128,7 +128,7 @@
 /* Name, builtin pseudo */
 
     {
-    color: var(--override-code-hl-pseudo-color);
+    color: var(--override-code-hl-pseudo-color) !important;
 }
 
 .highlight .kt,
@@ -138,7 +138,7 @@
 /* Name, class */
 
     {
-    color: var(--override-code-hl-type-color);
+    color: var(--override-code-hl-type-color) !important;
 }
 
 .highlight .kc,
@@ -172,21 +172,21 @@
 /* Variable, magic */
 
     {
-    color: var(--override-code-hl-name-color);
+    color: var(--override-code-hl-name-color) !important;
 }
 
 .highlight .nb
 /* Name, builtin */
 
     {
-    color: var(--override-code-hl-name-builtin-color);
+    color: var(--override-code-hl-name-builtin-color) !important;
 }
 
 .highlight .ne
 /* Name, exception */
 
     {
-    color: var(--override-code-hl-exception-color);
+    color: var(--override-code-hl-exception-color) !important;
 }
 
 .highlight .c,
@@ -208,14 +208,14 @@
 /* Literal, string doc */
 
     {
-    color: var(--override-code-hl-comment-color);
+    color: var(--override-code-hl-comment-color) !important;
 }
 
 .highlight .na
 /* Name, attribute */
 
     {
-    color: var(--override-code-hl-name-attribute-color);
+    color: var(--override-code-hl-name-attribute-color) !important;
 }
 
 .highlight .n,
@@ -246,7 +246,7 @@
 /* Generic, traceback */
 
     {
-    color: var(--override-code-hl-text-color);
+    color: var(--override-code-hl-text-color) !important;
 }
 
 .highlight .gd,
@@ -262,12 +262,12 @@
 
 .highlight .gd {
     /* Diff, delete */
-    background-color: var(--md-typeset-del-color);
+    background-color: var(--md-typeset-del-color) !important;
 }
 
 .highlight .gi {
     /* Diff, insert */
-    background-color: var(--md-typeset-ins-color);
+    background-color: var(--md-typeset-ins-color) !important;
 }
 
 .highlight .hll {
@@ -275,7 +275,7 @@
     display: block;
     margin: 0 px2em(-16px, 13.6px);
     padding: 0 px2em(16px, 13.6px);
-    background-color: var(--override-code-hl-color);
+    background-color: var(--override-code-hl-color) !important;
 }
 
 /* Style and weight definition */
@@ -359,10 +359,11 @@
 /* Code area color */
 
 .md-typeset code, .md-typeset kbd, .md-typeset pre {
-    color: var(--override-code-fg-color);
+    color: var(--override-code-fg-color) !important;
 }
 
 .md-typeset code {
-    background-color: var(--override-code-bg-color);
-    border-radius: 0.6rem;
+    background-color: var(--override-code-bg-color) !important;
+    border-radius: 0.4rem;
+    font-size: .85em !important;
 }
