@@ -36,6 +36,7 @@
     --override-code-fg-color: #9DA5B3;
     --override-code-bg-color: #282c34;
     --override-code-hl-color: #9900267F;
+    --override-code-err-color: hsl(335, 18%, 23%);
 }
 
 :root>[data-md-color-scheme=default] {
@@ -76,4 +77,5 @@
     --override-code-fg-color: #5e5c5d;
     --override-code-bg-color: #EBEEF5;
     --override-code-hl-color: #c4003159;
+    --override-code-err-color: hsl(330, 38%, 89%);
 }
