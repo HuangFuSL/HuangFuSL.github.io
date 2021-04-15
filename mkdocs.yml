@@ -245,6 +245,7 @@ extra_css:
   - css/codecolor.css
   - css/codedef_custom.css
   - css/admonitions.css
+  - css/jupyter.css
   
 
 extra_javascript:
