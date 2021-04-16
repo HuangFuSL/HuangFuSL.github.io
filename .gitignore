@@ -1,10 +1,20 @@
+# Visual Studio Code Environment
 .vscode/
-built/
+
+# Built site
+build/
 overrides/main.html
+*.gz
+
+# Built LaTeX document
 *.aux
 *.log
 *.xdv
-*.pyc
-__pycache__/*
+
+# Icons and rendered LaTeX
 *.svg
 .icons/
+
+# Python
+*.pyc
+__pycache__/*
