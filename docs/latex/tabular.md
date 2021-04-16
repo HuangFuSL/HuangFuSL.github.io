@@ -18,7 +18,7 @@
         ```
 
     === "渲染结果"
-        ![tabular](tabular-1.svg)
+        ![tabular](img/tabular/tabular-1.svg)
 
 ### 导言区
 
@@ -44,7 +44,7 @@
         ```
 
     === "渲染结果"
-        ![tabular](tabular-2.svg)
+        ![tabular](img/tabular/tabular-2.svg)
 
 ### 合并单元格
 
@@ -67,7 +67,7 @@
         ```
 
     === "渲染结果"
-        ![tabular](tabular-2-1.svg)
+        ![tabular](img/tabular/tabular-2-1.svg)
 {% endraw %}
 
 ## 三线表
@@ -88,7 +88,7 @@ LaTeX中使用三线表需要用到`booktabs`宏包，加入宏包后可以使�
         ```
 
     === "渲染结果"
-        ![tabular](tabular-3.svg)
+        ![tabular](img/tabular/tabular-3.svg)
 
 ## 颜色填充
 
@@ -105,7 +105,7 @@ LaTeX中使用三线表需要用到`booktabs`宏包，加入宏包后可以使�
         ```
 
     === "渲染结果"
-        ![tabular](tabular-4.svg)
+        ![tabular](img/tabular/tabular-4.svg)
 
 ## 斜线表头
 
@@ -125,4 +125,4 @@ LaTeX中使用三线表需要用到`booktabs`宏包，加入宏包后可以使�
         ```
 
     === "渲染结果"
-        ![tabular](tabular-5.svg)
+        ![tabular](img/tabular/tabular-5.svg)
