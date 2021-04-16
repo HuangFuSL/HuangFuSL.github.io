@@ -1201,8 +1201,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../../leetcode/27/" class="md-nav__link">
+        27. 移除元素
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../leetcode/28/" class="md-nav__link">
         28. 实现 strStr()
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../leetcode/35/" class="md-nav__link">
+        35. 搜索插入位置
       </a>
     </li>
   
@@ -1225,8 +1249,56 @@
   
   
     <li class="md-nav__item">
+      <a href="../../leetcode/37/" class="md-nav__link">
+        37. 解数独
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../leetcode/38/" class="md-nav__link">
         38. 外观数列
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../leetcode/42/" class="md-nav__link">
+        42. 接雨水
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../leetcode/43/" class="md-nav__link">
+        43. 字符串相乘
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../leetcode/46/" class="md-nav__link">
+        46. 全排列
       </a>
     </li>
   
@@ -2914,6 +2986,33 @@
 <span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;bytes&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
 <span class="o">&gt;&gt;&gt;</span>
 </code></pre></div>
+<div class="admonition update">
+<p class="admonition-title">New in version 3.5</p>
+<p><code>bytes</code>对象与<code>bytearray</code>对象添加了<code>hex</code>方法，返回字节的十六进制表示形式。该函数与<code>bytes</code>对象的<code>fromhex</code>方法相反。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">random</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">seq</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randbytes</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="c1"># New in Python 3.9</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">seq</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span>
+<span class="s1">&#39;f04be4376519e9ce&#39;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition update">
+<p class="admonition-title">Changed in version 3.8</p>
+<p><code>hex</code>方法新增了可选的<code>sep</code>参数与<code>bytes_per_sep</code>参数。</p>
+<ul>
+<li><code>sep</code>参数指定区段间的连接字符串；</li>
+<li><code>bytes_per_sep</code>参数用于划分连续的字节段，<strong>字节段从右往左进行划分</strong>。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Following the previous example</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">seq</span><span class="o">.</span><span class="n">hex</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="s1">&#39;f0-4b-e4-37-65-19-e9-ce&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">seq</span><span class="o">.</span><span class="n">hex</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="s1">&#39;f04b-e437-6519-e9ce&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">seq</span><span class="o">.</span><span class="n">hex</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="s1">&#39;f04b-e43765-19e9ce&#39;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+</div>
 <p>字节序列中的字节有三种表示方式：</p>
 <ul>
 <li>ASCII中规定的可打印字符，使用该字符本身</li>
@@ -3115,7 +3214,7 @@
 <tr>
 <td align="center"><code>e</code></td>
 <td align="center">（半精度）</td>
-<td align="center">float</td>
+<td align="center"><code>float</code></td>
 <td align="center">2</td>
 <td align="center"></td>
 </tr>
@@ -3174,6 +3273,10 @@
 <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span>
 </code></pre></div>
+<div class="admonition update">
+<p class="admonition-title">New in version 3.4</p>
+</div>
+<p><code>struct</code>对象新增了<code>iter_unpack</code>对象，不同于<code>unpack</code>函数，<code>iter_unpack</code>函数返回一个迭代器。</p>
 <p><code>struct</code>模块不会对字节顺序进行检测，因此对于同一个字节序列，不同的结构体定义在解包后会有不同的结果：</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&gt;hhf&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x00\x02\x00\x00\x00</span><span class="s1">@@&#39;</span><span class="p">)</span> 
 <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="mf">2.304855714121459e-41</span><span class="p">)</span>
@@ -3297,7 +3400,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-15T10:57:27+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-15</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-16T16:12:20+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-16</span>
     
   </small>
 </div>
