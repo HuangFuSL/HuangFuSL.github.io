@@ -60,9 +60,15 @@ nav:
           - 24. 两两交换链表中的节点: coding/leetcode/24.md
           - 25. K 个一组翻转链表: coding/leetcode/25.md
           - 26. 删除排序数组中的重复项: coding/leetcode/26.md
+          - 27. 移除元素: coding/leetcode/27.md
           - 28. 实现 strStr(): coding/leetcode/28.md
+          - 35. 搜索插入位置: coding/leetcode/35.md
           - 36. 有效的数独: coding/leetcode/36.md
+          - 37. 解数独: coding/leetcode/37.md
           - 38. 外观数列: coding/leetcode/38.md
+          - 42. 接雨水: coding/leetcode/42.md
+          - 43. 字符串相乘: coding/leetcode/43.md
+          - 46. 全排列: coding/leetcode/46.md
           - 48. 旋转图像: coding/leetcode/48.md
           - 50. Pow(x, n): coding/leetcode/50.md
         - 51-100:
