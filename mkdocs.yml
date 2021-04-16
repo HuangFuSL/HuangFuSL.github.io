@@ -70,6 +70,7 @@ nav:
           - 66. 加一: coding/leetcode/66.md
           - 70. 爬楼梯: coding/leetcode/70.md
           - 78. 子集: coding/leetcode/78.md
+          - 87. 扰乱字符串: coding/leetcode/87.md
           - 88. 合并两个有序数组: coding/leetcode/88.md
           - 90. 子集 II: coding/leetcode/90.md
           - 92. 反转链表 II: coding/leetcode/92.md
