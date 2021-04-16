@@ -18,17 +18,42 @@ True
 >>>
 ```
 
-> Python 3.9中，字典对象支持`|`运算符，用于将两个字典合并为一个。当两个字典中出现重复值时右侧字典中的值优先。
-> ```python
-> >>> import sys 
-> >>> ver = sys.version_info
-> >>> if ver.major == 3 and ver.minor > 8:
-> ...     a = {1: 2}
-> ...     b = {3: 4}
-> ...     print(a | b)
-> ... 
-> >>>
-> ```
+!!! update "New in version 3.9"
+    Python 3.9中，字典对象支持`|`运算符，用于将两个字典合并为一个。当两个字典中出现重复值时右侧字典中的值优先。
+
+    ```python
+    >>> import sys 
+    >>> ver = sys.version_info
+    >>> if ver.major == 3 and ver.minor > 8:
+    ...     a = {1: 2}
+    ...     b = {3: 4}
+    ...     print(a | b)
+    ... 
+    {1: 2, 3: 4}
+    >>>
+    ```
+
+### 迭代
+
+`dict`对象是可迭代对象，当对`dict`对象进行迭代时，实际上是迭代`dict`的**键**。
+
+```python
+>>> for key in {1: 2, 3: 4}:
+...     print(key)
+...
+1
+3
+>>>
+```
+
+* `dict.keys()`方法返回由字典中的键组成的可迭代对象；
+* `dict.values()`方法返回由字典中的值组成的可迭代对象；
+* `dict.items()`方法返回由键-值元组组成的可迭代对象。
+
+注意，每次调用`values`方法时，都会返回一个新的迭代器。因此，即使是对同一个字典调用多次`values`方法，其返回值也不想等。
+
+!!! update "Changed in version 3.8"
+    内置函数`reversed`支持传递字典作为参数，返回字典中的键**逆序**组成的可迭代对象。
 
 映射类型通常是可修改的，使用`types.MappingProxyType`会创建一个原映射的视图。对原映射的任何修改都会反映在视图中，但不能对视图进行任何直接的修改。此方法间接地创建一个不可修改的映射类型。
 

@@ -29,6 +29,34 @@ TypeError: 'bytes' object does not support item assignment
 >>>
 ```
 
+!!! update "New in version 3.5"
+    `bytes`对象与`bytearray`对象添加了`hex`方法，返回字节的十六进制表示形式。该函数与`bytes`对象的`fromhex`方法相反。
+
+    ```python
+    >>> import random
+    >>> seq = random.randbytes(8) # New in Python 3.9
+    >>> seq.hex()
+    'f04be4376519e9ce'
+    >>>
+    ```
+
+!!! update "Changed in version 3.8"
+    `hex`方法新增了可选的`sep`参数与`bytes_per_sep`参数。
+
+    * `sep`参数指定区段间的连接字符串；
+    * `bytes_per_sep`参数用于划分连续的字节段，**字节段从右往左进行划分**。
+
+    ```python
+    # Following the previous example
+    >>> seq.hex('-')
+    'f0-4b-e4-37-65-19-e9-ce'
+    >>> seq.hex('-', 2)
+    'f04b-e437-6519-e9ce'
+    >>> seq.hex('-', 3)
+    'f04b-e43765-19e9ce'
+    >>>
+    ```
+
 字节序列中的字节有三种表示方式：
 
 * ASCII中规定的可打印字符，使用该字符本身
@@ -111,7 +139,7 @@ b'\xd9\xc8\xd8\xaf`\xfe\xf8&'
 |`Q`|`unsigned long long`|`int`|8|
 |`n`|`ssize_t`|`int`|（仅适用于默认或`@`字节顺序）|
 |`N`|`size_t`|`int`|（仅适用于默认或`@`字节顺序）|
-|`e`|（半精度）|float|2|
+|`e`|（半精度）|`float`|2|
 |`f`|`float`|`float`|4|
 |`d`|`double`|`float`|8|
 |`s`|`char[]`|`bytes`|与字符串长度有关|
@@ -141,6 +169,9 @@ b'\x01\x00\x02\x00\x00\x00@@'
 (1, 2, 3.0)
 >>>
 ```
+
+!!! update "New in version 3.4"
+  `struct`对象新增了`iter_unpack`对象，不同于`unpack`函数，`iter_unpack`函数返回一个迭代器。
 
 `struct`模块不会对字节顺序进行检测，因此对于同一个字节序列，不同的结构体定义在解包后会有不同的结果：
 
