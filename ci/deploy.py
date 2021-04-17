@@ -34,6 +34,10 @@ if __name__ == "__main__":
     bootstrap.get_icon()
     msg = "Update on " + time.strftime("%Y/%m/%d %H:%M:%S", time.gmtime(time.time() + 3600 * 8))
     subprocess.run(
+        'mkdocs build -d build',
+        cwd=src, shell=True
+    )
+    subprocess.run(
         'mkdocs gh-deploy -d build --message "%s"' % (msg, ),
         cwd=src, shell=True
     )

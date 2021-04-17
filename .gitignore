@@ -18,3 +18,7 @@ overrides/main.html
 # Python
 *.pyc
 __pycache__/*
+
+
+# tags
+*.json

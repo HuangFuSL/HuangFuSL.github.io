@@ -21,6 +21,8 @@ WORKDIR /root/HuangFuSL.github.io
 
 RUN python ci/bootstrap.py
 
+RUN mkdocs build -d build
+
 EXPOSE 8000
 
 ENTRYPOINT ["mkdocs"]
