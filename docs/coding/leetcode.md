@@ -5,18 +5,9 @@ hide:
 template: _toc.html
 ---
 
-# Leetcode 题解
+# Leetcode 题目
 
-## 按标签分类
-
-{% for key, val in build_tag_mapping(filterPages('leetcode')).items() %}
-
-??? note "{{ key }}"
-{{ get_md_table(val, 4) }}
-
-{% endfor %}
-
-## 全部题目
+按标签分类的题目列表可以参见[这里](leetcode-tags.md)
 
 |题目|题目|题目|题目|题目|
 |:-|:-|:-|:-|:-|

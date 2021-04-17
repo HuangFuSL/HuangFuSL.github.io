@@ -34,7 +34,7 @@ def get_md_table(
         return "|{}|".format("|".join(_))
 
     def get_md_links(page):
-        return '[{0[title]}]({0[url]})'.format(page)
+        return '[{0[title]}](/{0[url]})'.format(page)
 
     def indent_lines(indent, seq):
         for line in seq:

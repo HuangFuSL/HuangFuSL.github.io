@@ -39,6 +39,8 @@ nav:
   - 写代码:
     - 目录: coding/index.md
     - Leetcode题解: 
+      - 目录: coding/leetcode.md
+      - 标签: coding/leetcode-tags.md
       - 题目列表:
         - 1-50:
           - 1. 两数之和: coding/leetcode/1.md
@@ -129,7 +131,6 @@ nav:
           - 1603. 设计停车系统: coding/leetcode/1603.md
         - 面试题:
           - 面试题 17.21. 直方图的水量: coding/leetcode/17.21.md
-      - 目录: coding/leetcode.md
     - Python:
       - 目录: coding/python.md
       - Python Style Guide: coding/python/pyguide.md

@@ -116,10 +116,20 @@ For Docker containers:
 
 ### :fontawesome-brands-github: GitHub workflow
 
-After cloning the repository, install the dependencies stored in `requirements.txt`:
+You need to install the dependencies stored in `requirements.txt` before you can
+ start building the site:
 
 ```bash
 pip install -r requirements.txt
+```
+
+There are cross-links in the site which require metadata defined in the page,
+so the project should be built before `mkdocs serve` is executed. The exported
+metadata is saved in `meta.json` after a build is successfully built. To build
+the site, execute the following command:
+
+```bash
+mkdocs build -d build
 ```
 
 Execute `mkdocs serve`, the built site will appear at [http://127.0.0.1:8000](http://127.0.0.1:8000)

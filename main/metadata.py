@@ -22,7 +22,7 @@ def load_meta():
         with open("meta.json", "r", encoding="utf-8") as file:
             _page_meta_original = json.load(file)
     except:
-        _page_meta_original = []
+        _page_meta_original = {}
     print("Loaded metadata for {} pages".format(len(_page_meta_original)))
 
 
