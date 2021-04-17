@@ -7,6 +7,17 @@ template: _toc.html
 
 # Leetcode 题解
 
+## 按标签分类
+
+{% for key, val in build_tag_mapping(filterPages('leetcode')).items() %}
+
+??? note "{{ key }}"
+{{ get_md_table(val, 4) }}
+
+{% endfor %}
+
+## 全部题目
+
 |题目|题目|题目|题目|题目|
 |:-|:-|:-|:-|:-|
 |[:material-star::material-star-outline::material-star-outline:1. 两数之和](leetcode/1.md)|[:material-star::material-star::material-star-outline:2. 两数相加](leetcode/2.md)|[:material-star::material-star::material-star-outline:3. 无重复字符的最长子串](leetcode/3.md)|:material-star::material-star::material-star:4. 寻找两个正序数组的中位数|:material-star::material-star::material-star-outline:5. 最长回文子串|
