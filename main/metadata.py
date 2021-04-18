@@ -34,6 +34,13 @@ def write_meta(env):
             json.dump(_page_meta_collection, file)
 
 
+def filterPages(category: str):
+    global _page_meta_original
+    def helper(_): return 'category' in _['meta'] and _[
+        'meta']['category'] == category
+    return [item for item in _page_meta_original.values() if helper(item)]
+
+
 def get_meta_original():
     global _page_meta_original
     return _page_meta_original

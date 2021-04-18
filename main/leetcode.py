@@ -1,10 +1,7 @@
 from __future__ import annotations
 
-import json
-from main.metadata import get_meta_original
 from typing import List
 
-from mkdocs.structure.nav import Link, Navigation, Page, Section
 
 def display_difficulty(diff):
     color = {
@@ -18,8 +15,8 @@ def display_difficulty(diff):
 def get_md_table(
     pages,
     indent: int = 0,
-    col_names: List[str] = ['题目'] * 5,
-    col_align: List[str] | str | None = [':-'] * 5
+    col_names: List[str] = ['题目'] * 4,
+    col_align: List[str] | str | None = [':-'] * 4
 ):
     if col_align is None:
         col_align = [':-'] * len(col_names)
@@ -33,19 +30,31 @@ def get_md_table(
     def joiner(_):
         return "|{}|".format("|".join(_))
 
+    def get_difficulty(diff):
+        a, b = ':material-star:', ':material-star-outline:'
+        return {
+            '简单': a + b * 2,
+            '中等': a * 2 + b,
+            '困难': a * 3,
+        }[diff]
+
     def get_md_links(page):
-        return '[{0[title]}](/{0[url]})'.format(page)
+        stars = get_difficulty(page['meta']['difficulty'])
+        return '[{1}{0[title]}](/{0[url]})'.format(page, stars)
 
     def indent_lines(indent, seq):
         for line in seq:
             yield ' ' * indent + line
+
+    def key(_):
+        return int(_['title'].split(".", 1)[0])
 
     ret = [
         joiner(col_names),
         joiner(col_align)
     ]
 
-    iterator = iter(pages)
+    iterator = iter(sorted(pages, key=key))
     flag = True
     while flag:
         row = []
@@ -70,10 +79,3 @@ def build_tag_mapping(pages):
                 ret[keywd] = []
             ret[keywd].append(page)
     return ret
-
-
-def filterPages(category: str):
-    page_meta_original = get_meta_original().values()
-    def helper(_): return 'category' in _['meta'] and _[
-        'meta']['category'] == category
-    return [item for item in page_meta_original if helper(item)]
