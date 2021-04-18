@@ -109,7 +109,7 @@ def get_whole_table(
     def build_link(content):
         stars = get_difficulty(content['难度'])
         if content['linked']:
-            return "[{1}{0[编号]}. {0[名称]}]({0[link]})".format(content, stars)
+            return "[{1}{0[编号]}. {0[名称]}](/{0[link]})".format(content, stars)
         else:
             return "{1}{0[编号]}. {0[名称]}".format(content, stars)
 
