@@ -12,5 +12,6 @@ def define_env(env):
     env.macro(leetcode.display_difficulty)
     env.macro(leetcode.build_tag_mapping)
     env.macro(leetcode.get_md_table)
+    env.macro(leetcode.get_whole_table)
     env.macro(latex.latex_image)
     env.filter(len)
