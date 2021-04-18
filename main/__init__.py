@@ -1,15 +1,16 @@
-import json
+from . import leetcode
+from . import metadata
+from . import latex
 
-from .leetcode import *
-from .metadata import *
 
+on_pre_page_macros = metadata.collect_meta
+on_post_build = metadata.write_meta
 
-on_pre_page_macros = collect_meta
-on_post_build = write_meta
-    
 
 def define_env(env):
-    env.macro(filterPages)
-    env.macro(display_difficulty)
-    env.macro(build_tag_mapping)
-    env.macro(get_md_table)
+    env.macro(metadata.filterPages)
+    env.macro(leetcode.display_difficulty)
+    env.macro(leetcode.build_tag_mapping)
+    env.macro(leetcode.get_md_table)
+    env.macro(latex.latex_image)
+    env.filter(len)
