@@ -2795,6 +2795,7 @@
 <li><code>-500 &lt;= Node.val &lt;= 500</code></li>
 <li><code>1 &lt;= left &lt;= right &lt;= n</code></li>
 </ul>
+<p><a href="https://leetcode-cn.com/problems/reverse-linked-list-ii">Reference</a></p>
 <h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>先考虑反转整个链表的情况，可以使用三指针法在<span><span class="MathJax_Preview">\mathcal O(N)</span><script type="math/tex">\mathcal O(N)</script></span>的时间内使用<span><span class="MathJax_Preview">\mathcal O(1)</span><script type="math/tex">\mathcal O(1)</script></span>的空间反转链表</p>
 <p>链表反转的三指针法：定义<code>cur1, cur2, cur3</code>三个指针，分别指向链表的头节点、第二个节点与第三个节点。指针<code>cur1, cur2</code>用于交换链表节点的连接方向。由于交换节点操作破坏了原有的连接结构，因此需要一个额外的指针<code>cur3</code>用于移动指针。</p>
@@ -2854,7 +2855,6 @@
     <span class="k">return</span> <span class="n">prev</span> <span class="o">?</span> <span class="nl">head</span> <span class="p">:</span> <span class="n">cur</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><a href="https://leetcode-cn.com/problems/reverse-linked-list-ii">Reference</a></p>
                 
                   
                     
@@ -2863,7 +2863,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-18T12:56:56+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-18</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-18T04:23:29+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-18</span>
     
   </small>
 </div>
