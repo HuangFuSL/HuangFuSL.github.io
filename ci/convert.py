@@ -104,7 +104,7 @@ def get_tex_path(cwd: str = '.', force: bool = False) -> str:
 
 
 def tex2svg(cwd: str = '.'):
-    pool = multiprocessing.Pool()
+    pool = multiprocessing.Pool(2)
     pool.map(_conversion, get_tex_path(cwd))
 
 if __name__ == '__main__':
