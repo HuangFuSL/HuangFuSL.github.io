@@ -125,8 +125,8 @@ pip install -r requirements.txt
 
 There are cross-links in the site which require metadata defined in the page,
 so the project should be built before `mkdocs serve` is executed. The exported
-metadata is saved in `meta.json` after a build is successfully built. To build
-the site, execute the following command:
+metadata is saved in `meta.json` after a build is successfully executed. To
+build the site, execute the following command:
 
 ```bash
 mkdocs build -d build
