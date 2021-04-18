@@ -73,7 +73,12 @@ nav:
           - 48. 旋转图像: coding/leetcode/48.md
           - 50. Pow(x, n): coding/leetcode/50.md
         - 51-100:
+          - 53. 最大子序和: coding/leetcode/53.md
+          - 55. 跳跃游戏: coding/leetcode/55.md
+          - 56. 合并区间: coding/leetcode/56.md
           - 59. 螺旋矩阵 II: coding/leetcode/59.md
+          - 61. 旋转链表: coding/leetcode/61.md
+          - 62. 不同路径: coding/leetcode/62.md
           - 66. 加一: coding/leetcode/66.md
           - 70. 爬楼梯: coding/leetcode/70.md
           - 78. 子集: coding/leetcode/78.md
