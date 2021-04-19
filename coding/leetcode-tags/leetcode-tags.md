@@ -2,7 +2,7 @@
 
 点击右侧目录可以跳转到对应的标签
 
-{% for key, val in build_tag_mapping(filterPages('leetcode')).items() %}
+{% for key, val in build_tag_mapping(filterPages('leetcode')) %}
 
 ## {{ key }}
 
