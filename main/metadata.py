@@ -36,8 +36,8 @@ def write_meta(env):
 
 def filterPages(category: str):
     global _page_meta_original
-    def helper(_): return 'category' in _['meta'] and _[
-        'meta']['category'] == category
+    def helper(_):
+        return 'category' in _['meta'] and _['meta']['category'] == category
     return [item for item in _page_meta_original.values() if helper(item)]
 
 

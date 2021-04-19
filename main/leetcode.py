@@ -124,4 +124,8 @@ def build_tag_mapping(pages):
             if keywd not in ret:
                 ret[keywd] = []
             ret[keywd].append(page)
-    return ret
+
+    def key(_):
+        return len(_[1])
+
+    return sorted(ret.items(), key=key, reverse=True)
