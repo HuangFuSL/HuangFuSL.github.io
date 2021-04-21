@@ -17294,7 +17294,7 @@ h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link {
   <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2021-04-21T06:52:14.010828</dc:date>
+    <dc:date>2021-04-21T11:09:35.945768</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -18277,6 +18277,8 @@ L 43.80748 138.919538
       
         <script src="../../../../js/timeago_mkdocs_material.js"></script>
       
+        <script src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
+      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
         <script src="../../../../js/love.js"></script>
@@ -18294,7 +18296,7 @@ L 43.80748 138.919538
         repo: 'Comments',      // The repository of store comments,
         owner: 'HuangFuSL',
         admin: ['HuangFuSL'],
-        id: hex_md5(location.pathname),      // Ensure uniqueness and length less than 50
+        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
         distractionFreeMode: false  // Facebook-like distraction free mode
     })
     gitalk.render('gitalk-container')

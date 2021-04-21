@@ -505,11 +505,11 @@ instructions:</p>
 <li>After GitHub actions has finished, view the deployed site.  </li>
 </ol>
 <h2 id="version-information"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1a6.887 6.887 0 0 0 0 9.8c2.73 2.7 7.15 2.7 9.88 0 1.36-1.35 2.04-2.92 2.04-4.9h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58a8.987 8.987 0 0 1 12.65 0L21 3v7.12M12.5 8v4.25l3.5 2.08-.72 1.21L11 13V8h1.5z"/></svg></span> Version information<a class="headerlink" href="#version-information" title="Permanent link">&para;</a></h2>
-<div style="white-space: pre-line;">commit 4edf1023e81345be13ab218c40f8930ff10f557c
+<div style="white-space: pre-line;">commit 54e68a9cc3c892da2f9b7ed35403f0633df15003
 Author: HuangFuSL <56627153+HuangFuSL@users.noreply.github.com>
-Date:   Wed Apr 21 14:47:58 2021 +0800
+Date:   Wed Apr 21 19:05:33 2021 +0800
 
-    Update on 2021/04/21 14:47:58</div>
+    Update on 2021/04/21 19:05:33</div>
                 
                   
                     
@@ -556,6 +556,8 @@ Date:   Wed Apr 21 14:47:58 2021 +0800
       
         <script src="js/timeago_mkdocs_material.js"></script>
       
+        <script src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
+      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
         <script src="js/love.js"></script>
@@ -573,7 +575,7 @@ Date:   Wed Apr 21 14:47:58 2021 +0800
         repo: 'Comments',      // The repository of store comments,
         owner: 'HuangFuSL',
         admin: ['HuangFuSL'],
-        id: hex_md5(location.pathname),      // Ensure uniqueness and length less than 50
+        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
         distractionFreeMode: false  // Facebook-like distraction free mode
     })
     gitalk.render('gitalk-container')

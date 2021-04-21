@@ -65,10 +65,10 @@
             \hline
         \end{tabular}
         ```
+{% endraw %}
 
     === "渲染结果"
         {{ latex_image('img/tabular/tabular-2-1.tex', 'tabular') }}
-{% endraw %}
 
 ## 三线表
 

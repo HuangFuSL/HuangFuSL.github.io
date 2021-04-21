@@ -2946,7 +2946,7 @@
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">渲染结果</label><div class="tabbed-content">
-<p><img alt="tabular" src="img/tabular/tabular-1.svg" /></p>
+<p><img alt="tabular" src="../img/tabular/tabular-1.svg" /></p>
 </div>
 </div>
 </div>
@@ -2995,7 +2995,7 @@
 </code></pre></div>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">渲染结果</label><div class="tabbed-content">
-<p>{{ latex_image('img/tabular/tabular-2-1.tex', 'tabular') }}</p>
+<p><img alt="tabular" src="../img/tabular/tabular-2-1.svg" /></p>
 </div>
 </div>
 </div>
@@ -3015,7 +3015,7 @@
 </code></pre></div>
 </div>
 <input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">渲染结果</label><div class="tabbed-content">
-<p><img alt="tabular" src="img/tabular/tabular-3.svg" /></p>
+<p><img alt="tabular" src="../img/tabular/tabular-3.svg" /></p>
 </div>
 </div>
 </div>
@@ -3052,7 +3052,7 @@
 </code></pre></div>
 </div>
 <input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">渲染结果</label><div class="tabbed-content">
-<p><img alt="tabular" src="img/tabular/tabular-5.svg" /></p>
+<p><img alt="tabular" src="../img/tabular/tabular-5.svg" /></p>
 </div>
 </div>
 </div>
@@ -3064,7 +3064,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-18T04:23:29+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-18</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-21T11:05:33+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-21</span>
     
   </small>
 </div>
@@ -3184,6 +3184,8 @@
       
         <script src="../../js/timeago_mkdocs_material.js"></script>
       
+        <script src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
+      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
         <script src="../../js/love.js"></script>
@@ -3201,7 +3203,7 @@
         repo: 'Comments',      // The repository of store comments,
         owner: 'HuangFuSL',
         admin: ['HuangFuSL'],
-        id: hex_md5(location.pathname),      // Ensure uniqueness and length less than 50
+        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
         distractionFreeMode: false  // Facebook-like distraction free mode
     })
     gitalk.render('gitalk-container')

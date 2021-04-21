@@ -3043,6 +3043,8 @@
       
         <script src="../../../js/timeago_mkdocs_material.js"></script>
       
+        <script src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
+      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
         <script src="../../../js/love.js"></script>
@@ -3060,7 +3062,7 @@
         repo: 'Comments',      // The repository of store comments,
         owner: 'HuangFuSL',
         admin: ['HuangFuSL'],
-        id: hex_md5(location.pathname),      // Ensure uniqueness and length less than 50
+        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
         distractionFreeMode: false  // Facebook-like distraction free mode
     })
     gitalk.render('gitalk-container')
