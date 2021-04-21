@@ -33,7 +33,7 @@ Please ensure that the tex document SHOULD NOT exceed one page, otherwise the
 filename of the SVG file would change. The filename is in the following format:
 (page index starts from 1)
 
-```
+```markdown
 [tex filename]-[page index].svg
 ```
 
@@ -46,7 +46,6 @@ project recursively, convert all `.tex` files to `.svg` files.
 
 import os
 import subprocess
-import multiprocessing
 from typing import Tuple
 
 
@@ -73,7 +72,7 @@ def _cleanup(filename: str):
         except:
             pass
 
-def _conversion(arg: Tuple[str]):
+def _conversion(arg: Tuple[str, str]):
     '''
     Execute the following command to convert the file:
 
@@ -90,7 +89,7 @@ def _conversion(arg: Tuple[str]):
     _cleanup(filename)
 
 
-def get_tex_path(cwd: str = '.', force: bool = False) -> str:
+def get_tex_path(cwd: str = '.', force: bool = False) -> Tuple[str, str]:
     '''
     Convert the `.tex` file recursively.
     '''
@@ -100,12 +99,12 @@ def get_tex_path(cwd: str = '.', force: bool = False) -> str:
             yield from get_tex_path(curPath)
         elif os.path.isfile(curPath):
             if _.split('.')[-1] == 'tex':
-                yield curPath, cwd
+                yield (curPath, cwd)
 
 
 def tex2svg(cwd: str = '.'):
-    pool = multiprocessing.Pool(2)
-    pool.map(_conversion, get_tex_path(cwd))
+    for i in get_tex_path(cwd):
+        _conversion(i)
 
 if __name__ == '__main__':
     tex2svg(os.getcwd())
