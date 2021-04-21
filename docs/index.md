@@ -180,11 +180,31 @@ instructions:
 1. Create a GitHub OAuth application at
   [here](https://github.com/settings/applications/new). Set both "Homepage URL"
   and "Authorization callback URL" to the URL of your own site. After the
-  application is created, copy the client ID and the client secret.
+  application is created, copy the client ID and the client secret.  
 2. Create two repository secrets named `GITALK_ID` and `GITALK_SECRET`. Paste
-  the value you've copied.
-3. Push the repository to GitHub.
-4. View the deployed site.
+  the value you've copied.  
+3. Create a repository to hold the issues (or use an existing one), modify the
+  following part in `overrides/_main.html`
+  ```html
+  <script type="text/javascript">
+      const gitalk = new Gitalk({
+          clientID: '%s',
+          clientSecret: '%s',
+          repo: 'Comments',      // The repository of store comments,
+          owner: 'HuangFuSL',
+          admin: ['HuangFuSL'],
+          id: hex_md5(location.pathname), // Ensure uniqueness and length less than 50
+          distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+      gitalk.render('gitalk-container')
+  </script>
+  ```
+  Change the value of `repo` to the name of your own repository, `owner` to the
+  owner of the repository. If you want someone to manage the comments, add their
+  name to the `admin` field. For more config options, please refer to
+  [Gitalk repository](https://github.com/gitalk/gitalk).  
+4. Push the repository to GitHub.  
+5. After GitHub actions has finished, view the deployed site.  
 
 ## :material-update: Version information
 
