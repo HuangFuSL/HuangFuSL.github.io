@@ -167,6 +167,25 @@ For Docker containers:
 * Wait for `mkdocs` building the site.
 * View the site at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
+### :material-comment-text: Comment system
+
+The site uses [Gitalk](https://github.com/gitalk/gitalk/) for commenting
+functionality. However as the backend GitHub OAuth application is registered for
+only `huangfusl.github.io`, you *CANNOT* use the comment system unless you push
+to this repository.
+
+To enable comment feature on your own site, please follow the following
+instructions:
+
+1. Create a GitHub OAuth application at
+  [here](https://github.com/settings/applications/new). Set both "Homepage URL"
+  and "Authorization callback URL" to the URL of your own site. After the
+  application is created, copy the client ID and the client secret.
+2. Create two repository secrets named `GITALK_ID` and `GITALK_SECRET`. Paste
+  the value you've copied.
+3. Push the repository to GitHub.
+4. View the deployed site.
+
 ## :material-update: Version information
 
 <div style="white-space: pre-line;">{{ git.raw }}</div>
