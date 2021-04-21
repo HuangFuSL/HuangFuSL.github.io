@@ -17294,7 +17294,7 @@ h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link {
   <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2021-04-19T15:57:35.955097</dc:date>
+    <dc:date>2021-04-21T05:48:51.655372</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -18291,10 +18291,10 @@ L 43.80748 138.919538
     const gitalk = new Gitalk({
         clientID: 'dffa82e50165bec0527d',
         clientSecret: '013d838943ca8175987b847e5214eec4aad4aff6',
-        repo: 'HuangFuSL.github.io',      // The repository of store comments,
+        repo: 'Comments',      // The repository of store comments,
         owner: 'HuangFuSL',
         admin: ['HuangFuSL'],
-        id: location.pathname,      // Ensure uniqueness and length less than 50
+        id: hex_md5(location.pathname),      // Ensure uniqueness and length less than 50
         distractionFreeMode: false  // Facebook-like distraction free mode
     })
     gitalk.render('gitalk-container')

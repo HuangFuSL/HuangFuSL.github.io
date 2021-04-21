@@ -3417,10 +3417,10 @@
     const gitalk = new Gitalk({
         clientID: 'dffa82e50165bec0527d',
         clientSecret: '013d838943ca8175987b847e5214eec4aad4aff6',
-        repo: 'HuangFuSL.github.io',      // The repository of store comments,
+        repo: 'Comments',      // The repository of store comments,
         owner: 'HuangFuSL',
         admin: ['HuangFuSL'],
-        id: location.pathname,      // Ensure uniqueness and length less than 50
+        id: hex_md5(location.pathname),      // Ensure uniqueness and length less than 50
         distractionFreeMode: false  // Facebook-like distraction free mode
     })
     gitalk.render('gitalk-container')
