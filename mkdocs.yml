@@ -136,6 +136,8 @@ nav:
           - 1300. 转变数组后最接近目标值的数组和: coding/leetcode/1300.md
         - 1601-1650:
           - 1603. 设计停车系统: coding/leetcode/1603.md
+        - 1800-1850:
+          - 1835. 所有数对按位与结果的异或和: coding/leetcode/1835.md
         - 面试题:
           - 面试题 17.21. 直方图的水量: coding/leetcode/17.21.md
     - Python:
