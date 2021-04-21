@@ -26,8 +26,6 @@
       
     
     
-<script src="/js/gitalk.min.js"></script>
-
     
       
         
@@ -319,8 +317,6 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-
-
                 
                   <a href="https://github.com/HuangFuSL/HuangFuSL.github.io/edit/main/docs/index.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
@@ -468,12 +464,29 @@ embedded in the markdown files. However, as the SVG images are ignored by
 <li>Wait for <code>mkdocs</code> building the site.</li>
 <li>View the site at <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a></li>
 </ul>
+<h3 id="comment-system"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 22a1 1 0 0 1-1-1v-3H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6.1l-3.7 3.71c-.2.19-.45.29-.7.29H9M5 5v2h14V5H5m0 4v2h8V9H5m0 4v2h10v-2H5z"/></svg></span> Comment system<a class="headerlink" href="#comment-system" title="Permanent link">&para;</a></h3>
+<p>The site uses <a href="https://github.com/gitalk/gitalk/">Gitalk</a> for commenting
+functionality. However as the backend GitHub OAuth application is registered for
+only <code>huangfusl.github.io</code>, you <em>CANNOT</em> use the comment system unless you push
+to this repository.</p>
+<p>To enable comment feature on your own site, please follow the following
+instructions:</p>
+<ol>
+<li>Create a GitHub OAuth application at
+  <a href="https://github.com/settings/applications/new">here</a>. Set both "Homepage URL"
+  and "Authorization callback URL" to the URL of your own site. After the
+  application is created, copy the client ID and the client secret.</li>
+<li>Create two repository secrets named <code>GITALK_ID</code> and <code>GITALK_SECRET</code>. Paste
+  the value you've copied.</li>
+<li>Push the repository to GitHub.</li>
+<li>View the deployed site.</li>
+</ol>
 <h2 id="version-information"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1a6.887 6.887 0 0 0 0 9.8c2.73 2.7 7.15 2.7 9.88 0 1.36-1.35 2.04-2.92 2.04-4.9h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58a8.987 8.987 0 0 1 12.65 0L21 3v7.12M12.5 8v4.25l3.5 2.08-.72 1.21L11 13V8h1.5z"/></svg></span> Version information<a class="headerlink" href="#version-information" title="Permanent link">&para;</a></h2>
-<div style="white-space: pre-line;">commit 326eb9353808c023fea2ae427d345c40f7713646
+<div style="white-space: pre-line;">commit 52f0091672af7eb09be4fa69db0b0a4e617956d1
 Author: HuangFuSL <56627153+HuangFuSL@users.noreply.github.com>
-Date:   Wed Apr 21 12:14:41 2021 +0800
+Date:   Wed Apr 21 14:34:18 2021 +0800
 
-    Move the comment system to another repo</div>
+    Fixed gitalk issues</div>
                 
                   
                     
@@ -482,15 +495,13 @@ Date:   Wed Apr 21 12:14:41 2021 +0800
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-18T04:23:29+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-18</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-21T06:34:18+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-21</span>
     
   </small>
 </div>
                   
                 
               
-<div id="gitalk-container"></div>
-
               
                 
 
@@ -513,7 +524,6 @@ Date:   Wed Apr 21 12:14:41 2021 +0800
     <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "search.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-
       <script src="assets/javascripts/bundle.4ea5477f.min.js"></script>
       
         <script src="js/timeago.min.js"></script>
@@ -527,21 +537,5 @@ Date:   Wed Apr 21 12:14:41 2021 +0800
         <script src="js/mermaid-min.js"></script>
       
     
-<script type="text/javascript" color="233,32,99" opacity='0.7' zIndex="-2" count="99"
-    src="/js/canvas-nest.js"></script>
-<script type="text/javascript" src="/js/loadColor.js"></script>
-<script type="text/javascript">
-    const gitalk = new Gitalk({
-        clientID: 'dffa82e50165bec0527d',
-        clientSecret: '%s',
-        repo: 'Comments',      // The repository of store comments,
-        owner: 'HuangFuSL',
-        admin: ['HuangFuSL'],
-        id: hex_md5(location.pathname),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    })
-    gitalk.render('gitalk-container')
-</script>
-
   </body>
 </html>
