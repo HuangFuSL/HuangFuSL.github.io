@@ -78,3 +78,9 @@ C. This is an item.
 * This is an item.
 
 `\item`命令可以使用中括号指定当前项使用的符号，如`\item[-]`使用`-`作为符号
+
+## 图像环境
+
+### TikZ图像
+
+关于TikZ图像的详细信息，请参见[TikZ图片](tikz.md)
