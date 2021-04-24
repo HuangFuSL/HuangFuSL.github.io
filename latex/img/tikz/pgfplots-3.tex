@@ -1,0 +1,20 @@
+\documentclass[varwidth]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\begin{document}
+    \begin{figure}[htbp]
+        \begin{tikzpicture}
+            \begin{axis}[
+                xlabel=$x$ variable,
+                ylabel=$y$ variable,
+                xmin=0, xmax=7,
+                title=Regression Example,
+            ]
+                \addplot coordinates{(0, 5)(1, 9)(2, 7)(3, 4)(4, 10)};
+                \addlegendentry{\small Data}
+                \addplot [smooth, red, width=2]{0.5*x + 6};
+                \addlegendentry{\small Regressor}
+            \end{axis}
+        \end{tikzpicture}
+    \end{figure}
+\end{document}
