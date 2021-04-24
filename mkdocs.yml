@@ -84,6 +84,9 @@ nav:
           - 66. 加一: coding/leetcode/66.md
           - 69. x 的平方根: coding/leetcode/69.md
           - 70. 爬楼梯: coding/leetcode/70.md
+          - 73. 矩阵置零: coding/leetcode/73.md
+          - 74. 搜索二维矩阵: coding/leetcode/74.md
+          - 75. 颜色分类: coding/leetcode/75.md
           - 78. 子集: coding/leetcode/78.md
           - 87. 扰乱字符串: coding/leetcode/87.md
           - 88. 合并两个有序数组: coding/leetcode/88.md
@@ -119,6 +122,8 @@ nav:
           - 344. 反转字符串: coding/leetcode/344.md
           - 350. 两个数组的交集 II: coding/leetcode/350.md
         - 351-400:
+          - 368. 最大整除子集: coding/leetcode/368.md
+          - 377. 组合总和 Ⅳ: coding/leetcode/377.md
           - 384. 打乱数组: coding/leetcode/384.md
           - 387. 字符串中的第一个唯一字符: coding/leetcode/387.md
         - 401-450:
