@@ -54,9 +54,15 @@ XELATEX_CMD = [
     '-synctex=1',
     '-interaction=nonstopmode',
     '-file-line-error', 
-    '-no-pdf'
 ]
-DVISVGM_CMD = ['dvisvgm', '--page=1-', '--scale=2', '--font-format=woff']
+
+DVISVGM_CMD = [
+    'dvisvgm', 
+    '--pdf',
+    '--page=1-', 
+    '--font-format=woff',
+    '--trace-all'
+]
 
 
 def _cleanup(filename: str):
@@ -77,13 +83,14 @@ def _conversion(arg: Tuple[str, str]):
     Execute the following command to convert the file:
 
     ```bash
-    xelatex -synctex=1 -interaction=nonstopmode -file-line-error -no-pdf input.tex
-    dvisvgm --page=1- --scale=2 --font-format=woff input.xdv
+    xelatex -synctex=1 -interaction=nonstopmode -file-line-error input.tex
+    dvisvgm --page=1- --font-format=woff --trace-all input.pdf
     ```
     '''
     filename, cwd = arg
     print('Converting: ', filename)
-    dvi_name = filename[:-3] + 'xdv'
+    dvi_name = filename[:-3] + 'pdf'
+    subprocess.run(XELATEX_CMD + [filename], cwd=cwd)
     subprocess.run(XELATEX_CMD + [filename], cwd=cwd)
     subprocess.run(DVISVGM_CMD + [dvi_name], cwd=cwd)
     _cleanup(filename)
