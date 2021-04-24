@@ -1,0 +1,19 @@
+\documentclass[varwidth]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\begin{document}
+    \begin{figure}[htbp]
+        \begin{tikzpicture}
+            \begin{axis}[
+                xlabel=Year,
+                ylabel=Inventory,
+                xmin=2019, xmax=2021,
+                ymin=100, ymax=1000,
+                xtick distance=1,
+                title=Inventory Graph,
+                xmode=normal, ymode=log
+            ]
+            \end{axis}
+        \end{tikzpicture}
+    \end{figure}
+\end{document}
