@@ -57,6 +57,14 @@ A. This is an item.
 B. This is an item.  
 C. This is an item.
 
+在`enumerate`与`item`环境中可以使用`\setlength`调节列表项之间的距离，如下所示：
+
+```tex
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\itemindent}{1em}
+```
+
 **自定义编号列表需要引入`enumerate`包**：`\usepackage{enumerate}`
 
 ### `itemize`环境
