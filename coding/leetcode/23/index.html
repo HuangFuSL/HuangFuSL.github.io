@@ -3120,9 +3120,9 @@
 <span class="k">struct</span> <span class="nc">ListNode</span><span class="o">*</span> <span class="n">mergeKLists</span><span class="p">(</span><span class="k">struct</span> <span class="nc">ListNode</span><span class="o">**</span> <span class="n">lists</span><span class="p">,</span> <span class="kt">int</span> <span class="n">listsSize</span><span class="p">){</span>
     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">listsSize</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">listsSize</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">listsSize</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">lists</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-    <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">listsSize</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">listsSize</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">mergeLists</span><span class="p">(</span><span class="n">lists</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lists</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
     <span class="k">struct</span> <span class="nc">ListNode</span> <span class="o">*</span><span class="n">head</span> <span class="o">=</span> <span class="n">lists</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
     <span class="kt">int</span> <span class="n">step</span> <span class="o">=</span> <span class="p">(</span><span class="n">listsSize</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
