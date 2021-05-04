@@ -27,8 +27,6 @@ jobs:
           sudo apt install texlive-latex-base texlive-latex-extra
           sudo apt install texlive-latex-recommended texlive-xetex
 
-
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip

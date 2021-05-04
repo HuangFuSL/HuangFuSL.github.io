@@ -1,9 +1,11 @@
 FROM squidfunk/mkdocs-material
 
 # Install dependencies
-WORKDIR /root
+COPY . /root/HuangFuSL.github.io
+WORKDIR /root/HuangFuSL.github.io
 
-COPY requirements.txt .
+RUN python ci/bootstrap.py
+
 RUN apk add --no-cache --virtual \
     .build \
     gcc g++ libgcc musl-dev \
@@ -15,11 +17,6 @@ RUN apk add --no-cache --virtual \
     jpeg-dev zlib-dev make libffi-dev libtool zeromq-dev
 
 RUN apk add --no-cache libzmq libjpeg nodejs
-
-RUN git clone https://github.com/HuangFuSL/HuangFuSL.github.io --depth=1
-WORKDIR /root/HuangFuSL.github.io
-
-RUN python ci/bootstrap.py
 
 RUN mkdocs build -d build
 
