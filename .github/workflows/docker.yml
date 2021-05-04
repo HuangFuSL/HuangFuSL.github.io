@@ -11,6 +11,23 @@ jobs:
         name: Checkout
         uses: actions/checkout@v2
       -
+        name: Set up texlive
+        run: |
+          sudo apt install texlive-base texlive-extra-utils texlive-lang-chinese
+          sudo apt install texlive-latex-base texlive-latex-extra
+          sudo apt install texlive-latex-recommended texlive-xetex
+      
+      - name: Set up Python 3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Generate SVG
+        run: |
+          git pull
+          python3 .ci/convert.py
+
+      -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       -
