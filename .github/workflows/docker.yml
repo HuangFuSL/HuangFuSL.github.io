@@ -10,6 +10,8 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       -
         name: Set up texlive
         run: |
@@ -25,7 +27,7 @@ jobs:
       - name: Generate SVG
         run: |
           git pull
-          python3 .ci/convert.py
+          python3 ./ci/convert.py
 
       -
         name: Set up QEMU
