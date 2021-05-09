@@ -1,0 +1,16 @@
+:root>[data-md-color-scheme=default] {
+    --img-invert: 0%
+}
+
+:root>[data-md-color-scheme=slate] {
+    --img-invert: 100%
+}
+
+.md-typeset img {
+    margin: 0 auto;
+    display: flex;
+}
+
+.md-typeset .latex {
+    filter: invert(var(--img-invert));
+}

@@ -26,6 +26,9 @@ nav:
       - 谓词逻辑的基本概念: math/discrete-mathematics/chapter-4.md
       - 谓词逻辑的等值和推理演算: math/discrete-mathematics/chapter-5.md
       - 集合: math/discrete-mathematics/chapter-9.md
+    - 运筹学:
+      - 目录: math/operating-research/index.md
+      - 线性规划: math/operating-research/chapter-1.md
     - 对策、决策与排队论:
       - 目录: math/queue-theory/index.md
       - Chapter 12: math/queue-theory/chapter-12.md
@@ -127,6 +130,7 @@ nav:
           - 384. 打乱数组: coding/leetcode/384.md
           - 387. 字符串中的第一个唯一字符: coding/leetcode/387.md
         - 401-450:
+          - 403. 青蛙过河: coding/leetcode/403.md
           - 433. 最小基因变化: coding/leetcode/433.md
         - 451-500:
             488. 祖玛游戏: coding/leetcode/488.md
@@ -269,6 +273,7 @@ extra_css:
   - css/codecolor.css
   - css/codedef_custom.css
   - css/admonitions.css
+  - css/images.css
   - css/jupyter.css
   
 
