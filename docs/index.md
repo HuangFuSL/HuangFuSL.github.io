@@ -206,6 +206,10 @@ instructions:
 4. Push the repository to GitHub.  
 5. After GitHub actions has finished, view the deployed site.  
 
+## Coding Records
+
+<center><figure><embed src="https://wakatime.com/share/@9eb40973-374b-44b8-8353-8ba5c8510373/e274b6f5-30c6-41a3-ba23-549ff34364c0.svg"></embed></figure></center>
+
 ## :material-update: Version information
 
 <div style="white-space: pre-line;">{{ git.raw }}</div>
