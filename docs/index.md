@@ -208,7 +208,7 @@ instructions:
 
 ## Coding Records
 
-<center><figure><embed src="https://wakatime.com/share/@9eb40973-374b-44b8-8353-8ba5c8510373/e274b6f5-30c6-41a3-ba23-549ff34364c0.svg"></embed></figure></center>
+<center><embed src="https://wakatime.com/share/@9eb40973-374b-44b8-8353-8ba5c8510373/e274b6f5-30c6-41a3-ba23-549ff34364c0.svg" width="50%"></center>
 
 ## :material-update: Version information
 
