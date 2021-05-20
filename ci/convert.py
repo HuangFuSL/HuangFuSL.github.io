@@ -45,6 +45,7 @@ project recursively, convert all `.tex` files to `.svg` files.
 '''
 
 import os
+import time
 import subprocess
 from typing import Tuple
 
@@ -88,11 +89,15 @@ def _conversion(arg: Tuple[str, str]):
     ```
     '''
     filename, cwd = arg
-    print('Converting: ', filename)
+    start = time.time()
+
     dvi_name = filename[:-3] + 'pdf'
-    subprocess.run(XELATEX_CMD + [filename], cwd=cwd)
-    subprocess.run(XELATEX_CMD + [filename], cwd=cwd)
-    subprocess.run(DVISVGM_CMD + [dvi_name], cwd=cwd)
+    subprocess.run(XELATEX_CMD + [filename], cwd=cwd, capture_output=True)
+    subprocess.run(XELATEX_CMD + [filename], cwd=cwd, capture_output=True)
+    subprocess.run(DVISVGM_CMD + [dvi_name], cwd=cwd, capture_output=True)
+
+    end = time.time()
+    print('{0} converted in {1:.2f} seconds'.format(filename, end - start))
     _cleanup(filename)
 
 
