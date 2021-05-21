@@ -1,10 +1,12 @@
 import json
+import mkdocs.structure.
 
 _page_meta_collection = {}
 _page_meta_original = {}
 
 
-def collect_meta(env):
+def collect_meta(env) -> None:
+    print(type(env))
     global _page_meta_original
     global _page_meta_collection
     if not _page_meta_original:
