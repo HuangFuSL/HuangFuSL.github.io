@@ -2,8 +2,9 @@ from __future__ import annotations
 
 import csv
 import operator
-from . import util
 from typing import Iterable, Iterator, List
+
+from . import util
 
 
 def display_difficulty(diff):
