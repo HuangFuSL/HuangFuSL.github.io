@@ -1,15 +1,14 @@
 from __future__ import annotations
 
 import json
-from typing import Dict, List
-
-import mkdocs_macros.plugin as plugin
+import mkdocs.structure.
 
 _page_meta_collection = {}
 _page_meta_original = {}
 
 
-def collect_meta(env: plugin.MacrosPlugin) -> None:
+def collect_meta(env) -> None:
+    print(type(env))
     global _page_meta_original
     global _page_meta_collection
     if not _page_meta_original:
