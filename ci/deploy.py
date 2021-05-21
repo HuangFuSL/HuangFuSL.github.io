@@ -4,6 +4,7 @@ import subprocess
 import sys
 import convert
 import bootstrap
+import tsinghua
 
 
 def apply_token(id: str, token: str):
@@ -35,7 +36,9 @@ if __name__ == "__main__":
     src = os.getcwd()
     convert.tex2svg(src)
     bootstrap.get_icon()
-    msg = "Update on " + time.strftime("%Y/%m/%d %H:%M:%S", time.gmtime(time.time() + 3600 * 8))
+    tsinghua.build_icon()
+    msg = "Update on " + \
+        time.strftime("%Y/%m/%d %H:%M:%S", time.gmtime(time.time() + 3600 * 8))
     subprocess.run(
         'mkdocs build -d build',
         cwd=src, shell=True
