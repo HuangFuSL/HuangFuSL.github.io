@@ -29,6 +29,9 @@ nav:
     - 运筹学:
       - 目录: math/operating-research/index.md
       - 线性规划: math/operating-research/chapter-1.md
+      - 运输问题: math/operating-research/chapter-1.md
+      - 目标规划: math/operating-research/chapter-1.md
+      - 整数规划: math/operating-research/chapter-1.md
     - 对策、决策与排队论:
       - 目录: math/queue-theory/index.md
       - Chapter 12: math/queue-theory/chapter-12.md
