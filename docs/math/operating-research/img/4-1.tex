@@ -1,0 +1,17 @@
+\documentclass[varwidth]{standalone}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\begin{document}
+    \begin{tabular}{|ccc|cccccc|}
+        \hline
+        \multicolumn{3}{|c|}{$c_j$} & $c_1$ & $\dots$ & $c_m$ & $c_{m+1}$ & $\dots$ & $c_n$ \\
+        $c_B$ & $x_B$ & $b$ & $x_1$ & $\dots$ & $x_m$ & $x_{m+1}$ & $\dots$ & $x_n$ \\
+        \hline
+        $c_1$ & $x_1$ & $b'_1$ & 1 & $\dots$ & 0 & $a'_{1(m+1)}$ & $\dots$ & $a'_{1n}$\\
+        $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$ \\
+        $c_m$ & $x_m$ & $b'_m$ & 0 & $\dots$ & 1 & $a'_{m(m+1)}$ & $\dots$ & $a'_{mn}$ \\
+        \hline
+        \multicolumn{2}{|c|}{$z_0, \lambda$} & $z^*$ & 0 & $\dots$ & 1 & $\lambda'_{m+1}$ & $\dots$ & $\lambda'_n$ \\
+        \hline
+    \end{tabular}
+\end{document} 
