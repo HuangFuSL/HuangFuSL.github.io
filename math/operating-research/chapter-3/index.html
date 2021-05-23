@@ -745,6 +745,42 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1/" class="md-nav__link">
+        运输问题
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1/" class="md-nav__link">
+        目标规划
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1/" class="md-nav__link">
+        整数规划
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -3007,6 +3043,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    目标规划的求解方法
+  </a>
+  
+    <nav class="md-nav" aria-label="目标规划的求解方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    图解法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    单纯形法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
         </div>
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=360
@@ -3085,6 +3156,13 @@
 </script>
 </div>
 <p>由此可见，目标规划相当于在线性规划中引入一种新的约束条件，即目标约束。每个目标约束都需要引入一对变量<span><span class="MathJax_Preview">d^+</span><script type="math/tex">d^+</script></span>与<span><span class="MathJax_Preview">d^-</span><script type="math/tex">d^-</script></span>。如果优化问题中存在多个目标且之间存在优先级关系，可以使用<span><span class="MathJax_Preview">P_i</span><script type="math/tex">P_i</script></span>作为需要优化的目标函数系数。<span><span class="MathJax_Preview">P_i</span><script type="math/tex">P_i</script></span>满足<span><span class="MathJax_Preview">P_1 \gg P_2 \gg \dots \gg P_n</span><script type="math/tex">P_1 \gg P_2 \gg \dots \gg P_n</script></span>并且各<span><span class="MathJax_Preview">P_i</span><script type="math/tex">P_i</script></span>为足够大的正数。</p>
+<p>目标规划的目标函数中只有偏差变量，目标规划的优化目标是最小化偏差变量。如果最优条件下<span><span class="MathJax_Preview">Z=0</span><script type="math/tex">Z=0</script></span>，说明所有目标可以同时满足。</p>
+<h2 id="_2">目标规划的求解方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>可以使用图解法或单纯形法对目标规划进行求解</p>
+<h3 id="_3">图解法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>使用图解法求解目标规划时，首先需要画出目标约束中的硬约束，再按照目标约束的优先级画出软约束，并注明约束偏差方向。按照约束的优先级依次划分能够满足约束的可行域。直到可行域为空或约束全部满足。</p>
+<h3 id="_4">单纯形法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>首先需要将单纯形法中的硬约束化为标准型。列出单纯形表后，逐步将包含在目标函数中的偏差从基中换出。并且尽可能使得非基变量的检验数为<strong>正</strong>（因目标规划的优化方向为最小化）。</p>
                 
                   
                     
@@ -3093,7 +3171,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-05-21T02:55:30+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-05-21</span>
+      最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-05-23T07:37:16+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-05-23</span>
       
     
   </small>
