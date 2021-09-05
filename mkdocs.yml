@@ -241,6 +241,7 @@ plugins:
 markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.details
+  - pymdownx.keys
   - admonition
   - codehilite:
       guess_lang: true
