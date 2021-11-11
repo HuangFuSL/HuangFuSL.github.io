@@ -65,6 +65,7 @@
 * [More Vehicles](https://steamcommunity.com/sharedfiles/filedetails/?id=1764208250)
 * [Network Extensions 2 (Updated for Sunset Harbor)](https://steamcommunity.com/sharedfiles/filedetails/?id=812125426)
 * [Network Multitool 1.2](https://steamcommunity.com/sharedfiles/filedetails/?id=2560782729)
+* [Node Controller Renewal 3.1.3](https://steamcommunity.com/sharedfiles/filedetails/?id=2472062376)
 * [Quay Anarchy](https://steamcommunity.com/sharedfiles/filedetails/?id=650436109)
 * [Roundabout Builder](https://steamcommunity.com/sharedfiles/filedetails/?id=1625704117)
 * [Smart Intersection Builder](https://steamcommunity.com/sharedfiles/filedetails/?id=1677913611)
@@ -310,6 +311,59 @@ Fine Road Tool 提供了放置道路时的一些精细调整功能：
 |源代码|[:material-github:](https://github.com/MacSergey/NetworkMultitool)|
 
 Cities: Skylines 游戏中**功能最丰富**的道路模组。包含了 [AdvancedRoadTools](#advancedroadtools) 、 [Elektrix's Road Tools 2.93](#elektrixs-road-tools-293) 、 [Parallel Road Tool](https://steamcommunity.com/sharedfiles/filedetails/?id=1440928803) 等模组的几乎全部功能。
+
+* 添加删除节点
+* 合并分离节点
+* 道路坡度平滑
+* 道路曲线平滑
+* 创建单环道路
+* 创建多环道路
+* 创建平行道路
+* 创建环岛道路
+* 创建贝塞尔曲线
+* 道路解锁与绑定
+
+可以使用 ++ctrl+t++ 启动该模组，或者使用 Unified UI 模组。
+
+### Node Controller Renewal 3.1.3
+
+|||
+|:-:|:-:|
+|工坊链接|[2472062376](https://steamcommunity.com/sharedfiles/filedetails/?id=2472062376)|
+|依赖项|[Harmony 2.0.4-4 (Mod Dependency)](https://steamcommunity.com/workshop/filedetails/?id=2040656402)|
+|游戏内图标|![Node Controller Renewal 3.1.3](img/NCR.png)|
+|不兼容模组|暂无|
+|源代码|[:material-github:](https://github.com/MacSergey/NodeController30)|
+
+Node Controller Renewal 提供了控制道路节点的功能，可以用于控制交叉路口节点的坡度、各个路段的旋转角度和缩进距离。
+
+可以使用 ++ctrl+n++ 启动该模组，或者使用 Unified UI 模组。
+
+### Quay Anarchy
+
+|||
+|:-:|:-:|
+|工坊链接|[650436109](https://steamcommunity.com/sharedfiles/filedetails/?id=650436109)|
+|依赖项|无|
+|游戏内图标|无|
+|不兼容模组|暂无|
+|源代码|[:material-github:](https://github.com/bloodypenguin/Skylines-QuayAnarchy)|
+
+订阅并启用后即可自由地建设护岸，而不受地形的影响。
+
+### Roundabout Builder
+
+|||
+|:-:|:-:|
+|工坊链接|[1625704117](https://steamcommunity.com/sharedfiles/filedetails/?id=1625704117)|
+|依赖项|无|
+|游戏内图标|![Roundabout Builder](img/RoundaboutBuilder.png)|
+|不兼容模组|暂无|
+|源代码|[:material-github:](https://github.com/Strdate/AutomaticRoundaboutBuilder)|
+
+该模组用于修建环岛，也可以将十字路口节点转变为环岛。
+
+使用 ++ctrl+o++ 启动该模组
 
 ## 公共交通模组
 
