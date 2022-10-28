@@ -108,6 +108,20 @@ $$
 > $\begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\ka_{p1} & ka_{p2} & \cdots & ka_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix} = k\begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\a_{p1} & a_{p2} & \cdots & a_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix}$
 >
 > **定理2.4** （ **定理2.3** 推论）若行列式的某行（或某列）全为0，则行列式为0  
+> 
+> **定理2.5** （ **定理2.3** 推论）若行列式的某两行（列）成比例，则行列式为0
 >
-> **定理2.5** 行列式可以按下式分为两个行列式之和
-> $\begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\a_{p1} + a'_{p1} & a_{p2} + a'_{p2} & \cdots & a_{pn} + a'_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix} = \begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\a_{p1} & a_{p2} & \cdots & a_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix} + \begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\a'_{p1} & a'_{p2} & \cdots & a'_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix}$
+> **定理2.6** 行列式可以按下式分为两个行列式之和
+> $\begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\a_{p1} + a'_{p1} & a_{p2} + a'_{p2} & \cdots & a_{pn} + a'_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix} = \begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\a_{p1} & a_{p2} & \cdots & a_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix} + \begin{vmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\\vdots & \vdots &        & \vdots \\a'_{p1} & a'_{p2} & \cdots & a'_{pn} \\\vdots & \vdots &        & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn}\end{vmatrix}$  
+>
+> **定理2.7** 对换行列式中两行的位置，行列式反号  
+>
+> **定理2.8** （ **定理2.5、定理2.6** 推论）将一行（列）的某个倍数加到另一行（列），行列式的值不变
+
+## 1.3 行列式的展开
+
+> **定义** 对于行列式$B=|b_{ij}|_n$，定义行列式$M_{ij}$为$B$划去第$i$行和第$j$列剩余的部分，称$M_{ij}$为$b_{ij}$的余子式，称$A_{ij} = (-1)^{i+j} M_{ij}$称为$b_{ij}$的代数余子式
+
+根据余子式可以将行列式分解为阶数降一阶的行列式之和：
+
+> **定理3.1** $n$阶行列式
