@@ -41,6 +41,9 @@ nav:
     - 线性代数:
       - 目录: math/linear-algebra/index.md
       - 第一章：行列式: math/linear-algebra/chapter-1.md
+    - 动态系统分析与控制:
+      - 目录: math/dynamic-system/index.md
+      - 古典控制理论概述: math/dynamic-system/chapter-1.md
     - 生产与运作管理:
       - 目录: math/pom/index.md
       - 预测技术: math/pom/forecast.md
