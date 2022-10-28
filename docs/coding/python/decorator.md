@@ -139,4 +139,4 @@ UnboundLocalError: local variable 'b' referenced before assignment
   >>>
   ```
 
-在`avg2`函数结束后，局部变量`values`原有的作用域消失，成为自由变量。`values`变量的引用存储在`avg`函数的`__closure__`属性中
+在`avg2`函数结束后，局部变量`values`原有的作用域消失，成为自由变量。自由变量指没有在本地作用域中绑定的变量。`values`变量的引用存储在`avg`函数的`__closure__`属性中。即使`avg2`函数已经结束执行，`avg`函数仍然能访问`values`变量。
