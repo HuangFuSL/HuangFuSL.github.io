@@ -235,8 +235,7 @@ extra:
       link: https://steamcommunity.com/id/huangfusl/
 plugins:
   - search:
-      # prebuild_index: true
-      lang: 'jp'
+      separator: '[\s\u200b\-]'
   - git-revision-date
   - git-revision-date-localized:
       type: timeago
