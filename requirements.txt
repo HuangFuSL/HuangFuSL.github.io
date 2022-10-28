@@ -10,3 +10,4 @@ Markdown
 matplotlib
 pandas
 jupyter
+requests

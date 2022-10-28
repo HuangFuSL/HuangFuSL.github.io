@@ -172,6 +172,10 @@ nav:
       - 函数装饰器与闭包: coding/python/decorator.md
       - Matplotlib:
         - 三维图表: coding/python/matplotlib/3dplots.ipynb
+      - Python实用工具:
+        - 网易云音乐NCM转换: coding/python/snippets/ncm_decrypt.md
+        - 公历农历转换: coding/python/snippets/cn_date.md
+        - CSV文件合并: coding/python/snippets/merge_csv.md
     - SVG:
       - 目录: coding/svg.md
       - SVG动画: coding/svg/2.md
