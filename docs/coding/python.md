@@ -17,3 +17,9 @@ template: _toc.html
 ## Matplotlib
 
 * [三维图表](python/matplotlib/3dplots.ipynb)
+
+## 实用工具及代码片段
+
+* [网易云音乐NCM转换](python/snippets/ncm_decrypt.md)
+* [公历农历转换](python/snippets/cn_date.md)
+* [CSV文件合并](python/snippets/merge_csv.md)
