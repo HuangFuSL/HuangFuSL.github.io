@@ -14,11 +14,26 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Test documentation
-        uses: xu-cheng/texlive-action/small@v1
+      - name: Set up Python 3
+        uses: actions/setup-python@v2
         with:
-          run: |
-            apk add python3 py3-pip python3-dev cython py3-setuptools gcc gfortran g++
-            python3 -m pip install --upgrade pip
-            pip install -r requirements.txt
-            python3 ./ci/deploy.py --dry-run
+          python-version: '3.x'
+
+      - name: Setup texlive
+        run: |
+          sudo apt install texlive-base texlive-extra-utils texlive-lang-chinese
+          sudo apt install texlive-latex-base texlive-latex-extra
+          sudo apt install texlive-latex-recommended texlive-xetex
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Test
+        env:
+          GITALK_SECRET: ${{ secrets.GITALK_SECRET }}
+          GITALK_ID: ${{ secrets.GITALK_ID }}
+        run: |
+          git pull
+          python3 ./ci/deploy.py --dry-run
