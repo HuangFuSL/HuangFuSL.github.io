@@ -3,7 +3,6 @@
 
 # Built site
 build/
-overrides/main.html
 *.gz
 
 # Built LaTeX document
