@@ -35,5 +35,4 @@ jobs:
           GITALK_SECRET: ${{ secrets.GITALK_SECRET }}
           GITALK_ID: ${{ secrets.GITALK_ID }}
         run: |
-          git pull
           python3 ./ci/deploy.py --dry-run
