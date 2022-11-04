@@ -104,13 +104,7 @@ Run `git clone https://github.com/HuangFuSL/HuangFuSL.github.io.git` or
 The site uses bootstrap icons, which are neither shipped with `mkdocs-material`
 nor synced in this repo. You have to manually install these icons.
 
-For GitHub repository clones:
-
 * Execute the `ci/bootstrap.py` in the root directory of the repository.
-
-For Docker containers:
-
-* No addition setup required.
 
 ### :fontawesome-brands-github: GitHub workflow
 
@@ -132,19 +126,6 @@ mkdocs build -d build
 
 Execute `mkdocs serve`, the built site will appear at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-### :fontawesome-brands-docker: Docker workflow
-
-Start a container using the pulled image, remember to properly set the port
-to be published.
-
-```bash
-docker run -p 8000:8000 huangfusl/huangfusl.github.io
-```
-
-If you want to edit the content of the blog, remember your changes will LOSE if
-the image is deleted as the data is not stored in a data volume. You should
-switch to the forked branch and perform a commit on that branch.
-
 ### LaTeX support
 
 The site uses `xelatex` and `dvisvgm` to render tex document to SVG images
@@ -164,7 +145,6 @@ For Docker containers:
 * Open the terminal and execute `ci/convert.py`.
 * Wait for `mkdocs` building the site.
 * View the site at [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
 
 ## :material-update: Version information
 
