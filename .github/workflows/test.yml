@@ -1,0 +1,39 @@
+name: Test pull request
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Test documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Master
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Setup texlive
+        run: |
+          sudo apt install texlive-base texlive-extra-utils texlive-lang-chinese
+          sudo apt install texlive-latex-base texlive-latex-extra
+          sudo apt install texlive-latex-recommended texlive-xetex
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Test
+        env:
+          GITALK_SECRET: ${{ secrets.GITALK_SECRET }}
+          GITALK_ID: ${{ secrets.GITALK_ID }}
+        run: |
+          git pull
+          python3 ./ci/deploy.py --dry-run
