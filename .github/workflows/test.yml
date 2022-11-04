@@ -31,8 +31,5 @@ jobs:
           pip install -r requirements.txt
 
       - name: Test
-        env:
-          GITALK_SECRET: ${{ secrets.GITALK_SECRET }}
-          GITALK_ID: ${{ secrets.GITALK_ID }}
         run: |
           python3 ./ci/deploy.py --dry-run
