@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Test documentation
-      - uses: xu-cheng/texlive-action/full@v1
+        uses: xu-cheng/texlive-action/full@v1
         with:
           run: |
             apk add python3 py3-pip
