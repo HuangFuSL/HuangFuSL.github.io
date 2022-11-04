@@ -1,10 +1,15 @@
-import time
+import argparse
 import os
 import subprocess
 import sys
-import convert
+import time
+
 import bootstrap
+import convert
 import tsinghua
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--dry-run", action="store_true", help="Do not actually deploy")
 
 
 def apply_token(id: str, token: str):
@@ -26,8 +31,10 @@ def apply_token(id: str, token: str):
 SOURCE_DIR = "."
 
 if __name__ == "__main__":
+    ns = parser.parse_args()
+    dry_run = ns.dry_run
     os.chdir(SOURCE_DIR)
-    if "CI" not in os.environ or not os.environ["CI"]:
+    if ("CI" not in os.environ or not os.environ["CI"]) and not dry_run:
         print("This script is designed for CI execution.")
         sys.exit()
     if "GITALK_SECRET" in os.environ and "GITALK_ID" in os.environ:
@@ -43,7 +50,10 @@ if __name__ == "__main__":
         'mkdocs build -d build',
         cwd=src, shell=True
     )
-    subprocess.run(
-        'mkdocs gh-deploy -d build --message "%s"' % (msg, ),
-        cwd=src, shell=True
-    )
+    if not dry_run:
+        subprocess.run(
+            'mkdocs gh-deploy -d build --message "%s"' % (msg, ),
+            cwd=src, shell=True
+        )
+    else:
+        print("Dry run, not deploying.")
