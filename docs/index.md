@@ -14,7 +14,6 @@ template: _toc.html
 * [LaTeX](latex/index.md)
 * [数学](math/index.md)
 * [写代码](coding/index.md)
-* [COVID-19](covid.md)
 * [关于我](about.md)
 
 ## :material-palette: Customization
