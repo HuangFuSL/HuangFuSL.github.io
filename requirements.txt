@@ -12,3 +12,4 @@ pandas
 jupyter
 requests
 jieba
+lxml
