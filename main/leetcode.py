@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import csv
 import operator
-from typing import Iterable, Iterator, List
+from typing import Iterable, Iterator, List, Optional
 
 from . import util
 
@@ -13,7 +13,7 @@ def display_difficulty(diff):
         '中等': 'orange',
         '困难': 'red'
     }
-    return '难度：<font color={0}>**{1}**</font>'.format(color[diff], diff)
+    return f'难度：<font color={color[diff]}>**{diff}**</font>'
 
 
 def get_difficulty(diff):
@@ -28,9 +28,11 @@ def get_difficulty(diff):
 def build_table(
     src: Iterable | Iterator,
     indent: int = 0,
-    col_names: List[str] = ['题目'] * 5,
-    col_align: List[str] | str | None = [':-'] * 5
+    col_names: Optional[List[str]] = None,
+    col_align: Optional[List[str] | str] = None
 ):
+    if col_names is None:
+        col_names = ['题目'] * 5
     if not isinstance(src, Iterator):
         src = iter(src)
     if col_align is None:
@@ -39,11 +41,12 @@ def build_table(
         col_align = [col_align] * len(col_names)
     else:
         if len(col_names) != len(col_align):
-            raise ValueError("List length mismatch, got {} and {}"
-                             .format(len(col_names), len(col_align)))
+            raise ValueError(
+                f'List length mismatch, got {len(col_names)} and {len(col_align)}'
+            )
 
     def joiner(_):
-        return "|{}|".format("|".join(_))
+        return f'|{"|".join(_)}|'
 
     def indent_lines(indent, seq):
         for line in seq:
@@ -57,23 +60,23 @@ def build_table(
     flag = True
     while flag:
         row = []
-        for i in col_names:
+        for _ in col_names:
             try:
                 link = next(src)
             except StopIteration:
                 if not row:
                     flag = False
-                link = ""
+                link = ''
             row.append(link)
         ret.append(joiner(row))
-    return "\n".join(indent_lines(indent, ret))
+    return '\n'.join(indent_lines(indent, ret))
 
 
 def get_md_table(
     pages,
     indent: int = 0,
-    col_names: List[str] = ['题目'] * 4,
-    col_align: List[str] | str | None = [':-'] * 4
+    col_names: Optional[List[str]] = None,
+    col_align: Optional[List[str] | str] = None
 ):
 
     def get_md_links(page):
@@ -81,7 +84,7 @@ def get_md_table(
         return '[{1}{0[title]}](/{0[url]})'.format(page, stars)
 
     def key(_):
-        return int(_['title'].split(".", 1)[0])
+        return int(_['title'].split('.', 1)[0])
 
     iterator = map(get_md_links, sorted(pages, key=key))
     return build_table(iterator, indent, col_names, col_align)
@@ -91,11 +94,11 @@ def get_whole_table(
     pages,
     data: str = 'data/leetcode.csv',
     indent: int = 0,
-    col_names: List[str] = ['题目'] * 5,
-    col_align: List[str] | str | None = [':-'] * 5
+    col_names: Optional[List[str]] = None,
+    col_align: Optional[List[str] | str] = None
 ):
-    file = open(data, 'r', encoding='utf-8', newline='')
-    content = list(csv.DictReader(file))
+    with open(data, 'r', encoding='utf-8', newline='') as file:
+        content = list(csv.DictReader(file))
 
     pages_dict = {int(_['title'].split('. ')[0]): _ for _ in pages}
     for page in content:
@@ -110,11 +113,10 @@ def get_whole_table(
     def build_link(content):
         stars = get_difficulty(content['难度'])
         if content['linked']:
-            return "[{1}{0[编号]}. {0[名称]}](/{0[link]})".format(content, stars)
+            return '[{1}{0[编号]}. {0[名称]}](/{0[link]})'.format(content, stars)
         else:
-            return "{1}{0[编号]}. {0[名称]}".format(content, stars)
+            return '{1}{0[编号]}. {0[名称]}'.format(content, stars)
 
-    file.close()
     return build_table(map(build_link, content), indent, col_names, col_align)
 
 

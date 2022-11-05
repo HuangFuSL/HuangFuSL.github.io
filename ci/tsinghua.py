@@ -1637,9 +1637,10 @@ _CONTENT = \
 
 def build_icon():
     content = base64.b64decode(_CONTENT).decode()
-    path = ['overrides', '.icons', 'tsinghua']
+    path = ["overrides", ".icons", "tsinghua"]
     if not os.path.exists(os.path.join(*path)):
         os.makedirs(os.path.join(*path))
-    with open(os.path.join(*path, 'tsinghua.svg'), 'w') as file:
+    dest = os.path.join(*path, "tsinghua.svg")
+    with open(dest, "w", encoding="utf-8") as file:
         file.write(content)
 
