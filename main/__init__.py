@@ -14,4 +14,5 @@ def define_env(env: plugin.MacrosPlugin):
     env.macro(leetcode.get_whole_table)
     env.macro(latex.latex_image)
     env.macro(network.remote_content)
+    env.macro(network.wechat_post)
     env.filter(len)
