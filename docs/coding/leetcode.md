@@ -9,4 +9,4 @@ template: _toc.html
 
 按标签分类的题目列表可以参见[这里](leetcode-tags.md)
 
-{{ get_whole_table(filterPages('leetcode')) }}
+{{ get_whole_table(filter_pages('leetcode')) }}

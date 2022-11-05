@@ -138,14 +138,6 @@ For GitHub repository clones:
 * Execute the `ci/convert.py` in the root directory of the repository.
 * Run `mkdocs serve` to view the images.
 
-For Docker containers:
-
-* To reduce docker image size, texlive environment is not installed. You should
-  install texlive manually.
-* Open the terminal and execute `ci/convert.py`.
-* Wait for `mkdocs` building the site.
-* View the site at [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
 ## :material-update: Version information
 
 <div style="white-space: pre-line;">{{ git.raw }}</div>

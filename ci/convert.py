@@ -1,4 +1,4 @@
-'''
+r'''
 Convert.py - convert latex markedups to SVG
 
 This is a Python wrapper for xelatex and dvisvgm, so make sure you have these
@@ -26,7 +26,7 @@ image.
 
 ![This is a test image](test.svg)
 
-Remember to add `\pagestyle{empty}` in the document if it's used for 
+Remember to add `\pagestyle{empty}` in the document if it's used for
 demonstrating purposes and you don't want the page numbers to be rendered.
 
 Please ensure that the tex document SHOULD NOT exceed one page, otherwise the
@@ -47,20 +47,20 @@ project recursively, convert all `.tex` files to `.svg` files.
 import os
 import time
 import subprocess
-from typing import Tuple
+from typing import Tuple, Generator
 
 
 XELATEX_CMD = [
     'xelatex',
     '-synctex=1',
     '-interaction=nonstopmode',
-    '-file-line-error', 
+    '-file-line-error',
 ]
 
 DVISVGM_CMD = [
-    'dvisvgm', 
+    'dvisvgm',
     '--pdf',
-    '--page=1-', 
+    '--page=1-',
     '--font-format=woff',
     '--trace-all'
 ]
@@ -76,7 +76,7 @@ def _cleanup(filename: str):
             to_remove = filename[:-3] + ext
             if os.path.exists(to_remove):
                 os.remove(to_remove)
-        except:
+        except FileNotFoundError:
             pass
 
 def _conversion(arg: Tuple[str, str]):
@@ -92,26 +92,30 @@ def _conversion(arg: Tuple[str, str]):
     start = time.time()
 
     dvi_name = filename[:-3] + 'pdf'
-    subprocess.run(XELATEX_CMD + [filename], cwd=cwd, capture_output=True)
-    subprocess.run(XELATEX_CMD + [filename], cwd=cwd, capture_output=True)
-    subprocess.run(DVISVGM_CMD + [dvi_name], cwd=cwd, capture_output=True)
+    exec_args = {
+        'cwd': cwd,
+        'capture_output': True
+    }
+    subprocess.run(XELATEX_CMD + [filename], check=True, **exec_args)
+    subprocess.run(XELATEX_CMD + [filename], check=True, **exec_args)
+    subprocess.run(DVISVGM_CMD + [dvi_name], check=True, **exec_args)
 
     end = time.time()
-    print('{0} converted in {1:.2f} seconds'.format(filename, end - start))
+    print(f'{filename} converted in {end - start:.2f} seconds')
     _cleanup(filename)
 
 
-def get_tex_path(cwd: str = '.', force: bool = False) -> Tuple[str, str]:
+def get_tex_path(cwd: str = '.') -> Generator[Tuple[str, str], None, None]:
     '''
     Convert the `.tex` file recursively.
     '''
     for _ in os.listdir(cwd):
-        curPath = os.path.join(cwd, _)
-        if os.path.isdir(curPath):
-            yield from get_tex_path(curPath)
-        elif os.path.isfile(curPath):
+        cur_path = os.path.join(cwd, _)
+        if os.path.isdir(cur_path):
+            yield from get_tex_path(cur_path)
+        elif os.path.isfile(cur_path):
             if _.split('.')[-1] == 'tex':
-                yield (curPath, cwd)
+                yield (cur_path, cwd)
 
 
 def tex2svg(cwd: str = '.'):

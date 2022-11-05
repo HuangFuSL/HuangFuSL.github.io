@@ -1,4 +1,4 @@
-import mkdocs_macros.plugin as plugin
+from mkdocs_macros import plugin
 
 from . import latex, leetcode, metadata, network
 
@@ -7,7 +7,7 @@ on_post_build = metadata.write_meta
 
 
 def define_env(env: plugin.MacrosPlugin):
-    env.macro(metadata.filterPages)
+    env.macro(metadata.filter_pages)
     env.macro(leetcode.display_difficulty)
     env.macro(leetcode.build_tag_mapping)
     env.macro(leetcode.get_md_table)

@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from typing import Dict, List
 
-import mkdocs_macros.plugin as plugin
+from mkdocs_macros import plugin
 
 _page_meta_collection = {}
 _page_meta_original = {}
@@ -24,22 +24,22 @@ def collect_meta(env: plugin.MacrosPlugin) -> None:
 def load_meta() -> None:
     global _page_meta_original
     try:
-        with open("meta.json", "r", encoding="utf-8") as file:
+        with open('meta.json', 'r', encoding='utf-8') as file:
             _page_meta_original = json.load(file)
     except:
         _page_meta_original = {}
-    print("Loaded metadata for {} pages".format(len(_page_meta_original)))
+    print(f'Loaded metadata for {len(_page_meta_original)} pages')
 
 
-def write_meta(env: plugin.MacrosPlugin) -> None:
+def write_meta(_: plugin.MacrosPlugin) -> None:
     global _page_meta_collection
     global _page_meta_original
     if _page_meta_original != _page_meta_collection:
-        with open("meta.json", "w", encoding="utf-8") as file:
+        with open('meta.json', 'w', encoding='utf-8') as file:
             json.dump(_page_meta_collection, file)
 
 
-def filterPages(category: str) -> List[Dict[str, str | Dict[str, str]]]:
+def filter_pages(category: str) -> List[Dict[str, str | Dict[str, str]]]:
     global _page_meta_original
     def helper(_):
         return 'category' in _['meta'] and _['meta']['category'] == category
