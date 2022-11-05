@@ -38,4 +38,6 @@ if __name__ == '__main__':
             cwd=src, shell=True, check=True
         )
     else:
-        print('Dry run, not deploying.')
+        subprocess.run(
+            f'mkdocs build -d build --clean',
+        )
