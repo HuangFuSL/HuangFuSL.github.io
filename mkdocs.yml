@@ -189,6 +189,9 @@ nav:
     - 系统配置:
       - 目录: coding/configuration.md
       - 源码编译nginx并添加RTMP模块: coding/configuration/nginx-rtmp.md
+  - 论文笔记:
+    - 目录: papers/index.md
+    - REDRL: papers/10.1016/j.eswa.2022.118926.md
   - 关于我:
     - About: about.md
 theme:

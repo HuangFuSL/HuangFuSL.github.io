@@ -14,6 +14,7 @@ template: _toc.html
 * [LaTeX](latex/index.md)
 * [数学](math/index.md)
 * [写代码](coding/index.md)
+* [论文笔记](papers/index.md)
 * [关于我](about.md)
 
 ## :material-palette: Customization
