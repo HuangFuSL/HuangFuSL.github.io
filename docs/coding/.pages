@@ -1,0 +1,7 @@
+nav:
+  - 目录: index.md
+  - Leetcode题解: leetcode
+  - Python: python
+  - SVG动画: svg.md
+  - 数据结构: dsa
+  - 系统配置: configuration

@@ -1,5 +1,6 @@
 wheel
 mkdocs
+mkdocs-awesome-pages-plugin
 mkdocs-git-revision-date-localized-plugin
 mkdocs-git-revision-date-plugin
 mkdocs-material
