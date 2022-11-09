@@ -1,0 +1,8 @@
+nav:
+  - 目录: index.md
+  - 数学公式: cheatsheet.md
+  - 环境:
+      - 概览: environ.md
+      - tabular环境: tabular.md
+      - TikZ环境: tikz.md
+  - 幻灯片: slides.md

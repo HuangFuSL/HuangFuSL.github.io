@@ -9,12 +9,8 @@ template: _toc.html
 
 收集从网上找来的各种各样的玩意
 
-* [Leetcode](leetcode.md)
-* [Python](python.md)
-* JavaScript
-* [数据结构](dsa.md)
-* 数据库
-* 深度学习
-* 机器学习
-* [系统配置](configuration.md)
+* [Leetcode](leetcode/index.md)
+* [Python](python/index.md)
+* [数据结构](dsa/index.md)
+* [系统配置](configuration/index.md)
 * [SVG](svg.md)
