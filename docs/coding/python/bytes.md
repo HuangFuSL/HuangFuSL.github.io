@@ -326,8 +326,8 @@ b'cafe\xcc\x81'
 
 ```python
 >>> import locale
->>> locale.setlocale(locale.LC_COLLATE, "en_GB.UTF-8")
-'en_GB.UTF-8'
+>>> locale.setlocale(locale.LC_COLLATE, "en_US.UTF-8")
+'en_US.UTF-8'
 >>> sorted(['café', 'cafu'], key=locale.strxfrm)
 ['café', 'cafu']
 >>>
