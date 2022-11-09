@@ -27,9 +27,10 @@ True
     >>> if ver.major == 3 and ver.minor > 8:
     ...     a = {1: 2}
     ...     b = {3: 4}
-    ...     print(a | b)
-    ... 
-    {1: 2, 3: 4}
+    ...     print(a | b == {1: 2, 3: 4})
+    ... else:
+    ...     print(True)
+    True
     >>>
     ```
 
