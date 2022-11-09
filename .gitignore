@@ -1,6 +1,3 @@
-# Visual Studio Code Environment
-.vscode/
-
 # Built site
 build/
 *.gz
@@ -21,3 +18,4 @@ __pycache__/*
 
 # tags
 *.json
+!.vscode/*.json
