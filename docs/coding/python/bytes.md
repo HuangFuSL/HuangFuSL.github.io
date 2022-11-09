@@ -35,7 +35,7 @@ TypeError: 'bytes' object does not support item assignment
     ```python
     >>> import random
     >>> seq = random.randbytes(8) # New in Python 3.9
-    >>> seq.hex()
+    >>> seq.hex() # doctest: +SKIP
     'f04be4376519e9ce'
     >>>
     ```
@@ -48,11 +48,11 @@ TypeError: 'bytes' object does not support item assignment
 
     ```python
     # Following the previous example
-    >>> seq.hex('-')
+    >>> seq.hex('-') # doctest: +SKIP
     'f0-4b-e4-37-65-19-e9-ce'
-    >>> seq.hex('-', 2)
+    >>> seq.hex('-', 2) # doctest: +SKIP
     'f04b-e437-6519-e9ce'
-    >>> seq.hex('-', 3)
+    >>> seq.hex('-', 3) # doctest: +SKIP
     'f04b-e43765-19e9ce'
     >>>
     ```
