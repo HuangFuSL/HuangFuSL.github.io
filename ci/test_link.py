@@ -1,4 +1,6 @@
 import mkdocs_linkcheck as lc
+import os
 
 if __name__ == '__main__':
-    lc.check_links('./docs', ext='.md', method='head', recurse=True)  # type: ignore
+    os.chdir('docs')
+    lc.check_links('.', ext='.md', method='head', recurse=True)  # type: ignore
