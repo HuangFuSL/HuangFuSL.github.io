@@ -26,7 +26,7 @@ jobs:
     
     - name: Test URL link
       run: |
-        python -m mkdocs-linkcheck
+        python3 ./ci/test_link.py
 
   test_code_block:
     name: Test code block
