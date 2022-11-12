@@ -15,4 +15,5 @@ def define_env(env: plugin.MacrosPlugin):
     env.macro(latex.latex_image)
     env.macro(network.remote_content)
     env.macro(network.wechat_post)
+    env.macro(metadata.build_timeline)
     env.filter(len)

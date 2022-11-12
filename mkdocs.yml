@@ -97,8 +97,10 @@ markdown_extensions:
       alternate_style: true 
   - pymdownx.tilde
   - attr_list
+  - neoteroi.timeline
 
 extra_css:
+  - https://www.neoteroi.dev/mkdocs-plugins/css/neoteroi.css
   - css/button.css
   - css/colors.css
   - css/gitalk.css
@@ -107,6 +109,7 @@ extra_css:
   - css/admonitions.css
   - css/images.css
   - css/jupyter.css
+  - css/timeline.css
 
 
 extra_javascript:
