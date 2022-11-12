@@ -17,9 +17,10 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Python 3.7
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+          cache: 'pip'
 
       - name: Setup texlive
         run: sudo apt install texlive-full
