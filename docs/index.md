@@ -1,7 +1,6 @@
 ---
 hide:
   - navigation
-  - toc
 template: _toc.html
 ---
 
@@ -16,6 +15,14 @@ template: _toc.html
 * [写代码](coding/index.md)
 * [论文笔记](papers/index.md)
 * [关于我](about.md)
+
+## :material-timeline-clock: Recent updates
+
+::timeline:: center alternate class="home-timeline"
+
+{{ build_timeline(10) }}
+
+::/timeline::
 
 ## :material-palette: Customization
 
@@ -94,11 +101,8 @@ to the primary color and accent color will lose.
 
 ## :material-tools: Building documentation
 
-Run `git clone https://github.com/HuangFuSL/HuangFuSL.github.io.git` or
-`docker push huangfusl/huangfusl.github.io:latest` to get the code.
-
-> Docker image is built at 8:00 AM (UTC) every two days, starting from the first
->  day of each month
+Run `git clone https://github.com/HuangFuSL/HuangFuSL.github.io.git` to get the
+source code.
 
 ### :bootstrap-bootstrap-fill: Bootstrap icon installation
 
@@ -127,7 +131,7 @@ mkdocs build -d build
 
 Execute `mkdocs serve`, the built site will appear at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-### LaTeX support
+### :material-pen: LaTeX support
 
 The site uses `xelatex` and `dvisvgm` to render tex document to SVG images
 embedded in the markdown files. However, as the SVG images are ignored by
