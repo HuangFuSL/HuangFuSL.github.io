@@ -16,13 +16,17 @@ template: _toc.html
 * [论文笔记](papers/index.md)
 * [关于我](about.md)
 
-## :material-timeline-clock: Recent updates
+## :material-timeline-clock: Blog timeline
 
 ::timeline:: center alternate class="home-timeline"
 
 {{ build_timeline(10) }}
 
 ::/timeline::
+
+## :material-pen-plus: Recent updates
+
+{{ build_recent(5) }}
 
 ## :material-palette: Customization
 

@@ -55,7 +55,7 @@ def build_timeline(topk: int) -> str:
         {
             'url': v['url'],
             'title': f"[{v['title']}]({v['url']})",
-            'sub_title': v['meta']['revision_date'], # type: ignore
+            'sub_title': v['meta']['git_creation_date_localized_raw_iso_date'], # type: ignore
             'content': v['meta'].get('summary', '') # type: ignore
         }
         for v in _page_meta_original.values()
@@ -63,6 +63,24 @@ def build_timeline(topk: int) -> str:
     ]
     pages.sort(key=lambda _: _['sub_title'], reverse=True)
     return json.dumps(pages[:topk])
+
+def build_recent(topk: int) -> str:
+    global _page_meta_original
+    pages: List[Dict[str, Any]] = [
+        {
+            'url': v['url'],
+            'title': f"[{v['title']}]({v['url']})",
+            'sub_title': v['meta']['revision_date'],  # type: ignore
+            'content': v['meta'].get('summary', '')  # type: ignore
+        }
+        for v in _page_meta_original.values()
+        if criteria(v)
+    ]
+    pages.sort(key=lambda _: _['sub_title'], reverse=True)
+    return '\n'.join([
+        f"* {page['sub_title']}：{page['title']}"
+        for page in pages[:topk]
+    ])
 
 
 def filter_pages(category: str) -> List[Dict[str, str | Dict[str, str]]]:
