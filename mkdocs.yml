@@ -50,6 +50,9 @@ extra:
       link: https://www.zhihu.com/people/huang-fu-shuo-long
     - icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/387905326
+watch:
+  - data
+  - main
 plugins:
   - search:
       separator: '[\s\u200b\-]'
@@ -99,6 +102,8 @@ markdown_extensions:
   - pymdownx.tilde
   - attr_list
   - neoteroi.timeline
+  - neoteroi.cards
+  - neoteroi.spantable
 
 extra_css:
   - https://www.neoteroi.dev/mkdocs-plugins/css/neoteroi.css

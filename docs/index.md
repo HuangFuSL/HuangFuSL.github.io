@@ -8,8 +8,9 @@ template: _toc.html
 
 ## :material-table-of-contents: Table of contents
 
-* [推送](wechat/2020.md)
 * [都市天际线](csl/index.md)
+* [帝国时代2](aoe2/index.md)
+* [推送](wechat/2020.md)
 * [LaTeX](latex/index.md)
 * [数学](math/index.md)
 * [写代码](coding/index.md)
@@ -146,6 +147,35 @@ For GitHub repository clones:
 * Make sure you have installed and correctly configured `xelatex` and `dvisvgm`.
 * Execute the `ci/convert.py` in the root directory of the repository.
 * Run `mkdocs serve` to view the images.
+
+## :material-lightbulb-on: Acknowledgements
+
+The blog relies on the following open-source projects:
+
+* [mkdocs](https://github.com/mkdocs/mkdocs)
+* [Python Markdown](https://github.com/Python-Markdown/markdown)
+* [Python Markdown Extension](https://github.com/facelessuser/pymdown-extensions)
+* [matplotlib](https://github.com/matplotlib/matplotlib)
+* [pandas](https://github.com/pandas-dev/pandas)
+* [jupyter](https://github.com/jupyter/jupyter)
+* [requests](https://github.com/psf/requests)
+* [lxml](https://github.com/lxml/lxml)
+
+The blog uses the following mkdocs plugin to function correctly.
+
+* [Neoteroi/mkdocs-plugins](https://github.com/Neoteroi/mkdocs-plugins)
+* [lukasgeiter/mkdocs-awesome-pages-plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin)
+* [timvink/mkdocs-git-revision-date-localized-plugin](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin)
+* [zhaoterryy/mkdocs-git-revision-date-plugin](https://github.com/zhaoterryy/mkdocs-git-revision-date-plugin)
+* [squidfunk/mkdocs-material](https://github.com/squidfunk/mkdocs-material)
+* [facelessuser/mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions)
+* [fralau/mkdocs_macros_plugin](https://github.com/fralau/mkdocs_macros_plugin)
+* [danielfrg/mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter)
+
+Unless noted, content in this blog are shared under [CC-BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+
+* Images used in [aoe2](aoe2/index.md) and its sub-pages are shared under
+[CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license according to [fandom wiki](https://www.fandom.com/licensing).
 
 ## :material-update: Version information
 
