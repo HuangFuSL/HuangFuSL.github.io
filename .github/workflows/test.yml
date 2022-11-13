@@ -5,30 +5,6 @@ on:
     branches: [main]
 
 jobs:
-  test_link:
-    name: Test URL link
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout Main
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-
-    - name: Setup Python 3
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-        cache: 'pip'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r ci/requirements.txt
-
-    - name: Test URL link
-      run: |
-        python3 ./ci/test_link.py
-
   test_code_block:
     name: Test code block
     runs-on: ubuntu-latest
