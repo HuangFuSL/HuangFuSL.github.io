@@ -1,7 +1,6 @@
 ---
 hide:
   - navigation
-  - toc
 template: _toc.html
 ---
 
@@ -9,12 +8,26 @@ template: _toc.html
 
 ## :material-table-of-contents: Table of contents
 
-* [推送](wechat/2020.md)
 * [都市天际线](csl/index.md)
+* [帝国时代2](aoe2/index.md)
+* [推送](wechat/2020.md)
 * [LaTeX](latex/index.md)
 * [数学](math/index.md)
 * [写代码](coding/index.md)
+* [论文笔记](papers/index.md)
 * [关于我](about.md)
+
+## :material-timeline-clock: Blog timeline
+
+::timeline:: center alternate class="home-timeline"
+
+{{ build_timeline(10) }}
+
+::/timeline::
+
+## :material-pen-plus: Recent updates
+
+{{ build_recent(5) }}
 
 ## :material-palette: Customization
 
@@ -93,11 +106,8 @@ to the primary color and accent color will lose.
 
 ## :material-tools: Building documentation
 
-Run `git clone https://github.com/HuangFuSL/HuangFuSL.github.io.git` or
-`docker push huangfusl/huangfusl.github.io:latest` to get the code.
-
-> Docker image is built at 8:00 AM (UTC) every two days, starting from the first
->  day of each month
+Run `git clone https://github.com/HuangFuSL/HuangFuSL.github.io.git` to get the
+source code.
 
 ### :bootstrap-bootstrap-fill: Bootstrap icon installation
 
@@ -126,7 +136,7 @@ mkdocs build -d build
 
 Execute `mkdocs serve`, the built site will appear at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-### LaTeX support
+### :material-pen: LaTeX support
 
 The site uses `xelatex` and `dvisvgm` to render tex document to SVG images
 embedded in the markdown files. However, as the SVG images are ignored by
@@ -137,6 +147,35 @@ For GitHub repository clones:
 * Make sure you have installed and correctly configured `xelatex` and `dvisvgm`.
 * Execute the `ci/convert.py` in the root directory of the repository.
 * Run `mkdocs serve` to view the images.
+
+## :material-lightbulb-on: Acknowledgements
+
+The blog relies on the following open-source projects:
+
+* [mkdocs](https://github.com/mkdocs/mkdocs)
+* [Python Markdown](https://github.com/Python-Markdown/markdown)
+* [Python Markdown Extension](https://github.com/facelessuser/pymdown-extensions)
+* [matplotlib](https://github.com/matplotlib/matplotlib)
+* [pandas](https://github.com/pandas-dev/pandas)
+* [jupyter](https://github.com/jupyter/jupyter)
+* [requests](https://github.com/psf/requests)
+* [lxml](https://github.com/lxml/lxml)
+
+The blog uses the following mkdocs plugin to function correctly.
+
+* [Neoteroi/mkdocs-plugins](https://github.com/Neoteroi/mkdocs-plugins)
+* [lukasgeiter/mkdocs-awesome-pages-plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin)
+* [timvink/mkdocs-git-revision-date-localized-plugin](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin)
+* [zhaoterryy/mkdocs-git-revision-date-plugin](https://github.com/zhaoterryy/mkdocs-git-revision-date-plugin)
+* [squidfunk/mkdocs-material](https://github.com/squidfunk/mkdocs-material)
+* [facelessuser/mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions)
+* [fralau/mkdocs_macros_plugin](https://github.com/fralau/mkdocs_macros_plugin)
+* [danielfrg/mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter)
+
+Unless noted, content in this blog are shared under [CC-BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+
+* Images used in [aoe2](aoe2/index.md) and its sub-pages are shared under
+[CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license according to [fandom wiki](https://www.fandom.com/licensing).
 
 ## :material-update: Version information
 
