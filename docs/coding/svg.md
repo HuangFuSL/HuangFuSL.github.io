@@ -1,12 +1,398 @@
----
-hide:
-  - navigation
-  - toc
-template: _toc.html
----
+# SVG动画
 
-# SVG
+SVG的动画使用`<animate>`标签，在使用时，`<animate>`标签需要放在动画操作对象的内部。
 
-1. SVG结构与基本语法
-2. [SVG动画](svg/2.md)
-3. SVG应用案例
+作为对比，我们先构造出一个矩形，在矩形的基础上添加动画：
+
+???+ note "SVG图像"
+    === "渲染图像"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        </rect>
+        </svg>
+
+    === "SVG代码"
+        ```svg
+        <svg width="100%" height="100%">
+            <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+            </rect>
+        </svg>
+        ```
+
+## 简单动画
+
+在`<rect>`标签中添加`<animate>`标签，指定动画的绑定属性、开始结束的取值和时长即可。
+
+???+ note "SVG图像"
+    === "渲染图像"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" from="20" to="150" begin="click" dur="1.5s" />
+        </rect>
+        </svg>
+
+    === "SVG代码"
+        ```svg
+        <svg width="100%" height="100%">
+            <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+                <animate attributeName="x" from="20" to="150" begin="click" dur="1.5s" />
+            </rect>
+        </svg>
+        ```
+
+通过`attributeName`属性设置交互绑定的属性，允许的属性列于下表：
+
+|标签|属性名|备注|
+|:-:|:-:|:-:|
+|`<animate>`|`x`|
+|`<animate>`|`y`|
+|`<animate>`|`width`|
+|`<animate>`|`height`|
+|`<animate>`|`r`|`cx`, `cy`|
+|`<animate>`|`opacity`|
+|`<animate>`|`d`|
+|`<animate>`|`points`|
+|`<animate>`|`stroke`|`stroke-width`, `stroke-linecap`, `stroke-dashoffset`|
+|`<animate>`|`fill`|
+|`<set>`|`visibility`|
+|`<animateTransform>`|`translate`|
+|`<animateTransform>`|`transform`|
+|`<animateTransform>`|`scale`|
+|`<animateTransform>`|`rotate`|
+|`<animateTransform>`|`skewX`|
+|`<animateTransform>`|`skewY`|
+|`<animateMotion>`|`path`|
+|`<animateMotion>`|`rotate`|
+|`<animateMotion>`|`keypoints`|
+|`<animateMotion>`|`mpath`|
+
+## 自定义动画
+
+`<animate>`标签支持多种自定义属性，这些属性允许在动画中添加关键帧、让动画响应用户交互等高级功能的实现
+
+### `fill`属性
+
+`fill`属性决定动画结束时动画对象的状态，取值可以为`remove`或`freeze`，默认情况下，`fill`的取值为`remove`。
+
+以下为`fill`取值为`freeze`的SVG动画，可以看出，动画结束后矩形没有回到开始的状态。
+
+???+ note "SVG图像"
+    === "渲染图像"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" from="20" to="150" begin="click" dur="1.5s" fill="freeze"/>
+        </rect>
+        </svg>
+
+    === "SVG代码"
+        ```svg
+        <svg width="100%" height="100%">
+            <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+                <animate attributeName="x" from="20" to="150" begin="click" dur="1.5s" fill="freeze" />
+            </rect>
+        </svg>
+        ```
+
+### `repeatCount`属性
+
+`repeatcount`属性决定了动画在开始以后重复的次数，可以为整数值，也可以为`indefinite`表示无限次。
+
+以下使矩形移动的动作重复三次：
+
+???+ note "SVG图像"
+    === "渲染图像"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" from="20" to="150" begin="click" dur="1.5s" repeatcount="3" />
+        </rect>
+        </svg>
+
+    === "SVG代码"
+        ```svg
+        <svg width="100%" height="100%">
+            <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+                <animate attributeName="x" from="20" to="150" begin="click" dur="1.5s" repeatcount="3" />
+            </rect>
+        </svg>
+        ```
+
+### `values`属性
+
+`values`属性决定了动画的属性关键帧，属性值为各关键帧的属性取值，以分号分隔。`values`属性可以同时替换`from`属性与`to`属性。
+
+以下使用`values`属性，令矩形在移动后折返：
+
+???+ note "SVG图像"
+    === "渲染图像"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" values="20;150;20" begin="click" dur="3s" />
+        </rect>
+        </svg>
+
+    === "SVG代码"
+        ```svg
+        <svg width="100%" height="100%">
+            <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+                <animate attributeName="x" values="20;150;20" begin="click" dur="3s" />
+            </rect>
+        </svg>
+        ```
+
+### `keyTimes`属性
+
+`keyTimes`属性决定了关键帧的时间分配，当`calcMode`属性为`linear`或`spline`时，该属性有效，属性的值为各个关键帧在整个动画过程中的进度（取值在0-1之间的小数）。
+
+以下使用`keyTimes`属性，令矩形在右移过程中的速度是左移过程中速度的三倍：
+
+???+ note "SVG图像"
+    === "渲染图像"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" values="20;150;20" keyTimes="0;0.25;1" begin="click" dur="3s" />
+        </rect>
+        </svg>
+
+    === "SVG代码"
+        ```svg
+        <svg width="100%" height="100%">
+            <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+                <animate attributeName="x" values="20;150;20" keyTimes="0;0.25;1" begin="click" dur="3s" />
+            </rect>
+        </svg>
+        ```
+
+### `calcMode`属性与`keySplines`属性
+
+`calcMode`属性决定了关键帧插值的计算方式，进一步地，`keySplines`属性决定了关键帧插值所用的函数（贝塞尔曲线）。`calcMode`属性允许的取值如下：
+
+* `paced`：忽略`keyTimes`属性，属性值按照`values`中定义的关键帧线性变化
+* `linear`：默认取值，属性值按照`values`中定义的关键帧在`keyTimes`时间内线性变化
+* `discrete`：属性值阶跃变化，可以认为没有插值
+* `spline`：属性值按照`keySplines`属性中定义的贝塞尔曲线变化
+
+以下分别演示`calcMode`属性四种取值的效果，`keySplines`属性值设定为`1 0 1 1; 0 0 0 1`：
+
+???+ note "SVG图像"
+    === "paced"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" values="20;150;20" keyTimes="0;0.25;1" calcmode="paced" begin="click" dur="3s" />
+        </rect>
+        </svg>
+
+    === "linear"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" values="20;150;20" keyTimes="0;0.25;1" calcmode="linear" begin="click" dur="3s" />
+        </rect>
+        </svg>
+    
+    === "discrete"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" values="20;150;20" keyTimes="0;0.25;1" calcmode="discrete" begin="click" dur="3s" />
+        </rect>
+        </svg>
+
+    === "spline"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" values="20;150;20" keyTimes="0;0.25;1" calcmode="spline" keysplines="1 0 1 1; 0 0 0 1" begin="click" dur="3s" />
+        </rect>
+        </svg>
+
+### `begin`属性与`end`属性
+
+`begin`属性与`end`属性决定了SVG动画在何时开始，此时的时间零点为页面渲染完成的时间，因此，如果不在`begin`中指定用户交互事件，则动画在渲染完成后即开始计时。`end`属性可以控制动画的强制结束时间，如果动画在该时间内没有结束，则立即结束。
+
+以下使用`begin`属性控制动画延迟开始2s：
+
+???+ note "SVG图像"
+    === "渲染图像"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" from="20" to="150" begin="click+2s" dur="1.5s" />
+        </rect>
+        </svg>
+
+    === "SVG代码"
+        ```svg
+        <svg width="100%" height="100%">
+            <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+                <animate attributeName="x" from="20" to="150" begin="click+2s" dur="1.5s" />
+            </rect>
+        </svg>
+        ```
+
+### `additive`属性
+
+`additive`属性决定`values`及`from`与`to`属性中的属性值是绝对值还是相对值。允许的取值为`sum`与`replace`，分别表示相对值与绝对值。默认情况下，`additive`属性取`replace`。
+
+以下使用相对值控制矩形的移动：
+
+???+ note "SVG图像"
+    === "渲染图像"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" from="0" to="130" begin="click" additive="sum" dur="1.5s" />
+        </rect>
+        </svg>
+
+    === "SVG代码"
+        ```svg
+        <svg width="100%" height="100%">
+            <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+                <animate attributeName="x" from="0" to="130" additive="sum" begin="click" dur="1.5s" />
+            </rect>
+        </svg>
+        ```
+        
+### `accumulate`属性
+
+`accumulate`属性当动画重复时，属性值是否累加。允许的取值为`sum`与`none`。分别表示上一次动画结束的值与动画原本的属性值。默认情况下，`accumulate`属性取`none`。当属性值不支持相加或动画不重复时，该属性被忽略。
+
+以下实现每次点击后向右移动矩形两次，每次65单位：
+
+???+ note "SVG图像"
+    === "渲染图像"
+        <svg width="100%" height="100">
+        <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+        <animate attributeName="x" values="0;65" begin="click" keyTimes="0;1" keySplines="1 0 1 1" calcMode="spline" additive="sum" accumulate="sum" dur="1.5s" fill="freeze" repeatCount="2"/>
+        </rect>
+        </svg>
+
+    === "SVG代码"
+        ```svg
+        <svg width="100%" height="100">
+            <rect x="20" y="20" fill="#69EC69" width="100" height="60">
+                <animate attributeName="x" values="0;65" begin="click" keyTimes="0;1" keySplines="1 0 1 1" calcMode="spline" additive="sum" accumulate="sum" dur="1.5s" fill="freeze" repeatCount="2"/>
+            </rect>
+        </svg>
+        ```
+
+## 交互动画
+
+`begin`属性的取值可以为`click`或`touch`以响应用户输入。`click`既可以响应鼠标点击事件，也可以响应用户触摸。`touch`只能响应用户触摸。
+
+## 常见的SVG动画效果
+
+1. 位移
+2. 变换
+3. 淡入淡出
+4. 描边
+5. 路径变化
+6. 颜色变化
+
+### 位移
+
+位移操作可以通过使用`<animate>`控制对象的`x`、`y`属性与`width`、`height`属性实现。可能的应用场景如下：
+
+* 进度条、直方图等用于交互的数据图表
+* 交通工具或其他对象的移动
+
+进度条示例：
+
+???+ note "进度条"
+    === "渲染图像"
+        <svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" width="700" height="195" viewBox="0 0 700 195"><rect x="0.5" y="0.5" width="699" height="58" fill="#fff"/><path d="M699,1V58H1V1H699m1-1H0V59H700V0Z"/><rect x="1" y="1" width="446" height="57" fill="red"><animate attributeName="width" values="0;698" keytimes="0;1" calcmode="spline" keysplines="0.44 0.27 0.21 0.99" begin="click" dur="1s" fill="freeze" repeatcount="3"/></rect><rect x="0.5" y="68.5" width="699" height="58" fill="#fff"/><path d="M699,69v57H1V69H699m1-1H0v59H700V68Z"/><rect x="1" y="69" width="446" height="57" fill="#dd2"><animate attributeName="width" values="0;698" keytimes="0;1" calcmode="spline" keysplines="0 0 0.5 1" begin="click" dur="1s" fill="freeze" repeatcount="3"/></rect><rect x="0.5" y="136.5" width="699" height="58" fill="#fff"/><path d="M699,137v57H1V137H699m1-1H0v59H700V136Z"/><rect x="1" y="137" width="446" height="57" fill="lime"><animate attributeName="width" values="0;698" keytimes="0;1" calcmode="spline" keysplines="0.5 0 1 1" begin="click" dur="1s" fill="freeze" repeatcount="3"/></rect></svg>
+
+    === "SVG代码"
+        ```svg
+        <svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" width="700" height="195" viewBox="0 0 700 195">
+            <rect x="0.5" y="0.5" width="699" height="58" fill="#fff"/><path d="M699,1V58H1V1H699m1-1H0V59H700V0Z"/>
+            <rect x="1" y="1" width="446" height="57" fill="red">
+                <animate attributeName="width" values="0;698" keytimes="0;1" calcmode="spline" keysplines="0.44 0.27 0.21 0.99" begin="click" dur="1s" fill="freeze" repeatcount="3"/>
+            </rect>
+            <rect x="0.5" y="68.5" width="699" height="58" fill="#fff"/>
+            <path d="M699,69v57H1V69H699m1-1H0v59H700V68Z"/>
+            <rect x="1" y="69" width="446" height="57" fill="#dd2">
+                <animate attributeName="width" values="0;698" keytimes="0;1" calcmode="spline" keysplines="0 0 0.5 1" begin="click" dur="1s" fill="freeze" repeatcount="3"/>
+            </rect>
+            <rect x="0.5" y="136.5" width="699" height="58" fill="#fff"/>
+            <path d="M699,137v57H1V137H699m1-1H0v59H700V136Z"/>
+            <rect x="1" y="137" width="446" height="57" fill="lime">
+                <animate attributeName="width" values="0;698" keytimes="0;1" calcmode="spline" keysplines="0.5 0 1 1" begin="click" dur="1s" fill="freeze" repeatcount="3"/>
+            </rect>
+        </svg>
+        ```
+
+一个移动的圆点：
+
+???+ note "圆点动画"
+    === "渲染图像"
+        <svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 700 195"><rect width="700" height="195" fill="none"/><circle cx="279.5" cy="97.5" r="25.5"><animate attributeName="cx" values="0;90;0" keytimes="0;0.5;1" calcmode="spline" keysplines="0.5 0 0.5 1; 0.5 0 0.5 1" begin="0s" dur="2s" fill="freeze" repeatcount="indefinite" additive="sum"/></circle></svg>
+
+    === "SVG代码"
+        ```svg
+        <svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 700 195">
+            <rect width="700" height="195" fill="none"/>
+            <circle cx="279.5" cy="97.5" r="25.5">
+                <animate attributeName="cx" values="0;90;0" keytimes="0;0.5;1" calcmode="spline" keysplines="0.5 0 0.5 1; 0.5 0 0.5 1" begin="0s" dur="2s" fill="freeze" repeatcount="indefinite" additive="sum"/>
+            </circle>
+        </svg>
+        ```
+
+此外，部分位移可以使用`<animateMotion>`标签进行控制，`<animateMotion>`标签支持对象按照路径进行位移。
+
+复杂的位移需要控制对象的`translate`属性。
+
+### 变换
+
+以下属性影响图形的变换：
+
+* `r`：半径（对于圆）
+* `rotate`：旋转（以中心点）
+* `skewX`、`skewY`：倾斜
+* `transform`：复杂变换
+
+以下给出`r`变换的示例：
+
+???+ note "r变换"
+    === "渲染图像"
+        <svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" width="350"  viewBox="0 0 749 1334"><rect width="749" height="1334" fill="#fff"/><text transform="translate(221.4 1070.91)" font-size="21" font-family="PingFang-SC-Regular, PingFang SC">
+            &gt;&gt;&gt; 点击圆点 查看隐藏内容 &lt;&lt;&lt;
+        </text><circle cx="375" cy="992" r="29" fill="#ed1e79"><animate attributeName="r" values="0;1100" keytimes="0;1" calcmode="spline" keysplines="0 0 0.5 1" begin="click" dur="0.75s" fill="freeze" additive="sum" restart="never"></circle><text transform="translate(0 295.12)" font-size="192" fill="#fff" font-family="PingFang-SC-Heavy, PingFang SC" font-weight="800">
+            Hello
+            <tspan x="0" y="230.4">
+                World!
+            </tspan>
+        </text>
+        </svg>
+
+    === "SVG代码"
+        ```svg
+        <svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" width="350" viewBox="0 0 749 1334">
+            <rect width="749" height="1334" fill="#fff"/>
+            <text transform="translate(221.4 1070.91)" font-size="21" font-family="PingFang-SC-Regular, PingFang SC">
+                &gt;&gt;&gt; 点击圆点 查看隐藏内容 &lt;&lt;&lt;
+            </text>
+            <circle cx="375" cy="992" r="29" fill="#ed1e79">
+                <animate attributeName="r" values="0;1100" keytimes="0;1" calcmode="spline" keysplines="0 0 0.5 1" begin="click" dur="0.75s" fill="freeze" additive="sum" restart="never">
+            </circle>
+            <text transform="translate(0 295.12)" font-size="192" fill="#fff" font-family="PingFang-SC-Heavy, PingFang SC" font-weight="800">
+                Hello
+                <tspan x="0" y="230.4">
+                    World!
+                </tspan>
+            </text>
+        </svg>
+        ```
+
+`transform`属性在`animateTransform`标签中更改，可以实现较为复杂的变换，如绕某一个特定点进行旋转：
+
+???+ note "transform变换"
+    === "渲染图像"
+        <svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 749 1340" width="350"><rect y="6" width="749" height="1334" fill="#fff"/><g><animateTransform attributeName="transform" type="rotate" values="0 375 0; -10 375 0; 10 375 0; 0 375 0" keytimes="0;0.25;0.75;1" calcmode="spline" keysplines="0 0 0.5 1; 0.5 0 0.5 1; 0.5 0 1 1" start="0s" dur="2s" repeatcount="indefinite" /><line x1="375" y1="6" x2="375" y2="969.5" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="12"/><circle cx="375" cy="969" r="45" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="12"/></g></svg>
+
+    === "SVG代码"
+        ```svg
+        <svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 749 1340" width="350">
+            <rect y="6" width="749" height="1334" fill="#fff"/>
+            <g>
+                <animateTransform attributeName="transform" type="rotate" values="0 375 0; -10 375 0; 10 375 0; 0 375 0" keytimes="0;0.25;0.75;1" calcmode="spline" keysplines="0 0 0.5 1; 0.5 0 0.5 1; 0.5 0 1 1" start="0s" dur="2s" repeatcount="indefinite" />
+                <line x1="375" y1="6" x2="375" y2="969.5" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="12"/>
+                <circle cx="375" cy="969" r="45" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="12"/>
+            </g>
+        </svg>
+        ```

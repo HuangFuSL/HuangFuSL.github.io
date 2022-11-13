@@ -1,0 +1,10 @@
+nav:
+  - Home: index.md
+  - 都市天际线: csl
+  - 帝国时代2: aoe2
+  - 推送: wechat
+  - LaTeX: latex
+  - 数学: math
+  - 写代码: coding
+  - 论文笔记: papers
+  - 关于我: about.md

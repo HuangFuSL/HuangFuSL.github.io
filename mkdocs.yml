@@ -3,194 +3,6 @@ repo_name: HuangFuSL/HuangFuSL.github.io
 repo_url: https://github.com/HuangFuSL/HuangFuSL.github.io
 edit_uri: https://github.com/HuangFuSL/HuangFuSL.github.io/edit/main/docs
 
-nav:
-  - Home: index.md
-  - 都市天际线:
-      - 目录: csl/index.md
-      - 模组清单: csl/mods.md
-  - 推送:
-    - 2020: wechat/2020.md
-    - 2021: wechat/2021.md
-    - 2022: wechat/2022.md
-  - LaTeX:
-    - 目录: latex/index.md
-    - 数学公式: latex/cheatsheet.md
-    - 环境:
-      - 概览: latex/environ.md
-      - tabular环境: latex/tabular.md
-      - TikZ环境: latex/tikz.md
-    - 幻灯片: latex/slides.md
-  - 数学:
-    - 目录: math/index.md
-    - 离散数学:
-      - 目录: math/discrete-mathematics/index.md
-      - 命题逻辑的基本概念: math/discrete-mathematics/chapter-1.md
-      - 命题逻辑的等值和推理演算: math/discrete-mathematics/chapter-2.md
-      - 命题逻辑的公理化: math/discrete-mathematics/chapter-3.md
-      - 谓词逻辑的基本概念: math/discrete-mathematics/chapter-4.md
-      - 谓词逻辑的等值和推理演算: math/discrete-mathematics/chapter-5.md
-      - 集合: math/discrete-mathematics/chapter-9.md
-    - 运筹学:
-      - 目录: math/operating-research/index.md
-      - 线性规划: math/operating-research/chapter-1.md
-      - 运输问题: math/operating-research/chapter-2.md
-      - 目标规划: math/operating-research/chapter-3.md
-      - 整数规划: math/operating-research/chapter-4.md
-    - 对策、决策与排队论:
-      - 目录: math/queue-theory/index.md
-      - Chapter 12: math/queue-theory/chapter-12.md
-    - 线性代数:
-      - 目录: math/linear-algebra/index.md
-      - 第一章：行列式: math/linear-algebra/chapter-1.md
-    - 动态系统分析与控制:
-      - 目录: math/dynamic-system/index.md
-      - 古典控制理论概述: math/dynamic-system/chapter-1.md
-    - 生产与运作管理:
-      - 目录: math/pom/index.md
-      - 预测技术: math/pom/forecast.md
-      - 预测与需求建模: math/pom/fdm.md
-      - 销售与经营计划: math/pom/planning.md
-  - 写代码:
-    - 目录: coding/index.md
-    - Leetcode题解: 
-      - 目录: coding/leetcode.md
-      - 标签: coding/leetcode-tags.md
-      - 题目列表:
-        - 1-50:
-          - 1. 两数之和: coding/leetcode/1.md
-          - 2. 两数相加: coding/leetcode/2.md
-          - 3. 无重复字符的最长子串: coding/leetcode/3.md
-          - 7. 整数反转: coding/leetcode/7.md
-          - 8. 字符串转换整数 (atoi): coding/leetcode/8.md
-          - 9. 回文数: coding/leetcode/9.md
-          - 11. 盛最多水的容器: coding/leetcode/11.md
-          - 13. 罗马数字转整数: coding/leetcode/13.md
-          - 14. 最长公共前缀: coding/leetcode/14.md
-          - 17. 电话号码的字母组合: coding/leetcode/17.md
-          - 19. 删除链表的倒数第N个节点: coding/leetcode/19.md
-          - 20. 有效的括号: coding/leetcode/20.md
-          - 21. 合并两个有序链表: coding/leetcode/21.md
-          - 22. 括号生成: coding/leetcode/22.md
-          - 23. 合并K个升序链表: coding/leetcode/23.md
-          - 24. 两两交换链表中的节点: coding/leetcode/24.md
-          - 25. K 个一组翻转链表: coding/leetcode/25.md
-          - 26. 删除排序数组中的重复项: coding/leetcode/26.md
-          - 27. 移除元素: coding/leetcode/27.md
-          - 28. 实现 strStr(): coding/leetcode/28.md
-          - 35. 搜索插入位置: coding/leetcode/35.md
-          - 36. 有效的数独: coding/leetcode/36.md
-          - 37. 解数独: coding/leetcode/37.md
-          - 38. 外观数列: coding/leetcode/38.md
-          - 42. 接雨水: coding/leetcode/42.md
-          - 43. 字符串相乘: coding/leetcode/43.md
-          - 46. 全排列: coding/leetcode/46.md
-          - 48. 旋转图像: coding/leetcode/48.md
-          - 50. Pow(x, n): coding/leetcode/50.md
-        - 51-100:
-          - 53. 最大子序和: coding/leetcode/53.md
-          - 55. 跳跃游戏: coding/leetcode/55.md
-          - 56. 合并区间: coding/leetcode/56.md
-          - 59. 螺旋矩阵 II: coding/leetcode/59.md
-          - 61. 旋转链表: coding/leetcode/61.md
-          - 62. 不同路径: coding/leetcode/62.md
-          - 64. 最小路径和: coding/leetcode/64.md
-          - 66. 加一: coding/leetcode/66.md
-          - 69. x 的平方根: coding/leetcode/69.md
-          - 70. 爬楼梯: coding/leetcode/70.md
-          - 73. 矩阵置零: coding/leetcode/73.md
-          - 74. 搜索二维矩阵: coding/leetcode/74.md
-          - 75. 颜色分类: coding/leetcode/75.md
-          - 78. 子集: coding/leetcode/78.md
-          - 79. 单词搜索: coding/leetcode/79.md
-          - 87. 扰乱字符串: coding/leetcode/87.md
-          - 88. 合并两个有序数组: coding/leetcode/88.md
-          - 90. 子集 II: coding/leetcode/90.md
-          - 92. 反转链表 II: coding/leetcode/92.md
-          - 98. 验证二叉搜索树: coding/leetcode/98.md
-        - 101-150:
-          - 101. 对称二叉树: coding/leetcode/101.md
-          - 102. 二叉树的层序遍历: coding/leetcode/102.md
-          - 115. 不同的子序列: coding/leetcode/115.md
-          - 118. 杨辉三角: coding/leetcode/118.md
-          - 119. 杨辉三角 II: coding/leetcode/119.md
-          - 120. 三角形最小路径和: coding/leetcode/120.md
-          - 121. 买卖股票的最佳时机: coding/leetcode/121.md
-          - 122. 买卖股票的最佳时机 II: coding/leetcode/122.md
-          - 125. 验证回文串: coding/leetcode/125.md
-          - 136. 只出现一次的数字: coding/leetcode/136.md
-          - 150. 逆波兰表达式求值: coding/leetcode/150.md
-        - 151-200:
-          - 155. 最小栈: coding/leetcode/155.md
-          - 189. 旋转数组: coding/leetcode/189.md
-          - 198. 打家劫舍: coding/leetcode/198.md
-        - 201-250:
-          - 204. 计数质数: coding/leetcode/204.md
-          - 206. 反转链表: coding/leetcode/206.md
-          - 217. 存在重复元素: coding/leetcode/217.md
-          - 234. 回文链表: coding/leetcode/234.md
-          - 237. 删除链表中的节点: coding/leetcode/237.md
-          - 242. 有效的字母异位词: coding/leetcode/242.md
-        - 301-350:
-          - 315. 计算右侧小于当前元素的个数: coding/leetcode/315.md
-          - 341. 扁平化嵌套列表迭代器: coding/leetcode/341.md
-          - 344. 反转字符串: coding/leetcode/344.md
-          - 350. 两个数组的交集 II: coding/leetcode/350.md
-        - 351-400:
-          - 368. 最大整除子集: coding/leetcode/368.md
-          - 377. 组合总和 Ⅳ: coding/leetcode/377.md
-          - 384. 打乱数组: coding/leetcode/384.md
-          - 387. 字符串中的第一个唯一字符: coding/leetcode/387.md
-        - 401-450:
-          - 403. 青蛙过河: coding/leetcode/403.md
-          - 433. 最小基因变化: coding/leetcode/433.md
-        - 451-500:
-          - 488. 祖玛游戏: coding/leetcode/488.md
-        - 501-550:
-          - 509. 斐波那契数: coding/leetcode/509.md
-        - 751-800:
-          - 779. 第K个语法符号: coding/leetcode/779.md
-          - 781. 森林中的兔子: coding/leetcode/781.md
-        - 901-950:
-          - 917. 仅仅反转字母: coding/leetcode/917.md
-        - 1000-1050:
-          - 1006. 笨阶乘: coding/leetcode/1006.md
-          - 1011. 在 D 天内送达包裹的能力: coding/leetcode/1011.md
-        - 1251-1300:
-          - 1283. 使结果不超过阈值的最小除数: coding/leetcode/1283.md
-          - 1300. 转变数组后最接近目标值的数组和: coding/leetcode/1300.md
-        - 1601-1650:
-          - 1603. 设计停车系统: coding/leetcode/1603.md
-        - 1800-1850:
-          - 1835. 所有数对按位与结果的异或和: coding/leetcode/1835.md
-        - 面试题:
-          - 面试题 17.21. 直方图的水量: coding/leetcode/17.21.md
-    - Python:
-      - 目录: coding/python.md
-      - Python Style Guide: coding/python/pyguide.md
-      - 关闭运行的线程: coding/python/killable-thread.md
-      - 魔术方法: coding/python/magic-functions.md
-      - Python中的序列类型: coding/python/sequence.md
-      - Python中的映射类型: coding/python/mapping.md
-      - Python中的字节类型: coding/python/bytes.md
-      - Python中的函数: coding/python/functions.md
-      - 函数装饰器与闭包: coding/python/decorator.md
-      - Matplotlib:
-        - 三维图表: coding/python/matplotlib/3dplots.ipynb
-      - Python实用工具:
-        - 网易云音乐NCM转换: coding/python/snippets/ncm_decrypt.md
-        - 公历农历转换: coding/python/snippets/cn_date.md
-        - CSV文件合并: coding/python/snippets/merge_csv.md
-    - SVG:
-      - 目录: coding/svg.md
-      - SVG动画: coding/svg/2.md
-    - 数据结构:
-      - 目录: coding/dsa.md
-      - 向量与列表: coding/dsa/vector-and-list.md
-    - 系统配置:
-      - 目录: coding/configuration.md
-      - 源码编译nginx并添加RTMP模块: coding/configuration/nginx-rtmp.md
-  - 关于我:
-    - About: about.md
 theme:
   name: material
   custom_dir: overrides
@@ -234,11 +46,20 @@ extra:
       link: https://hub.docker.com/u/huangfusl
     - icon: fontawesome/brands/steam
       link: https://steamcommunity.com/id/huangfusl/
+    - icon: fontawesome/brands/zhihu
+      link: https://www.zhihu.com/people/huang-fu-shuo-long
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/387905326
+watch:
+  - data
+  - main
 plugins:
   - search:
       separator: '[\s\u200b\-]'
+  - awesome-pages
   - git-revision-date
   - git-revision-date-localized:
+      enable_creation_date: true
       type: timeago
   - macros
   - mkdocs-jupyter:
@@ -276,23 +97,27 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.tilde
   - attr_list
+  - neoteroi.timeline
+  - neoteroi.cards
+  - neoteroi.spantable
 
 extra_css:
+  - https://www.neoteroi.dev/mkdocs-plugins/css/neoteroi.css
   - css/button.css
   - css/colors.css
-  - css/gitalk.css
   - css/codecolor.css
   - css/codedef_custom.css
   - css/admonitions.css
   - css/images.css
   - css/jupyter.css
+  - css/timeline.css
 
 
 extra_javascript:
   - 'https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   - js/love.js
-  - js/mermaid-min.js

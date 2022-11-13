@@ -5,6 +5,31 @@ on:
     branches: [main]
 
 jobs:
+  test_code_block:
+    name: Test code block
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Main
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ci/requirements.txt
+
+      - name: Test
+        run:
+          python3 ./ci/test_code_block.py
+
   test:
     name: Test documentation
     runs-on: ubuntu-latest
@@ -15,9 +40,10 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Python 3
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+          cache: 'pip'
 
       - name: Setup texlive
         run: |

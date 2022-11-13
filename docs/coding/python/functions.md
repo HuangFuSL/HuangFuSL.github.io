@@ -57,13 +57,13 @@
 使用`dir()`查看函数的内置属性。相比于一般对象，函数有以下的额外属性：
 
 ```python
->>> class Obj():    
+>>> class Obj():
 ...     pass
 ... 
->>> def func(): 
+>>> def func():
 ...     pass
 ... 
->>> sorted(list(set(dir(func)) - set(dir(Obj()))))
+>>> sorted(list(set(dir(func)) - set(dir(Obj())))) # doctest: +SKIP
 ['__annotations__', '__call__', '__closure__', '__code__', '__defaults__', '__get__', '__globals__', '__kwdefaults__', '__name__', '__qualname__']
 >>>
 ```
