@@ -23,3 +23,11 @@
 ### 团队加成
 
 圣物黄金生产效率+33%
+
+## 科技树
+
+::spantable::
+
+{{ build_tech_tree('aztecs') }}
+
+::end-spantable::
