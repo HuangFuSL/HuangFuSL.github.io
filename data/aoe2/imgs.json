@@ -1,0 +1,137 @@
+{
+    "Ages": {
+        "Dark Age": "https://static.wikia.nocookie.net/ageofempires/images/e/e7/DarkageDE.png",
+        "Feudal Age": "https://static.wikia.nocookie.net/ageofempires/images/8/85/FeudalageDE.png",
+        "Castle Age": "https://static.wikia.nocookie.net/ageofempires/images/d/de/CastleageDE.png",
+        "Imperial Age": "https://static.wikia.nocookie.net/ageofempires/images/3/36/ImperialageDE.png"
+    },
+    "Barracks": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/5/57/Barracksavailable.png"
+    },
+    "Archery Range": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/4/4e/Archeryrangeavailable.png"
+    },
+    "Stable": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/a/a8/Stableunavailable.png"
+    },
+    "Militia": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/6/65/Militiaavailable.png"
+    },
+    "Man-at-Arms": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/8/84/Manatarmsavailable.png"
+    },
+    "Long Swordsman": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/4/41/Longswordsmanavailable.png"
+    },
+    "Two-Handed Swordsman": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/0/09/Twohandedswordsmanavailable.png"
+    },
+    "Champion": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/5/50/Championavailable.png"
+    },
+    "Spearman": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/4/40/Spearmanavailable.png"
+    },
+    "Pikeman": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/a/ab/Pikemanavailable.png"
+    },
+    "Halberdier": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/0/01/Halberdierunavailable.png"
+    },
+    "Eagle Scout": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/e/e0/Eaglescoutavailable.png"
+    },
+    "Eagle Warrior": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/e/e6/Eaglewarrioravailable.png"
+    },
+    "Elite Eagle Warrior": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/9/9d/Eliteeaglewarrioravailable.png"
+    },
+    "Supplies": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/4/4f/Suppliesavailable.png"
+    },
+    "Squires": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/1/1f/Squiresavailable.png"
+    },
+    "Arson": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/5/53/Arsonavailable.png"
+    },
+    "Archer": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/2/28/Archeravailable.png"
+    },
+    "Crossbowman": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/9/9f/Crossbowmanavailable.png"
+    },
+    "Arbalester": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/d/d7/Arbalesteravailable.png"
+    },
+    "Skirmisher": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/3/36/Skirmisheravailable.png"
+    },
+    "Elite Skirmisher": {
+        "1": "https://static.wikia.nocookie.net/ageofempires/images/1/11/Eliteskirmisheravailable.png"
+    },
+    "Hand Cannoneer": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/b/b7/Handcannoneerunavailable.png"
+    },
+    "Cavalry Archer": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/a/ac/Cavalryarcherunavailable.png"
+    },
+    "Heavy Cavalry Archer": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/e/ef/Heavycavalryarcherunavailable.png"
+    },
+    "Elephant Archer": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/a/aa/Elephantarcherunavailable.png"
+    },
+    "Elite Elephant Archer": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/8/8a/Eliteelephantarcherunavailable.png"
+    },
+    "Thumb Ring": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/0/08/Thumbringunavailable.png"
+    },
+    "Parthian Tactics": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/d/d5/Parthiantacticsunavailable.png"
+    },
+    "Scout Cavalry": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/e/e0/Scoutcavalryunavailable.png"
+    },
+    "Light Cavalry": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/8/80/Lightcavalryunavailable.png"
+    },
+    "Hussar": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/0/04/Hussarunavailable.png"
+    },
+    "Bloodlines": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/7/79/Bloodlinesunavailable.png"
+    },
+    "Knight": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/8/84/Knightunavailable.png"
+    },
+    "Cavalier": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/e/eb/Cavalierunavailable.png"
+    },
+    "Paladin": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/5/5e/Paladinunavailable.png"
+    },
+    "Camel Rider": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/0/0d/Camelriderunavailable.png"
+    },
+    "Heavy Camel Rider": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/f/fb/Heavycamelriderunavailable.png"
+    },
+    "Battle Elephant": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/0/05/Battleelephantunavailable.png"
+    },
+    "Elite Battle Elephant": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/f/fd/Elitebattleelephantunavailable.png"
+    },
+    "Steppe Lancer": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/f/fd/Steppelancerunavailable.png"
+    },
+    "Elite Steppe Lancer": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/4/49/Elitesteppelancerunavailable.png"
+    },
+    "Husbandry": {
+        "0": "https://static.wikia.nocookie.net/ageofempires/images/2/2c/Husbandryunavailable.png"
+    }
+}
