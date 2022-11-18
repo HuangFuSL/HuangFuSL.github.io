@@ -35,6 +35,7 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
           plugin_languages: yes
+          plugin_languages_indepth: yes
           plugin_languages_analysis_timeout: 15
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
@@ -52,7 +53,7 @@ jobs:
           plugin_screenshot_background: yes
           plugin_screenshot_selector: body
           plugin_screenshot_title: Screenshot
-          plugin_screenshot_url: huangfusl.github.io
+          plugin_screenshot_url: https://huangfusl.github.io/
 
           # Outputs
           committer_branch: gh-pages
