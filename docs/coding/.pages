@@ -1,5 +1,5 @@
 nav:
-  - 目录: index.md
+  - index.md
   - Leetcode题解: leetcode
   - Python: python
   - SVG动画: svg.md

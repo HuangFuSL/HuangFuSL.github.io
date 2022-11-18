@@ -1,5 +1,5 @@
 nav:
-  - 目录: index.md
+  - index.md
   - 数学公式: cheatsheet.md
   - 环境:
       - 概览: environ.md

@@ -1,5 +1,5 @@
 nav:
-  - 目录: index.md
+  - index.md
   - 离散数学: discrete-mathematics
   - 运筹学: operating-research
   - 对策、决策与排队论: queue-theory

@@ -1,3 +1,3 @@
 nav:
-  - 目录: index.md
+  - index.md
   - 向量与列表: vector-and-list.md
