@@ -9,4 +9,4 @@ template: _toc.html
 
 ## 软件环境配置
 
-* [源码编译nginx并添加RTMP模块](configuration/nginx-rtmp.md)
+* [源码编译nginx并添加RTMP模块](nginx-rtmp.md)
