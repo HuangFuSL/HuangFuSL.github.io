@@ -7,8 +7,6 @@ on:
       METRICS_TOKEN:
         description: 'Metrics token'
         required: true
-  push:
-    branches: [22a46w]
 
 jobs:
   github-metrics:
