@@ -19,4 +19,6 @@ jobs:
         run: ls -l
 
       - name: Update Metrics
-        uses: ./.github/workflows/metric.yml
+        uses: ./.github/workflows/metric
+        with:
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
