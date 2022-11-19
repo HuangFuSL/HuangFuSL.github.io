@@ -15,5 +15,8 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: List cwd
+        run: ls -l
+
       - name: Update Metrics
         uses: ./.github/workflows/metric.yml
