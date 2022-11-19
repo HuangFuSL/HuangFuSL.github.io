@@ -170,7 +170,6 @@ The blog uses the following mkdocs plugin to function correctly.
 * [facelessuser/mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions)
 * [fralau/mkdocs_macros_plugin](https://github.com/fralau/mkdocs_macros_plugin)
 * [danielfrg/mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter)
-* [lowlighter/metrics](https://github.com/lowlighter/metrics)
 
 Unless noted, content in this blog are shared under [CC-BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 
