@@ -37,5 +37,3 @@ jobs:
 
       - name: Update Metrics
         uses: ./.github/workflows/metric.yml
-        secrets:
-          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
