@@ -2,7 +2,7 @@
 hide:
   - navigation
   - toc
-template: _toc.html
+
 ---
 
 # 数学
@@ -26,3 +26,4 @@ template: _toc.html
 * [把\[-0.5,0.5\]内所有实数相加，得出的结果是0吗？ - Be2SiO4的回答 - 知乎](https://www.zhihu.com/question/555998400/answer/2695254231)
 * [五个囚犯先后从100颗绿豆中抓绿豆。抓得最多和最少的人将被处死，不能交流，可以摸出剩下绿豆的数量，谁的存活几率最大？ - 曾加的回答 - 知乎](https://www.zhihu.com/question/19912025/answer/45715210)
 * [1000桶水，其中一桶有毒，猪喝毒水后会在15分钟内死去，想用一个小时找到这桶毒水，至少需要几头猪？ - 苗华栋的回答 - 知乎](https://www.zhihu.com/question/60227816/answer/1274071217)
+* [计算机图形学一：基础变换矩阵总结(缩放，旋转，位移)](https://zhuanlan.zhihu.com/p/144323332)

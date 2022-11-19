@@ -1,7 +1,6 @@
 ---
 hide:
   - navigation
-template: _toc.html
 ---
 
 # Welcome to HuangFuSL's blog

@@ -2,7 +2,7 @@
 hide:
   - navigation
   - toc
-template: _toc.html
+
 ---
 
 # 动态系统分析与控制
