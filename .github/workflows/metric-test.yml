@@ -10,5 +10,10 @@ jobs:
   test_workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Main
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Update Metrics
         uses: ./.github/workflows/metric.yml
