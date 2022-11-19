@@ -26,7 +26,11 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
   features:
+    - navigation.instant
     - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
     - navigation.top
     - search.suggest
   font:
@@ -66,22 +70,29 @@ plugins:
       include_source: true
       execute: true
 markdown_extensions:
-  - pymdownx.arithmatex
-  - pymdownx.details
-  - pymdownx.keys
+  
+  # Python Markdown
+  - abbr
   - admonition
+  - attr_list
   - codehilite:
       guess_lang: true
       linenums: true
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta
   - toc:
       permalink: true
-  - footnotes
-  - meta
-  - def_list
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -89,18 +100,20 @@ markdown_extensions:
         custom_icons:
           - overrides/.icons
   - pymdownx.extra
+  - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tabbed:
-      alternate_style: true 
   - pymdownx.tilde
-  - attr_list
+
+  # Neoteroi Plugins
   - neoteroi.timeline
   - neoteroi.cards
   - neoteroi.spantable
@@ -115,6 +128,7 @@ extra_css:
   - css/images.css
   - css/jupyter.css
   - css/timeline.css
+  - css/aoe.css
 
 
 extra_javascript:

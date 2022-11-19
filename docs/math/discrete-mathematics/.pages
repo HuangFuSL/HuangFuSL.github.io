@@ -1,5 +1,5 @@
 nav:
-  - 目录: index.md
+  - index.md
   - 命题逻辑的基本概念: chapter-1.md
   - 命题逻辑的等值和推理演算: chapter-2.md
   - 命题逻辑的公理化: chapter-3.md

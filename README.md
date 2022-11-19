@@ -6,7 +6,7 @@
 
 Visit the site deployed at [GitHub Pages](https://huangfusl.github.io/index.html)
 
-## TODOs for 22a45w
+## TODOs for 22a46w
 
 - [ ] 高等运作管理第1部分
 - [ ] 应用随机过程第1章

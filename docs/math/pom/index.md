@@ -2,7 +2,7 @@
 hide:
   - navigation
   - toc
-template: _toc.html
+
 ---
 
 # 生产与运作管理

@@ -1,0 +1,3 @@
+.span-table tr:first-child td {
+    min-width: unset !important;
+}
