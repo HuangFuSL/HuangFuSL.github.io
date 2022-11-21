@@ -1,0 +1,14 @@
+name: Test workflow call
+
+on:
+  pull_request:
+    branches: [metrics-ci-workflow-dev]
+  push:
+    branches: [metrics-ci-workflow-dev]
+
+jobs:
+  test_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Metrics
+        uses: ./.github/workflows/metric.yml
