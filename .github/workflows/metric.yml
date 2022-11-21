@@ -60,6 +60,7 @@ jobs:
           plugin_pagespeed_detailed: yes
           plugin_pagespeed_screenshot: yes
           plugin_pagespeed_url: huangfusl.github.io
+          plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
 
           # Outputs
           committer_branch: gh-pages
