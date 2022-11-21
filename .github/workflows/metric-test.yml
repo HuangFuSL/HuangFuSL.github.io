@@ -6,6 +6,9 @@ on:
   push:
     branches: [metrics-ci-workflow-dev]
 
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   test_workflow:
     runs-on: ubuntu-latest
