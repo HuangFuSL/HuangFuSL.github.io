@@ -13,5 +13,9 @@ jobs:
   test_workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Update Metrics
         run: gh workflow run metric.yml
