@@ -1,3 +1,3 @@
 Guess who is here?
 
-![Metrics](metrics.svg)
+![Metrics](/metrics.svg)
