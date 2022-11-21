@@ -34,6 +34,3 @@ jobs:
         run: |
           git pull
           python3 ./ci/deploy.py
-
-      - name: Update Metrics
-        uses: ./.github/workflows/metric.yml
