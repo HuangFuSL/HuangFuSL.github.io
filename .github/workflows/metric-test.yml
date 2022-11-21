@@ -2,9 +2,9 @@ name: Test workflow call
 
 on:
   pull_request:
-    branches: [22a46w]
+    branches: [metrics-workflow-dev]
   push:
-    branches: [22a46w]
+    branches: [metrics-workflow-dev]
 
 jobs:
   test_workflow:
