@@ -36,4 +36,4 @@ jobs:
           python3 ./ci/deploy.py
 
       - name: Update Metrics
-        uses: ./.github/workflows/metric.yml
+        run: gh workflow run metric.yml
