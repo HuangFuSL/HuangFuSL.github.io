@@ -44,6 +44,8 @@ jobs:
           plugin_languages_colors: github
           plugin_languages_details: bytes-size, percentage, lines
           plugin_languages_ignored: html, css, javascript
+          plugin_languages_categories: programming, markup, prose
+          plugin_languages_recent_categories: programming, markup, prose
           plugin_languages_indepth: yes
           plugin_languages_limit: 8
           plugin_languages_recent_days: 30
