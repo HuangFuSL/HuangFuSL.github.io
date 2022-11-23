@@ -18,7 +18,7 @@
         ```
 
     === "渲染结果"
-        {{ latex_image('img/tabular/tabular-1.tex', 'tabular') }}
+        {{ latex_image('img/tabular-1.tex', 'tabular') }}
 
 ### 导言区
 
@@ -44,7 +44,7 @@
         ```
 
     === "渲染结果"
-        {{ latex_image('img/tabular/tabular-2.tex', 'tabular') }}
+        {{ latex_image('img/tabular-2.tex', 'tabular') }}
 
 ### 合并单元格
 
@@ -68,7 +68,7 @@
 {% endraw %}
 
     === "渲染结果"
-        {{ latex_image('img/tabular/tabular-2-1.tex', 'tabular') }}
+        {{ latex_image('img/tabular-2-1.tex', 'tabular') }}
 
 ## 三线表
 
@@ -88,7 +88,7 @@ LaTeX中使用三线表需要用到`booktabs`宏包，加入宏包后可以使�
         ```
 
     === "渲染结果"
-        {{ latex_image('img/tabular/tabular-3.tex', 'tabular') }}
+        {{ latex_image('img/tabular-3.tex', 'tabular') }}
 
 ## 颜色填充
 
@@ -105,7 +105,7 @@ LaTeX中使用三线表需要用到`booktabs`宏包，加入宏包后可以使�
         ```
 
     === "渲染结果"
-        {{ latex_image('img/tabular/tabular-4.tex', 'tabular') }}
+        {{ latex_image('img/tabular-4.tex', 'tabular') }}
 
 ## 斜线表头
 
@@ -125,4 +125,4 @@ LaTeX中使用三线表需要用到`booktabs`宏包，加入宏包后可以使�
         ```
 
     === "渲染结果"
-        {{ latex_image('img/tabular/tabular-5.tex', 'tabular') }}
+        {{ latex_image('img/tabular-5.tex', 'tabular') }}
