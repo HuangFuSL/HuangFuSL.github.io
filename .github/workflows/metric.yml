@@ -23,14 +23,15 @@ jobs:
           commits_authoring: firstname lastname, username, username@users.noreply.github.com
 
           plugin_activity_days: 14
-          plugin_activity_filter: all
+          plugin_activity_filter: issue, pr, release, fork, review, ref/create, comment
           plugin_activity_limit: 5
           plugin_activity_load: 300
           plugin_activity_visibility: public
           plugin_activity: yes
           plugin_habits_charts_type: classic
+          plugin_habits_charts: yes
           plugin_habits_days: 14
-          plugin_habits_facts: yes
+          plugin_habits_facts: no
           plugin_habits_from: 200
           plugin_habits_languages_limit: 8
           plugin_habits_languages_threshold: 0%
@@ -40,13 +41,11 @@ jobs:
           plugin_isocalendar_duration: full-year
           plugin_isocalendar: yes
           plugin_languages_analysis_timeout: 15
-          plugin_languages_categories: markup, programming
           plugin_languages_colors: github
           plugin_languages_details: bytes-size, percentage, lines
           plugin_languages_ignored: html, css, javascript
           plugin_languages_indepth: yes
           plugin_languages_limit: 8
-          plugin_languages_recent_categories: markup, programming
           plugin_languages_recent_days: 30
           plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
@@ -57,14 +56,13 @@ jobs:
           plugin_lines_sections: base
           plugin_lines: yes
           plugin_pagespeed_detailed: yes
-          plugin_pagespeed_screenshot: yes
           plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
           plugin_pagespeed_url: huangfusl.github.io
           plugin_pagespeed: yes
           plugin_stars_limit: 4
           plugin_stars: yes
           plugin_topics_limit: 15
-          plugin_topics_mode: labels
+          plugin_topics_mode: icons
           plugin_topics_sort: stars
           plugin_topics: yes
 
