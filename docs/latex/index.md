@@ -18,6 +18,7 @@ hide:
 ## 数学公式排版
 
 * [数学符号](math/symbols.md)
+* [符号堆叠](math/stack.md)
 
 ## 图表排版
 
