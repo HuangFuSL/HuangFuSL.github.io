@@ -19,7 +19,7 @@
         ```
 
     === "渲染结果"
-        {{ latex_image('img/tikz/pgfplots-1.tex', 'pgfplots') }}
+        {{ latex_image('img/pgfplots-1.tex', 'pgfplots') }}
 
 `axis`控制一个图像，`\begin{axis}`后可以加一对方括号，用于设定图片的参数。`addplot`控制图像中的一个序列，其后同样可以加一对方括号用于控制参数。
 
@@ -57,7 +57,7 @@
         ```
 
     === "渲染结果"
-        {{ latex_image('img/tikz/pgfplots-2.tex', 'pgfplots') }}
+        {{ latex_image('img/pgfplots-2.tex', 'pgfplots') }}
 
 有关更多参数，请参见[pgfplots 手册](http://mirrors.ctan.org/graphics/pgf/contrib/pgfplots/doc/pgfplots.pdf)
 
@@ -86,7 +86,7 @@
         ```
 
     === "渲染结果"
-        {{ latex_image('img/tikz/pgfplots-3.tex', 'pgfplots') }}
+        {{ latex_image('img/pgfplots-3.tex', 'pgfplots') }}
 
 `\addplot`有如下参数：
 
