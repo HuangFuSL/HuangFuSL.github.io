@@ -1,8 +1,10 @@
 nav:
   - index.md
-  - 数学公式: cheatsheet.md
-  - 环境:
-      - 概览: environ.md
-      - tabular环境: tabular.md
-      - TikZ环境: tikz.md
-  - 幻灯片: slides.md
+  - 基本排版: basics
+  - 数学公式: math
+  - 图表排版:
+    - tikz绘图:
+      - pgfplots图表: tikz
+    - 表格排版:
+      - tabular环境: tables
+  - 幻灯片: beamer.md
