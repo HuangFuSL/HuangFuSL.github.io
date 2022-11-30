@@ -1,3 +1,4 @@
 nav:
   - index.md
+  - SSH: ssh.md
   - 源码编译nginx并添加RTMP模块: nginx-rtmp.md
