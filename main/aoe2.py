@@ -29,7 +29,7 @@ def build_row(
     content = []
     if building is not None:
         img = get_url(building, available)
-        content.append(f'![{building}]({img}) @span')
+        content.append(f'![{building}]({img}) @span @class="aoe2"')
     else:
         content.append(' ')
 
@@ -47,7 +47,7 @@ def build_row(
             content[-1] = '&emsp;'
 
         img = get_url(k, v)
-        content.append(f'![{k}]({img})')
+        content.append(f'![{k}]({img}) @class="aoe2"')
         if is_unit:
             content.append('→')
         else:
@@ -59,7 +59,7 @@ def build_row(
 def build_header():
     content = ['建筑']
     for k, v in img_urls['Ages'].items():
-        content.append(f'![{k}]({v})')
+        content.append(f'![{k}]({v}) @class="aoe2"')
         content.append('→')
     content[-1] = '&emsp;'
     content.append('&emsp;')
