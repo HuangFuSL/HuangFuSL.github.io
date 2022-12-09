@@ -68,14 +68,15 @@
 
 ## 箭头上下加文本
 
-`\overset`、`\stackrel`与`\underset`只能实现箭头上下加文本，箭头的长度不能随文本长度自动调整。`amsmath`宏包提供了`\xleftarrow`与`\xrightarrow`，可以实现箭头上下加文本，同时箭头会自动适应文本的长度。示例如下：
+`\overset`、`\stackrel`与`\underset`只能实现箭头上下加文本，箭头的长度不能随文本长度自动调整。`amsmath`宏包提供了`\xleftarrow`与`\xrightarrow`，可以实现箭头上下加文本，同时箭头会自动适应文本的长度。`extarrows`宏包提供了`\xlongequal`命令，实现等号上下加文本，示例如下：
 
 !!! tldr "`\xrightarrow`命令"
     === "LaTeX代码"
         ```tex
         \begin{itemize}
-            \item $\xrightarrow[\text{below}]{\text{above}}$
+            \item $\xleftarrow[\text{below}]{\text{above}}$
             \item $\xrightarrow[\text{very very long below}]{\text{very very long above}}$
+            \item $\xlongequal[\text{very very long below}]{\text{very very long above}}$
         \end{itemize}
         ```
 
