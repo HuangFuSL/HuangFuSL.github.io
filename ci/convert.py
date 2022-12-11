@@ -105,6 +105,7 @@ def _conversion(arg: Tuple[str, str]):
             DVISVGM_CMD + [dvi_name], check=True, **exec_args)
     except subprocess.CalledProcessError as e:
         print(e.stdout.decode('utf-8'))
+        print(e.stderr.decode('utf-8'))
         raise e
 
     end = time.time()
