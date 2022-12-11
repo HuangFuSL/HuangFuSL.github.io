@@ -10,6 +10,7 @@ media4svg
 multirow
 pgf
 pgfplots
+pict2e
 scheme-basic
 standalone
 varwidth
