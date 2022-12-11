@@ -6,4 +6,5 @@ extarrows
 multirow
 pgf
 pgfplots
+standalone
 xetex
