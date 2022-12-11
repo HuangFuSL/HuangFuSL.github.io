@@ -7,4 +7,5 @@ multirow
 pgf
 pgfplots
 standalone
+varwidth
 xetex
