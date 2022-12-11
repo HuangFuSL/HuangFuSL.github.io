@@ -3,7 +3,6 @@ booktabs
 colortbl
 diagbox
 dvisvgm
-dvisvgm-def
 extarrows
 graphics-def
 media4svg
