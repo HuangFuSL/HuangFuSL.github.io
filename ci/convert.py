@@ -71,7 +71,7 @@ TLMGR_CMD = [
 
 
 def _install_deps(pkg: str):
-    subprocess.run(XELATEX_CMD + [pkg], check=True)
+    subprocess.run(TLMGR_CMD + [pkg], check=True)
 
 
 def _cleanup(filename: str):
