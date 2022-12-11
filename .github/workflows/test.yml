@@ -45,10 +45,10 @@ jobs:
           python-version: '3.x'
           cache: 'pip'
 
-      - name: Setup texlive
-        run: |
-          sudo apt install texlive-base texlive-xetex && \
-          tlmgr init-usertree
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v2
+        with:
+          package-file: latex_packages.txt
 
       - name: Install dependencies
         run: |
