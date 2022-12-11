@@ -5,5 +5,5 @@ colortbl
 diagbox
 extarrows
 multirow
+pgf
 pgfplots
-tikz
