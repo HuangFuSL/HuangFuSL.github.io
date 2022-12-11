@@ -106,9 +106,16 @@ def _conversion(arg: Tuple[str, str]):
         'cwd': cwd,
         'capture_output': True
     }
-    subprocess.run(XELATEX_CMD + [filename], check=True, **exec_args)
-    subprocess.run(XELATEX_CMD + [filename], check=True, **exec_args)
-    subprocess.run(DVISVGM_CMD + [dvi_name], check=True, **exec_args)
+    try:
+        result = subprocess.run(
+            XELATEX_CMD + [filename], check=True, **exec_args)
+        result = subprocess.run(
+            XELATEX_CMD + [filename], check=True, **exec_args)
+        result = subprocess.run(
+            DVISVGM_CMD + [dvi_name], check=True, **exec_args)
+    except subprocess.CalledProcessError as e:
+        print(e.stdout.decode('utf-8'))
+        raise e
 
     end = time.time()
     print(f'{filename} converted in {end - start:.2f} seconds')
