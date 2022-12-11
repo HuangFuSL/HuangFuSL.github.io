@@ -64,15 +64,6 @@ DVISVGM_CMD = [
     '--font-format=woff',
     '--trace-all'
 ]
-TLMGR_CMD = [
-    'tlmgr',
-    'install'
-]
-
-
-def _install_deps(pkg: str):
-    subprocess.run(TLMGR_CMD + [pkg], check=True)
-
 
 def _cleanup(filename: str):
     '''
@@ -137,14 +128,6 @@ def get_tex_path(cwd: str = '.') -> Generator[Tuple[str, str], None, None]:
 def tex2svg(cwd: str = '.'):
     for i in get_tex_path(cwd):
         _conversion(i)
-
-
-def install_packages():
-    if os.environ.get('CI', False):
-        with open('latex_packages.txt', 'r') as f:
-            for pkg in f:
-                _install_deps(pkg.strip())
-
 
 if __name__ == '__main__':
     tex2svg(os.getcwd())

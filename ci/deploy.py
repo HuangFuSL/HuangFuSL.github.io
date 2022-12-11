@@ -22,7 +22,6 @@ if __name__ == '__main__':
         print('This script is designed for CI execution.')
         sys.exit()
 
-    convert.install_packages()
     src = os.getcwd()
     convert.tex2svg(src)
     bootstrap.get_icon()
