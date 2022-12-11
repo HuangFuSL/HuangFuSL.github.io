@@ -2,6 +2,7 @@ amsmath
 booktabs
 colortbl
 diagbox
+dvips
 dvisvgm
 extarrows
 graphics-def
