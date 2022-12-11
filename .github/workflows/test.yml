@@ -48,7 +48,9 @@ jobs:
       - name: Setup texlive
         run: |
           sudo apt install texlive-base texlive-xetex && \
-          tlmgr init-usertree
+          tlmgr init-usertree && \
+          sudo tlmgr update --self && \
+          sudo tlmgr update --all
 
       - name: Install dependencies
         run: |
