@@ -69,6 +69,7 @@ TLMGR_CMD = [
     'install'
 ]
 
+
 def _install_deps(pkg: str):
     subprocess.run(XELATEX_CMD + [pkg], check=True)
 
@@ -85,6 +86,7 @@ def _cleanup(filename: str):
                 os.remove(to_remove)
         except FileNotFoundError:
             pass
+
 
 def _conversion(arg: Tuple[str, str]):
     '''
@@ -136,9 +138,13 @@ def tex2svg(cwd: str = '.'):
     for i in get_tex_path(cwd):
         _conversion(i)
 
-if __name__ == '__main__':
+
+def install_packages():
     if os.environ.get('CI', False):
         with open('latex_packages.txt', 'r') as f:
             for pkg in f:
                 _install_deps(pkg.strip())
+
+
+if __name__ == '__main__':
     tex2svg(os.getcwd())
