@@ -70,10 +70,7 @@ TLMGR_CMD = [
 ]
 
 def _install_deps(pkg: str):
-    exec_args = {
-        'capture_output': True
-    }
-    subprocess.run(XELATEX_CMD + [pkg], check=True, **exec_args)
+    subprocess.run(XELATEX_CMD + [pkg], check=True)
 
 
 def _cleanup(filename: str):
@@ -140,7 +137,8 @@ def tex2svg(cwd: str = '.'):
         _conversion(i)
 
 if __name__ == '__main__':
-    with open('latex_packages.txt', 'r') as f:
-        for pkg in f:
-            _install_deps(pkg.strip())
+    if os.environ.get('CI', False):
+        with open('latex_packages.txt', 'r') as f:
+            for pkg in f:
+                _install_deps(pkg.strip())
     tex2svg(os.getcwd())
