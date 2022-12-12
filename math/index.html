@@ -58,7 +58,7 @@
     
       <link rel="stylesheet" href="../css/timeline.css">
     
-      <link rel="stylesheet" href="../css/aoe.css">
+      <link rel="stylesheet" href="../css/aoe2.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1728,12 +1728,14 @@
         
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="advanced-operations-mamagement/">高等运作管理</a>
+          <a href="operations-mamagement/">运作管理</a>
           
             <label for="__nav_6_8">
               <span class="md-nav__icon md-icon"></span>
@@ -1741,10 +1743,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="高等运作管理" data-md-level="2">
+      <nav class="md-nav" aria-label="运作管理" data-md-level="2">
         <label class="md-nav__title" for="__nav_6_8">
           <span class="md-nav__icon md-icon"></span>
-          高等运作管理
+          运作管理
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1756,7 +1758,21 @@
   
   
     <li class="md-nav__item">
-      <a href="advanced-operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
+      <a href="operations-mamagement/inventory-control-deterministic-demand/" class="md-nav__link">
+        确定需求下的库存控制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         随机需求下的库存控制
       </a>
     </li>
@@ -4609,6 +4625,47 @@
     扩展阅读
   </a>
   
+    <nav class="md-nav" aria-label="扩展阅读">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    数学分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    概率论与随机过程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    线性代数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    离散数学与数论
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    其他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -4644,18 +4701,40 @@
 <li><a href="operating-research/">运筹学</a></li>
 <li><a href="queue-theory/">对策、决策与排队论</a></li>
 <li>动态系统分析与控制</li>
-<li><a href="pom/">生产与运作管理</a></li>
+<li><a href="operations-mamagement/">生产与运作管理</a></li>
 </ol>
 <h2 id="_2">扩展阅读<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">数学分析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.zhihu.com/question/569390738/answer/2781829969">初中竞赛:<span class="arithmatex">\(x+y+z=1\)</span>，求<span class="arithmatex">\(xy+2yz+3zx\)</span>的最大值? - 予一人的回答 - 知乎</a></li>
+<li><a href="https://www.zhihu.com/question/555998400/answer/2695254231">把<span class="arithmatex">\([-0.5,0.5]\)</span>内所有实数相加，得出的结果是<span class="arithmatex">\(0\)</span>吗？ - Be2SiO4的回答 - 知乎</a></li>
+<li><a href="https://www.zhihu.com/question/518750106/answer/2787054766">如何求微分方程 <span class="arithmatex">\(y'' + y = 0\)</span> 的通解？ - 予一人的回答 - 知乎</a></li>
+<li><a href="https://www.zhihu.com/question/38810755/answer/1231498569">为什么 <span class="arithmatex">\(\ln x\)</span> 求导是 <span class="arithmatex">\(1/x\)</span>？ - 袁超的回答 - 知乎</a></li>
+<li><a href="https://www.zhihu.com/question/520978140/answer/2535686128"><span class="arithmatex">\(\ln x (x&gt;1, x\in \mathbb Z)\)</span> 可能是有理数吗？ - 予一人的回答 - 知乎</a></li>
+</ul>
+<h3 id="_4">概率论与随机过程<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://zhuanlan.zhihu.com/p/579732711">数学期望大于零的游戏一定能赚钱吗 - 陈墨瞳nono的文章 - 知乎</a></li>
+<li><a href="https://www.zhihu.com/question/506200545/answer/2272772070">甲乙两人下围棋，甲胜的概率为<span class="arithmatex">\(a\)</span>，乙胜的概率为<span class="arithmatex">\(b\)</span>，<span class="arithmatex">\(a+b=1\)</span>，比对方多赢两局者获胜，求甲赢的概率? - Dylaaan的回答 - 知乎</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/466924062">强大数律（SLLN) - 何家志的文章 - 知乎</a></li>
+<li><a href="https://www.zhihu.com/question/570330301/answer/2793720084">如果我有 <span class="arithmatex">\(2^{-n}\)</span> 概率获得 <span class="arithmatex">\(2^n\)</span> 元，那获得钱的数学期望值应该是无穷，但实际不是这样，为什么？ - ClefRybak的回答 - 知乎</a></li>
+</ul>
+<h3 id="_5">线性代数<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.zhihu.com/question/568994226/answer/2787141614">如何判定不可约多项式？ - 如蕤的回答 - 知乎</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/144323332">计算机图形学一：基础变换矩阵总结(缩放，旋转，位移)</a></li>
+</ul>
+<h3 id="_6">离散数学与数论<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
 <li><a href="https://www.zhihu.com/question/563530158/answer/2747581893">一般一元五次方程没有根式解的秘密究竟在哪里？花费人类三百年.? - Geometrie的回答 - 知乎</a></li>
-<li><a href="https://www.zhihu.com/question/506200545/answer/2272772070">甲乙两人下围棋，甲胜的概率为a，乙胜的概率为b，a+b=1，比对方多赢两局者获胜，求甲赢的概率? - Dylaaan的回答 - 知乎</a></li>
-<li><a href="https://www.zhihu.com/question/555998400/answer/2695254231">把[-0.5,0.5]内所有实数相加，得出的结果是0吗？ - Be2SiO4的回答 - 知乎</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/69384928">组合数学学习笔记（十） - sola的文章 - 知乎</a></li>
+</ul>
+<h3 id="_7">其他<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
 <li><a href="https://www.zhihu.com/question/19912025/answer/45715210">五个囚犯先后从100颗绿豆中抓绿豆。抓得最多和最少的人将被处死，不能交流，可以摸出剩下绿豆的数量，谁的存活几率最大？ - 曾加的回答 - 知乎</a></li>
 <li><a href="https://www.zhihu.com/question/60227816/answer/1274071217">1000桶水，其中一桶有毒，猪喝毒水后会在15分钟内死去，想用一个小时找到这桶毒水，至少需要几头猪？ - 苗华栋的回答 - 知乎</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/144323332">计算机图形学一：基础变换矩阵总结(缩放，旋转，位移)</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/466924062">强大数律（SLLN) - 何家志的文章 - 知乎</a></li>
+<li><a href="https://www.zhihu.com/question/415377792/answer/2786997868">除了 3，4，5 以外是否还有别的三角形，它的三条边是连续自然数，它的面积也是自然数？ - Pandora Eartha的回答 - 知乎</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/588904675">状态空间表达式的解 - Anonymity67的文章 - 知乎</a></li>
 </ul>
 
   <hr>
@@ -4663,7 +4742,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-11-24T08:40:21+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-11-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-12-12T04:46:37+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-12-12</span>
       
         <br>
         创建日期:
@@ -4862,7 +4941,7 @@
       
         <script src="../js/love.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../js/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

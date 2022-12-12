@@ -58,7 +58,7 @@
     
       <link rel="stylesheet" href="../../../css/timeline.css">
     
-      <link rel="stylesheet" href="../../../css/aoe.css">
+      <link rel="stylesheet" href="../../../css/aoe2.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1776,12 +1776,14 @@
         
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../math/advanced-operations-mamagement/">高等运作管理</a>
+          <a href="../../../math/operations-mamagement/">运作管理</a>
           
             <label for="__nav_6_8">
               <span class="md-nav__icon md-icon"></span>
@@ -1789,10 +1791,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="高等运作管理" data-md-level="2">
+      <nav class="md-nav" aria-label="运作管理" data-md-level="2">
         <label class="md-nav__title" for="__nav_6_8">
           <span class="md-nav__icon md-icon"></span>
-          高等运作管理
+          运作管理
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1804,7 +1806,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/advanced-operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
+      <a href="../../../math/operations-mamagement/inventory-control-deterministic-demand/" class="md-nav__link">
+        确定需求下的库存控制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         随机需求下的库存控制
       </a>
     </li>
@@ -4766,15 +4782,16 @@
 </div>
 </div>
 <h2 id="_2">箭头上下加文本<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><code>\overset</code>、<code>\stackrel</code>与<code>\underset</code>只能实现箭头上下加文本，箭头的长度不能随文本长度自动调整。<code>amsmath</code>宏包提供了<code>\xleftarrow</code>与<code>\xrightarrow</code>，可以实现箭头上下加文本，同时箭头会自动适应文本的长度。示例如下：</p>
+<p><code>\overset</code>、<code>\stackrel</code>与<code>\underset</code>只能实现箭头上下加文本，箭头的长度不能随文本长度自动调整。<code>amsmath</code>宏包提供了<code>\xleftarrow</code>与<code>\xrightarrow</code>，可以实现箭头上下加文本，同时箭头会自动适应文本的长度。<code>extarrows</code>宏包提供了<code>\xlongequal</code>命令，实现等号上下加文本，示例如下：</p>
 <div class="admonition tldr">
 <p class="admonition-title"><code>\xrightarrow</code>命令</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">LaTeX代码</label><label for="__tabbed_4_2">渲染结果</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
-    <span class="k">\item</span> <span class="s">$</span><span class="nv">\xrightarrow</span><span class="o">[</span><span class="nv">\text</span><span class="nb">{below}</span><span class="o">]</span><span class="nb">{</span><span class="nv">\text</span><span class="nb">{above}}</span><span class="s">$</span>
+    <span class="k">\item</span> <span class="s">$</span><span class="nv">\xleftarrow</span><span class="o">[</span><span class="nv">\text</span><span class="nb">{below}</span><span class="o">]</span><span class="nb">{</span><span class="nv">\text</span><span class="nb">{above}}</span><span class="s">$</span>
     <span class="k">\item</span> <span class="s">$</span><span class="nv">\xrightarrow</span><span class="o">[</span><span class="nv">\text</span><span class="nb">{very very long below}</span><span class="o">]</span><span class="nb">{</span><span class="nv">\text</span><span class="nb">{very very long above}}</span><span class="s">$</span>
+    <span class="k">\item</span> <span class="s">$</span><span class="nv">\xlongequal</span><span class="o">[</span><span class="nv">\text</span><span class="nb">{very very long below}</span><span class="o">]</span><span class="nb">{</span><span class="nv">\text</span><span class="nb">{very very long above}}</span><span class="s">$</span>
 <span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
 </code></pre></div>
 </div>
@@ -4791,7 +4808,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-11-24T08:40:21+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-11-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-12-09T14:14:33+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-12-09</span>
       
         <br>
         创建日期:
@@ -4986,7 +5003,7 @@
       
         <script src="../../../js/love.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../../js/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

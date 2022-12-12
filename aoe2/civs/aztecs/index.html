@@ -58,7 +58,7 @@
     
       <link rel="stylesheet" href="../../../css/timeline.css">
     
-      <link rel="stylesheet" href="../../../css/aoe.css">
+      <link rel="stylesheet" href="../../../css/aoe2.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1810,12 +1810,14 @@
         
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../math/advanced-operations-mamagement/">高等运作管理</a>
+          <a href="../../../math/operations-mamagement/">运作管理</a>
           
             <label for="__nav_6_8">
               <span class="md-nav__icon md-icon"></span>
@@ -1823,10 +1825,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="高等运作管理" data-md-level="2">
+      <nav class="md-nav" aria-label="运作管理" data-md-level="2">
         <label class="md-nav__title" for="__nav_6_8">
           <span class="md-nav__icon md-icon"></span>
-          高等运作管理
+          运作管理
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1838,7 +1840,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/advanced-operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
+      <a href="../../../math/operations-mamagement/inventory-control-deterministic-demand/" class="md-nav__link">
+        确定需求下的库存控制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         随机需求下的库存控制
       </a>
     </li>
@@ -4781,92 +4797,58 @@
 <table class="span-table">
 <tr>
 <td>建筑</td>
-<td><img alt="Dark Age" src="https://static.wikia.nocookie.net/ageofempires/images/e/e7/DarkageDE.png" /></td>
+<td class="aoe2"><img alt="Dark Age" src="https://static.wikia.nocookie.net/ageofempires/images/e/e7/DarkageDE.png" /></td>
 <td>→</td>
-<td><img alt="Feudal Age" src="https://static.wikia.nocookie.net/ageofempires/images/8/85/FeudalageDE.png" /></td>
+<td class="aoe2"><img alt="Feudal Age" src="https://static.wikia.nocookie.net/ageofempires/images/8/85/FeudalageDE.png" /></td>
 <td>→</td>
-<td><img alt="Castle Age" src="https://static.wikia.nocookie.net/ageofempires/images/d/de/CastleageDE.png" /></td>
+<td class="aoe2"><img alt="Castle Age" src="https://static.wikia.nocookie.net/ageofempires/images/d/de/CastleageDE.png" /></td>
 <td>→</td>
-<td><img alt="Imperial Age" src="https://static.wikia.nocookie.net/ageofempires/images/3/36/ImperialageDE.png" /></td>
+<td class="aoe2"><img alt="Imperial Age" src="https://static.wikia.nocookie.net/ageofempires/images/3/36/ImperialageDE.png" /></td>
 <td>&emsp;</td>
 <td>&emsp;</td>
 </tr>
 <tr>
-<td rowspan="5"><img alt="Barracks" src="https://static.wikia.nocookie.net/ageofempires/images/5/57/Barracksavailable.png" /></td>
-<td><img alt="Militia" src="https://static.wikia.nocookie.net/ageofempires/images/6/65/Militiaavailable.png" /></td>
+<td class="aoe2" rowspan="5"><img alt="Barracks" src="https://static.wikia.nocookie.net/ageofempires/images/5/57/Barracksavailable.png" /></td>
+<td class="aoe2"><img alt="Militia" src="https://static.wikia.nocookie.net/ageofempires/images/6/65/Militiaavailable.png" /></td>
 <td>→</td>
-<td><img alt="Man-at-Arms" src="https://static.wikia.nocookie.net/ageofempires/images/8/84/Manatarmsavailable.png" /></td>
+<td class="aoe2"><img alt="Man-at-Arms" src="https://static.wikia.nocookie.net/ageofempires/images/8/84/Manatarmsavailable.png" /></td>
 <td>→</td>
-<td><img alt="Long Swordsman" src="https://static.wikia.nocookie.net/ageofempires/images/4/41/Longswordsmanavailable.png" /></td>
+<td class="aoe2"><img alt="Long Swordsman" src="https://static.wikia.nocookie.net/ageofempires/images/4/41/Longswordsmanavailable.png" /></td>
 <td>→</td>
-<td><img alt="Two-Handed Swordsman" src="https://static.wikia.nocookie.net/ageofempires/images/0/09/Twohandedswordsmanavailable.png" /></td>
+<td class="aoe2"><img alt="Two-Handed Swordsman" src="https://static.wikia.nocookie.net/ageofempires/images/0/09/Twohandedswordsmanavailable.png" /></td>
 <td>→</td>
-<td><img alt="Champion" src="https://static.wikia.nocookie.net/ageofempires/images/5/50/Championavailable.png" /></td>
+<td class="aoe2"><img alt="Champion" src="https://static.wikia.nocookie.net/ageofempires/images/5/50/Championavailable.png" /></td>
 </tr>
 <tr>
 <td>&emsp;</td>
 <td>&emsp;</td>
-<td><img alt="Spearman" src="https://static.wikia.nocookie.net/ageofempires/images/4/40/Spearmanavailable.png" /></td>
+<td class="aoe2"><img alt="Spearman" src="https://static.wikia.nocookie.net/ageofempires/images/4/40/Spearmanavailable.png" /></td>
 <td>→</td>
-<td><img alt="Pikeman" src="https://static.wikia.nocookie.net/ageofempires/images/a/ab/Pikemanavailable.png" /></td>
+<td class="aoe2"><img alt="Pikeman" src="https://static.wikia.nocookie.net/ageofempires/images/a/ab/Pikemanavailable.png" /></td>
 <td>→</td>
-<td><img alt="Halberdier" src="https://static.wikia.nocookie.net/ageofempires/images/0/01/Halberdierunavailable.png" /></td>
-<td>&emsp;</td>
-<td>&emsp;</td>
-</tr>
-<tr>
-<td>&emsp;</td>
-<td>&emsp;</td>
-<td><img alt="Eagle Scout" src="https://static.wikia.nocookie.net/ageofempires/images/e/e0/Eaglescoutavailable.png" /></td>
-<td>→</td>
-<td><img alt="Eagle Warrior" src="https://static.wikia.nocookie.net/ageofempires/images/e/e6/Eaglewarrioravailable.png" /></td>
-<td>→</td>
-<td><img alt="Elite Eagle Warrior" src="https://static.wikia.nocookie.net/ageofempires/images/9/9d/Eliteeaglewarrioravailable.png" /></td>
+<td class="aoe2"><img alt="Halberdier" src="https://static.wikia.nocookie.net/ageofempires/images/0/01/Halberdierunavailable.png" /></td>
 <td>&emsp;</td>
 <td>&emsp;</td>
 </tr>
 <tr>
 <td>&emsp;</td>
 <td>&emsp;</td>
-<td><img alt="Supplies" src="https://static.wikia.nocookie.net/ageofempires/images/4/4f/Suppliesavailable.png" /></td>
-<td>&emsp;</td>
-<td><img alt="Squires" src="https://static.wikia.nocookie.net/ageofempires/images/1/1f/Squiresavailable.png" /></td>
-<td>&emsp;</td>
-<td>&emsp;</td>
+<td class="aoe2"><img alt="Eagle Scout" src="https://static.wikia.nocookie.net/ageofempires/images/e/e0/Eaglescoutavailable.png" /></td>
+<td>→</td>
+<td class="aoe2"><img alt="Eagle Warrior" src="https://static.wikia.nocookie.net/ageofempires/images/e/e6/Eaglewarrioravailable.png" /></td>
+<td>→</td>
+<td class="aoe2"><img alt="Elite Eagle Warrior" src="https://static.wikia.nocookie.net/ageofempires/images/9/9d/Eliteeaglewarrioravailable.png" /></td>
 <td>&emsp;</td>
 <td>&emsp;</td>
 </tr>
 <tr>
 <td>&emsp;</td>
 <td>&emsp;</td>
+<td class="aoe2"><img alt="Supplies" src="https://static.wikia.nocookie.net/ageofempires/images/4/4f/Suppliesavailable.png" /></td>
+<td>&emsp;</td>
+<td class="aoe2"><img alt="Squires" src="https://static.wikia.nocookie.net/ageofempires/images/1/1f/Squiresavailable.png" /></td>
 <td>&emsp;</td>
 <td>&emsp;</td>
-<td><img alt="Arson" src="https://static.wikia.nocookie.net/ageofempires/images/5/53/Arsonavailable.png" /></td>
-<td>&emsp;</td>
-<td>&emsp;</td>
-<td>&emsp;</td>
-<td>&emsp;</td>
-</tr>
-<tr>
-<td rowspan="5"><img alt="Archery Range" src="https://static.wikia.nocookie.net/ageofempires/images/4/4e/Archeryrangeavailable.png" /></td>
-<td>&emsp;</td>
-<td>&emsp;</td>
-<td><img alt="Archer" src="https://static.wikia.nocookie.net/ageofempires/images/2/28/Archeravailable.png" /></td>
-<td>→</td>
-<td><img alt="Crossbowman" src="https://static.wikia.nocookie.net/ageofempires/images/9/9f/Crossbowmanavailable.png" /></td>
-<td>→</td>
-<td><img alt="Arbalester" src="https://static.wikia.nocookie.net/ageofempires/images/d/d7/Arbalesteravailable.png" /></td>
-<td>&emsp;</td>
-<td>&emsp;</td>
-</tr>
-<tr>
-<td>&emsp;</td>
-<td>&emsp;</td>
-<td><img alt="Skirmisher" src="https://static.wikia.nocookie.net/ageofempires/images/3/36/Skirmisheravailable.png" /></td>
-<td>→</td>
-<td><img alt="Elite Skirmisher" src="https://static.wikia.nocookie.net/ageofempires/images/1/11/Eliteskirmisheravailable.png" /></td>
-<td>&emsp;</td>
-<td><img alt="Hand Cannoneer" src="https://static.wikia.nocookie.net/ageofempires/images/b/b7/Handcannoneerunavailable.png" /></td>
 <td>&emsp;</td>
 <td>&emsp;</td>
 </tr>
@@ -4875,9 +4857,32 @@
 <td>&emsp;</td>
 <td>&emsp;</td>
 <td>&emsp;</td>
-<td><img alt="Cavalry Archer" src="https://static.wikia.nocookie.net/ageofempires/images/a/ac/Cavalryarcherunavailable.png" /></td>
+<td class="aoe2"><img alt="Arson" src="https://static.wikia.nocookie.net/ageofempires/images/5/53/Arsonavailable.png" /></td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+</tr>
+<tr>
+<td class="aoe2" rowspan="5"><img alt="Archery Range" src="https://static.wikia.nocookie.net/ageofempires/images/4/4e/Archeryrangeavailable.png" /></td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td class="aoe2"><img alt="Archer" src="https://static.wikia.nocookie.net/ageofempires/images/2/28/Archeravailable.png" /></td>
 <td>→</td>
-<td><img alt="Heavy Cavalry Archer" src="https://static.wikia.nocookie.net/ageofempires/images/e/ef/Heavycavalryarcherunavailable.png" /></td>
+<td class="aoe2"><img alt="Crossbowman" src="https://static.wikia.nocookie.net/ageofempires/images/9/9f/Crossbowmanavailable.png" /></td>
+<td>→</td>
+<td class="aoe2"><img alt="Arbalester" src="https://static.wikia.nocookie.net/ageofempires/images/d/d7/Arbalesteravailable.png" /></td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+</tr>
+<tr>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td class="aoe2"><img alt="Skirmisher" src="https://static.wikia.nocookie.net/ageofempires/images/3/36/Skirmisheravailable.png" /></td>
+<td>→</td>
+<td class="aoe2"><img alt="Elite Skirmisher" src="https://static.wikia.nocookie.net/ageofempires/images/1/11/Eliteskirmisheravailable.png" /></td>
+<td>&emsp;</td>
+<td class="aoe2"><img alt="Hand Cannoneer" src="https://static.wikia.nocookie.net/ageofempires/images/b/b7/Handcannoneerunavailable.png" /></td>
 <td>&emsp;</td>
 <td>&emsp;</td>
 </tr>
@@ -4886,9 +4891,9 @@
 <td>&emsp;</td>
 <td>&emsp;</td>
 <td>&emsp;</td>
-<td><img alt="Elephant Archer" src="https://static.wikia.nocookie.net/ageofempires/images/a/aa/Elephantarcherunavailable.png" /></td>
+<td class="aoe2"><img alt="Cavalry Archer" src="https://static.wikia.nocookie.net/ageofempires/images/a/ac/Cavalryarcherunavailable.png" /></td>
 <td>→</td>
-<td><img alt="Elite Elephant Archer" src="https://static.wikia.nocookie.net/ageofempires/images/8/8a/Eliteelephantarcherunavailable.png" /></td>
+<td class="aoe2"><img alt="Heavy Cavalry Archer" src="https://static.wikia.nocookie.net/ageofempires/images/e/ef/Heavycavalryarcherunavailable.png" /></td>
 <td>&emsp;</td>
 <td>&emsp;</td>
 </tr>
@@ -4897,43 +4902,9 @@
 <td>&emsp;</td>
 <td>&emsp;</td>
 <td>&emsp;</td>
-<td><img alt="Thumb Ring" src="https://static.wikia.nocookie.net/ageofempires/images/0/08/Thumbringunavailable.png" /></td>
-<td>&emsp;</td>
-<td><img alt="Parthian Tactics" src="https://static.wikia.nocookie.net/ageofempires/images/d/d5/Parthiantacticsunavailable.png" /></td>
-<td>&emsp;</td>
-<td>&emsp;</td>
-</tr>
-<tr>
-<td rowspan="6"><img alt="Stable" src="https://static.wikia.nocookie.net/ageofempires/images/a/a8/Stableunavailable.png" /></td>
-<td>&emsp;</td>
-<td>&emsp;</td>
-<td><img alt="Scout Cavalry" src="https://static.wikia.nocookie.net/ageofempires/images/e/e0/Scoutcavalryunavailable.png" /></td>
+<td class="aoe2"><img alt="Elephant Archer" src="https://static.wikia.nocookie.net/ageofempires/images/a/aa/Elephantarcherunavailable.png" /></td>
 <td>→</td>
-<td><img alt="Light Cavalry" src="https://static.wikia.nocookie.net/ageofempires/images/8/80/Lightcavalryunavailable.png" /></td>
-<td>→</td>
-<td><img alt="Hussar" src="https://static.wikia.nocookie.net/ageofempires/images/0/04/Hussarunavailable.png" /></td>
-<td>&emsp;</td>
-<td>&emsp;</td>
-</tr>
-<tr>
-<td>&emsp;</td>
-<td>&emsp;</td>
-<td><img alt="Bloodlines" src="https://static.wikia.nocookie.net/ageofempires/images/7/79/Bloodlinesunavailable.png" /></td>
-<td>&emsp;</td>
-<td><img alt="Knight" src="https://static.wikia.nocookie.net/ageofempires/images/8/84/Knightunavailable.png" /></td>
-<td>→</td>
-<td><img alt="Cavalier" src="https://static.wikia.nocookie.net/ageofempires/images/e/eb/Cavalierunavailable.png" /></td>
-<td>→</td>
-<td><img alt="Paladin" src="https://static.wikia.nocookie.net/ageofempires/images/5/5e/Paladinunavailable.png" /></td>
-</tr>
-<tr>
-<td>&emsp;</td>
-<td>&emsp;</td>
-<td>&emsp;</td>
-<td>&emsp;</td>
-<td><img alt="Camel Rider" src="https://static.wikia.nocookie.net/ageofempires/images/0/0d/Camelriderunavailable.png" /></td>
-<td>→</td>
-<td><img alt="Heavy Camel Rider" src="https://static.wikia.nocookie.net/ageofempires/images/f/fb/Heavycamelriderunavailable.png" /></td>
+<td class="aoe2"><img alt="Elite Elephant Archer" src="https://static.wikia.nocookie.net/ageofempires/images/8/8a/Eliteelephantarcherunavailable.png" /></td>
 <td>&emsp;</td>
 <td>&emsp;</td>
 </tr>
@@ -4942,9 +4913,43 @@
 <td>&emsp;</td>
 <td>&emsp;</td>
 <td>&emsp;</td>
-<td><img alt="Battle Elephant" src="https://static.wikia.nocookie.net/ageofempires/images/0/05/Battleelephantunavailable.png" /></td>
+<td class="aoe2"><img alt="Thumb Ring" src="https://static.wikia.nocookie.net/ageofempires/images/0/08/Thumbringunavailable.png" /></td>
+<td>&emsp;</td>
+<td class="aoe2"><img alt="Parthian Tactics" src="https://static.wikia.nocookie.net/ageofempires/images/d/d5/Parthiantacticsunavailable.png" /></td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+</tr>
+<tr>
+<td class="aoe2" rowspan="6"><img alt="Stable" src="https://static.wikia.nocookie.net/ageofempires/images/a/a8/Stableunavailable.png" /></td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td class="aoe2"><img alt="Scout Cavalry" src="https://static.wikia.nocookie.net/ageofempires/images/e/e0/Scoutcavalryunavailable.png" /></td>
 <td>→</td>
-<td><img alt="Elite Battle Elephant" src="https://static.wikia.nocookie.net/ageofempires/images/f/fd/Elitebattleelephantunavailable.png" /></td>
+<td class="aoe2"><img alt="Light Cavalry" src="https://static.wikia.nocookie.net/ageofempires/images/8/80/Lightcavalryunavailable.png" /></td>
+<td>→</td>
+<td class="aoe2"><img alt="Hussar" src="https://static.wikia.nocookie.net/ageofempires/images/0/04/Hussarunavailable.png" /></td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+</tr>
+<tr>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td class="aoe2"><img alt="Bloodlines" src="https://static.wikia.nocookie.net/ageofempires/images/7/79/Bloodlinesunavailable.png" /></td>
+<td>&emsp;</td>
+<td class="aoe2"><img alt="Knight" src="https://static.wikia.nocookie.net/ageofempires/images/8/84/Knightunavailable.png" /></td>
+<td>→</td>
+<td class="aoe2"><img alt="Cavalier" src="https://static.wikia.nocookie.net/ageofempires/images/e/eb/Cavalierunavailable.png" /></td>
+<td>→</td>
+<td class="aoe2"><img alt="Paladin" src="https://static.wikia.nocookie.net/ageofempires/images/5/5e/Paladinunavailable.png" /></td>
+</tr>
+<tr>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td class="aoe2"><img alt="Camel Rider" src="https://static.wikia.nocookie.net/ageofempires/images/0/0d/Camelriderunavailable.png" /></td>
+<td>→</td>
+<td class="aoe2"><img alt="Heavy Camel Rider" src="https://static.wikia.nocookie.net/ageofempires/images/f/fb/Heavycamelriderunavailable.png" /></td>
 <td>&emsp;</td>
 <td>&emsp;</td>
 </tr>
@@ -4953,9 +4958,9 @@
 <td>&emsp;</td>
 <td>&emsp;</td>
 <td>&emsp;</td>
-<td><img alt="Steppe Lancer" src="https://static.wikia.nocookie.net/ageofempires/images/f/fd/Steppelancerunavailable.png" /></td>
+<td class="aoe2"><img alt="Battle Elephant" src="https://static.wikia.nocookie.net/ageofempires/images/0/05/Battleelephantunavailable.png" /></td>
 <td>→</td>
-<td><img alt="Elite Steppe Lancer" src="https://static.wikia.nocookie.net/ageofempires/images/4/49/Elitesteppelancerunavailable.png" /></td>
+<td class="aoe2"><img alt="Elite Battle Elephant" src="https://static.wikia.nocookie.net/ageofempires/images/f/fd/Elitebattleelephantunavailable.png" /></td>
 <td>&emsp;</td>
 <td>&emsp;</td>
 </tr>
@@ -4964,7 +4969,18 @@
 <td>&emsp;</td>
 <td>&emsp;</td>
 <td>&emsp;</td>
-<td><img alt="Husbandry" src="https://static.wikia.nocookie.net/ageofempires/images/2/2c/Husbandryunavailable.png" /></td>
+<td class="aoe2"><img alt="Steppe Lancer" src="https://static.wikia.nocookie.net/ageofempires/images/f/fd/Steppelancerunavailable.png" /></td>
+<td>→</td>
+<td class="aoe2"><img alt="Elite Steppe Lancer" src="https://static.wikia.nocookie.net/ageofempires/images/4/49/Elitesteppelancerunavailable.png" /></td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+</tr>
+<tr>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td>&emsp;</td>
+<td class="aoe2"><img alt="Husbandry" src="https://static.wikia.nocookie.net/ageofempires/images/2/2c/Husbandryunavailable.png" /></td>
 <td>&emsp;</td>
 <td>&emsp;</td>
 <td>&emsp;</td>
@@ -5173,7 +5189,7 @@
       
         <script src="../../../js/love.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../../js/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
