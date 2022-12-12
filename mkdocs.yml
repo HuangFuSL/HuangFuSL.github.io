@@ -70,7 +70,7 @@ plugins:
       include_source: true
       execute: true
 markdown_extensions:
-  
+
   # Python Markdown
   - abbr
   - admonition
@@ -128,12 +128,12 @@ extra_css:
   - css/images.css
   - css/jupyter.css
   - css/timeline.css
-  - css/aoe.css
+  - css/aoe2.css
 
 
 extra_javascript:
   - js/loadColor.js
   - js/love.js
-  - javascripts/mathjax.js
+  - js/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

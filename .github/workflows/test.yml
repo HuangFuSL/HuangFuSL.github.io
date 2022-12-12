@@ -44,17 +44,18 @@ jobs:
         with:
           python-version: '3.x'
           cache: 'pip'
+          cache-dependency-path: '**/requirements.txt'
 
-      - name: Setup texlive
-        run: |
-          sudo apt install texlive-base texlive-extra-utils texlive-lang-chinese
-          sudo apt install texlive-latex-base texlive-latex-extra
-          sudo apt install texlive-latex-recommended texlive-xetex
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v2
+        with:
+          package-file: latex_packages.txt
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          sudo apt-get install ghostscript -y
 
       - name: Test
         run: |

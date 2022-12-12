@@ -65,7 +65,6 @@ DVISVGM_CMD = [
     '--trace-all'
 ]
 
-
 def _cleanup(filename: str):
     '''
     Clean up the pdf, aux, synctex.gz, xdv, log files as they are not needed.
@@ -78,6 +77,7 @@ def _cleanup(filename: str):
                 os.remove(to_remove)
         except FileNotFoundError:
             pass
+
 
 def _conversion(arg: Tuple[str, str]):
     '''
@@ -96,9 +96,17 @@ def _conversion(arg: Tuple[str, str]):
         'cwd': cwd,
         'capture_output': True
     }
-    subprocess.run(XELATEX_CMD + [filename], check=True, **exec_args)
-    subprocess.run(XELATEX_CMD + [filename], check=True, **exec_args)
-    subprocess.run(DVISVGM_CMD + [dvi_name], check=True, **exec_args)
+    try:
+        result = subprocess.run(
+            XELATEX_CMD + [filename], check=True, **exec_args)
+        result = subprocess.run(
+            XELATEX_CMD + [filename], check=True, **exec_args)
+        result = subprocess.run(
+            DVISVGM_CMD + [dvi_name], check=True, **exec_args)
+    except subprocess.CalledProcessError as e:
+        print(e.stdout.decode('utf-8'))
+        print(e.stderr.decode('utf-8'))
+        raise e
 
     end = time.time()
     print(f'{filename} converted in {end - start:.2f} seconds')
