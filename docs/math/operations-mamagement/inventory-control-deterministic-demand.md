@@ -89,10 +89,6 @@ $$
 
 若定义$h' = (P-\lambda) / P$，则最优订货量转化为类似于EOQ的形式，即$\sqrt{\frac{K\lambda}{2h'}}$
 
-### 模型扩展
-
-#### 多种产品的有限生产率模型
-
 ## 数量折扣模型
 
 在数量折扣模型中，当每个周期的订货量达到一定水平时，会获得边际订货成本的折扣，折扣分为两种类型，即**全量折扣**与**增量折扣**。
@@ -118,4 +114,60 @@ $$
 
 ### 短期折扣
 
-短期折扣即生产商只在一个周期中提供折扣。为简化处理，折扣时零售商的购买量$Q_d$为EOQ最优订货量$Q^*$的整数$k$倍。 
+短期折扣即生产商只在一个周期中提供折扣。为简化处理，折扣时零售商的购买量$Q_d$为EOQ最优订货量$Q^*$的整数$k$倍。
+
+## 资源约束下的EOQ模型
+
+EOQ模型仅适用于一种产品的最优订货情形，无法处理多种产品需要协调订购的问题。在多种产品的订购场景下，不同的产品有不同的需求率，需要在不同产品的EOQ最优订货量进行平衡。
+
+**模型假设**：部分固定订货成本与产品种类有关——$K_i$，部分固定订货成本与产品种类无关——$K$。
+
+**约束条件**分为资金约束与库存空间约束。如
+
+$$
+\left\{
+\begin{aligned}
+  C&\geq \sum_{i=1}^n c_iQ_i \\
+  Q_i^{\mathrm{EOQ}} &= \sqrt{\frac{2K_i\lambda_i}{h_i}}
+\end{aligned}
+\right.
+$$
+
+对于紧约束的情况，将约束写作$\sum_{i=1}^n c_iQ_i = C$，引入拉格朗日算子$\theta$，将残差项与乘子项相加，得到拉格朗日优化的目标函数$C(Q_1, \cdots, Q_n, \theta)$
+
+$$
+\min C(Q_1, \cdots, Q_n, \theta) = \sum_{i=1}^n
+\left(\frac{h_iQ_i}{2} + \frac{K_i\lambda_i}{Q_i}\right) + \theta\left(\sum_{i=1}^n c_iQ_i - C\right)
+$$
+
+最优条件下，有$\partial C/\partial \theta = \partial C/\partial Q_i = 0$，即
+
+$$
+\begin{aligned}
+  \sum_{i=1}^n c_iQ_i^* - C &= 0 \\
+  \frac{h_i}{2} - \frac{K_i\lambda_i}{{Q_i^{*}}^2} + \theta c_i &= 0
+\end{aligned}
+$$
+
+解得$Q_i^*$，代入约束条件即可解得最优的$\theta$
+
+$$
+\sum_{i=q}^n c_i\sqrt{\frac{2K_i\lambda_i}{h_i + 2\theta c_i}} = C
+$$
+
+不妨设$h_i / c_i = I, \forall i=1, \cdots, n$。则$Q_i^* = \sqrt{\frac{2K_i\lambda_i}{h_i}}\sqrt{\frac{1}{1 + 2\theta I}}$，注意到$Q_{i}^{\mathrm{EOQ}} = \sqrt{\frac{2K_i\lambda_i}{h_i}}$，则
+
+$$
+\left\{
+\begin{aligned}
+  Q_i^* &= \sqrt{\frac{1}{1 + 2\theta I}}Q_{i}^{\mathrm{EOQ}} \\
+  C &= \sum_{i=1}^n c_iQ_i^*
+\end{aligned}
+\right.
+$$
+
+解得
+
+$$
+\theta = \frac{\sum_{i=1}^n \left(c_iQ_i^{\mathrm{EOQ}}\right) - c}{2Ic}
+$$
