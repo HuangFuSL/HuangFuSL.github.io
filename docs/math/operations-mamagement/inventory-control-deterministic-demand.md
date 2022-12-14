@@ -171,3 +171,86 @@ $$
 $$
 \theta = \frac{\sum_{i=1}^n \left(c_iQ_i^{\mathrm{EOQ}}\right) - c}{2Ic}
 $$
+
+## 多产品EOQ模型
+
+在多产品EOQ模型中，系统需要面对$U = \{1, \cdots, n\}$个产品的需求，每个产品$i$有如下的参数：
+
+* 附加订货成本$K_i$、边际订货成本$c_i$
+* 以利率形式表示的库存成本$h_i = I_ic_i$
+* 需求率$\lambda_i$
+* 不允许缺货
+
+向量化表示的各个参数分别为$\boldsymbol{K}, \boldsymbol{c}, \boldsymbol{h}, \boldsymbol{I}, \boldsymbol{\lambda}$。另外，有全局固定订货成本$K$。在多产品EOQ模型中，假设某次的订货量为$\boldsymbol Q = (Q_i)_{n}$，则订货成本为
+
+$$
+\begin{aligned}
+  G(\boldsymbol Q) =& K + \sum_{i=1}^n K_i\boldsymbol{1}_{\{Q_i > 0\}} & \text{Setup cost} \\
+  &+\sum_{i=1}^n c_iQ_i & \text{Marginal cost}
+\end{aligned}
+$$
+
+现有三种订货方法
+
+1. 独立订货——每次订购都需要多花费$K$的固定订货成本
+2. 完整订货——对于需求率不高的产品，订货过于频繁导致额外花费了$K_i$的附加订货成本
+3. 联合订货：不需要订购所有类型的产品
+
+以下对三种订货方法进行讨论
+
+### 独立订货
+
+独立订货下，每种产品按其对应的EOQ订货量进行订货，则平均成本
+
+$$
+G^* = \sum_{i=1}^nG_i^* = \sum_{i=1}^n\sqrt{2{K + K_i}\lambda_i h_i}
+$$
+
+### 完整订货
+
+完整订货下，每个周期内都需要订购所有产品，设订货量为$\boldsymbol{Q} = T\boldsymbol\lambda$，类比于EOQ模型，可以得到总成本为
+
+$$
+G(Q) = \frac{K + \sum_{i} K_i}{T} + \boldsymbol{c}^\top\boldsymbol{\lambda} + \frac{T\boldsymbol{h}^\top\boldsymbol \lambda}{2}
+$$
+
+转化为单产品EOQ问题，最优解为
+
+$$
+\begin{aligned}
+  T^* &= \sqrt{\frac{2\left(K + \sum_{i} K_i\right)}{\boldsymbol{h}^\top \boldsymbol{\lambda}}} \\
+  G^* &= \sqrt{2\left(K + \sum_{i} K_i\right)\boldsymbol{h}^\top \boldsymbol{\lambda}} \\
+\end{aligned}
+$$
+
+### 联合订货
+
+联合订货条件下，每次订货不需包含所有类型的产品，但**需求量最高的产品必然在每个订单中都出现**，因此，首先考虑EOQ模型下产品的订货频率：
+
+$$
+n_i = \frac{1}{T_i} = \sqrt{\frac{h_i\lambda_i}{(K + K_i)}}
+$$
+
+以订货最频繁的产品$i^\ast = \arg\max\limits_{i} n_i$对应的订货频率$\bar n = n_{i^\ast}$、订货周期$\bar T = T_{i^\ast}$为基准，考虑其他类型产品的订货频率：
+
+$$
+m_i = \left\lceil\frac{\bar n}{n_i}\right\rceil
+$$
+
+$m_i$表示产品$i$的订购周期为$m_i\bar T_i$，即最频繁订单周期的$m_i$倍，则一个订货周期内的成本为
+
+$$
+\begin{aligned}
+  G(\boldsymbol Q) =& \frac{1}{T}\left(K + \sum_i\frac{K_i}{m_i}\right) & \text{Setup cost} \\
+  &+\frac{h}{2}\sum_{i}\lambda_i m_i & \text{Marginal cost}
+\end{aligned}
+$$
+
+因此，最优订货周期与最优成本为
+
+$$
+\begin{aligned}
+  T^* &= \sqrt{\frac{\sum_{i} \lambda_i m_i h}{2\left(K + \sum_i\frac{K_i}{m_i}\right)}} \\
+  G^* &= \sqrt{2\left(\sum_{i} \lambda_i m_i h\right)\left(K + \sum_i\frac{K_i}{m_i}\right)}
+\end{aligned}
+$$
