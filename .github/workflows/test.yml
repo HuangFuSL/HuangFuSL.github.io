@@ -2,7 +2,6 @@ name: Test pull request
 
 env:
   PYTHONUSERBASE: ~/.pip
-  PATH: ${{ env.PYTHONUSERBASE }}/bin:${{ env.PATH }}
 
 on:
   pull_request:
@@ -12,6 +11,8 @@ jobs:
   test_code_block:
     name: Test code block
     runs-on: ubuntu-latest
+    env:
+      PATH: $PYTHONUSERBASE/bin:$PATH
     steps:
       - name: Checkout Main
         uses: actions/checkout@v2
@@ -42,6 +43,8 @@ jobs:
   test:
     name: Test documentation
     runs-on: ubuntu-latest
+    env:
+      PATH: $PYTHONUSERBASE/bin:$PATH
     steps:
       - name: Checkout Main
         uses: actions/checkout@v2
