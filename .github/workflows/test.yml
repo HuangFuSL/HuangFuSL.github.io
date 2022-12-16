@@ -12,19 +12,26 @@ jobs:
     steps:
       - name: Checkout Main
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - name: Set up Python 3
         uses: actions/setup-python@v4
+        id: python
         with:
           python-version: '3.x'
           cache: 'pip'
 
+      - uses: actions/cache@v1
+        id: cache
+        with:
+          path: ~/.pip
+          key: ${{ runner.os }}-${{ steps.python.outputs.python-version }}-${{ hashFiles('**/requirements.txt') }}
+
       - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
+          PYTHONUSERBASE=~/.pip
           python -m pip install --upgrade pip
-          pip install -r ci/requirements.txt
+          pip install -r ci/requirements.txt --user
 
       - name: Test
         run:
@@ -41,10 +48,24 @@ jobs:
 
       - name: Set up Python 3
         uses: actions/setup-python@v4
+        id: python
         with:
           python-version: '3.x'
           cache: 'pip'
-          cache-dependency-path: '**/requirements.txt'
+
+      - uses: actions/cache@v1
+        id: cache
+        with:
+          path: ~/.pip
+          key: ${{ runner.os }}-${{ steps.python.outputs.python-version }}-${{ hashFiles('**/requirements.txt') }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          PYTHONUSERBASE=~/.pip
+          python -m pip install --upgrade pip
+          pip install -r ci/requirements.txt --user
+
 
       - name: Setup TeX Live
         uses: teatimeguest/setup-texlive-action@v2

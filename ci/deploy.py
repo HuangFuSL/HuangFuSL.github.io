@@ -29,16 +29,16 @@ if __name__ == '__main__':
     msg = 'Update on ' + \
         time.strftime('%Y/%m/%d %H:%M:%S', time.gmtime(time.time() + 3600 * 8))
     subprocess.run(
-        'mkdocs build -d build',
+        'python3 -m mkdocs build -d build',
         cwd=src, shell=True, check=True
     )
     if not dry_run:
         subprocess.run(
-            f'mkdocs gh-deploy -d build --message "{msg}"',
+            f'python3 -m mkdocs gh-deploy -d build --message "{msg}"',
             cwd=src, shell=True, check=True
         )
     else:
         subprocess.run(
-            f'mkdocs build -d build --clean',
+            f'python3 -m mkdocs build -d build --clean',
             cwd=src, shell=True, check=True
         )
