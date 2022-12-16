@@ -8,7 +8,7 @@
 
 * 需求率$\lambda$，周期长度$T$
 * 成本：固定订货成本$K$、边际订货成本$c$、边际持有成本$h$
-  
+
   > 边际持有成本$h$通常以利率$I$的形式表示，此时有$h = Ic$
 
 * 订货提前期$\tau = 0$
@@ -64,7 +64,36 @@ $$
 \end{aligned}
 $$
 
-## 有限生产率模型
+#### 允许缺货
+
+当允许缺货时，设缺货成本为$p$，最大缺货量$xQ$，一个周期内库存水平变化如下图所示：
+
+{{ latex_image('imgs/inventory-control-deterministic-demand/penalty-inventory.tex', 'penalty-inventory') }}
+
+成本函数为
+
+$$
+C(Q, x) = \frac{C}{T} = \frac{(1-x)^2 Qh + x^2Qp}{2} + \frac{K\lambda}{Q} + \lambda c
+$$
+
+分别求$C$关于$Q, x$的偏导数，有
+
+$$
+\begin{aligned}
+  \frac{\partial C}{\partial Q} &= \frac{(1-x)^2h + x^2p}{2} - \frac{K\lambda}{Q^2} \\
+  \frac{\partial C}{\partial x} &= xpQ + (x-1)hQ
+\end{aligned}
+$$
+
+解方程$\partial C/\partial x =0$得到$x^* = h/(h+p)$，代入方程$\partial C/\partial Q =0$，解得：
+
+$$
+Q^* = \sqrt{\frac{2K\lambda}{(1-x)^2h+x^2p}} = \sqrt{\frac{2K\lambda(h+p)}{hp}}
+$$
+
+若定义$h' = hp/(h+p)$。则最优订货量转化为类似于EOQ的形式，即$\sqrt{\frac{2K\lambda}{h'}}$
+
+#### 有限生产率模型
 
 在有限生产率模型中，产品通过生产而不是订购获得。产品的生产率为$P > \lambda$，生产线的启动成本为$K$，产品的单位生产成本为$c$。
 
@@ -84,10 +113,10 @@ $$
 最优订货量为
 
 $$
-Q^\ast = \sqrt{\frac{PK\lambda}{2h(P-\lambda)}}
+Q^\ast = \sqrt{\frac{2PK\lambda}{h(P-\lambda)}}
 $$
 
-若定义$h' = (P-\lambda) / P$，则最优订货量转化为类似于EOQ的形式，即$\sqrt{\frac{K\lambda}{2h'}}$
+若定义$h' = (P-\lambda) / P$，则最优订货量转化为类似于EOQ的形式，即$\sqrt{\frac{2K\lambda}{h'}}$
 
 ## 数量折扣模型
 
@@ -145,7 +174,7 @@ $$
 $$
 \begin{aligned}
   \sum_{i=1}^n c_iQ_i^* - C &= 0 \\
-  \frac{h_i}{2} - \frac{K_i\lambda_i}{{Q_i^{*}}^2} + \theta c_i &= 0
+  \frac{h_i}{2} - \frac{K_i\lambda_i}{ {Q_i^*}^2} + \theta c_i &= 0
 \end{aligned}
 $$
 

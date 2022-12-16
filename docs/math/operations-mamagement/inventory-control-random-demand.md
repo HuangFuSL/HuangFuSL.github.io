@@ -157,18 +157,18 @@ $$
 \end{aligned}
 $$
 
-### (Q, R)模型的相关指标：服务水平
+### 服务水平
 
 类似于周期检查模型，在连续检查模型中也可以定义第一类服务水平与第二类服务水平等指标。若假设每个提前期内只有一个在途订单：
 
-#### 第一类服务水平：Fill rate
+#### 第一类服务水平
 
 第一类服务水平指在订货提前期中不发生缺货的概率，用$\alpha$表示。则有$\alpha = F(R)$。求解满足第一类服务水平条件的$(Q, R)$系统，可以按照如下步骤进行
 
 1. 求解满足$F(R) = \alpha$的$R$值
 2. $Q$值取EOQ最优值$\sqrt{\frac{2K\lambda}{h}}$即可
 
-#### 第二类服务水平：Ready rate
+#### 第二类服务水平：Fill rate
 
 第二类服务水平指满足的需求占总需求的比例比例，用$\beta$表示，由于$n(R)$为订货提前期中的期望缺货量，则有$n(R)/Q = 1 - \beta$。根据$F(R) = 1 - \frac{hQ}{\lambda p}$，可得
 
@@ -194,6 +194,27 @@ $$n(R) = (1-\beta)Q$$
 
 联立即得，也可使用迭代方式求解。
 
+### 库存位置与库存水平
+
+库存位置与库存水平的关系：
+
+$$
+\mathrm{IL}(t+L) = \mathrm{IP}(t) - D(t, t+L)
+$$
+
+式中$D(t, t+L)$为$[t, t+L]$时间内的需求。因此，若已知$\mathrm{IP}(t), D(t, t+L)$的分布，可以据此计算$\mathrm{IL}(t+L)$的分布。
+
+对于稳态，在任意时刻$t$，库存位置$\mathrm{IP}(t), \mathrm{IL}(t+L), D(t, t+L)$分别对不同的$t$独立同分布。由此，转化为随机变量$\mathrm{IP}, \mathrm{IL}, D(L)$之间的分布关系。已知$\mathrm{IP}$为均匀分布，设$D(L)$的概率密度函数为$f(x;L)$，则
+
+$$
+\begin{aligned}
+    F_{\mathrm{IL}}(x) &= P(\mathrm{IL}\leq x) \\
+    &= \int_{R}^{R+Q}P(\mathrm{IP} = u)P(\mathrm{IP} - \mathrm{IL} \geq u-x) \mathrm du \\
+    &= \frac{1}{Q}\int_{R}^{R+Q} P(D \geq u-x) \mathrm du \\
+    &= \frac{1}{Q}\int_{R}^{R+Q} (1 - F(u-x;L)) \mathrm du
+\end{aligned}
+$$
+
 ### 模型扩展
 
 #### 正态分布需求
@@ -208,6 +229,18 @@ $L(z)$可以通过$\phi(z), \varPhi(z)$计算得到：
 
 $$
 L(z) = \phi(z) - z + z\varPhi(z)
+$$
+
+将$D(L) \sim N(\mu, \sigma)$代入库存水平的分布，得到
+
+$$
+F_{\mathrm{IL}}(x) = \frac{1}{Q}\int_{R}^{R+Q} \left[1 - \varPhi\left(\frac{u-x-\mu}{\sigma}\right)\right] \mathrm du
+$$
+
+由此可得，库存水平的概率分布$f_{\mathrm{IL}}(x)$为
+
+$$
+f_{\mathrm{IL}}(x) = \frac{1}{Q}\left[\varPhi\left(\frac{R+Q-x-\mu}{\sigma}\right) - \varPhi\left(\frac{R-x-\mu}{\sigma}\right)\right]
 $$
 
 #### Lost-sales
