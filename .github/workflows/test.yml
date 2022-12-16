@@ -1,5 +1,9 @@
 name: Test pull request
 
+env:
+  PYTHONUSERBASE: ~/.pip
+  PATH: ${{ env.PYTHONUSERBASE }}/bin:${{ env.PATH }}
+
 on:
   pull_request:
     branches: [main]
@@ -8,9 +12,6 @@ jobs:
   test_code_block:
     name: Test code block
     runs-on: ubuntu-latest
-    env:
-      PYTHONUSERBASE: ~/.pip
-      PATH: ${{ env.PYTHONUSERBASE }}/bin:${{ env.PATH }}
     steps:
       - name: Checkout Main
         uses: actions/checkout@v2
@@ -41,9 +42,6 @@ jobs:
   test:
     name: Test documentation
     runs-on: ubuntu-latest
-    env:
-      PYTHONUSERBASE: ~/.pip
-      PATH: ${{ env.PYTHONUSERBASE }}/bin:${{ env.PATH }}
     steps:
       - name: Checkout Main
         uses: actions/checkout@v2
