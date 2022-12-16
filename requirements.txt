@@ -9,7 +9,6 @@ mkdocs-material-extensions==1.1.1
 mkdocs-macros-plugin==0.7.0
 mkdocs-jupyter==0.22.0
 pymdown-extensions==9.9
-Markdown==3.4.1
 matplotlib==3.6.2
 pandas==1.5.2
 jupyter==1.0.0
