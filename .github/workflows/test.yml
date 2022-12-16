@@ -49,7 +49,7 @@ jobs:
       - name: Setup TeX Live
         uses: teatimeguest/setup-texlive-action@v2
         with:
-          package-file: latex_packages.txt
+          package-file: ci/texlive/test.txt
 
       - name: Install dependencies
         run: |

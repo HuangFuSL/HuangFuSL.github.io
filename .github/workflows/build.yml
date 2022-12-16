@@ -25,8 +25,10 @@ jobs:
           python-version: '3.x'
           cache: 'pip'
 
-      - name: Setup texlive
-        run: sudo apt install texlive-full
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v2
+        with:
+          package-file: ci/texlive/build.txt
 
       - name: Install dependencies
         run: |
