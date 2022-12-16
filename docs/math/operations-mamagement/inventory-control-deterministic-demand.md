@@ -184,12 +184,12 @@ $$
 \sum_{i=q}^n c_i\sqrt{\frac{2K_i\lambda_i}{h_i + 2\theta c_i}} = C
 $$
 
-不妨设$h_i / c_i = I, \forall i=1, \cdots, n$。则$Q_i^* = \sqrt{\frac{2K_i\lambda_i}{h_i}}\sqrt{\frac{1}{1 + 2\theta I}}$，注意到$Q_{i}^{\mathrm{EOQ}} = \sqrt{\frac{2K_i\lambda_i}{h_i}}$，则
+不妨设$h_i / c_i = I, \forall i=1, \cdots, n$。则$Q_i^* = \sqrt{\frac{2K_i\lambda_i}{h_i}}\sqrt{\frac{1}{1 + 2\theta / I}}$，注意到$Q_{i}^{\mathrm{EOQ}} = \sqrt{\frac{2K_i\lambda_i}{h_i}}$，则
 
 $$
 \left\{
 \begin{aligned}
-  Q_i^* &= \sqrt{\frac{1}{1 + 2\theta I}}Q_{i}^{\mathrm{EOQ}} \\
+  Q_i^* &= \sqrt{\frac{1}{1 + 2\theta / I}}Q_{i}^{\mathrm{EOQ}} \\
   C &= \sum_{i=1}^n c_iQ_i^*
 \end{aligned}
 \right.
@@ -198,7 +198,7 @@ $$
 解得
 
 $$
-\theta = \frac{\sum_{i=1}^n \left(c_iQ_i^{\mathrm{EOQ}}\right) - c}{2Ic}
+\theta = \frac{\sum_{i=1}^n \left(c_iQ_i^{\mathrm{EOQ}}\right) - c}{2c / I}
 $$
 
 ## 多产品EOQ模型
