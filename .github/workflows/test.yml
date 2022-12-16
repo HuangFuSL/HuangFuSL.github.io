@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PYTHONUSERBASE: ~/.pip
+      PATH: ${{ env.PYTHONUSERBASE }}/bin:${{ env.PATH }}
     steps:
       - name: Checkout Main
         uses: actions/checkout@v2
@@ -42,6 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PYTHONUSERBASE: ~/.pip
+      PATH: ${{ env.PYTHONUSERBASE }}/bin:${{ env.PATH }}
     steps:
       - name: Checkout Main
         uses: actions/checkout@v2
