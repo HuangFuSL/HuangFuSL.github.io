@@ -1,27 +1,10 @@
-# LaTeX语句块（环境）
-
-## 表格环境
-
-`tabular`用于定义表格，用法如下：
-
-```tex
-\begin{tabular}{|c|c|c|}
-\hline 2&9&4\\
-\hline 7&5&3\\
-\hline 6&1&8\\
-\hline
-\end{tabular}
-```
-
-该语句渲染一个3x3的表格，每个单元格都具有四周的框线，单元格内内容居中。
-
-关于详细的`tabular`环境使用，参见[`tabular`环境介绍](tabular.md)
-
-## 列表环境
+# 列表
 
 在LaTeX中，`enumerate`环境定义了编号列表，`itemize`环境与`description`环境定义了符号列表。所有的列表使用`\item`命令定义列表项。列表可以自定义使用的编号与符号。
 
 当列表被嵌套时，不同层次的列表会使用不同的编号以避免混淆。
+
+## 基本使用
 
 ### `enumerate`环境
 
@@ -53,8 +36,8 @@
 
 渲染后的效果：
 
-A. This is an item.  
-B. This is an item.  
+A. This is an item.
+B. This is an item.
 C. This is an item.
 
 在`enumerate`与`item`环境中可以使用`\setlength`调节列表项之间的距离，如下所示：
@@ -86,9 +69,3 @@ C. This is an item.
 * This is an item.
 
 `\item`命令可以使用中括号指定当前项使用的符号，如`\item[-]`使用`-`作为符号
-
-## 图像环境
-
-### TikZ图像
-
-关于TikZ图像的详细信息，请参见[TikZ图片](tikz.md)
