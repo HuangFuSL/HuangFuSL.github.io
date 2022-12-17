@@ -52,11 +52,13 @@ jobs:
           python-version: '3.x'
           cache: 'pip'
 
-      - uses: actions/cache@v3
+      - name: Restoring packages
+        uses: actions/cache@v3
         id: cache
         with:
           path: ~/.local
           key: ${{ steps.python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
+
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
