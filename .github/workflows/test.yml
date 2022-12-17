@@ -1,8 +1,5 @@
 name: Test pull request
 
-env:
-  PYTHONUSERBASE: ~/.pip
-
 on:
   pull_request:
     branches: [main]
@@ -12,8 +9,6 @@ jobs:
     name: Test code block
     runs-on: ubuntu-latest
     steps:
-      - name: Export Path
-        run: echo "PYTHONUSERBASE=$HOME/.pip" >> $GITHUB_PATH
       - name: Checkout Main
         uses: actions/checkout@v2
 
@@ -27,7 +22,7 @@ jobs:
       - uses: actions/cache@v3
         id: cache
         with:
-          path: ${{ env.PYTHONUSERBASE }}
+          path: ~/.local
           key: ${{ steps.python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
 
       - name: Install dependencies
@@ -44,8 +39,6 @@ jobs:
     name: Test documentation
     runs-on: ubuntu-latest
     steps:
-      - name: Export Path
-        run: echo "PYTHONUSERBASE=$HOME/.pip" >> $GITHUB_PATH
 
       - name: Checkout Main
         uses: actions/checkout@v2
@@ -62,7 +55,7 @@ jobs:
       - uses: actions/cache@v3
         id: cache
         with:
-          path: ${{ env.PYTHONUSERBASE }}
+          path: ~/.local
           key: ${{ steps.python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
 
       - name: Install dependencies
