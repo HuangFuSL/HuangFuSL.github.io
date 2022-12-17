@@ -14,6 +14,7 @@ hide:
 ## 基本排版
 
 * [字体与字号](basics/fonts.md)
+* [列表](basics/lists.md)
 
 ## 数学公式排版
 
