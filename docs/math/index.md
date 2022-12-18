@@ -27,6 +27,8 @@ hide:
 * [如何求微分方程 $y'' + y = 0$ 的通解？ - 予一人的回答 - 知乎](https://www.zhihu.com/question/518750106/answer/2787054766)
 * [为什么 $\ln x$ 求导是 $1/x$？ - 袁超的回答 - 知乎](https://www.zhihu.com/question/38810755/answer/1231498569)
 * [$\ln x (x>1, x\in \mathbb Z)$ 可能是有理数吗？ - 予一人的回答 - 知乎](https://www.zhihu.com/question/520978140/answer/2535686128)
+* [积分符号内取微分是一种什么方法？ - 知乎](https://www.zhihu.com/question/24481887/answer/363606641)
+* [一条从$(0,0)$出发的长度为$1$的曲线，围绕$x$轴旋转产生的旋转体的最大体积是多少？ - 虚调子的回答 - 知乎](https://www.zhihu.com/question/572746785/answer/2805579564)
 
 ### 概率论与随机过程
 
@@ -44,6 +46,7 @@ hide:
 
 * [一般一元五次方程没有根式解的秘密究竟在哪里？花费人类三百年.? - Geometrie的回答 - 知乎](https://www.zhihu.com/question/563530158/answer/2747581893)
 * [组合数学学习笔记（十） - sola的文章 - 知乎](https://zhuanlan.zhihu.com/p/69384928)
+* [ACM——常见的几种分解质因子的方法 - 严格鸽的文章 - 知乎](https://zhuanlan.zhihu.com/p/591377294)
 
 ### 其他
 
@@ -51,3 +54,4 @@ hide:
 * [1000桶水，其中一桶有毒，猪喝毒水后会在15分钟内死去，想用一个小时找到这桶毒水，至少需要几头猪？ - 苗华栋的回答 - 知乎](https://www.zhihu.com/question/60227816/answer/1274071217)
 * [除了 3，4，5 以外是否还有别的三角形，它的三条边是连续自然数，它的面积也是自然数？ - Pandora Eartha的回答 - 知乎](https://www.zhihu.com/question/415377792/answer/2786997868)
 * [状态空间表达式的解 - Anonymity67的文章 - 知乎](https://zhuanlan.zhihu.com/p/588904675)
+* [如何求数列$a_{n+1} = a_n^2 - 2a_n$? - Reuental的回答 - 知乎](https://www.zhihu.com/question/532532537/answer/2802556776)
