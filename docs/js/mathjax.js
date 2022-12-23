@@ -4,7 +4,7 @@ window.MathJax = {
         displayMath: [['\\[', '\\]']],
         processEscapes: true,
         processEnvironments: true,
-        packages: { '[+]': ['boldsymbol'] }
+        packages: { '[+]': ['boldsymbol', 'bbox'] }
     },
     chtml: { scale: 0.8 },
     svg: { scale: 0.8 },
@@ -12,7 +12,7 @@ window.MathJax = {
         ignoreHtmlClass: '.*|',
         processHtmlClass: 'arithmatex'
     },
-    loader: { load: ['[tex]/boldsymbol'] },
+    loader: { load: ['[tex]/boldsymbol', '[tex]/bbox'] }
 };
 
 document$.subscribe(() => {
