@@ -69,6 +69,8 @@ plugins:
   - mkdocs-jupyter:
       include_source: true
       execute: true
+  - meta-descriptions
+
 markdown_extensions:
 
   # Python Markdown

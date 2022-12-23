@@ -11,5 +11,11 @@
 }
 
 .home-timeline .nt-timeline-sub-title {
-    font-size: 0.7rem !important;
+    font-size: 0.65rem !important;
+}
+
+.home-timeline .nt-timeline-content {
+    font-size: 0.65rem !important;
+    border-bottom: unset !important;
+    padding-bottom: unset !important;
 }
