@@ -20,6 +20,7 @@ hide:
 
 * [数学符号](math/symbols.md)
 * [符号堆叠](math/stack.md)
+* [特殊技巧](math/tricks.md)
 
 ## 图表排版
 
