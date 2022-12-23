@@ -56,7 +56,7 @@ def build_timeline(topk: int) -> str:
             'url': v['url'],
             'title': f"[{v['title']}]({v['url']})",
             'sub_title': v['meta']['git_creation_date_localized_raw_iso_date'], # type: ignore
-            'content': v['meta'].get('summary', '') # type: ignore
+            'content': v['meta'].get('description', '')  # type: ignore
         }
         for v in _page_meta_original.values()
         if criteria(v)
