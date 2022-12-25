@@ -99,31 +99,32 @@ $(Q, R)$模型有如下设定
 4. 允许缺货，缺货成本$p$（backorder）；
 5. 模型的决策变量为重订货点$R$、与订货量$Q$：当库存水平降低至$R$时，订购$Q$单位的库存。受订货量$Q$的影响，订货周期$T$满足$Q = \lambda T$
 6. 模型中使用的其他记号有：
-   * $\mathrm{IP}$：库存位置
-   * $\mathrm{IL}$：库存水平
-   * $\mathrm{SS} = R - \mu$：安全库存
+
+    * $\mathrm{IP}$：库存位置
+    * $\mathrm{IL}$：库存水平
+    * $\mathrm{SS} = R - \mu$：安全库存
 
 $(Q, R)$模型考虑如下来源的成本：
 
 1. 订货成本：每次订购$Q$单位的库存，总成本为$K + cQ$；
 
-   $$
-   \frac{K + cQ}{T} = \frac{K\lambda}{Q} + c\lambda
-   $$
+    $$
+    \frac{K + cQ}{T} = \frac{K\lambda}{Q} + c\lambda
+    $$
 
 2. 缺货成本：首先计算每个周期内的期望缺货量$n(R)$，有
 
-   $$
-   n(R) = E(\max(D - R, 0)) = \int_R^\infty (x-R)f(x)\mathrm dx
-   $$
+    $$
+    n(R) = E(\max(D - R, 0)) = \int_R^\infty (x-R)f(x)\mathrm dx
+    $$
 
-   根据$n(R)$，即可得到一个订货周期$T$时间的平均缺货成本$\lambda n(R)p/Q$
+    根据$n(R)$，即可得到一个订货周期$T$时间的平均缺货成本$\lambda n(R)p/Q$
 
 3. 库存成本：一个周期内期望的库存水平变化为线性，当库存水平降至$R$后重新订货，期望库存继续下降，直至降低至$R - \lambda\tau$时订单到达，单位时间内的库存成本为
 
-   $$
-   h\left(\frac{Q}{2} + R - \lambda\tau\right)
-   $$
+    $$
+    h\left(\frac{Q}{2} + R - \lambda\tau\right)
+    $$
 
 根据如上分析，单位时间内的期望成本为
 
