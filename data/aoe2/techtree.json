@@ -2,7 +2,7 @@
     "aztecs": {
         "Barracks": {
             "available": true,
-            "units": [
+            "items": [
                 {
                     "Militia": true,
                     "Man-at-Arms": true,
@@ -23,13 +23,11 @@
                     "Eagle Warrior": true,
                     "Elite Eagle Warrior": true,
                     "5": null
-                }
-            ],
-            "techs": [
+                },
                 {
                     "1": null,
                     "Supplies": true,
-                    "Squires": true,
+                    "~Squires": true,
                     "4": null,
                     "5": null
                 },
@@ -44,7 +42,7 @@
         },
         "Archery Range": {
             "available": true,
-            "units": [
+            "items": [
                 {
                     "1": null,
                     "Archer": true,
@@ -72,21 +70,19 @@
                     "Elephant Archer": false,
                     "Elite Elephant Archer": false,
                     "5": null
-                }
-            ],
-            "techs": [
+                },
                 {
                     "1": null,
                     "2": null,
                     "Thumb Ring": false,
-                    "Parthian Tactics": false,
+                    "~Parthian Tactics": false,
                     "5": null
                 }
             ]
         },
         "Stable": {
             "available": false,
-            "units": [
+            "items": [
                 {
                     "1": null,
                     "Scout Cavalry": false,
@@ -121,14 +117,354 @@
                     "Steppe Lancer": false,
                     "Elite Steppe Lancer": false,
                     "5": null
-                }
-            ],
-            "techs": [
+                },
                 {
                     "1": null,
                     "2": null,
                     "Husbandry": false,
                     "4": null,
+                    "5": null
+                }
+            ]
+        },
+        "Siege Workshop": {
+            "available": true,
+            "items": [
+                {
+                    "1": null,
+                    "2": null,
+                    "Battering Ram": true,
+                    "Capped Ram": true,
+                    "Siege Ram": true
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Mangonel": true,
+                    "Onager": true,
+                    "Siege Onager": true
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Scorpion": true,
+                    "Heavy Scorpion": false,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Siege Tower": true,
+                    "~Bombard Cannon": false,
+                    "5": null
+                }
+            ]
+        },
+        "Castle": {
+            "available": true,
+            "items": [
+                {
+                    "1": null,
+                    "2": null,
+                    "Jaguar Warrior": true,
+                    "Elite Jaguar Warrior": true,
+                    "~Hoardings": false
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Petard": true,
+                    "~Trebuchet": true,
+                    "~Sappers": true
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Ataltl": true,
+                    "~Garland Wars": true,
+                    "Conscription": true
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "3": null,
+                    "Spies/Treason": true,
+                    "5": null
+                }
+            ]
+        },
+        "Dock": {
+            "available": true,
+            "items": [
+                {
+                    "Fishing Ship": true,
+                    "Fire Galley": true,
+                    "Fire Ship": true,
+                    "Fast Fire Ship": true,
+                    "5": null
+                },
+                {
+                    "Transport Ship": true,
+                    "~Trade Cog": true,
+                    "~Gillnets": true,
+                    "~Cannon Galleon": false,
+                    "Elite Cannon Galleon": false
+                },
+                {
+                    "1": null,
+                    "Demolition Raft": true,
+                    "Demolition Ship": true,
+                    "Heavy Demolition Ship": false,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "Galley": true,
+                    "War Galley": true,
+                    "Galleon": false,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Careening": true,
+                    "Dry Dock": true,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "3": null,
+                    "Shipwright": true,
+                    "5": null
+                }
+            ]
+        },
+        "Monastery": {
+            "available": true,
+            "items": [
+                {
+                    "1": null,
+                    "2": null,
+                    "Monk (native)": true,
+                    "Faith": true,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Redemption": true,
+                    "Illumination": true,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Atonement": true,
+                    "Block Printing": true,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Herbal Medicine": true,
+                    "Theocracy": true,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Heresy": true,
+                    "4": null,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Sanctity": true,
+                    "4": null,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Ferver": true,
+                    "4": null,
+                    "5": null
+                }
+            ]
+        },
+        "Blacksmith": {
+            "available": true,
+            "items": [
+                {
+                    "1": null,
+                    "Padded Archer Armor": true,
+                    "Leather Archer Armor": true,
+                    "Ring Archer Armor": false,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "Fletching": true,
+                    "Bodkin Arrow": true,
+                    "Bracer": true,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "Forging": true,
+                    "Iron Casting": true,
+                    "Blast Furnace": true,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "Scale Barding Armor": false,
+                    "Chain Barding Armor": false,
+                    "Plate Barding Armor": false,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "Scale Mail Armor": true,
+                    "Chain Mail Armor": true,
+                    "Plate Mail Armor": true,
+                    "5": null
+                }
+            ]
+        },
+        "University": {
+            "available": true,
+            "items": [
+                {
+                    "1": null,
+                    "2": null,
+                    "Masonry": false,
+                    "Architecture": false,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Fortified Wall": true,
+                    "~Chemistry": true,
+                    "Bombard Tower": false
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Ballistics": true,
+                    "~Siege Engineers": true,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Guard Tower": true,
+                    "Keep": false,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Heated Shot": true,
+                    "Arrowslits": true,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "Murder Holes": true,
+                    "Treadmill Crane": true,
+                    "5": null
+                }
+            ]
+        },
+        "Town Center": {
+            "available": true,
+            "items": [
+                {
+                    "Villager": true,
+                    "~Town Watch": true,
+                    "Town Patrol": true,
+                    "4": null,
+                    "5": null
+                },
+                {
+                    "Loom": true,
+                    "~Wheelbarrow": true,
+                    "Hand Cart": true,
+                    "4": null,
+                    "5": null
+                },
+                {
+                    "Feudal Age": true,
+                    "Castle Age": true,
+                    "Imperial Age": true,
+                    "4": null,
+                    "5": null
+                }
+            ]
+        },
+        "Mining Camp": {
+            "available": true,
+            "items": [
+                {
+                    "1": null,
+                    "Gold Mining": true,
+                    "Gold Shaft Mining": true,
+                    "4": null,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "Stone Mining": true,
+                    "Stone Shaft Mining": true,
+                    "4": null,
+                    "5": null
+                }
+            ]
+        },
+        "Lumber Camp": {
+            "available": true,
+            "items": [
+                {
+                    "1": null,
+                    "Double-Bit Axe": true,
+                    "Bow Saw": true,
+                    "Two-man Saw": false,
+                    "5": null
+                }
+            ]
+        },
+        "Mill": {
+            "available": true,
+            "items": [
+                {
+                    "1": null,
+                    "Horse Collar": true,
+                    "Heavy Plow": true,
+                    "Crop Rotation": true,
+                    "5": null
+                }
+            ]
+        },
+        "Market": {
+            "available": true,
+            "items": [
+                {
+                    "1": null,
+                    "Trade Cart (native)": true,
+                    "~Coinage": true,
+                    "Banking": true,
+                    "5": null
+                },
+                {
+                    "1": null,
+                    "2": null,
+                    "~Caravan": true,
+                    "Guilds": false,
                     "5": null
                 }
             ]
