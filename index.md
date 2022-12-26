@@ -18,7 +18,7 @@ hide:
 
 ## :material-timeline-clock: Blog timeline
 
-::timeline:: center alternate class="home-timeline"
+::timeline:: class="home-timeline"
 
 {{ build_timeline(10) }}
 
