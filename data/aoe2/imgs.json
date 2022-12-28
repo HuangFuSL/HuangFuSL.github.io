@@ -13,7 +13,8 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/4/4e/Archeryrangeavailable.png"
         },
         "Stable": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/a/a8/Stableunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/a/a8/Stableunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/a/a1/Stableavailable.png"
         },
         "Siege Workshop": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/9/91/Siegeworkshopavailable.png"
@@ -75,18 +76,23 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/a/ab/Pikemanavailable.png"
         },
         "Halberdier": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/01/Halberdierunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/01/Halberdierunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/e/e8/Halberdieravailable.png"
         },
         "Eagle Scout": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/4/42/Eaglescoutunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/e/e0/Eaglescoutavailable.png"
         },
         "Eagle Warrior": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/0c/Eaglewarriorunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/e/e6/Eaglewarrioravailable.png"
         },
         "Elite Eagle Warrior": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/8/83/Eliteeaglewarriorunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/9/9d/Eliteeaglewarrioravailable.png"
         },
         "Supplies": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/e/e3/Suppliesunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/4/4f/Suppliesavailable.png"
         },
         "Squires": {
@@ -102,6 +108,7 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/9/9f/Crossbowmanavailable.png"
         },
         "Arbalester": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/1/19/Arbalesterunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/d/d7/Arbalesteravailable.png"
         },
         "Skirmisher": {
@@ -111,58 +118,81 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/1/11/Eliteskirmisheravailable.png"
         },
         "Hand Cannoneer": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/b/b7/Handcannoneerunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/b/b7/Handcannoneerunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/0/01/Handcannoneeravailable.png"
         },
         "Cavalry Archer": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/a/ac/Cavalryarcherunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/a/ac/Cavalryarcherunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/9/9b/Cavalryarcheravailable.png"
         },
         "Heavy Cavalry Archer": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/e/ef/Heavycavalryarcherunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/e/ef/Heavycavalryarcherunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/a/a1/Heavycavalryarcheravailable.png"
         },
         "Elephant Archer": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/a/aa/Elephantarcherunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/a/aa/Elephantarcherunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/9/9a/Elephantarcheravailable.png"
         },
         "Elite Elephant Archer": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/8/8a/Eliteelephantarcherunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/8/8a/Eliteelephantarcherunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/1/17/Eliteelephantarcheravailable.png"
+        },
+        "Genitour": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/0/04/Genitouravailable.png"
+        },
+        "Elite Genitour": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/8/88/Elitegenitouravailable.png"
         },
         "Thumb Ring": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/08/Thumbringunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/08/Thumbringunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/7/7a/Thumbringavailable.png"
         },
         "Parthian Tactics": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/d/d5/Parthiantacticsunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/d/d5/Parthiantacticsunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/0/01/Parthiantacticsavailable.png"
         },
         "Scout Cavalry": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/e/e0/Scoutcavalryunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/e/e0/Scoutcavalryunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/1/17/Scoutcavalryavailable.png"
         },
         "Light Cavalry": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/8/80/Lightcavalryunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/8/80/Lightcavalryunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/0/02/Lightcavalryavailable.png"
         },
         "Hussar": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/04/Hussarunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/04/Hussarunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/2/2e/Hussaravailable.png"
         },
         "Bloodlines": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/7/79/Bloodlinesunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/7/79/Bloodlinesunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/b/b0/Bloodlinesavailable.png"
         },
         "Knight": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/8/84/Knightunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/8/84/Knightunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/2/26/Knightavailable.png"
         },
         "Cavalier": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/e/eb/Cavalierunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/e/eb/Cavalierunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/f/f3/Cavalieravailable.png"
         },
         "Paladin": {
             "0": "https://static.wikia.nocookie.net/ageofempires/images/5/5e/Paladinunavailable.png"
         },
         "Camel Rider": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/0d/Camelriderunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/0d/Camelriderunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/8/86/Camelrideravailable.png"
         },
         "Heavy Camel Rider": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/f/fb/Heavycamelriderunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/f/fb/Heavycamelriderunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/d/d7/Heavycamelrideravailable.png"
         },
         "Battle Elephant": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/05/Battleelephantunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/05/Battleelephantunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/1/12/Battleelephantavailable.png"
         },
         "Elite Battle Elephant": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/f/fd/Elitebattleelephantunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/f/fd/Elitebattleelephantunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/a/af/Elitebattleelephantavailable.png"
         },
         "Steppe Lancer": {
             "0": "https://static.wikia.nocookie.net/ageofempires/images/f/fd/Steppelancerunavailable.png"
@@ -171,16 +201,26 @@
             "0": "https://static.wikia.nocookie.net/ageofempires/images/4/49/Elitesteppelancerunavailable.png"
         },
         "Husbandry": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/2/2c/Husbandryunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/2/2c/Husbandryunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/a/a7/Husbandryavailable.png"
         },
         "Battering Ram": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/d/d4/Batteringramunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/7/7b/Batteringramavailable.png"
         },
         "Capped Ram": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/1/18/Cappedramunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/3/3a/Cappedramavailable.png"
         },
         "Siege Ram": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/4/44/Siegeramunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/f/fe/Siegeramavailable.png"
+        },
+        "Armored Elephant": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/c/c8/Armoredelephantavailable.png"
+        },
+        "Siege Elephant": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/c/c6/Siegeelephantavailable.png"
         },
         "Mangonel": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/7/74/Mangonelavailable.png"
@@ -189,25 +229,40 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/9/99/Onageravailable.png"
         },
         "Siege Onager": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/5/51/Siegeonagerunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/4/44/Siegeonageravailable.png"
         },
         "Scorpion": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/1/10/Scorpionavailable.png"
         },
         "Heavy Scorpion": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/6/67/Heavyscorpionunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/6/67/Heavyscorpionunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/4/43/Heavyscorpionavailable.png"
         },
         "Siege Tower": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/2/29/Siegetoweravailable.png"
         },
         "Bombard Cannon": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/3/32/Bombardcannonunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/3/32/Bombardcannonunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/6/60/Bombardcannonavailable.png"
         },
         "Jaguar Warrior": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/0/08/Jaguarwarrioravailable.png"
         },
         "Elite Jaguar Warrior": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/6/68/Elitejaguarwarrioravailable.png"
+        },
+        "Ratha": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/b/ba/Rathaavailable.png"
+        },
+        "Elite Ratha": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/0/0e/Eliterathaavailable.png"
+        },
+        "Camel Archer": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/8/8d/Camelarcheravailable.png"
+        },
+        "Elite Camel Archer": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/a/af/Elitecamelarcheravailable.png"
         },
         "Petard": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/2/2c/Petardavailable.png"
@@ -221,10 +276,24 @@
         "Garland Wars": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/7/7f/Garlandwarsavailable.png"
         },
+        "Paiks": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/5/5a/Paiksavailable.png"
+        },
+        "Mahayana": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/5/57/Mahayanaavailable.png"
+        },
+        "Kasbah": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/b/bd/Kasbahavailable.png"
+        },
+        "Maghrabi Camels": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/1/1f/Maghrabicamelsavailable.png"
+        },
         "Hoardings": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/c/c9/Hoardingsunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/c/c9/Hoardingsunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/d/d5/Hoardingsavailable.png"
         },
         "Sappers": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/1/15/Sappersunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/0/09/Sappersavailable.png"
         },
         "Conscription": {
@@ -252,7 +321,8 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/2/24/Demolitionshipavailable.png"
         },
         "Heavy Demolition Ship": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/8/8b/Heavydemolitionshipunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/8/8b/Heavydemolitionshipunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/2/26/Heavydemolitionshipavailable.png"
         },
         "Galley": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/e/ec/Galleyavailable.png"
@@ -261,7 +331,8 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/f/f5/Wargalleyavailable.png"
         },
         "Galleon": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/d/de/Galleonunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/d/de/Galleonunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/a/ac/Galleonavailable.png"
         },
         "Fire Ship": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/2/20/Fireshipavailable.png"
@@ -273,10 +344,12 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/f/f4/Gillnetsavailable.png"
         },
         "Cannon Galleon": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/7/78/Cannongalleonunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/7/78/Cannongalleonunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/8/88/Cannongalleonavailable.png"
         },
         "Elite Cannon Galleon": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/9/97/Elitecannongalleonunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/9/97/Elitecannongalleonunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/9/90/Elitecannongalleonavailable.png"
         },
         "Careening": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/e/e5/Careeningavailable.png"
@@ -285,7 +358,11 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/2/25/Drydockavailable.png"
         },
         "Shipwright": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/9/90/Shipwrightunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/c/c0/Shipwrightavailable.png"
+        },
+        "Monk": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/c/cc/Monkavailable.png"
         },
         "Monk (native)": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/6/66/Monknativeavailable.png"
@@ -303,6 +380,7 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/7/74/Atonementavailable.png"
         },
         "Block Printing": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/2/21/Blockprintingunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/c/c4/Blockprintingavailable.png"
         },
         "Herbal Medicine": {
@@ -312,9 +390,11 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/c/c2/Theocracyavailable.png"
         },
         "Heresy": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/f/fe/Heresyunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/c/c7/Heresyavailable.png"
         },
         "Sanctity": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/2/25/Sanctityunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/8/87/Sanctityavailable.png"
         },
         "Ferver": {
@@ -327,7 +407,8 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/3/3c/Leatherarcherarmoravailable.png"
         },
         "Ring Archer Armor": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/7/7b/Ringarcherarmorunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/7/7b/Ringarcherarmorunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/5/5b/Ringarcherarmoravailable.png"
         },
         "Fletching": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/5/5a/Fletchingavailable.png"
@@ -348,13 +429,16 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/3/34/Blastfurnaceavailable.png"
         },
         "Scale Barding Armor": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/a/ac/Scalebardingarmorunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/a/ac/Scalebardingarmorunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/f/f4/Scalebardingarmoravailable.png"
         },
         "Chain Barding Armor": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/a/a1/Chainbardingarmorunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/a/a1/Chainbardingarmorunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/5/57/Chainbardingarmoravailable.png"
         },
         "Plate Barding Armor": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/7/71/Platebardingarmorunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/7/71/Platebardingarmorunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/3/3c/Platebardingarmoravailable.png"
         },
         "Scale Mail Armor": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/7/70/Scalemailarmoravailable.png"
@@ -363,13 +447,16 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/8/8d/Chainmailarmoravailable.png"
         },
         "Plate Mail Armor": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/a/a2/Platemailarmorunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/d/dc/Platemailarmoravailable.png"
         },
         "Masonry": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/00/Masonryunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/00/Masonryunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/0/08/Masonryavailable.png"
         },
         "Architecture": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/c/c3/Architectureunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/c/c3/Architectureunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/9/98/Architectureavailable.png"
         },
         "Fortified Wall": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/a/a9/Fortifiedwallresearchavailable.png"
@@ -390,7 +477,8 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/a/a8/Guardtowerresearchavailable.png"
         },
         "Keep": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/f/f5/Keepresearchunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/f/f5/Keepresearchunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/7/78/Keepresearchavailable.png"
         },
         "Heated Shot": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/9/92/Heatedshotavailable.png"
@@ -441,6 +529,7 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/4/4a/Stoneminingavailable.png"
         },
         "Stone Shaft Mining": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/c/c6/Stoneshaftminingunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/4/4f/Stoneshaftminingavailable.png"
         },
         "Double-Bit Axe": {
@@ -450,7 +539,8 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/2/28/Bowsawavailable.png"
         },
         "Two-man Saw": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/0e/Twomansawunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/0e/Twomansawunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/8/85/Twomansawavailable.png"
         },
         "Horse Collar": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/c/c1/Horsecollaravailable.png"
@@ -460,6 +550,9 @@
         },
         "Crop Rotation": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/f/f2/Croprotationavailable.png"
+        },
+        "Trade Cart": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/6/69/Tradecartavailable.png"
         },
         "Trade Cart (native)": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/5/57/Tradecartnativeavailable.png"
@@ -474,7 +567,8 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/d/d1/Caravanavailable.png"
         },
         "Guilds": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/8/88/Guildsunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/8/88/Guildsunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/7/79/Guildsavailable.png"
         }
     }
 }

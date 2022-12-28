@@ -28,7 +28,7 @@ def build_row(
     content = []
     if building is not None:
         img = get_url(building, 'buildings', available)
-        content.append(f'![{building}]({img}) @span @class="aoe2"')
+        content.append(f'![{building}]({img}){" @span" if len(tree_row) > 1 else ""} @class="aoe2"')
     else:
         content.append(' ')
 
