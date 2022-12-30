@@ -18,7 +18,11 @@ tech_tree = load_tech_tree()
 
 
 def get_url(name: str, type_: str, available: bool) -> str:
-    return img_urls[type_][name]["1" if available else "0"]
+    try:
+        return img_urls[type_][name]["1" if available else "0"]
+    except KeyError as e:
+        print(f'KeyError: {name} {type_} {available}')
+        raise e
 
 
 def build_row(

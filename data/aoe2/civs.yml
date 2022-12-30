@@ -16,14 +16,17 @@
 - title: 波希米亚
   content: 火药和僧侣文明
   image: https://static.wikia.nocookie.net/ageofempires/images/a/a1/Bohemians_Icon.png
+  url: bohemians
 
 - title: 不列颠
   content: 步弓手文明
   image: https://static.wikia.nocookie.net/ageofempires/images/a/ae/CivIcon-Britons.png
+  url: britons
 
 - title: 保加利亚
   content: 步兵和骑兵文明
   image: https://static.wikia.nocookie.net/ageofempires/images/c/ce/CivIcon-Bulgarians.png
+  url: bulgarians
 
 - title: 勃艮第
   content: 骑兵文明
