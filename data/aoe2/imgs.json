@@ -51,6 +51,9 @@
         },
         "Villager": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/1/1f/Villageravailable.png"
+        },
+        "Krepost": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/6/64/Krepostavailable.png"
         }
     },
     "items": {
@@ -67,6 +70,7 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/0/09/Twohandedswordsmanavailable.png"
         },
         "Champion": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/f/f5/Championunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/5/50/Championavailable.png"
         },
         "Spearman": {
@@ -105,6 +109,7 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/2/28/Archeravailable.png"
         },
         "Crossbowman": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/0/06/Crossbowmanunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/9/9f/Crossbowmanavailable.png"
         },
         "Arbalester": {
@@ -246,6 +251,9 @@
             "0": "https://static.wikia.nocookie.net/ageofempires/images/3/32/Bombardcannonunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/6/60/Bombardcannonavailable.png"
         },
+        "Houfnice": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/6/63/Houfniceavailable.png"
+        },
         "Jaguar Warrior": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/0/08/Jaguarwarrioravailable.png"
         },
@@ -263,6 +271,24 @@
         },
         "Elite Camel Archer": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/a/af/Elitecamelarcheravailable.png"
+        },
+        "Hussite Wagon": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/7/7a/Hussitewagonavailable.png"
+        },
+        "Elite Hussite Wagon": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/6/6a/Elitehussitewagonavailable.png"
+        },
+        "Longbowman": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/3/37/Longbowmanavailable.png"
+        },
+        "Elite Longbowman": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/d/dd/Elitelongbowmanavailable.png"
+        },
+        "Konnik": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/3/39/Konnikavailable.png"
+        },
+        "Elite Konnik": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/9/99/Elitekonnikavailable.png"
         },
         "Petard": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/2/2c/Petardavailable.png"
@@ -287,6 +313,24 @@
         },
         "Maghrabi Camels": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/1/1f/Maghrabicamelsavailable.png"
+        },
+        "Wagenburg Tactics": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/8/8e/Wagenburgtacticsavailable.png"
+        },
+        "Hussite Reforms": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/1/12/Hussitereformsavailable.png"
+        },
+        "Yeomen": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/5/5b/Yeomenavailable.png"
+        },
+        "Warwolf": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/9/92/Warwolfavailable.png"
+        },
+        "Stirrups": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/c/c7/Stirrupsavailable.png"
+        },
+        "Bagains": {
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/f/f0/Bagainsavailable.png"
         },
         "Hoardings": {
             "0": "https://static.wikia.nocookie.net/ageofempires/images/c/c9/Hoardingsunavailable.png",
@@ -338,6 +382,7 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/2/20/Fireshipavailable.png"
         },
         "Fast Fire Ship": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/c/ce/Fastfireshipunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/8/8d/Fastfireshipavailable.png"
         },
         "Gillnets": {
@@ -355,6 +400,7 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/e/e5/Careeningavailable.png"
         },
         "Dry Dock": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/3/3e/Drydockunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/2/25/Drydockavailable.png"
         },
         "Shipwright": {
@@ -368,15 +414,18 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/6/66/Monknativeavailable.png"
         },
         "Faith": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/3/32/Faithunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/2/2b/Faithavailable.png"
         },
         "Redemption": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/c/ce/Redemptionunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/9/90/Redemptionavailable.png"
         },
         "Illumination": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/a/ad/Illuminationavailable.png"
         },
         "Atonement": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/1/12/Atonementunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/7/74/Atonementavailable.png"
         },
         "Block Printing": {
@@ -459,13 +508,15 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/9/98/Architectureavailable.png"
         },
         "Fortified Wall": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/f/ff/Fortifiedwallresearchunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/a/a9/Fortifiedwallresearchavailable.png"
         },
         "Chemistry": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/5/55/Chemistryavailable.png"
         },
         "Bombard Tower": {
-            "0": "https://static.wikia.nocookie.net/ageofempires/images/d/dc/Bombardtowerresearchunavailable.png"
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/d/dc/Bombardtowerresearchunavailable.png",
+            "1": "https://static.wikia.nocookie.net/ageofempires/images/4/40/Bombardtowerresearchavailable.png"
         },
         "Ballistics": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/9/98/Ballisticsavailable.png"
@@ -481,15 +532,18 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/7/78/Keepresearchavailable.png"
         },
         "Heated Shot": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/c/c7/Heatedshotunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/9/92/Heatedshotavailable.png"
         },
         "Arrowslits": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/6/61/Arrowslitsunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/8/84/Arrowslitsavailable.png"
         },
         "Murder Holes": {
             "1": "https://static.wikia.nocookie.net/ageofempires/images/3/3c/Murderholesavailable.png"
         },
         "Treadmill Crane": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/d/d3/Treadmillcraneunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/6/65/Treadmillcraneavailable.png"
         },
         "Villager": {
@@ -549,6 +603,7 @@
             "1": "https://static.wikia.nocookie.net/ageofempires/images/6/6a/Heavyplowavailable.png"
         },
         "Crop Rotation": {
+            "0": "https://static.wikia.nocookie.net/ageofempires/images/4/4e/Croprotationunavailable.png",
             "1": "https://static.wikia.nocookie.net/ageofempires/images/f/f2/Croprotationavailable.png"
         },
         "Trade Cart": {
