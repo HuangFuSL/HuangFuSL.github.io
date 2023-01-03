@@ -17,6 +17,7 @@ hide:
 6. [对策、决策与排队论](queue-theory/index.md)
 7. 动态系统分析与控制
 8. [生产与运作管理](operations-mamagement/index.md)
+9. [随机过程](random-process/index.md)
 
 ## 扩展阅读
 
