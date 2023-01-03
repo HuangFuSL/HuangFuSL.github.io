@@ -556,6 +556,16 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
@@ -586,6 +596,76 @@
     <li class="md-nav__item">
       <a href="../../../aoe2/civs/aztecs/" class="md-nav__link">
         阿兹特克
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bengalis/" class="md-nav__link">
+        孟加拉
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/berbers/" class="md-nav__link">
+        柏柏尔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bohemians/" class="md-nav__link">
+        波希米亚
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/britons/" class="md-nav__link">
+        不列颠
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bulgarians/" class="md-nav__link">
+        保加利亚
       </a>
     </li>
   
@@ -1148,6 +1228,8 @@
         
           
             
+          
+        
           
         
           
@@ -1800,6 +1882,71 @@
     <li class="md-nav__item">
       <a href="../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         随机需求下的库存控制
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../math/random-process/">随机过程</a>
+          
+            <label for="__nav_6_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="随机过程" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          随机过程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/random-process/basics/" class="md-nav__link">
+        预备知识
       </a>
     </li>
   
@@ -4770,23 +4917,23 @@
 <p><strong>基本思路</strong> ：用一个数组存储各字母出现的次数（哈希表）。当不存在重复字母时滑动窗口不断向右延伸，直到出现重复字母或到达字符串结尾。检测到重复字母后，从左向右收缩滑动窗口，每次收缩都对哈希表进行更新。直到不存在重复字母时，滑动窗口才停止收缩，继续向右延伸。</p>
 <p><strong>时间复杂度</strong> ：<span class="arithmatex">\(O(N)\)</span></p>
 <p><strong>空间复杂度</strong> ：<span class="arithmatex">\(O(1)\)</span>，与字符串长度无关，但与单个字符的宽度有关。</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">lengthOfLongestSubstring</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">){</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">hashMap</span><span class="p">[</span><span class="mi">256</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="o">*</span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">cur</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">hashMap</span><span class="p">[</span><span class="o">*</span><span class="n">cur</span><span class="p">])</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">hashMap</span><span class="p">[</span><span class="o">*</span><span class="p">(</span><span class="n">cur</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">length</span><span class="p">)]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="n">length</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="n">hashMap</span><span class="p">[</span><span class="o">*</span><span class="n">cur</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">length</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">length</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">cur</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">lengthOfLongestSubstring</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">hashMap</span><span class="p">[</span><span class="mi">256</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="o">*</span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">cur</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">hashMap</span><span class="p">[</span><span class="o">*</span><span class="n">cur</span><span class="p">])</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">hashMap</span><span class="p">[</span><span class="o">*</span><span class="p">(</span><span class="n">cur</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">length</span><span class="p">)]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="n">length</span><span class="o">--</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">hashMap</span><span class="p">[</span><span class="o">*</span><span class="n">cur</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">length</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cur</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 <p><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">Reference</a></p>
 

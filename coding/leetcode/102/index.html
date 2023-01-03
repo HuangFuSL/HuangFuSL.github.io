@@ -556,6 +556,16 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
@@ -586,6 +596,76 @@
     <li class="md-nav__item">
       <a href="../../../aoe2/civs/aztecs/" class="md-nav__link">
         阿兹特克
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bengalis/" class="md-nav__link">
+        孟加拉
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/berbers/" class="md-nav__link">
+        柏柏尔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bohemians/" class="md-nav__link">
+        波希米亚
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/britons/" class="md-nav__link">
+        不列颠
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bulgarians/" class="md-nav__link">
+        保加利亚
       </a>
     </li>
   
@@ -1148,6 +1228,8 @@
         
           
             
+          
+        
           
         
           
@@ -1800,6 +1882,71 @@
     <li class="md-nav__item">
       <a href="../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         随机需求下的库存控制
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../math/random-process/">随机过程</a>
+          
+            <label for="__nav_6_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="随机过程" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          随机过程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/random-process/basics/" class="md-nav__link">
+        预备知识
       </a>
     </li>
   
@@ -4767,59 +4914,59 @@
 <span class="cm"> *     struct TreeNode *left;</span>
 <span class="cm"> *     struct TreeNode *right;</span>
 <span class="cm"> * };</span>
-<span class="cm"> */</span><span class="w"></span>
+<span class="cm"> */</span>
 <span class="cm">/**</span>
 <span class="cm"> * Return an array of arrays of size *returnSize.</span>
 <span class="cm"> * The sizes of the arrays are returned as *returnColumnSizes array.</span>
 <span class="cm"> * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().</span>
-<span class="cm"> */</span><span class="w"></span>
+<span class="cm"> */</span>
 <span class="cp">#define MAX(x, y) (x &gt; y ? x : y)</span>
-<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">leftBranch</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">leftSize</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">rightBranch</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">rightSize</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">returnSize</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="o">*</span><span class="n">returnSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leftSize</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rightSize</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">leftSize</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rightSize</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">leftSize</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span><span class="w"> </span><span class="n">leftBranch</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">leftSize</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">free</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rightSize</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">leftSize</span><span class="p">,</span><span class="w"> </span><span class="n">rightBranch</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">rightSize</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">free</span><span class="p">(</span><span class="n">rightBranch</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="kt">int</span><span class="o">**</span><span class="w"> </span><span class="nf">levelOrder</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">TreeNode</span><span class="o">*</span><span class="w"> </span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">returnSize</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">**</span><span class="w"> </span><span class="n">returnColumnSizes</span><span class="p">){</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">root</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="o">*</span><span class="n">returnSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="o">*</span><span class="n">returnColumnSizes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">leftBranchSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">leftColumnSizes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">leftBranch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">levelOrder</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">leftBranchSize</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">leftColumnSizes</span><span class="p">),</span><span class="w"></span>
-<span class="w">        </span><span class="n">rightBranchSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">rightColumnSizes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">rightBranch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">levelOrder</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rightBranchSize</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rightColumnSizes</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="o">*</span><span class="n">returnSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MAX</span><span class="p">(</span><span class="n">leftBranchSize</span><span class="p">,</span><span class="w"> </span><span class="n">rightBranchSize</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">**</span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">**</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="n">returnSize</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">returnCols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="n">returnSize</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="o">*</span><span class="n">returnColumnSizes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">returnCols</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="o">*</span><span class="n">returnCols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="o">*</span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="o">**</span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">returnSize</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">leftBranchSize</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">rightBranchSize</span><span class="p">)</span><span class="w"></span>
-<span class="w">            </span><span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">leftColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">rightBranch</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">rightColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">returnCols</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">leftBranchSize</span><span class="p">)</span><span class="w"></span>
-<span class="w">            </span><span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span><span class="w"> </span><span class="n">leftColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">returnCols</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">rightBranchSize</span><span class="p">)</span><span class="w"></span>
-<span class="w">            </span><span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">rightBranch</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span><span class="w"> </span><span class="n">rightColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span><span class="w"> </span><span class="n">returnCols</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">rightBranch</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">leftColumnSizes</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">rightColumnSizes</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">leftBranch</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">leftSize</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">rightBranch</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">rightSize</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">returnSize</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="o">*</span><span class="n">returnSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leftSize</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rightSize</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">leftSize</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rightSize</span><span class="p">));</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">leftSize</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span><span class="w"> </span><span class="n">leftBranch</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">leftSize</span><span class="p">);</span>
+<span class="w">        </span><span class="n">free</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rightSize</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">leftSize</span><span class="p">,</span><span class="w"> </span><span class="n">rightBranch</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">rightSize</span><span class="p">);</span>
+<span class="w">        </span><span class="n">free</span><span class="p">(</span><span class="n">rightBranch</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span><span class="o">**</span><span class="w"> </span><span class="nf">levelOrder</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">TreeNode</span><span class="o">*</span><span class="w"> </span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">returnSize</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">**</span><span class="w"> </span><span class="n">returnColumnSizes</span><span class="p">){</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">root</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="o">*</span><span class="n">returnSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="o">*</span><span class="n">returnColumnSizes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">leftBranchSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">leftColumnSizes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">leftBranch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">levelOrder</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">leftBranchSize</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">leftColumnSizes</span><span class="p">),</span>
+<span class="w">        </span><span class="n">rightBranchSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">rightColumnSizes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">rightBranch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">levelOrder</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rightBranchSize</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rightColumnSizes</span><span class="p">);</span>
+<span class="w">    </span><span class="o">*</span><span class="n">returnSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MAX</span><span class="p">(</span><span class="n">leftBranchSize</span><span class="p">,</span><span class="w"> </span><span class="n">rightBranchSize</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">**</span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">**</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="n">returnSize</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">returnCols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="n">returnSize</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="o">*</span><span class="n">returnColumnSizes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">returnCols</span><span class="p">;</span>
+<span class="w">    </span><span class="o">*</span><span class="n">returnCols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="o">*</span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+<span class="w">    </span><span class="o">**</span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">returnSize</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">leftBranchSize</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">rightBranchSize</span><span class="p">)</span>
+<span class="w">            </span><span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">leftColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">rightBranch</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">rightColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">returnCols</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">leftBranchSize</span><span class="p">)</span>
+<span class="w">            </span><span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span><span class="w"> </span><span class="n">leftColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">returnCols</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">rightBranchSize</span><span class="p">)</span>
+<span class="w">            </span><span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">rightBranch</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span><span class="w"> </span><span class="n">rightColumnSizes</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">],</span><span class="w"> </span><span class="n">returnCols</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">leftBranch</span><span class="p">);</span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">rightBranch</span><span class="p">);</span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">leftColumnSizes</span><span class="p">);</span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">rightColumnSizes</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 
   <hr>

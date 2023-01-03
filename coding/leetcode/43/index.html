@@ -556,6 +556,16 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
@@ -586,6 +596,76 @@
     <li class="md-nav__item">
       <a href="../../../aoe2/civs/aztecs/" class="md-nav__link">
         阿兹特克
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bengalis/" class="md-nav__link">
+        孟加拉
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/berbers/" class="md-nav__link">
+        柏柏尔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bohemians/" class="md-nav__link">
+        波希米亚
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/britons/" class="md-nav__link">
+        不列颠
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bulgarians/" class="md-nav__link">
+        保加利亚
       </a>
     </li>
   
@@ -1148,6 +1228,8 @@
         
           
             
+          
+        
           
         
           
@@ -1800,6 +1882,71 @@
     <li class="md-nav__item">
       <a href="../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         随机需求下的库存控制
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../math/random-process/">随机过程</a>
+          
+            <label for="__nav_6_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="随机过程" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          随机过程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/random-process/basics/" class="md-nav__link">
+        预备知识
       </a>
     </li>
   
@@ -4759,36 +4906,36 @@
 <p><a href="https://leetcode-cn.com/problems/multiply-strings">Reference</a></p>
 <h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>计算方法与列竖式相同，注意对特殊输入<code>0</code>的处理。结果的长度不会超过输入字符串长度之和。</p>
-<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num2</span><span class="p">){</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">num1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">*</span><span class="n">num2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">num1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">len1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">num1</span><span class="p">),</span><span class="w"> </span><span class="n">len2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">num2</span><span class="p">),</span><span class="w"> </span><span class="n">retLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">len1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">len2</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">incre</span><span class="p">,</span><span class="w"> </span><span class="n">curDigit</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">memset</span><span class="p">(</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">retLen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)),</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">retLen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)),</span><span class="w"></span>
-<span class="w">         </span><span class="o">*</span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">ret</span><span class="p">[</span><span class="n">retLen</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">len1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">len2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">incre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">num1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">num2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">curDigit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">incre</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="n">incre</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">retLen</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((</span><span class="n">len1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">len2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">incre</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">curDigit</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
-<span class="w">            </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="n">ret</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">curDigit</span><span class="p">;</span><span class="w"></span>
-<span class="w">                </span><span class="n">incre</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ret</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="w">                </span><span class="n">ret</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">ret</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">                </span><span class="n">curDigit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">incre</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">incre</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">incre</span><span class="p">;</span><span class="w"></span>
-<span class="w">                </span><span class="n">incre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">incre</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="w">                </span><span class="n">pos</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">cur</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">cur</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">cur</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num2</span><span class="p">){</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">num1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">*</span><span class="n">num2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">num1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">len1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">num1</span><span class="p">),</span><span class="w"> </span><span class="n">len2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">num2</span><span class="p">),</span><span class="w"> </span><span class="n">retLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">len1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">len2</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">incre</span><span class="p">,</span><span class="w"> </span><span class="n">curDigit</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">memset</span><span class="p">(</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">retLen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)),</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">retLen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)),</span>
+<span class="w">         </span><span class="o">*</span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ret</span><span class="p">[</span><span class="n">retLen</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">len1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">len2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">incre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">num1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">num2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">curDigit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">incre</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">            </span><span class="n">incre</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">            </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">retLen</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((</span><span class="n">len1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">len2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">incre</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">curDigit</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">ret</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">curDigit</span><span class="p">;</span>
+<span class="w">                </span><span class="n">incre</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ret</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">ret</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">ret</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                </span><span class="n">curDigit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">incre</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">incre</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">incre</span><span class="p">;</span>
+<span class="w">                </span><span class="n">incre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">incre</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">                </span><span class="n">pos</span><span class="o">--</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">cur</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">cur</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">cur</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 
   <hr>

@@ -554,6 +554,16 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
@@ -584,6 +594,76 @@
     <li class="md-nav__item">
       <a href="../../../aoe2/civs/aztecs/" class="md-nav__link">
         阿兹特克
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bengalis/" class="md-nav__link">
+        孟加拉
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/berbers/" class="md-nav__link">
+        柏柏尔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bohemians/" class="md-nav__link">
+        波希米亚
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/britons/" class="md-nav__link">
+        不列颠
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bulgarians/" class="md-nav__link">
+        保加利亚
       </a>
     </li>
   
@@ -1146,6 +1226,8 @@
         
           
             
+          
+        
           
         
           
@@ -1798,6 +1880,71 @@
     <li class="md-nav__item">
       <a href="../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         随机需求下的库存控制
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../math/random-process/">随机过程</a>
+          
+            <label for="__nav_6_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="随机过程" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          随机过程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/random-process/basics/" class="md-nav__link">
+        预备知识
       </a>
     </li>
   
@@ -7302,10 +7449,10 @@ suppressions and revisit them.</p>
 <p>You can get a list of
 <code>pylint</code>
 warnings by doing:</p>
-<div class="highlight"><pre><span></span><code>pylint --list-msgs
+<div class="highlight"><pre><span></span><code>pylint<span class="w"> </span>--list-msgs
 </code></pre></div>
 <p>To get more information on a particular message, use:</p>
-<div class="highlight"><pre><span></span><code>pylint --help-msg<span class="o">=</span>C6409
+<div class="highlight"><pre><span></span><code>pylint<span class="w"> </span>--help-msg<span class="o">=</span>C6409
 </code></pre></div>
 <p>Prefer <code>pylint: disable</code> to the deprecated older form <code>pylint: disable-msg</code>.</p>
 <p>Unused argument warnings can be suppressed by deleting the variables at the
@@ -7456,7 +7603,7 @@ library calls.</p>
     example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Yes</span><span class="p">:</span>
   <span class="k">def</span> <span class="nf">connect_to_next_port</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minimum</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Connects to the next available port.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Connects to the next available port.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">      minimum: A port value greater or equal to 1024.</span>
@@ -7482,7 +7629,7 @@ library calls.</p>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="n">No</span><span class="p">:</span>
   <span class="k">def</span> <span class="nf">connect_to_next_port</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minimum</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Connects to the next available port.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Connects to the next available port.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">      minimum: A port value greater or equal to 1024.</span>
@@ -7926,7 +8073,7 @@ to ensure methods overridden in subclasses are called by the property (using the
 <div class="highlight"><pre><span></span><code><span class="n">Yes</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">math</span>
 
      <span class="k">class</span> <span class="nc">Square</span><span class="p">:</span>
-         <span class="sd">&quot;&quot;&quot;A square with two properties: a writable area and a read-only perimeter.</span>
+<span class="w">         </span><span class="sd">&quot;&quot;&quot;A square with two properties: a writable area and a read-only perimeter.</span>
 
 <span class="sd">         To use:</span>
 <span class="sd">         &gt;&gt;&gt; sq = Square(3)</span>
@@ -7946,7 +8093,7 @@ to ensure methods overridden in subclasses are called by the property (using the
 
          <span class="nd">@property</span>
          <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-             <span class="sd">&quot;&quot;&quot;Area of the square.&quot;&quot;&quot;</span>
+<span class="w">             </span><span class="sd">&quot;&quot;&quot;Area of the square.&quot;&quot;&quot;</span>
              <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_area</span><span class="p">()</span>
 
          <span class="nd">@area</span><span class="o">.</span><span class="n">setter</span>
@@ -7954,11 +8101,11 @@ to ensure methods overridden in subclasses are called by the property (using the
              <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_area</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
 
          <span class="k">def</span> <span class="nf">_get_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-             <span class="sd">&quot;&quot;&quot;Indirect accessor to calculate the &#39;area&#39; property.&quot;&quot;&quot;</span>
+<span class="w">             </span><span class="sd">&quot;&quot;&quot;Indirect accessor to calculate the &#39;area&#39; property.&quot;&quot;&quot;</span>
              <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">side</span> <span class="o">**</span> <span class="mi">2</span>
 
          <span class="k">def</span> <span class="nf">_set_area</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">area</span><span class="p">):</span>
-             <span class="sd">&quot;&quot;&quot;Indirect setter to set the &#39;area&#39; property.&quot;&quot;&quot;</span>
+<span class="w">             </span><span class="sd">&quot;&quot;&quot;Indirect setter to set the &#39;area&#39; property.&quot;&quot;&quot;</span>
              <span class="bp">self</span><span class="o">.</span><span class="n">side</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
 
          <span class="nd">@property</span>
@@ -8063,7 +8210,7 @@ if the use precedes the assignment. If a global declaration occurs, the name is
 treated as a global variable.</p>
 <p>An example of the use of this feature is:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_adder</span><span class="p">(</span><span class="n">summand1</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns a function that adds numbers to a given number.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a function that adds numbers to a given number.&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">summand2</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">summand1</span> <span class="o">+</span> <span class="n">summand2</span>
 
@@ -8707,7 +8854,7 @@ part of the API).</dd>
                           <span class="n">keys</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span>
                           <span class="n">require_all_keys</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
-    <span class="sd">&quot;&quot;&quot;Fetches rows from a Smalltable.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fetches rows from a Smalltable.</span>
 
 <span class="sd">    Retrieves rows pertaining to the given keys from the Table instance</span>
 <span class="sd">    represented by table_handle.  String keys will be UTF-8 encoded.</span>
@@ -8741,7 +8888,7 @@ part of the API).</dd>
                           <span class="n">keys</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span>
                           <span class="n">require_all_keys</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
-    <span class="sd">&quot;&quot;&quot;Fetches rows from a Smalltable.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fetches rows from a Smalltable.</span>
 
 <span class="sd">    Retrieves rows pertaining to the given keys from the Table instance</span>
 <span class="sd">    represented by table_handle.  String keys will be UTF-8 encoded.</span>
@@ -8783,7 +8930,7 @@ If your class has public attributes, they should be documented here in an
 <code>Attributes</code> section and follow the same formatting as a
 <a href="#doc-function-args">function's <code>Args</code></a> section.</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SampleClass</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Summary of class here.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Summary of class here.</span>
 
 <span class="sd">    Longer class information....</span>
 <span class="sd">    Longer class information....</span>
@@ -8794,12 +8941,12 @@ If your class has public attributes, they should be documented here in an
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">likes_spam</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Inits SampleClass with blah.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Inits SampleClass with blah.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">likes_spam</span> <span class="o">=</span> <span class="n">likes_spam</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">eggs</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">def</span> <span class="nf">public_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Performs operation blah.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Performs operation blah.&quot;&quot;&quot;</span>
 </code></pre></div>
 <p><a id="s3.8.5-block-and-inline-comments"></a>
 <a id="comments-in-block-and-inline"></a>
@@ -9792,11 +9939,11 @@ from the last import by one line.</p>
 remember that in many cases <a href="#typing-type-var"><code>TypeVar</code></a> might be more
 appropriate:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Text</span><span class="p">]:</span>
-  <span class="sd">&quot;&quot;&quot;Returns a mapping from employee ID to employee name for given IDs.&quot;&quot;&quot;</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Returns a mapping from employee ID to employee name for given IDs.&quot;&quot;&quot;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="n">Text</span><span class="p">]:</span>
-  <span class="sd">&quot;&quot;&quot;Returns a mapping from employee ID to employee name for given IDs.&quot;&quot;&quot;</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Returns a mapping from employee ID to employee name for given IDs.&quot;&quot;&quot;</span>
 </code></pre></div>
 <p><a id="4-parting-words"></a></p>
 <p><a id="consistency"></a></p>

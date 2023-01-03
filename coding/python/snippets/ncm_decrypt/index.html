@@ -556,6 +556,16 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
@@ -586,6 +596,76 @@
     <li class="md-nav__item">
       <a href="../../../../aoe2/civs/aztecs/" class="md-nav__link">
         阿兹特克
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../aoe2/civs/bengalis/" class="md-nav__link">
+        孟加拉
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../aoe2/civs/berbers/" class="md-nav__link">
+        柏柏尔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../aoe2/civs/bohemians/" class="md-nav__link">
+        波希米亚
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../aoe2/civs/britons/" class="md-nav__link">
+        不列颠
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../aoe2/civs/bulgarians/" class="md-nav__link">
+        保加利亚
       </a>
     </li>
   
@@ -1148,6 +1228,8 @@
         
           
             
+          
+        
           
         
           
@@ -1800,6 +1882,71 @@
     <li class="md-nav__item">
       <a href="../../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         随机需求下的库存控制
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../math/random-process/">随机过程</a>
+          
+            <label for="__nav_6_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="随机过程" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          随机过程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../math/random-process/basics/" class="md-nav__link">
+        预备知识
       </a>
     </li>
   
@@ -4696,17 +4843,17 @@
 
 
 <span class="k">def</span> <span class="nf">unpad</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">bytes</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; 清除数据后面填充的字节块 &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; 清除数据后面填充的字节块 &#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span> <span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)</span> <span class="k">else</span> <span class="n">unpad</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
 
 
 <span class="k">def</span> <span class="nf">aes_decrypt</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39; AES解密 &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; AES解密 &#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_ECB</span><span class="p">)</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">bytes</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; 利用整数运算进行bytes对象的快速异或 &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; 利用整数运算进行bytes对象的快速异或 &#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
         <span class="n">num</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">([</span><span class="n">num</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
     <span class="n">b2i</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;little&#39;</span><span class="p">)</span>
@@ -4714,12 +4861,12 @@
 
 
 <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; 包含整型溢出的相加 &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; 包含整型溢出的相加 &#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span>
 
 
 <span class="k">def</span> <span class="nf">build_keybox</span><span class="p">(</span><span class="n">decrypted</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; 构造解密文件的函数 &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; 构造解密文件的函数 &#39;&#39;&#39;</span>
     <span class="n">bytemap</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">))</span>
     <span class="n">b</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">):</span>
@@ -4737,13 +4884,13 @@
 
 
 <span class="k">def</span> <span class="nf">read_chunk</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39; 分块读取文件，前4字节表示块长度 &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; 分块读取文件，前4字节表示块长度 &#39;&#39;&#39;</span>
     <span class="n">chunk_size</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="s1">&#39;little&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">ncm_decrypt</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]:</span>
-    <span class="sd">&#39;&#39;&#39; 解密ncm文件 &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; 解密ncm文件 &#39;&#39;&#39;</span>
     <span class="n">core_key_chunk</span> <span class="o">=</span> <span class="n">read_chunk</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="n">decrypted</span> <span class="o">=</span> <span class="n">unpad</span><span class="p">(</span><span class="n">aes_decrypt</span><span class="p">(</span><span class="n">NCM_COREKEY</span><span class="p">,</span> <span class="n">xor</span><span class="p">(</span><span class="n">core_key_chunk</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))[</span><span class="mi">17</span><span class="p">:]</span>
     <span class="n">keybox</span> <span class="o">=</span> <span class="n">build_keybox</span><span class="p">(</span><span class="n">decrypted</span><span class="p">)</span> <span class="c1"># 用于文件主体的解密</span>

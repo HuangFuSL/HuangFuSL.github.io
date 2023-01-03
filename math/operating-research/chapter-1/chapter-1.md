@@ -41,7 +41,7 @@ $$
 如果约束中含有不等式，则可以通过添加松弛变量与剩余变量转变为等式
 
 * 松弛变量：$a_{i1}x_1 + a_{i2}x_2 + \cdots + a_{in}x_n \leq b_i$加入松弛变量$x_{n+1}$后转为$a_{i1}x_1 + a_{i2}x_2 + \cdots + a_{in}x_n + x_{n+1}= b_i$
-* 剩余变量：$a_{j1}x_1 + a_{j2}x_2 + \cdots + a_{jn}x_n \leq b_j$加入剩余变量$x_{n+1}$后转为$a_{j1}x_1 + a_{j2}x_2 + \cdots + a_{jn}x_n - x_{n+1}= b_j$
+* 剩余变量：$a_{j1}x_1 + a_{j2}x_2 + \cdots + a_{jn}x_n \geq b_j$加入剩余变量$x_{n+1}$后转为$a_{j1}x_1 + a_{j2}x_2 + \cdots + a_{jn}x_n - x_{n+1}= b_j$
 
 若某个决策变量$x_i$的取值范围为$\leq$，则将$x_i$替换为$x_i' = -x_i$。
 
@@ -84,13 +84,13 @@ $$
 !!! note "基、基向量与基变量"
     矩阵$B$称为线性规划的 **基** 。 **基** 中的各个列向量$P_j$为 **基向量** ，对应的决策变量称为 **基变量** 。分割后非齐次线性方程组$Ax=b$转化为：
 
-$$
-\begin{bmatrix}
-    B & N
-\end{bmatrix}\begin{bmatrix}
-    x_B \\ x_N
-\end{bmatrix} = Bx_B + Nx_N = b
-$$
+    $$
+    \begin{bmatrix}
+        B & N
+    \end{bmatrix}\begin{bmatrix}
+        x_B \\ x_N
+    \end{bmatrix} = Bx_B + Nx_N = b
+    $$
 
 由于方阵$B$满秩，有$x_B = B^{-1}(b - Nx_N)$。其中$x_N$为自由变量。$-B^{-1}N$中的列向量为方程$Ax=b$的基础解系。不妨设$x_N = 0$，则$x_B = B^{-1}b$为线性方程组的一个解，称为基解。
 
@@ -169,30 +169,30 @@ $$
 * 使用贪心算法选择换入的基，选择梯度最大（与$\lambda$最大正分量对应）的决策变量换入，$i = \arg\max \lambda$
 * 对于换入变量$x_i$，换出的基$x_j$应当尽可能保证是可行解。根据$x_B = b - Nx_N\geq 0$，得$Nx_N \leq b - x_B$，有$j = \arg\min _{j} \frac{b_j}{a_{ij}}$
 
-#### 举例
+!!! note "举例"
 
-对于如下线性规划问题：
+    对于如下线性规划问题：
 
-$$
-\begin{aligned}
-    & \max z = 3x_1 - 3x_2 + 5x_4 - x_5 \\
-    &s.t. \left\{
+    $$
     \begin{aligned}
-        &x_1 & & -2x_3 & +2x_4 & &=12 \\
-        && x_2 &-2x_3 & & &=1 \\
-        &&& -4x_3 &+3x_4 &+x_5 &=27
+        & \max z = 3x_1 - 3x_2 + 5x_4 - x_5 \\
+        &s.t. \left\{
+        \begin{aligned}
+            &x_1 & & -2x_3 & +2x_4 & &=12 \\
+            && x_2 &-2x_3 & & &=1 \\
+            &&& -4x_3 &+3x_4 &+x_5 &=27
+        \end{aligned}
+        \right .
     \end{aligned}
-    \right .
-\end{aligned}
-$$
+    $$
 
-列出单纯形表如下所示：
+    列出单纯形表如下所示：
 
-{{ latex_image('img/1.tex', '1') }}
+    {{ latex_image('img/1.tex', '1') }}
 
-将变量$x_4$转入基变量，$x_1$转出基变量，得到如下单纯形表：
+    将变量$x_4$转入基变量，$x_1$转出基变量，得到如下单纯形表：
 
-{{ latex_image('img/2.tex', '2') }}
+    {{ latex_image('img/2.tex', '2') }}
 
 ### 两阶段法
 
@@ -351,7 +351,7 @@ $$
     s.t. & \left\{
     \begin{aligned}
         x_1 & + & x_2 + & x_3 + & x_4 & &= & 12 \\
-        x_1 & + & 2x_2 + & 2x_3 & & +x_5 & = & 20 \\
+        x_1 & + & 2x_2 + & 2x_3 + & & x_5 &= & 20 \\
         x_i &\geq 0
     \end{aligned}
     \right .

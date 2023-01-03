@@ -556,6 +556,16 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
@@ -586,6 +596,76 @@
     <li class="md-nav__item">
       <a href="../../../aoe2/civs/aztecs/" class="md-nav__link">
         阿兹特克
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bengalis/" class="md-nav__link">
+        孟加拉
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/berbers/" class="md-nav__link">
+        柏柏尔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bohemians/" class="md-nav__link">
+        波希米亚
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/britons/" class="md-nav__link">
+        不列颠
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bulgarians/" class="md-nav__link">
+        保加利亚
       </a>
     </li>
   
@@ -1148,6 +1228,8 @@
         
           
             
+          
+        
           
         
           
@@ -1800,6 +1882,71 @@
     <li class="md-nav__item">
       <a href="../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         随机需求下的库存控制
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../math/random-process/">随机过程</a>
+          
+            <label for="__nav_6_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="随机过程" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          随机过程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/random-process/basics/" class="md-nav__link">
+        预备知识
       </a>
     </li>
   
@@ -5150,15 +5297,15 @@
 <p>C++提供了模板类的功能用来针对不同类型的元素提供相同的功能。对于某个ADT（以向量为例），其属性和接口的组织方式可遵循如下规则：</p>
 <div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Vector</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//向量模板类</span>
 <span class="k">private</span><span class="o">:</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">_size</span><span class="p">;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_capacity</span><span class="p">;</span><span class="w"> </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">_elem</span><span class="p">;</span><span class="w"> </span><span class="c1">//规模、容量、数据区</span>
-<span class="k">protected</span><span class="o">:</span><span class="w"></span>
-<span class="cm">/* ... 内部函数 */</span><span class="w"></span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="cm">/* ... 构造函数 */</span><span class="w"></span>
-<span class="cm">/* ... 析构函数 */</span><span class="w"></span>
-<span class="cm">/* ... 只读接口 */</span><span class="w"></span>
-<span class="cm">/* ... 可写接口 */</span><span class="w"></span>
-<span class="cm">/* ... 遍历接口 */</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="k">protected</span><span class="o">:</span>
+<span class="cm">/* ... 内部函数 */</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="cm">/* ... 构造函数 */</span>
+<span class="cm">/* ... 析构函数 */</span>
+<span class="cm">/* ... 只读接口 */</span>
+<span class="cm">/* ... 可写接口 */</span>
+<span class="cm">/* ... 遍历接口 */</span>
+<span class="p">};</span>
 </code></pre></div>
 <p>通过对<code>[]</code>运算符进行重载，向量和列表支持数组风格的访问方式。</p>
 <p>具体代码可以参见：</p>
@@ -5170,13 +5317,13 @@
 <span class="cm">* Junhui DENG, deng@tsinghua.edu.cn</span>
 <span class="cm">* Computer Science &amp; Technology, Tsinghua University</span>
 <span class="cm">* Copyright (c) 2003-2020. All rights reserved.</span>
-<span class="cm">******************************************************************************************/</span><span class="w"></span>
+<span class="cm">******************************************************************************************/</span>
 
 <span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Rank</span><span class="p">;</span><span class="w"> </span><span class="c1">//秩</span>
 <span class="cp">#define DEFAULT_CAPACITY  3 </span><span class="c1">//默认的初始容量（实际应用中可设置为更大）</span>
 
 <span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Vector</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//向量模板类</span>
-<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="k">protected</span><span class="o">:</span>
 <span class="w">   </span><span class="n">Rank</span><span class="w"> </span><span class="n">_size</span><span class="p">;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_capacity</span><span class="p">;</span><span class="w">  </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">_elem</span><span class="p">;</span><span class="w"> </span><span class="c1">//规模、容量、数据区</span>
 <span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">copyFrom</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//复制数组区间A[lo, hi)</span>
 <span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">expand</span><span class="p">();</span><span class="w"> </span><span class="c1">//空间不足时扩容</span>
@@ -5191,7 +5338,7 @@
 <span class="w">   </span><span class="n">Rank</span><span class="w"> </span><span class="nf">partition</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//轴点构造算法</span>
 <span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">quickSort</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//快速排序算法</span>
 <span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">shellSort</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//希尔排序算法</span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span>
 <span class="c1">// 构造函数</span>
 <span class="w">   </span><span class="n">Vector</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DEFAULT_CAPACITY</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="c1">//容量为c、规模为s、所有元素初始为v</span>
 <span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="n">_elem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="n">_capacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">];</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">_size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="n">_elem</span><span class="p">[</span><span class="n">_size</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">//s&lt;=c</span>
@@ -5206,8 +5353,8 @@
 <span class="w">   </span><span class="kt">bool</span><span class="w"> </span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">!</span><span class="n">_size</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">//判空</span>
 <span class="w">   </span><span class="n">Rank</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">_size</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">//无序向量整体查找</span>
 <span class="w">   </span><span class="n">Rank</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"> </span><span class="c1">//无序向量区间查找</span>
-<span class="w">   </span><span class="n">Rank</span><span class="w"> </span><span class="nf">search</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="c1">//有序向量整体查找</span>
-<span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">_size</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">search</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">_size</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="n">Rank</span><span class="w"> </span><span class="n">search</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="c1">//有序向量整体查找</span>
+<span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">_size</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">search</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">_size</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 <span class="w">   </span><span class="n">Rank</span><span class="w"> </span><span class="n">search</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"> </span><span class="c1">//有序向量区间查找</span>
 <span class="c1">// 可写访问接口</span>
 <span class="w">   </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[]</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//重载下标操作符，可以类似于数组形式引用各元素</span>
@@ -5275,11 +5422,11 @@
 </ol>
 <p>此时函数返回的结果不一定唯一。约定二分查找算法返回不大于待查元素的最后一个元素的位置。</p>
 <p>二分查找通过尽可能减少递归深度的方式减少时间复杂度，由此，每一次递归的不同分支应有相同的期望时间消耗（即转向成本）。此处的“二分”只是在数组区间的意义上二等分，若对于如下条件语句：</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">)</span>
 <span class="w">    </span><span class="c1">// statement</span>
-<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">B</span><span class="p">)</span><span class="w"></span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">B</span><span class="p">)</span>
 <span class="w">    </span><span class="c1">// statement</span>
-<span class="k">else</span><span class="w"></span>
+<span class="k">else</span>
 <span class="w">    </span><span class="c1">// statement</span>
 </code></pre></div>
 <p>左右两个跳转位于不同的分支，需要进行比较的次数不同，因此所需的时间在严格意义上是不同的。可以通过改变轴点位置，将同一递归深度下比较的期望次数调整为相同，从而降低平均查找长度，在常系数程度上对算法进行优化。</p>
@@ -5306,10 +5453,10 @@
 <span class="cm">* Junhui DENG, deng@tsinghua.edu.cn</span>
 <span class="cm">* Computer Science &amp; Technology, Tsinghua University</span>
 <span class="cm">* Copyright (c) 2003-2020. All rights reserved.</span>
-<span class="cm">******************************************************************************************/</span><span class="w"></span>
+<span class="cm">******************************************************************************************/</span>
 
 <span class="c1">// 二分查找算法（版本C）：在有序向量的区间[lo, hi)内查找元素e，0 &lt;= lo &lt;= hi &lt;= _size</span>
-<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">binSearch</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">binSearch</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">lo</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//每步迭代仅需做一次比较判断，有两个分支</span>
 <span class="w">      </span><span class="n">Rank</span><span class="w"> </span><span class="n">mi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">lo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">//以中点为轴点（区间宽度的折半，等效于宽度之数值表示的右移）</span>
 <span class="w">      </span><span class="p">(</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">mi</span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mi</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">lo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mi</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">//经比较后确定深入[lo, mi)或(mi, hi)</span>
@@ -5357,13 +5504,13 @@
 </ul>
 <details class="归并排序">
 <summary>归并排序</summary>
-<p><div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">mergeSort</span><span class="p">(</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">mergeSort</span><span class="p">(</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">Rank</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lo</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="c1">//单元素区间自然有序，否则...</span>
 <span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">mi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">lo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hi</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">//以中点为界</span>
 <span class="w">   </span><span class="n">mergeSort</span><span class="p">(</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">mi</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//对前半段排序</span>
 <span class="w">   </span><span class="n">mergeSort</span><span class="p">(</span><span class="w"> </span><span class="n">mi</span><span class="p">,</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//对后半段排序</span>
 <span class="w">   </span><span class="n">merge</span><span class="p">(</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">mi</span><span class="p">,</span><span class="w"> </span><span class="n">hi</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//归并</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </code></pre></div>
   <a href="https://dsa.cs.tsinghua.edu.cn/~deng/ds/src_link/vector/vector_mergesort.h.htm">Reference</a></p>
 </details>
@@ -5385,9 +5532,9 @@
 <p>基于位运算的实现如下：</p>
 <details class="位图方法实现">
 <summary>位图方法实现</summary>
-<p><div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">M</span><span class="p">[</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mh">0x80</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x07</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">set</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">expand</span><span class="p">(</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="n">M</span><span class="p">[</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mh">0x80</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x07</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">expand</span><span class="p">(</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="n">M</span><span class="p">[</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="p">(</span><span class="w"> </span><span class="mh">0x80</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x07</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">M</span><span class="p">[</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mh">0x80</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x07</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">set</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">expand</span><span class="p">(</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="n">M</span><span class="p">[</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mh">0x80</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x07</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">expand</span><span class="p">(</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="n">M</span><span class="p">[</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="p">(</span><span class="w"> </span><span class="mh">0x80</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x07</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
   <a href="https://dsa.cs.tsinghua.edu.cn/~deng/ds/src_link/bitmap/bitmap.h.htm">Reference</a></p>
 </details>
@@ -5417,24 +5564,24 @@
 <p>“校验环”位图的实现：</p>
 <details class="位图">
 <summary>位图</summary>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">set</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top</span><span class="p">;</span><span class="w"></span>
-<span class="w">   </span><span class="n">B</span><span class="p">[</span><span class="n">top</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">];</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">top</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="n">A</span><span class="p">[</span><span class="n">B</span><span class="p">[</span><span class="o">--</span><span class="n">top</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="p">;</span><span class="w"></span>
-<span class="w">   </span><span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">top</span><span class="p">];</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="n">top</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">set</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top</span><span class="p">;</span>
+<span class="w">   </span><span class="n">B</span><span class="p">[</span><span class="n">top</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">top</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="n">A</span><span class="p">[</span><span class="n">B</span><span class="p">[</span><span class="o">--</span><span class="n">top</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="p">;</span>
+<span class="w">   </span><span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">top</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="n">top</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 </details>
 <h2 id="_19">列表<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
@@ -5460,7 +5607,7 @@
 <span class="cm"> * Junhui DENG, deng@tsinghua.edu.cn</span>
 <span class="cm"> * Computer Science &amp; Technology, Tsinghua University</span>
 <span class="cm"> * Copyright (c) 2003-2020. All rights reserved.</span>
-<span class="cm"> ******************************************************************************************/</span><span class="w"></span>
+<span class="cm"> ******************************************************************************************/</span>
 
 <span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Rank</span><span class="p">;</span><span class="w"> </span><span class="c1">//秩</span>
 <span class="cp">#define ListNodePosi(T) ListNode&lt;T&gt;* </span><span class="c1">//列表节点位置</span>
@@ -5470,12 +5617,12 @@
 <span class="w">   </span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"> </span><span class="n">ListNodePosi</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="n">pred</span><span class="p">;</span><span class="w"> </span><span class="n">ListNodePosi</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="n">succ</span><span class="p">;</span><span class="w"> </span><span class="c1">//数值、前驱、后继</span>
 <span class="c1">// 构造函数</span>
 <span class="w">   </span><span class="n">ListNode</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">//针对header和trailer的构造</span>
-<span class="w">   </span><span class="n">ListNode</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">ListNodePosi</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">ListNodePosi</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">ListNode</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">ListNodePosi</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">ListNodePosi</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span>
 <span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="n">pred</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="n">succ</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">//默认构造器</span>
 <span class="c1">// 操作接口</span>
 <span class="w">   </span><span class="n">ListNodePosi</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="n">insertAsPred</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//紧靠当前节点之前插入新节点</span>
 <span class="w">   </span><span class="n">ListNodePosi</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="n">insertAsSucc</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//紧随当前节点之后插入新节点</span>
-<span class="p">};</span><span class="w"></span>
+<span class="p">};</span>
 </code></pre></div>
   <a href="https://dsa.cs.tsinghua.edu.cn/~deng/ds/src_link/list/listnode.h.htm">Reference</a></p>
 </details>

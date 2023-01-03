@@ -554,6 +554,16 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
@@ -584,6 +594,76 @@
     <li class="md-nav__item">
       <a href="../../../aoe2/civs/aztecs/" class="md-nav__link">
         阿兹特克
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bengalis/" class="md-nav__link">
+        孟加拉
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/berbers/" class="md-nav__link">
+        柏柏尔
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bohemians/" class="md-nav__link">
+        波希米亚
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/britons/" class="md-nav__link">
+        不列颠
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aoe2/civs/bulgarians/" class="md-nav__link">
+        保加利亚
       </a>
     </li>
   
@@ -1146,6 +1226,8 @@
         
           
             
+          
+        
           
         
           
@@ -1798,6 +1880,71 @@
     <li class="md-nav__item">
       <a href="../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         随机需求下的库存控制
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../math/random-process/">随机过程</a>
+          
+            <label for="__nav_6_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="随机过程" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          随机过程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/random-process/basics/" class="md-nav__link">
+        预备知识
       </a>
     </li>
   
@@ -4816,26 +4963,26 @@
 <h1 id="ssh">SSH<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h1>
 <h2 id="_1">基本使用<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>SSH可以远程连接服务器的终端。命令格式如下，其中<code>&lt;user&gt;</code>为远程服务器上的用户名，<code>&lt;hostname&gt;</code>是远程服务器的网络地址，可以是IP地址或域名，也可以是<code>~/.ssh/config</code>文件中定义的主机。如果指定了<code>&lt;command&gt;</code>参数，则SSH在连接成功后会自动执行命令，将结果输出到终端并在执行结束后断开连接。</p>
-<div class="highlight"><pre><span></span><code>ssh &lt;user&gt;@&lt;hostname&gt; <span class="o">[</span>&lt;command&gt;<span class="o">]</span>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>&lt;user&gt;@&lt;hostname&gt;<span class="w"> </span><span class="o">[</span>&lt;command&gt;<span class="o">]</span>
 </code></pre></div>
 <p>若客户端的用户名和服务器的用户名相同，可以省略<code>&lt;user&gt;</code>参数，如</p>
-<div class="highlight"><pre><span></span><code>ssh &lt;hostname&gt; <span class="o">[</span>&lt;command&gt;<span class="o">]</span>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>&lt;hostname&gt;<span class="w"> </span><span class="o">[</span>&lt;command&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="_2">端口转发<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>SSH提供了<code>-L</code>、<code>-R</code>、<code>-D</code>参数，分别可以实现本地端口转发、远程端口转发与动态端口转发。使用<code>-N</code>参数可以在不连接远程终端，只实现端口转发。为清晰表述各个端口，本节中假设客户端A、服务器B和另一主机C。客户端A通过SSH连接至服务器B。</p>
 <h3 id="_3">本地端口转发<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>使用<code>-L</code>参数可以打开SSH的本地端口转发功能。由于<code>-L</code>参数将指向客户端本地的请求转发给服务器，因此称为本地端口转发。启动本地端口转发的命令格式如下</p>
-<div class="highlight"><pre><span></span><code>ssh -L <span class="o">[</span>&lt;bind-addr&gt;<span class="o">]</span>:&lt;port-of-A&gt;:&lt;addr-of-C&gt;:&lt;port-of-C&gt; &lt;user&gt;@&lt;hostname&gt;
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-L<span class="w"> </span><span class="o">[</span>&lt;bind-addr&gt;<span class="o">]</span>:&lt;port-of-A&gt;:&lt;addr-of-C&gt;:&lt;port-of-C&gt;<span class="w"> </span>&lt;user&gt;@&lt;hostname&gt;
 </code></pre></div>
 <p>以上命令表示将客户端A上指向<code>&lt;port-of-A&gt;</code>端口的本地请求通过SSH转发给服务器B，由服务器B向远程主机<code>&lt;addr-of-C&gt;</code>的<code>&lt;port-of-C&gt;</code>端口发起请求。若指定<code>&lt;bind-addr&gt;</code>，则SSH会监听<code>&lt;bind-addr&gt;</code>地址，并只转发目标为<code>&lt;bind-addr&gt;</code>的请求。</p>
 <h3 id="_4">远程端口转发<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>使用<code>-R</code>参数可以打开SSH的远程端口转发功能。<code>-R</code>端口将指向远程服务器的请求转发给客户端，因此称为远程端口转发。启动远程端口转发的命令格式如下</p>
-<div class="highlight"><pre><span></span><code>ssh -R <span class="o">[</span>&lt;bind-addr&gt;<span class="o">]</span>:&lt;port-of-B&gt;:&lt;addr-of-C&gt;:&lt;port-of-C&gt; &lt;user&gt;@&lt;hostname&gt;
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-R<span class="w"> </span><span class="o">[</span>&lt;bind-addr&gt;<span class="o">]</span>:&lt;port-of-B&gt;:&lt;addr-of-C&gt;:&lt;port-of-C&gt;<span class="w"> </span>&lt;user&gt;@&lt;hostname&gt;
 </code></pre></div>
 <p>以上命令表示将服务器B上指向<code>&lt;port-of-B&gt;</code>端口的请求通过SSH转发给客户端A，由客户端A向另一台主机<code>&lt;addr-of-C&gt;</code>的<code>&lt;port-of-C&gt;</code>端口发起请求。若指定<code>&lt;bind-addr&gt;</code>，则SSH会监听<code>&lt;bind-addr&gt;</code>地址，并只转发目标为<code>&lt;bind-addr&gt;</code>的请求。</p>
 <h3 id="_5">动态端口转发<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>动态端口转发的命令格式如下</p>
-<div class="highlight"><pre><span></span><code>ssh -D &lt;port-of-A&gt; &lt;user&gt;@&lt;hostname&gt;
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-D<span class="w"> </span>&lt;port-of-A&gt;<span class="w"> </span>&lt;user&gt;@&lt;hostname&gt;
 </code></pre></div>
 <p>以上命令表示将客户端A上指向<code>&lt;port-of-A&gt;</code>的请求通过SSH转发给服务器B，由B代为发起请求，并将访问结果传输回本地。</p>
 <p>若要转发所有本地网络请求，设置SOCKS5代理将本地请求重定向到<code>&lt;port-of-A&gt;</code>即可。</p>
@@ -4847,7 +4994,7 @@
 </ol>
 <h2 id="_7">文件传输<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><code>scp</code>可以借助SSH tunnel实现文件传输。命令格式如下</p>
-<div class="highlight"><pre><span></span><code>scp SOURCE DESTINATION
+<div class="highlight"><pre><span></span><code>scp<span class="w"> </span>SOURCE<span class="w"> </span>DESTINATION
 </code></pre></div>
 <p>表示将文件SOURCE复制到DESTINATION下。SOURCE和DESTINATION可以是：</p>
 <ol>
