@@ -160,7 +160,7 @@ The blog relies on the following open-source projects:
 * [requests](https://github.com/psf/requests)
 * [lxml](https://github.com/lxml/lxml)
 
-The blog uses the following mkdocs plugin to function correctly.
+The blog uses the following mkdocs plugins to function correctly.
 
 * [Neoteroi/mkdocs-plugins](https://github.com/Neoteroi/mkdocs-plugins)
 * [lukasgeiter/mkdocs-awesome-pages-plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin)
@@ -170,6 +170,7 @@ The blog uses the following mkdocs plugin to function correctly.
 * [facelessuser/mkdocs-material-extensions](https://github.com/facelessuser/mkdocs-material-extensions)
 * [fralau/mkdocs_macros_plugin](https://github.com/fralau/mkdocs_macros_plugin)
 * [danielfrg/mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter)
+* [prcr/mkdocs-meta-descriptions-plugin](https://github.com/prcr/mkdocs-meta-descriptions-plugin)
 
 Unless noted, content in this blog are shared under [CC-BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 
