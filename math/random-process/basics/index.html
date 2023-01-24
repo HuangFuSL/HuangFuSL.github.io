@@ -1919,6 +1919,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -1987,10 +1991,86 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    随机变量与分布函数
+  </a>
+  
+    <nav class="md-nav" aria-label="随机变量与分布函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    随机变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    数字特征
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    常见随机变量的分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    条件数学期望
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    随机过程
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../poisson/" class="md-nav__link">
+        泊松过程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notations/" class="md-nav__link">
+        记号
+      </a>
     </li>
   
 
@@ -4841,6 +4921,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    随机变量与分布函数
+  </a>
+  
+    <nav class="md-nav" aria-label="随机变量与分布函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    随机变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    数字特征
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    常见随机变量的分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    条件数学期望
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    随机过程
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4868,7 +4996,7 @@
 <h2 id="_2">可测空间、概率空间与概率测度<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><span class="arithmatex">\(\renewcommand{\geq}{\geqslant}\renewcommand{\leq}{\leqslant}\)</span>
 当一个试验的结果无法预先确定时，称该实验为<strong>随机试验</strong>。随机试验可能出现的所有结果集合构成样本空间<span class="arithmatex">\(\Omega\)</span>，每个可能的结果称为样本点<span class="arithmatex">\(\omega\)</span>。<span class="arithmatex">\(\Omega\)</span>的子集构成的集合称为<strong>集类</strong><span class="arithmatex">\(\mathcal F\)</span>。</p>
-<div class="admonition note">
+<div class="admonition definition">
 <p class="admonition-title">可测空间</p>
 <p>设<span class="arithmatex">\(\mathcal F\)</span>为由<span class="arithmatex">\(\Omega\)</span>的某些子集构成的非空集类，若满足以下条件：</p>
 <ol>
@@ -4877,13 +5005,9 @@
 </ol>
 <p>称<span class="arithmatex">\(\mathcal F\)</span>为<strong><span class="arithmatex">\(\sigma\)</span>域</strong>，<span class="arithmatex">\((\Omega, \mathcal F)\)</span>为<strong>可测空间</strong>。</p>
 </div>
-<div class="admonition tip inline end">
-<p class="admonition-title">Tip</p>
-<p>若一个集合<span class="arithmatex">\(A\)</span>中的元素可以以序列<span class="arithmatex">\(\{a_n\}\)</span>的形式表示，即存在一个<span class="arithmatex">\(\mathbb N_+\rightarrow A\)</span>的双射，称集合<span class="arithmatex">\(A\)</span>为可列集。</p>
-</div>
 <p><span class="arithmatex">\(\sigma\)</span>域<span class="arithmatex">\(\mathcal F\)</span>对<span class="arithmatex">\(\cap, \cup, -\)</span>运算封闭，任何元素经过可列次运算后仍属于<span class="arithmatex">\(\mathcal F\)</span>。</p>
 <p>对于集类<span class="arithmatex">\(\mathcal A\)</span>，包含<span class="arithmatex">\(\mathcal A\)</span>的<span class="arithmatex">\(\sigma\)</span>域的交称为<span class="arithmatex">\(\mathcal A\)</span>生成的<span class="arithmatex">\(\sigma\)</span>域，记作<span class="arithmatex">\(\sigma(\mathcal A)\)</span>。如：<span class="arithmatex">\(\sigma(\{\varnothing, A, \Omega\}) = \{\varnothing, A, A^C, \Omega\}\)</span>。特殊地，记<span class="arithmatex">\(\mathcal B = \sigma(\{(-\infty, \alpha], \forall \alpha \in \mathbb R\})\)</span>为Borel域。Borel域解决了样本空间在<span class="arithmatex">\(\mathbb R\)</span>上连续的问题。可以证明，<span class="arithmatex">\(\forall a &lt; b, [a, b]\in \mathcal B, (a, b]\in \mathcal B, [a, b)\in \mathcal B, (a, b)\in \mathcal B\)</span>。定义<span class="arithmatex">\(\mathcal B[a, b]\)</span>为限制在<span class="arithmatex">\([a, b]\)</span>上的Borel域。</p>
-<div class="admonition note">
+<div class="admonition definition">
 <p class="admonition-title">概率测度与概率空间</p>
 <p>设<span class="arithmatex">\((\Omega, \mathcal F)\)</span>为可测空间，<span class="arithmatex">\(P: \mathcal F\rightarrow [0, 1]\)</span>为定义在<span class="arithmatex">\(\mathcal F\)</span>上的集函数。且<span class="arithmatex">\(P\)</span>满足</p>
 <ol>
@@ -4928,7 +5052,7 @@ P\left(\bigcup_{i=1}^n A_i\right) = \sum_{i=1}^n P(A_i) - \sum_{1\leq i &lt; j\l
 \lim_{n\rightarrow\infty}P(A_n) = P\left(\lim_{n\rightarrow\infty} A_n\right)
 \]</div>
 <p>可以证明，单点集<span class="arithmatex">\(\{a\}\)</span>为事件列<span class="arithmatex">\(\{[a, a+1/n], n &gt; 0\}\)</span>的极限。</p>
-<div class="admonition note">
+<div class="admonition theorem">
 <p class="admonition-title">Borel-Cantelli引理</p>
 <p>设<span class="arithmatex">\(\{A_n, n\geq 1\}\)</span>为事件序列，满足<span class="arithmatex">\(\sum_{i=1}^\infty P(A_i) &lt; \infty\)</span>，则</p>
 <div class="arithmatex">\[
@@ -4948,13 +5072,178 @@ P(A_{i_1}\cap\cdots\cap A_{i_k}) = P(A_{i_1})\cdots P(A_{i_k})
 <div class="arithmatex">\[
 P\left(\lim_{i\rightarrow\infty}\sup A_i\right) \triangleq P\left(\bigcap_{n=1}^\infty \bigcup_{i=n}^\infty A_i\right) = 1
 \]</div>
+<h2 id="_3">随机变量与分布函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>设样本空间为<span class="arithmatex">\(\Omega\)</span>。</p>
+<h3 id="_4">随机变量<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>设<span class="arithmatex">\((\Omega, \mathcal F, P)\)</span>为概率空间，<span class="arithmatex">\(X(\omega)\)</span>为定义在<span class="arithmatex">\(\Omega\)</span>上的单值实函数，即<span class="arithmatex">\(X: \Omega\rightarrow \R\)</span>，若<span class="arithmatex">\(\forall a\in \R\)</span>，有<span class="arithmatex">\(\{\omega:  X(\omega) \leq a\}\in \mathcal F\)</span>，称<span class="arithmatex">\(X(\omega)\)</span>为随机变量，简记为<span class="arithmatex">\(X\)</span>。定义<span class="arithmatex">\(F(x) = P(X\leq x) = P(X\in (-\infty, X])\)</span>为<span class="arithmatex">\(X\)</span>的分布函数。</p>
+<ul>
+<li>离散型随机变量：随机变量<span class="arithmatex">\(X\)</span>的可能取值的全体是可列集或者有限集。</li>
+<li>
+<p>连续型随机变量：若<span class="arithmatex">\(\forall B\in \mathcal F\)</span>，存在一个函数<span class="arithmatex">\(f(x)\)</span>满足</p>
+<div class="arithmatex">\[
+P(X\in B) = \int_B f(x)\mathrm dx
+\]</div>
+<p>称<span class="arithmatex">\(X\)</span>为连续型随机变量，<span class="arithmatex">\(f(x)\)</span>为<span class="arithmatex">\(X\)</span>的概率密度函数。</p>
+</li>
+</ul>
+<div class="admonition definition">
+<p class="admonition-title">概率密度函数与概率分布函数</p>
+<p>根据概率分布函数的定义，有</p>
+<div class="arithmatex">\[
+P(x &lt; X\leq x + h) = F(x + h) - F(x) = \int_{x}^{x + h} f(x)\mathrm dx = f(x)h + o(h)
+\]</div>
+<p>令<span class="arithmatex">\(h\rightarrow 0\)</span>并取极限，得到</p>
+<div class="arithmatex">\[
+\frac{\mathrm dF(x)}{\mathrm dx} = \lim_{h\rightarrow 0} \frac{F(x + h) - F(x)}{h} = f(x)
+\]</div>
+</div>
+<p>对于二维随机变量<span class="arithmatex">\(X, Y\)</span>，定义联合分布函数为<span class="arithmatex">\(F(x, y) = P(X\leq x, Y\leq y)\)</span>，边缘分布为<span class="arithmatex">\(F_X(x) = P(X\leq x), F_Y = P(Y\leq y)\)</span>。同理可以定义概率密度函数<span class="arithmatex">\(f(x, y)\)</span>：</p>
+<div class="arithmatex">\[
+F(x, y) = \int_{-\infty}^x\int_{-\infty}^y f(v, u)\mathrm du\mathrm dv
+\]</div>
+<p>若<span class="arithmatex">\(F(x, y) = F_X(x)F_Y(y)\)</span>，称<span class="arithmatex">\(X\)</span>与<span class="arithmatex">\(Y\)</span>相互独立。</p>
+<h3 id="_5">数字特征<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>设<span class="arithmatex">\(X\)</span>为随机变量，分布函数为<span class="arithmatex">\(F(x)\)</span>，若<span class="arithmatex">\(\int_{-\infty}^\infty |x|\mathrm dF(x)\)</span>存在，则定义<span class="arithmatex">\(X\)</span>的期望<span class="arithmatex">\(E(X)\)</span>为</p>
+<div class="arithmatex">\[
+E(X) = \int_{-\infty}^\infty x\mathrm dF(x)
+\]</div>
+<p>数学期望<span class="arithmatex">\(E(X)\)</span>满足</p>
+<ul>
+<li>
+<p>可加性</p>
+<div class="arithmatex">\[
+E\left(\sum_{i=1}^n c_iX_i\right) = \sum_{i=1}^n c_iE(X_i)
+\]</div>
+</li>
+<li>
+<p>函数</p>
+<div class="arithmatex">\[
+E(g(x)) = \int_{-\infty}^\infty g(x)\mathrm dF(x)
+\]</div>
+</li>
+</ul>
+<p>对于离散型随机变量，有</p>
+<div class="arithmatex">\[
+E(X) = \sum_{i=1}^\infty x_nP(X = x_n)
+\]</div>
+<p>对于连续型随机变量，有</p>
+<div class="arithmatex">\[
+E(X) = \int_{-\infty}^\infty xf(x)\mathrm dx
+\]</div>
+<p>若随机变量<span class="arithmatex">\(X, Y\)</span>相互独立，则有</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    E(XY) &amp;= \int_{-\infty}^\infty \int_{-\infty}^\infty xyf(x, y)\mathrm dx\mathrm dy \\
+    &amp;= \int_{-\infty}^\infty \int_{-\infty}^\infty xyf_X(x)f_Y(y)\mathrm dx\mathrm dy \\
+    &amp;= \int_{-\infty}^\infty xf_X(x)\mathrm dx\int_{-\infty}^\infty yf_Y(y)\mathrm dy \\
+    &amp;= E(X)E(Y)
+\end{aligned}
+\]</div>
+<p>定义随机变量<span class="arithmatex">\(X\)</span>的方差为<span class="arithmatex">\(\sigma_X^2 = D(X) = E(X - E(X)) = E(X^2) - E^2(X)\)</span>，定义随机变量<span class="arithmatex">\(X, Y\)</span>的协方差为<span class="arithmatex">\(\mathrm{cov}(X, Y) = E(XY) - E(X)E(Y)\)</span>，相关系数为<span class="arithmatex">\(\rho = \mathrm{cov}(X, Y) / (\sigma_X\sigma_Y)\)</span>，<span class="arithmatex">\(k\)</span>阶矩为<span class="arithmatex">\(E(X^k)\)</span></p>
+<p>定义随机变量<span class="arithmatex">\(X\)</span>的矩母函数为<span class="arithmatex">\(\psi(t) = E\left(e^{tX}\right)\)</span>，特征函数为<span class="arithmatex">\(\phi(t) = E\left(e^{\mathbf itX}\right)\)</span></p>
+<p>矩母函数满足如下性质</p>
+<ol>
+<li><span class="arithmatex">\(E\left(X^k\right) = \psi^{(k)}(0)\)</span></li>
+<li>设随机变量<span class="arithmatex">\(X, Y\)</span>的分布函数为<span class="arithmatex">\(F_X(t), F_Y(t)\)</span>，矩母函数为<span class="arithmatex">\(\psi_X(t), \psi_Y(t)\)</span>，则<span class="arithmatex">\(\psi_X(t) = \psi_Y(t) \Leftrightarrow F_X(t) = F_Y(t)\)</span></li>
+</ol>
+<p>特征函数满足如下性质</p>
+<ol>
+<li>设随机变量<span class="arithmatex">\(X, Y\)</span>的分布函数为<span class="arithmatex">\(F_X(t), F_Y(t)\)</span>，特征函数为<span class="arithmatex">\(\phi_X(t), \phi_Y(t)\)</span>，则<span class="arithmatex">\(\phi_X(t) = \phi_Y(t) \Leftrightarrow F_X(t) = F_Y(t)\)</span></li>
+<li><span class="arithmatex">\(i^kE(X^k) = \phi^{(k)}(0)\)</span></li>
+<li>若<span class="arithmatex">\(X, Y\)</span>相互独立，有<span class="arithmatex">\(\phi_{X+Y}(t) = \phi_{X}(t) + \phi_{Y}(t)\)</span></li>
+</ol>
+<h3 id="_6">常见随机变量的分布<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>二项分布：<span class="arithmatex">\(X\sim B(n, p)\)</span></p>
+<div class="arithmatex">\[
+P(X = k) = \binom{n}{k} p^k(1 - p)^{n - k}
+\]</div>
+</li>
+<li>
+<p>泊松分布：<span class="arithmatex">\(X\sim P(\lambda)\)</span></p>
+<div class="arithmatex">\[
+P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda}
+\]</div>
+</li>
+<li>
+<p>几何分布：<span class="arithmatex">\(X\sim G(p)\)</span></p>
+<div class="arithmatex">\[
+P(X = k) = (1 - p)^{k - 1}p
+\]</div>
+</li>
+<li>
+<p>均匀分布：<span class="arithmatex">\(X\sim U(a, b)\)</span></p>
+<div class="arithmatex">\[
+f(x) = \left\{\begin{aligned}
+    &amp; \frac{1}{b-a} &amp; a &lt; x &lt; b \\
+    &amp; 0 &amp; \text{otherwise}
+\end{aligned}\right.
+\]</div>
+</li>
+<li>
+<p>正态分布：<span class="arithmatex">\(X\sim N(\mu, \sigma^2)\)</span></p>
+<div class="arithmatex">\[
+f(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+\]</div>
+</li>
+<li>
+<p>指数分布：<span class="arithmatex">\(X\sim E(\lambda)\)</span></p>
+<div class="arithmatex">\[
+f(x) = \left\{\begin{aligned}
+    &amp; \lambda e^{-\lambda x} &amp; x\geq 0 \\
+    &amp; 0 &amp; x &lt; 0
+\end{aligned}\right.
+\]</div>
+</li>
+</ol>
+<h3 id="_7">条件数学期望<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>对于连续随机变量，条件数学期望<span class="arithmatex">\(E(X|Y = y)\)</span>的定义如下：</p>
+<div class="arithmatex">\[
+E(X|Y = y) = \int{-\infty}^\infty x\frac{f(x, y)}{f_Y(y)}\mathrm dx
+\]</div>
+<p>定义<span class="arithmatex">\(E(X|Y)\)</span>为<span class="arithmatex">\(X\)</span>关于<span class="arithmatex">\(Y\)</span>的条件数学期望</p>
+<div class="arithmatex">\[
+E(X|Y) = \sum_j \boldsymbol 1_{\{Y = y_j\}}(\omega)E(X|Y=y_j)
+\]</div>
+<p>对于离散随机变量，条件数学期望<span class="arithmatex">\(E(X|Y = y)\)</span>的定义如下：</p>
+<div class="arithmatex">\[
+E(X|Y = y) = \sum_i x_iP(X=x_i | Y=y)
+\]</div>
+<p>显然，<span class="arithmatex">\(E(X|Y = y)\)</span>是<span class="arithmatex">\(y\)</span>的函数，定义随机变量<span class="arithmatex">\(E(X|Y)\)</span>为<span class="arithmatex">\(X\)</span>关于<span class="arithmatex">\(Y\)</span>的条件期望，若<span class="arithmatex">\(E(X|Y)\)</span>满足</p>
+<ol>
+<li><span class="arithmatex">\(E(X|Y)\)</span>是<span class="arithmatex">\(Y\)</span>的函数，当<span class="arithmatex">\(Y = y\)</span>时，<span class="arithmatex">\(E(X|Y) = E(X|Y = y)\)</span></li>
+<li>
+<p><span class="arithmatex">\(\forall D\in \mathcal B\)</span>，有</p>
+<div class="arithmatex">\[
+E[E(X|Y)|Y\in D] = E(X|Y\in D)
+\]</div>
+</li>
+</ol>
+<div class="admonition theorem">
+<p class="admonition-title">条件数学期望的性质</p>
+<p>条件数学期望满足如下性质：</p>
+<ol>
+<li><span class="arithmatex">\(E(E(X|Y)) = EX\)</span></li>
+<li>若<span class="arithmatex">\(X, Y\)</span>相互独立，则<span class="arithmatex">\(E(X|Y) = EX\)</span></li>
+<li><span class="arithmatex">\(E[g(X)h(Y)|Y] = h(Y)E(g(X)|Y)\quad \text{a.s.}\)</span></li>
+</ol>
+</div>
+<h2 id="_8">随机过程<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>随机过程是一族无穷多个，相互有关的随机变量。设<span class="arithmatex">\(X(t, \omega)\)</span>为随机变量，其中<span class="arithmatex">\(t\in T\subset \R\)</span>为参数。称<span class="arithmatex">\(X_T = \{X(t, \omega), t\in T\}\)</span>为随机过程。</p>
+<ol>
+<li><span class="arithmatex">\(X(t, \omega)\)</span>可以简记为<span class="arithmatex">\(X(t)\)</span>；</li>
+<li>当<span class="arithmatex">\(T\)</span>为可列集时，称<span class="arithmatex">\(X_T\)</span>为随机序列；</li>
+<li><span class="arithmatex">\(X_T\)</span>的取值范围称为状态空间<span class="arithmatex">\(S\)</span>；</li>
+<li><span class="arithmatex">\(X(\cdot, \omega), \omega\in \Omega\)</span>是关于<span class="arithmatex">\(t\)</span>的函数，称为轨道。</li>
+</ol>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-01-03T05:35:08+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-01-03</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-01-18T11:21:47+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-01-18</span>
       
         <br>
         创建日期:
@@ -5050,13 +5339,13 @@ P\left(\lim_{i\rightarrow\infty}\sup A_i\right) \triangleq P\left(\bigcap_{n=1}^
       
       
         
-        <a href="../../../coding/" class="md-footer__link md-footer__link--next" aria-label="下一页: 写代码" rel="next">
+        <a href="../poisson/" class="md-footer__link md-footer__link--next" aria-label="下一页: 泊松过程" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              写代码
+              泊松过程
             </div>
           </div>
           <div class="md-footer__button md-icon">
