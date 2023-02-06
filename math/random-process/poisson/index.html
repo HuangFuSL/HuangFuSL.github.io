@@ -2008,6 +2008,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    相邻事件时间间隔的概率分布
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4876,6 +4883,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    相邻事件时间间隔的概率分布
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4925,7 +4939,123 @@ P[N(t + s) - N(s) = k] = \frac{(\lambda t)^k}{k!}e^{-\lambda t}
 \]</div>
 <details class="proof" open="open">
 <summary>证明</summary>
-<p>根据泊松过程的增量平稳性，</p>
+<p>根据泊松过程的增量平稳性，有</p>
+<div class="arithmatex">\[
+P(N(s + t) - N(s) = n) = P(N(t) = n)
+\]</div>
+<ol>
+<li>
+<p><span class="arithmatex">\(n = 0\)</span>时，有<span class="arithmatex">\(\{N(h + t) = 0, h &gt; 0\} = \{N(h+ t) - N(t) = 0, N(t) = 0, h &gt; 0\}\)</span>，根据增量独立性，有</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    P(N(h + t) = 0) &amp;= P(N(h + t) - N(t) = 0) P(N(t) = 0) \\
+    &amp;= P(N(h) = 0) P(N(t) = 0)
+\end{aligned}
+\]</div>
+<p>根据泊松过程的性质<span class="arithmatex">\(P(N(t + \Delta t) - N(t) = 1) = \lambda \Delta t + o(\Delta t)\)</span>，有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    \lim_{h\rightarrow 0} \frac{P(t + h) - P(t)}{h} &amp;= \lim_{h\rightarrow 0} \frac{P(t)(1 - \lambda h - o(h)) - P(t)}{h} \\
+    &amp;= -\lambda P(t) - \lim_{h\rightarrow 0} \frac{o(h)}{h} \\
+    &amp;= -\lambda P(t)
+\end{aligned}
+\]</div>
+<p>解微分方程<span class="arithmatex">\(P_0'(t) = -\lambda P_0(t)\)</span>，解得<span class="arithmatex">\(P_0(t) = e^{-\lambda t + C}\)</span>，又因为<span class="arithmatex">\(N(0) = 0, P_0(N(0) = 0) = 1\)</span>，得<span class="arithmatex">\(C = 0\)</span>，从而有</p>
+<div class="arithmatex">\[
+P_0(t) = e^{-\lambda t}
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(n &gt; 0\)</span>时，<span class="arithmatex">\(\{N(t + h) = n\} = \bigcup_{k = 0} ^ n \{N(t) = k, N(t + h) - N(t) = (n - k)\}\)</span>，而<span class="arithmatex">\(n - k \geq 2\)</span>时，有<span class="arithmatex">\(P(N(t + h) - N(t) = n - k) = o(h)\)</span>，由增量独立性</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    P(N(t + h) = n) &amp;= \sum_{k = 0} ^ n P(N(t) = k) P(N(t + h) - N(t) = n - k) \\
+    &amp;= P(N(t) = n)(1 - \lambda t - o(h)) + P(N(t) = n - 1)(\lambda t + o(h)) \\
+    &amp;+ \sum_{k = 2}^n P(N(t) = n - k)o(h)
+\end{aligned}
+\]</div>
+<p>由此</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    &amp;\lim_{h\rightarrow 0} \frac{P(N(t + h) = n) - P(N(t) = n)}{h} \\
+    =&amp; \lim_{h\rightarrow 0}\frac{P(N(t) = n)(\sum_{k = 2}^n P(N(t) = n - k)o(h) - P(N(t) = n)}{h} \\
+    +&amp; \lim_{h\rightarrow 0}\frac{\sum_{k = 2}^n P(N(t) = n - k)o(h) - P(N(t) = n)}{h} \\
+    =&amp; \lim_{h\rightarrow 0}\frac{P(N(t) = n)(- \lambda t) + P(N(t) = n - 1)(\lambda t)}{h} \\
+\end{aligned}
+\]</div>
+<p>得到</p>
+<div class="arithmatex">\[
+P_n'(t) = -\lambda P_n(t) + \lambda P_{n-1}(t)
+\]</div>
+<p>考虑约束条件<span class="arithmatex">\(P_n(0) = 0\)</span>，解得</p>
+<div class="arithmatex">\[
+\frac{\mathrm d}{\mathrm dt}[e^{\lambda t} P_n(t)] = \lambda e^{\lambda t}P_{n - 1}(t)
+\]</div>
+<ol>
+<li><span class="arithmatex">\(n = 0\)</span>时，有<span class="arithmatex">\(P_n(t) = e^{-\lambda t} = \frac{(\lambda t)^0}{0!}e^{-\lambda t}\)</span></li>
+<li>
+<p>设对于<span class="arithmatex">\(n &lt; k\)</span>时命题成立，只需证明<span class="arithmatex">\(n = k\)</span>时命题成立即可，有</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    P_k(t) &amp;= e^{-\lambda t}\int \frac{\mathrm d}{\mathrm dt}[e^{\lambda t} P_k(t)] \mathrm dt \\
+    &amp;= e^{-\lambda t}\int \lambda e^{\lambda t}P_{k - 1}(t) \mathrm dt \\
+    &amp;= e^{-\lambda t}\int \lambda \frac{(\lambda t)^{k-1}}{(k-1)!} \mathrm dt \\
+    &amp;= \frac{(\lambda t)^k}{k!}e^{-\lambda t}
+\end{aligned}
+\]</div>
+</li>
+</ol>
+</li>
+</ol>
+</details>
+<h2 id="_3">相邻事件时间间隔的概率分布<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>设<span class="arithmatex">\(\{N(t), t \geq 0\}\)</span>为计数过程，设<span class="arithmatex">\(S_n\)</span>表示第<span class="arithmatex">\(n\)</span>个时间发生的时刻，即<span class="arithmatex">\(S_n = \inf\{t, t &gt; S_{n - 1}, N(t) = n\}\)</span>，特别地，令<span class="arithmatex">\(S_0 = 0\)</span>。<span class="arithmatex">\(S_n, N(t)\)</span>的事件满足</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    \{S_n \leq t\} &amp;\equiv \{N(t) \geq n\} \\
+    \{N(t) = n\} &amp;\equiv \{S_n\leq t &lt; S_{n + 1}\} \equiv \{S_n\leq t\} - \{S_{n+1}\leq t\}
+\end{aligned}
+\]</div>
+<p>由于<span class="arithmatex">\(\{S_n \leq t\} \equiv \{N(t) \geq n\}\)</span>，可以计算<span class="arithmatex">\(S_n\)</span>的分布函数</p>
+<div class="arithmatex">\[
+P(S_n\leq t) = P(N(t)\geq n) = 1 - e^{-\lambda t}\sum_{k=0}^{n-1} \frac{(\lambda t)^{k}}{k!}
+\]</div>
+<p>特别地，当<span class="arithmatex">\(n = 1\)</span>时，有<span class="arithmatex">\(P(X_1\leq t) = P(S_1\leq t) = (1 - e^{-\lambda t}) I_{\{t\geq 0\}}\)</span></p>
+<p>计数过程<span class="arithmatex">\(\{N(t), t\geq 0\}\)</span>是泊松过程的充要条件是<span class="arithmatex">\(\{X_n = S_{n} - S_{n-1}, n\geq 1\}\)</span>独立同分布，服从的分布为参数<span class="arithmatex">\(\lambda\)</span>的指数分布。</p>
+<details class="proof" open="open">
+<summary>证明</summary>
+<ol>
+<li>
+<p><span class="arithmatex">\(\Leftarrow\)</span>：必要性证明，先求<span class="arithmatex">\(S_1, \cdots, S_n\)</span>的联合概率密度函数，设<span class="arithmatex">\(t_1 &lt; t_2 &lt; \cdots &lt; t_n\)</span>，设<span class="arithmatex">\(h\)</span>为充分小的正数，满足</p>
+<div class="arithmatex">\[
+t_1 + \frac h2 &lt; t_2 - \frac h2 &lt; t_2 + \frac h2 &lt; \cdots &lt; t_n - \frac h2
+\]</div>
+<p>考虑如下事件</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    &amp;\left\{t_1 - \frac h2 &lt; S_1 \leq t_1 + \frac h2, t_2 - \frac h2 &lt; S_2 \leq t_2 + \frac h2, \cdots, t_n - \frac h2 &lt; S_n \leq t_n + \frac h2\right\}
+    &amp;\equiv \left\{N\left(t_1 - \frac h2\right) = 0, N\left(t_1 + \frac h2\right) - N\left(t_1 - \frac h2\right) = 1, N\left(t_2 - \frac h2\right) - N\left(t_1 + \frac h2\right) = 0, \cdots, N\left(t_n + \frac h2\right) - N\left(t_n - \frac h2\right) \geq 1\right}
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(\Rightarrow\)</span>：充分性证明，设<span class="arithmatex">\(\{X_k, k\geq 1\}\)</span>独立同指数分布，设<span class="arithmatex">\(S_0 = 0, S_n = S_0 + \sum_{i = 1}^n X_i\)</span>。定义</p>
+<div class="arithmatex">\[
+N(t) = \sum_{n=1}^\infty I_{\{S_n\leq t\}}
+\]</div>
+<ul>
+<li>由于<span class="arithmatex">\(I_{\{S_n\leq t\}}\in \mathbb N\)</span>，则<span class="arithmatex">\(N(t)\in \mathbb N\)</span>。</li>
+<li>
+<p>对于<span class="arithmatex">\(t &gt; s\)</span>，有</p>
+<div class="arithmatex">\[
+N(t) - N(s) = \sum_{n = 1}^\infty I_{\{S_n\leq t\}}- I_{\{S_n\leq s\}}
+\]</div>
+<p>而<span class="arithmatex">\(S_n - S_{n-1} = X_n &gt; 0\)</span>，因此<span class="arithmatex">\(S_n\)</span>为单调增序列，从而<span class="arithmatex">\(\{S_n\leq s\}\subset \{S_n\leq t\}\)</span>，即<span class="arithmatex">\(I_{\{S_n\leq t\}}- I_{\{S_n\leq s\}} \geq 0\)</span>，因此<span class="arithmatex">\(N(t) - N(s)\)</span></p>
+</li>
+</ul>
+<p>可得<span class="arithmatex">\(N(t)\)</span>为计数过程。以下证明<span class="arithmatex">\(N(t)\)</span>为泊松过程：</p>
+</li>
+</ol>
 </details>
 
   <hr>
@@ -4933,7 +5063,7 @@ P[N(t + s) - N(s) = k] = \frac{(\lambda t)^k}{k!}e^{-\lambda t}
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-01-18T11:21:47+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-01-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-04T06:14:19+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-04</span>
       
         <br>
         创建日期:
