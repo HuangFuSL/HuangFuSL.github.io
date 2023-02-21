@@ -8,3 +8,5 @@ nav:
   - 生产与运作管理: pom
   - 运作管理: operations-mamagement
   - 随机过程: random-process
+  - 应用数理统计: applied-statistics
+  - 凸优化: convex-optimization
