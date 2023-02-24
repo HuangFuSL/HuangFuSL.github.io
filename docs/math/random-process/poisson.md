@@ -132,14 +132,62 @@ $$
         t_1 + \frac h2 < t_2 - \frac h2 < t_2 + \frac h2 < \cdots < t_n - \frac h2
         $$
 
-        考虑如下事件
+        考虑事件$A$
 
         $$
         \begin{aligned}
-            &\left\{t_1 - \frac h2 < S_1 \leq t_1 + \frac h2, t_2 - \frac h2 < S_2 \leq t_2 + \frac h2, \cdots, t_n - \frac h2 < S_n \leq t_n + \frac h2\right\}
-            &\equiv \left\{N\left(t_1 - \frac h2\right) = 0, N\left(t_1 + \frac h2\right) - N\left(t_1 - \frac h2\right) = 1, N\left(t_2 - \frac h2\right) - N\left(t_1 + \frac h2\right) = 0, \cdots, N\left(t_n + \frac h2\right) - N\left(t_n - \frac h2\right) \geq 1\right}
+            A& \\
+            &\equiv \left\{t_1 - \frac h2 < S_1 \leq t_1 + \frac h2, t_2 - \frac h2 < S_2 \leq t_2 + \frac h2, \cdots, t_n - \frac h2 < S_n \leq t_n + \frac h2\right\} \\
+            \equiv & \left\{N\left(t_1 - \frac h2\right) = 0, N\left(t_{i+1} - \frac h2\right) - N\left(t_i + \frac h2\right) = 0, N\left(t_{i} + \frac h2\right) - N\left(t_{i} - \frac h2\right) = 1\right\} \\
+            & 0\leq i\leq n - 1
         \end{aligned}
         $$
+
+        而根据泊松过程的性质
+
+        $$
+        \begin{aligned}
+            P\left(N\left(t_n + \frac h2\right) - N\left(t_n - \frac h2\right)= 1\right) &= \lambda h + o(h) \\
+            P\left(N\left(t_n + \frac h2\right) - N\left(t_n - \frac h2\right)\geq 2\right) &= o(h) \\
+        \end{aligned}
+        $$
+
+        有
+
+        $$
+        P(A) = (\lambda h)^ne^{-\lambda (t_n + h/2)} + o\left(h^n\right) = \lambda ^nh^ne^{-\lambda t_n} + o\left(h^n\right)
+        $$
+
+        因此，$\left(S_1, \cdots, S_n\right)$的概率密度为
+
+        $$
+        f(t_1, \cdots, t_n) = \left\{
+        \begin{aligned}
+            & \lambda^n e^{-\lambda t_n} & 0 < t_1 < \cdots < t_n \\
+            & 0 & \mathrm{otherwise}
+        \end{aligned}
+        \right.
+        $$
+
+        而$X_n = S_n - S_{n-1}$，设$x_n = t_n - t_{n - 1}$，则$t_n = \sum_{i=1}^n x_n$，从而变换的Jacob矩阵为
+
+        $$
+        J = \frac{\partial (t_1, \cdots, t_n)}{\partial (x_1, \cdots, x_n)} = \begin{vmatrix}
+            1 & 0 & \cdots & 0 \\
+            1 & 1 & \cdots & 0 \\
+            \vdots & \vdots & \ddots & \vdots \\
+            1 & 1 & \cdots & 1
+        \end{vmatrix}
+        $$
+
+        因此$X_1, \cdots, X_n$的概率密度为
+
+        $$
+        g(x_1, \cdots, x_n) = \lambda^n e^{-\lambda (x_1 + \cdots + x_n)} = \prod_{i=1}^n \left(\lambda e^{-\lambda x_i}\right), x_i \geq 0
+        $$
+
+        因此$X_1, \cdots, X_n$独立同指数分布。
+
     2. $\Rightarrow$：充分性证明，设$\{X_k, k\geq 1\}$独立同指数分布，设$S_0 = 0, S_n = S_0 + \sum_{i = 1}^n X_i$。定义
 
         $$
@@ -155,4 +203,31 @@ $$
 
             而$S_n - S_{n-1} = X_n > 0$，因此$S_n$为单调增序列，从而$\{S_n\leq s\}\subset \{S_n\leq t\}$，即$I_{\{S_n\leq t\}}- I_{\{S_n\leq s\}} \geq 0$，因此$N(t) - N(s)$
 
-        可得$N(t)$为计数过程。以下证明$N(t)$为泊松过程：
+        可得$N(t)$为计数过程。以下计算$S_n$的分布。已知$X_1, \cdots, X_n$独立同指数分布，设$t_n = \sum_{i=1}^n x_i$，则$x_n = t_n - t_{n-1}$，从而Jacob矩阵为
+
+        $$
+        J = \frac{\partial (x_1, \cdots, x_n)}{\partial (t_1, \cdots, t_n)} = \begin{vmatrix}
+            1 & 0 & 0 & \cdots & 0 \\
+            -1 & 1 & 0 & \cdots & 0 \\
+            0 & -1 & 1 & \cdots & 0 \\
+            \vdots & \vdots & \vdots & \ddots & \vdots \\
+            0 & 0 & 0 & \cdots & 1
+        \end{vmatrix}
+        $$
+
+        而$X_1, \cdots, X_n$的联合概率密度为
+
+        $$
+        g(x_1, \cdots, x_n) = \lambda^n e^{-\lambda (x_1 + \cdots + x_n)} = \prod_{i=1}^n \left(\lambda e^{-\lambda x_i}\right), x_i \geq 0
+        $$
+
+        因此$S_1, \cdots, S_n$的联合概率密度为
+
+        $$
+        f(t_1, \cdots, t_n) = \left\{
+        \begin{aligned}
+            & \lambda^n e^{-\lambda t_n} & 0 < t_1 < \cdots < t_n \\
+            & 0 & \mathrm{otherwise}
+        \end{aligned}
+        \right.
+        $$
