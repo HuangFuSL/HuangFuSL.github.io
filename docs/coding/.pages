@@ -1,7 +1,8 @@
 nav:
   - index.md
+  - SVG动画: svg.md
   - Leetcode题解: leetcode
   - Python: python
-  - SVG动画: svg.md
+  - 机器学习: machine-learning
   - 数据结构: dsa
   - 系统配置: configuration
