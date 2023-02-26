@@ -95,7 +95,7 @@ $$
 
 ### 随机变量
 
-设$(\Omega, \mathcal F, P)$为概率空间，$X(\omega)$为定义在$\Omega$上的单值实函数，即$X: \Omega\rightarrow \R$，若$\forall a\in \R$，有$\{\omega:  X(\omega) \leq a\}\in \mathcal F$，称$X(\omega)$为随机变量，简记为$X$。定义$F(x) = P(X\leq x) = P(X\in (-\infty, X])$为$X$的分布函数。
+设$(\Omega, \mathcal F, P)$为概率空间，$X(\omega)$为定义在$\Omega$上的单值实函数，即$X: \Omega\rightarrow \mathbb R$，若$\forall a\in \mathbb R$，有$\{\omega:  X(\omega) \leq a\}\in \mathcal F$，称$X(\omega)$为随机变量，简记为$X$。定义$F(x) = P(X\leq x) = P(X\in (-\infty, X])$为$X$的分布函数。
 
 * 离散型随机变量：随机变量$X$的可能取值的全体是可列集或者有限集。
 * 连续型随机变量：若$\forall B\in \mathcal F$，存在一个函数$f(x)$满足
@@ -237,7 +237,7 @@ $$
 对于连续随机变量，条件数学期望$E(X|Y = y)$的定义如下：
 
 $$
-E(X|Y = y) = \int{-\infty}^\infty x\frac{f(x, y)}{f_Y(y)}\mathrm dx
+E(X|Y = y) = \int_{-\infty}^\infty x\frac{f(x, y)}{f_Y(y)}\mathrm dx
 $$
 
 定义$E(X|Y)$为$X$关于$Y$的条件数学期望
@@ -271,7 +271,7 @@ $$
 
 ## 随机过程
 
-随机过程是一族无穷多个，相互有关的随机变量。设$X(t, \omega)$为随机变量，其中$t\in T\subset \R$为参数。称$X_T = \{X(t, \omega), t\in T\}$为随机过程。
+随机过程是一族无穷多个，相互有关的随机变量。设$X(t, \omega)$为随机变量，其中$t\in T\subset \mathbb R$为参数。称$X_T = \{X(t, \omega), t\in T\}$为随机过程。
 
 1. $X(t, \omega)$可以简记为$X(t)$；
 2. 当$T$为可列集时，称$X_T$为随机序列；

@@ -5075,7 +5075,7 @@ P\left(\lim_{i\rightarrow\infty}\sup A_i\right) \triangleq P\left(\bigcap_{n=1}^
 <h2 id="_3">随机变量与分布函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>设样本空间为<span class="arithmatex">\(\Omega\)</span>。</p>
 <h3 id="_4">随机变量<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>设<span class="arithmatex">\((\Omega, \mathcal F, P)\)</span>为概率空间，<span class="arithmatex">\(X(\omega)\)</span>为定义在<span class="arithmatex">\(\Omega\)</span>上的单值实函数，即<span class="arithmatex">\(X: \Omega\rightarrow \R\)</span>，若<span class="arithmatex">\(\forall a\in \R\)</span>，有<span class="arithmatex">\(\{\omega:  X(\omega) \leq a\}\in \mathcal F\)</span>，称<span class="arithmatex">\(X(\omega)\)</span>为随机变量，简记为<span class="arithmatex">\(X\)</span>。定义<span class="arithmatex">\(F(x) = P(X\leq x) = P(X\in (-\infty, X])\)</span>为<span class="arithmatex">\(X\)</span>的分布函数。</p>
+<p>设<span class="arithmatex">\((\Omega, \mathcal F, P)\)</span>为概率空间，<span class="arithmatex">\(X(\omega)\)</span>为定义在<span class="arithmatex">\(\Omega\)</span>上的单值实函数，即<span class="arithmatex">\(X: \Omega\rightarrow \mathbb R\)</span>，若<span class="arithmatex">\(\forall a\in \mathbb R\)</span>，有<span class="arithmatex">\(\{\omega:  X(\omega) \leq a\}\in \mathcal F\)</span>，称<span class="arithmatex">\(X(\omega)\)</span>为随机变量，简记为<span class="arithmatex">\(X\)</span>。定义<span class="arithmatex">\(F(x) = P(X\leq x) = P(X\in (-\infty, X])\)</span>为<span class="arithmatex">\(X\)</span>的分布函数。</p>
 <ul>
 <li>离散型随机变量：随机变量<span class="arithmatex">\(X\)</span>的可能取值的全体是可列集或者有限集。</li>
 <li>
@@ -5200,7 +5200,7 @@ f(x) = \left\{\begin{aligned}
 <h3 id="_7">条件数学期望<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>对于连续随机变量，条件数学期望<span class="arithmatex">\(E(X|Y = y)\)</span>的定义如下：</p>
 <div class="arithmatex">\[
-E(X|Y = y) = \int{-\infty}^\infty x\frac{f(x, y)}{f_Y(y)}\mathrm dx
+E(X|Y = y) = \int_{-\infty}^\infty x\frac{f(x, y)}{f_Y(y)}\mathrm dx
 \]</div>
 <p>定义<span class="arithmatex">\(E(X|Y)\)</span>为<span class="arithmatex">\(X\)</span>关于<span class="arithmatex">\(Y\)</span>的条件数学期望</p>
 <div class="arithmatex">\[
@@ -5230,7 +5230,7 @@ E[E(X|Y)|Y\in D] = E(X|Y\in D)
 </ol>
 </div>
 <h2 id="_8">随机过程<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p>随机过程是一族无穷多个，相互有关的随机变量。设<span class="arithmatex">\(X(t, \omega)\)</span>为随机变量，其中<span class="arithmatex">\(t\in T\subset \R\)</span>为参数。称<span class="arithmatex">\(X_T = \{X(t, \omega), t\in T\}\)</span>为随机过程。</p>
+<p>随机过程是一族无穷多个，相互有关的随机变量。设<span class="arithmatex">\(X(t, \omega)\)</span>为随机变量，其中<span class="arithmatex">\(t\in T\subset \mathbb R\)</span>为参数。称<span class="arithmatex">\(X_T = \{X(t, \omega), t\in T\}\)</span>为随机过程。</p>
 <ol>
 <li><span class="arithmatex">\(X(t, \omega)\)</span>可以简记为<span class="arithmatex">\(X(t)\)</span>；</li>
 <li>当<span class="arithmatex">\(T\)</span>为可列集时，称<span class="arithmatex">\(X_T\)</span>为随机序列；</li>
@@ -5243,7 +5243,7 @@ E[E(X|Y)|Y\in D] = E(X|Y\in D)
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-01-18T11:21:47+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-01-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-07T01:26:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-07</span>
       
         <br>
         创建日期:

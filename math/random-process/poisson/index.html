@@ -5030,13 +5030,49 @@ P(S_n\leq t) = P(N(t)\geq n) = 1 - e^{-\lambda t}\sum_{k=0}^{n-1} \frac{(\lambda
 <div class="arithmatex">\[
 t_1 + \frac h2 &lt; t_2 - \frac h2 &lt; t_2 + \frac h2 &lt; \cdots &lt; t_n - \frac h2
 \]</div>
-<p>考虑如下事件</p>
+<p>考虑事件<span class="arithmatex">\(A\)</span></p>
 <div class="arithmatex">\[
 \begin{aligned}
-    &amp;\left\{t_1 - \frac h2 &lt; S_1 \leq t_1 + \frac h2, t_2 - \frac h2 &lt; S_2 \leq t_2 + \frac h2, \cdots, t_n - \frac h2 &lt; S_n \leq t_n + \frac h2\right\}
-    &amp;\equiv \left\{N\left(t_1 - \frac h2\right) = 0, N\left(t_1 + \frac h2\right) - N\left(t_1 - \frac h2\right) = 1, N\left(t_2 - \frac h2\right) - N\left(t_1 + \frac h2\right) = 0, \cdots, N\left(t_n + \frac h2\right) - N\left(t_n - \frac h2\right) \geq 1\right}
+    A&amp; \\
+    &amp;\equiv \left\{t_1 - \frac h2 &lt; S_1 \leq t_1 + \frac h2, t_2 - \frac h2 &lt; S_2 \leq t_2 + \frac h2, \cdots, t_n - \frac h2 &lt; S_n \leq t_n + \frac h2\right\} \\
+    \equiv &amp; \left\{N\left(t_1 - \frac h2\right) = 0, N\left(t_{i+1} - \frac h2\right) - N\left(t_i + \frac h2\right) = 0, N\left(t_{i} + \frac h2\right) - N\left(t_{i} - \frac h2\right) = 1\right\} \\
+    &amp; 0\leq i\leq n - 1
 \end{aligned}
 \]</div>
+<p>而根据泊松过程的性质</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    P\left(N\left(t_n + \frac h2\right) - N\left(t_n - \frac h2\right)= 1\right) &amp;= \lambda h + o(h) \\
+    P\left(N\left(t_n + \frac h2\right) - N\left(t_n - \frac h2\right)\geq 2\right) &amp;= o(h) \\
+\end{aligned}
+\]</div>
+<p>有</p>
+<div class="arithmatex">\[
+P(A) = (\lambda h)^ne^{-\lambda (t_n + h/2)} + o\left(h^n\right) = \lambda ^nh^ne^{-\lambda t_n} + o\left(h^n\right)
+\]</div>
+<p>因此，<span class="arithmatex">\(\left(S_1, \cdots, S_n\right)\)</span>的概率密度为</p>
+<div class="arithmatex">\[
+f(t_1, \cdots, t_n) = \left\{
+\begin{aligned}
+    &amp; \lambda^n e^{-\lambda t_n} &amp; 0 &lt; t_1 &lt; \cdots &lt; t_n \\
+    &amp; 0 &amp; \mathrm{otherwise}
+\end{aligned}
+\right.
+\]</div>
+<p>而<span class="arithmatex">\(X_n = S_n - S_{n-1}\)</span>，设<span class="arithmatex">\(x_n = t_n - t_{n - 1}\)</span>，则<span class="arithmatex">\(t_n = \sum_{i=1}^n x_n\)</span>，从而变换的Jacob矩阵为</p>
+<div class="arithmatex">\[
+J = \frac{\partial (t_1, \cdots, t_n)}{\partial (x_1, \cdots, x_n)} = \begin{vmatrix}
+    1 &amp; 0 &amp; \cdots &amp; 0 \\
+    1 &amp; 1 &amp; \cdots &amp; 0 \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    1 &amp; 1 &amp; \cdots &amp; 1
+\end{vmatrix}
+\]</div>
+<p>因此<span class="arithmatex">\(X_1, \cdots, X_n\)</span>的概率密度为</p>
+<div class="arithmatex">\[
+g(x_1, \cdots, x_n) = \lambda^n e^{-\lambda (x_1 + \cdots + x_n)} = \prod_{i=1}^n \left(\lambda e^{-\lambda x_i}\right), x_i \geq 0
+\]</div>
+<p>因此<span class="arithmatex">\(X_1, \cdots, X_n\)</span>独立同指数分布。</p>
 </li>
 <li>
 <p><span class="arithmatex">\(\Rightarrow\)</span>：充分性证明，设<span class="arithmatex">\(\{X_k, k\geq 1\}\)</span>独立同指数分布，设<span class="arithmatex">\(S_0 = 0, S_n = S_0 + \sum_{i = 1}^n X_i\)</span>。定义</p>
@@ -5053,7 +5089,29 @@ N(t) - N(s) = \sum_{n = 1}^\infty I_{\{S_n\leq t\}}- I_{\{S_n\leq s\}}
 <p>而<span class="arithmatex">\(S_n - S_{n-1} = X_n &gt; 0\)</span>，因此<span class="arithmatex">\(S_n\)</span>为单调增序列，从而<span class="arithmatex">\(\{S_n\leq s\}\subset \{S_n\leq t\}\)</span>，即<span class="arithmatex">\(I_{\{S_n\leq t\}}- I_{\{S_n\leq s\}} \geq 0\)</span>，因此<span class="arithmatex">\(N(t) - N(s)\)</span></p>
 </li>
 </ul>
-<p>可得<span class="arithmatex">\(N(t)\)</span>为计数过程。以下证明<span class="arithmatex">\(N(t)\)</span>为泊松过程：</p>
+<p>可得<span class="arithmatex">\(N(t)\)</span>为计数过程。以下计算<span class="arithmatex">\(S_n\)</span>的分布。已知<span class="arithmatex">\(X_1, \cdots, X_n\)</span>独立同指数分布，设<span class="arithmatex">\(t_n = \sum_{i=1}^n x_i\)</span>，则<span class="arithmatex">\(x_n = t_n - t_{n-1}\)</span>，从而Jacob矩阵为</p>
+<div class="arithmatex">\[
+J = \frac{\partial (x_1, \cdots, x_n)}{\partial (t_1, \cdots, t_n)} = \begin{vmatrix}
+    1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+    -1 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\
+    0 &amp; -1 &amp; 1 &amp; \cdots &amp; 0 \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1
+\end{vmatrix}
+\]</div>
+<p>而<span class="arithmatex">\(X_1, \cdots, X_n\)</span>的联合概率密度为</p>
+<div class="arithmatex">\[
+g(x_1, \cdots, x_n) = \lambda^n e^{-\lambda (x_1 + \cdots + x_n)} = \prod_{i=1}^n \left(\lambda e^{-\lambda x_i}\right), x_i \geq 0
+\]</div>
+<p>因此<span class="arithmatex">\(S_1, \cdots, S_n\)</span>的联合概率密度为</p>
+<div class="arithmatex">\[
+f(t_1, \cdots, t_n) = \left\{
+\begin{aligned}
+    &amp; \lambda^n e^{-\lambda t_n} &amp; 0 &lt; t_1 &lt; \cdots &lt; t_n \\
+    &amp; 0 &amp; \mathrm{otherwise}
+\end{aligned}
+\right.
+\]</div>
 </li>
 </ol>
 </details>
@@ -5063,7 +5121,7 @@ N(t) - N(s) = \sum_{n = 1}^\infty I_{\{S_n\leq t\}}- I_{\{S_n\leq s\}}
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-04T06:14:19+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-04</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-24T13:44:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-24</span>
       
         <br>
         创建日期:
