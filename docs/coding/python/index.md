@@ -14,10 +14,6 @@ hide:
 * [字节类型](bytes.md)
 * [函数](functions.md)
 
-## Matplotlib
-
-* [三维图表](matplotlib/3dplots.ipynb)
-
 ## 实用工具及代码片段
 
 * [网易云音乐NCM转换](snippets/ncm_decrypt.md)
