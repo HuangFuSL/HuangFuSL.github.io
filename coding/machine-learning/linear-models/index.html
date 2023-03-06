@@ -1250,6 +1250,8 @@
         
           
         
+          
+        
       
       
         
@@ -2077,6 +2079,59 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_12" type="checkbox" id="__nav_6_12" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_12">
+          实证方法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="实证方法" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_12">
+          <span class="md-nav__icon md-icon"></span>
+          实证方法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/empirical-methods/potential-outcome-framework/" class="md-nav__link">
+        Potential Outcome Framework
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -4387,8 +4442,6 @@
         
           
         
-          
-        
       
       
         
@@ -4539,70 +4592,19 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_7_4_10">
-          Matplotlib
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Matplotlib" data-md-level="3">
-        <label class="md-nav__title" for="__nav_7_4_10">
-          <span class="md-nav__icon md-icon"></span>
-          Matplotlib
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../matplotlib/3dplots.ipynb" class="md-nav__link">
-        三维图表
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4_11" type="checkbox" id="__nav_7_4_11" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_7_4_11">
           Python实用工具
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Python实用工具" data-md-level="3">
-        <label class="md-nav__title" for="__nav_7_4_11">
+        <label class="md-nav__title" for="__nav_7_4_10">
           <span class="md-nav__icon md-icon"></span>
           Python实用工具
         </label>
@@ -4614,7 +4616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../snippets/ncm_decrypt.md" class="md-nav__link">
+      <a href="../../python/snippets/ncm_decrypt/" class="md-nav__link">
         网易云音乐NCM转换
       </a>
     </li>
@@ -4628,7 +4630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../snippets/cn_date.md" class="md-nav__link">
+      <a href="../../python/snippets/cn_date/" class="md-nav__link">
         公历农历转换
       </a>
     </li>
@@ -4642,7 +4644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../snippets/merge_csv.md" class="md-nav__link">
+      <a href="../../python/snippets/merge_csv/" class="md-nav__link">
         CSV文件合并
       </a>
     </li>
@@ -6136,11 +6138,25 @@ $$
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">))),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># b as bias</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/melon3.0.csv&#39;</span><span class="p">)</span>
+<span class="n">X_rcol</span><span class="p">,</span> <span class="n">y_rcol</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># columns used for regression</span>
+<span class="n">X_ccol</span><span class="p">,</span> <span class="n">y_ccol</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># columns used for classification</span>
+<span class="n">value_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;色泽&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;浅白&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;青绿&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;乌黑&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="s1">&#39;根蒂&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;蜷缩&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;稍蜷&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;硬挺&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="s1">&#39;敲声&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;沉闷&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;浊响&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;清脆&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="s1">&#39;纹理&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;模糊&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;稍糊&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;清晰&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="s1">&#39;脐部&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;凹陷&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;稍凹&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;平坦&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="s1">&#39;触感&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;硬滑&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;软粘&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+    <span class="s1">&#39;好瓜&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;是&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;否&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+<span class="p">}</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">value_map</span><span class="p">:</span>
+    <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">value_map</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">df</span><span class="p">[</span><span class="n">X_rcol</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">))],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">y_rcol</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">linear_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span><span class="p">)</span> <span class="o">@</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">y</span>
@@ -6148,11 +6164,25 @@ $$
 <span class="n">linear_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 <div id="cell-1" class="clipboard-copy-txt">import numpy as np
-import matplotlib.pyplot as plt
+import pandas as pd
 
-X = np.random.normal(5, 3, size=(10, 4))
-X = np.concatenate((X, np.ones((10, 1))), axis=1) # b as bias
-y = np.random.normal(5, 3, size=(10, 1))
+df = pd.read_csv('data/melon3.0.csv')
+X_rcol, y_rcol = df.columns[1:-2], df.columns[-2] # columns used for regression
+X_ccol, y_ccol = df.columns[1:-1], df.columns[-1] # columns used for classification
+value_map = {
+    '色泽': {'浅白': 0, '青绿': 1, '乌黑': 2},
+    '根蒂': {'蜷缩': 0, '稍蜷': 1, '硬挺': 2},
+    '敲声': {'沉闷': 0, '浊响': 1, '清脆': 2},
+    '纹理': {'模糊': 0, '稍糊': 1, '清晰': 2},
+    '脐部': {'凹陷': 0, '稍凹': 1, '平坦': 2},
+    '触感': {'硬滑': 0, '软粘': 1},
+    '好瓜': {'是': 1, '否': 0},
+}
+for col in value_map:
+    df[col] = df[col].map(value_map[col])
+
+X = np.concatenate([df[X_rcol].values, np.ones((df.shape[0], 1))], axis=1)
+y = df[y_rcol].values.reshape(-1, 1)
 
 def linear_regression(X, y):
     return np.linalg.inv(X.T @ X) @ X.T @ y
@@ -6181,7 +6211,8 @@ linear_regression(X, y).T</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([[ 0.51010148,  0.0799073 ,  0.83748929, -0.30346367, -0.64203249]])</pre>
+<pre>array([[-0.00561581, -0.02008279,  0.03507281,  0.10539452, -0.03439565,
+         0.05235698,  0.09502766,  0.02259885]])</pre>
 </div>
 
 </div>
@@ -6256,7 +6287,7 @@ mse_loss(X, y, linear_regression(X, y))</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>7.998545829394898</pre>
+<pre>0.003631662892364951</pre>
 </div>
 
 </div>
@@ -6300,7 +6331,7 @@ mse_loss(X, y, linear_regression(X, y))</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span> <span class="nc">SGD</span><span class="p">():</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="n">d</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lr</span> <span class="o">=</span> <span class="n">lr</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">epochs</span> <span class="o">=</span> <span class="n">epochs</span>
@@ -6317,7 +6348,7 @@ mse_loss(X, y, linear_regression(X, y))</div>
 <span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">mse_loss</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">))</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">class SGD():
-    def __init__(self, d, lr=0.001, epochs=100):
+    def __init__(self, d, lr=0.01, epochs=1000):
         self.d = d
         self.lr = lr
         self.epochs = epochs
@@ -6353,7 +6384,8 @@ print(w.T, mse_loss(X, y, w))</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[ 0.46121943  0.07732618  0.8306412  -0.33031446 -0.12911509]] 8.008237734268988
+<pre>[[ 0.00106685 -0.02932065  0.02123055  0.09793818 -0.04530832  0.03351501
+  -0.06460623  0.14242622]] 0.003715364292258778
 </pre>
 </div>
 </div>
@@ -6398,9 +6430,8 @@ $$
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">))),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># b as bias</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">X_ccol</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">y_ccol</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
@@ -6408,9 +6439,8 @@ $$
 <span class="k">def</span> <span class="nf">precision</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">X</span> <span class="o">@</span> <span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
-<div id="cell-4" class="clipboard-copy-txt">X = np.random.normal(5, 3, size=(100, 4))
-X = np.concatenate((X, np.ones((100, 1))), axis=1) # b as bias
-y = np.random.randint(0, 2, size=(100, 1))
+<div id="cell-4" class="clipboard-copy-txt">X = df[X_ccol].values
+y = df[y_ccol].values.reshape(-1, 1)
 
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
@@ -6490,7 +6520,8 @@ print(w.T, precision(X, y, w))</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[ 0.05033802  0.05205713  0.02148456 -0.08516687 -1.96518721]] 0.59
+<pre>[[ 1.05456371 -2.82397349  1.22291465  1.61793343 -2.11788943  1.02891246
+  -2.13643801 -1.21843934]] 0.8823529411764706
 </pre>
 </div>
 </div>
@@ -6533,9 +6564,7 @@ print(w.T, precision(X, y, w))</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="k">def</span> <span class="nf">cov</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">cov</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">X</span><span class="p">[:,</span> <span class="n">a</span><span class="p">]</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="n">a</span><span class="p">]))</span> <span class="o">*</span> <span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="n">b</span><span class="p">]</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="n">b</span><span class="p">])))</span>
 
 <span class="k">def</span> <span class="nf">cov_matrix</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -6553,13 +6582,11 @@ print(w.T, precision(X, y, w))</div>
 <span class="n">c0</span><span class="p">,</span> <span class="n">c1</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">mu0</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">mu1</span>
 
 <span class="k">def</span> <span class="nf">precision</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">X</span> <span class="o">@</span> <span class="n">w</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">c0</span> <span class="o">+</span> <span class="n">c1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">X</span> <span class="o">@</span> <span class="n">w</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">c0</span> <span class="o">+</span> <span class="n">c1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
 
 <span class="n">precision</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt">X = np.random.normal(5, 3, size=(100, 5))
-y = np.random.randint(0, 2, size=(100, 1))
-def cov(X, a, b):
+<div id="cell-6" class="clipboard-copy-txt">def cov(X, a, b):
     return np.mean((X[:, a] - np.mean(X[:, a])) * (X[:, b] - np.mean(X[:, b])))
 
 def cov_matrix(X):
@@ -6577,7 +6604,7 @@ w = np.linalg.inv(sw) @ (mu0 - mu1).reshape(-1, 1)
 c0, c1 = w.T @ mu0, w.T @ mu1
 
 def precision(X, y, w):
-    return np.mean((X @ w > (c0 + c1) / 2) == y)
+    return np.mean((X @ w < (c0 + c1) / 2) == y)
 
 precision(X, y, w)
 </div>
@@ -6604,7 +6631,7 @@ precision(X, y, w)
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.41</pre>
+<pre>0.8823529411764706</pre>
 </div>
 
 </div>
@@ -6624,7 +6651,7 @@ precision(X, y, w)
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-26T07:19:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-26T08:34:51+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-26</span>
       
         <br>
         创建日期:
@@ -6704,7 +6731,7 @@ precision(X, y, w)
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../../python/decorator/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 函数装饰器与闭包" rel="prev">
+        <a href="../../python/snippets/merge_csv/" class="md-footer__link md-footer__link--prev" aria-label="上一页: CSV文件合并" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -6713,7 +6740,7 @@ precision(X, y, w)
               <span class="md-footer__direction">
                 上一页
               </span>
-              函数装饰器与闭包
+              CSV文件合并
             </div>
           </div>
         </a>
