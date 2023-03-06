@@ -15,6 +15,10 @@ body {
     --jp-rendermime-error-background: var(--override-code-err-color);
 }
 
+span.MathJax_CHTML {
+    font-size: 100% !important;
+}
+
 .jp-RenderedHTMLCommon p {
     color: inherit;
     font-size: .8rem;

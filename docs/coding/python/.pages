@@ -8,9 +8,4 @@ nav:
   - Python中的字节类型: bytes.md
   - Python中的函数: functions.md
   - 函数装饰器与闭包: decorator.md
-  - Matplotlib:
-      - 三维图表: matplotlib/3dplots.ipynb
-  - Python实用工具:
-      - 网易云音乐NCM转换: snippets/ncm_decrypt.md
-      - 公历农历转换: snippets/cn_date.md
-      - CSV文件合并: snippets/merge_csv.md
+  - Python实用工具: snippets

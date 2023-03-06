@@ -20,3 +20,6 @@ __pycache__/*
 *.json
 !.vscode/*.json
 *.pdf
+
+# Jupyter Notebook
+.ipynb_checkpoints
