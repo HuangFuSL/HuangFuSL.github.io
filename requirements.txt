@@ -12,7 +12,7 @@ pymdown-extensions==10.0.1
 matplotlib==3.7.0
 pandas==1.5.3
 jupyter==1.0.0
-requests==2.28.2
+requests==2.31.0
 jieba==0.42.1
 lxml==4.9.2
 mkdocs-meta-descriptions-plugin==2.2.0
