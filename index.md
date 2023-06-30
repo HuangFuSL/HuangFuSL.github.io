@@ -7,8 +7,6 @@ hide:
 
 ## :material-table-of-contents: Table of contents
 
-* [都市天际线](csl/index.md)
-* [帝国时代2](aoe2/index.md)
 * [推送](wechat/2020.md)
 * [LaTeX](latex/index.md)
 * [数学](math/index.md)
@@ -173,9 +171,6 @@ The blog uses the following mkdocs plugins to function correctly.
 * [prcr/mkdocs-meta-descriptions-plugin](https://github.com/prcr/mkdocs-meta-descriptions-plugin)
 
 Unless noted, content in this blog are shared under [CC-BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license.
-
-* Images used in [aoe2](aoe2/index.md) and its sub-pages are shared under
-[CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license according to [fandom wiki](https://www.fandom.com/licensing).
 
 ## :material-update: Version information
 
