@@ -101,12 +101,13 @@ def get_whole_table(
         content = list(csv.DictReader(file))
 
     pages_dict = {int(_['title'].split('. ')[0]): _ for _ in pages}
+    new_page = []
     for page in content:
         if int(page['编号']) in pages_dict:
             page['linked'] = True
             page['link'] = pages_dict[int(page['编号'])]['url']
-        else:
-            page['linked'] = False
+            new_page.append(page)
+    content = new_page
 
     content.sort(key=util.wrap(operator.itemgetter('编号'), int))
 

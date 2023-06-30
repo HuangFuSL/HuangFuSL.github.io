@@ -1,2 +1,3 @@
 nav:
   - 线性模型: linear-models.ipynb
+  - 决策树: decision-tree.ipynb
