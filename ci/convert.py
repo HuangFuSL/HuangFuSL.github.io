@@ -52,7 +52,6 @@ from typing import Tuple, Generator
 
 XELATEX_CMD = [
     'xelatex',
-    '-no-pdf',
     '-synctex=1',
     '-interaction=nonstopmode',
     '-file-line-error',
@@ -60,6 +59,7 @@ XELATEX_CMD = [
 
 DVISVGM_CMD = [
     'dvisvgm',
+    '--pdf',
     '--page=1-',
     '--font-format=woff',
     '--trace-all'
@@ -91,7 +91,7 @@ def _conversion(arg: Tuple[str, str]):
     filename, cwd = arg
     start = time.time()
 
-    dvi_name = filename[:-3] + 'xdv'
+    dvi_name = filename[:-3] + 'pdf'
     exec_args = {
         'cwd': cwd,
         'capture_output': True
