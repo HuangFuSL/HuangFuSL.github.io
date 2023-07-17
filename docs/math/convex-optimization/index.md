@@ -11,7 +11,7 @@
 ### 数域
 
 * $\mathbb R, \mathbb N, \mathbb Z, \mathbb C$：实数域、自然数域、整数域、复数域
-* 下标 $ {}_+, {}_{++} $ 在实数域和实向量域上分别表示非负、严格正，在实矩阵域上表示半正定、正定。
+* 下标 ${}_\plus, {}_{\plus\plus}$ 在实数域和实向量域上分别表示非负、严格正，在实矩阵域上表示半正定、正定。
 
 ### 矩阵与向量
 
@@ -91,7 +91,7 @@ $$
 
 设集合$C\subseteq \mathbb R^n, x\in C$，使用2-范数度量距离。
 
-* 若$\exists r \in \mathbb R_{++}, B(x, r)\subseteq C$，称$x$为**内点**。全体内点构成集合的**内部**$C^\circ$，显然$C^\circ \subseteq C$。
+* 若$\exists r \in \mathbb R_{\plus\plus}, B(x, r)\subseteq C$，称$x$为**内点**。全体内点构成集合的**内部**$C^\circ$，显然$C^\circ \subseteq C$。
 * 若$\forall r\in \mathbb R_{+}, B(x, r)\cap C \not = \varnothing, B(x, r) \cap C^C \not = \varnothing$，称$x$为**边界点**。全体边界点构成集合的**边界**$\partial C$。
     * 根据边界点的定义，有$\partial C = \partial C^C$。
 * 若$x$不是内点，则$x$为边界点，即$\partial C \cup C^\circ = C, \partial C\cap C^\circ = \varnothing$。
