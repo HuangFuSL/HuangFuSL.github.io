@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="在持有成本与固定订货成本之间平衡——单次订货量\(\require{boldsymbol} Q\)">
+        <meta name="description" content="在持有成本与固定订货成本之间平衡——单次订货量\(\bsQ\)">
       
       
       
@@ -48,6 +48,8 @@
       <link rel="stylesheet" href="../../../css/timeago.css">
     
       <link rel="stylesheet" href="https://www.neoteroi.dev/mkdocs-plugins/css/neoteroi.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
       <link rel="stylesheet" href="../../../css/button.css">
     
@@ -5069,7 +5071,7 @@
 
 
 <h1 id="_1">确定需求下的库存控制<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>在持有成本与固定订货成本之间平衡——单次订货量<span class="arithmatex">\(\require{boldsymbol} Q\)</span></p>
+<p>在持有成本与固定订货成本之间平衡——单次订货量<span class="arithmatex">\(\bsQ\)</span></p>
 <h2 id="eoq">EOQ模型<a class="headerlink" href="#eoq" title="Permanent link">&para;</a></h2>
 <h3 id="_2">记号<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5276,7 +5278,7 @@ m_i = \left\lceil\frac{\bar n}{n_i}\right\rceil
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-12-23T04:42:17+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-12-23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-17T03:25:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-17</span>
       
         <br>
         创建日期:
@@ -5432,7 +5434,7 @@ m_i = \left\lceil\frac{\bar n}{n_i}\right\rceil
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
@@ -5454,15 +5456,15 @@ m_i = \left\lceil\frac{\bar n}{n_i}\right\rceil
         
       
         
-          <script src="../../../js/mathjax.js"></script>
+          <script src="../../../js/katex.js"></script>
         
       
         
-          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
         
       
         
-          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
         
       
     

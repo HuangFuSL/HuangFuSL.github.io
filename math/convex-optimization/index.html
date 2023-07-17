@@ -47,6 +47,8 @@
     
       <link rel="stylesheet" href="https://www.neoteroi.dev/mkdocs-plugins/css/neoteroi.css">
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
       <link rel="stylesheet" href="../../css/button.css">
     
       <link rel="stylesheet" href="../../css/colors.css">
@@ -4810,7 +4812,7 @@
 <h3 id="_3">数域<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li><span class="arithmatex">\(\mathbb R, \mathbb N, \mathbb Z, \mathbb C\)</span>：实数域、自然数域、整数域、复数域</li>
-<li>下标 $ {}<em>+, {}</em><ins class="critic">} $ 在实数域和实向量域上分别表示非负、严格正，在实矩阵域上表示半正定、正定。</li>
+<li>下标 <span class="arithmatex">\({}_\plus, {}_{\plus\plus}\)</span> 在实数域和实向量域上分别表示非负、严格正，在实矩阵域上表示半正定、正定。</li>
 </ul>
 <h3 id="_4">矩阵与向量<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(A\in \mathbb R^{m\times n}\)</span>表示<span class="arithmatex">\(A\)</span>是一个<span class="arithmatex">\(m\)</span>行<span class="arithmatex">\(n\)</span>列的实矩阵，其中的元素为<span class="arithmatex">\(a_{ij}\)</span>，某列（或某行）的切片为<span class="arithmatex">\(A_{\cdot j}\)</span></p>
@@ -4881,7 +4883,7 @@ B(x, r) = \{y | \Vert y - x\Vert &lt; r\}
 <h3 id="_6">集合<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>设集合<span class="arithmatex">\(C\subseteq \mathbb R^n, x\in C\)</span>，使用2-范数度量距离。</p>
 <ul>
-<li>若<span class="arithmatex">\(\exists r \in \mathbb R_{</ins>, B(x, r)\subseteq C\)</span>，称<span class="arithmatex">\(x\)</span>为<strong>内点</strong>。全体内点构成集合的<strong>内部</strong><span class="arithmatex">\(C^\circ\)</span>，显然<span class="arithmatex">\(C^\circ \subseteq C\)</span>。</li>
+<li>若<span class="arithmatex">\(\exists r \in \mathbb R_{\plus\plus}, B(x, r)\subseteq C\)</span>，称<span class="arithmatex">\(x\)</span>为<strong>内点</strong>。全体内点构成集合的<strong>内部</strong><span class="arithmatex">\(C^\circ\)</span>，显然<span class="arithmatex">\(C^\circ \subseteq C\)</span>。</li>
 <li>若<span class="arithmatex">\(\forall r\in \mathbb R_{+}, B(x, r)\cap C \not = \varnothing, B(x, r) \cap C^C \not = \varnothing\)</span>，称<span class="arithmatex">\(x\)</span>为<strong>边界点</strong>。全体边界点构成集合的<strong>边界</strong><span class="arithmatex">\(\partial C\)</span>。<ul>
 <li>根据边界点的定义，有<span class="arithmatex">\(\partial C = \partial C^C\)</span>。</li>
 </ul>
@@ -4905,7 +4907,7 @@ B(x, r) = \{y | \Vert y - x\Vert &lt; r\}
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-01T10:07:49+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-01</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-17T03:25:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-17</span>
       
         <br>
         创建日期:
@@ -5061,7 +5063,7 @@ B(x, r) = \{y | \Vert y - x\Vert &lt; r\}
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
@@ -5083,15 +5085,15 @@ B(x, r) = \{y | \Vert y - x\Vert &lt; r\}
         
       
         
-          <script src="../../js/mathjax.js"></script>
+          <script src="../../js/katex.js"></script>
         
       
         
-          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
         
       
         
-          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
         
       
     
