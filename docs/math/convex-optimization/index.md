@@ -3,6 +3,7 @@
 ## 目录
 
 * [凸集](convex-set.md)
+* [凸函数](convex-function.md)
 
 ## Notations and Definitions
 
@@ -59,7 +60,7 @@ $$
 设$f$为$\mathbb R^n$上的范数，对偶范数$f_*$定义如下
 
 $$
-f_*(\boldsymbol{x}) = \sup_{\boldsymbol{x}} \{\boldsymbol{z^\top x} | f(\boldsymbol{x}) \leq 1\}
+f_*(\boldsymbol{z}) = \sup_{\boldsymbol{x}} \{\boldsymbol{z^\top x} | f(\boldsymbol{x}) \leq 1\}
 $$
 
 ???+ theorem "对偶范数"
