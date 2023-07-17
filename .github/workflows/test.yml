@@ -73,6 +73,7 @@ jobs:
 
       - name: Install GhostScript
         run: |
+          sudo apt-get update
           sudo apt-get install ghostscript -y
 
       - name: Test
