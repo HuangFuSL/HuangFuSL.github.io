@@ -6,8 +6,13 @@ const mathArgs = {
         { left: '\\(', right: '\\)', display: false },
         { left: '\\[', right: '\\]', display: true }
     ],
+    trust: (env) => ['\\htmlId', '\\href'].includes(env.command),
     macros: {
         '\\plus': '+',
+        '\\eqref': '\\href{###1}{(\\text{#1})}',
+        '\\ref': '\\href{###1}{\\text{#1}}',
+        '\\label': '\\htmlId{#1}{}\\tag{#1}',
+        // Letters
         '\\bba': '\\mathbb a',
         '\\bbb': '\\mathbb b',
         '\\bbc': '\\mathbb c',
@@ -167,7 +172,22 @@ const mathArgs = {
         '\\dd': '\\mathrm d',
         '\\Cov': '\\mathrm {Cov}',
         '\\geq': '\\geqslant',
-        '\\leq': '\\leqslant'
+        '\\leq': '\\leqslant',
+        '\\optim': '\\begin{aligned} #1 & \\, #2 \\\\ \\text{s.t.} & #3 \\end{aligned}',
+        '\\cases': '\\left\\{ #1 \\right.',
+        '\\oneto': '1, \\ldots, #1',
+        '\\ra': '\\rightarrow',
+        '\\Ra': '\\Rightarrow',
+        '\\la': '\\leftarrow',
+        '\\La': '\\Leftarrow',
+        '\\lra': '\\leftrightarrow',
+        '\\Lra': '\\Leftrightarrow',
+        '\\lolra': '\\longleftrightarrow',
+        '\\Lolra': '\\Longleftrightarrow',
+        '\\lora': '\\longrightarrow',
+        '\\Lora': '\\Longrightarrow',
+        '\\lola': '\\longleftarrow',
+        '\\Lola': '\\Longleftarrow'
     }
 };
 document.addEventListener('DOMContentLoaded', function () {
