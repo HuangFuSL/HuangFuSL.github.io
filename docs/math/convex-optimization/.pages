@@ -3,3 +3,4 @@ nav:
   - 凸集: convex-set.md
   - 凸函数: convex-function.md
   - 凸优化问题: convex-optimization.md
+  - 对偶: duality.md
