@@ -1,4 +1,6 @@
 nav:
   - index.md
-  - SSH: ssh.md
+  - apt: apt-get.md
+  - ssh: ssh.md
+  - update-alternatives: update-alternatives.md
   - 源码编译nginx并添加RTMP模块: nginx-rtmp.md
