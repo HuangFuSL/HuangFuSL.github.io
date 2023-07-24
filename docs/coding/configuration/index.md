@@ -9,8 +9,12 @@ hide:
 
 ## 命令行
 
-* [SSH](ssh.md)
+* [apt](apt-get.md)
+* [ssh](ssh.md)
+* [update-alternatives](update-alternatives.md)
 
 ## 软件环境配置
+
+## 软件编译流程
 
 * [源码编译nginx并添加RTMP模块](nginx-rtmp.md)
