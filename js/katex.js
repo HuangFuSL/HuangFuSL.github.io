@@ -9,6 +9,7 @@ const mathArgs = {
     trust: (env) => ['\\htmlId', '\\href'].includes(env.command),
     macros: {
         '\\plus': '+',
+        '\\otherwise': '\\text{otherwise}',
         '\\eqref': '\\href{###1}{(\\text{#1})}',
         '\\ref': '\\href{###1}{\\text{#1}}',
         '\\label': '\\htmlId{#1}{}\\tag{#1}',
