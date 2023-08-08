@@ -4,7 +4,9 @@ colortbl
 diagbox
 dvips
 dvisvgm
+etoolbox
 extarrows
+gbt7714
 graphics-def
 media4svg
 multirow
@@ -15,4 +17,3 @@ scheme-basic
 standalone
 varwidth
 xetex
-etoolbox
