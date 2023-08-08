@@ -23,6 +23,5 @@ setspace
 soul
 standalone
 subfigure
-tikz
 varwidth
 xetex
