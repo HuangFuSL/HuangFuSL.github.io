@@ -2,6 +2,7 @@ algorithm2e
 amsmath
 booktabs
 calligra
+calligra
 colortbl
 diagbox
 dvips
