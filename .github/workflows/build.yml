@@ -51,7 +51,7 @@ jobs:
 
       - name: Deploy
         env:
-          TEXINPUTS: "./template/:"
+          TEXINPUTS: "/home/runner/work/HuangFuSL.github.io/HuangFuSL.github.io/template/:"
         run: |
           git pull
           python3 ./ci/deploy.py
