@@ -72,7 +72,7 @@ jobs:
       - name: Setup TeX Live
         uses: teatimeguest/setup-texlive-action@v2
         with:
-          package-file: ci/texlive/test.txt
+          packages: scheme-full
 
       - name: Install GhostScript
         run: |
