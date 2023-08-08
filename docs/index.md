@@ -141,9 +141,13 @@ embedded in the markdown files. However, as the SVG images are ignored by
 
 For GitHub repository clones:
 
+* Run `git submodule update --recursive --remote` to receive the template.
 * Make sure you have installed and correctly configured `xelatex` and `dvisvgm`.
-* Execute the `ci/convert.py` in the root directory of the repository.
+* Add `./template` directory to `$TEXINPUTS` environmental variable.
+* Execute `ci/convert.py` in the root directory of the repository.
 * Run `mkdocs serve` to view the images.
+
+The template is located at [HuangFuSL/latex-template](https://github.com/HuangFuSL/latex-template)
 
 ## :material-lightbulb-on: Acknowledgements
 
