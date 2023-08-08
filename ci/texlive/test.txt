@@ -13,6 +13,7 @@ fontspec
 fundus-calligra
 gbt7714
 graphics-def
+ifoddpage
 import
 media4svg
 multirow
