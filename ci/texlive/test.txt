@@ -1,5 +1,7 @@
+algorithm2e
 amsmath
 booktabs
+calligra
 colortbl
 diagbox
 dvips
@@ -8,12 +10,19 @@ etoolbox
 extarrows
 gbt7714
 graphics-def
+ifthen
+import
 media4svg
 multirow
+pgf
 pgf
 pgfplots
 pict2e
 scheme-basic
+setspace
+soul
 standalone
+subfigure
+tikz
 varwidth
 xetex
