@@ -8,9 +8,9 @@ dvips
 dvisvgm
 etoolbox
 extarrows
+fontspec
 gbt7714
 graphics-def
-ifthen
 import
 media4svg
 multirow
