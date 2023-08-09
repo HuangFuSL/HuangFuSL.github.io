@@ -53,15 +53,11 @@
     
       <link rel="stylesheet" href="../../../css/button.css">
     
-      <link rel="stylesheet" href="../../../css/colors.css">
+      <link rel="stylesheet" href="../../../css/code.css">
     
-      <link rel="stylesheet" href="../../../css/codecolor.css">
+      <link rel="stylesheet" href="../../../css/admonition.css">
     
-      <link rel="stylesheet" href="../../../css/codedef_custom.css">
-    
-      <link rel="stylesheet" href="../../../css/admonitions.css">
-    
-      <link rel="stylesheet" href="../../../css/images.css">
+      <link rel="stylesheet" href="../../../css/img.css">
     
       <link rel="stylesheet" href="../../../css/jupyter.css">
     
@@ -6074,7 +6070,7 @@ mse_loss(X, y, linear_regression(X, y))</div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.0036316628923649505</pre>
+<pre>0.003631662892364951</pre>
 </div>
 </div>
 </div>
@@ -6154,8 +6150,8 @@ print(w.T, mse_loss(X, y, w))</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[ 0.00321825 -0.03299955  0.01613173  0.09489453 -0.05023     0.0274792
-  -0.12472777  0.18878975]] 0.0037891602994751146
+<pre>[[-0.00166298 -0.02465494  0.02769248  0.1018142  -0.03904812  0.04115199
+   0.01163974  0.08360024]] 0.0036556876428154414
 </pre>
 </div>
 </div>
@@ -6270,8 +6266,8 @@ print(w.T, precision(X, y, w))</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[ 1.19429249 -3.06658763  1.43842602  1.69876026 -2.10538608  0.91781889
-  -2.77481165 -1.02272917]] 0.8823529411764706
+<pre>[[ 1.0593784  -2.96486353  1.37321604  1.66561456 -2.24276243  1.17072574
+  -1.78319096 -2.2698084 ]] 0.8823529411764706
 </pre>
 </div>
 </div>
@@ -6534,7 +6530,7 @@ precision(X, y, w)
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
