@@ -26,6 +26,9 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
   features:
+    # Code block section
+    - content.code.annotate
+
     # Navigation section
     # - navigation.instant # Removed due to math equations not rendering
     - navigation.tracking
@@ -130,11 +133,9 @@ extra_css:
   - https://www.neoteroi.dev/mkdocs-plugins/css/neoteroi.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - css/button.css
-  - css/colors.css
-  - css/codecolor.css
-  - css/codedef_custom.css
-  - css/admonitions.css
-  - css/images.css
+  - css/code.css
+  - css/admonition.css
+  - css/img.css
   - css/jupyter.css
   - css/timeline.css
 
