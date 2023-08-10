@@ -18,6 +18,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          submodules: 'true'
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v4
@@ -45,9 +46,12 @@ jobs:
 
       - name: Install GhostScript
         run: |
+          sudo apt-get update
           sudo apt-get install ghostscript -y
 
       - name: Deploy
+        env:
+          TEXINPUTS: "/home/runner/work/HuangFuSL.github.io/HuangFuSL.github.io/template/:"
         run: |
           git pull
           python3 ./ci/deploy.py
