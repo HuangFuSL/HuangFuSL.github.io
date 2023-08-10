@@ -1,7 +1,5 @@
 name: Build Documentation
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [main]
@@ -14,13 +12,13 @@ jobs:
     name: Build and Deploy Documentation
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Master
+      - name: Checkout main
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
           submodules: 'true'
 
-      - name: Set up Python 3.7
+      - name: Set up Python 3
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
@@ -53,6 +51,8 @@ jobs:
         env:
           TEXINPUTS: "/home/runner/work/HuangFuSL.github.io/HuangFuSL.github.io/template/:"
         run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull
           python3 ./ci/deploy.py
 
