@@ -17,7 +17,7 @@
         <link rel="next" href="../sequence/">
       
       <link rel="icon" href="../../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -4897,41 +4897,41 @@
 <table>
 <thead>
 <tr>
-<th align="center">方法名</th>
-<th align="center">参数列表</th>
-<th align="center">调用时机</th>
-<th align="center">返回值类型</th>
-<th align="center">备注</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">参数列表</th>
+<th style="text-align: center;">调用时机</th>
+<th style="text-align: center;">返回值类型</th>
+<th style="text-align: center;">备注</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>__repr__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">当调用<code>repr()</code>函数时</td>
-<td align="center"><code>str</code></td>
-<td align="center">返回值应为重建该对象的Python表达式（如果可能），或包含其他信息的字符串<code>&lt;...&gt;</code></td>
+<td style="text-align: center;"><code>__repr__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">当调用<code>repr()</code>函数时</td>
+<td style="text-align: center;"><code>str</code></td>
+<td style="text-align: center;">返回值应为重建该对象的Python表达式（如果可能），或包含其他信息的字符串<code>&lt;...&gt;</code></td>
 </tr>
 <tr>
-<td align="center"><code>__str__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">当调用<code>str()</code>函数时</td>
-<td align="center"><code>str</code></td>
-<td align="center">调用<code>print()</code>等其他函数时会隐式调用<code>__str__()</code>，当不存在<code>__str__()</code>时会自动调用<code>__repr__()</code></td>
+<td style="text-align: center;"><code>__str__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">当调用<code>str()</code>函数时</td>
+<td style="text-align: center;"><code>str</code></td>
+<td style="text-align: center;">调用<code>print()</code>等其他函数时会隐式调用<code>__str__()</code>，当不存在<code>__str__()</code>时会自动调用<code>__repr__()</code></td>
 </tr>
 <tr>
-<td align="center"><code>__format__</code></td>
-<td align="center"><code>self, format_spec</code></td>
-<td align="center">当调用<code>format()</code>函数时</td>
-<td align="center"><code>str</code></td>
-<td align="center"><code>object.__format__(x, '')</code>等价于<code>str(x)</code></td>
+<td style="text-align: center;"><code>__format__</code></td>
+<td style="text-align: center;"><code>self, format_spec</code></td>
+<td style="text-align: center;">当调用<code>format()</code>函数时</td>
+<td style="text-align: center;"><code>str</code></td>
+<td style="text-align: center;"><code>object.__format__(x, '')</code>等价于<code>str(x)</code></td>
 </tr>
 <tr>
-<td align="center"><code>__bytes__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">当调用<code>bytes()</code>函数时</td>
-<td align="center"><code>bytes</code></td>
-<td align="center">返回值是对象的字节表示</td>
+<td style="text-align: center;"><code>__bytes__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">当调用<code>bytes()</code>函数时</td>
+<td style="text-align: center;"><code>bytes</code></td>
+<td style="text-align: center;">返回值是对象的字节表示</td>
 </tr>
 </tbody>
 </table>
@@ -4939,55 +4939,55 @@
 <table>
 <thead>
 <tr>
-<th align="center">方法名</th>
-<th align="center">参数列表</th>
-<th align="center">调用时机</th>
-<th align="center">返回值类型</th>
-<th align="center">备注</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">参数列表</th>
+<th style="text-align: center;">调用时机</th>
+<th style="text-align: center;">返回值类型</th>
+<th style="text-align: center;">备注</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>__bool__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">调用<code>bool()</code>函数时</td>
-<td align="center"><code>bool</code></td>
-<td align="center">当<code>__bool__</code>函数没有定义时，会隐式调用<code>__len__</code>，如果<code>__len__</code>也没有定义，则返回<code>True</code></td>
+<td style="text-align: center;"><code>__bool__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">调用<code>bool()</code>函数时</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">当<code>__bool__</code>函数没有定义时，会隐式调用<code>__len__</code>，如果<code>__len__</code>也没有定义，则返回<code>True</code></td>
 </tr>
 <tr>
-<td align="center"><code>__complex__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">调用<code>commplex()</code>函数时</td>
-<td align="center"><code>complex</code></td>
-<td align="center"></td>
+<td style="text-align: center;"><code>__complex__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">调用<code>commplex()</code>函数时</td>
+<td style="text-align: center;"><code>complex</code></td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td align="center"><code>__int__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">调用<code>int()</code>函数时</td>
-<td align="center"><code>int</code></td>
-<td align="center"></td>
+<td style="text-align: center;"><code>__int__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">调用<code>int()</code>函数时</td>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td align="center"><code>__float__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">调用<code>float()</code>函数时</td>
-<td align="center"><code>float</code></td>
-<td align="center"></td>
+<td style="text-align: center;"><code>__float__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">调用<code>float()</code>函数时</td>
+<td style="text-align: center;"><code>float</code></td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td align="center"><code>__hash__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">调用<code>hash()</code></td>
-<td align="center">函数时</td>
-<td align="center"><code>hash()</code>函数将<code>__hash__()</code>的返回值截断到<code>Py_ssize_t</code>的范围内，64位系统下<code>Py_ssize_t</code>为8字节；<code>set</code>等类型的操作也会调用对象的<code>__hash__</code>函数</td>
+<td style="text-align: center;"><code>__hash__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">调用<code>hash()</code></td>
+<td style="text-align: center;">函数时</td>
+<td style="text-align: center;"><code>hash()</code>函数将<code>__hash__()</code>的返回值截断到<code>Py_ssize_t</code>的范围内，64位系统下<code>Py_ssize_t</code>为8字节；<code>set</code>等类型的操作也会调用对象的<code>__hash__</code>函数</td>
 </tr>
 <tr>
-<td align="center"><code>__index__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">调用<code>operator.index()</code>或Python需要整数值时</td>
-<td align="center"><code>int</code></td>
-<td align="center">当<code>__int__</code>、<code>__float__</code>、<code>__complex__</code>没有实现时，这些函数隐式地调用<code>__index__</code></td>
+<td style="text-align: center;"><code>__index__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">调用<code>operator.index()</code>或Python需要整数值时</td>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;">当<code>__int__</code>、<code>__float__</code>、<code>__complex__</code>没有实现时，这些函数隐式地调用<code>__index__</code></td>
 </tr>
 </tbody>
 </table>
@@ -4995,48 +4995,48 @@
 <table>
 <thead>
 <tr>
-<th align="center">方法名</th>
-<th align="center">参数列表</th>
-<th align="center">调用时机</th>
-<th align="center">返回值类型</th>
-<th align="center">备注</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">参数列表</th>
+<th style="text-align: center;">调用时机</th>
+<th style="text-align: center;">返回值类型</th>
+<th style="text-align: center;">备注</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>__len__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">调用<code>len()</code>函数时</td>
-<td align="center"><code>int</code></td>
-<td align="center">返回值必须为非负整数，在CPython中返回值不能超过<code>sys.maxsize</code>中定义的值，否则<code>len()</code>等函数会抛出<code>OverflowError</code>等异常</td>
+<td style="text-align: center;"><code>__len__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">调用<code>len()</code>函数时</td>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;">返回值必须为非负整数，在CPython中返回值不能超过<code>sys.maxsize</code>中定义的值，否则<code>len()</code>等函数会抛出<code>OverflowError</code>等异常</td>
 </tr>
 <tr>
-<td align="center"><code>__getitemm__</code></td>
-<td align="center"><code>self, key</code></td>
-<td align="center">使用<code>[]</code>运算符时（右值）</td>
-<td align="center"></td>
-<td align="center"><code>key</code>可以为合法的数组下标，也可以是反向的下标，也可以是序列的切片，该函数应在<code>key</code>类型不对应时抛出<code>TypeError</code>，<code>key</code>超出范围时抛出<code>IndexError</code>或<code>KeyError</code>（对于映射类型）</td>
+<td style="text-align: center;"><code>__getitemm__</code></td>
+<td style="text-align: center;"><code>self, key</code></td>
+<td style="text-align: center;">使用<code>[]</code>运算符时（右值）</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><code>key</code>可以为合法的数组下标，也可以是反向的下标，也可以是序列的切片，该函数应在<code>key</code>类型不对应时抛出<code>TypeError</code>，<code>key</code>超出范围时抛出<code>IndexError</code>或<code>KeyError</code>（对于映射类型）</td>
 </tr>
 <tr>
-<td align="center"><code>__setitem__</code></td>
-<td align="center"><code>self, key, value</code></td>
-<td align="center">使用<code>[]</code>运算符时（左值）</td>
-<td align="center"><code>None</code></td>
-<td align="center"><code>key</code>参数的取值及异常处理与<code>__getitem__</code>函数相同</td>
+<td style="text-align: center;"><code>__setitem__</code></td>
+<td style="text-align: center;"><code>self, key, value</code></td>
+<td style="text-align: center;">使用<code>[]</code>运算符时（左值）</td>
+<td style="text-align: center;"><code>None</code></td>
+<td style="text-align: center;"><code>key</code>参数的取值及异常处理与<code>__getitem__</code>函数相同</td>
 </tr>
 <tr>
-<td align="center"><code>__delitem__</code></td>
-<td align="center"><code>self, key</code></td>
-<td align="center">使用<code>del</code>删除序列中的元素时</td>
-<td align="center"><code>None</code></td>
-<td align="center">对于不可删除的序列或映射，无需实现该函数，其他同<code>__getitem__</code></td>
+<td style="text-align: center;"><code>__delitem__</code></td>
+<td style="text-align: center;"><code>self, key</code></td>
+<td style="text-align: center;">使用<code>del</code>删除序列中的元素时</td>
+<td style="text-align: center;"><code>None</code></td>
+<td style="text-align: center;">对于不可删除的序列或映射，无需实现该函数，其他同<code>__getitem__</code></td>
 </tr>
 <tr>
-<td align="center"><code>__contains__</code></td>
-<td align="center"><code>self, item</code></td>
-<td align="center">使用<code>in</code>作为运算符时</td>
-<td align="center"><code>bool</code></td>
-<td align="center">对于映射类型，<code>__contains__</code>接收的<code>item</code>参数对应映射的<code>key</code>部分而不是<code>value</code>部分。若没有定义该函数，Python首先通过<code>__iter__</code>进行查找，其次使用<code>__getitem__</code>进行查找</td>
+<td style="text-align: center;"><code>__contains__</code></td>
+<td style="text-align: center;"><code>self, item</code></td>
+<td style="text-align: center;">使用<code>in</code>作为运算符时</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">对于映射类型，<code>__contains__</code>接收的<code>item</code>参数对应映射的<code>key</code>部分而不是<code>value</code>部分。若没有定义该函数，Python首先通过<code>__iter__</code>进行查找，其次使用<code>__getitem__</code>进行查找</td>
 </tr>
 </tbody>
 </table>
@@ -5044,34 +5044,34 @@
 <table>
 <thead>
 <tr>
-<th align="center">方法名</th>
-<th align="center">参数列表</th>
-<th align="center">调用时机</th>
-<th align="center">返回值类型</th>
-<th align="center">备注</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">参数列表</th>
+<th style="text-align: center;">调用时机</th>
+<th style="text-align: center;">返回值类型</th>
+<th style="text-align: center;">备注</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>__iter__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">调用<code>iter()</code>函数或使用循环时</td>
-<td align="center"></td>
-<td align="center">返回值应为可迭代对象，对于可迭代对象，<code>__iter__</code>函数返回自身</td>
+<td style="text-align: center;"><code>__iter__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">调用<code>iter()</code>函数或使用循环时</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">返回值应为可迭代对象，对于可迭代对象，<code>__iter__</code>函数返回自身</td>
 </tr>
 <tr>
-<td align="center"><code>__reversed__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">调用<code>reversed()</code>函数时</td>
-<td align="center"></td>
-<td align="center">返回值应为可迭代对象，且是原序列的逆序</td>
+<td style="text-align: center;"><code>__reversed__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">调用<code>reversed()</code>函数时</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">返回值应为可迭代对象，且是原序列的逆序</td>
 </tr>
 <tr>
-<td align="center"><code>__next__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">调用<code>next()</code>函数时</td>
-<td align="center"></td>
-<td align="center">返回可迭代对象中的下一个元素，当到达最后一个元素时抛出<code>StopIteration</code></td>
+<td style="text-align: center;"><code>__next__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">调用<code>next()</code>函数时</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">返回可迭代对象中的下一个元素，当到达最后一个元素时抛出<code>StopIteration</code></td>
 </tr>
 </tbody>
 </table>
@@ -5079,20 +5079,20 @@
 <table>
 <thead>
 <tr>
-<th align="center">方法名</th>
-<th align="center">参数列表</th>
-<th align="center">调用时机</th>
-<th align="center">返回值类型</th>
-<th align="center">备注</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">参数列表</th>
+<th style="text-align: center;">调用时机</th>
+<th style="text-align: center;">返回值类型</th>
+<th style="text-align: center;">备注</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>__call__</code></td>
-<td align="center"><code>self, *args, **kwargs</code></td>
-<td align="center">当对象以函数的方式被调用时</td>
-<td align="center"></td>
-<td align="center">定义了<code>__call__</code>方法的对象属于<code>typing.Callable</code>类型</td>
+<td style="text-align: center;"><code>__call__</code></td>
+<td style="text-align: center;"><code>self, *args, **kwargs</code></td>
+<td style="text-align: center;">当对象以函数的方式被调用时</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">定义了<code>__call__</code>方法的对象属于<code>typing.Callable</code>类型</td>
 </tr>
 </tbody>
 </table>
@@ -5100,27 +5100,27 @@
 <table>
 <thead>
 <tr>
-<th align="center">方法名</th>
-<th align="center">参数列表</th>
-<th align="center">调用时机</th>
-<th align="center">返回值类型</th>
-<th align="center">备注</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">参数列表</th>
+<th style="text-align: center;">调用时机</th>
+<th style="text-align: center;">返回值类型</th>
+<th style="text-align: center;">备注</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>__enter__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">使用<code>with</code>关键词声明上下文时</td>
-<td align="center"><code>Any</code></td>
-<td align="center">返回值分配给<code>as</code>关键词指明的对象</td>
+<td style="text-align: center;"><code>__enter__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">使用<code>with</code>关键词声明上下文时</td>
+<td style="text-align: center;"><code>Any</code></td>
+<td style="text-align: center;">返回值分配给<code>as</code>关键词指明的对象</td>
 </tr>
 <tr>
-<td align="center"><code>__exit__</code></td>
-<td align="center"><code>self, exc_type, exc_value, traceback</code></td>
-<td align="center">离开<code>with</code>块时</td>
-<td align="center"><code>Any</code></td>
-<td align="center">若<code>with</code>块执行过程中没有出现异常，则<code>exc_type, exc_value, traceback</code>参数均为<code>None</code>，否则<code>exit</code>块可以对异常进行处理</td>
+<td style="text-align: center;"><code>__exit__</code></td>
+<td style="text-align: center;"><code>self, exc_type, exc_value, traceback</code></td>
+<td style="text-align: center;">离开<code>with</code>块时</td>
+<td style="text-align: center;"><code>Any</code></td>
+<td style="text-align: center;">若<code>with</code>块执行过程中没有出现异常，则<code>exc_type, exc_value, traceback</code>参数均为<code>None</code>，否则<code>exit</code>块可以对异常进行处理</td>
 </tr>
 </tbody>
 </table>
@@ -5128,34 +5128,34 @@
 <table>
 <thead>
 <tr>
-<th align="center">方法名</th>
-<th align="center">参数列表</th>
-<th align="center">调用时机</th>
-<th align="center">返回值类型</th>
-<th align="center">备注</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">参数列表</th>
+<th style="text-align: center;">调用时机</th>
+<th style="text-align: center;">返回值类型</th>
+<th style="text-align: center;">备注</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>__new__</code></td>
-<td align="center"><code>cls[, ...]</code></td>
-<td align="center">创建类实例时</td>
-<td align="center"><code>Any</code></td>
-<td align="center"><code>__new__</code>为静态方法且先于<code>__init__</code>执行，<code>__new__</code>的其余参数会传递给<code>__init__</code>。若<code>__new__</code>返回的类型与创建的类型不对应，则不会执行<code>__init__</code></td>
+<td style="text-align: center;"><code>__new__</code></td>
+<td style="text-align: center;"><code>cls[, ...]</code></td>
+<td style="text-align: center;">创建类实例时</td>
+<td style="text-align: center;"><code>Any</code></td>
+<td style="text-align: center;"><code>__new__</code>为静态方法且先于<code>__init__</code>执行，<code>__new__</code>的其余参数会传递给<code>__init__</code>。若<code>__new__</code>返回的类型与创建的类型不对应，则不会执行<code>__init__</code></td>
 </tr>
 <tr>
-<td align="center"><code>__init__</code></td>
-<td align="center"><code>self, ...</code></td>
-<td align="center">初始化类实例时</td>
-<td align="center"><code>None</code></td>
-<td align="center">若基类定义了<code>__init__</code>，则在子类的<code>__init__</code>中必须有<code>super().__init()</code>的显式调用</td>
+<td style="text-align: center;"><code>__init__</code></td>
+<td style="text-align: center;"><code>self, ...</code></td>
+<td style="text-align: center;">初始化类实例时</td>
+<td style="text-align: center;"><code>None</code></td>
+<td style="text-align: center;">若基类定义了<code>__init__</code>，则在子类的<code>__init__</code>中必须有<code>super().__init()</code>的显式调用</td>
 </tr>
 <tr>
-<td align="center"><code>__del__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">对象销毁时</td>
-<td align="center"><code>None</code></td>
-<td align="center">当对象的引用计数减为0时，对象才可能被删除</td>
+<td style="text-align: center;"><code>__del__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">对象销毁时</td>
+<td style="text-align: center;"><code>None</code></td>
+<td style="text-align: center;">当对象的引用计数减为0时，对象才可能被删除</td>
 </tr>
 </tbody>
 </table>
@@ -5163,48 +5163,48 @@
 <table>
 <thead>
 <tr>
-<th align="center">方法名</th>
-<th align="center">参数列表</th>
-<th align="center">调用时机</th>
-<th align="center">返回值类型</th>
-<th align="center">备注</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">参数列表</th>
+<th style="text-align: center;">调用时机</th>
+<th style="text-align: center;">返回值类型</th>
+<th style="text-align: center;">备注</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>__getattribute__</code></td>
-<td align="center"><code>self, name</code></td>
-<td align="center">使用<code>self.name</code>访问对象的属性时</td>
-<td align="center"><code>Any</code></td>
-<td align="center">为避免无限递归，子类的<code>__getattribute__</code>方法的实现中必须包含父类的<code>__getattribute__</code>方法调用</td>
+<td style="text-align: center;"><code>__getattribute__</code></td>
+<td style="text-align: center;"><code>self, name</code></td>
+<td style="text-align: center;">使用<code>self.name</code>访问对象的属性时</td>
+<td style="text-align: center;"><code>Any</code></td>
+<td style="text-align: center;">为避免无限递归，子类的<code>__getattribute__</code>方法的实现中必须包含父类的<code>__getattribute__</code>方法调用</td>
 </tr>
 <tr>
-<td align="center"><code>__getattr__</code></td>
-<td align="center"><code>self, name</code></td>
-<td align="center">使用<code>self.name</code>访问对象的不存在属性或<code>__getattribute__</code>函数抛出<code>AttributeError</code>异常</td>
-<td align="center"><code>Any</code></td>
-<td align="center">当<code>__getattribute__</code>正常执行时<code>__getattr__</code>不会执行</td>
+<td style="text-align: center;"><code>__getattr__</code></td>
+<td style="text-align: center;"><code>self, name</code></td>
+<td style="text-align: center;">使用<code>self.name</code>访问对象的不存在属性或<code>__getattribute__</code>函数抛出<code>AttributeError</code>异常</td>
+<td style="text-align: center;"><code>Any</code></td>
+<td style="text-align: center;">当<code>__getattribute__</code>正常执行时<code>__getattr__</code>不会执行</td>
 </tr>
 <tr>
-<td align="center"><code>__setattr__</code></td>
-<td align="center"><code>self, name, value</code></td>
-<td align="center">使用<code>self.name</code>设置属性的值时</td>
-<td align="center"><code>None</code></td>
-<td align="center">当试图通过<code>__setattr__</code>向对象设置属性值时必须通过类型的<code>__setattr__</code>方法进行设置</td>
+<td style="text-align: center;"><code>__setattr__</code></td>
+<td style="text-align: center;"><code>self, name, value</code></td>
+<td style="text-align: center;">使用<code>self.name</code>设置属性的值时</td>
+<td style="text-align: center;"><code>None</code></td>
+<td style="text-align: center;">当试图通过<code>__setattr__</code>向对象设置属性值时必须通过类型的<code>__setattr__</code>方法进行设置</td>
 </tr>
 <tr>
-<td align="center"><code>__delattr__</code></td>
-<td align="center"><code>self, name</code></td>
-<td align="center">执行<code>del self.name</code>时</td>
-<td align="center"><code>None</code></td>
-<td align="center">仅当<code>del self.name</code>语句有意义时，才需要实现该方法</td>
+<td style="text-align: center;"><code>__delattr__</code></td>
+<td style="text-align: center;"><code>self, name</code></td>
+<td style="text-align: center;">执行<code>del self.name</code>时</td>
+<td style="text-align: center;"><code>None</code></td>
+<td style="text-align: center;">仅当<code>del self.name</code>语句有意义时，才需要实现该方法</td>
 </tr>
 <tr>
-<td align="center"><code>__dir__</code></td>
-<td align="center"><code>self</code></td>
-<td align="center">执行<code>dir()</code>函数时</td>
-<td align="center"><code>Sequence</code></td>
-<td align="center"><code>dir()</code>会自动进行排序处理</td>
+<td style="text-align: center;"><code>__dir__</code></td>
+<td style="text-align: center;"><code>self</code></td>
+<td style="text-align: center;">执行<code>dir()</code>函数时</td>
+<td style="text-align: center;"><code>Sequence</code></td>
+<td style="text-align: center;"><code>dir()</code>会自动进行排序处理</td>
 </tr>
 </tbody>
 </table>
@@ -5213,26 +5213,26 @@
 <table>
 <thead>
 <tr>
-<th align="center">描述</th>
-<th align="center">方法名</th>
-<th align="center">运算符</th>
+<th style="text-align: center;">描述</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">运算符</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">取负</td>
-<td align="center"><code>__neg__</code></td>
-<td align="center"><code>-</code></td>
+<td style="text-align: center;">取负</td>
+<td style="text-align: center;"><code>__neg__</code></td>
+<td style="text-align: center;"><code>-</code></td>
 </tr>
 <tr>
-<td align="center">取正</td>
-<td align="center"><code>__pos__</code></td>
-<td align="center"><code>+</code></td>
+<td style="text-align: center;">取正</td>
+<td style="text-align: center;"><code>__pos__</code></td>
+<td style="text-align: center;"><code>+</code></td>
 </tr>
 <tr>
-<td align="center">绝对值</td>
-<td align="center"><code>__abs__</code></td>
-<td align="center"><code>abs()</code></td>
+<td style="text-align: center;">绝对值</td>
+<td style="text-align: center;"><code>__abs__</code></td>
+<td style="text-align: center;"><code>abs()</code></td>
 </tr>
 </tbody>
 </table>
@@ -5240,41 +5240,41 @@
 <table>
 <thead>
 <tr>
-<th align="center">描述</th>
-<th align="center">方法名</th>
-<th align="center">运算符</th>
+<th style="text-align: center;">描述</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">运算符</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">小于</td>
-<td align="center"><code>__lt__</code></td>
-<td align="center"><code>&lt;</code></td>
+<td style="text-align: center;">小于</td>
+<td style="text-align: center;"><code>__lt__</code></td>
+<td style="text-align: center;"><code>&lt;</code></td>
 </tr>
 <tr>
-<td align="center">小于等于</td>
-<td align="center"><code>__le__</code></td>
-<td align="center"><code>&lt;=</code></td>
+<td style="text-align: center;">小于等于</td>
+<td style="text-align: center;"><code>__le__</code></td>
+<td style="text-align: center;"><code>&lt;=</code></td>
 </tr>
 <tr>
-<td align="center">等于</td>
-<td align="center"><code>__eq__</code></td>
-<td align="center"><code>==</code></td>
+<td style="text-align: center;">等于</td>
+<td style="text-align: center;"><code>__eq__</code></td>
+<td style="text-align: center;"><code>==</code></td>
 </tr>
 <tr>
-<td align="center">不等于</td>
-<td align="center"><code>__ne__</code></td>
-<td align="center"><code>!=</code></td>
+<td style="text-align: center;">不等于</td>
+<td style="text-align: center;"><code>__ne__</code></td>
+<td style="text-align: center;"><code>!=</code></td>
 </tr>
 <tr>
-<td align="center">大于</td>
-<td align="center"><code>__gt__</code></td>
-<td align="center"><code>&gt;</code></td>
+<td style="text-align: center;">大于</td>
+<td style="text-align: center;"><code>__gt__</code></td>
+<td style="text-align: center;"><code>&gt;</code></td>
 </tr>
 <tr>
-<td align="center">大于等于</td>
-<td align="center"><code>__ge__</code></td>
-<td align="center"><code>&gt;=</code></td>
+<td style="text-align: center;">大于等于</td>
+<td style="text-align: center;"><code>__ge__</code></td>
+<td style="text-align: center;"><code>&gt;=</code></td>
 </tr>
 </tbody>
 </table>
@@ -5282,56 +5282,56 @@
 <table>
 <thead>
 <tr>
-<th align="center">描述</th>
-<th align="center">方法名</th>
-<th align="center">运算符</th>
+<th style="text-align: center;">描述</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">运算符</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">相加</td>
-<td align="center"><code>__add__</code></td>
-<td align="center"><code>+</code></td>
+<td style="text-align: center;">相加</td>
+<td style="text-align: center;"><code>__add__</code></td>
+<td style="text-align: center;"><code>+</code></td>
 </tr>
 <tr>
-<td align="center">相减</td>
-<td align="center"><code>__sub__</code></td>
-<td align="center"><code>-</code></td>
+<td style="text-align: center;">相减</td>
+<td style="text-align: center;"><code>__sub__</code></td>
+<td style="text-align: center;"><code>-</code></td>
 </tr>
 <tr>
-<td align="center">相乘</td>
-<td align="center"><code>__mul__</code></td>
-<td align="center"><code>*</code></td>
+<td style="text-align: center;">相乘</td>
+<td style="text-align: center;"><code>__mul__</code></td>
+<td style="text-align: center;"><code>*</code></td>
 </tr>
 <tr>
-<td align="center">实数除</td>
-<td align="center"><code>__truediv__</code></td>
-<td align="center"><code>/</code></td>
+<td style="text-align: center;">实数除</td>
+<td style="text-align: center;"><code>__truediv__</code></td>
+<td style="text-align: center;"><code>/</code></td>
 </tr>
 <tr>
-<td align="center">整数除</td>
-<td align="center"><code>__floordiv__</code></td>
-<td align="center"><code>//</code></td>
+<td style="text-align: center;">整数除</td>
+<td style="text-align: center;"><code>__floordiv__</code></td>
+<td style="text-align: center;"><code>//</code></td>
 </tr>
 <tr>
-<td align="center">取余</td>
-<td align="center"><code>__mod__</code></td>
-<td align="center"><code>%</code></td>
+<td style="text-align: center;">取余</td>
+<td style="text-align: center;"><code>__mod__</code></td>
+<td style="text-align: center;"><code>%</code></td>
 </tr>
 <tr>
-<td align="center">整数除+取余</td>
-<td align="center"><code>__divmod__</code></td>
-<td align="center"><code>divmod()</code></td>
+<td style="text-align: center;">整数除+取余</td>
+<td style="text-align: center;"><code>__divmod__</code></td>
+<td style="text-align: center;"><code>divmod()</code></td>
 </tr>
 <tr>
-<td align="center">乘方</td>
-<td align="center"><code>__pow__</code></td>
-<td align="center"><code>**</code></td>
+<td style="text-align: center;">乘方</td>
+<td style="text-align: center;"><code>__pow__</code></td>
+<td style="text-align: center;"><code>**</code></td>
 </tr>
 <tr>
-<td align="center">取整</td>
-<td align="center"><code>__round__</code></td>
-<td align="center"><code>round()</code></td>
+<td style="text-align: center;">取整</td>
+<td style="text-align: center;"><code>__round__</code></td>
+<td style="text-align: center;"><code>round()</code></td>
 </tr>
 </tbody>
 </table>
@@ -5340,41 +5340,41 @@
 <table>
 <thead>
 <tr>
-<th align="center">描述</th>
-<th align="center">方法名</th>
-<th align="center">运算符</th>
+<th style="text-align: center;">描述</th>
+<th style="text-align: center;">方法名</th>
+<th style="text-align: center;">运算符</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">按位取反</td>
-<td align="center"><code>__invert__</code></td>
-<td align="center"><code>~</code></td>
+<td style="text-align: center;">按位取反</td>
+<td style="text-align: center;"><code>__invert__</code></td>
+<td style="text-align: center;"><code>~</code></td>
 </tr>
 <tr>
-<td align="center">左移</td>
-<td align="center"><code>__lshift__</code></td>
-<td align="center"><code>&lt;&lt;</code></td>
+<td style="text-align: center;">左移</td>
+<td style="text-align: center;"><code>__lshift__</code></td>
+<td style="text-align: center;"><code>&lt;&lt;</code></td>
 </tr>
 <tr>
-<td align="center">右移</td>
-<td align="center"><code>__rshift__</code></td>
-<td align="center"><code>&gt;&gt;</code></td>
+<td style="text-align: center;">右移</td>
+<td style="text-align: center;"><code>__rshift__</code></td>
+<td style="text-align: center;"><code>&gt;&gt;</code></td>
 </tr>
 <tr>
-<td align="center">按位与</td>
-<td align="center"><code>__and__</code></td>
-<td align="center"><code>&amp;</code></td>
+<td style="text-align: center;">按位与</td>
+<td style="text-align: center;"><code>__and__</code></td>
+<td style="text-align: center;"><code>&amp;</code></td>
 </tr>
 <tr>
-<td align="center">按位或</td>
-<td align="center"><code>__or__</code></td>
-<td align="center"><code>|</code></td>
+<td style="text-align: center;">按位或</td>
+<td style="text-align: center;"><code>__or__</code></td>
+<td style="text-align: center;"><code>|</code></td>
 </tr>
 <tr>
-<td align="center">按位异或</td>
-<td align="center"><code>__xor__</code></td>
-<td align="center"><code>^</code></td>
+<td style="text-align: center;">按位异或</td>
+<td style="text-align: center;"><code>__xor__</code></td>
+<td style="text-align: center;"><code>^</code></td>
 </tr>
 </tbody>
 </table>
@@ -5541,10 +5541,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="../../../js/timeago.min.js"></script>
