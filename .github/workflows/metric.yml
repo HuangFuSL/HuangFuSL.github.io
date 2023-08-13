@@ -20,10 +20,10 @@ jobs:
           base: header, activity, community, repositories, metadata
           base_indepth: yes
           config_timezone: Asia/Shanghai
-          commits_authoring: firstname lastname, username, username@users.noreply.github.com
+          commits_authoring: firstname lastname, username
 
           plugin_activity_days: 14
-          plugin_activity_filter: issue, pr, release, fork, review, ref/create, comment
+          plugin_activity_filter: pr, release, fork, review, ref/create, comment
           plugin_activity_limit: 5
           plugin_activity_load: 300
           plugin_activity_visibility: public
@@ -42,14 +42,9 @@ jobs:
           plugin_isocalendar: yes
           plugin_languages_analysis_timeout: 15
           plugin_languages_colors: github
-          plugin_languages_details: bytes-size, percentage, lines
-          plugin_languages_ignored: html, css, javascript
-          plugin_languages_categories: programming, markup, prose
-          plugin_languages_recent_categories: programming, markup, prose
-          plugin_languages_indepth: yes
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_ignored: html, css
           plugin_languages_limit: 8
-          plugin_languages_recent_days: 30
-          plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 5%
           plugin_languages: yes
@@ -59,14 +54,21 @@ jobs:
           plugin_lines: yes
           plugin_pagespeed_detailed: yes
           plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
-          plugin_pagespeed_url: huangfusl.github.io
+          plugin_pagespeed_url: blog.huangfusl.net
           plugin_pagespeed: yes
           plugin_stars_limit: 4
           plugin_stars: yes
+          plugin_steam_achievements_limit: 5
+          plugin_steam_games_limit: 2
+          plugin_steam_sections: player, most-played
+          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          plugin_steam_user: ${{ secrets.STEAM_UID }}
+          plugin_steam: yes
           plugin_topics_limit: 15
           plugin_topics_mode: icons
           plugin_topics_sort: stars
           plugin_topics: yes
+          plugin_traffic: yes
 
           # Outputs
           committer_branch: gh-pages
