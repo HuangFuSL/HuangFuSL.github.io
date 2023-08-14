@@ -108,10 +108,28 @@ source code.
 
 ### :bootstrap-bootstrap-fill: Bootstrap icon installation
 
-The site uses bootstrap icons, which are neither shipped with `mkdocs-material`
-nor synced in this repo. You have to manually install these icons.
+The site uses bootstrap icons, which are added as submodules in
+`third_party/icons`. You have to manually initialize the submodule.
 
-* Execute the `ci/bootstrap.py` in the root directory of the repository.
+```bash
+git submodule update --recursive --remote
+```
+
+### :material-pen: LaTeX support
+
+The site uses `xelatex` and `dvisvgm` to render tex document to SVG images
+embedded in the markdown files. However, as the SVG images are ignored by
+`.gitignore`, you have to manually perform the conversion.
+
+For GitHub repository clones:
+
+* Run `git submodule update --recursive --remote` to receive the template.
+* Make sure you have installed and correctly configured `xelatex` and `dvisvgm`.
+* Add `./template` directory to `$TEXINPUTS` environmental variable.
+* Execute `ci/convert.py` in the root directory of the repository.
+* Run `mkdocs serve` to view the images.
+
+The template is located at [HuangFuSL/latex-template](https://github.com/HuangFuSL/latex-template)
 
 ### :fontawesome-brands-github: GitHub workflow
 
@@ -132,22 +150,6 @@ mkdocs build -d build
 ```
 
 Execute `mkdocs serve`, the built site will appear at [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
-### :material-pen: LaTeX support
-
-The site uses `xelatex` and `dvisvgm` to render tex document to SVG images
-embedded in the markdown files. However, as the SVG images are ignored by
-`.gitignore`, you have to manually perform the conversion.
-
-For GitHub repository clones:
-
-* Run `git submodule update --recursive --remote` to receive the template.
-* Make sure you have installed and correctly configured `xelatex` and `dvisvgm`.
-* Add `./template` directory to `$TEXINPUTS` environmental variable.
-* Execute `ci/convert.py` in the root directory of the repository.
-* Run `mkdocs serve` to view the images.
-
-The template is located at [HuangFuSL/latex-template](https://github.com/HuangFuSL/latex-template)
 
 ## :material-lightbulb-on: Acknowledgements
 
