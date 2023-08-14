@@ -9,7 +9,6 @@ build/
 
 # Icons and rendered LaTeX
 *.svg
-.icons/
 
 # Python
 *.pyc
