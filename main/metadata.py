@@ -10,7 +10,6 @@ _page_meta_original = {}
 
 
 def collect_meta(env) -> None:
-    print(type(env))
     global _page_meta_original
     global _page_meta_collection
     if not _page_meta_original:
@@ -29,7 +28,8 @@ def load_meta() -> None:
             _page_meta_original = json.load(file)
     except:
         _page_meta_original = {}
-    print(f'Loaded metadata for {len(_page_meta_original)} pages')
+    if len(_page_meta_original):
+        print(f'Loaded metadata for {len(_page_meta_original)} pages')
 
 
 def write_meta(_: plugin.MacrosPlugin) -> None:
