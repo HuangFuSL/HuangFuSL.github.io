@@ -105,7 +105,7 @@ def get_whole_table(
     for page in content:
         if int(page['编号']) in pages_dict:
             page['linked'] = True
-            page['link'] = pages_dict[int(page['编号'])]['url']
+            page['link'] = pages_dict[int(page['编号'])]['file']
             new_page.append(page)
     content = new_page
 
