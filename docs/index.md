@@ -178,4 +178,6 @@ Unless noted, content in this blog are shared under [CC-BY-NC-SA 4.0](http://cre
 
 ## :material-update: Version information
 
-<div style="white-space: pre-line;">{{ git.raw }}</div>
+```text
+{{ git.raw }}
+```
