@@ -81,6 +81,6 @@ jobs:
 
       - name: Test
         env:
-            TEXINPUTS: "/home/runner/work/HuangFuSL.github.io/HuangFuSL.github.io/template/:"
+            TEXINPUTS: "${{ github.workspace }}/third_party//:"
         run: |
           python3 ./ci/deploy.py --dry-run

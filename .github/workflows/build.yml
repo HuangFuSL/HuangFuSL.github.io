@@ -49,7 +49,7 @@ jobs:
 
       - name: Deploy
         env:
-          TEXINPUTS: "/home/runner/work/HuangFuSL.github.io/HuangFuSL.github.io/template/:"
+          TEXINPUTS: "${{ github.workspace }}/third_party//:"
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
