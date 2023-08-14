@@ -17,7 +17,8 @@ def collect_meta(env) -> None:
     _page_meta_collection[env.page.url] = {
         'title': env.page.title,
         'meta': env.page.meta,
-        'url': env.page.url
+        'url': env.page.url,
+        'file': env.page.file.src_uri,
     }
 
 
@@ -54,8 +55,8 @@ def build_timeline(topk: int) -> str:
     global _page_meta_original
     pages: List[Dict[str, Any]] = [
         {
-            'url': v['url'],
-            'title': f"[{v['title']}]({v['url']})",
+            'url': v['file'],
+            'title': f"[{v['title']}]({v['file']})",
             'sub_title': v['meta']['git_creation_date_localized_raw_iso_date'], # type: ignore
             'content': v['meta'].get('description', '')  # type: ignore
         }
@@ -69,8 +70,8 @@ def build_recent(topk: int) -> str:
     global _page_meta_original
     pages: List[Dict[str, Any]] = [
         {
-            'url': v['url'],
-            'title': f"[{v['title']}]({v['url']})",
+            'url': v['file'],
+            'title': f"[{v['title']}]({v['file']})",
             'sub_title': v['meta']['revision_date'],  # type: ignore
             'content': v['meta'].get('summary', '')  # type: ignore
         }
