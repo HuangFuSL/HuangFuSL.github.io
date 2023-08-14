@@ -4,7 +4,6 @@ import subprocess
 import sys
 import time
 
-import bootstrap
 import convert
 import tsinghua
 
@@ -24,7 +23,6 @@ if __name__ == '__main__':
 
     src = os.getcwd()
     convert.tex2svg(src)
-    bootstrap.get_icon()
     tsinghua.build_icon()
     msg = 'Update on ' + \
         time.strftime('%Y/%m/%d %H:%M:%S', time.gmtime(time.time() + 3600 * 8))

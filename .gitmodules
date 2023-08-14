@@ -1,3 +1,6 @@
 [submodule "third_party/template"]
 	path = third_party/template
 	url = https://github.com/HuangFuSL/latex-template
+[submodule "third_party/icons"]
+	path = third_party/icons
+	url = https://github.com/twbs/icons
