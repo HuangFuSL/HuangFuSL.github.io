@@ -27,6 +27,7 @@ theme:
         name: Switch to light mode
   features:
     # Code block section
+    - content.code.copy
     - content.code.annotate
 
     # Navigation section

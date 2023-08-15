@@ -13,7 +13,9 @@ hide:
 * [ssh](ssh.md)
 * [update-alternatives](update-alternatives.md)
 
-## 软件环境配置
+## 软件环境
+
+* [docker](docker.md)
 
 ## 软件编译流程
 
