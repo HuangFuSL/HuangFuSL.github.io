@@ -87,6 +87,7 @@ jobs:
 
       - name: Save artifact
         uses: actions/upload-artifact@v3
+        if: contains(github.event.pull_request.labels.*.name, 'dependencies') == false
         with:
           name: ${{ github.head_ref }}
           path: |
