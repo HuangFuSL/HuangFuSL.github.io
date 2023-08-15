@@ -88,6 +88,6 @@ jobs:
       - name: Save artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ github.head_ref }}}
+          name: ${{ github.head_ref }}
           path: |
             ./build
