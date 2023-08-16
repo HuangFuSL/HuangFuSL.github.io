@@ -71,4 +71,3 @@ jobs:
     with:
       build-type: build
       deploy: false
-    secrets: inherit
