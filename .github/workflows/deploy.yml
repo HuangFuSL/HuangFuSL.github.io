@@ -3,6 +3,10 @@ name: Deploy Documentation
 on:
   push:
     branches: [main]
+    # Exclude dependabot
+    paths-ignore:
+      - 'requirements.txt'
+      - 'Dockerfile'
 
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
