@@ -78,7 +78,7 @@ jobs:
 
       - name: Test
         env:
-          TEXINPUTS: "${{ env.PWD }}/third_party//:"
+          TEXINPUTS: "$PWD/third_party//:"
         run: |
           chown -R root:root $PWD
           . /root/venv/bin/activate
