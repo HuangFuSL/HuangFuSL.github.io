@@ -91,3 +91,19 @@ jobs:
           name: ${{ github.head_ref }}
           path: |
             ./build
+
+  docker:
+    name: Build docker image
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'dependencies') == true
+    steps:
+      - name: Checkout Main
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: 'true'
+
+      - name: Build docker image
+        run: |
+          docker build -t ghcr.io/huangfusl/blog-env:test -f ./ci/Dockerfile .
+          docker push ghcr.io/huangfusl/blog-env:test
