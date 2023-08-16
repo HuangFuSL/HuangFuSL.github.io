@@ -105,5 +105,5 @@ jobs:
 
       - name: Build docker image
         run: |
-          docker build -t ghcr.io/huangfusl/blog-env:test -f ./ci/Dockerfile .
+          docker build -t ghcr.io/huangfusl/blog-env:test .
           docker push ghcr.io/huangfusl/blog-env:test
