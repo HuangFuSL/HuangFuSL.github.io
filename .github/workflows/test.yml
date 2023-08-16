@@ -80,7 +80,7 @@ jobs:
         env:
             TEXINPUTS: "${{ github.workspace }}/third_party//:"
         run: |
-          git config --global --add safe.directory {{ github.workspace }}
+          git config --global --add safe.directory ${{ github.workspace }}
           . /root/venv/bin/activate
           python3 ./ci/deploy.py --dry-run
 
