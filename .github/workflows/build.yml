@@ -44,6 +44,7 @@ jobs:
       - name: Set up Deploy Environment
         # if: inputs.deploy
         run: |
+          cd ${{ github.workspace }}
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
