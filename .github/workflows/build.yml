@@ -25,7 +25,7 @@ jobs:
           submodules: 'true'
 
       - name: Test
-        if: !inputs.deploy
+        if: inputs.deploy == false
         env:
           TEXINPUTS: "$PWD/third_party//:"
         run: |
@@ -35,7 +35,7 @@ jobs:
 
       - name: Save artifact
         uses: actions/upload-artifact@v3
-        if: !inputs.deploy
+        if: inputs.deploy == false
         with:
           name: github.head_ref
           path: |
