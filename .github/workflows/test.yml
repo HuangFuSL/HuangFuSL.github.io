@@ -2,39 +2,44 @@ name: Test pull request
 
 on:
   pull_request:
-    branches: [main]
+    # Commented out for testing
+    # branches: [main]
 
 jobs:
+  pylint:
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'dependencies') == false
+    container: ghcr.io/huangfusl/blog-env:2023
+    steps:
+    - name: Checkout Main
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Install dependencies
+      run: |
+        . /root/venv/bin/activate
+        python3 -m pip install --upgrade pip
+        pip3 install pylint
+
+    - name: Analysing the code with pylint
+      run: |
+        . /root/venv/bin/activate
+        pylint $(git ls-files '*.py') --rcfile=.pylintrc --fail-under=9
+
   test_code_block:
     name: Test code block
     runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'dependencies') == false
     steps:
       - name: Checkout Main
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      - name: Set up Python 3
-        uses: actions/setup-python@v4
-        id: python
-        with:
-          python-version: '3.x'
-          cache: 'pip'
-
-      - uses: actions/cache@v3
-        id: cache
-        with:
-          path: ~/.local
-          key: ${{ steps.python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
-
-      - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install -r requirements.txt --user --no-warn-script-location
-
       - name: Test
         run:
+          . /root/venv/bin/activate
           python3 ./ci/test_code_block.py
 
   test:
@@ -48,41 +53,11 @@ jobs:
           fetch-depth: 0
           submodules: 'true'
 
-      - name: Set up Python 3
-        uses: actions/setup-python@v4
-        id: python
-        with:
-          python-version: '3.x'
-          cache: 'pip'
-
-      - name: Restoring packages
-        uses: actions/cache@v3
-        id: cache
-        with:
-          path: ~/.local
-          key: ${{ steps.python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
-
-
-      - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install -r requirements.txt --user --no-warn-script-location
-
-      - name: Setup TeX Live
-        uses: teatimeguest/setup-texlive-action@v2
-        with:
-          packages: scheme-full
-
-      - name: Install GhostScript
-        run: |
-          sudo apt-get update
-          sudo apt-get install ghostscript -y
-
       - name: Test
         env:
             TEXINPUTS: "${{ github.workspace }}/third_party//:"
         run: |
+          . /root/venv/bin/activate
           python3 ./ci/deploy.py --dry-run
 
       - name: Save artifact
