@@ -2,7 +2,16 @@ name: Refresh Metrics
 on:
   schedule:
     - cron: '0 0 * * *'
-  workflow_dispatch:
+  workflow_call:
+    secrets:
+      METRICS_TOKEN:
+        required: true
+      PAGESPEED_TOKEN:
+        required: true
+      STEAM_TOKEN:
+        required: true
+      STEAM_UID:
+        required: true
 
 jobs:
   github-metrics:

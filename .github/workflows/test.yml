@@ -7,6 +7,7 @@ on:
 
 jobs:
   pylint:
+    name: Lint code
     runs-on: ubuntu-latest
     if: contains(github.event.pull_request.labels.*.name, 'dependencies') == false
     steps:
@@ -65,29 +66,9 @@ jobs:
 
   test:
     name: Test documentation
-    runs-on: ubuntu-latest
-    container: ghcr.io/huangfusl/blog-env:2023
     if: contains(github.event.pull_request.labels.*.name, 'dependencies') == false
-    steps:
-
-      - name: Checkout Main
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          submodules: 'true'
-
-      - name: Test
-        env:
-          TEXINPUTS: "$PWD/third_party//:"
-        run: |
-          chown -R root:root $PWD
-          . /root/venv/bin/activate
-          python3 ./ci/deploy.py --dry-run
-
-      - name: Save artifact
-        uses: actions/upload-artifact@v3
-        if: contains(github.event.pull_request.labels.*.name, 'dependencies') == false
-        with:
-          name: ${{ github.head_ref }}
-          path: |
-            ./build
+    uses: ./.github/workflows/build.yml
+    with:
+      build-type: build
+      deploy: false
+    secrets: inherit
