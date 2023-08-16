@@ -105,5 +105,6 @@ jobs:
 
       - name: Build docker image
         run: |
+          docker login ghcr.io -u huangfusl -p ${{ secrets.GITHUB_TOKEN }}
           docker build -t ghcr.io/huangfusl/blog-env:test .
           docker push ghcr.io/huangfusl/blog-env:test
