@@ -80,7 +80,7 @@ jobs:
         env:
             TEXINPUTS: "${{ github.workspace }}/third_party//:"
         run: |
-          /root/venv/bin/python3 ./ci/deploy.py --dry-run
+          /root/venv/bin/python3 ./ci/deploy.py --dry-run --python /root/venv/bin/python3
 
       - name: Save artifact
         uses: actions/upload-artifact@v3
