@@ -66,9 +66,7 @@ jobs:
   test:
     name: Test documentation
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/huangfusl/blog-env:2023
-      options: --user huangfusl
+    container: ghcr.io/huangfusl/blog-env:2023
     if: contains(github.event.pull_request.labels.*.name, 'dependencies') == false
     steps:
 
