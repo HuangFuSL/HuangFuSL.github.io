@@ -9,7 +9,10 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-  - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/ci" # Location of package manifests
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    labels:
+      - "github-actions"
     schedule:
-      interval: "weekly"
+      interval: "daily"
