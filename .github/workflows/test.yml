@@ -28,7 +28,6 @@ jobs:
 
     - name: Analysing the code with pylint
       run: |
-        . /root/venv/bin/activate
         pylint $(git ls-files '*.py') --rcfile=.pylintrc --fail-under=9
 
   test_code_block:
