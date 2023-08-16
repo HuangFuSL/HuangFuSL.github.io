@@ -1,0 +1,22 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches: [main]
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  test:
+    name: Test documentation
+    uses: ./.github/workflows/build.yml
+    with:
+      build-type: build
+      deploy: true
+    secrets: inherit
+
+  metrics:
+    name: Update metrics
+    uses: ./.github/workflows/metric.yml
+    secrets: inherit
