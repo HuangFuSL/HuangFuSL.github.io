@@ -17,8 +17,8 @@ env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  test:
-    name: Test documentation
+  deploy:
+    name: Deploy documentation
     uses: ./.github/workflows/build.yml
     with:
       build-type: build
@@ -27,5 +27,6 @@ jobs:
 
   metrics:
     name: Update metrics
+    needs: deploy
     uses: ./.github/workflows/metric.yml
     secrets: inherit
