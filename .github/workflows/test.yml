@@ -2,13 +2,17 @@ name: Test pull request
 
 on:
   pull_request:
-    branches: [main]
 
 jobs:
   pylint:
     name: Lint code
     runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.labels.*.name, 'dependencies') == false
+    if:
+      (
+        contains(github.event.pull_request.labels.*.name, 'dependencies') == false &&
+        github.base_ref == 'main'
+      ) ||
+      contains(github.event.pull_request.labels.*.name, 'ci') == true
     steps:
     - name: Checkout Main
       uses: actions/checkout@v3
@@ -33,7 +37,12 @@ jobs:
   test_code_block:
     name: Test code block
     runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.labels.*.name, 'dependencies') == false
+    if:
+      (
+        contains(github.event.pull_request.labels.*.name, 'dependencies') == false &&
+        github.base_ref == 'main'
+      ) ||
+      contains(github.event.pull_request.labels.*.name, 'ci') == true
     steps:
       - name: Checkout Main
         uses: actions/checkout@v3
@@ -65,7 +74,12 @@ jobs:
 
   test:
     name: Test documentation
-    if: contains(github.event.pull_request.labels.*.name, 'dependencies') == false
+    if:
+      (
+        contains(github.event.pull_request.labels.*.name, 'dependencies') == false &&
+        github.base_ref == 'main'
+      ) ||
+      contains(github.event.pull_request.labels.*.name, 'ci') == true
     uses: ./.github/workflows/build.yml
     with:
       build-type: build
