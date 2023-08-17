@@ -49,7 +49,6 @@ jobs:
         if: inputs.deploy
         run: |
           cd $GITHUB_WORKSPACE
-          ls -al
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
