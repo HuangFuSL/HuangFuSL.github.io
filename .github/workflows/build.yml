@@ -15,7 +15,9 @@ jobs:
   build:
     name: Build documentation
     runs-on: ubuntu-latest
-    container: ghcr.io/huangfusl/blog-env:${{ inputs.build-type }}
+    container:
+      image: ghcr.io/huangfusl/blog-env:${{ inputs.build-type }}
+      options: --user root
     steps:
 
       - name: Checkout Main
