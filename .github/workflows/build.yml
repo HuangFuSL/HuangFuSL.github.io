@@ -22,7 +22,7 @@ jobs:
 
       - name: Take ownership
         run: |
-          sudo chown -R $USER:$USER $GITHUB_WORKSPACE
+          chown -R $USER:$USER $GITHUB_WORKSPACE
 
       - name: Checkout Main
         uses: actions/checkout@v3
