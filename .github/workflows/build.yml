@@ -20,10 +20,6 @@ jobs:
       options: --user root
     steps:
 
-      - name: Take ownership
-        run: |
-          chown -R $USER:$USER $GITHUB_WORKSPACE
-
       - name: Checkout Main
         uses: actions/checkout@v3
         with:
