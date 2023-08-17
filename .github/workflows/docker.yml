@@ -2,13 +2,17 @@ name: Build Docker Image
 
 on:
   pull_request:
-    branches: [main]
 
 jobs:
   docker:
     name: Build docker image
     runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.labels.*.name, 'dependencies') == true
+    if:
+      (
+        contains(github.event.pull_request.labels.*.name, 'dependencies') == true &&
+        github.base_ref == 'main'
+      ) ||
+      contains(github.event.pull_request.labels.*.name, 'ci') == true
     permissions:
       contents: read
       packages: write
