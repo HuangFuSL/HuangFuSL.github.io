@@ -51,6 +51,7 @@ jobs:
       - name: Set up Deploy Environment
         # if: inputs.deploy
         run: |
+          cd $GITHUB_WORKSPACE
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -59,7 +60,7 @@ jobs:
         env:
           TEXINPUTS: "$PWD/third_party//:"
         run: |
-          chown -Rv root:root $PWD
+          # chown -Rv root:root $PWD
           . /root/venv/bin/activate
           git pull
-          python3 ./ci/deploy.py
+          python3 ./ci/deploy.py --dry-run
