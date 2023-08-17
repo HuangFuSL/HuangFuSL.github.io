@@ -30,6 +30,7 @@ jobs:
           fetch-depth: 0
           submodules: 'true'
           path: '.'
+          ref: 'main'
 
       # - name: Test
       #   if: inputs.deploy == false
@@ -63,5 +64,5 @@ jobs:
         run: |
           chown -Rv root:root $PWD
           . /root/venv/bin/activate
-          git pull
+          git checkout main && git pull
           python3 ./ci/deploy.py --dry-run
