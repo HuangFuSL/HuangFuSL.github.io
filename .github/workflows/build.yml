@@ -1,60 +1,63 @@
 name: Build Documentation
 
 on:
-  push:
-    branches: [main]
-
-env:
-    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # To be reused by other workflows
+  workflow_call:
+    inputs:
+      build-type:
+        required: true
+        type: string
+      deploy:
+        required: true
+        type: boolean
 
 jobs:
   build:
-    name: Build and Deploy Documentation
+    name: Build documentation
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/huangfusl/blog-env:${{ inputs.build-type }}
+      options: --user root
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v2
+
+      - name: Checkout Main
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           submodules: 'true'
+          path: '.'
+          ref: 'main'
 
-      - name: Set up Python 3
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-          cache: 'pip'
-
-      - name: Restoring packages
-        uses: actions/cache@v3
-        id: cache
-        with:
-          path: ~/.local
-          key: ${{ steps.python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
-
-      - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
+      - name: Test
+        if: inputs.deploy == false
+        env:
+          TEXINPUTS: "$PWD/third_party//:"
         run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install -r requirements.txt --user --no-warn-script-location
+          chown -R root:root $PWD
+          . /root/venv/bin/activate
+          python3 ./ci/deploy.py --dry-run
 
-      - name: Setup TeX Live
-        uses: teatimeguest/setup-texlive-action@v2
+      - name: Save artifact
+        uses: actions/upload-artifact@v3
+        if: inputs.deploy == false
         with:
-          packages: scheme-full
+          name: github.head_ref
+          path: |
+            ./build
 
-      - name: Install GhostScript
+      - name: Set up Deploy Environment
+        if: inputs.deploy
         run: |
-          sudo apt-get update
-          sudo apt-get install ghostscript -y
+          cd $GITHUB_WORKSPACE
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Deploy
+        if: inputs.deploy
         env:
-          TEXINPUTS: "${{ github.workspace }}/third_party//:"
+          TEXINPUTS: "$PWD/third_party//:"
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull
+          chown -R root:root $PWD
+          . /root/venv/bin/activate
+          git checkout main && git pull
           python3 ./ci/deploy.py
-
-      - name: Update Metrics
-        run: gh workflow run metric.yml

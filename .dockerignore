@@ -1,1 +1,4 @@
-build/
+# Ignore all
+**/*
+# But not requirements.txt
+!requirements.txt

@@ -1,0 +1,32 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches: [main]
+    # Exclude dependabot
+    paths:
+      - 'docs/**'
+      - 'main/**'
+      - 'overrides/**'
+      - 'third_party/**'
+      - 'ci/**'
+      - 'README.md'
+      - 'mkdocs.yml'
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  deploy:
+    name: Deploy documentation
+    uses: ./.github/workflows/build.yml
+    with:
+      build-type: build
+      deploy: true
+    secrets: inherit
+
+  metrics:
+    name: Update metrics
+    needs: deploy
+    uses: ./.github/workflows/metric.yml
+    secrets: inherit
