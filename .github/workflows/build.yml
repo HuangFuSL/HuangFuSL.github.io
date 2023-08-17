@@ -62,7 +62,7 @@ jobs:
         env:
           TEXINPUTS: "$PWD/third_party//:"
         run: |
-          chown -Rv root:root $PWD
+          chown -R root:root $PWD
           . /root/venv/bin/activate
           git checkout main && git pull
           python3 ./ci/deploy.py --dry-run
