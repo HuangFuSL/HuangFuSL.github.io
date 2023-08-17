@@ -65,4 +65,4 @@ jobs:
           chown -R root:root $PWD
           . /root/venv/bin/activate
           git checkout main && git pull
-          python3 ./ci/deploy.py --dry-run
+          python3 ./ci/deploy.py
