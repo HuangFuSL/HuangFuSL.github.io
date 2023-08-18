@@ -1,6 +1,4 @@
 import requests
-import lxml
-import lxml.html
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 '\

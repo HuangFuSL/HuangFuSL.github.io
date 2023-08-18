@@ -97,12 +97,9 @@ def _conversion(arg: Tuple[str, str]):
         'capture_output': True
     }
     try:
-        result = subprocess.run(
-            XELATEX_CMD + [filename], check=True, **exec_args)
-        result = subprocess.run(
-            XELATEX_CMD + [filename], check=True, **exec_args)
-        result = subprocess.run(
-            DVISVGM_CMD + [dvi_name], check=True, **exec_args)
+        subprocess.run(XELATEX_CMD + [filename], check=True, **exec_args)
+        subprocess.run(XELATEX_CMD + [filename], check=True, **exec_args)
+        subprocess.run(DVISVGM_CMD + [dvi_name], check=True, **exec_args)
     except subprocess.CalledProcessError as e:
         print(e.stdout.decode('utf-8'))
         print(e.stderr.decode('utf-8'))

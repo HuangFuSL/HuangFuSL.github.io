@@ -10,8 +10,6 @@ _page_meta_original = {}
 
 
 def collect_meta(env) -> None:
-    global _page_meta_original
-    global _page_meta_collection
     if not _page_meta_original:
         load_meta()
     _page_meta_collection[env.page.url] = {
@@ -34,8 +32,6 @@ def load_meta() -> None:
 
 
 def write_meta(_: plugin.MacrosPlugin) -> None:
-    global _page_meta_collection
-    global _page_meta_original
     if _page_meta_original != _page_meta_collection:
         with open('meta.json', 'w', encoding='utf-8') as file:
             json.dump(_page_meta_collection, file)
@@ -52,7 +48,6 @@ def criteria(v: Dict[str, Any]):
 
 
 def build_timeline(topk: int) -> str:
-    global _page_meta_original
     pages: List[Dict[str, Any]] = [
         {
             'url': v['file'],
@@ -67,7 +62,6 @@ def build_timeline(topk: int) -> str:
     return json.dumps(pages[:topk])
 
 def build_recent(topk: int) -> str:
-    global _page_meta_original
     pages: List[Dict[str, Any]] = [
         {
             'url': v['file'],
@@ -85,14 +79,13 @@ def build_recent(topk: int) -> str:
     ])
 
 def build_todo() -> str:
-    global _page_meta_original
     pages: List[Dict[str, Any]] = [
         {
             'url': v['file'],
             'title': f"[{v['title']}]({v['file']})"
         }
         for v in _page_meta_original.values()
-        if criteria(v) and ('todo' in v['meta'] and v['meta']['todo']) # type: ignore
+        if criteria(v) and (v['meta'].get('todo', False))
     ]
     pages.sort(key=lambda _: _['title'], reverse=True)
     if pages:
@@ -100,7 +93,6 @@ def build_todo() -> str:
     return 'TODO list is clear!'
 
 def filter_pages(category: str) -> List[Dict[str, str | Dict[str, str]]]:
-    global _page_meta_original
 
     def helper(_):
         return 'category' in _['meta'] and _['meta']['category'] == category
@@ -108,7 +100,6 @@ def filter_pages(category: str) -> List[Dict[str, str | Dict[str, str]]]:
 
 
 def get_meta_original() -> Dict[str, Dict[str, str | Dict[str, str]]]:
-    global _page_meta_original
     return _page_meta_original
 
 
@@ -118,7 +109,6 @@ def set_meta_original(o: Dict[str, Dict[str, str | Dict[str, str]]]):
 
 
 def get_meta_collection() -> Dict[str, Dict[str, str | Dict[str, str]]]:
-    global _page_meta_collection
     return _page_meta_collection
 
 

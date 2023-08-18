@@ -14,9 +14,9 @@ def check_doc(cwd: str):
         if os.path.isdir(curPath):
             check_doc(curPath)
         elif os.path.isfile(curPath):
-            if _[-2:] == "md" and "pyguide" not in _:
+            if _[-2:] == 'md' and 'pyguide' not in _:
                 doctest.testfile(curPath,**TEST_ARGS)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     src = os.getcwd()
     check_doc(src)
