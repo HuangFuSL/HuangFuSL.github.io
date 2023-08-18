@@ -1,3 +1,7 @@
+---
+todo: true
+---
+
 # Potential Outcome Framework
 
 * Unit of analysis：不同时间下的同一个个体应当看作不同的个体
