@@ -14,7 +14,7 @@ hide:
 * [论文笔记](papers/index.md)
 * [关于我](about.md)
 
-## :material-timeline-clock: Blog timeline
+### :material-timeline-clock: Blog timeline
 
 ::timeline:: class="home-timeline"
 
@@ -22,9 +22,13 @@ hide:
 
 ::/timeline::
 
-## :material-pen-plus: Recent updates
+### :material-pen-plus: Recent updates
 
 {{ build_recent(5) }}
+
+### :material-typewriter: Currently working on
+
+{{ build_todo() }}
 
 ## :material-palette: Customization
 

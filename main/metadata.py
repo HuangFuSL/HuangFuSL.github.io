@@ -84,6 +84,20 @@ def build_recent(topk: int) -> str:
         for page in pages[:topk]
     ])
 
+def build_todo() -> str:
+    global _page_meta_original
+    pages: List[Dict[str, Any]] = [
+        {
+            'url': v['file'],
+            'title': f"[{v['title']}]({v['file']})"
+        }
+        for v in _page_meta_original.values()
+        if criteria(v) and ('todo' in v['meta'] and v['meta']['todo']) # type: ignore
+    ]
+    pages.sort(key=lambda _: _['title'], reverse=True)
+    if pages:
+        return '\n'.join([f"* {page['title']}" for page in pages])
+    return 'TODO list is clear!'
 
 def filter_pages(category: str) -> List[Dict[str, str | Dict[str, str]]]:
     global _page_meta_original
