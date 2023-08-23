@@ -37,6 +37,6 @@ if __name__ == '__main__':
         )
     else:
         subprocess.run(
-            f'python3 -m mkdocs build -d build --clean',
+            'python3 -m mkdocs build -d build --clean',
             cwd=src, shell=True, check=True
         )
