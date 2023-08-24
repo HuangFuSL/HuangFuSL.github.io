@@ -31,3 +31,7 @@ hide:
 ### 表格排版
 
 * [tabular环境](tables/tabular.md)
+
+### 其他
+
+* [musixtex](misc/musixtex.md)

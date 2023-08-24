@@ -8,3 +8,4 @@ nav:
     - 表格排版:
       - tabular环境: tables
   - 幻灯片: beamer.md
+  - 其他: misc
