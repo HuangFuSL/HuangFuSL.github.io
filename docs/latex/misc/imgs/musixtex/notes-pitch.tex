@@ -1,0 +1,20 @@
+\documentclass[standalone, version=2.0]{huangfusl-template}
+\usepackage{musixtex}
+
+\def\qur#1{
+    \ifx#1\relax
+        \relax
+    \else
+        \qa{#1}\expandafter\qur
+    \fi
+}
+
+\begin{document}
+    \begin{music}
+        \instrumentnumber{1}
+        \nobarnumbers
+        \startextract
+            \notes \qur abcdefghijklmnopq\relax \en \doublebar
+        \zendextract
+    \end{music}
+\end{document}
