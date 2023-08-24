@@ -9,8 +9,6 @@ hide:
 
 记录LaTeX的使用。
 
-* [使用LaTeX创建幻灯片](beamer.md)
-
 ## 基本排版
 
 * [字体与字号](basics/fonts.md)
@@ -35,3 +33,4 @@ hide:
 ### 其他
 
 * [musixtex](misc/musixtex.md)
+* [使用LaTeX创建幻灯片](beamer.md)
