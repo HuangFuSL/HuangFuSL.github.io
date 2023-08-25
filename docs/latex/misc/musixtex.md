@@ -73,7 +73,7 @@ todo: true
 
 如果两个音符离得过近，使用`l`将音符向左移动一个音符的位置，`r`将音符向右移动一个音符的位置。
 
-```\tex
+```tex
 \NOtes \zq d\qu g\rq g\qu f\zq e\qu h\zq f\qu k \en
 ```
 
