@@ -1,0 +1,25 @@
+\documentclass[standalone, version=2.0]{huangfusl-template}
+\usepackage{musixtex}
+\input{musixper}
+
+\newcommand{\downtext}[1]{\cchar{-10}{#1}}
+\newcommand{\UPtext}[1]{\cchar{16}{#1}}
+
+\begin{document}
+    \begin{music}
+        \instrumentnumber{1}
+        \setclefsymbol1{\drumclef}
+        \nobarnumbers
+        \startextract
+            \NOtes \UPtext{HH}\downtext{d}\doql d\en
+            \NOtes \UPtext{BD}\downtext{f}\ql f\en
+            \NOtes \UPtext{LT}\downtext{h}\qu h\en
+            \NOtes \UPtext{SD}\downtext{j}\qu j\en
+            \NOtes \UPtext{MT}\downtext{k}\qu k\en
+            \NOtes \UPtext{HT}\downtext{l}\qu l\en
+            \NOtes \UPtext{RD}\downtext{m}\doqu m\en
+            \NOtes \UPtext{HH}\downtext{n}\doqu n\en
+            \NOtes \UPtext{CR}\downtext{o}\dcqu o\en
+        \zendextract
+    \end{music}
+\end{document}

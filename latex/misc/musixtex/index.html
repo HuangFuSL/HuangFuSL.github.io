@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -888,6 +890,74 @@
                 
   
   
+  
+    
+    
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    高级排版
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            高级排版
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/recursion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    递归
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -908,9 +978,9 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
         
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -921,8 +991,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             其他
           </label>
@@ -1030,13 +1100,41 @@
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
+    符杠
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     休止符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    文本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    节拍
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    鼓谱
+  </a>
   
 </li>
       
@@ -1297,13 +1395,41 @@
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
+    符杠
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     休止符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    文本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    节拍
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    鼓谱
+  </a>
   
 </li>
       
@@ -1396,20 +1522,16 @@
 <p>在方向后面加上<code>p</code>表示附点，<code>pp</code>表示双附点。</p>
 <p>每输入一个音符，下一个命令输入的位置便会向后移动。如果要输入和弦，需要在最后一个音符之前，使用<code>z</code>+时值表示这个音符不向后移动输入位置。</p>
 <p>如果两个音符离得过近，使用<code>l</code>将音符向左移动一个音符的位置，<code>r</code>将音符向右移动一个音符的位置。</p>
-<p>```\tex
-\NOtes \zq d\qu g\rq g\qu f\zq e\qu h\zq f\qu k \en
-<div class="highlight"><pre><span></span><code>&lt;img src=&quot;../imgs/musixtex/notes-chord.svg&quot; alt=&quot;&quot; class=&quot;latex&quot; /&gt;
-
-### 符杠
-
-如果八分或更短的音符连续出现，这些音符之间使用符杠相连，通常每四个音符连成一组。符杠的定义格式如下
-
-```tex
-% 上方
-\ibu{n}{p}{s} &lt;notes-under-beam&gt; \tbu{n} &lt;the-last-note&gt;
-% 下方
-\ibl{n}{p}{s} &lt;notes-under-beam&gt; \tbl{n} &lt;the-last-note&gt;
-</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="k">\NOtes</span> <span class="k">\zq</span> d<span class="k">\qu</span> g<span class="k">\rq</span> g<span class="k">\qu</span> f<span class="k">\zq</span> e<span class="k">\qu</span> h<span class="k">\zq</span> f<span class="k">\qu</span> k <span class="k">\en</span>
+</code></pre></div>
+<p><img src="../imgs/musixtex/notes-chord.svg" alt="" class="latex" /></p>
+<h3 id="_6">符杠<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>如果八分或更短的音符连续出现，这些音符之间使用符杠相连，通常每四个音符连成一组。符杠的定义格式如下</p>
+<div class="highlight"><pre><span></span><code><span class="c">% 上方</span>
+<span class="k">\ibu</span><span class="nb">{</span>n<span class="nb">}{</span>p<span class="nb">}{</span>s<span class="nb">}</span> &lt;notes-under-beam&gt; <span class="k">\tbu</span><span class="nb">{</span>n<span class="nb">}</span> &lt;the-last-note&gt;
+<span class="c">% 下方</span>
+<span class="k">\ibl</span><span class="nb">{</span>n<span class="nb">}{</span>p<span class="nb">}{</span>s<span class="nb">}</span> &lt;notes-under-beam&gt; <span class="k">\tbl</span><span class="nb">{</span>n<span class="nb">}</span> &lt;the-last-note&gt;
+</code></pre></div>
 <p>其中<code>n</code>为编号，<code>p</code>为开始的音符高度，<code>s</code>为斜度。命令里<code>b</code>的个数等于显示的符杠数。与符杠相连的音符标记为时值+<code>b</code>+编号，如果同一位置有多个音符，需要在时值前面加<code>z</code>。注意音符之间不要加空格。</p>
 <div class="highlight"><pre><span></span><code><span class="k">\Notes\ibu</span>0j0<span class="k">\qb</span>0j<span class="k">\qb</span>0j<span class="k">\qb</span>0j<span class="k">\tbu</span>0<span class="k">\qb</span>0j<span class="k">\en</span>
 <span class="k">\notes\ibbu</span>0j0<span class="k">\qb</span>0j<span class="k">\qb</span>0j<span class="k">\qb</span>0j<span class="k">\tbu</span>0<span class="k">\qb</span>0j<span class="k">\en</span>
@@ -1443,7 +1565,7 @@
 <span class="k">\notes\tbu</span>0<span class="k">\qb</span>0j<span class="k">\en</span>
 </code></pre></div>
 <p><img src="../imgs/musixtex/beam-roff.svg" alt="" class="latex" /></p>
-<h3 id="_6">休止符<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_7">休止符<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>休止符的命令为</p>
 <table>
 <thead>
@@ -1468,14 +1590,32 @@
 </tbody>
 </table>
 <p>在命令前使用<code>\raise</code>调整休止符高度，<code>\Interligne</code>表示线间距；使用<code>\rlap</code>使下一个音符停留在原位。</p>
+<div class="highlight"><pre><span></span><code><span class="k">\NOtes\qp\en</span>
+<span class="k">\Notes\ds\ds\en</span>
+<span class="k">\NOtes\raise</span>2<span class="k">\Interligne\rlap\qp\raise</span>-2<span class="k">\Interligne\qp\qp</span> <span class="k">\en</span> <span class="k">\doublebar</span>
+</code></pre></div>
 <p><img src="../imgs/musixtex/rest.svg" alt="" class="latex" /></p>
+<h3 id="_8">文本<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>使用<code>charnote{p}{text}</code>前面加<code>\z</code>、<code>\c</code>、<code>\l</code>在谱上添加文字，<code>\z</code>、<code>\c</code>、<code>\l</code>分别表示左、中、右对齐当前音符。<code>char{num}{text}</code>和<code>charnote</code>用法相同，但使用数字来表示位置：从最下方的线开始，文本基线对齐数字表示的线。</p>
+<p><img src="../imgs/musixtex/text.svg" alt="" class="latex" /></p>
+<h3 id="_9">节拍<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>使用<code>\metron{\qu}{60}</code>来设置节拍，节拍也是文本，可以用相关命令放在谱上。可以用<code>\smallnotesize</code>、<code>\tinynotesize</code>调节音符大小。</p>
+<p><img src="../imgs/musixtex/tempo.svg" alt="" class="latex" /></p>
+<h2 id="_10">鼓谱<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>鼓谱中代表击打镲片的音符由<code>musixper</code>扩展包形式，使用<code>\input</code>命令引入。如下符号分别对应<code>\dc, \dh, \do, \y, \x, \ox, \ro, k</code>，加在对应的音符时值前。</p>
+<div class="highlight"><pre><span></span><code><span class="k">\Notes\ibu</span>0o0<span class="k">\dcqb</span>0o<span class="k">\dhqb</span>0o<span class="k">\doqb</span>0o<span class="k">\tbu</span>0<span class="k">\yqb</span>0o<span class="k">\en</span>
+<span class="k">\Notes\ibu</span>0o0<span class="k">\xqb</span>0o<span class="k">\oxqb</span>0o<span class="k">\roqb</span>0o<span class="k">\tbu</span>0<span class="k">\kqb</span>0o<span class="k">\en</span>
+</code></pre></div>
+<p><img src="../imgs/musixtex/drum-notes.svg" alt="" class="latex" /></p>
+<p>打击乐使用的谱号用<code>\setclefsymbol1{\drumclef}</code>命令引入。音高记号和高音谱号一致，爵士鼓中的不同声部对应五线谱的不同音高如下图所示</p>
+<p><img src="../imgs/musixtex/drum-pitch.svg" alt="" class="latex" /></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-08-24T09:25:25+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-08-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-08-25T03:54:37+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-08-25</span>
       
         <br>
         创建日期:
