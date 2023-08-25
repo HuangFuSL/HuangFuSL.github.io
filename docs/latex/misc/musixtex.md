@@ -1,5 +1,5 @@
 ---
-todo: true
+todo: false
 ---
 
 # 乐谱排版
@@ -156,4 +156,37 @@ todo: true
 
 在命令前使用`\raise`调整休止符高度，`\Interligne`表示线间距；使用`\rlap`使下一个音符停留在原位。
 
+```tex
+\NOtes\qp\en
+\Notes\ds\ds\en
+\NOtes\raise2\Interligne\rlap\qp\raise-2\Interligne\qp\qp \en \doublebar
+```
+
 {{ latex_image('imgs/musixtex/rest.tex') }}
+
+### 文本
+
+使用`charnote{p}{text}`前面加`\z`、`\c`、`\l`在谱上添加文字，`\z`、`\c`、`\l`分别表示左、中、右对齐当前音符。`char{num}{text}`和`charnote`用法相同，但使用数字来表示位置：从最下方的线开始，文本基线对齐数字表示的线。
+
+{{ latex_image('imgs/musixtex/text.tex') }}
+
+### 节拍
+
+使用`\metron{\qu}{60}`来设置节拍，节拍也是文本，可以用相关命令放在谱上。可以用`\smallnotesize`、`\tinynotesize`调节音符大小。
+
+{{ latex_image('imgs/musixtex/tempo.tex') }}
+
+## 鼓谱
+
+鼓谱中代表击打镲片的音符由`musixper`扩展包形式，使用`\input`命令引入。如下符号分别对应`\dc, \dh, \do, \y, \x, \ox, \ro, k`，加在对应的音符时值前。
+
+```tex
+\Notes\ibu0o0\dcqb0o\dhqb0o\doqb0o\tbu0\yqb0o\en
+\Notes\ibu0o0\xqb0o\oxqb0o\roqb0o\tbu0\kqb0o\en
+```
+
+{{ latex_image('imgs/musixtex/drum-notes.tex') }}
+
+打击乐使用的谱号用`\setclefsymbol1{\drumclef}`命令引入。音高记号和高音谱号一致，爵士鼓中的不同声部对应五线谱的不同音高如下图所示
+
+{{ latex_image('imgs/musixtex/drum-pitch.tex') }}
