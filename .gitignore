@@ -5,6 +5,7 @@ build/
 # Built LaTeX document
 *.aux
 *.log
+*.out
 *.xdv
 
 # Icons and rendered LaTeX
