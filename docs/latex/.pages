@@ -7,4 +7,5 @@ nav:
       - pgfplots图表: tikz
     - 表格排版:
       - tabular环境: tables
+  - 高级排版: advanced
   - 其他: misc
