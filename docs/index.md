@@ -7,7 +7,7 @@ hide:
 
 ## :material-table-of-contents: Table of contents
 
-* [推送](wechat/2020.md)
+* [推送](notes/2020.md)
 * [LaTeX](latex/index.md)
 * [数学](math/index.md)
 * [写代码](coding/index.md)

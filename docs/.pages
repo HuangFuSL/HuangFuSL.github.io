@@ -1,8 +1,9 @@
 nav:
   - index.md
-  - 推送: wechat
+  - ナナニジ: nananiji
+  - 随记: notes
   - LaTeX: latex
-  - 数学: math
+  - 课程笔记: math
   - 写代码: coding
   - 论文笔记: papers
   - 关于我: about.md
