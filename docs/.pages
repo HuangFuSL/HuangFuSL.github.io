@@ -1,6 +1,6 @@
 nav:
   - index.md
-  - 推送: wechat
+  - 随记: notes
   - LaTeX: latex
   - 课程笔记: math
   - 写代码: coding
