@@ -5,20 +5,17 @@ hide:
 
 ---
 
-# 数学
+# 课程笔记
 
-以下整理了数学课上的内容
+以下整理了课上的内容
 
-1. 微积分
-2. [线性代数](linear-algebra/index.md)
-3. [离散数学](discrete-mathematics/index.md)
-4. 概率论与数理统计
-5. [运筹学](operating-research/index.md)
-6. [对策、决策与排队论](queue-theory/index.md)
-7. 动态系统分析与控制
-8. [生产与运作管理](operations-mamagement/index.md)
-9. [随机过程](random-process/index.md)
-10. [凸优化](convex-optimization/index.md)
+1. [离散数学](discrete-mathematics/index.md)
+2. [运筹学与线性规划](operating-research/index.md)
+3. [对策、决策与排队论](queue-theory/index.md)
+4. [运作管理](operations-mamagement/index.md)
+5. [随机过程](random-process/index.md)
+6. [凸优化](convex-optimization/index.md)
+7. [实证方法](empirical-methods/causal-inference.md)
 
 ## 扩展阅读
 

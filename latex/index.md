@@ -30,8 +30,8 @@ hide:
 
 * [tabular环境](tables/tabular.md)
 
-### 其他
+## 其他
 
 * [musixtex](misc/musixtex.md)
 * [使用LaTeX创建幻灯片](misc/beamer.md)
-* [递归](misc/recursion.md)
+* [递归](advanced/recursion.md)
