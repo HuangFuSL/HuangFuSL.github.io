@@ -35,7 +35,7 @@ jobs:
         run: |
           chown -R root:root $PWD
           . /root/venv/bin/activate
-          make build
+          make -f docs/makefile build
 
       - name: Save artifact
         uses: actions/upload-artifact@v3
@@ -60,4 +60,4 @@ jobs:
           chown -R root:root $PWD
           . /root/venv/bin/activate
           git checkout main && git pull
-          make deploy
+          make -f docs/makefile deploy
