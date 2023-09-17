@@ -1518,7 +1518,7 @@
 </code></pre></div>
 <h2 id="_2">音高对照表<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>从左向右依次为A-Q</p>
-<p><img src="../imgs/musixtex/notes-pitch.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/notes-pitch-1.svg" alt="" class="latex" /></p>
 <h2 id="_3">基本使用<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><code>musixtex</code>中添加了<code>music</code>环境，在<code>music</code>环境中可以对乐谱进行设置。然后在命令<code>\startextract</code>和<code>\zendextract</code>之间输入音符。</p>
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>music<span class="nb">}</span>
@@ -1541,13 +1541,13 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>\notes</code></label><label for="__tabbed_1_2"><code>\Notes</code></label><label for="__tabbed_1_3"><code>\NOtes</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img src="../imgs/musixtex/notes-sixteenth.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/notes-sixteenth-1.svg" alt="" class="latex" /></p>
 </div>
 <div class="tabbed-block">
-<p><img src="../imgs/musixtex/notes-eighth.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/notes-eighth-1.svg" alt="" class="latex" /></p>
 </div>
 <div class="tabbed-block">
-<p><img src="../imgs/musixtex/notes-quarter.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/notes-quarter-1.svg" alt="" class="latex" /></p>
 </div>
 </div>
 </div>
@@ -1581,7 +1581,7 @@
 <p>如果两个音符离得过近，使用<code>l</code>将音符向左移动一个音符的位置，<code>r</code>将音符向右移动一个音符的位置。</p>
 <div class="highlight"><pre><span></span><code><span class="k">\NOtes</span> <span class="k">\zq</span> d<span class="k">\qu</span> g<span class="k">\rq</span> g<span class="k">\qu</span> f<span class="k">\zq</span> e<span class="k">\qu</span> h<span class="k">\zq</span> f<span class="k">\qu</span> k <span class="k">\en</span>
 </code></pre></div>
-<p><img src="../imgs/musixtex/notes-chord.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/notes-chord-1.svg" alt="" class="latex" /></p>
 <h3 id="_6">符杠<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>如果八分或更短的音符连续出现，这些音符之间使用符杠相连，通常每四个音符连成一组。符杠的定义格式如下</p>
 <div class="highlight"><pre><span></span><code><span class="c">% 上方</span>
@@ -1594,7 +1594,7 @@
 <span class="k">\notes\ibbu</span>0j0<span class="k">\qb</span>0j<span class="k">\qb</span>0j<span class="k">\qb</span>0j<span class="k">\tbu</span>0<span class="k">\qb</span>0j<span class="k">\en</span>
 <span class="k">\NOtes\qu</span> j<span class="k">\en</span>
 </code></pre></div>
-<p><img src="../imgs/musixtex/beam-basic.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/beam-basic-1.svg" alt="" class="latex" /></p>
 <p><code>\tbu{n}\qb{n}{p}</code>可以缩写为<code>\tqu{n}{p}</code>，<code>\tbl{n}{p}\qb{n}{p}</code>可以缩写为<code>\tql{n}{p}</code>，<code>\tbu{n}\zqb{n}{p}</code>可以缩写为<code>\zqu{n}{p}</code>，<code>\tbl{n}{p}\zqb{n}{p}</code>可以缩写为<code>\zql{n}{p}</code></p>
 <p><code>\ibu</code>中需要手动确定斜率，可以用对应的<code>\Ibu</code>命令自动确定：</p>
 <div class="highlight"><pre><span></span><code><span class="k">\Ibu</span><span class="nb">{</span>n<span class="nb">}{</span>p1<span class="nb">}{</span>p2<span class="nb">}{</span>np<span class="nb">}</span>
@@ -1603,12 +1603,12 @@
 <div class="highlight"><pre><span></span><code><span class="k">\Notes\Ibu</span>0dk4<span class="k">\qb</span>0d<span class="k">\qb</span>0h<span class="k">\qb</span>0f<span class="k">\tbu</span>0<span class="k">\qb</span>0k<span class="k">\en</span>
 <span class="k">\Notes\Ibu</span>0kd4<span class="k">\qb</span>0k<span class="k">\qb</span>0f<span class="k">\qb</span>0h<span class="k">\tbu</span>0<span class="k">\qb</span>0d<span class="k">\en</span>
 </code></pre></div>
-<p><img src="../imgs/musixtex/beam-slope.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/beam-slope-1.svg" alt="" class="latex" /></p>
 <p>当不包含和弦时，可以用<code>D</code>、<code>T</code>、<code>Q</code>快速输入包含2、3、4个音符的符杠。</p>
 <div class="highlight"><pre><span></span><code><span class="k">\Notes\Qqbu</span> dhfk<span class="k">\en</span>
 <span class="k">\notes\Qqbbu</span> kfhd<span class="k">\Qqbbl</span> dhfk<span class="k">\en</span>
 </code></pre></div>
-<p><img src="../imgs/musixtex/beam-shortcut.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/beam-shortcut-1.svg" alt="" class="latex" /></p>
 <p>当在符杠中需要改变等级时，使用<code>\nbu</code>将等级增加到<code>b</code>的个数对应的级数，使用<code>\ibu</code>将等级减少到<code>b</code>的个数减一对应的级数。</p>
 <div class="highlight"><pre><span></span><code><span class="k">\Notes\ibu</span>0k0<span class="k">\qb</span>0j<span class="k">\en\notes\nbbu</span>0<span class="k">\qb</span>0j<span class="k">\tbu</span>0<span class="k">\qb</span>0j<span class="k">\en</span>
 <span class="k">\notes\ibbu</span>0j0<span class="k">\qb</span>0j<span class="k">\tbbu</span>0<span class="k">\qb</span>0j<span class="k">\en\Notes\tbu</span>0<span class="k">\qb</span>0j<span class="k">\en</span>
@@ -1621,7 +1621,7 @@
 <span class="k">\Notes\qb</span>0j<span class="k">\tbbu</span>0<span class="k">\en</span>
 <span class="k">\notes\tbu</span>0<span class="k">\qb</span>0j<span class="k">\en</span>
 </code></pre></div>
-<p><img src="../imgs/musixtex/beam-roff.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/beam-roff-1.svg" alt="" class="latex" /></p>
 <h3 id="_7">休止符<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>休止符的命令为</p>
 <table>
@@ -1651,21 +1651,21 @@
 <span class="k">\Notes\ds\ds\en</span>
 <span class="k">\NOtes\raise</span>2<span class="k">\Interligne\rlap\qp\raise</span>-2<span class="k">\Interligne\qp\qp</span> <span class="k">\en</span> <span class="k">\doublebar</span>
 </code></pre></div>
-<p><img src="../imgs/musixtex/rest.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/rest-1.svg" alt="" class="latex" /></p>
 <h3 id="_8">文本<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>使用<code>charnote{p}{text}</code>前面加<code>\z</code>、<code>\c</code>、<code>\l</code>在谱上添加文字，<code>\z</code>、<code>\c</code>、<code>\l</code>分别表示左、中、右对齐当前音符。<code>char{num}{text}</code>和<code>charnote</code>用法相同，但使用数字来表示位置：从最下方的线开始，文本基线对齐数字表示的线。</p>
-<p><img src="../imgs/musixtex/text.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/text-1.svg" alt="" class="latex" /></p>
 <h3 id="_9">节拍<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>使用<code>\metron{\qu}{60}</code>来设置节拍，节拍也是文本，可以用相关命令放在谱上。可以用<code>\smallnotesize</code>、<code>\tinynotesize</code>调节音符大小。</p>
-<p><img src="../imgs/musixtex/tempo.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/tempo-1.svg" alt="" class="latex" /></p>
 <h2 id="_10">鼓谱<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>鼓谱中代表击打镲片的音符由<code>musixper</code>扩展包形式，使用<code>\input</code>命令引入。如下符号分别对应<code>\dc, \dh, \do, \y, \x, \ox, \ro, k</code>，加在对应的音符时值前。</p>
 <div class="highlight"><pre><span></span><code><span class="k">\Notes\ibu</span>0o0<span class="k">\dcqb</span>0o<span class="k">\dhqb</span>0o<span class="k">\doqb</span>0o<span class="k">\tbu</span>0<span class="k">\yqb</span>0o<span class="k">\en</span>
 <span class="k">\Notes\ibu</span>0o0<span class="k">\xqb</span>0o<span class="k">\oxqb</span>0o<span class="k">\roqb</span>0o<span class="k">\tbu</span>0<span class="k">\kqb</span>0o<span class="k">\en</span>
 </code></pre></div>
-<p><img src="../imgs/musixtex/drum-notes.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/drum-notes-1.svg" alt="" class="latex" /></p>
 <p>打击乐使用的谱号用<code>\setclefsymbol1{\drumclef}</code>命令引入。音高记号和高音谱号一致，爵士鼓中的不同声部对应五线谱的不同音高如下图所示</p>
-<p><img src="../imgs/musixtex/drum-pitch.svg" alt="" class="latex" /></p>
+<p><img src="../imgs/musixtex/drum-pitch-1.svg" alt="" class="latex" /></p>
 
   <hr>
 <div class="md-source-file">

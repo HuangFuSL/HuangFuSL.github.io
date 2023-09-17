@@ -2110,7 +2110,7 @@
 </ul>
 <h3 id="_3">推导<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>考虑一个订货周期，由于不考虑订货提前量，订货后产品会立即到达，因此为降低持有成本，最优订货方式为库存为零时重新订货。因此订货周期满足<span class="arithmatex">\(Q = \lambda T\)</span>。一个订货周期中的成本为订货成本和库存成本之和，即<span class="arithmatex">\(C = K + cQ + hQT/2\)</span>。</p>
-<p><img src="../imgs/inventory-control-deterministic-demand/eoq-inventory.svg" alt="eoq-inventory" class="latex" /></p>
+<p><img src="../imgs/inventory-control-deterministic-demand/eoq-inventory-1.svg" alt="eoq-inventory" class="latex" /></p>
 <p>单位时间的成本</p>
 <div class="arithmatex">\[
 C(Q) = \frac{C}{T} = \frac{K\lambda}{Q} + \lambda c + \frac{hQ}{2}
@@ -2142,7 +2142,7 @@ C(Q^\ast) = \frac{K\lambda}{Q^\ast} + \lambda c + \frac{hQ^\ast}{2} = \lambda c 
 \]</div>
 <h4 id="_7">允许缺货<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>当允许缺货时，设缺货成本为<span class="arithmatex">\(p\)</span>，最大缺货量<span class="arithmatex">\(xQ\)</span>，一个周期内库存水平变化如下图所示：</p>
-<p><img src="../imgs/inventory-control-deterministic-demand/penalty-inventory.svg" alt="penalty-inventory" class="latex" /></p>
+<p><img src="../imgs/inventory-control-deterministic-demand/penalty-inventory-1.svg" alt="penalty-inventory" class="latex" /></p>
 <p>成本函数为</p>
 <div class="arithmatex">\[
 C(Q, x) = \frac{C}{T} = \frac{(1-x)^2 Qh + x^2Qp}{2} + \frac{K\lambda}{Q} + \lambda c
@@ -2166,7 +2166,7 @@ Q^* = \sqrt{\frac{2K\lambda}{(1-x)^2h+x^2p}} = \sqrt{\frac{2K\lambda(h+p)}{hp}}
 <li>一个周期中EOQ模型的平均库存水平：<span class="arithmatex">\(Q/2\)</span></li>
 <li>一个周期中有限生产率模型的平均库存水平：<span class="arithmatex">\(Q(P-\lambda)/2P\)</span></li>
 </ul>
-<p><img src="../imgs/inventory-control-deterministic-demand/production-inventory.svg" alt="production-inventory" class="latex" /></p>
+<p><img src="../imgs/inventory-control-deterministic-demand/production-inventory-1.svg" alt="production-inventory" class="latex" /></p>
 <p>因此有限生产率模型的成本函数为</p>
 <div class="arithmatex">\[
 C(Q) = \frac{C}{T} = \frac{K\lambda}{Q} + \frac{hQ(P-\lambda)}{2P} + \lambda c
@@ -2186,10 +2186,10 @@ Q^\ast = \sqrt{\frac{2PK\lambda}{h(P-\lambda)}}
 <p>通过数量折扣，可以诱导零售商提高订货批量，从而实现超量库存的转移。</p>
 <h3 id="_10">全量折扣的求解过程<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>根据EOQ模型计算出每一个折扣价格<span class="arithmatex">\(h_i\)</span>下对应的最优订货量<span class="arithmatex">\(Q^*_i\)</span>，确定最大可行的最优订货量<span class="arithmatex">\(Q^\ast = \max Q^\ast_i\)</span>。取该折扣点以及高于该折扣点的所有折扣点为候选，即<span class="arithmatex">\(I = \{i | i\geq \arg\max_i Q^\ast_i\}\)</span>。分别比较每个折扣点对应的平均成本，成本最低的<span class="arithmatex">\(Q\)</span>即为最优订货批量。</p>
-<p><img src="../imgs/inventory-control-deterministic-demand/all-unit-discount.svg" alt="all-unit-discount" class="latex" /></p>
+<p><img src="../imgs/inventory-control-deterministic-demand/all-unit-discount-1.svg" alt="all-unit-discount" class="latex" /></p>
 <h3 id="_11">增量折扣的求解过程<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>根据EOQ模型，计算出所有成本曲线最低点对应的<span class="arithmatex">\(Q\)</span>值，并筛选出满足增量折扣约束的订货量，平均成本最低的<span class="arithmatex">\(Q\)</span>即为最优订货批量。</p>
-<p><img src="../imgs/inventory-control-deterministic-demand/incremental-discount.svg" alt="incremental-discount" class="latex" /></p>
+<p><img src="../imgs/inventory-control-deterministic-demand/incremental-discount-1.svg" alt="incremental-discount" class="latex" /></p>
 <h3 id="_12">短期折扣<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>短期折扣即生产商只在一个周期中提供折扣。为简化处理，折扣时零售商的购买量<span class="arithmatex">\(Q_d\)</span>为EOQ最优订货量<span class="arithmatex">\(Q^*\)</span>的整数<span class="arithmatex">\(k\)</span>倍。</p>
 <h2 id="eoq_1">资源约束下的EOQ模型<a class="headerlink" href="#eoq_1" title="Permanent link">&para;</a></h2>
