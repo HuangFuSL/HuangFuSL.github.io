@@ -43,34 +43,17 @@ jobs:
         github.base_ref == 'main'
       ) ||
       contains(github.event.pull_request.labels.*.name, 'ci') == true
+    container:
+      image: ghcr.io/huangfusl/blog-env:build
+      options: --user root
     steps:
       - name: Checkout Main
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python 3
-        uses: actions/setup-python@v4
-        id: python
-        with:
-          python-version: '3.x'
-          cache: 'pip'
-
-      - uses: actions/cache@v3
-        id: cache
-        with:
-          path: ~/.local
-          key: ${{ steps.python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
-
-      - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install -r requirements.txt --user --no-warn-script-location
 
       - name: Test
         run:
-          python3 ./ci/test_code_block.py
+          # Exec doctest on all md files exclude pyguide.md
+          python3 -m doctest $(find . -name '*.md' -not -name 'pyguide.md') -v -o ELLIPSIS -o IGNORE_EXCEPTION_DETAIL
 
   test:
     name: Test documentation
