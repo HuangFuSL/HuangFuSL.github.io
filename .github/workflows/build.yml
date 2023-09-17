@@ -26,7 +26,7 @@ jobs:
           fetch-depth: 0
           submodules: 'true'
           path: '.'
-          ref: 'main'
+          ref: github.head_ref
 
       - name: Test
         if: inputs.deploy == false
@@ -34,7 +34,6 @@ jobs:
           TEXINPUTS: "$PWD/third_party//:"
         run: |
           cd $GITHUB_WORKSPACE
-          ls -al
           chown -R root:root $PWD
           . /root/venv/bin/activate
           make -f ./docs/makefile build
