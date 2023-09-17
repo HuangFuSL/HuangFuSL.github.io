@@ -25,6 +25,32 @@ jobs:
       deploy: true
     secrets: inherit
 
+  detect:
+    name: Detect changed LaTeX files
+    runs-on: ubuntu-latest
+    needs: deploy
+    outputs:
+      changed: ${{ steps.detect.outputs.changed }}
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+
+      - name: Detect changed files
+        id: detect
+        run:
+          if git diff HEAD^ HEAD --name-only | grep '.tex$'; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+  latex:
+    name: Compile LaTeX files
+    needs: detect
+    if: needs.detect.outputs.changed == 'true'
+    uses: ./.github/workflows/latex.yml
+    secrets: inherit
+
   metrics:
     name: Update metrics
     needs: deploy
