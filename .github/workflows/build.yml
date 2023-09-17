@@ -33,9 +33,10 @@ jobs:
         env:
           TEXINPUTS: "$PWD/third_party//:"
         run: |
+          cd $GITHUB_WORKSPACE
           chown -R root:root $PWD
           . /root/venv/bin/activate
-          make -f docs/makefile build
+          make -f ./docs/makefile build
 
       - name: Save artifact
         uses: actions/upload-artifact@v3
@@ -57,7 +58,8 @@ jobs:
         env:
           TEXINPUTS: "$PWD/third_party//:"
         run: |
+          cd $GITHUB_WORKSPACE
           chown -R root:root $PWD
           . /root/venv/bin/activate
           git checkout main && git pull
-          make -f docs/makefile deploy
+          make -f ./docs/makefile deploy
