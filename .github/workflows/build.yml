@@ -38,14 +38,6 @@ jobs:
           . /root/venv/bin/activate
           make -f ./docs/makefile build
 
-      - name: Checkout gh-pages
-        if: inputs.deploy
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-          path: 'build'
-          ref: gh-pages
-
       - name: Set up Deploy Environment
         if: inputs.deploy
         run: |
