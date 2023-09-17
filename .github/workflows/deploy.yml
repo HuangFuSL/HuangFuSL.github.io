@@ -5,6 +5,7 @@ on:
     branches: [main]
     # Exclude dependabot
     paths:
+      - '.github/**'
       - 'docs/**'
       - 'main/**'
       - 'overrides/**'
@@ -38,9 +39,9 @@ jobs:
         id: detect
         run:
           if git diff HEAD^ HEAD --name-only | grep '.tex$'; then \
-            echo "changed=true" >> $GITHUB_OUTPUT \
+            echo "changed=true" >> $GITHUB_OUTPUT; \
           else \
-            echo "changed=false" >> $GITHUB_OUTPUT \
+            echo "changed=false" >> $GITHUB_OUTPUT; \
           fi
 
   latex:
