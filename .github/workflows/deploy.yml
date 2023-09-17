@@ -42,7 +42,7 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT \
           else \
             echo "changed=false" >> $GITHUB_OUTPUT \
-          fi \
+          fi
 
   latex:
     name: Compile LaTeX files
