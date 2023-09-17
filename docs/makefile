@@ -1,8 +1,8 @@
 _BUILD:
-	python3 -m mkdocs build -d build --clean
+	python3 -m mkdocs build -d build --dirty
 
 _DEPLOY:
-	python3 -m mkdocs gh-deploy -d build --message "Update on $(shell date "+%Y-%m-%d %H:%M:%S")"
+	python3 -m mkdocs gh-deploy -d build --message "Update on $(shell date "+%Y-%m-%d %H:%M:%S")" --dirty
 
 _CONVERT:
 	make -f third_party/template/makefile.latex.template svg
