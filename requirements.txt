@@ -7,7 +7,7 @@ mkdocs-git-revision-date-plugin==0.3.2
 mkdocs-material==9.3.2
 mkdocs-material-extensions==1.1.1
 mkdocs-macros-plugin==1.0.4
-mkdocs-jupyter==0.24.2
+mkdocs-jupyter==0.24.5
 pymdown-extensions==10.3
 matplotlib==3.8.0
 pandas==2.1.0
