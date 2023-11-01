@@ -14,10 +14,7 @@ on:
 jobs:
   build:
     name: Build documentation
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/huangfusl/blog-env:${{ inputs.build-type }}
-      options: --user root
+    runs-on: self-hosted
     steps:
 
       - name: Checkout Main
@@ -30,34 +27,11 @@ jobs:
 
       - name: Test
         if: inputs.deploy == false
-        env:
-          TEXINPUTS: "$PWD/third_party//:"
         run: |
-          chown -R root:root $PWD
-          . /root/venv/bin/activate
-          python3 ./ci/deploy.py --dry-run
-
-      - name: Save artifact
-        uses: actions/upload-artifact@v3
-        if: inputs.deploy == false
-        with:
-          name: github.head_ref
-          path: |
-            ./build
-
-      - name: Set up Deploy Environment
-        if: inputs.deploy
-        run: |
-          cd $GITHUB_WORKSPACE
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          make build PYTHON=~/${{ inputs.build-type }}/bin/python3 XELATEX=~/.local/texlive/2023/bin/x86_64-linux/xelatex DVISVGM=~/.local/texlive/2023/bin/x86_64-linux/dvisvgm TEXINPUTS=$PWD/third_party//:
 
       - name: Deploy
         if: inputs.deploy
-        env:
-          TEXINPUTS: "$PWD/third_party//:"
         run: |
-          chown -R root:root $PWD
-          . /root/venv/bin/activate
           git checkout main && git pull
-          python3 ./ci/deploy.py
+          make deploy PYTHON=~/${{ inputs.build-type }}/bin/python3 XELATEX=~/.local/texlive/2023/bin/x86_64-linux/xelatex DVISVGM=~/.local/texlive/2023/bin/x86_64-linux/dvisvgm TEXINPUTS=$PWD/third_party//:
