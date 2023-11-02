@@ -31,10 +31,10 @@ jobs:
       - name: Test
         if: inputs.deploy == false
         run: |
-          make build PYTHON=~/${{ inputs.build-type }}/bin/python3 XELATEX=~/.local/texlive/2023/bin/x86_64-linux/xelatex DVISVGM=~/.local/texlive/2023/bin/x86_64-linux/dvisvgm TEXINPUTS=$PWD/third_party//:
+          make build PYTHON=~/${{ inputs.build-type }}/bin/python3 TEXINPUTS=$PWD/third_party//: PATH=~/.local/texlive/2023/bin/x86_64-linux:$PATH
 
       - name: Deploy
         if: inputs.deploy
         run: |
           git checkout main && git pull
-          make deploy PYTHON=~/${{ inputs.build-type }}/bin/python3 XELATEX=~/.local/texlive/2023/bin/x86_64-linux/xelatex DVISVGM=~/.local/texlive/2023/bin/x86_64-linux/dvisvgm TEXINPUTS=$PWD/third_party//:
+          make deploy PYTHON=~/${{ inputs.build-type }}/bin/python3 TEXINPUTS=$PWD/third_party//: PATH=~/.local/texlive/2023/bin/x86_64-linux:$PATH
