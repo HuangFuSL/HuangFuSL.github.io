@@ -23,6 +23,7 @@ jobs:
     with:
       build-type: build
       deploy: true
+      head-ref: ${{ github.ref }}
     secrets: inherit
 
   metrics:

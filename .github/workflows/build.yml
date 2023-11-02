@@ -10,6 +10,9 @@ on:
       deploy:
         required: true
         type: boolean
+      head-ref:
+        required: true
+        type: string
 
 jobs:
   build:
@@ -23,7 +26,7 @@ jobs:
           fetch-depth: 0
           submodules: 'true'
           path: '.'
-          ref: 'main'
+          ref: ${{ github.event.inputs.head-ref }}
 
       - name: Test
         if: inputs.deploy == false
