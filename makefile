@@ -9,7 +9,7 @@ _DEPLOY:
 	$(PYTHON) -m mkdocs gh-deploy -d build --message $(shell date "+%Y-%m-%d %H:%M:%S")
 
 _CONVERT:
-	$(MAKE) -j 4 -f third_party/template/makefile.latex.template svg XELATEX=$(XELATEX) DVISVGM=$(DVISVGM) TEXINPUTS=$(TEXINPUTS) SILENT=1 &> /dev/null
+	$(MAKE) -j 4 -f third_party/template/makefile.latex.template svg XELATEX=$(XELATEX) DVISVGM=$(DVISVGM) TEXINPUTS=$(TEXINPUTS) SILENT=1
 
 test-code-block:
 	for i in $$(find docs -name "*.md" -and -not -name "pyguide.md"); do \
