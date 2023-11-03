@@ -40,4 +40,4 @@ jobs:
 
       - name: Close PR
         run: |
-          gh pr close -R ${{ github.repository }} -B ${{ github.head_ref }} -m "Dependencies updated"
+          gh pr close ${{ github.event.number }} -d -R ${{ github.repository }}
