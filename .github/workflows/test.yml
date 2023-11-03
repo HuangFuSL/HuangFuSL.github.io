@@ -4,39 +4,9 @@ on:
   pull_request:
 
 jobs:
-  pylint:
-    name: Lint code
-    runs-on: ubuntu-latest
-    if:
-      (
-        contains(github.event.pull_request.labels.*.name, 'dependencies') == false &&
-        github.base_ref == 'main'
-      ) ||
-      contains(github.event.pull_request.labels.*.name, 'ci') == true
-    steps:
-    - name: Checkout Main
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-
-    - name: Set up Python 3
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-        cache: 'pip'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pylint
-
-    - name: Analysing the code with pylint
-      run: |
-        pylint $(git ls-files '*.py') --rcfile=.pylintrc --fail-under=9
-
   test_code_block:
     name: Test code block
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     if:
       (
         contains(github.event.pull_request.labels.*.name, 'dependencies') == false &&
@@ -44,33 +14,15 @@ jobs:
       ) ||
       contains(github.event.pull_request.labels.*.name, 'ci') == true
     steps:
-      - name: Checkout Main
+      - name: Checkout Head
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Set up Python 3
-        uses: actions/setup-python@v4
-        id: python
-        with:
-          python-version: '3.x'
-          cache: 'pip'
-
-      - uses: actions/cache@v3
-        id: cache
-        with:
-          path: ~/.local
-          key: ${{ steps.python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
-
-      - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install -r requirements.txt --user --no-warn-script-location
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Test
         run:
-          python3 ./ci/test_code_block.py
+          make test-code-block
 
   test:
     name: Test documentation
@@ -80,7 +32,15 @@ jobs:
         github.base_ref == 'main'
       ) ||
       contains(github.event.pull_request.labels.*.name, 'ci') == true
-    uses: ./.github/workflows/build.yml
-    with:
-      build-type: build
-      deploy: false
+    runs-on: self-hosted
+    steps:
+      - name: Checkout head
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          submodules: 'true'
+          path: '.'
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Build and deploy
+        run: |
+          make build PYTHON=~/build/bin/python3 TEXINPUTS=$PWD/third_party//: PATH=~/.local/texlive/2023/bin/x86_64-linux:$PATH

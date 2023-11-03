@@ -1,0 +1,45 @@
+name: Update Dependencies
+
+on:
+  pull_request:
+
+jobs:
+  dependencies:
+    name: Update dependencies
+    runs-on: self-hosted
+    if:
+      (
+        contains(github.event.pull_request.labels.*.name, 'dependencies') == true &&
+        github.base_ref == 'main'
+      ) ||
+      contains(github.event.pull_request.labels.*.name, 'ci') == true
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout Head
+        uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 1
+
+      - name: Update dependencies
+        run: |
+          ~/test/bin/python -m pip install --upgrade pip
+          ~/test/bin/python -m pip install -U -r requirements.txt
+
+      - name: Test documentation
+        run: |
+          make lazy-build PYTHON=~/test/bin/python3
+
+      - name: Commit dependencies
+        run: |
+          ~/build/bin/python -m pip install --upgrade pip
+          ~/build/bin/python -m pip install -U -r requirements.txt
+
+      - name: Merge PR
+        run: |
+          echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
+          gh pr merge ${{ github.event.number }} -d -R ${{ github.repository }} --merge
+          gh auth logout
