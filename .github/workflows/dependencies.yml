@@ -42,4 +42,3 @@ jobs:
         run: |
           echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
           gh pr merge ${{ github.event.number }} -d -R ${{ github.repository }} --merge
-          gh auth logout
