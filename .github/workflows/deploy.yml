@@ -19,12 +19,18 @@ env:
 jobs:
   deploy:
     name: Deploy documentation
-    uses: ./.github/workflows/build.yml
-    with:
-      build-type: build
-      deploy: true
-      head-ref: ${{ github.ref }}
-    secrets: inherit
+    runs-on: self-hosted
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: 'true'
+          path: '.'
+      - name: Build and deploy
+        run: |
+          git checkout main && git pull
+          make deploy PYTHON=~/build/bin/python3 TEXINPUTS=$PWD/third_party//: PATH=~/.local/texlive/2023/bin/x86_64-linux:$PATH
 
   metrics:
     name: Update metrics

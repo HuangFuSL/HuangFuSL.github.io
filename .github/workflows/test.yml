@@ -63,8 +63,15 @@ jobs:
         github.base_ref == 'main'
       ) ||
       contains(github.event.pull_request.labels.*.name, 'ci') == true
-    uses: ./.github/workflows/build.yml
-    with:
-      build-type: build
-      deploy: false
-      head-ref: ${{ github.event.pull_request.head.sha }}
+    runs-on: self-hosted
+    steps:
+      - name: Checkout head
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          submodules: 'true'
+          path: '.'
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Build and deploy
+        run: |
+          make build PYTHON=~/build/bin/python3 TEXINPUTS=$PWD/third_party//: PATH=~/.local/texlive/2023/bin/x86_64-linux:$PATH
