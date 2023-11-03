@@ -31,7 +31,7 @@ jobs:
 
       - name: Test documentation
         run: |
-          make build PYTHON=~/test/bin/python3 TEXINPUTS=$PWD/third_party//: PATH=~/.local/texlive/2023/bin/x86_64-linux:$PATH
+          make lazy-build PYTHON=~/test/bin/python3
 
       - name: Commit dependencies
         run: |
