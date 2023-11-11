@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="2736" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="2751" class="">
     <defs>
         <style/>
     </defs>
@@ -30,13 +30,13 @@
                         <div class="field calendar">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 11" width="210" height="16">
                                 <g>
-                                    <rect class="day" x="0" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
-                                    <rect class="day" x="15" y="0" width="11" height="11" fill="#9be9a8" rx="2" ry="2"/>
+                                    <rect class="day" x="0" y="0" width="11" height="11" fill="#9be9a8" rx="2" ry="2"/>
+                                    <rect class="day" x="15" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
                                     <rect class="day" x="30" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
-                                    <rect class="day" x="45" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
-                                    <rect class="day" x="60" y="0" width="11" height="11" fill="#216e39" rx="2" ry="2"/>
-                                    <rect class="day" x="75" y="0" width="11" height="11" fill="#30a14e" rx="2" ry="2"/>
-                                    <rect class="day" x="90" y="0" width="11" height="11" fill="#216e39" rx="2" ry="2"/>
+                                    <rect class="day" x="45" y="0" width="11" height="11" fill="#216e39" rx="2" ry="2"/>
+                                    <rect class="day" x="60" y="0" width="11" height="11" fill="#30a14e" rx="2" ry="2"/>
+                                    <rect class="day" x="75" y="0" width="11" height="11" fill="#216e39" rx="2" ry="2"/>
+                                    <rect class="day" x="90" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
                                     <rect class="day" x="105" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
                                     <rect class="day" x="120" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
                                     <rect class="day" x="135" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
@@ -326,8 +326,8 @@
                         <div class="category column">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge average">
                                 <circle class="gauge-base" r="53" cx="60" cy="60"/>
-                                <circle class="gauge-arc" transform="rotate(-90 60 60)" r="53" cx="60" cy="60" stroke-dasharray="203.98 329"/>
-                                <text x="60" y="60" dominant-baseline="central">62</text>
+                                <circle class="gauge-arc" transform="rotate(-90 60 60)" r="53" cx="60" cy="60" stroke-dasharray="177.66000000000003 329"/>
+                                <text x="60" y="60" dominant-baseline="central">54</text>
                             </svg>
                             <span class="title">Performance</span>
                         </div>
@@ -381,13 +381,13 @@
                 </section>
                 <section>
                     <div class="field">
-                        <div class="audit text">1.61 s</div>
+                        <div class="audit text">1.52 s</div>
                         <svg xmlns="http://www.w3.org/2000/svg" class="audit high" viewBox="0 0 16 16" width="16" height="16">
                             <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM0 8a8 8 0 1116 0A8 8 0 010 8zm11.78-1.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/>
                         </svg>
                     </div>
                     <div class="field">
-                        <div class="audit text">1.61 s</div>
+                        <div class="audit text">1.52 s</div>
                         <svg xmlns="http://www.w3.org/2000/svg" class="audit high" viewBox="0 0 16 16" width="16" height="16">
                             <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM0 8a8 8 0 1116 0A8 8 0 010 8zm11.78-1.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/>
                         </svg>
@@ -423,13 +423,13 @@
                 </section>
                 <section>
                     <div class="field">
-                        <div class="audit text">1.61 s</div>
+                        <div class="audit text">1.52 s</div>
                         <svg xmlns="http://www.w3.org/2000/svg" class="audit high" viewBox="0 0 16 16" width="16" height="16">
                             <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM0 8a8 8 0 1116 0A8 8 0 010 8zm11.78-1.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/>
                         </svg>
                     </div>
                     <div class="field">
-                        <div class="audit text">1.61 s</div>
+                        <div class="audit text">1.52 s</div>
                         <svg xmlns="http://www.w3.org/2000/svg" class="audit high" viewBox="0 0 16 16" width="16" height="16">
                             <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM0 8a8 8 0 1116 0A8 8 0 010 8zm11.78-1.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/>
                         </svg>
@@ -680,7 +680,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path d="M10.896 2H8.75V.75a.75.75 0 00-1.5 0V2H5.104a.25.25 0 00-.177.427l2.896 2.896a.25.25 0 00.354 0l2.896-2.896A.25.25 0 0010.896 2zM8.75 15.25a.75.75 0 01-1.5 0V14H5.104a.25.25 0 01-.177-.427l2.896-2.896a.25.25 0 01.354 0l2.896 2.896a.25.25 0 01-.177.427H8.75v1.25zm-6.5-6.5a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5zM6 8a.75.75 0 01-.75.75h-.5a.75.75 0 010-1.5h.5A.75.75 0 016 8zm2.25.75a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5zM12 8a.75.75 0 01-.75.75h-.5a.75.75 0 010-1.5h.5A.75.75 0 0112 8zm2.25.75a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5z"/>
                             </svg>
-                            Average per day at ~2.36
+                            Average per day at ~2.35
                         </div>
                     </section>
                 </div>
@@ -2650,6 +2650,11 @@
                                 <path fill="#ebedf0" filter="url(#brightness1)" d="M0,1 1.7,2 1.7,2 0,1 z"/>
                                 <path fill="#ebedf0" filter="url(#brightness2)" d="M1.7,2 3.4,1 3.4,1 1.7,2 z"/>
                             </g>
+                            <g transform="translate(-8.5, 11)">
+                                <path fill="#ebedf0" d="M1.7,2 0,1 1.7,0 3.4,1 z"/>
+                                <path fill="#ebedf0" filter="url(#brightness1)" d="M0,1 1.7,2 1.7,2 0,1 z"/>
+                                <path fill="#ebedf0" filter="url(#brightness2)" d="M1.7,2 3.4,1 3.4,1 1.7,2 z"/>
+                            </g>
                         </g>
                     </g>
                 </svg>
@@ -2671,7 +2676,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>BilibiliVideoDownload/BilibiliVideoDownload</span>
-                                        <span>starred 23 days ago</span>
+                                        <span>starred 24 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Cross-platform download bilibili video desktop software, support windows, macOS, Linux</div>
@@ -2724,7 +2729,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>zyang1580/PDA</span>
-                                        <span>starred 28 days ago</span>
+                                        <span>starred 29 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">This is an implementation for our SIGIR 2021 paper "Causal Intervention for Leveraging Popularity Bias inRecommendation" based on tensorflow..</div>
@@ -2771,7 +2776,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>fulifeng/Causal_Reading_Group</span>
-                                        <span>starred 29 days ago</span>
+                                        <span>starred Oct 11 2023</span>
                                     </div>
                                 </div>
                                 <div class="field description">We will keep updating the paper list about machine learning + causal theory. We also internally discuss related papers between NExT++ (NUS) and LDS (USTC) by week.</div>
@@ -2975,7 +2980,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path d="m.427 1.927 1.215 1.215a8.002 8.002 0 1 1-1.6 5.685.75.75 0 1 1 1.493-.154 6.5 6.5 0 1 0 1.18-4.458l1.358 1.358A.25.25 0 0 1 3.896 6H.25A.25.25 0 0 1 0 5.75V2.104a.25.25 0 0 1 .427-.177ZM7.75 4a.75.75 0 0 1 .75.75v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5A.75.75 0 0 1 7.75 4Z"/>
                             </svg>
-                            4.06k hours played
+                            4.07k hours played
                         </div>
                     </section>
                 </div>
@@ -3012,7 +3017,7 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                             <path d="M4.75 0a.75.75 0 0 1 .75.75V2h5V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 16H2.75A1.75 1.75 0 0 1 1 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 0 1 4.75 0ZM2.5 7.5v6.75c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V7.5Zm10.75-4H2.75a.25.25 0 0 0-.25.25V6h11V3.75a.25.25 0 0 0-.25-.25Z"/>
                                         </svg>
-                                        Last played on 10 Nov 2023
+                                        Last played on 11 Nov 2023
                                     </div>
                                 </div>
                                 <div class="achievements">
@@ -3021,7 +3026,17 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                                 <path d="M3.217 6.962A3.75 3.75 0 0 1 0 3.25v-.5C0 1.784.784 1 1.75 1h1.356c.228-.585.796-1 1.462-1h6.864c.647 0 1.227.397 1.462 1h1.356c.966 0 1.75.784 1.75 1.75v.5a3.75 3.75 0 0 1-3.217 3.712 5.014 5.014 0 0 1-2.771 3.117l.144 1.446c.005.05.03.12.114.204.086.087.217.17.373.227.283.103.618.274.89.568.285.31.467.723.467 1.226v.75h1.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H4v-.75c0-.503.182-.916.468-1.226.27-.294.606-.465.889-.568.139-.048.266-.126.373-.227.084-.085.109-.153.114-.204l.144-1.446a5.015 5.015 0 0 1-2.77-3.117ZM4.5 1.568V5.5a3.5 3.5 0 1 0 7 0V1.568a.068.068 0 0 0-.068-.068H4.568a.068.068 0 0 0-.068.068Zm2.957 8.902-.12 1.204c-.093.925-.858 1.47-1.467 1.691a.766.766 0 0 0-.3.176c-.037.04-.07.093-.07.21v.75h5v-.75c0-.117-.033-.17-.07-.21a.766.766 0 0 0-.3-.176c-.609-.221-1.374-.766-1.466-1.69l-.12-1.204a5.064 5.064 0 0 1-1.087 0ZM13 2.5v2.872a2.25 2.25 0 0 0 1.5-2.122v-.5a.25.25 0 0 0-.25-.25H13Zm-10 0H1.75a.25.25 0 0 0-.25.25v.5c0 .98.626 1.813 1.5 2.122Z"/>
                                             </svg>
-                                            168 / 255 achievements unlocked
+                                            169 / 255 achievements unlocked
+                                        </div>
+                                    </div>
+                                    <div class="achievement">
+                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGgABAAMAAwAAAAAAAAAAAAAABQMEBgIHCP/EACsQAAEEAQIFAwMFAAAAAAAAAAECAwQFEQAhBhIiMUETYYEVUaEjUnGR4f/EABgBAAIDAAAAAAAAAAAAAAAAAAIDAQQF/8QAIBEAAgIBBAMBAAAAAAAAAAAAAQIAESEDEjFhQVGh8P/aAAwDAQACEQMRAD8A86vTLJizfYiS3kAKx0K9hracNVlpJaMiwsX24yRlS1rwANUqGvZXaTJckfpNkrV77Db50pZ8TMy4kSsnsshlLxWmREKkK5OXcgDPbON+++2dZxB1aVAPFmWhS5aPRfo1gWYsN2yVJQVF0pB7A9ifGfxrr+bIsot8zHclvllbnKpBVkEfbSyYlhwrfR3o0yOtPqczaUqS65yrB2Jz5B3z841c4lbZmOQrBsAOFYDiQCOVY79wNvxoHQaTdEfZIO9b9SSrr1vVk4LYWUuAODKDhaQQdvv/AJrlxFS1LtBww5UNsJsURXFTurBPXlJUO6icn4GjK+ZZMvONem8uCs7AOdKkkD303ZR6qU3W+nFDYQFIdQFnAB3BO+loSjiz31x5/cwztKnEi4bcjWV2wwpahKUhz15i0BSulOQEZxtsB299F8RzkJtGYjbrjuXQCpwjO38adjQa6qsyuO+p9ASpba0EDlXjBSR+0+PIx5zrB2jMoX7EhbKg2HObJIxj+9MNPqHOK+wNxCV3P//Z" alt="" />
+                                        <div>
+                                            <div class="name">
+                                                <div>Lone Warrior</div>
+                                                <div class="unlocked">10 Nov 2023</div>
+                                            </div>
+                                            <div class="description">Win "Kurikara (1183)" without forming an alliance with the Hojo clan in single player.</div>
                                         </div>
                                     </div>
                                     <div class="achievement">
@@ -3065,18 +3080,8 @@
                                         </div>
                                     </div>
                                     <div class="achievement">
-                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAABwgFBAb/xAAqEAABBAEEAQMDBQEAAAAAAAABAgMEBREABhIhMQcTQSJRYRQVUnGBof/EABkBAAIDAQAAAAAAAAAAAAAAAAABAgMEBf/EACARAAEEAwACAwAAAAAAAAAAAAEAAgMRITFBBHEiUWH/2gAMAwEAAhEDEQA/AASGu8n7vNTWz5SHXpJZSG3Ffy+BqjK7a236SlsWHLxyy3BCDfuBx8OJ5KWEqSnJ7KfnAGMjU97bmy6/1Jdk1gQZ6JCzHCwCCvl10etK95ufd8KRLf3VWMfoX1MfuSWm0JUpI7aCuKspB78Y5fnWWhQAG/xdDxo2FrpZDhvLycjnUgytkbfvqCAhNo/X3MtClJLD3t8SFEJB7x34GQc/jU1Wx3Dt3e5pbKyluFqQlBy4rDiCejg/ceR/Y1QNJum+sjAd2VTkQEh1MFDyUKUD5cCOSgVJGQT5450HepVhJsvU6G9YhIsB7QkhIAAc5kkYHQ6I8aCG05taH0lPEA1srTh3Lzs8XjLSS5D3TKksnDjUlSh/h0wOu1dpsC6u2HHlzJDTKVJW4pSUEOAKz9WCTn5HWOsZ0U3lJaP3E11mBIcbW6pSVJQSFAnog67tux7mE3IgSIU1MCWAlwhsngoEEKx9sgZH21O2lgF8VMEropQ7li/VpaEyoo/Tfb1/JeeTZMMOtsMIdWkLUVnirAUMcfPQ+rODnQbEmvWO6mJklXJ56Slaj+SrWvuSNczzHiNQpq4UNPttZbI5dklWPgEk41l11VYw7WG5IhPthLqVZWggY5Dv/o0fEMIG6T8iV0spJNizXq7X/9k=" alt="" />
                                         <div>
-                                            <div class="name">
-                                                <div>Georgian Victory</div>
-                                                <div class="unlocked">2 Nov 2023</div>
-                                            </div>
-                                            <div class="description">Win a game playing as the Georgians.</div>
-                                        </div>
-                                    </div>
-                                    <div class="achievement">
-                                        <div>
-                                            <div class="description ellipsis">+163 others...</div>
+                                            <div class="description ellipsis">+164 others...</div>
                                         </div>
                                     </div>
                                 </div>
@@ -3182,7 +3187,7 @@
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 10 Nov 2023, 08:06:53 (timezone Asia/Shanghai) with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 11 Nov 2023, 08:06:36 (timezone Asia/Shanghai) with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
