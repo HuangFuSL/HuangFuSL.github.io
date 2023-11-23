@@ -1,0 +1,41 @@
+\documentclass[standalone, version=2.0]{huangfusl-template}
+
+\begin{document}
+\begin{tikzpicture}
+    \node (Treated) at (-3, 0) {Treated};
+    \node (Untreated) at (3, 0) {Untreated};
+
+    \draw (0,0) circle (1cm); % draw a circle with radius 2cm
+    \draw (-60:1) -- (60:1); % draw a vertical line through the center
+    \fill[gray] (60:1) -- (-60:1) arc (-60:60:1cm); % fill the right half with gray color
+
+    % Causation part
+    \node (vs1) at (-5, -4) {v.s.};
+    \node (causal) at ($ (vs1) + (0, 1.5) $) {Causation};
+    \node (causal-1) at ($ (vs1) + (-2, 0) $) {};
+    \node (causal-2) at ($ (vs1) + (2, 0) $) {};
+    \draw (causal-1) circle (1cm);
+    \draw (causal-2) circle (1cm);
+    \fill[gray] (causal-2) circle (1cm);
+
+    \node (causal-note-1) at ($ (causal-1) + (0, -2) $) {$E(Y^{a = 1})$};
+    \node (causal-note-2) at ($ (causal-2) + (0, -2) $) {$E(Y^{a = 0})$};
+
+
+    % Association part
+    \node (vs2) at (5, -4) {v.s.};
+    \node (asso) at ($ (vs2) + (0, 1.5) $) {Association};
+    \node (asso-1) at ($ (vs2) + (-2, 0) $) {};
+    \node (asso-2) at ($ (vs2) + (2, 0) $) {};
+    \draw ($ (60:1) + (asso-1) $) -- ($ (300:1) + (asso-1) $) arc (300:60:1cm);
+    \draw ($ (60:1) + (asso-2) $) -- ($ (-60:1) + (asso-2) $) arc (-60:60:1cm);
+    \fill[gray] ($ (60:1) + (asso-2) $) -- ($ (-60:1) + (asso-2) $) arc (-60:60:1cm);
+
+    \node (asso-note-1) at ($ (asso-1) + (0, -2) $) {$E(Y | A = 1)$};
+    \node (asso-note-2) at ($ (asso-2) + (0, -2) $) {$E(Y | A = 0)$};
+
+    \draw[-stealth, thick] ($ (0, 0)!0.25!(causal) $) -- ($ (0, 0)!0.75!(causal) $);
+    \draw[-stealth, thick] ($ (0, 0)!0.25!(asso) $) -- ($ (0, 0)!0.75!(asso) $);
+
+\end{tikzpicture}
+\end{document}
