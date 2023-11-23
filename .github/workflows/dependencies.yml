@@ -5,10 +5,12 @@ on:
     paths:
       - 'requirements.txt'
       - '.github/**'
+    types: [labeled]
 
 jobs:
   dependencies:
     name: Update dependencies
+    if: contains(github.event.pull_request.labels.*.name, 'ready') == true
     runs-on: self-hosted
     permissions:
       contents: write
