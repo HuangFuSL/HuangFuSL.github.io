@@ -4,3 +4,4 @@ nav:
   - 凸函数: convex-function.md
   - 凸优化问题: convex-optimization.md
   - 对偶: duality.md
+  - 无约束优化: unconstrained-optimization.md
