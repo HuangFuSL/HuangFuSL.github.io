@@ -2,7 +2,7 @@ name: Deploy Documentation
 
 on:
   workflow_run:
-    workflows: ["Test documentation"]
+    workflows: ["Test pull request"]
     types:
       - completed
 
