@@ -2,16 +2,21 @@ name: Test pull request
 
 on:
   pull_request:
+    paths:
+      - 'docs/**'
+      - 'main/**'
+      - 'overrides/**'
+      - 'third_party/**'
+      - 'ci/**'
+      - 'README.md'
+      - 'mkdocs.yml'
+      - '.github/workflows/**'
+    types: [labeled]
 
 jobs:
   test:
     name: Test documentation
-    if:
-      (
-        contains(github.event.pull_request.labels.*.name, 'dependencies') == false &&
-        github.base_ref == 'main'
-      ) ||
-      contains(github.event.pull_request.labels.*.name, 'ci') == true
+    if: contains(github.event.pull_request.labels.*.name, 'ready') == true
     runs-on: self-hosted
     steps:
       - name: Checkout head
@@ -26,7 +31,6 @@ jobs:
           make build PYTHON=~/build/bin/python3 TEXINPUTS=$PWD/third_party//: PATH=~/.local/texlive/2023/bin/x86_64-linux:$PATH
 
       - name: Merge PR
-        if: contains(github.event.pull_request.labels.*.name, 'ready') == true
         run: |
           echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
           gh pr merge ${{ github.event.number }} -d -R ${{ github.repository }} --merge

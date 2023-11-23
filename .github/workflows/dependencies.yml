@@ -2,17 +2,16 @@ name: Update Dependencies
 
 on:
   pull_request:
+    paths:
+      - 'requirements.txt'
+      - '.github/**'
+    types: [labeled]
 
 jobs:
   dependencies:
     name: Update dependencies
+    if: contains(github.event.pull_request.labels.*.name, 'ready') == true
     runs-on: self-hosted
-    if:
-      (
-        contains(github.event.pull_request.labels.*.name, 'dependencies') == true &&
-        github.base_ref == 'main'
-      ) ||
-      contains(github.event.pull_request.labels.*.name, 'ci') == true
     permissions:
       contents: write
       pull-requests: write
