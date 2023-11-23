@@ -1,23 +1,15 @@
 name: Deploy Documentation
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Test documentation"]
     branches: [main]
-    # Exclude dependabot
-    paths:
-      - 'docs/**'
-      - 'main/**'
-      - 'overrides/**'
-      - 'third_party/**'
-      - 'ci/**'
-      - 'README.md'
-      - 'mkdocs.yml'
-
-env:
-  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    types:
+      - completed
 
 jobs:
   deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: Deploy documentation
     runs-on: self-hosted
     steps:
