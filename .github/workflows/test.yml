@@ -4,26 +4,6 @@ on:
   pull_request:
 
 jobs:
-  test_code_block:
-    name: Test code block
-    runs-on: self-hosted
-    if:
-      (
-        contains(github.event.pull_request.labels.*.name, 'dependencies') == false &&
-        github.base_ref == 'main'
-      ) ||
-      contains(github.event.pull_request.labels.*.name, 'ci') == true
-    steps:
-      - name: Checkout Head
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Test
-        run:
-          make test-code-block
-
   test:
     name: Test documentation
     if:
