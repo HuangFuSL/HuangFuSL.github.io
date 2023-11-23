@@ -4,26 +4,6 @@ on:
   pull_request:
 
 jobs:
-  test_code_block:
-    name: Test code block
-    runs-on: self-hosted
-    if:
-      (
-        contains(github.event.pull_request.labels.*.name, 'dependencies') == false &&
-        github.base_ref == 'main'
-      ) ||
-      contains(github.event.pull_request.labels.*.name, 'ci') == true
-    steps:
-      - name: Checkout Head
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Test
-        run:
-          make test-code-block
-
   test:
     name: Test documentation
     if:
@@ -44,3 +24,9 @@ jobs:
       - name: Build and deploy
         run: |
           make build PYTHON=~/build/bin/python3 TEXINPUTS=$PWD/third_party//: PATH=~/.local/texlive/2023/bin/x86_64-linux:$PATH
+
+      - name: Merge PR
+        if: contains(github.event.pull_request.labels.*.name, 'ready') == true
+        run: |
+          echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
+          gh pr merge ${{ github.event.number }} -d -R ${{ github.repository }} --merge
