@@ -1,4 +1,7 @@
 /* Misc */
+:root [data-md-color-scheme=default] {
+    --md-code-bg-color: #e6c2cd2d;
+}
 
 .highlight [data-linenos]::before {
     /* Code block line numbers (inline) */

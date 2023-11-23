@@ -15,7 +15,7 @@ hide:
 4. [运作管理](operations-mamagement/index.md)
 5. [随机过程](random-process/index.md)
 6. [凸优化](convex-optimization/index.md)
-7. [实证方法](empirical-methods/causal-inference.md)
+7. [因果推断](causal-inference/index.md)
 
 ## 扩展阅读
 
