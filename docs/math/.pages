@@ -6,4 +6,4 @@ nav:
   - 运作管理: operations-mamagement
   - 随机过程: random-process
   - 凸优化: convex-optimization
-  - 实证方法: empirical-methods
+  - 因果推断: causal-inference
