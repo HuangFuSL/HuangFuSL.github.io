@@ -31,6 +31,7 @@ jobs:
           make build PYTHON=~/build/bin/python3 TEXINPUTS=$PWD/third_party//: PATH=~/.local/texlive/2023/bin/x86_64-linux:$PATH
 
       - name: Merge PR
+        if: github.event.pull_request.merged == false
         run: |
           echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
           gh pr merge ${{ github.event.number }} -d -R ${{ github.repository }} --merge
