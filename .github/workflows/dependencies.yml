@@ -10,7 +10,9 @@ on:
 jobs:
   dependencies:
     name: Update dependencies
-    if: contains(github.event.pull_request.labels.*.name, 'ready') == true
+    if: >-
+      contains(github.event.pull_request.labels.*.name, 'ready') == true ||
+      contains(github.event.pull_request.labels.*.name, 'dependencies') == true
     runs-on: self-hosted
     permissions:
       contents: write
@@ -38,6 +40,7 @@ jobs:
           ~/build/bin/python -m pip install -U -r requirements.txt
 
       - name: Merge PR
+        if: github.event.pull_request.merged == false
         run: |
           echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
           gh pr merge ${{ github.event.number }} -d -R ${{ github.repository }} --merge
