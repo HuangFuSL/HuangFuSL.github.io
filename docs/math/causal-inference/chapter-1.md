@@ -73,8 +73,8 @@ In the real world, we can only observe one potential outcome for each individual
 
 Like the causal null hypothesis, we can also define the independent ($A\perp Y$) null hypothesis in three forms:
 
-1. Difference: $H_0: P(Y = 1 | A = 1) - P(Y = 1 | A = 0) = 0$
-2. Ratio: $H_0: \frac{P(Y = 1 | A = 1)}{P(Y = 1 | A = 0)} = 1$
+1. Risk difference: $H_0: P(Y = 1 | A = 1) - P(Y = 1 | A = 0) = 0$
+2. Risk ratio: $H_0: \frac{P(Y = 1 | A = 1)}{P(Y = 1 | A = 0)} = 1$
 3. Odds ratio: $H_0: \frac{P(Y = 1 | A = 1) / P(Y = 0 | A = 1)}{P(Y = 1 | A = 0) / P(Y = 0 | A = 0)} = 1$
 
 Notice that any terms in the form of conditional probability or expectation are associations. Only marginal probability or expectation can be causal effects, since the marginal probability takes all other factors into consideration.
