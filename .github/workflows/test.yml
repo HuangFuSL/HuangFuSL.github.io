@@ -16,7 +16,9 @@ on:
 jobs:
   test:
     name: Test documentation
-    if: contains(github.event.pull_request.labels.*.name, 'ready') == true
+    if: >-
+      github.event.label.name == 'ready' &&
+      ! contains(github.event.pull_request.labels.*.name, 'ready')
     runs-on: self-hosted
     steps:
       - name: Checkout head
