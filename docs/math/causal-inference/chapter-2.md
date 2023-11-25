@@ -17,7 +17,19 @@ If a random experiment satisfies the following conditions, it is called an **ide
 3. Single treatment: Each individual is assigned to one treatment only.
 4. Double-blind assignment: The treatment assignment is unknown to both the individuals and the researchers.
 
-If all the possible values of treatment variable $A = a$ are sequentially assigned to individuals, the experiment is called **crossover experiment**.
+If all the possible values of treatment variable $A = a$ are sequentially assigned to individuals, the experiment is called **crossover experiment**. Individual causal effects can be estimated using crossover experiments if the following conditions are met:
+
+1. No carryover effect: The treatment effect of $a$ does not depend on the previous treatments.
+2. The individual causal effect $\alpha_i = Y^{a_t = 1}_{it} - Y^{a_t = 0}_{it}$ does not depend on time.
+3. The potential outcome under no treatment does not depend on time.
+
+By assigning the treatment value sequence randomly, we can remove the required conditiona 3. In such case:
+
+$$
+(Y_{i1} - Y_{i0})A_{i1} - (Y_{i0} - Y_{i1})A_{i0}
+$$
+
+estimates the individual causal effect $E(\alpha_i)$ under condition 2. If condition 2 is not met, the estimator estimates $E(\alpha_{i0} + \alpha_{i1}) / 2$.
 
 ### Exchangeability
 
