@@ -14,11 +14,11 @@
         <link rel="prev" href="../chapter-1/">
       
       
-        <link rel="next" href="../../../coding/">
+        <link rel="next" href="../chapter-3/">
       
       
       <link rel="icon" href="../../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12">
     
     
       
@@ -2139,6 +2139,8 @@
       
         
       
+        
+      
     
     
     
@@ -2314,6 +2316,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Observational studies
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3474,7 +3496,17 @@
 <li>Single treatment: Each individual is assigned to one treatment only.</li>
 <li>Double-blind assignment: The treatment assignment is unknown to both the individuals and the researchers.</li>
 </ol>
-<p>If all the possible values of treatment variable <span class="arithmatex">\(A = a\)</span> are sequentially assigned to individuals, the experiment is called <strong>crossover experiment</strong>.</p>
+<p>If all the possible values of treatment variable <span class="arithmatex">\(A = a\)</span> are sequentially assigned to individuals, the experiment is called <strong>crossover experiment</strong>. Individual causal effects can be estimated using crossover experiments if the following conditions are met:</p>
+<ol>
+<li>No carryover effect: The treatment effect of <span class="arithmatex">\(a\)</span> does not depend on the previous treatments.</li>
+<li>The individual causal effect <span class="arithmatex">\(\alpha_i = Y^{a_t = 1}_{it} - Y^{a_t = 0}_{it}\)</span> does not depend on time.</li>
+<li>The potential outcome under no treatment does not depend on time.</li>
+</ol>
+<p>By assigning the treatment value sequence randomly, we can remove the required conditiona 3. In such case:</p>
+<div class="arithmatex">\[
+(Y_{i1} - Y_{i0})A_{i1} - (Y_{i0} - Y_{i1})A_{i0}
+\]</div>
+<p>estimates the individual causal effect <span class="arithmatex">\(E(\alpha_i)\)</span> under condition 2. If condition 2 is not met, the estimator estimates <span class="arithmatex">\(E(\alpha_{i0} + \alpha_{i1}) / 2\)</span>.</p>
 <h3 id="exchangeability">Exchangeability<a class="headerlink" href="#exchangeability" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
 <p class="admonition-title">Exchangeability</p>
@@ -3528,7 +3560,7 @@ P(A = a | L = l) = \frac{P(A = a, L = l)}{P(L = l)}
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-11-23T13:12:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-11-23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-11-25T11:39:53+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-11-25</span>
       
         <br>
         创建日期:
