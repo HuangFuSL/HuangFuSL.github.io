@@ -11,8 +11,8 @@ jobs:
   dependencies:
     name: Update dependencies
     if: >-
-      contains(github.event.pull_request.labels.*.name, 'ready') == true ||
-      contains(github.event.pull_request.labels.*.name, 'dependencies') == true
+      github.event.label.name == 'ready' ||
+      github.event.label.name == 'dependencies'
     runs-on: self-hosted
     permissions:
       contents: write
