@@ -54,6 +54,9 @@ Although the marginally randomized experiment is exchangeable, the conditional r
 
 We can measure the causal effects on sub-groups $P(Y^{a = 1} = 1 | L = l) - P(Y^{a = 0} = 1 | L = l)$ using conditional exchangeability (**stratification**) or directly measure the overall causal effect $P(Y^{a = 1} = 1) - P(Y^{a = 0} = 1)$ on the population using marginal exchangeability. For different sub-groups, the causal effects may be different, which is called **effect modification** or **treatment effect heterogeneity**.
 
+!!! success "Stratification"
+    Stratification is to split the population into mutually exclusive sub-groups in which the treatment assignment is exchangeable. The causal effect can be estimated in each sub-group.
+
 ## Standardization
 
 We can view the marginal risk as a weighted average of the conditional risks:
