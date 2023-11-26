@@ -2141,6 +2141,8 @@
       
         
       
+        
+      
     
     
     
@@ -2332,6 +2334,26 @@
   
   <span class="md-ellipsis">
     Observational studies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Effect modification
   </span>
   
 
@@ -3526,6 +3548,10 @@
 <p>Consider an additional factor <span class="arithmatex">\(L\)</span> affects the assignment of treatments, i.e., when <span class="arithmatex">\(L\)</span> takes different values, the distribution of <span class="arithmatex">\(A\)</span> is different. Such a randomized experiment is called <strong>conditional randomized experiment</strong>. In a conditional randomized experiment, the corresponding randomized experiment using the overall distribution of <span class="arithmatex">\(A\)</span> is called <strong>marginally randomized experiment</strong>.</p>
 <p>Although the marginally randomized experiment is exchangeable, the conditional randomized experiment is not exchangeable in general. Only conditional exchangeability holds in such randomized experiments, i.e. <span class="arithmatex">\(\forall a, Y^a \perp A | L\)</span>.</p>
 <p>We can measure the causal effects on sub-groups <span class="arithmatex">\(P(Y^{a = 1} = 1 | L = l) - P(Y^{a = 0} = 1 | L = l)\)</span> using conditional exchangeability (<strong>stratification</strong>) or directly measure the overall causal effect <span class="arithmatex">\(P(Y^{a = 1} = 1) - P(Y^{a = 0} = 1)\)</span> on the population using marginal exchangeability. For different sub-groups, the causal effects may be different, which is called <strong>effect modification</strong> or <strong>treatment effect heterogeneity</strong>.</p>
+<div class="admonition success">
+<p class="admonition-title">Stratification</p>
+<p>Stratification is to split the population into mutually exclusive sub-groups in which the treatment assignment is exchangeable. The causal effect can be estimated in each sub-group.</p>
+</div>
 <h2 id="standardization">Standardization<a class="headerlink" href="#standardization" title="Permanent link">&para;</a></h2>
 <p>We can view the marginal risk as a weighted average of the conditional risks:</p>
 <div class="arithmatex">\[
@@ -3560,7 +3586,7 @@ P(A = a | L = l) = \frac{P(A = a, L = l)}{P(L = l)}
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-11-25T11:39:53+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-11-25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-11-26T08:52:09+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-11-26</span>
       
         <br>
         创建日期:

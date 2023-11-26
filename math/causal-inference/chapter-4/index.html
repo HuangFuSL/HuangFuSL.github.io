@@ -6,15 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="LaTeX中的递归可以通过\def命令实现，在定义的宏中包含自身即可。">
+        <meta name="description" content="A null average causal effect does not imply a null average causal effect for a subset of the population. A variable \(V\) is an effect modifier if the average causal effect of \(A\) on \(Y\) differs across levels of \(V\).">
       
       
       
       
-        <link rel="prev" href="../../tables/tabular/">
+        <link rel="prev" href="../chapter-3/">
       
       
-        <link rel="next" href="../../misc/beamer/">
+        <link rel="next" href="../../../coding/">
       
       
       <link rel="icon" href="../../../img/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>递归 - HuangFuSL's Blog</title>
+        <title>Effect modification - HuangFuSL's Blog</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#effect-modification" class="md-skip">
           跳转至
         </a>
       
@@ -134,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              递归
+              Effect modification
             
           </span>
         </div>
@@ -269,13 +269,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../latex/" class="md-tabs__link">
           
   
     
@@ -291,11 +289,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../math/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -557,8 +557,6 @@
       
   
   
-    
-  
   
     
     
@@ -584,17 +582,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../latex/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -611,7 +609,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             LaTeX
@@ -671,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basics/fonts/" class="md-nav__link">
+      <a href="../../../latex/basics/fonts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basics/lists/" class="md-nav__link">
+      <a href="../../../latex/basics/lists/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -766,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/symbols/" class="md-nav__link">
+      <a href="../../../latex/math/symbols/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -786,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/stack/" class="md-nav__link">
+      <a href="../../../latex/math/stack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -806,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/tricks/" class="md-nav__link">
+      <a href="../../../latex/math/tricks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -898,7 +896,7 @@
     
   
   
-    <a href="../../tikz/pgfplots/" class="md-nav__link">
+    <a href="../../../latex/tikz/pgfplots/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -945,7 +943,7 @@
     
   
   
-    <a href="../../tables/tabular/" class="md-nav__link">
+    <a href="../../../latex/tables/tabular/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -979,8 +977,6 @@
                 
   
   
-    
-  
   
     
     
@@ -994,12 +990,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
@@ -1013,7 +1009,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             高级排版
@@ -1024,18 +1020,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../latex/advanced/recursion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1044,7 +1031,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1109,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/beamer/" class="md-nav__link">
+      <a href="../../../latex/misc/beamer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1129,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/musixtex/" class="md-nav__link">
+      <a href="../../../latex/misc/musixtex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1162,6 +1148,8 @@
       
   
   
+    
+  
   
     
     
@@ -1191,17 +1179,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../math/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1218,7 +1206,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             课程笔记
@@ -1268,7 +1256,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../math/discrete-mathematics/" class="md-nav__link ">
+            <a href="../../discrete-mathematics/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1300,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/discrete-mathematics/chapter-1/" class="md-nav__link">
+      <a href="../../discrete-mathematics/chapter-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1320,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/discrete-mathematics/chapter-2/" class="md-nav__link">
+      <a href="../../discrete-mathematics/chapter-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1340,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/discrete-mathematics/chapter-3/" class="md-nav__link">
+      <a href="../../discrete-mathematics/chapter-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1360,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/discrete-mathematics/chapter-4/" class="md-nav__link">
+      <a href="../../discrete-mathematics/chapter-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1380,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/discrete-mathematics/chapter-5/" class="md-nav__link">
+      <a href="../../discrete-mathematics/chapter-5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1400,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/discrete-mathematics/chapter-9/" class="md-nav__link">
+      <a href="../../discrete-mathematics/chapter-9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1459,7 +1447,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../math/operating-research/" class="md-nav__link ">
+            <a href="../../operating-research/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1491,7 +1479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/operating-research/chapter-1/" class="md-nav__link">
+      <a href="../../operating-research/chapter-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/operating-research/chapter-2/" class="md-nav__link">
+      <a href="../../operating-research/chapter-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1531,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/operating-research/chapter-3/" class="md-nav__link">
+      <a href="../../operating-research/chapter-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1551,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/operating-research/chapter-4/" class="md-nav__link">
+      <a href="../../operating-research/chapter-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1604,7 +1592,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../math/queue-theory/" class="md-nav__link ">
+            <a href="../../queue-theory/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1636,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/queue-theory/chapter-12/" class="md-nav__link">
+      <a href="../../queue-theory/chapter-12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1697,7 +1685,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../math/operations-mamagement/" class="md-nav__link ">
+            <a href="../../operations-mamagement/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1729,7 +1717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/operations-mamagement/forecast/" class="md-nav__link">
+      <a href="../../operations-mamagement/forecast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1749,7 +1737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/operations-mamagement/fdm/" class="md-nav__link">
+      <a href="../../operations-mamagement/fdm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1769,7 +1757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/operations-mamagement/aggregrate-planning/" class="md-nav__link">
+      <a href="../../operations-mamagement/aggregrate-planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1789,7 +1777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/operations-mamagement/inventory-control-deterministic-demand/" class="md-nav__link">
+      <a href="../../operations-mamagement/inventory-control-deterministic-demand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1809,7 +1797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
+      <a href="../../operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1866,7 +1854,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../math/random-process/" class="md-nav__link ">
+            <a href="../../random-process/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1898,7 +1886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/random-process/basics/" class="md-nav__link">
+      <a href="../../random-process/basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1918,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/random-process/poisson/" class="md-nav__link">
+      <a href="../../random-process/poisson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1938,7 +1926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/random-process/notations/" class="md-nav__link">
+      <a href="../../random-process/notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1999,7 +1987,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../math/convex-optimization/" class="md-nav__link ">
+            <a href="../../convex-optimization/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2031,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/convex-optimization/convex-set/" class="md-nav__link">
+      <a href="../../convex-optimization/convex-set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2051,7 +2039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/convex-optimization/convex-function/" class="md-nav__link">
+      <a href="../../convex-optimization/convex-function/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2071,7 +2059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/convex-optimization/convex-optimization/" class="md-nav__link">
+      <a href="../../convex-optimization/convex-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2091,7 +2079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/convex-optimization/duality/" class="md-nav__link">
+      <a href="../../convex-optimization/duality/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2111,7 +2099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/convex-optimization/unconstrained-optimization/" class="md-nav__link">
+      <a href="../../convex-optimization/unconstrained-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2137,6 +2125,8 @@
                 
   
   
+    
+  
   
     
     
@@ -2160,17 +2150,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../math/causal-inference/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2187,7 +2177,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_8">
             <span class="md-nav__icon md-icon"></span>
             因果推断
@@ -2202,7 +2192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/causal-inference/chapter-1/" class="md-nav__link">
+      <a href="../chapter-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2222,7 +2212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/causal-inference/chapter-2/" class="md-nav__link">
+      <a href="../chapter-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2242,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/causal-inference/chapter-3/" class="md-nav__link">
+      <a href="../chapter-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2260,9 +2250,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../math/causal-inference/chapter-4/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Effect modification
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2271,6 +2281,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#effect-modification-vs-prognostic-factor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effect Modification v.s. Prognostic Factor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Effect Modification v.s. Prognostic Factor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stratification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stratification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-adjustment-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of Adjustment Methods
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3334,6 +3406,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#effect-modification-vs-prognostic-factor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effect Modification v.s. Prognostic Factor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Effect Modification v.s. Prognostic Factor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stratification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stratification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-adjustment-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of Adjustment Methods
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
             <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=360 src="//music.163.com/outchain/player?type=0&id=5371395831&auto=1&height=430"></iframe>
         </div>
@@ -3353,33 +3475,57 @@
   
 
 
-<h1 id="_1">递归<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>LaTeX中的递归可以通过<code>\def</code>命令实现，在定义的宏中包含自身即可。</p>
-<div class="highlight"><pre><span></span><code><span class="k">\def\recursion</span>#1<span class="nb">{</span>
-    <span class="k">\ifx</span>#1<span class="k">\relax</span>
-        <span class="k">\relax</span>
-    <span class="k">\else</span>
-        do something
-        <span class="k">\expandafter\recursion</span>
-    <span class="k">\fi</span>
-<span class="nb">}</span>
-</code></pre></div>
-<p>在宏第一次展开后，如果<code>#1</code>不是<code>\relax</code>，则会转入<code>\else</code>语句进行第二次展开。</p>
-<ul>
-<li>宏定义中引用的宏名称前必须加<code>\expandafter</code>，表示在展开当前宏后才展开<code>\recursion</code>；</li>
-<li><code>\relax</code>是宏的终止条件，输入序列需要以<code>\relax</code>结尾。</li>
-</ul>
+<h1 id="effect-modification">Effect Modification<a class="headerlink" href="#effect-modification" title="Permanent link">&para;</a></h1>
+<p>A null average causal effect <strong>does not imply a null average causal effect for a subset of the population</strong>. A variable <span class="arithmatex">\(V\)</span> is an effect modifier if the average causal effect of <span class="arithmatex">\(A\)</span> on <span class="arithmatex">\(Y\)</span> differs across levels of <span class="arithmatex">\(V\)</span>.</p>
+<p>An effect modifier does need to directly have causal relationship with the different causal effect. If the difference in causal effects can be interpreted causally, the variable is a <em>causal effect modifier</em>, otherwise it is a <em>surrogate effect modifier</em>.</p>
+<div class="admonition success">
+<p class="admonition-title">Effects in the treated</p>
+<p>Notice the treatment variable itself can be regarded as a subgroup. The average causal effect in the treated is measured on subgroup <span class="arithmatex">\(A = 1\)</span>.</p>
+<div class="arithmatex">\[
+P(Y^{a = 1} = 1 | A = 1) - P(Y^{a = 0} = 1 | A = 1)
+\]</div>
+<ol>
+<li>If the distribution of individual causal effects varies between the treated and untreated, the average causal effect in the treated is not equal to the average causal effect in the population.</li>
+<li><span class="arithmatex">\(P(Y^{a = 0} = 1 | A = 1)\)</span> is unidentifiable. Estimating <span class="arithmatex">\(P(Y^{a = 0} = 1 | A = 1)\)</span> requires <em>partial</em> exchangeability <span class="arithmatex">\(Y^{a = 0} \perp A \mid L\)</span>.</li>
+<li>Following the definition of effects in the treated, we can define effects in the untreated, which is defined on subgroup <span class="arithmatex">\(a = 0\)</span>. Effects in the untreated requires partial exchangeability <span class="arithmatex">\(Y^{a = 1} \perp A \mid L\)</span>.</li>
+</ol>
+<p>The counterfactual <span class="arithmatex">\(P(Y^{a} = 1 | A = a')\)</span> can be estimated using standardization or IP weighting.</p>
+<ol>
+<li>Standardization: <span class="arithmatex">\(P(Y^{a} = 1 | A = a') = \sum_{l} P(Y = 1 | A = a, L = l) P(L = l | A = a')\)</span></li>
+<li>IP weighting: <span class="arithmatex">\(P(Y^{a} = 1 | A = a') = E\left[\frac{I(A = a)Y}{f(A | L)P(A = a' | L)}\right]/E\left[\frac{I(A = a)}{f(A | L)P(A = a' | L)}\right]\)</span></li>
+</ol>
+</div>
+<p>The extrapolation of computed causal effects across populations are called <em>transportability</em>. Transportability is an unverifiable assumption. If the effect modification measure, version of treatment and the in-group interference are similar, we can assume transportability.</p>
+<p>From effect modification, we can identify the subgroup that benefits most from the treatment or intervention. Moreover, effect modification helps us to learn underlying mechanisms of the outcome.</p>
+<h2 id="effect-modification-vs-prognostic-factor">Effect Modification v.s. Prognostic Factor<a class="headerlink" href="#effect-modification-vs-prognostic-factor" title="Permanent link">&para;</a></h2>
+<p>When marginal randomization does not hold, there exists a prognostic factor <span class="arithmatex">\(L\)</span> is a variable that affect the treatment assignment, while an effect modifier <span class="arithmatex">\(V\)</span> affects the effect. To estimate causal effects in such conditions, extra adjustments are required</p>
+<h3 id="stratification">Stratification<a class="headerlink" href="#stratification" title="Permanent link">&para;</a></h3>
+<p>Stratification can be used to adjust the marginal causal effect of <span class="arithmatex">\(A\)</span> on <span class="arithmatex">\(V\)</span>. However, it requires to take all the combinations of <span class="arithmatex">\(V\)</span> and <span class="arithmatex">\(L\)</span> into account. And stratification requires positivity condition to be met on <span class="arithmatex">\(L\)</span>.</p>
+<p>Using stratification, we can yield the conditional causal effect of <span class="arithmatex">\(A\)</span> on <span class="arithmatex">\(Y\)</span> for each stratum. The per-stratum causal effect can be further weighted to get a pooled causal effect.</p>
+<p>Notice that stratification will introduce sampling variability when the stratification is getting finer.</p>
+<h3 id="matching">Matching<a class="headerlink" href="#matching" title="Permanent link">&para;</a></h3>
+<p>Matching strategy is similar but inversed approach to IP weighting.</p>
+<p>The goal of matching is to construct a subset of the population in which the distribution of <span class="arithmatex">\(L\)</span> is similar between the treated and untreated by sampling in the treated part or untreated part. Stratas with only treated or untreated individuals are excluded.</p>
+<p>Usually, the group with more individuals between the treated and untreated is sampled to match the other group. The subgroup being matched is used to calculate the average effect in the treated or untreated.</p>
+<p>However, as matching changes the distribution of <span class="arithmatex">\(L\)</span>, the distribution of causal modifier <span class="arithmatex">\(V\)</span> will also be changed.</p>
+<h2 id="overview-of-adjustment-methods">Overview of Adjustment Methods<a class="headerlink" href="#overview-of-adjustment-methods" title="Permanent link">&para;</a></h2>
+<p>There are 4 methods to adjust the causal effect of <span class="arithmatex">\(A\)</span> on <span class="arithmatex">\(Y\)</span>, including standardization, IP weighting, matching and stratification.</p>
+<ol>
+<li>Standardization and IP weighting can be used to compute marginal or conditional causal effects.</li>
+<li>Matching and stratification can be used to compute conditional causal effects in subgroups.</li>
+<li>With effect modification, the causal effect of different adjustment methods may be different.</li>
+</ol>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-08-25T04:07:13+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-08-25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-11-26T08:52:09+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-11-26</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-08-25T04:07:13+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-08-25</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-11-26T08:52:09+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-11-26</span>
       
     
   </small>
