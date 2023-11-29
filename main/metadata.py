@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import itertools
 import json
 from typing import Any, Dict, List
 
@@ -73,10 +74,11 @@ def build_recent(topk: int) -> str:
         if criteria(v)
     ]
     pages.sort(key=lambda _: _['sub_title'], reverse=True)
-    return '\n'.join([
-        f"* {page['sub_title']}：{page['title']}"
-        for page in pages[:topk]
-    ])
+    grouped = [
+        f"* {k}：{'，'.join([_['title'] for _ in v])}"
+        for k, v in itertools.groupby(pages, lambda _: _['sub_title'])
+    ][:topk]
+    return '\n'.join(grouped)
 
 def build_todo() -> str:
     pages: List[Dict[str, Any]] = [
