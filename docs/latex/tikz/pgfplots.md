@@ -1,8 +1,4 @@
-# TikZ 图片
-
-`tikzpicture` 环境定义了一张TikZ图片。
-
-## pgfplots宏包
+# pgfplots
 
 借助宏包`pgfplots`，可以使用TikZ绘制折线图，如下所示。
 
@@ -23,7 +19,7 @@
 
 `axis`控制一个图像，`\begin{axis}`后可以加一对方括号，用于设定图片的参数。`addplot`控制图像中的一个序列，其后同样可以加一对方括号用于控制参数。
 
-### `axis`环境
+## `axis`环境
 
 `axis`环境可用的参数如下所列：
 
@@ -61,9 +57,12 @@
 
 有关更多参数，请参见[pgfplots 手册](http://mirrors.ctan.org/graphics/pgf/contrib/pgfplots/doc/pgfplots.pdf)
 
-### `\addplot`命令
+## `\addplot`
 
-`\addplot`命令可以向图像中添加折线图或函数。如下绘制一个折线图及对应的拟合结果：
+`\addplot`命令可以向图像中添加折线图或函数。
+
+1. `\addplot coordinates{}` 用于绘制折线图，其中`coordinates`中的坐标用圆括号括起
+2. `\addplot [smooth] {f(x)}` 用于绘制平滑的折线图，其中`f(x)`为函数表达式
 
 !!! tldr "axis参数示例"
     === "tex代码"
@@ -91,7 +90,4 @@
 `\addplot`有如下参数：
 
 * `smooth`如果存在，绘制不包含点坐标的平滑图像
-* `coordinates`指定折线图的坐标点
-* `[color]`指明颜色
-
-如果不使用`coordinates`，`\addplot`可以用于绘制函数图像。
+* `[color]`设置颜色。

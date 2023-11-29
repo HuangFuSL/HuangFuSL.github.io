@@ -2,10 +2,7 @@ nav:
   - index.md
   - 基本排版: basics
   - 数学公式: math
-  - 图表排版:
-    - tikz绘图:
-      - pgfplots图表: tikz
-    - 表格排版:
-      - tabular环境: tables
+  - 图表排版: floats
+  - tikz绘图: tikz
   - 高级排版: advanced
   - 其他: misc
