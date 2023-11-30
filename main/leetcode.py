@@ -57,17 +57,16 @@ def build_table(
         joiner(col_align)
     ]
 
-    flag = True
-    while flag:
+    while True:
         row = []
         for _ in col_names:
             try:
                 link = next(src)
             except StopIteration:
-                if not row:
-                    flag = False
                 link = ''
             row.append(link)
+        if not ''.join(row):
+            break
         ret.append(joiner(row))
     return '\n'.join(indent_lines(indent, ret))
 
@@ -105,7 +104,7 @@ def get_whole_table(
     for page in content:
         if int(page['编号']) in pages_dict:
             page['linked'] = True
-            page['link'] = pages_dict[int(page['编号'])]['file']
+            page['link'] = pages_dict[int(page['编号'])]['url']
             new_page.append(page)
     content = new_page
 
