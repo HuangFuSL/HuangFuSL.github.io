@@ -1,0 +1,17 @@
+\documentclass[standalone, version=2.0]{huangfusl-template}
+\begin{document}
+\begin{tikzpicture}
+    \node[circle, draw] (L) at (0, 0) {$L$};
+    \node[circle, draw] (A) at (-1, -1.7) {$A$};
+    \node[circle, draw] (Y) at (1, -1.7) {$Y$};
+
+    \draw[-stealth, thick] (L) -- (A);
+    \draw[-stealth, thick] (L) -- (Y);
+    \draw[-stealth, thick] (A) -- (Y);
+
+    \draw[dashed, -stealth, thick, draw=red] ($ (A) + (0, -0.7) $) -- ($ (Y) + (0, -0.7) $);
+    \node (causal) at ($ (A)!0.5!(Y) + (0, -1.2) $) {\color{red}causation flow};
+    \draw[dashed, -stealth, thick, draw=blue] ($ (A) + (-0.7, 0) $) .. controls (-0.5, 1.4) and (0.5, 1.4) .. ($ (Y) + (0.7, 0) $);
+    \node (asso) at ($ (L) + (0, 1.2) $) {\color{blue}association flow};
+  \end{tikzpicture}
+\end{document}
