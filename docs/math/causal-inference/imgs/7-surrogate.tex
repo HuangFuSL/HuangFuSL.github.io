@@ -1,0 +1,14 @@
+\documentclass[standalone, version=2.0]{huangfusl-template}
+\begin{document}
+\begin{tikzpicture}
+    \node[circle, draw] (U) at (0, 0) {$U$};
+    \node[circle, draw] (A) at (-1, -1.7) {$A$};
+    \node[circle, draw] (Y) at (1, -1.7) {$Y$};
+    \node[circle, draw] (L) at (-2, 0) {$L$};
+
+    \draw[-stealth, thick] (U) -- (L)
+    \draw[-stealth, thick] (U) -- (A);
+    \draw[-stealth, thick] (U) -- (Y);
+    \draw[-stealth, thick] (A) -- (Y);
+\end{tikzpicture}
+\end{document}

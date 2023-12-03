@@ -8,3 +8,4 @@ According to *Causal Inference: What If*.
 4. [Effect modification](chapter-4.md)
 5. [Interaction](chapter-5.md)
 6. [Graphical representation of causal effects](chapter-6.md)
+7. [Confounding](chapter-7.md)
