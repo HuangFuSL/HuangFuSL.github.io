@@ -1,0 +1,352 @@
+/* Mkdocs material admonitions */
+:root {
+    --md-admonition-icon--update: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1a6.887 6.887 0 0 0 0 9.8c2.73 2.7 7.15 2.7 9.88 0 1.36-1.35 2.04-2.92 2.04-4.9h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58a8.987 8.987 0 0 1 12.65 0L21 3v7.12M12.5 8v4.25l3.5 2.08-.72 1.21L11 13V8h1.5z"/></svg>');
+    --md-admonition-icon--definition: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><rect fill="none" height="24" width="24"/><path d="M21,7h-2v2h-2V7h-2V5h2V3h2v2h2V7z M19,21l-7-3l-7,3V5c0-1.1,0.9-2,2-2l7,0c-0.63,0.84-1,1.87-1,3c0,2.76,2.24,5,5,5 c0.34,0,0.68-0.03,1-0.1V21z"/></svg>');
+    --md-admonition-icon--proof: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><rect fill="none" height="24" width="24"/><path d="M19,21l-7-3l-7,3V5c0-1.1,0.9-2,2-2l7,0c-0.63,0.84-1,1.87-1,3c0,2.76,2.24,5,5,5c0.34,0,0.68-0.03,1-0.1V21z M17.83,9 L15,6.17l1.41-1.41l1.41,1.41l3.54-3.54l1.41,1.41L17.83,9z"/></svg>');
+    --md-admonition-icon--theorem: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 18l2 1V3c0-1.1-.9-2-2-2H8.99C7.89 1 7 1.9 7 3h10c1.1 0 2 .9 2 2v13zM15 5H5c-1.1 0-2 .9-2 2v16l7-3 7 3V7c0-1.1-.9-2-2-2z"/></svg>');
+}
+
+.md-typeset .admonition.update,
+.md-typeset details.update {
+    border-color: rgb(228, 41, 119);
+}
+
+.md-typeset .update>.admonition-title,
+.md-typeset .update>summary {
+    background-color: rgba(228, 41, 119, 0.1);
+    border-color: rgb(228, 41, 119);
+}
+
+.md-typeset .update>.admonition-title::before,
+.md-typeset .update>summary::before {
+    background-color: rgb(228, 41, 119);
+    -webkit-mask-image: var(--md-admonition-icon--update);
+    mask-image: var(--md-admonition-icon--update);
+}
+
+.md-typeset .admonition.definition,
+.md-typeset details.definition {
+    border-color: #ff5252;
+}
+
+.md-typeset .definition>.admonition-title,
+.md-typeset .definition>summary {
+    background-color: #ff52521a;
+    border-color: #ff5252;
+}
+
+.md-typeset .definition>.admonition-title:before,
+.md-typeset .definition>summary:before {
+    background-color: #ff5252;
+    -webkit-mask-image: var(--md-admonition-icon--definition);
+    mask-image: var(--md-admonition-icon--definition);
+}
+
+.md-typeset .admonition.proof,
+.md-typeset details.proof {
+    border-color: #ff1744;
+}
+
+.md-typeset .proof>.admonition-title,
+.md-typeset .proof>summary {
+    background-color: #ff17441a;
+    border-color: #ff1744;
+}
+
+.md-typeset .proof>.admonition-title:before,
+.md-typeset .proof>summary:before {
+    background-color: #ff1744;
+    -webkit-mask-image: var(--md-admonition-icon--proof);
+    mask-image: var(--md-admonition-icon--proof);
+}
+
+.md-typeset .admonition.theorem,
+.md-typeset details.theorem {
+    border-color: #f50057;
+}
+
+.md-typeset .theorem>.admonition-title,
+.md-typeset .theorem>summary {
+    background-color: #f500571a;
+    border-color: #f50057;
+}
+
+.md-typeset .theorem>.admonition-title:before,
+.md-typeset .theorem>summary:before {
+    background-color: #f50057;
+    -webkit-mask-image: var(--md-admonition-icon--theorem);
+    mask-image: var(--md-admonition-icon--theorem);
+}
+
+/* Index page timeline */
+
+.home-timeline .nt-timeline-title {
+    font-size: 1.01rem !important;
+}
+
+.nt-timeline-title a {
+    color: unset !important;
+}
+
+.nt-timeline-title a:hover {
+    color: var(--md-typeset-a-color) !important;
+}
+
+.home-timeline .nt-timeline-sub-title {
+    font-size: 0.65rem !important;
+}
+
+.home-timeline .nt-timeline-content {
+    font-size: 0.65rem !important;
+    border-bottom: unset !important;
+    padding-bottom: unset !important;
+}
+
+/* Index page buttons */
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline-style: none;
+    background: transparent;
+    font-size: inherit;
+}
+
+button[data-md-color-accent],
+button[data-md-color-primary] {
+    width: 6.5rem;
+    margin-bottom: .2rem;
+    padding: 1.2rem .4rem .2rem;
+    -webkit-transition: background-color .25s, opacity .25s;
+    transition: background-color .25s, opacity .25s;
+    border-radius: .1rem;
+    color: #fff;
+    font-size: .64rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+button[data-md-color-accent],
+button[data-md-color-primary] {
+    width: 6.5rem;
+    margin-bottom: .2rem;
+    padding: 1.2rem .4rem .2rem;
+    -webkit-transition: background-color .25s, opacity .25s;
+    transition: background-color .25s, opacity .25s;
+    border-radius: .1rem;
+    color: #fff;
+    font-size: .64rem;
+    font-family: 'PingFang SC';
+    text-align: left;
+    cursor: pointer;
+}
+
+button[data-md-color-accent]:hover,
+button[data-md-color-primary]:hover {
+    opacity: .75
+}
+
+button[data-md-color-primary=red] {
+    background-color: #ef5350;
+}
+
+button[data-md-color-primary=pink] {
+    background-color: #e91e63
+}
+
+button[data-md-color-primary=purple] {
+    background-color: #ab47bc
+}
+
+button[data-md-color-primary=deep-purple] {
+    background-color: #7e57c2
+}
+
+button[data-md-color-primary=indigo] {
+    background-color: #3f51b5
+}
+
+button[data-md-color-primary=blue] {
+    background-color: #2196f3
+}
+
+button[data-md-color-primary=light-blue] {
+    background-color: #03a9f4
+}
+
+button[data-md-color-primary=cyan] {
+    background-color: #00bcd4
+}
+
+button[data-md-color-primary=teal] {
+    background-color: #009688
+}
+
+button[data-md-color-primary=green] {
+    background-color: #4caf50
+}
+
+button[data-md-color-primary=light-green] {
+    background-color: #7cb342
+}
+
+button[data-md-color-primary=lime] {
+    background-color: #c0ca33
+}
+
+button[data-md-color-primary=yellow] {
+    background-color: #f9a825
+}
+
+button[data-md-color-primary=amber] {
+    background-color: #ffa000
+}
+
+button[data-md-color-primary=orange] {
+    background-color: #fb8c00
+}
+
+button[data-md-color-primary=deep-orange] {
+    background-color: #ff7043
+}
+
+button[data-md-color-primary=brown] {
+    background-color: #795548
+}
+
+button[data-md-color-primary=grey] {
+    background-color: #757575
+}
+
+button[data-md-color-primary=blue-grey] {
+    background-color: #546e7a
+}
+
+button[data-md-color-primary=white] {
+    box-shadow: inset 0 0 .05rem rgba(0, 0, 0, .54);
+    color: rgba(0, 0, 0, .87);
+    background-color: white;
+}
+
+button[data-md-color-accent=red] {
+    background-color: #ff1744
+}
+
+button[data-md-color-accent=pink] {
+    background-color: #f50057
+}
+
+button[data-md-color-accent=purple] {
+    background-color: #e040fb
+}
+
+button[data-md-color-accent=deep-purple] {
+    background-color: #7c4dff
+}
+
+button[data-md-color-accent=indigo] {
+    background-color: #536dfe
+}
+
+button[data-md-color-accent=blue] {
+    background-color: #448aff
+}
+
+button[data-md-color-accent=light-blue] {
+    background-color: #0091ea
+}
+
+button[data-md-color-accent=cyan] {
+    background-color: #00b8d4
+}
+
+button[data-md-color-accent=teal] {
+    background-color: #00bfa5
+}
+
+button[data-md-color-accent=green] {
+    background-color: #00c853
+}
+
+button[data-md-color-accent=light-green] {
+    background-color: #64dd17
+}
+
+button[data-md-color-accent=lime] {
+    background-color: #aeea00
+}
+
+button[data-md-color-accent=yellow] {
+    background-color: #ffd600
+}
+
+button[data-md-color-accent=amber] {
+    background-color: #ffab00
+}
+
+button[data-md-color-accent=orange] {
+    background-color: #ff9100
+}
+
+button[data-md-color-accent=deep-orange] {
+    background-color: #ff6e40
+}
+
+[data-md-color-scheme=slate] .nt-card {
+    box-shadow:
+        0 2px 2px 0 var(--md-accent-fg-color),
+        0 3px 1px -2px var(--md-accent-fg-color),
+        0 1px 5px 0 var(--md-accent-fg-color--transparent) !important;
+}
+
+/* Code block styles */
+
+:root [data-md-color-scheme=default] {
+    --md-code-bg-color: #e6c2cd2d;
+}
+
+.highlight [data-linenos]::before {
+    /* Code block line numbers (inline) */
+    position: sticky;
+    left: px2em(-16px, 13.6px);
+    float: left;
+    margin-right: px2em(16px, 13.6px);
+    margin-left: px2em(-16px, 13.6px);
+    padding-left: px2em(16px, 13.6px);
+    color: var(--md-default-fg-color--light);
+    background-color: var(--md-code-bg-color);
+    box-shadow: px2rem(-1px) 0 var(--md-default-fg-color--lightest) inset;
+    content: attr(data-linenos);
+    user-select: none;
+}
+
+.md-typeset code {
+    border-radius: 0.4rem;
+}
+
+/* LaTeX images */
+
+:root>[data-md-color-scheme=default] {
+    --img-invert: 0%
+}
+
+:root>[data-md-color-scheme=slate] {
+    --img-invert: 100%
+}
+
+.md-typeset img {
+    margin: 0 auto;
+    display: flex;
+}
+
+.md-typeset .latex {
+    filter: invert(var(--img-invert));
+}
+
+/* KaTeX equation */
+
+.katex-display {
+    margin: 0 !important;
+}
+
