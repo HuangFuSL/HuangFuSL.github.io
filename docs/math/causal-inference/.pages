@@ -1,8 +1,10 @@
 nav:
   - index.md
-  - A definition of causal effect: chapter-1.md
-  - Randomized experiments: chapter-2.md
-  - Observational studies: chapter-3.md
-  - Effect modification: chapter-4.md
-  - Interaction: chapter-5.md
-  - Graphical representation of causal effects: chapter-6.md
+  - "Part I: Causal inference without models":
+    - A definition of causal effect: chapter-1.md
+    - Randomized experiments: chapter-2.md
+    - Observational studies: chapter-3.md
+    - Effect modification: chapter-4.md
+    - Interaction: chapter-5.md
+    - Graphical representation of causal effects: chapter-6.md
+    - Confounding: chapter-7.md

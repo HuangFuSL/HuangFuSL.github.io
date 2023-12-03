@@ -133,12 +133,8 @@ markdown_extensions:
 extra_css:
   - https://www.neoteroi.dev/mkdocs-plugins/css/neoteroi.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
-  - css/button.css
-  - css/code.css
-  - css/admonition.css
-  - css/img.css
+  - css/css_override.css
   - css/jupyter.css
-  - css/timeline.css
 
 
 extra_javascript:
