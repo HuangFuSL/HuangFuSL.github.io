@@ -8,3 +8,5 @@ nav:
     - Interaction: chapter-5.md
     - Graphical representation of causal effects: chapter-6.md
     - Confounding: chapter-7.md
+    - Selection bias: chapter-8.md
+    - Measurement bias and "noncausal" diagrams: chapter-9.md

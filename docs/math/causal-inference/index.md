@@ -9,3 +9,5 @@ According to *Causal Inference: What If*.
 5. [Interaction](chapter-5.md)
 6. [Graphical representation of causal effects](chapter-6.md)
 7. [Confounding](chapter-7.md)
+8. [Selection bias](chapter-8.md)
+9. [Measurement bias and "noncausal" diagrams](chapter-9.md)
