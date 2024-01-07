@@ -11,6 +11,7 @@ hide:
 * [LaTeX](latex/index.md)
 * [数学](math/index.md)
 * [写代码](coding/index.md)
+* [日语](japanese/index.md)
 * [关于我](about.md)
 
 ### :material-timeline-clock: Blog timeline
