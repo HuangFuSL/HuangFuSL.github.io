@@ -1,0 +1,6 @@
+nav:
+  - index.md
+  - 日语(1):
+    - 短语: japanese-1-pattern.md
+    - 语法: japanese-1-grammar.md
+    - 单词表: japanese-1-vocab.md
