@@ -1,6 +1,6 @@
 from mkdocs_macros import plugin
 
-from . import latex, leetcode, metadata, network
+from . import latex, leetcode, metadata, network, coding
 
 on_pre_page_macros = metadata.collect_meta
 on_post_build = metadata.write_meta
@@ -17,4 +17,5 @@ def define_env(env: plugin.MacrosPlugin):
     env.macro(metadata.build_timeline)
     env.macro(metadata.build_recent)
     env.macro(metadata.build_todo)
+    env.macro(coding.read_from_file)
     env.filter(len)
