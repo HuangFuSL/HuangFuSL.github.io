@@ -6,30 +6,30 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="详情参见 GitHub">
+        <meta name="description" content="记录Rust的学习。">
       
       
       
       
-        <link rel="prev" href="../../decorator/">
+        <link rel="prev" href="../python/snippets/ncm_decrypt/">
       
       
-        <link rel="next" href="../cn_date/">
+        <link rel="next" href="0/">
       
       
-      <link rel="icon" href="../../../../img/favicon.png">
+      <link rel="icon" href="../../img/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>网易云音乐NCM转换 - HuangFuSL's Blog</title>
+        <title>Rust - HuangFuSL's Blog</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -47,17 +47,17 @@
       
     
     
-      <link rel="stylesheet" href="../../../../css/timeago.css">
+      <link rel="stylesheet" href="../../css/timeago.css">
     
       <link rel="stylesheet" href="https://www.neoteroi.dev/mkdocs-plugins/css/neoteroi.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-      <link rel="stylesheet" href="../../../../css/css_override.css">
+      <link rel="stylesheet" href="../../css/css_override.css">
     
-      <link rel="stylesheet" href="../../../../css/jupyter.css">
+      <link rel="stylesheet" href="../../css/jupyter.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ncm" class="md-skip">
+        <a href="#rust" class="md-skip">
           跳转至
         </a>
       
@@ -99,7 +99,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../.." title="HuangFuSL&#39;s Blog" class="md-header__button md-logo" aria-label="HuangFuSL's Blog" data-md-component="logo">
+    <a href="../.." title="HuangFuSL&#39;s Blog" class="md-header__button md-logo" aria-label="HuangFuSL's Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              网易云音乐NCM转换
+              Rust
             
           </span>
         </div>
@@ -226,7 +226,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -245,7 +245,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../notes/2020/" class="md-tabs__link">
+        <a href="../../notes/2020/" class="md-tabs__link">
           
   
     
@@ -265,7 +265,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../latex/" class="md-tabs__link">
+        <a href="../../latex/" class="md-tabs__link">
           
   
     
@@ -285,7 +285,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../math/" class="md-tabs__link">
+        <a href="../../math/" class="md-tabs__link">
           
   
     
@@ -307,7 +307,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../japanese/" class="md-tabs__link">
+        <a href="../../japanese/" class="md-tabs__link">
           
   
     
@@ -345,7 +345,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
     
@@ -374,7 +374,9 @@
           
 
     
-    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+    
+    
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
     <div class="md-sidebar__scrollwrap">
         <div class="md-sidebar__inner">
         
@@ -385,7 +387,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="HuangFuSL&#39;s Blog" class="md-nav__button md-logo" aria-label="HuangFuSL's Blog" data-md-component="logo">
+    <a href="../.." title="HuangFuSL&#39;s Blog" class="md-nav__button md-logo" aria-label="HuangFuSL's Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
@@ -419,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../notes/2020/" class="md-nav__link">
+      <a href="../../notes/2020/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../notes/2021/" class="md-nav__link">
+      <a href="../../notes/2021/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../notes/2022/" class="md-nav__link">
+      <a href="../../notes/2022/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,7 +594,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../latex/" class="md-nav__link ">
+            <a href="../../latex/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -671,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../latex/basics/fonts/" class="md-nav__link">
+      <a href="../../latex/basics/fonts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -692,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../latex/basics/lists/" class="md-nav__link">
+      <a href="../../latex/basics/lists/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -769,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../latex/math/symbols/" class="md-nav__link">
+      <a href="../../latex/math/symbols/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -790,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../latex/math/stack/" class="md-nav__link">
+      <a href="../../latex/math/stack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../latex/math/tricks/" class="md-nav__link">
+      <a href="../../latex/math/tricks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -884,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../latex/floats/table/" class="md-nav__link">
+      <a href="../../latex/floats/table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -957,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../latex/tikz/pgfplots/" class="md-nav__link">
+      <a href="../../latex/tikz/pgfplots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1030,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../latex/advanced/recursion/" class="md-nav__link">
+      <a href="../../latex/advanced/recursion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1105,7 +1107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../latex/misc/beamer/" class="md-nav__link">
+      <a href="../../latex/misc/beamer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1126,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../latex/misc/musixtex/" class="md-nav__link">
+      <a href="../../latex/misc/musixtex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1199,7 +1201,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../math/" class="md-nav__link ">
+            <a href="../../math/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1267,7 +1269,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../math/discrete-mathematics/" class="md-nav__link ">
+            <a href="../../math/discrete-mathematics/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1300,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/discrete-mathematics/chapter-1/" class="md-nav__link">
+      <a href="../../math/discrete-mathematics/chapter-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1321,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/discrete-mathematics/chapter-2/" class="md-nav__link">
+      <a href="../../math/discrete-mathematics/chapter-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1342,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/discrete-mathematics/chapter-3/" class="md-nav__link">
+      <a href="../../math/discrete-mathematics/chapter-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1363,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/discrete-mathematics/chapter-4/" class="md-nav__link">
+      <a href="../../math/discrete-mathematics/chapter-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1384,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/discrete-mathematics/chapter-5/" class="md-nav__link">
+      <a href="../../math/discrete-mathematics/chapter-5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1405,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/discrete-mathematics/chapter-9/" class="md-nav__link">
+      <a href="../../math/discrete-mathematics/chapter-9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1467,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../math/operating-research/" class="md-nav__link ">
+            <a href="../../math/operating-research/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1498,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/operating-research/chapter-1/" class="md-nav__link">
+      <a href="../../math/operating-research/chapter-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1519,7 +1521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/operating-research/chapter-2/" class="md-nav__link">
+      <a href="../../math/operating-research/chapter-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1540,7 +1542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/operating-research/chapter-3/" class="md-nav__link">
+      <a href="../../math/operating-research/chapter-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1561,7 +1563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/operating-research/chapter-4/" class="md-nav__link">
+      <a href="../../math/operating-research/chapter-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1615,7 +1617,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../math/queue-theory/" class="md-nav__link ">
+            <a href="../../math/queue-theory/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1648,7 +1650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/queue-theory/chapter-12/" class="md-nav__link">
+      <a href="../../math/queue-theory/chapter-12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1710,7 +1712,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../math/operations-mamagement/" class="md-nav__link ">
+            <a href="../../math/operations-mamagement/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1743,7 +1745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/operations-mamagement/forecast/" class="md-nav__link">
+      <a href="../../math/operations-mamagement/forecast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1764,7 +1766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/operations-mamagement/fdm/" class="md-nav__link">
+      <a href="../../math/operations-mamagement/fdm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1785,7 +1787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/operations-mamagement/aggregrate-planning/" class="md-nav__link">
+      <a href="../../math/operations-mamagement/aggregrate-planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1806,7 +1808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/operations-mamagement/inventory-control-deterministic-demand/" class="md-nav__link">
+      <a href="../../math/operations-mamagement/inventory-control-deterministic-demand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1827,7 +1829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
+      <a href="../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1885,7 +1887,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../math/random-process/" class="md-nav__link ">
+            <a href="../../math/random-process/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1918,7 +1920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/random-process/basics/" class="md-nav__link">
+      <a href="../../math/random-process/basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1939,7 +1941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/random-process/poisson/" class="md-nav__link">
+      <a href="../../math/random-process/poisson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1960,7 +1962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/random-process/notations/" class="md-nav__link">
+      <a href="../../math/random-process/notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2022,7 +2024,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../math/convex-optimization/" class="md-nav__link ">
+            <a href="../../math/convex-optimization/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2055,7 +2057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/convex-optimization/convex-set/" class="md-nav__link">
+      <a href="../../math/convex-optimization/convex-set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2076,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/convex-optimization/convex-function/" class="md-nav__link">
+      <a href="../../math/convex-optimization/convex-function/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2097,7 +2099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/convex-optimization/convex-optimization/" class="md-nav__link">
+      <a href="../../math/convex-optimization/convex-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2118,7 +2120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/convex-optimization/duality/" class="md-nav__link">
+      <a href="../../math/convex-optimization/duality/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2139,7 +2141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../math/convex-optimization/unconstrained-optimization/" class="md-nav__link">
+      <a href="../../math/convex-optimization/unconstrained-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2193,7 +2195,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../math/causal-inference/" class="md-nav__link ">
+            <a href="../../math/causal-inference/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2258,7 +2260,7 @@
         
   
   
-    <a href="../../../../math/causal-inference/chapter-1/" class="md-nav__link">
+    <a href="../../math/causal-inference/chapter-1/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -2337,7 +2339,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2370,7 +2372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../svg/" class="md-nav__link">
+      <a href="../svg/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2418,7 +2420,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../leetcode/" class="md-nav__link ">
+            <a href="../leetcode/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2451,7 +2453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../leetcode/tags/" class="md-nav__link">
+      <a href="../leetcode/tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2523,7 +2525,7 @@
     
   
   
-    <a href="../../../leetcode/1/" class="md-nav__link">
+    <a href="../leetcode/1/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -2557,8 +2559,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2593,17 +2593,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../python/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2620,7 +2620,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -2636,7 +2636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyguide/" class="md-nav__link">
+      <a href="../python/pyguide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2657,7 +2657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../killable-thread/" class="md-nav__link">
+      <a href="../python/killable-thread/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2678,7 +2678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../magic-functions/" class="md-nav__link">
+      <a href="../python/magic-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2699,7 +2699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sequence/" class="md-nav__link">
+      <a href="../python/sequence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2720,7 +2720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mapping/" class="md-nav__link">
+      <a href="../python/mapping/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2741,7 +2741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bytes/" class="md-nav__link">
+      <a href="../python/bytes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2762,7 +2762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/" class="md-nav__link">
+      <a href="../python/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2783,7 +2783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decorator/" class="md-nav__link">
+      <a href="../python/decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2801,124 +2801,43 @@
                 
   
   
-    
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
-    
-    
+  
+    <a href="../python/snippets/ncm_decrypt/" class="md-nav__link">
       
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_10" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5_4_10" id="__nav_5_4_10_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
     Python实用工具
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_10_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_4_10">
-            <span class="md-nav__icon md-icon"></span>
-            Python实用工具
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        <span class="md-nav__icon md-icon"></span>
       
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    网易云音乐NCM转换
-  </span>
+    </a>
   
 
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cn_date/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    公历农历转换
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../merge_csv/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    CSV文件合并
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -2986,7 +2905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../machine-learning/linear-models/" class="md-nav__link">
+      <a href="../machine-learning/linear-models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3007,7 +2926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../machine-learning/decision-tree/" class="md-nav__link">
+      <a href="../machine-learning/decision-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3061,7 +2980,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../dsa/" class="md-nav__link ">
+            <a href="../dsa/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3094,7 +3013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dsa/vector-and-list/" class="md-nav__link">
+      <a href="../dsa/vector-and-list/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3158,7 +3077,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../configuration/" class="md-nav__link ">
+            <a href="../configuration/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3191,7 +3110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../configuration/apt-get/" class="md-nav__link">
+      <a href="../configuration/apt-get/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3212,7 +3131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../configuration/docker/" class="md-nav__link">
+      <a href="../configuration/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3233,7 +3152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../configuration/ssh/" class="md-nav__link">
+      <a href="../configuration/ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3254,7 +3173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../configuration/update-alternatives/" class="md-nav__link">
+      <a href="../configuration/update-alternatives/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3275,7 +3194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../configuration/vim/" class="md-nav__link">
+      <a href="../configuration/vim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3296,7 +3215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../configuration/nginx-rtmp/" class="md-nav__link">
+      <a href="../configuration/nginx-rtmp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3357,7 +3276,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../japanese/" class="md-nav__link ">
+            <a href="../../japanese/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3438,7 +3357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../japanese/japanese-1-pattern/" class="md-nav__link">
+      <a href="../../japanese/japanese-1-pattern/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3459,7 +3378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../japanese/japanese-1-grammar/" class="md-nav__link">
+      <a href="../../japanese/japanese-1-grammar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3480,7 +3399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../japanese/japanese-1-vocab/" class="md-nav__link">
+      <a href="../../japanese/japanese-1-vocab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3516,7 +3435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3537,7 +3456,9 @@
 
 
     
-    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+    
+    
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
     <div class="md-sidebar__scrollwrap">
         <div class="md-sidebar__inner">
             
@@ -3568,220 +3489,11 @@
   
 
 
-<h1 id="ncm">网易云音乐NCM转换<a class="headerlink" href="#ncm" title="Permanent link">&para;</a></h1>
-<p>详情参见<a href="https://github.com/HuangFuSL/python-snippets/blob/main/ncm_decrypt.py"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> GitHub</a></p>
-<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">网易云音乐ncm格式解密</span>
-
-<span class="sd">作者：HuangFuSL</span>
-
-<span class="sd">依赖包：pycryptodomex</span>
-
-<span class="sd">参数格式：</span>
-<span class="sd">path [path ...] [-o OUTPUT] [-f] [-r REGEX] [-e EXCLUDE] [-q] [-v]</span>
-
-<span class="sd">- path：ncm文件或目录</span>
-<span class="sd">- -o, --output：输出目录</span>
-<span class="sd">- -f, --force：覆盖已存在的文件</span>
-<span class="sd">- -r, --regex：匹配文件名的正则表达式</span>
-<span class="sd">- -e, --exclude：排除文件名的正则表达式</span>
-<span class="sd">- -q, --quiet：不打印处理信息</span>
-<span class="sd">- -v, --verbose：打印调试信息</span>
-
-<span class="sd">输出格式</span>
-<span class="sd">解码后的音频文件，mp3或flac格式</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
-
-<span class="kn">import</span> <span class="nn">argparse</span>
-<span class="kn">import</span> <span class="nn">base64</span>
-<span class="kn">import</span> <span class="nn">functools</span>
-<span class="kn">import</span> <span class="nn">io</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span>
-
-<span class="kn">from</span> <span class="nn">Cryptodome.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
-
-<span class="n">NCM_FILEHEAD</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;CTENFDAM&#39;</span>
-<span class="n">NCM_COREKEY</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;hzHRAmso5kInbaxW&#39;</span>
-<span class="n">NCM_SIDEKEY</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;#14ljk_!</span><span class="se">\\</span><span class="s2">]&amp;0U&lt;&#39;(&quot;</span>
-<span class="n">ARG_HELP</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="p">):</span> <span class="s1">&#39;NCM file or directory&#39;</span><span class="p">,</span>
-    <span class="p">(</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="s1">&#39;--output&#39;</span><span class="p">):</span> <span class="s1">&#39;Output directory&#39;</span><span class="p">,</span>
-    <span class="p">(</span><span class="s1">&#39;-f&#39;</span><span class="p">,</span> <span class="s1">&#39;--force&#39;</span><span class="p">):</span> <span class="s1">&#39;Overwrite existing files&#39;</span><span class="p">,</span>
-    <span class="p">(</span><span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="s1">&#39;--regex&#39;</span><span class="p">):</span> <span class="s1">&#39;Regex to match filename&#39;</span><span class="p">,</span>
-    <span class="p">(</span><span class="s1">&#39;-e&#39;</span><span class="p">,</span> <span class="s1">&#39;--exclude&#39;</span><span class="p">):</span> <span class="s1">&#39;Regex to exclude filename&#39;</span><span class="p">,</span>
-    <span class="p">(</span><span class="s1">&#39;-q&#39;</span><span class="p">,</span> <span class="s1">&#39;--quiet&#39;</span><span class="p">):</span> <span class="s1">&#39;Do not print processing info&#39;</span><span class="p">,</span>
-    <span class="p">(</span><span class="s1">&#39;-v&#39;</span><span class="p">,</span> <span class="s1">&#39;--verbose&#39;</span><span class="p">):</span> <span class="s1">&#39;Print debug info&#39;</span>
-<span class="p">}</span>
-<span class="n">ARG_TEMPLATE</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="p">):</span> <span class="p">{</span><span class="s1">&#39;nargs&#39;</span><span class="p">:</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="s1">&#39;.&#39;</span><span class="p">},</span>
-    <span class="p">(</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="s1">&#39;--output&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
-    <span class="p">(</span><span class="s1">&#39;-f&#39;</span><span class="p">,</span> <span class="s1">&#39;--force&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;store_true&#39;</span><span class="p">},</span>
-    <span class="p">(</span><span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="s1">&#39;--regex&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
-    <span class="p">(</span><span class="s1">&#39;-e&#39;</span><span class="p">,</span> <span class="s1">&#39;--exclude&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
-    <span class="p">(</span><span class="s1">&#39;-q&#39;</span><span class="p">,</span> <span class="s1">&#39;--quiet&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;store_true&#39;</span><span class="p">},</span>
-    <span class="p">(</span><span class="s1">&#39;-v&#39;</span><span class="p">,</span> <span class="s1">&#39;--verbose&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;store_true&#39;</span><span class="p">}</span>
-<span class="p">}</span>
-<span class="n">UNITS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;KB&#39;</span><span class="p">,</span> <span class="s1">&#39;MB&#39;</span><span class="p">,</span> <span class="s1">&#39;GB&#39;</span><span class="p">,</span> <span class="s1">&#39;TB&#39;</span><span class="p">]</span>
-
-
-<span class="k">def</span> <span class="nf">unpad</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">bytes</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; 清除数据后面填充的字节块 &#39;&#39;&#39;</span>
-    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span> <span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)</span> <span class="k">else</span> <span class="n">unpad</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
-
-
-<span class="k">def</span> <span class="nf">aes_decrypt</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; AES解密 &#39;&#39;&#39;</span>
-    <span class="k">return</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_ECB</span><span class="p">)</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">bytes</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; 利用整数运算进行bytes对象的快速异或 &#39;&#39;&#39;</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="n">num</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">([</span><span class="n">num</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
-    <span class="n">b2i</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;little&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">b2i</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">^</span> <span class="n">b2i</span><span class="p">(</span><span class="n">num</span><span class="p">))</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="s1">&#39;little&#39;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; 包含整型溢出的相加 &#39;&#39;&#39;</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span>
-
-
-<span class="k">def</span> <span class="nf">build_keybox</span><span class="p">(</span><span class="n">decrypted</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; 构造解密文件的函数 &#39;&#39;&#39;</span>
-    <span class="n">bytemap</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">))</span>
-    <span class="n">b</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">):</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">bytemap</span><span class="p">[</span><span class="n">_</span><span class="p">],</span> <span class="n">b</span> <span class="o">+</span> <span class="n">decrypted</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">decrypted</span><span class="p">)</span>
-        <span class="n">bytemap</span><span class="p">[</span><span class="n">_</span><span class="p">],</span> <span class="n">bytemap</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="n">bytemap</span><span class="p">[</span><span class="n">b</span><span class="p">],</span> <span class="n">bytemap</span><span class="p">[</span><span class="n">_</span><span class="p">]</span>
-    <span class="n">keybox</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span>
-        <span class="n">bytemap</span><span class="p">[</span><span class="n">add</span><span class="p">(</span><span class="n">bytemap</span><span class="p">[</span><span class="n">add</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">i</span><span class="p">)],</span> <span class="n">_</span><span class="p">)]</span>
-        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bytemap</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">bytemap</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">apply_keybox</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="n">keybox</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">//</span> <span class="mi">256</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))[:</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)])</span>
-    <span class="k">return</span> <span class="n">apply_keybox</span>
-
-
-<span class="k">def</span> <span class="nf">read_chunk</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; 分块读取文件，前4字节表示块长度 &#39;&#39;&#39;</span>
-    <span class="n">chunk_size</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="s1">&#39;little&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">ncm_decrypt</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; 解密ncm文件 &#39;&#39;&#39;</span>
-    <span class="n">core_key_chunk</span> <span class="o">=</span> <span class="n">read_chunk</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="n">decrypted</span> <span class="o">=</span> <span class="n">unpad</span><span class="p">(</span><span class="n">aes_decrypt</span><span class="p">(</span><span class="n">NCM_COREKEY</span><span class="p">,</span> <span class="n">xor</span><span class="p">(</span><span class="n">core_key_chunk</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))[</span><span class="mi">17</span><span class="p">:]</span>
-    <span class="n">keybox</span> <span class="o">=</span> <span class="n">build_keybox</span><span class="p">(</span><span class="n">decrypted</span><span class="p">)</span>  <span class="c1"># 用于文件主体的解密</span>
-
-    <span class="n">b64_chunk</span> <span class="o">=</span> <span class="n">xor</span><span class="p">(</span><span class="n">read_chunk</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="mi">99</span><span class="p">)</span>  <span class="c1"># 元数据部分</span>
-    <span class="n">b64_chunk_data</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">b64_chunk</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="n">mdc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">unpad</span><span class="p">(</span><span class="n">aes_decrypt</span><span class="p">(</span><span class="n">NCM_SIDEKEY</span><span class="p">,</span> <span class="n">b64_chunk_data</span><span class="p">)[</span><span class="mi">6</span><span class="p">:]))</span>
-    <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{musicName}</span><span class="s1"> - </span><span class="si">{artist[0][0]}</span><span class="s1">.</span><span class="si">{format}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">mdc</span><span class="p">)</span>
-
-    <span class="n">data</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">_</span> <span class="o">=</span> <span class="n">read_chunk</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># 专辑封面</span>
-    <span class="n">w</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">()</span>
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">chunk</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">32768</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">chunk</span><span class="p">:</span>
-            <span class="k">break</span>
-        <span class="n">w</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">keybox</span><span class="p">(</span><span class="n">chunk</span><span class="p">))</span>
-
-    <span class="k">return</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">process_file</span><span class="p">(</span><span class="n">src</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">!=</span> <span class="n">NCM_FILEHEAD</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Not a NCM file&#39;</span><span class="p">)</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">fn</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">ncm_decrypt</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()))</span>
-    <span class="n">dest</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">fn</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span>
-        <span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\/:*?&quot;&lt;&gt;|&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span> <span class="o">*</span> <span class="mi">9</span><span class="p">)))</span>
-    <span class="k">if</span> <span class="n">force</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">dest</span><span class="p">):</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;    Processing </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">dest</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;    Skipping </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
-    <span class="k">return</span> <span class="mi">0</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;NCM converter&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">args</span><span class="p">,</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">ARG_HELP</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">ARG_TEMPLATE</span><span class="p">[</span><span class="n">args</span><span class="p">],</span> <span class="n">help</span><span class="o">=</span><span class="n">msg</span><span class="p">)</span>
-    <span class="n">ns</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-
-    <span class="n">levels</span> <span class="o">=</span> <span class="p">[</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span> <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span> <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">]</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
-        <span class="n">level</span><span class="o">=</span><span class="n">levels</span><span class="p">[</span><span class="n">ns</span><span class="o">.</span><span class="n">quiet</span> <span class="o">+</span> <span class="n">ns</span><span class="o">.</span><span class="n">verbose</span> <span class="o">*</span> <span class="mi">2</span><span class="p">],</span>
-        <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Path:&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">ns</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
-        <span class="n">abspath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">abspath</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="ow">or</span> <span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">abspath</span><span class="p">):</span>
-            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;    </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;    </span><span class="si">%s</span><span class="s1"> (</span><span class="si">%s</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">abspath</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Output: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ns</span><span class="o">.</span><span class="n">output</span> <span class="ow">or</span> <span class="s1">&#39;Same as input&#39;</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Force: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ns</span><span class="o">.</span><span class="n">force</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Regex: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ns</span><span class="o">.</span><span class="n">regex</span> <span class="ow">or</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Exclude: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ns</span><span class="o">.</span><span class="n">exclude</span> <span class="ow">or</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Logging level: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLevelName</span><span class="p">(</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span><span class="o">.</span><span class="n">level</span><span class="p">))</span>
-
-    <span class="n">processed</span><span class="p">,</span> <span class="n">skipped</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-
-    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">ns</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-            <span class="n">targets</span> <span class="o">=</span> <span class="p">[</span>
-                <span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">files</span>
-                <span class="k">if</span> <span class="nb">all</span><span class="p">([</span>
-                    <span class="n">_</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.ncm&#39;</span><span class="p">),</span>
-                    <span class="ow">not</span> <span class="n">ns</span><span class="o">.</span><span class="n">regex</span> <span class="ow">or</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">ns</span><span class="o">.</span><span class="n">regex</span><span class="p">,</span> <span class="n">_</span><span class="p">),</span>
-                    <span class="ow">not</span> <span class="n">ns</span><span class="o">.</span><span class="n">exclude</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">ns</span><span class="o">.</span><span class="n">exclude</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span>
-                <span class="p">])</span>
-            <span class="p">]</span>
-            <span class="k">if</span> <span class="n">targets</span><span class="p">:</span>
-                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Entering </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">root</span><span class="p">)</span>
-                <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">targets</span><span class="p">:</span>
-                    <span class="k">try</span><span class="p">:</span>
-                        <span class="n">output_size</span> <span class="o">=</span> <span class="n">process_file</span><span class="p">(</span>
-                            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="p">),</span> <span class="n">ns</span><span class="o">.</span><span class="n">output</span> <span class="ow">or</span> <span class="n">root</span><span class="p">,</span> <span class="n">ns</span><span class="o">.</span><span class="n">force</span>
-                        <span class="p">)</span>
-                        <span class="n">size</span> <span class="o">+=</span> <span class="n">output_size</span>
-                        <span class="k">if</span> <span class="n">output_size</span><span class="p">:</span>
-                            <span class="n">processed</span> <span class="o">+=</span> <span class="mi">1</span>
-                        <span class="k">else</span><span class="p">:</span>
-                            <span class="n">skipped</span> <span class="o">+=</span> <span class="mi">1</span>
-                    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-                        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;Error processing </span><span class="si">%s</span><span class="s1">: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Leaving </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">root</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">size</span><span class="p">:</span>
-        <span class="n">size_unit</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">UNITS</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">size_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">size</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">size_unit</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}{</span><span class="n">UNITS</span><span class="p">[</span><span class="n">size_unit</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">size_str</span> <span class="o">=</span> <span class="s1">&#39;0B&#39;</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;No files processed&#39;</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-        <span class="s1">&#39;Processed </span><span class="si">%d</span><span class="s1"> files, skipped </span><span class="si">%d</span><span class="s1"> files, total size </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
-        <span class="n">processed</span><span class="p">,</span> <span class="n">skipped</span><span class="p">,</span> <span class="n">size_str</span>
-    <span class="p">)</span>
-</code></pre></div>
+<h1 id="rust">Rust<a class="headerlink" href="#rust" title="Permanent link">&para;</a></h1>
+<p>记录Rust的学习。</p>
+<ul>
+<li><a href="0/">Introduction</a></li>
+</ul>
 
 
 
@@ -3804,7 +3516,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-10-28T17:14:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-10-28</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-01-15T16:41:04+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-15</span>
   </span>
 
     
@@ -3814,7 +3526,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-10-28T17:14:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-10-28</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-01-15T12:59:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-15</span>
   </span>
 
     
@@ -3823,6 +3535,8 @@
   </aside>
 
 
+
+  
 
 
 <h2 id="__comments">评论</h2>
@@ -3971,20 +3685,20 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="../../../../js/timeago.min.js"></script>
+        <script src="../../js/timeago.min.js"></script>
       
-        <script src="../../../../js/timeago_mkdocs_material.js"></script>
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
-        <script src="../../../../js/loadColor.js"></script>
+        <script src="../../js/loadColor.js"></script>
       
-        <script src="../../../../js/love.js"></script>
+        <script src="../../js/love.js"></script>
       
-        <script src="../../../../js/katex.js"></script>
+        <script src="../../js/katex.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
       
