@@ -2,7 +2,11 @@ nav:
   - index.md
   - SVG动画: svg.md
   - Leetcode题解: leetcode
-  - Python: python
+  - Python:
+    - 语法: python
+    - matplotlib: matplotlib
+  - Rust:
+    - Learning: rust
   - 机器学习: machine-learning
   - 数据结构: dsa
   - 系统配置: configuration
