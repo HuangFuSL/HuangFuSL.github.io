@@ -17,5 +17,5 @@ def define_env(env: plugin.MacrosPlugin):
     env.macro(metadata.build_timeline)
     env.macro(metadata.build_recent)
     env.macro(metadata.build_todo)
-    env.macro(coding.read_from_file)
+    env.macro(coding.read_code_from_file)
     env.filter(len)

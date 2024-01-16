@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-def read_from_file(file_name: str, language: str | None = None) -> str:
+def read_code_from_file(file_name: str, language: str | None = None) -> str:
     ''' Read from file, return a link and code block '''
     if language is None:
         language = file_name.split('.')[-1]
