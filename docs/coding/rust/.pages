@@ -2,3 +2,4 @@ nav:
   - index.md
   - 0. Introduction: 0.md
   - 1. Variables: 1.md
+  - 2. Control Flows: 2.md
