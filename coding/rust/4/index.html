@@ -6,15 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Casual inference is about studying the consequence of doing one thing vs another.">
+        <meta name="description" content="在Rust中，对象生命周期和所有权是紧密相关的。所有权规则是Rust的核心特性，也是Rust与其他语言最大的不同之处。">
       
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../3/">
       
       
-        <link rel="next" href="../chapter-1/">
+        <link rel="next" href="../../machine-learning/linear-models/">
       
       
       <link rel="icon" href="../../../img/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>因果推断 - HuangFuSL's Blog</title>
+        <title>4. Lifetimes - HuangFuSL's Blog</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#lifetimes" class="md-skip">
           跳转至
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              因果推断
+              4. Lifetimes
             
           </span>
         </div>
@@ -281,13 +281,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../math/" class="md-tabs__link">
           
   
     
@@ -303,11 +301,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../coding/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -1159,8 +1159,6 @@
       
   
   
-    
-  
   
   
     
@@ -1191,17 +1189,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../math/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1218,7 +1216,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             课程笔记
@@ -1269,7 +1267,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../discrete-mathematics/" class="md-nav__link ">
+            <a href="../../../math/discrete-mathematics/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1302,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../discrete-mathematics/chapter-1/" class="md-nav__link">
+      <a href="../../../math/discrete-mathematics/chapter-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1323,7 +1321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../discrete-mathematics/chapter-2/" class="md-nav__link">
+      <a href="../../../math/discrete-mathematics/chapter-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1344,7 +1342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../discrete-mathematics/chapter-3/" class="md-nav__link">
+      <a href="../../../math/discrete-mathematics/chapter-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1365,7 +1363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../discrete-mathematics/chapter-4/" class="md-nav__link">
+      <a href="../../../math/discrete-mathematics/chapter-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1386,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../discrete-mathematics/chapter-5/" class="md-nav__link">
+      <a href="../../../math/discrete-mathematics/chapter-5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1407,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../discrete-mathematics/chapter-9/" class="md-nav__link">
+      <a href="../../../math/discrete-mathematics/chapter-9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1467,7 +1465,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../operating-research/" class="md-nav__link ">
+            <a href="../../../math/operating-research/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1500,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating-research/chapter-1/" class="md-nav__link">
+      <a href="../../../math/operating-research/chapter-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1521,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating-research/chapter-2/" class="md-nav__link">
+      <a href="../../../math/operating-research/chapter-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1542,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating-research/chapter-3/" class="md-nav__link">
+      <a href="../../../math/operating-research/chapter-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1563,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operating-research/chapter-4/" class="md-nav__link">
+      <a href="../../../math/operating-research/chapter-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1617,7 +1615,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../queue-theory/" class="md-nav__link ">
+            <a href="../../../math/queue-theory/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1650,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../queue-theory/chapter-12/" class="md-nav__link">
+      <a href="../../../math/queue-theory/chapter-12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1712,7 +1710,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../operations-mamagement/" class="md-nav__link ">
+            <a href="../../../math/operations-mamagement/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1745,7 +1743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operations-mamagement/forecast/" class="md-nav__link">
+      <a href="../../../math/operations-mamagement/forecast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1766,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operations-mamagement/fdm/" class="md-nav__link">
+      <a href="../../../math/operations-mamagement/fdm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1787,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operations-mamagement/aggregrate-planning/" class="md-nav__link">
+      <a href="../../../math/operations-mamagement/aggregrate-planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1808,7 +1806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operations-mamagement/inventory-control-deterministic-demand/" class="md-nav__link">
+      <a href="../../../math/operations-mamagement/inventory-control-deterministic-demand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1829,7 +1827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
+      <a href="../../../math/operations-mamagement/inventory-control-random-demand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1887,7 +1885,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../random-process/" class="md-nav__link ">
+            <a href="../../../math/random-process/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1920,7 +1918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../random-process/basics/" class="md-nav__link">
+      <a href="../../../math/random-process/basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1941,7 +1939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../random-process/poisson/" class="md-nav__link">
+      <a href="../../../math/random-process/poisson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1962,7 +1960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../random-process/notations/" class="md-nav__link">
+      <a href="../../../math/random-process/notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2024,7 +2022,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../convex-optimization/" class="md-nav__link ">
+            <a href="../../../math/convex-optimization/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2057,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../convex-optimization/convex-set/" class="md-nav__link">
+      <a href="../../../math/convex-optimization/convex-set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2078,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../convex-optimization/convex-function/" class="md-nav__link">
+      <a href="../../../math/convex-optimization/convex-function/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2099,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../convex-optimization/convex-optimization/" class="md-nav__link">
+      <a href="../../../math/convex-optimization/convex-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2120,7 +2118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../convex-optimization/duality/" class="md-nav__link">
+      <a href="../../../math/convex-optimization/duality/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2141,7 +2139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../convex-optimization/unconstrained-optimization/" class="md-nav__link">
+      <a href="../../../math/convex-optimization/unconstrained-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2167,8 +2165,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2187,17 +2183,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../math/causal-inference/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2214,7 +2210,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_8">
             <span class="md-nav__icon md-icon"></span>
             因果推断
@@ -2262,7 +2258,7 @@
         
   
   
-    <a href="../chapter-1/" class="md-nav__link">
+    <a href="../../../math/causal-inference/chapter-1/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -2301,6 +2297,8 @@
       
   
   
+    
+  
   
   
     
@@ -2331,17 +2329,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../coding/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2358,7 +2356,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             写代码
@@ -2374,7 +2372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/svg/" class="md-nav__link">
+      <a href="../../svg/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2422,7 +2420,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../coding/leetcode/" class="md-nav__link ">
+            <a href="../../leetcode/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2455,7 +2453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/leetcode/tags/" class="md-nav__link">
+      <a href="../../leetcode/tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2527,7 +2525,7 @@
     
   
   
-    <a href="../../../coding/leetcode/1/" class="md-nav__link">
+    <a href="../../leetcode/1/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -2646,7 +2644,7 @@
         
   
   
-    <a href="../../../coding/python/" class="md-nav__link">
+    <a href="../../python/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -2691,7 +2689,7 @@
         
   
   
-    <a href="../../../coding/matplotlib/" class="md-nav__link">
+    <a href="../../matplotlib/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -2723,8 +2721,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2737,12 +2737,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="">
@@ -2756,7 +2756,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_5">
             <span class="md-nav__icon md-icon"></span>
             Rust
@@ -2766,6 +2766,8 @@
               
                 
   
+  
+    
   
   
   
@@ -2790,28 +2792,216 @@
     
     
     
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../coding/rust/" class="md-nav__link">
-      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Learning
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_5_1" id="__nav_5_5_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Introduction
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Control Flows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Complex Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4. Lifetimes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4. Lifetimes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      所有权（Ownership）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#borrowing" class="md-nav__link">
+    <span class="md-ellipsis">
+      引用（Borrowing）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      生命周期
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -2879,7 +3069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/machine-learning/linear-models/" class="md-nav__link">
+      <a href="../../machine-learning/linear-models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2900,7 +3090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/machine-learning/decision-tree/" class="md-nav__link">
+      <a href="../../machine-learning/decision-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2954,7 +3144,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../coding/dsa/" class="md-nav__link ">
+            <a href="../../dsa/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2987,7 +3177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/dsa/vector-and-list/" class="md-nav__link">
+      <a href="../../dsa/vector-and-list/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3051,7 +3241,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../coding/configuration/" class="md-nav__link ">
+            <a href="../../configuration/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3084,7 +3274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/configuration/apt-get/" class="md-nav__link">
+      <a href="../../configuration/apt-get/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3105,7 +3295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/configuration/docker/" class="md-nav__link">
+      <a href="../../configuration/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3126,7 +3316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/configuration/ssh/" class="md-nav__link">
+      <a href="../../configuration/ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3147,7 +3337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/configuration/update-alternatives/" class="md-nav__link">
+      <a href="../../configuration/update-alternatives/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3168,7 +3358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/configuration/vim/" class="md-nav__link">
+      <a href="../../configuration/vim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3189,7 +3379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/configuration/nginx-rtmp/" class="md-nav__link">
+      <a href="../../configuration/nginx-rtmp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3449,92 +3639,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#potential-outcome-framework" class="md-nav__link">
+  <a href="#ownership" class="md-nav__link">
     <span class="md-ellipsis">
-      Potential Outcome Framework
+      所有权（Ownership）
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Potential Outcome Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      框架设定
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      混淆因子
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      实证研究
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#causal-graph" class="md-nav__link">
+  <a href="#borrowing" class="md-nav__link">
     <span class="md-ellipsis">
-      Causal Graph
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Causal Graph">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#d-" class="md-nav__link">
-    <span class="md-ellipsis">
-      d-分割
+      引用（Borrowing）
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      相关性与因果性的路径
+      生命周期
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="相关性与因果性的路径">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#confounding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Confounding 与后门调整
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3559,259 +3686,381 @@
   
 
 
-<h1 id="_1">因果推断<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>Casual inference is about studying the consequence of doing one thing vs another.</p>
-</blockquote>
-<div class="admonition theorem">
-<p class="admonition-title">Simpson’s Paradox</p>
-<p>某个统计关联，可能在所有子群体上的效果都是相反的。</p>
-<blockquote>
-<p>A statistical association that holds for the entire population can be
-reversed in every subpopulation.</p>
-</blockquote>
-<p><img src="../imgs/casual-inference-1-1.svg" alt="" class="latex" /></p>
-</div>
-<div class="admonition theorem">
-<p class="admonition-title">Berkson’s Paradox</p>
-<blockquote>
-<p>Variables that have no relationships can appear to have strong
-associations in a selected subpopulation.</p>
-</blockquote>
-</div>
-<p>因果推断有两个主要的研究框架，即 Potential outcome framework 和 Causal graph 。</p>
-<h2 id="potential-outcome-framework">Potential Outcome Framework<a class="headerlink" href="#potential-outcome-framework" title="Permanent link">&para;</a></h2>
-<h3 id="_2">框架设定<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h1 id="lifetimes">Lifetimes<a class="headerlink" href="#lifetimes" title="Permanent link">&para;</a></h1>
+<p>在Rust中，对象生命周期和所有权是紧密相关的。所有权规则是Rust的核心特性，也是Rust与其他语言最大的不同之处。</p>
+<h2 id="ownership">所有权（Ownership）<a class="headerlink" href="#ownership" title="Permanent link">&para;</a></h2>
+<p>每一块内存数据都和一个变量名绑定，这个变量名就是这块内存数据的所有者。当所有者超出作用域时，这块内存数据就会被释放。在本节中，“变量”和“绑定”都是指通过<code>let</code>关键字声明的变量。</p>
+<p>当使用<code>=</code>将一个变量赋值给另一个变量，或是将变量作为函数参数传递时，所有权会发生转移，此时有两种可能：</p>
 <ul>
-<li>Unit of analysis：不同时间下的同一个个体应当看作不同的个体</li>
-<li>Treatment <span class="arithmatex">\(D\)</span>：通常划分为实验组（<span class="arithmatex">\(D=1\)</span>）与对照组（<span class="arithmatex">\(D=0\)</span>），但<span class="arithmatex">\(D\)</span>也可以取多值或连续</li>
-<li>Potential outcome <span class="arithmatex">\(Y(d)\)</span>：当干预水平为<span class="arithmatex">\(d\)</span>时<strong>应当</strong>出现的结果。</li>
-<li>Counterfactual outcome：当干预水平为<span class="arithmatex">\(D\)</span>时所有<span class="arithmatex">\(d\not = D\)</span>的结果——存在但无法观测到</li>
-<li>Casual effect：比较两个平行结果之间的差异，<span class="arithmatex">\(Y(1) - Y(0)\)</span></li>
+<li>值拷贝：原来的内存数据会被复制一份给新的变量，两个变量名绑定的内存数据不同。</li>
+<li>值移动：原来的内存数据会被重新绑定给新的变量，此时不能再通过原来的变量名访问内存数据。</li>
 </ul>
-<p>当一个个体接收到<span class="arithmatex">\(d=D\)</span>之后，其干预状态就不会再改变。因此不可能观测到一个个体所有可能出现的干预结果。</p>
-<div class="admonition theorem">
-<p class="admonition-title">SUTVA assumption</p>
-<p>假设个体<span class="arithmatex">\(i\)</span>的干预状态<span class="arithmatex">\(D_i\)</span>、干预和不干预的效果<span class="arithmatex">\(Y_i(0), Y_i(1)\)</span>独立同分布，即</p>
-<div class="arithmatex">\[
-\{D_i, Y_i(0), Y_i(1)\}\sim\{D, Y(0), Y(1)\}
-\]</div>
-<p>同时假设</p>
+<p>默认情况下，Rust会采取值移动的方式进行赋值，除非对象的类型实现了<code>Copy</code> trait。大多数基本类型都实现了<code>Copy</code> trait。</p>
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span><span class="w"> </span><span class="c1">// vec is not a primitive type, and it does not implement Copy trait</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?} {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// Error; use of moved value: `a`</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="borrowing">引用（Borrowing）<a class="headerlink" href="#borrowing" title="Permanent link">&para;</a></h2>
+<p>在Rust中，变量的引用有两种，即只读引用（<code>&amp;T</code>）和可变引用（<code>&amp;mut T</code>）。只读引用和可变引用都是指向原始变量的指针，但只读引用不允许修改原始变量的值，而可变引用允许修改原始变量的值。可变引用只能指向可变变量。需要使用解引用运算符<code>*</code>来访问引用指向的值。</p>
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">const_var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">mutable_ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">const_var</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// error[E0596]: cannot borrow `const_var` as mutable, as it is not declared as mutable</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>引用的生命周期是从引用声明开始到引用最后一次使用结束。关于引用的使用有如下限制：</p>
 <ol>
-<li>每个个体的结果不受到其他个体干预水平的影响（不存在个体之间的相互影响，个体的结果只受干预水平的影响）</li>
-<li>不存在干预水平的隐藏状态（即，每个干预状态都是原子的，不可以进一步划分）</li>
-</ol>
-</div>
-<p>考虑总体的期望干预效果（ Average Treatment Effect, ATE）</p>
-<div class="arithmatex">\[
-\tau = \mathbb E[Y(1) - Y(0)]
-\]</div>
-<p>由于对于个体<span class="arithmatex">\(i\)</span>，无法同时观测<span class="arithmatex">\(Y_i(1), Y_i(0)\)</span>，因此<span class="arithmatex">\(\tau\)</span>的确切数值同样无法观测。</p>
-<div class="arithmatex">\[
-\begin{aligned}
-    \hat\tau &amp;= \frac{1}{n_1} \sum_{i;D_i = 1}Y_i - \frac{1}{n_0} \sum_{i;D_i = 0}Y_i \\
-    &amp;= \mathbb E[Y(1) | D = 1] - \mathbb E[Y(0) | D = 0]
-\end{aligned}
-\]</div>
-<p>需要考虑<span class="arithmatex">\(D\)</span>的分布，即实验组与对照组如何产生，或<span class="arithmatex">\(Y, D\)</span>的独立性。</p>
-<p>当<span class="arithmatex">\(Y, D\)</span>满足</p>
-<div class="arithmatex">\[
-(Y(0), Y(1))\perp D
-\label{1}
-\]</div>
-<p>时，有<span class="arithmatex">\(\hat\tau = \tau\)</span></p>
-<h3 id="_3">混淆因子<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="admonition theorem">
-<p>考虑如下场景：</p>
-<ol>
-<li>一群被试随机接受药物试验</li>
-<li>被试中症状比较严重的个体接受药物实验</li>
-</ol>
-</div>
-<ol>
-<li>随机试验指分配机制由研究者可控。如按照<span class="arithmatex">\(p = 0.5\)</span>的概率进行伯努利实验随机分配，则<span class="arithmatex">\((Y(1)， Y(0))\perp D\)</span>，此时有<span class="arithmatex">\(\hat\tau = \tau\)</span></li>
-<li>观测研究指分配机制不由研究者控制。如被试根据个体感受自行决定吃药。此时存在（可以观测到的）混淆因子<span class="arithmatex">\(X\)</span></li>
-</ol>
-<div class="admonition definition">
-<p class="admonition-title">混淆因子</p>
-<p>变量<span class="arithmatex">\(X\)</span>是混淆因子，如果：</p>
-<ol>
-<li><span class="arithmatex">\(X\)</span>会影响分配，即<span class="arithmatex">\(X\not \perp D\)</span>，或</li>
-<li><span class="arithmatex">\(X\)</span>会影响结果，即<span class="arithmatex">\(X\not \perp (Y(1)， Y(0))\)</span></li>
-</ol>
-<p>通常将可观测到的混淆因子记为<span class="arithmatex">\(X\)</span>，不能观测到的混淆因子记为<span class="arithmatex">\(U\)</span>。</p>
-</div>
-<p>因此，当存在混淆因子时，<span class="arithmatex">\(\eqref{1}\)</span>不再成立，其中的<span class="arithmatex">\(D\)</span>变为<span class="arithmatex">\(D|X\)</span></p>
-<p>当所有的混淆因子都被观测到，则可以适用 unconfoundedness assumption</p>
-<div class="admonition theorem">
-<p class="admonition-title">Unconfoundedness assumption</p>
-<p>假设成立时，有</p>
-<div class="arithmatex">\[
-(Y(1), Y(0)) \perp D|X
-\]</div>
-<p>控制混淆因子，此时有</p>
-<div class="arithmatex">\[\begin{aligned}
-    &amp; \mathbb E [\mathbb E[Y | D = 1, X] - \mathbb E[Y | D = 0, X]] \\
-    =&amp; \mathbb E [\mathbb E[Y(1) | D = 1, X] - \mathbb E[Y(0) | D = 0, X]] \\
-    =&amp; \mathbb E [\mathbb E[Y(1) | X] - \mathbb E[Y(0) | X]] \\
-    =&amp; \mathbb E [\mathbb E[Y(1) - Y(0) | X]] \\
-    =&amp; \mathbb E[Y(1) - Y(0)]
-\end{aligned}
-\]</div>
-</div>
-<p>但实际上，不可能观测到所有的混淆因子。此时</p>
-<div class="arithmatex">\[
-\begin{aligned}
-    &amp; \bbE [Y | D = 1] - \bbE [Y| D = 0] \\
-    =&amp; \bbE[\bbE[Y | D = 1, X] | D = 1] - \bbE[\bbE[Y | D = 0, X] | D = 0]
-\end{aligned}
-\]</div>
-<p>但实际上，<span class="arithmatex">\(\bbP(X|D = 1) \not = \bbP(X|D = 0)\)</span>，因此造成偏差。</p>
-<div class="admonition theorem">
-<p class="admonition-title">干预与条件</p>
-</div>
-<ul>
-<li><span class="arithmatex">\(\bbE(Y|D = 0)\)</span>反映条件，作用在群体<span class="arithmatex">\(D = 0\)</span>上。</li>
-<li><span class="arithmatex">\(\bbE(Y(0))\)</span>反映干预，作用在全体上。</li>
-</ul>
-<p>当<span class="arithmatex">\((Y(1), Y(0))\perp D | X\)</span>成立时，有</p>
-<div class="arithmatex">\[
-\bbE(Y(1) | X) = \bbE(Y | D = 1, X)
-\]</div>
-<p>前提是， overlap assumption 成立。</p>
-<div class="admonition definition">
-<p class="admonition-title">Overlap assumption</p>
-<p>对于所有的<span class="arithmatex">\(X\)</span>，<span class="arithmatex">\(Y(0), Y(1)\)</span>必须都存在，即</p>
-<div class="arithmatex">\[
-\bbP(D=1|X)\in (0, 1)
-\]</div>
-<p>定义<span class="arithmatex">\(\bbP(D=1|X)\in (0, 1)\)</span>为propensity score。</p>
-</div>
-<h3 id="_4">实证研究<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>实际上， unconfoundedness 和 overlap 假设均不一定成立，因为有许多隐藏的混淆因子。</p>
-<p>对于前文中的 Simpson’s Paradox ，出现反直觉现象的原因在于，性别是一个混淆因子：</p>
-<ol>
-<li>女性的被试比例更高（<span class="arithmatex">\(D\not\perp X\)</span>）</li>
-<li>女性整体的康复率更低（<span class="arithmatex">\(Y\not\perp X\)</span>）</li>
-</ol>
-<p>在实证研究中，往往还有研究者未能观测到的混淆因子。</p>
-<p>混淆因子既是障碍，也是工具。在理想化的统计推断中，相关性不能推出因果性。但在实证研究中，由于混淆因子的存在，使得我们可以区分相关性中的因果关系。</p>
-<div class="admonition theorem">
-<p class="admonition-title">一些衡量干预效果的指标（参数）</p>
-<p>ATE</p>
-<div class="arithmatex">\[
-\tau = \bbE[Y(1) - Y(0)]
-\]</div>
-<p>被试的 ATE</p>
-<div class="arithmatex">\[
-\tau_1 = \bbE[Y(1) - Y(0) | D = 1]
-\]</div>
-<p>条件 ATE（ CATE ）</p>
-<div class="arithmatex">\[
-\tau_C = \bbE[Y(1) - Y(0) | (D, X)\in \text{subgroup}]
-\]</div>
-<p>QTE（ Quantile treatment effect ）</p>
-<div class="arithmatex">\[
-\begin{gathered}
-    \text{QTE} = F_1^{-1}(\gamma) - F_0^{-1}(\gamma) \\
-    F_d^{-1}(\gamma) = \inf\{y|\bbP(Y(d)\leq y)\geq \gamma\}
-\end{gathered}
-\]</div>
-<p>Causal risk ratio（只适用于结果二分的情况）</p>
-<div class="arithmatex">\[
-\text{CRR} = \bbP(Y(1) = 1) / \bbP(Y(0) = 1)
-\]</div>
-</div>
-<p>以上这些参数都受到混淆变量（不一定能被观测到）的影响。相对应的，从实验结果的统计指标中，我们可以得到这些指标的一个估计。</p>
-<p>如对于 ATE 指标<span class="arithmatex">\(\tau = \bbE[Y(1) - Y(0)]\)</span>，<span class="arithmatex">\(\tilde \tau = \bbE[Y | D = 1] - \bbE[Y | D = 0]\)</span>就是<span class="arithmatex">\(\tau\)</span>的一个估计。</p>
-<p><span class="arithmatex">\(\tau\)</span>是一个因果参数，受到<span class="arithmatex">\(X, D, Y(0), Y(1)\)</span>的共同影响。<span class="arithmatex">\(\tilde\tau\)</span>是一个可以从统计数据中观测到的指标，受到<span class="arithmatex">\(X, D, Y\)</span>的共同影响。</p>
-<p>如果某个参数，可以从统计数据中观测到一个唯一的无偏估计，则称为 identifiable 。由于反事实的存在，我们只能观测到<span class="arithmatex">\(Y = Y(D)\)</span>，因此即使有无限多的数据集，也不一定能实现 identification 。在 unconfoundedness 假设成立的条件下，可以实现 identification 。</p>
-<p>因此，为了验证一个因果关系是否成立，我们需要两方面的信息</p>
-<ol>
-<li>充足的数据集以反映<span class="arithmatex">\(X, D, Y\)</span>的分布。</li>
-<li>关于<span class="arithmatex">\(X, D, Y(0), Y(1)\)</span>的一些假设，如随机试验假设或 unconfoundedness 假设。</li>
-</ol>
-<h2 id="causal-graph">Causal Graph<a class="headerlink" href="#causal-graph" title="Permanent link">&para;</a></h2>
-<p>一系列变量的因果关系可以构成因果图。因果图是一个有向无环图（ DAG ），其中的节点表示变量，每条边从父变量（节点）出发，指向子变量（节点）。</p>
-<ul>
-<li>相邻：如果两个节点之间有一条边，称两个节点<strong>相邻</strong></li>
-<li>（因果）路径：一系列相邻的节点组成一条<strong>路径</strong>（无视边的方向）</li>
-<li>有向路径：<strong>方向相同</strong>的一系列路径所连接的节点形成的路径</li>
-</ul>
-<p>路径有如下形式：</p>
-<ul>
-<li>链：<span class="arithmatex">\(A\ra B\ra C\)</span></li>
-<li>汇聚：<span class="arithmatex">\(A\ra B\la C\)</span></li>
-<li>分支：<span class="arithmatex">\(A\la B\ra C\)</span></li>
-</ul>
-<p>在因果图中，每个节点都是其子节点（后代）的直接原因（祖先）（即，不存在中间的变量影响子节点）。</p>
-<p>对于如下图所示的因果图</p>
-<p><img src="../imgs/casual-inference-2-1.svg" alt="" class="latex" /></p>
-<ol>
-<li><span class="arithmatex">\(X_1\)</span>影响变量<span class="arithmatex">\(X_4\)</span>，但不是直接影响。</li>
 <li>
-<p>如果固定<span class="arithmatex">\(X_3\)</span>，则<span class="arithmatex">\(X_1\)</span>的变化不会影响<span class="arithmatex">\(X_4\)</span>，即</p>
-<div class="arithmatex">\[
-X_4\perp (X_1, X_2) | X_3
-\]</div>
+<p>在引用的生命周期内，可变引用和只读引用不能同时存在。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">错误</label><label for="__tabbed_1_2">正确</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">shared_borrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">owner</span><span class="p">;</span><span class="w"> </span><span class="c1">// share_borrow starts here</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">mutable_borrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="p">;</span><span class="w"> </span><span class="c1">// mutable_borrow starts here</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mutable_borrow</span><span class="p">);</span><span class="w"> </span><span class="c1">// Error</span>
+<span class="w">    </span><span class="c1">// mutable_borrow ends here</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">shared_borrow</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// share_borrow ends here</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">shared_borrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">owner</span><span class="p">;</span><span class="w"> </span><span class="c1">// shared_borrow starts here</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">shared_borrow</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// shared_borrow ends here</span>
+<span class="w">    </span><span class="c1">// mutable_borrow starts here</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">mutable_borrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="p">;</span><span class="w"> </span><span class="c1">// mutable_borrow starts here</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mutable_borrow</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// mutable_borrow ends here</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </li>
 <li>
-<p>但<span class="arithmatex">\(X_4\)</span>仍然与<span class="arithmatex">\(X_5\)</span>有关。</p>
+<p>在可变引用的生命周期内，不能对同一变量声明新的可变引用。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">错误</label><label for="__tabbed_2_2">正确</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">mutable_borrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">another_mutable_borrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="p">;</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{} {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mutable_borrow</span><span class="p">,</span><span class="w"> </span><span class="n">another_mutable_borrow</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// error[E0499]: cannot borrow `owner` as mutable more than once at a time</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">mutable_borrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="p">;</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mutable_borrow</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">another_mutable_borrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="p">;</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">another_mutable_borrow</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>在可变引用的生命周期内，不能访问原始变量或对原始变量进行赋值。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">错误</label><label for="__tabbed_3_2">正确</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">mutable_borrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="p">;</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">owner</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">*</span><span class="n">mutable_borrow</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// error[E0503]: cannot use `owner` because it was mutably borrowed</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">mutable_borrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">owner</span><span class="p">;</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">mutable_borrow</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">owner</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>可以用数据库中“共享锁”和“排他锁”的概念来理解只读引用和可变引用。只读引用相当于对原始变量加共享锁，可变引用相当于对原始变量加排他锁。对于同一块数据，共享锁可以同时存在，但排他锁只能有一个。</p>
+</li>
+<li>
+<p>引用的生命周期不能超过原始变量的生命周期。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">E0597: ... does not live long enough</label><label for="__tabbed_4_2">E0515: cannot return value referencing local variable ...</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="nc">Foo</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">x</span>: <span class="nb">Option</span><span class="o">&lt;&amp;&#39;</span><span class="na">a</span><span class="w"> </span><span class="kt">u32</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Foo</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span>: <span class="nb">None</span> <span class="p">};</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// Leaving the scope of y, y is dropped</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="c1">// error[E0597]: `y` does not live long enough</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">one</span><span class="p">(</span><span class="n">x</span>: <span class="kp">&amp;</span><span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="kt">i32</span> <span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">ret</span><span class="w"> </span><span class="c1">// error[E0515]: cannot return value referencing local variable `ret`</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// Leaving the scope of ret, ret is dropped</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">one</span><span class="p">(</span><span class="o">&amp;</span><span class="mi">5</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </li>
 </ol>
-<p>进一步地，我们不妨假设，如果控制了某个变量<span class="arithmatex">\(X_i\)</span>全部的直接祖先，则<span class="arithmatex">\(X_i\)</span>只与其后代有关（因果Markov假设）。</p>
-<div class="admonition theorem">
-<p class="admonition-title">Markov因子分解</p>
-<p>当Markov假设成立时，对于<span class="arithmatex">\(n\)</span>个变量<span class="arithmatex">\(X_1, \ldots, X_n\)</span>，有</p>
-<div class="arithmatex">\[
-\bbP(X_1, \ldots, X_n) = \prod_{i=1}^n \bbP(X_i | A_i)
-\]</div>
-<p>式中，<span class="arithmatex">\(A_i\)</span>为<span class="arithmatex">\(X_i\)</span>全部的祖先。</p>
+<h2 id="_1">生命周期<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>引用相当于指向一段内存空间的指针，在最后一次访问引用后，引用的生命周期就结束了，但在一些情况下需要继续保持引用的生命周期，比如在函数中返回引用。在这种情况下，需要使用引用标记来指定引用的生命周期。</p>
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">reference_to_nothing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dangle</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// error[E0106]: missing lifetime specifier</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">dangle</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="nb">String</span> <span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="o">&amp;</span><span class="n">s</span><span class="w"> </span><span class="c1">// The lifetime of s is over, so this reference is dangling</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>引用标记可以用于泛型参数、函数参数、函数返回值，而不能用于引用声明。有相同引用标记的引用的生命周期相同。<code>'static</code>是一个特殊引用标记，表示引用的生命周期是整个程序的生命周期，即引用指向的内存空间在程序结束时才会被释放。所有指向字符串字面量的引用都是<code>'static</code>类型。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">函数</label><label for="__tabbed_5_2">复杂对象</label><label for="__tabbed_5_3">Impl &amp; Trait</label><label for="__tabbed_5_4">泛型</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">function</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span> <span class="p">{}</span>
+<span class="k">fn</span> <span class="nf">function</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="k">fn</span> <span class="nf">function</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span> <span class="p">{}</span>
+<span class="k">fn</span> <span class="nf">function</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span><span class="p">,</span><span class="w"> </span><span class="n">y</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span> <span class="p">{}</span>
+<span class="k">fn</span> <span class="nf">function</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="p">,</span><span class="w"> </span><span class="o">&#39;</span><span class="na">b</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span><span class="p">,</span><span class="w"> </span><span class="n">y</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">b</span> <span class="kt">str</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span> <span class="p">{}</span>
+</code></pre></div>
 </div>
-<h3 id="d-">d-分割<a class="headerlink" href="#d-" title="Permanent link">&para;</a></h3>
-<p>对于有两个节点的因果图，<span class="arithmatex">\(X_1\la X_2\)</span>和<span class="arithmatex">\(X_1\ra X_2\)</span>是两个不同的因果关系，但在相关性上有相同的表现，无法区分。</p>
-<p>对于有三个节点的因果图：</p>
-<ul>
-<li><span class="arithmatex">\(X_1\ra X_2\ra X_3\)</span>和<span class="arithmatex">\(X_1\la X_2\ra X_3\)</span>是两个不同的因果关系，但它们都满足<span class="arithmatex">\(X_1\perp X_3 | X_2, X_1\not\perp X_3\)</span>，仍然无法区分。并且由于变量<span class="arithmatex">\(X_2\)</span>的存在，即使<span class="arithmatex">\(X_1, X_3\)</span>存在相关关系，也不能说明其存在直接或间接的因果关系。控制<span class="arithmatex">\(X_2\)</span>可以<strong>阻断</strong><span class="arithmatex">\(X_1, X_3\)</span>的因果链。</li>
-<li>对于<span class="arithmatex">\(\X_1\ra X_2\la X_3\)</span>，如果控制<span class="arithmatex">\(X_2\)</span>，则有<span class="arithmatex">\(X_1\not \perp X_3 | X_2\)</span>，但<span class="arithmatex">\(X_1\perp X_3\)</span>。<span class="arithmatex">\(X_2\)</span><strong>阻断了</strong><span class="arithmatex">\(X_1, X_3\)</span>的因果链。<ul>
-<li>如果有另一个变量<span class="arithmatex">\(X_4\)</span>满足<span class="arithmatex">\(X_2\ra X_4\)</span>，则控制<span class="arithmatex">\(X_4\)</span>也会使<span class="arithmatex">\(X_1, X_3\)</span>表现出相关，即<span class="arithmatex">\(X_1\not \perp X_3 | X_4\)</span>。</li>
-</ul>
-</li>
-</ul>
-<div class="admonition theorem">
-<p class="admonition-title">阻断因果链</p>
-<p>两个变量之间的路径如果满足下列之一，则因果关系不能通过这条路径（被阻断）。</p>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">enum</span> <span class="nc">Enum</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Variant1</span><span class="p">(</span><span class="o">&amp;&#39;</span><span class="na">a</span><span class="w"> </span><span class="kt">str</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Variant2</span><span class="p">(</span><span class="o">&amp;&#39;</span><span class="na">a</span><span class="w"> </span><span class="kt">str</span><span class="p">)</span><span class="w"> </span><span class="c1">// exist as long as parent object exists</span>
+<span class="p">}</span>
+<span class="k">struct</span> <span class="nc">Struct</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">field</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span> <span class="c1">// exist as long as parent object exists</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="nc">Struct</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">field</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span>
+<span class="p">}</span>
+<span class="k">trait</span><span class="w"> </span><span class="n">New</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">new</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">Self</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">impl</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="n">New</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Struct</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">new</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">Self</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Struct</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">field</span>: <span class="s">&quot;hello&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">function</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span>: <span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">for</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span>: <span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;&#39;</span><span class="na">a</span><span class="w"> </span><span class="kt">str</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span> <span class="p">{}</span>
+<span class="k">enum</span> <span class="nc">Enum</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">for</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span>: <span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;&#39;</span><span class="na">a</span><span class="w"> </span><span class="kt">str</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span> <span class="p">{</span><span class="w"> </span><span class="n">V</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<span class="k">struct</span> <span class="nc">Struct</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">for</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span>: <span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;&#39;</span><span class="na">a</span><span class="w"> </span><span class="kt">str</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span> <span class="p">{</span><span class="w"> </span><span class="n">field</span>: <span class="nc">T</span><span class="w"> </span><span class="p">}</span>
+<span class="k">impl</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Struct</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">for</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span>: <span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;&#39;</span><span class="na">a</span><span class="w"> </span><span class="kt">str</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span> <span class="p">{</span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">function</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="nc">F</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">&amp;</span><span class="bp">self</span><span class="p">.</span><span class="n">field</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>其中，<code>where for</code>有另一种写法</p>
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">function</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span>: <span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">T</span>: <span class="nc">for</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;&#39;</span><span class="na">a</span><span class="w"> </span><span class="kt">str</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span> <span class="p">{}</span>
+</code></pre></div>
+<p><code>for</code>对<code>T</code>进行了限制，表示<code>T</code>必须是一个函数，且这个函数的参数和生命周期必须和模板匹配。</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="nc">Closure</span><span class="o">&lt;</span><span class="n">F</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">data</span>: <span class="p">(</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="kt">u16</span><span class="p">),</span>
+<span class="w">    </span><span class="n">func</span>: <span class="nc">F</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">impl</span><span class="o">&lt;</span><span class="n">F</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Closure</span><span class="o">&lt;</span><span class="n">F</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="k">for</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="n">F</span>: <span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;&#39;</span><span class="na">a</span><span class="w"> </span><span class="p">(</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="kt">u16</span><span class="p">))</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">u8</span><span class="p">,</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">call</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="kt">u8</span> <span class="p">{</span>
+<span class="w">        </span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">func</span><span class="p">)(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">.</span><span class="n">data</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">do_it</span><span class="p">(</span><span class="n">data</span>: <span class="kp">&amp;</span><span class="p">(</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="kt">u16</span><span class="p">))</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="kt">u8</span> <span class="p">{</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">clo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Closure</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">data</span>: <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">func</span>: <span class="nc">do_it</span><span class="w"> </span><span class="p">};</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">clo</span><span class="p">.</span><span class="n">call</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>不同引用标记的引用不能相互赋值，在作为函数返回值时，Rust也会检查引用标记是否匹配。可以用<code>'a: 'b</code>来约束<code>'a</code>的生命周期不短于<code>'b</code>的生命周期。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">错误</label><label for="__tabbed_6_2">正确</label><label for="__tabbed_6_3">正确</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">two_args</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="p">,</span><span class="w"> </span><span class="o">&#39;</span><span class="na">b</span><span class="o">&gt;</span><span class="p">(</span><span class="n">a</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">b</span> <span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">b</span> <span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="c1">// error: lifetime may not live long enough</span>
+<span class="p">}</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">two_args</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">two_args</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="p">,</span><span class="w"> </span><span class="o">&#39;</span><span class="na">b</span><span class="o">&gt;</span><span class="p">(</span><span class="n">a</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">b</span> <span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">a</span>
+<span class="p">}</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">two_args</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">two_args</span><span class="o">&lt;&#39;</span><span class="na">a</span>: <span class="o">&#39;</span><span class="na">b</span><span class="p">,</span><span class="w"> </span><span class="o">&#39;</span><span class="na">b</span><span class="o">&gt;</span><span class="p">(</span><span class="n">a</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">b</span> <span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">b</span> <span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">a</span>
+<span class="p">}</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">two_args</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>通常情况下，函数声明中的引用标记可以省略，Rust会自动推断每个参数和返回值的引用标记</p>
 <ol>
-<li>存在一个没有被控制的汇聚节点；</li>
-<li>存在一个被控制的非汇聚节点。</li>
+<li>
+<p>每个输出参数都会分配一个独立的引用标记。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">省略标记</label><label for="__tabbed_7_2">显示标记</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">four_args</span><span class="p">(</span><span class="n">a</span>: <span class="kp">&amp;</span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">c</span>: <span class="kp">&amp;</span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">d</span>: <span class="kp">&amp;</span><span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">i32</span> <span class="p">{</span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">four_args</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="p">,</span><span class="w"> </span><span class="o">&#39;</span><span class="na">b</span><span class="p">,</span><span class="w"> </span><span class="o">&#39;</span><span class="na">c</span><span class="p">,</span><span class="w"> </span><span class="o">&#39;</span><span class="na">d</span><span class="o">&gt;</span><span class="p">(</span><span class="n">a</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">b</span> <span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">c</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">c</span> <span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">d</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">d</span> <span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">i32</span> <span class="p">{</span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>如果只有一个输入参数，那么这个参数的引用标记就是（所有）返回值的引用标记。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">省略标记</label><label for="__tabbed_8_2">显示标记</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">one_arg</span><span class="p">(</span><span class="n">a</span>: <span class="kp">&amp;</span><span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="kt">i32</span> <span class="p">{</span>
+<span class="w">    </span><span class="n">a</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">one_arg</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="p">(</span><span class="n">a</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">i32</span> <span class="p">{</span>
+<span class="w">    </span><span class="n">a</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>当函数的某个参数为<code>&amp;self</code>或<code>&amp;mut self</code>时，返回值的引用标记和<code>&amp;self</code>的引用标记相同。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">省略标记</label><label for="__tabbed_9_2">显示标记</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="nc">Player</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">first_name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="n">last_name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">impl</span><span class="w"> </span><span class="n">Player</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">full_name</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">String</span> <span class="p">{</span>
+<span class="w">        </span><span class="fm">format!</span><span class="p">(</span><span class="s">&quot;{} {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">last_name</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="nc">Player</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">first_name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="n">last_name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">impl</span><span class="w"> </span><span class="n">Player</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">full_name</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;&#39;</span><span class="na">a</span><span class="w"> </span><span class="bp">self</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">String</span> <span class="p">{</span>
+<span class="w">        </span><span class="fm">format!</span><span class="p">(</span><span class="s">&quot;{} {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">last_name</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>如果不满足上述条件，则需要显式指定引用标记。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">错误</label><label for="__tabbed_10_2">正确</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">two_args</span><span class="p">(</span><span class="n">a</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="c1">// error[E0106]: missing lifetime specifier</span>
+<span class="p">}</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">two_args</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">two_args</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="p">,</span><span class="w"> </span><span class="o">&#39;</span><span class="na">b</span><span class="o">&gt;</span><span class="p">(</span><span class="n">a</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">b</span> <span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">a</span>
+<span class="p">}</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">two_args</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
 </ol>
-<p>如果两个变量之间的所有路径都被阻断，则这两个变量被分割。</p>
-</div>
-<p>一般定义被控制的变量集合为<span class="arithmatex">\(Z\)</span>。如果因果图<span class="arithmatex">\(\calG\)</span>中，控制变量<span class="arithmatex">\(Z\)</span>将因果图分为了两个部分，则这两个部分<span class="arithmatex">\(X, Y\)</span>构成了因果图的一个d-分割，即<span class="arithmatex">\(X\perp_\calG Y | Z\)</span>。进一步地，如果满足 Markov 假设，则<span class="arithmatex">\(X\)</span>中的所有变量和<span class="arithmatex">\(Y\)</span>中的所有变量独立。</p>
-<p>但是变量独立不一定能导出d-分割，由此得到 faithfulness assumption</p>
-<div class="admonition theorem">
-<p class="admonition-title">faithfulness assumption</p>
-<p>对于因果图<span class="arithmatex">\(\calG\)</span>，若对于任意互不相交的<span class="arithmatex">\(X, Y, Z\)</span>且<span class="arithmatex">\(X\perp Y | Z\)</span>，则<span class="arithmatex">\(X, Y\)</span>构成一个d-分割。</p>
-</div>
-<p>在 Markov 假设和 faithfulness 假设成立的情况下，d-分割等价于变量独立。</p>
-<h3 id="_5">相关性与因果性的路径<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>在因果图上：</p>
-<ul>
-<li>相关性沿路径流动</li>
-<li>因果性沿有向路径流动</li>
-</ul>
-<p>如果阻断了所有非因果性的路径，则两个变量之间存在因果关系。</p>
-<div class="admonition definition">
-<p class="admonition-title">do算子</p>
-<p>在因果图中，对一个变量的干预可以通过阻断所有指向该变量的边实现，记作<span class="arithmatex">\(\mathrm {do}(\cdot)\)</span></p>
-</div>
-<p>非因果的路径有两个来源：</p>
-<ul>
-<li>没有控制分支变量，即 confounding bias</li>
-<li>控制了汇聚变量，即 selection bias</li>
-</ul>
-<h4 id="confounding">Confounding 与后门调整<a class="headerlink" href="#confounding" title="Permanent link">&para;</a></h4>
-<p>Confounding 指因果路径的起始和终结变量都受到同一个混淆因子的影响。可以通过后门调整消除影响。</p>
 
 
 
@@ -3834,7 +4083,7 @@ X_4\perp (X_1, X_2) | X_3
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-11-23T13:12:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-11-23</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-01-21T06:40:36+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-21</span>
   </span>
 
     
@@ -3844,7 +4093,7 @@ X_4\perp (X_1, X_2) | X_3
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-08-15T10:06:39+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-08-15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-01-21T06:40:36+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-21</span>
   </span>
 
     
