@@ -13,3 +13,4 @@ hide:
 * [Variables](1.md)
 * [Control Flows](2.md)
 * [Complex Objects](3.md)
+* [Lifetimes](4.md)

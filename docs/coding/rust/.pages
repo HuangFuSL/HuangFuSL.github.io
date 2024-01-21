@@ -4,3 +4,4 @@ nav:
   - 1. Variables: 1.md
   - 2. Control Flows: 2.md
   - 3. Complex Objects: 3.md
+  - 4. Lifetimes: 4.md
