@@ -9,7 +9,7 @@ mkdocs-macros-plugin==1.0.5
 mkdocs-jupyter==0.24.6
 pymdown-extensions==10.7
 matplotlib==3.8.2
-pandas==2.1.4
+pandas==2.2.0
 scikit-learn==1.4.0
 jupyter==1.0.0
 requests==2.31.0
