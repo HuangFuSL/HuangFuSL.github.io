@@ -2727,6 +2727,10 @@
     
       
         
+          
+        
+      
+        
       
     
     
@@ -2743,16 +2747,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../rust/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Rust
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_5">
@@ -2762,6 +2774,8 @@
           <ul class="md-nav__list" data-md-scrollfix>
             
               
+            
+              
                 
   
   
@@ -2769,10 +2783,6 @@
   
     
     
-      
-        
-          
-        
       
         
       
@@ -2798,11 +2808,11 @@
         
   
   
-    <a href="../../rust/" class="md-nav__link">
+    <a href="../../rust/0/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    Learning
+    Basics
   </span>
   
 
@@ -4052,7 +4062,7 @@ linear_regression(X, y).T</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/tmp/ipykernel_1801811/2537742158.py:2: DeprecationWarning: 
+<pre>/tmp/ipykernel_1817748/2537742158.py:2: DeprecationWarning: 
 Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
 (to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
 but was not found to be installed on your system.
@@ -4203,8 +4213,8 @@ print(w.T, mse_loss(X, y, w))</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[[-0.00102221 -0.02575077  0.02617345  0.10090847 -0.04051312  0.03935312
-  -0.00626881  0.09740912]] 0.0036663001554016073
+<pre>[[ 0.00339633 -0.0333014   0.01571862  0.09462645 -0.05065492  0.02700446
+  -0.12965815  0.19262393]] 0.003796257819187372
 </pre>
 </div>
 </div>
@@ -4319,8 +4329,8 @@ print(w.T, precision(X, y, w))</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[[ 1.04469188 -2.90610274  1.3164552   1.7586357  -2.2456155   1.19390098
-  -1.76602847 -2.92309481]] 0.8823529411764706
+<pre>[[ 1.10389676 -2.77975189  1.09280692  1.89674147 -2.14053854  1.08297946
+  -2.56782612 -2.29513091]] 0.8823529411764706
 </pre>
 </div>
 </div>

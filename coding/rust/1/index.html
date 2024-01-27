@@ -2727,6 +2727,10 @@
     
       
         
+          
+        
+      
+        
       
     
     
@@ -2743,16 +2747,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Rust
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_5">
@@ -2760,6 +2772,8 @@
             Rust
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -2771,10 +2785,6 @@
   
     
     
-      
-        
-          
-        
       
         
       
@@ -2797,36 +2807,26 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_5_2" id="__nav_5_5_2_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
-    Learning
+    Basics
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_5_1" id="__nav_5_5_1_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_5_1">
             <span class="md-nav__icon md-icon"></span>
-            Learning
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
             
               
                 
@@ -2917,10 +2917,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="变量类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代器类型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       运算符
     </span>
@@ -3675,10 +3699,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="变量类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代器类型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       运算符
     </span>
@@ -3746,11 +3794,70 @@
 <li>定长数组：<code>[T; N]</code>，其中<code>T</code>为数组元素类型或重复的数组，<code>N</code>为数组长度。只有用<code>mut</code>声明的数组才能修改其中元素。</li>
 <li>定长元组：<code>(T1, T2, ..., Tn)</code>，其中<code>T1</code>～<code>Tn</code>为元组中元素的类型。只有用<code>mut</code>声明的元组才能修改其中元素（类型必须匹配）。类似于Python，在变量声明阶段或赋值阶段，仅包含（可以被赋值的）变量元组可以作为赋值运算的左端项，此时会分别为每个变量分配对应的值，省略的变量用<code>_</code>表示。元组支持嵌套。单元素元组的语法为<code>(&lt;value&gt;,)</code>。</li>
 <li>数组切片：<code>&amp;&lt;parent&gt;[&lt;start&gt;..&lt;end&gt;]</code>，注意切片是对<code>&lt;parent&gt;</code>的引用，是引用类型。元组不支持切片，只能用<code>.0</code>、<code>.1</code>等来访问元素。</li>
+<li>字典：<code>HashMap&lt;K, V&gt;</code>，其中<code>K</code>为键的类型，<code>V</code>为值的类型。字典的键必须实现<code>Eq</code>和<code>Hash</code> trait，值必须实现<code>Eq</code> trait。字典的键和值都是可变类型，因此字典本身也是可变类型。字典的键和值都可以是引用类型。</li>
 </ul>
 </li>
+<li>迭代器，通常由容器对象的<code>iter()</code>方法生成。</li>
 <li>函数：需要用<code>fn(arg1: type1, ...) -&gt; return_type</code>表示，函数以引用的方式传递。</li>
 </ul>
-<h2 id="_3">运算符<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_3">字符串类型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>字符串类型有如下方法：</p>
+<ul>
+<li>
+<p><code>len()</code>：返回字符串长度。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span>
+<span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">len</span><span class="p">());</span><span class="w"> </span><span class="c1">// 5</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>lines()</code>：按换行符<code>\n</code>分割字符串，返回迭代器。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello</span><span class="se">\n</span><span class="s">world&quot;</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">lines</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>split()</code>：按给定字符分割字符串，返回迭代器。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello world&quot;</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>trim()</code>：去除字符串首尾的空白字符。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; hello world &quot;</span><span class="p">;</span>
+<span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">trim</span><span class="p">());</span><span class="w"> </span><span class="c1">// &quot;hello world&quot;</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>parse()</code>：将字符串转换为其他类型，如<code>parse::&lt;i32&gt;()</code>将字符串转换为<code>i32</code>类型。当转为数字时，数字不能超过类型的取值范围，否则会报错。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">n</span>: <span class="kt">i32</span> <span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">parse</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span><span class="w"> </span><span class="c1">// 返回值是`Result`类型</span>
+</code></pre></div>
+<p>自定义类型如果需要通过<code>parse()</code>转换为字符串，需要实现<code>std::str::FromStr</code> trait，参见<a href="../3/#impl--trait">Impl &amp; Trait</a></p>
+</li>
+</ul>
+<h3 id="_4">迭代器类型<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>迭代器类型有如下方法：</p>
+<ul>
+<li>
+<p><code>map(fn)</code>：对迭代器中的每个元素应用函数<code>fn</code>，返回新的迭代器。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">iter</span><span class="p">().</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">x</span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="fm">print!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"> </span><span class="c1">// 246</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>collect()</code>：将迭代器转换为容器（定长数组）。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">v2</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">iter</span><span class="p">().</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">x</span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">).</span><span class="n">collect</span><span class="p">();</span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="_5">运算符<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>Rust的运算符与C/C++类似</p>
 <ul>
 <li>四则运算符：<code>+ - * / %</code></li>
@@ -3783,7 +3890,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-01-16T04:24:58+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-01-27T14:00:52+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-27</span>
   </span>
 
     

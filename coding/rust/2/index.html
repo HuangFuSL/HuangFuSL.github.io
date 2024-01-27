@@ -2729,6 +2729,10 @@
     
       
         
+          
+        
+      
+        
       
     
     
@@ -2745,16 +2749,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Rust
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_5">
@@ -2762,6 +2774,8 @@
             Rust
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -2773,10 +2787,6 @@
   
     
     
-      
-        
-          
-        
       
         
       
@@ -2799,36 +2809,26 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_5_2" id="__nav_5_5_2_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
-    Learning
+    Basics
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_5_1" id="__nav_5_5_1_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_5_1">
             <span class="md-nav__icon md-icon"></span>
-            Learning
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
             
               
                 
@@ -2948,6 +2948,21 @@
       match语句
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="match语句">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-let" class="md-nav__link">
+    <span class="md-ellipsis">
+      if let语句
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3713,6 +3728,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="match语句">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-let" class="md-nav__link">
+    <span class="md-ellipsis">
+      if let语句
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3888,6 +3918,13 @@
 <span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">);</span><span class="w"> </span><span class="c1">// Work hard</span>
 <span class="p">}</span>
 </code></pre></div>
+<h3 id="if-let"><code>if let</code>语句<a class="headerlink" href="#if-let" title="Permanent link">&para;</a></h3>
+<p>和<code>match</code>类似，<code>if let</code>语句用于匹配单个模式，格式为：</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="n">variable</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>let &lt;pattern&gt; = &lt;variable&gt;</code>可以看成一个条件（但实际并不是），如果能匹配则将<code>&lt;variable&gt;</code>的值按照<code>&lt;pattern&gt;</code>进行绑定，并返回<code>true</code>，因此也会有<code>while let</code>等其他语句。</p>
 <h2 id="loop"><code>loop</code>语句<a class="headerlink" href="#loop" title="Permanent link">&para;</a></h2>
 <p><code>loop</code>语句用于无限循环。</p>
 <ol>
@@ -3957,6 +3994,14 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>严格意义上<code>for</code>语句不能直接遍历容器对象，需要用<code>iter()</code>方法返回迭代器。但<code>for</code>会尝试隐式调用，因此下面的代码也能正常执行。</p>
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
@@ -3979,7 +4024,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-01-17T09:11:28+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-01-27T14:00:52+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-27</span>
   </span>
 
     
