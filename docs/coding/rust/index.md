@@ -14,3 +14,4 @@ hide:
 * [Control Flows](2.md)
 * [Complex Objects](3.md)
 * [Lifetimes](4.md)
+* [Error Handling](5.md)
