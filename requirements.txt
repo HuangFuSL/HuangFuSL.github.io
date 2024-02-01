@@ -1,6 +1,6 @@
 wheel
 mkdocs==1.5.3
-neoteroi-mkdocs==1.0.4
+neoteroi-mkdocs==1.0.5
 mkdocs-awesome-pages-plugin==2.9.2
 mkdocs-git-revision-date-localized-plugin==1.2.2
 mkdocs-git-revision-date-plugin==0.3.2
