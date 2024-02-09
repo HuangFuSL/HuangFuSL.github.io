@@ -13,6 +13,7 @@ hide:
 * [Python](python/index.md)
     * [matplotlib](matplotlib/index.md)
 * [Rust](rust/index.md)
+    * [GUI](rust-gui/index.md)
 * [机器学习](machine-learning/index.md)
 * [数据结构](dsa/index.md)
 * [系统配置](configuration/index.md)
