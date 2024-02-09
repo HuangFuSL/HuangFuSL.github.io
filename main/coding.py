@@ -7,7 +7,7 @@ def read_code_from_file(file_name: str, language: str | None = None) -> str:
     file_url = file_name.removeprefix('docs')
     suffix_mapping = { 'py': 'python', 'rs': 'rust' }
     link = f'[:bootstrap-cloud-download: Download source code]({file_url})\n\n'
-    code_block_prefix = f'```{suffix_mapping.get(language, str())}\n'
+    code_block_prefix = f'```{suffix_mapping.get(language, str())} linenums="1"\n'
     with open(file_name, 'r') as f:
         code_block_body = f.read()
     code_block_suffix = '\n```'

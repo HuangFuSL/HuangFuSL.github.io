@@ -304,6 +304,14 @@ button[data-md-color-accent=deep-orange] {
 
 :root [data-md-color-scheme=default] {
     --md-code-bg-color: #e6c2cd2d;
+    --md-code-hl-color: #e01b56;
+    --md-code-hl-color--light: #ef71972d;
+}
+
+:root [data-md-color-scheme=slate] {
+    --md-code-bg-color: #1e0c1230;
+    --md-code-hl-color: #e01b56;
+    --md-code-hl-color--light: #1e0c1230;
 }
 
 .highlight [data-linenos]::before {

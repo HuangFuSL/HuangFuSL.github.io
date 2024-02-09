@@ -1,0 +1,13 @@
+nav:
+  - index.md
+  - Text editor step by step:
+    - 1. Hello, World!: 1-hello-world.md
+    - 2. Multi-line input: 2-multi-line-input.md
+    - 3. Theme and cursor indicator: 3-theme-and-cursor-indicator.md
+    - 4. Async file loading: 4-async-file-loading.md
+    - 5. File picker: 5-file-picker.md
+    - 6. File path indicator: 6-file-path-indicator.md
+    - 7. New and Save: 7-new-and-save.md
+    - 8. Button Prettify: 8-button-prettify.md
+    - 9. Syntax Highlighting: 9-syntax-highlighting.md
+    - 10. Misc: 10-misc.md
