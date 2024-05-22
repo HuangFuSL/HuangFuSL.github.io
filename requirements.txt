@@ -1,5 +1,5 @@
 wheel
-mkdocs==1.5.3
+mkdocs==1.6.0
 neoteroi-mkdocs==1.0.5
 mkdocs-awesome-pages-plugin==2.9.2
 mkdocs-git-revision-date-localized-plugin==1.2.5
@@ -12,7 +12,7 @@ matplotlib==3.9.0
 pandas==2.2.2
 scikit-learn==1.4.2
 jupyter==1.0.0
-requests==2.31.0
+requests==2.32.1
 jieba==0.42.1
 lxml==5.2.2
 mkdocs-meta-descriptions-plugin==3.0.0
