@@ -12,7 +12,7 @@ matplotlib==3.9.0
 pandas==2.2.2
 scikit-learn==1.5.0
 jupyter==1.0.0
-requests==2.32.1
+requests==2.32.2
 jieba==0.42.1
 lxml==5.2.2
 mkdocs-meta-descriptions-plugin==3.0.0
