@@ -10,7 +10,7 @@ mkdocs-jupyter==0.24.7
 pymdown-extensions==10.8.1
 matplotlib==3.9.0
 pandas==2.2.2
-scikit-learn==1.5.0
+scikit-learn==1.5.1
 jupyter==1.0.0
 requests==2.32.3
 jieba==0.42.1
