@@ -8,7 +8,7 @@ mkdocs-material==9.5.28
 mkdocs-macros-plugin==1.0.5
 mkdocs-jupyter==0.24.8
 pymdown-extensions==10.8.1
-matplotlib==3.9.0
+matplotlib==3.9.1
 pandas==2.2.2
 scikit-learn==1.5.1
 jupyter==1.0.0
