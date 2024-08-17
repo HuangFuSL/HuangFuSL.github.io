@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="2176" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="1912" class="">
     <defs>
         <style/>
     </defs>
@@ -222,7 +222,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                         <path fill-rule="evenodd" d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"/>
                                     </svg>
-                                    122 views in last two weeks
+                                    71 views in last two weeks
                                 </div>
                             </section>
                         </div>
@@ -402,7 +402,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path d="M10.896 2H8.75V.75a.75.75 0 00-1.5 0V2H5.104a.25.25 0 00-.177.427l2.896 2.896a.25.25 0 00.354 0l2.896-2.896A.25.25 0 0010.896 2zM8.75 15.25a.75.75 0 01-1.5 0V14H5.104a.25.25 0 01-.177-.427l2.896-2.896a.25.25 0 01.354 0l2.896 2.896a.25.25 0 01-.177.427H8.75v1.25zm-6.5-6.5a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5zM6 8a.75.75 0 01-.75.75h-.5a.75.75 0 010-1.5h.5A.75.75 0 016 8zm2.25.75a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5zM12 8a.75.75 0 01-.75.75h-.5a.75.75 0 010-1.5h.5A.75.75 0 0112 8zm2.25.75a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5z"/>
                             </svg>
-                            Average per day at ~1.24
+                            Average per day at ~1.23
                         </div>
                     </section>
                 </div>
@@ -2372,6 +2372,11 @@
                                 <path fill="#ebedf0" filter="url(#brightness1)" d="M0,1 1.7,2 1.7,2 0,1 z"/>
                                 <path fill="#ebedf0" filter="url(#brightness2)" d="M1.7,2 3.4,1 3.4,1 1.7,2 z"/>
                             </g>
+                            <g transform="translate(-8.5, 11)">
+                                <path fill="#ebedf0" d="M1.7,2 0,1 1.7,0 3.4,1 z"/>
+                                <path fill="#ebedf0" filter="url(#brightness1)" d="M0,1 1.7,2 1.7,2 0,1 z"/>
+                                <path fill="#ebedf0" filter="url(#brightness2)" d="M1.7,2 3.4,1 3.4,1 1.7,2 z"/>
+                            </g>
                         </g>
                     </g>
                 </svg>
@@ -2393,7 +2398,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>ccfddl/ccf-deadlines</span>
-                                        <span>starred 3 days ago</span>
+                                        <span>starred 4 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">⏰ Collaboratively track deadlines of conferences recommended by CCF (Website, Python Cli, Wechat Applet) / If you find it useful, please star this project, thanks~</div>
@@ -2446,7 +2451,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>eric-mitchell/direct-preference-optimization</span>
-                                        <span>starred 8 days ago</span>
+                                        <span>starred 9 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Reference implementation for DPO (Direct Preference Optimization)</div>
@@ -2499,7 +2504,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>AIoT-MLSys-Lab/Efficient-LLMs-Survey</span>
-                                        <span>starred 24 days ago</span>
+                                        <span>starred 25 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">[TMLR 2024] Efficient Large Language Models: A Survey</div>
@@ -2508,7 +2513,7 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                             <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"/>
                                         </svg>
-                                        900
+                                        901
                                     </div>
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -2685,62 +2690,7 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                                 <path d="M3.217 6.962A3.75 3.75 0 0 1 0 3.25v-.5C0 1.784.784 1 1.75 1h1.356c.228-.585.796-1 1.462-1h6.864c.647 0 1.227.397 1.462 1h1.356c.966 0 1.75.784 1.75 1.75v.5a3.75 3.75 0 0 1-3.217 3.712 5.014 5.014 0 0 1-2.771 3.117l.144 1.446c.005.05.03.12.114.204.086.087.217.17.373.227.283.103.618.274.89.568.285.31.467.723.467 1.226v.75h1.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H4v-.75c0-.503.182-.916.468-1.226.27-.294.606-.465.889-.568.139-.048.266-.126.373-.227.084-.085.109-.153.114-.204l.144-1.446a5.015 5.015 0 0 1-2.77-3.117ZM4.5 1.568V5.5a3.5 3.5 0 1 0 7 0V1.568a.068.068 0 0 0-.068-.068H4.568a.068.068 0 0 0-.068.068Zm2.957 8.902-.12 1.204c-.093.925-.858 1.47-1.467 1.691a.766.766 0 0 0-.3.176c-.037.04-.07.093-.07.21v.75h5v-.75c0-.117-.033-.17-.07-.21a.766.766 0 0 0-.3-.176c-.609-.221-1.374-.766-1.466-1.69l-.12-1.204a5.064 5.064 0 0 1-1.087 0ZM13 2.5v2.872a2.25 2.25 0 0 0 1.5-2.122v-.5a.25.25 0 0 0-.25-.25H13Zm-10 0H1.75a.25.25 0 0 0-.25.25v.5c0 .98.626 1.813 1.5 2.122Z"/>
                                             </svg>
-                                            174 / 275 achievements unlocked
-                                        </div>
-                                    </div>
-                                    <div class="achievement">
-                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAABgcIAQME/8QAKhAAAQQBAwIFBAMAAAAAAAAAAQIDBAURAAYhEjEHE0FhgSIycsE1UaH/xAAWAQEBAQAAAAAAAAAAAAAAAAADAgT/xAAhEQACAgEEAgMAAAAAAAAAAAABAgARAwQSIUEiMYGRof/aAAwDAQACEQMRAD8Am+faWEGwkNR5jzYCsfSr2GjzwejSNzXrgtZU5yBFaLjoQo/WsnCUnHIGAT8aXF9/MSvz/Wj3acCVtWsiWsqS40i0aDjaGjg9AUe5weTg8DtnWTIqHEAeCfuaMV776ExuZyVVbtmRGZUgwULygKUchJGQM+2cfGtrM5bjTrLjjh5C0rB5/rpPoUnPI+dFSNk2u6aNyxr2ULmuSFu+S6s+YWkIAShJOeSSo8kdhzpaxrJtu0ahllRUVFCwSU9C+3IIzkHuNCEBXx6Etmo89mD19zcSvz/Q1TUOwqGdqV0UskMxGUoQuQyeMJAJB9QTqd7OlnybJ19qKtxlagpKkqHIwO3OntT3UNe32oEx9EcljylHOce2p1SJlxopPqLpG2M1zvobhdgIQrHQlllxSpDaFlC1DP2jtkZ7jjIx6aSe9W22/Fid5Ecxm1yg4GiMY6kgn/SToxtmTUKembbnpdf6MBIIBUr3HqNLuSLiTuJFlbtrL7iwpSlEYwOAO/YcDSoFCnaRVfMPMQaBHP5P/9k=" alt="" />
-                                        <div>
-                                            <div class="name">
-                                                <div>No Royal Hair Touched</div>
-                                                <div class="unlocked">31 Mar 2024</div>
-                                            </div>
-                                            <div class="description">Reach the King before 10 minutes have elapsed in the second Gajah Mada mission "Unconditional Loyalty".</div>
-                                        </div>
-                                    </div>
-                                    <div class="achievement">
-                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAABwYFAgP/xAAsEAABBAEDAgQFBQAAAAAAAAABAgMEEQUABiESMRMiUWEHFCNxgTJBQlJi/8QAGAEAAgMAAAAAAAAAAAAAAAAAAgUAAwT/xAAkEQABAwMBCQAAAAAAAAAAAAABAAIDBBEhIhITIzFBUYGh8P/aAAwDAQACEQMRAD8AMcBtHNzI6pkZ51MdZ4CXAFKAoFQT3KRwCewsausRtRC0twZMl0zSUrUDalng8CufetQkVE9kMZSNKdbkR6Sw4k8tJsUB7cmx++vLN7yzUvcL0l7IvY3qUOr5I+F/EAmxzyNI3QzTHSRZMQWMFyEqbn2EIONyUiO5IQ0D1sdQUlwJAP8AbmroH10DuTskznGI7k19TS19KkKVYI9NIMPcmTl5iJDx24ctLiEgSGJ7hfQDRuiRYsDUDmUEbqj+UgeLoqeJ8RcyQ3xcKqQhwBCSdrYyRPgEobQGUo6S46sIR1GlVZ7mhdDnRluN1t7MSktELbSfCsdipPBr2vSliNweFt2DCUlvw2V9dJULVdEq+9cfjR3K2tMXmHmYz8JcVbhUiQ7IShISTfmvkH2o6Ojks928wOiOoGhuzlbfw6lyZu7seiNGEl5xSlOtj6aaKSkrKuf0jnn099Ve79oxnjPyWKdS+zA+o4uiABdfnvra+GjO2tqMOl3KR3pxAS7JUCkL/wAtp7hAPNnlR9gNc7/3PhntuZTHwHmgHHmvl2mvKFIRzf26rP3rWSaYyz8IHt4+5e1GAhpDl//Z" alt="" />
-                                        <div>
-                                            <div class="name">
-                                                <div>An Army Marches on Its Stomach</div>
-                                                <div class="unlocked">10 Mar 2024</div>
-                                            </div>
-                                            <div class="description">Complete all secondary objectives and destroy all of Dagnajan's smaller bases before Dagnajan and his army march in the third Yodit mission "A Fallen Crown".</div>
-                                        </div>
-                                    </div>
-                                    <div class="achievement">
-                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAABgIDBAUHCP/EADEQAAEEAQIDBQUJAAAAAAAAAAECAwQFEQAGEiExBxNBUYEUFSJxkRYjMjVSc6Gx8P/EABYBAQEBAAAAAAAAAAAAAAAAAAACA//EABwRAAIDAQEBAQAAAAAAAAAAAAECABESITEiYf/aAAwDAQACEQMRAD8A51tbq2g281qPYymwl1ScIdUBgE6fp7Pdlo+oVkmzlqZT3rgQtSkoSD1V5D56qdyfn9h++v8AvR5tKltts07V2X3WkWKAltmKol0jngkDp4cj5jWAVcA0Ll9LVcXub33IncdVaPMvcKe+hCSfuyQCCkg4IIP+8JW4bGXWxdqVrtg4qzUsmZwOHKkkgAL888+uo8LZdhaylW0u2TVukOqy4xggNpyMgEDn8vTVBdNMNboqEoltSpKVoQ+42chRChg+uf41LqmSKF1KAPsH9wY+0c/KeIe0K+Hz59NbLvYSqu9iL9hnMsohpj90WiQ3yB4UqxhXgPTWV3lDbSbqa8xXyXGnHlKQtKCQoE8iDrbqeNJqK5qDZ3UuW8plIcealFaUqPMgeeB8P100CoojyFqzqNzU7NrNtxU9odnYOSZY4hBrVAKbR+lRx6kcufnjQluPs/pmoFdvDYFjIn7dExtiSzJA7+IsqGOLAGU5wOgIJHXOdEvansqomU0iRUWZmTOFt+MgkOOqUfxoWrljl4eeNVW2I52l2U20Se8hVncSo4bhtq4i0hK0krXjkOn1I8dGcFD3sZ+vyf/Z" alt="" />
-                                        <div>
-                                            <div class="name">
-                                                <div>Forged in the Heat of Battle</div>
-                                                <div class="unlocked">11 Dec 2023</div>
-                                            </div>
-                                            <div class="description">Train 10 Chakram Throwers as the Gurjaras.</div>
-                                        </div>
-                                    </div>
-                                    <div class="achievement">
-                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABAYDBQcI/8QALhAAAQMDAgQEBQUAAAAAAAAAAQIDBAAFERIhBjFBgRMUFmFRVXGS0SIyQkOh/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAIDAf/EABwRAAIDAQADAAAAAAAAAAAAAAECAAMRIROBkf/aAAwDAQACEQMRAD8A5vn3S4QbhIajzHmwFY/Sr2FQ+obt8wk/fRRty7txeIKFBHjPBJWTslOMqV2AJ7UZeOCbjDeAhgy2lJChhOlYydgUnrjfbkOeKkiKVBIjknTKn1DdvmEn76drNCmuWtU2de5CnAAfKgZCgcbEnpvVTbeB3dSTc3inP9UfC1H21/tHbNMcmyT7WXVttNOQ1hA8VC9SggbZVnf4ch1qF5rAwZsrWjnpHIfbL/Ga8pGu11tb6I6FCPGLCg9HByNOsp0ZJOd8/WiTIjOKZbRLS5JWoheHUnUnqSn6+/wrMLtZbhJuDzzEZS2lnUlQIwRge9Cp4fuyVAphuAjcEEbf7S11IMIbPkGsY8ybgLsiK0GltKfbAwEEJQnG/fvSzd+IopPkmQww6+dBbaTqUd/5KPIbUgLhcRrb8NYllHLBcH5qGDbJ0G5RnZEdSAFg5JH5rfGuHCPUUu5zdn//2Q==" alt="" />
-                                        <div>
-                                            <div class="name">
-                                                <div>Smoke on the Water</div>
-                                                <div class="unlocked">20 Nov 2023</div>
-                                            </div>
-                                            <div class="description">Purchase 20 Dragon Ships in the Historical Battle "Lake Poyang (1363)".</div>
-                                        </div>
-                                    </div>
-                                    <div class="achievement">
-                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAABwUGCAP/xAAsEAABAwIEBAYCAwAAAAAAAAABAgMEBREABhIhIjFBUQcTFBVhgSORMnKS/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAEEBf/EAB8RAQABBAIDAQAAAAAAAAAAAAECAAMRIRIxIkGhUf/aAAwDAQACEQMRAD8AznJn1GNU32Yst5ACrcKvgYv+VKfUH6dImzZLziGWy5xqNiQNh9nEflzKztUq7sgNKU0p22rTtew2vjQD+YMu5PyxRqKhqHIdmuBElKx+RQJ4jptew6HljmqXktx/N1qDh5ND6IyavRZUujOyCI2kOLC1Hcp7Ebb9Nx84Pm6hVG62zHfmyFNKXpUlStiO2NAD2alisDKNNMlt2UhTmtzy2wyUALuDa9isfPLtgv8AEbLvsecUshbbnlupIW2bpUCAQQfvBiW5J2PxxReZnquFOqjyHEsxJqIbzZ0lRRfVzIvv0KlfvFonpzAinsTzPp81vWEHTEKltixOq55Da3PBVLp1UVVHX4zC1MrUFJUlQsRYb88Mfh3WDCy9Vos2RHjPPspZSJCud1XJAH9bfeKMosMS176qaRybqNy4a69Wn2vVRY7jaS9wouhwhIUgKtcadk9/4gdMVSuSXkyYUSYttx9t0jWi+4vfr94U6gvL8KuNLplVaXD9ItpakjcrDitG3ylY/wAnAtXEyTXmH1Nnyw5qvcWt+8LoSuOHWPu6sZJDDX//2Q==" alt="" />
-                                        <div>
-                                            <div class="name">
-                                                <div>Turkish Delight</div>
-                                                <div class="unlocked">14 Nov 2023</div>
-                                            </div>
-                                            <div class="description">Win "Bapheus (1302)" by defeating Turkish factions without allying with them in single player.</div>
-                                        </div>
-                                    </div>
-                                    <div class="achievement">
-                                        <div>
-                                            <div class="description ellipsis">+169 others...</div>
+                                            0 / 276 achievements unlocked
                                         </div>
                                     </div>
                                 </div>
@@ -2846,7 +2796,7 @@
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 16 Aug 2024, 08:07:27 (timezone Asia/Shanghai) with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 17 Aug 2024, 08:07:10 (timezone Asia/Shanghai) with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
