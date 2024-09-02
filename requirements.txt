@@ -11,7 +11,7 @@ pymdown-extensions==10.9
 matplotlib==3.9.2
 pandas==2.2.2
 scikit-learn==1.5.1
-jupyter==1.0.0
+jupyter==1.1.1
 requests==2.32.3
 jieba==0.42.1
 lxml==5.2.2
