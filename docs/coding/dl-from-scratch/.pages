@@ -1,0 +1,11 @@
+nav:
+  - index.md
+  - 神经网络层:
+    - 激活函数: activation.md
+    - 损失函数: loss.md
+    - 多层感知机: mlp.md
+    - 注意力机制: attention.md
+    - 编码器与解码器: encoder-decoder.md
+  - 模型实现:
+    - transformer: transformer.ipynb
+    - BERT: bert.ipynb
