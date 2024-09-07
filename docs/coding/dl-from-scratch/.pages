@@ -3,9 +3,13 @@ nav:
   - 神经网络层:
     - 激活函数: activation.md
     - 损失函数: loss.md
+    - 归一化: normalization.md
     - 多层感知机: mlp.md
+  - LLM:
     - 注意力机制: attention.md
     - 编码器与解码器: encoder-decoder.md
-  - 模型实现:
-    - transformer: transformer.ipynb
-    - BERT: bert.ipynb
+    - 实现transformer: transformer.ipynb
+    - transformer变种: transformer-variants.md
+    - 位置编码: positional-embedding.md
+    - 实现BERT: bert.ipynb
+    - 实现Llama-2: llama-2.ipynb
