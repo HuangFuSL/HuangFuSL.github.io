@@ -5,6 +5,7 @@ nav:
   - Python:
     - 语法: python
     - matplotlib: matplotlib
+    - 手撕系列: dl-from-scratch
   - Rust:
     - 语法: rust
     - GUI: rust-gui

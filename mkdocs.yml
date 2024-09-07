@@ -77,8 +77,8 @@ plugins:
       type: timeago
   - macros
   - mkdocs-jupyter:
-      include_source: true
-      execute: true
+      include_source: false
+      execute: false
   - meta-descriptions
 
 markdown_extensions:
