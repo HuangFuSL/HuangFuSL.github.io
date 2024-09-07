@@ -176,10 +176,6 @@ class DecoderLayer(torch.nn.Module):
         memory_mask: torch.Tensor | None = None,
         tgt_mask: torch.Tensor | None = None
     ):
-        if tgt_mask is None:
-            tgt_mask = torch.triu(
-                torch.ones(x.size(1), x.size(1)), diagonal=1
-            ).to(x.device)
 
         x = x + self.dropout1(self.self_attention(x, padding_mask, tgt_mask))
         x = self.norm1(x)
