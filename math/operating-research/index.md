@@ -1,5 +1,0 @@
-# 运筹学
-
-* [线性规划](chapter-1.md)
-* [运输问题](chapter-2.md)
-* [目标规划](chapter-3.md)
