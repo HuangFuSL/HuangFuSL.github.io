@@ -13,3 +13,4 @@ nav:
     - 位置编码: positional-embedding.md
     - 实现BERT: bert.ipynb
     - 实现Llama-2: llama-2.ipynb
+    - 模型推理: llm-inference.md

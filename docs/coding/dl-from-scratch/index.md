@@ -24,3 +24,5 @@ hide:
 4. [RoPE](positional-embedding.md#_3)
 5. [transformer变种](transformer-variants.md)
     * [验证Llama-2实现](llama-2.ipynb)
+6. [大模型推理](llm-inference.md)
+
