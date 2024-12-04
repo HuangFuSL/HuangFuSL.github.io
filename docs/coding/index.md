@@ -15,6 +15,7 @@ hide:
 * [Rust](rust/index.md)
     * [GUI](rust-gui/index.md)
 * [机器学习](machine-learning/index.md)
+* [强化学习](reinforcement-learning/index.md)
 * [数据结构](dsa/index.md)
 * [系统配置](configuration/index.md)
 * [SVG](svg.md)

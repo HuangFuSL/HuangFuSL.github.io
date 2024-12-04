@@ -10,5 +10,6 @@ nav:
     - 语法: rust
     - GUI: rust-gui
   - 机器学习: machine-learning
+  - 强化学习: reinforcement-learning
   - 数据结构: dsa
   - 系统配置: configuration
