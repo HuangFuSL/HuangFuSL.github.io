@@ -5,17 +5,28 @@ hide:
 
 ---
 
-# 写代码
+# Coding
 
-收集从网上找来的各种各样的玩意
+编程相关
 
-* [Leetcode](leetcode/index.md)
+## 编程语言
+
 * [Python](python/index.md)
-    * [matplotlib](matplotlib/index.md)
 * [Rust](rust/index.md)
     * [GUI](rust-gui/index.md)
-* [机器学习](machine-learning/index.md)
-* [强化学习](reinforcement-learning/index.md)
+
+## 算法
+
+* [Leetcode](leetcode/index.md)
 * [数据结构](dsa/index.md)
+
+## 机器学习
+
+* [机器学习](machine-learning/index.md)
+* [深度学习](dl-from-scratch/index.md)
+* [强化学习](reinforcement-learning/index.md)
+
+## 其他
+
 * [系统配置](configuration/index.md)
 * [SVG](svg.md)

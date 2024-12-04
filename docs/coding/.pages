@@ -1,15 +1,17 @@
 nav:
   - index.md
-  - SVG动画: svg.md
-  - Leetcode题解: leetcode
-  - Python:
-    - 语法: python
-    - matplotlib: matplotlib
-    - 手撕系列: dl-from-scratch
-  - Rust:
-    - 语法: rust
-    - GUI: rust-gui
-  - 机器学习: machine-learning
-  - 强化学习: reinforcement-learning
-  - 数据结构: dsa
-  - 系统配置: configuration
+  - 编程语言:
+    - Python: python
+    - Rust:
+      - 语法: rust
+      - GUI: rust-gui
+  - 算法:
+    - 数据结构: dsa
+    - Leetcode题解: leetcode
+  - 机器学习:
+    - 机器学习: machine-learning
+    - 深度学习: dl-from-scratch
+    - 强化学习: reinforcement-learning
+  - 其他:
+    - SVG动画: svg.md
+    - 系统配置: configuration
