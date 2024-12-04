@@ -1,10 +1,9 @@
 nav:
   - index.md
-  - Basics:
-    - 0. Introduction: 0.md
-    - 1. Variables: 1.md
-    - 2. Control Flows: 2.md
-    - 3. Complex Objects: 3.md
-    - 4. Lifetimes: 4.md
-    - 5. Error Handling: 5.md
-    - 6. Supplements: 6.md
+  - 0. Introduction: 0.md
+  - 1. Variables: 1.md
+  - 2. Control Flows: 2.md
+  - 3. Complex Objects: 3.md
+  - 4. Lifetimes: 4.md
+  - 5. Error Handling: 5.md
+  - 6. Supplements: 6.md
