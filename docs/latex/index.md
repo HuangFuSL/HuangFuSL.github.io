@@ -28,7 +28,7 @@ hide:
 
 ### 表格排版
 
-* [tabular环境](floats/table.md.md)
+* [tabular环境](floats/table.md)
 
 ## 其他
 
