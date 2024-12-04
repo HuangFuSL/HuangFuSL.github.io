@@ -7,4 +7,3 @@ nav:
   - Python中的字节类型: bytes.md
   - Python中的函数: functions.md
   - 函数装饰器与闭包: decorator.md
-  - Python实用工具: snippets
