@@ -10,7 +10,7 @@ hide:
 * [推送](notes/2020.md)
 * [LaTeX](latex/index.md)
 * [数学](math/index.md)
-* [写代码](coding/index.md)
+* [Coding](coding/index.md)
 * [日语](japanese/index.md)
 * [关于我](about.md)
 
@@ -162,11 +162,7 @@ The blog relies on the following open-source projects:
 * [mkdocs](https://github.com/mkdocs/mkdocs)
 * [Python Markdown](https://github.com/Python-Markdown/markdown)
 * [Python Markdown Extension](https://github.com/facelessuser/pymdown-extensions)
-* [matplotlib](https://github.com/matplotlib/matplotlib)
-* [pandas](https://github.com/pandas-dev/pandas)
 * [jupyter](https://github.com/jupyter/jupyter)
-* [requests](https://github.com/psf/requests)
-* [lxml](https://github.com/lxml/lxml)
 
 The blog uses the following mkdocs plugins to function correctly.
 
