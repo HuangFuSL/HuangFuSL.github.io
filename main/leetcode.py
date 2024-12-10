@@ -1,10 +1,7 @@
 from __future__ import annotations
 
 import csv
-import operator
 from typing import Iterable, Iterator, List, Optional
-
-from . import util
 
 
 def display_difficulty(diff):
@@ -108,7 +105,7 @@ def get_whole_table(
             new_page.append(page)
     content = new_page
 
-    content.sort(key=util.wrap(operator.itemgetter('编号'), int))
+    content.sort(key=lambda x: int(x['编号']))
 
     def build_link(content):
         stars = get_difficulty(content['难度'])
