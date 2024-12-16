@@ -5,6 +5,7 @@ nav:
     - Rust:
       - 语法: rust
       - GUI: rust-gui
+      - Jupyter: rust-jupyter.ipynb
   - 算法:
     - 数据结构: dsa
     - Leetcode题解: leetcode
