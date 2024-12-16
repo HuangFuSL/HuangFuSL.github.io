@@ -7,6 +7,7 @@ body {
     --jp-cell-prompt-not-active-font-color: var(--override-code-fg-color);
     --jp-cell-editor-background: var(--override-code-bg-color);
     --jp-cell-prompt-not-active-opacity: 1;
+    --jp-code-font-size: .85em;
     --jp-code-font-family: var(--md-code-font-family);
     --jp-content-font-family: var(--md-text-font-family);
     --jp-ui-font-family: var(--md-text-font-family);
@@ -26,10 +27,15 @@ span.MathJax_CHTML {
     font-family: inherit;
 }
 
+.jupyter-wrapper .highlight pre {
+    font-size: .85em !important;
+    background-color: var(--md-code-bg-color) !important;
+    border-radius: 0.4rem !important;
+}
+
 .jp-RenderedHTMLCommon pre, .jp-RenderedHTMLCommon code {
-    font-size: .8rem;
-    line-height: 1.6;
-    font-family: inherit;
+    font-size: .85em;
+    background-color: var(--md-code-bg-color);
 }
 
 small {
