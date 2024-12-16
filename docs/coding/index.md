@@ -14,6 +14,7 @@ hide:
 * [Python](python/index.md)
 * [Rust](rust/index.md)
     * [GUI](rust-gui/index.md)
+    * [Jupyter](rust-jupyter.ipynb)
 
 ## 算法
 
