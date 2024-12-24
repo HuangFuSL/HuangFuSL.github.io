@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -1064,6 +1064,11 @@
 <div class="nt-timeline-before"></div>
 <div class="nt-timeline-items">
 <div class="nt-timeline-item">
+<p class="nt-timeline-title"><a href="coding/machine-learning/gan/">生成对抗网络</a></p>
+<span class="nt-timeline-sub-title">2024-12-24</span><p class="nt-timeline-content">生成对抗网络（Generative Adversarial Networks, GAN）是一种生成模型，它由两个神经网络组成：生成器（Generator）和判别器（Discriminator）。生成网络的目标是从样本空间<span class="arithmatex">\(\mathcal X\)</span>中生成尽可能逼真的样本<span class="arithmatex">\(\mathbb P_g\)</span>，而判别网络的目标是尽可能准确地区分真实样本的分布<span class="arithmatex">\(\mathbb P\)</span>和生成样本的分布<span class="arithmatex">\(\mathbb P_g\)</span>。两个网络的训练目标相互对抗，在对抗训练中，生成器可以学习到如何从随机噪声中重建样本。</p>
+<div class="nt-timeline-dot "></div>
+</div>
+<div class="nt-timeline-item">
 <p class="nt-timeline-title"><a href="coding/rust-jupyter/">Jupyter</a></p>
 <span class="nt-timeline-sub-title">2024-12-16</span><p class="nt-timeline-content">Rust的evcxr_jupyter包提供了对jupyter notebook的支持，可以在notebook中运行Rust代码。使用如下命令安装：</p>
 <div class="nt-timeline-dot "></div>
@@ -1108,21 +1113,16 @@
 <span class="nt-timeline-sub-title">2024-09-07</span><p class="nt-timeline-content">归一化是指将数据按照比例缩放，改变其分布。按照归一化的维度不同，可以分为以下几种：</p>
 <div class="nt-timeline-dot "></div>
 </div>
-<div class="nt-timeline-item">
-<p class="nt-timeline-title"><a href="coding/dl-from-scratch/positional-embedding/">位置编码</a></p>
-<span class="nt-timeline-sub-title">2024-09-07</span><p class="nt-timeline-content">Attention机制虽然能捕捉序列中不同位置的依赖关系，但是无法区分不同位置的元素。为了解决这个问题，Transformer模型引入了位置编码（Positional Encoding）。</p>
-<div class="nt-timeline-dot "></div>
-</div>
 </div>
 <div class="nt-timeline-after"></div>
 </div>
 <h3 id="recent-updates"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> Recent updates<a class="headerlink" href="#recent-updates" title="Permanent link">&para;</a></h3>
 <ul>
+<li>2024-12-24：<a href="coding/machine-learning/gan/">生成对抗网络</a></li>
 <li>2024-12-16：<a href="coding/rust-jupyter/">Jupyter</a>，<a href="coding/machine-learning/">机器学习</a>，<a href="coding/machine-learning/gaussian-process/">高斯过程</a></li>
 <li>2024-12-09：<a href="coding/machine-learning/bayesian-optimization/">算法</a></li>
 <li>2024-12-04：<a href="coding/dl-from-scratch/">深度学习</a>，<a href="coding/dsa/">数据结构</a>，<a href="coding/python/">Python</a>，<a href="coding/reinforcement-learning/">强化学习</a>，<a href="coding/reinforcement-learning/multi-armed-bandit/">多臂老虎机</a>，<a href="coding/reinforcement-learning/upper-confidence-bound/">置信上界算法</a>，<a href="coding/rust/">Rust</a></li>
 <li>2024-11-25：<a href="coding/dl-from-scratch/llama-2/">实现Llama-2</a>，<a href="coding/dl-from-scratch/llm-inference/">模型推理</a></li>
-<li>2024-09-07：<a href="coding/dl-from-scratch/custom_transformer/">Custom transformer</a>，<a href="coding/dl-from-scratch/normalization/">归一化</a>，<a href="coding/dl-from-scratch/positional-embedding/">位置编码</a>，<a href="coding/dl-from-scratch/transformer-variants/">transformer变种</a>，<a href="coding/dl-from-scratch/transformer/">实现transformer</a></li>
 </ul>
 <h3 id="currently-working-on"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 13h-4c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2H4l-2 5v2c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-2M6 20c-.89 0-1.34-1.08-.71-1.71S7 18.11 7 19c0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71S11 18.11 11 19c0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71S15 18.11 15 19c0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71S19 18.11 19 19c0 .55-.45 1-1 1m0-10V3H6v7H3v2h18v-2M8 5h8v1H8m0 1h6v1H8"/></svg></span> Currently working on<a class="headerlink" href="#currently-working-on" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1257,14 +1257,14 @@ build the site, execute the following command:</p>
 </ul>
 <p>Unless noted, content in this blog are shared under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0</a> license.</p>
 <h2 id="version-information"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1a6.887 6.887 0 0 0 0 9.8c2.73 2.7 7.15 2.7 9.88 0 1.36-1.35 2.04-2.92 2.04-4.9h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58a8.987 8.987 0 0 1 12.65 0L21 3zM12.5 8v4.25l3.5 2.08-.72 1.21L11 13V8z"/></svg></span> Version information<a class="headerlink" href="#version-information" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>commit 3634d38c7e95f633ed80e816b6dbfa4e3edce5ac
-Merge: 4b7d0e34 98aca170
+<div class="highlight"><pre><span></span><code>commit fd75dbc137e27e289a4b9604af5a886f80c198cd
+Merge: 594faa7a 7922c5c4
 Author: github-actions[bot] &lt;41898282+github-actions[bot]@users.noreply.github.com&gt;
-Date:   Mon Dec 16 20:57:31 2024 +0800
+Date:   Tue Dec 24 20:11:26 2024 +0800
 
-    Merge pull request #422 from HuangFuSL/rust-jupyter
+    Merge pull request #426 from HuangFuSL/gan
 
-    Update: Rust Jupyter
+    Update: Generative-adversial-network
 </code></pre></div>
 
 
@@ -1460,7 +1460,7 @@ Date:   Mon Dec 16 20:57:31 2024 +0800
     <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
         <script src="js/timeago.min.js"></script>
       
