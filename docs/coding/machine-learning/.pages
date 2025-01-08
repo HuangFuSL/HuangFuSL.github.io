@@ -4,4 +4,6 @@ nav:
   - 贝叶斯优化:
     - 高斯过程: gaussian-process.ipynb
     - 算法: bayesian-optimization.ipynb
-  - 生成对抗网络: gan.ipynb
+  - 生成对抗网络:
+    - GAN: gan.ipynb
+    - Wasserstein GAN: wgan.ipynb
