@@ -6,3 +6,4 @@ nav:
     - 算法: bayesian-optimization.ipynb
   - 生成对抗网络:
     - GAN: gan.ipynb
+    - Wasserstein GAN: wgan.ipynb
