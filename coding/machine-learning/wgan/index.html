@@ -14,7 +14,7 @@
         <link rel="prev" href="../gan/">
       
       
-        <link rel="next" href="../../dl-from-scratch/">
+        <link rel="next" href="../cgan/">
       
       
       <link rel="icon" href="../../../img/favicon.png">
@@ -1247,6 +1247,8 @@
       
         
       
+        
+      
     
     
       
@@ -1329,6 +1331,27 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cgan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditional GAN
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2141,7 +2164,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="wasserstein-gan">Wasserstein GAN<a class="anchor-link" href="#wasserstein-gan">¶</a></h1><p>Wasserstein GAN是GAN的变种。JS散度的问题在于当分布$P$和$Q$没有重叠或重叠很小时，会导致损失函数退化的现象。因此，Wasserstein GAN提出了使用Wasserstein距离来衡量生成分布和真实分布之间的差异。</p>
-<p>Wasserstein距离衡量从一个分布的分布函数变换到另一个分布的分布函数的最小成本。设$P$和$Q$时定义在$\mathbb{R}^n$上的两个分布，$P$和$Q$的分布函数分别为$P(x)$和$Q(x)$，则Wasserstein距离定义为：</p>
+<p>Wasserstein距离衡量从一个分布的分布函数变换到另一个分布的分布函数的最小成本。设$P$和$Q$是定义在$\mathbb{R}^n$上的两个分布，$P$和$Q$的分布函数分别为$P(x)$和$Q(x)$，则Wasserstein距离定义为：</p>
 <p>$$
 W_p(P, Q) = \inf_{\gamma \in \Pi(P, Q)} \mathbb{E}_{(x, y) \sim \gamma} \Vert x - y\Vert_p
 $$</p>
@@ -2183,7 +2206,7 @@ $$</p>
 <p>$$
 W_1(P, Q) = \frac 1K\sup_{\Vert f \Vert_L \leq K} \left(\mathbb{E}_{x \sim P} d(x) - \mathbb{E}_{x \sim Q} d(x)\right)
 $$</p>
-<p>其中$\Vert d \Vert_L \leq K$表示$f$是Lipschitz连续，且Lipschitz常数不超过K的函数。生成器的目标是调整生成分布$P$使得$W_1(P, Q)$最小。判别器（Critic）的目标是找到一个Lipschitz连续的函数$f$，使得$W_1(P, Q)$最大。</p>
+<p>其中$\Vert d \Vert_L \leq K$表示$f$是Lipschitz连续，且Lipschitz常数不超过K的函数。生成器的目标是调整生成分布$P$使得$W_1(P, Q)$最小。判别器（Critic）的目标是尽可能准确地衡量生成器分布和真实分布之间的Wasserstein距离，也即找到一个Lipschitz连续的函数$f$，使得$W_1(P, Q)$最大。</p>
 <p>Wasserstein GAN需要对判别器的参数进行约束。有如下方法：</p>
 <ol>
 <li>权重剪裁：对判别器的权重裁剪到一个范围$[-c, c]$。但过小的$c$会限制模型的表达能力和收敛性，过大的$c$则会使模型失去Lipschitz约束。</li>
@@ -3261,7 +3284,7 @@ for i in range(25):
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-01-08T13:38:37+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-08</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-01-08T14:14:21+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-08</span>
   </span>
 
     
