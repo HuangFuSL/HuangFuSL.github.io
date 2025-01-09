@@ -7,3 +7,4 @@ nav:
   - 生成对抗网络:
     - GAN: gan.ipynb
     - Wasserstein GAN: wgan.ipynb
+    - Conditional GAN: cgan.ipynb
