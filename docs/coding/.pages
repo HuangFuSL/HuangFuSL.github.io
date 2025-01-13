@@ -9,9 +9,7 @@ nav:
   - 算法:
     - 数据结构: dsa
     - Leetcode题解: leetcode
-  - 机器学习:
-    - 机器学习: machine-learning
-    - 强化学习: reinforcement-learning
+  - 机器学习: machine-learning
   - 其他:
     - SVG动画: svg.md
     - 系统配置: configuration

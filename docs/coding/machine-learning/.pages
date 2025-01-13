@@ -25,3 +25,6 @@ nav:
     - BERT: bert.ipynb
     - Llama-2: llama-2.ipynb
     - KV-Cache: llm-inference.md
+  - 强化学习:
+    - 多臂老虎机: multi-armed-bandit.ipynb
+    - 置信上界算法: upper-confidence-bound.md
