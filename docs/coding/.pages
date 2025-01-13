@@ -11,7 +11,6 @@ nav:
     - Leetcode题解: leetcode
   - 机器学习:
     - 机器学习: machine-learning
-    - 深度学习: dl-from-scratch
     - 强化学习: reinforcement-learning
   - 其他:
     - SVG动画: svg.md
