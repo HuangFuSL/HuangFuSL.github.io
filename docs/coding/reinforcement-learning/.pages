@@ -1,4 +1,0 @@
-nav:
-  - index.md
-  - 多臂老虎机: multi-armed-bandit.ipynb
-  - 置信上界算法: upper-confidence-bound.md

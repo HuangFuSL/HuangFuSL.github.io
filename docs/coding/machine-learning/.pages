@@ -1,6 +1,17 @@
 nav:
   - 线性模型: linear-models.ipynb
   - 决策树: decision-tree.ipynb
+  - 神经网络:
+    - 激活函数: activation.md
+    - 损失函数: loss.md
+    - 归一化: normalization.md
+    - MLP: mlp.md
+    - transformer:
+      - 注意力机制: attention.md
+      - 编码器与解码器: encoder-decoder.md
+      - transformer: transformer.ipynb
+      - 位置编码: positional-embedding.md
+      - transformer变种: transformer-variants.md
   - 贝叶斯优化:
     - 高斯过程: gaussian-process.ipynb
     - 算法: bayesian-optimization.ipynb
@@ -10,3 +21,10 @@ nav:
     - GAN: gan.ipynb
     - Wasserstein GAN: wgan.ipynb
     - Conditional GAN: cgan.ipynb
+  - 语言模型:
+    - BERT: bert.ipynb
+    - Llama-2: llama-2.ipynb
+    - KV-Cache: llm-inference.md
+  - 强化学习:
+    - 多臂老虎机: multi-armed-bandit.ipynb
+    - 置信上界算法: upper-confidence-bound.md

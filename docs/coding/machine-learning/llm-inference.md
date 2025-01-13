@@ -15,6 +15,7 @@
     S^Q &= \begin{bmatrix} Q_1 & Q_2 & \cdots & Q_n \end{bmatrix} \\
     S^K &= \begin{bmatrix} K_1 & K_2 & \cdots & K_n \end{bmatrix} \\
     S^V &= \begin{bmatrix} V_1 & V_2 & \cdots & V_n \end{bmatrix}
+    \end{aligned}
     $$
 
     注意力得分矩阵为
@@ -25,6 +26,7 @@
     Q_2K_1 & Q_2K_2 & \cdots & Q_2K_n \\
     \vdots & \vdots & \ddots & \vdots \\
     Q_nK_1 & Q_nK_2 & \cdots & Q_nK_n
+    \end{bmatrix}
     $$
 
     由于decoder的causal mask限制，最终计算的表示为
