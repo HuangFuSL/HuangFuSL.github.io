@@ -1063,6 +1063,11 @@
 <div class="nt-timeline-before"></div>
 <div class="nt-timeline-items">
 <div class="nt-timeline-item">
+<p class="nt-timeline-title"><a href="coding/machine-learning/vae/">Variational AE</a></p>
+<span class="nt-timeline-sub-title">2025-01-14</span><p class="nt-timeline-content">变分自编码器（Variational Autoencoder，VAE）的结构和AE相似，都是使用编码器对输入进行压缩，再通过解码器重建。与AE不同的是，VAE是一个生成模型而不是编码模型，它反而和GAN中的生成器是一个原理。假设数据的生成是通过一个随机分布的隐变量<span class="arithmatex">\(z\)</span>控制。即首先从一个容易采样的分布<span class="arithmatex">\(P_\theta(z)\)</span>中采样出<span class="arithmatex">\(z\)</span>，再训练一个函数<span class="arithmatex">\(f(z)\)</span>，输出条件分布<span class="arithmatex">\(P_\theta(x | z)\)</span>，从其中采样得到<span class="arithmatex">\(x\)</span>。据此，我们可以学习到输入数据<span class="arithmatex">\(x\)</span>的概率分布<span class="arithmatex">\(P_\theta (x)\)</span>，根据输入样本最大化对数似然<span class="arithmatex">\(\log P_\theta(x)\)</span>。</p>
+<div class="nt-timeline-dot "></div>
+</div>
+<div class="nt-timeline-item">
 <p class="nt-timeline-title"><a href="coding/leetcode/2270/">2270. 分割数组的方案数</a></p>
 <span class="nt-timeline-sub-title">2025-01-13</span><p class="nt-timeline-content">难度：中等</p>
 <div class="nt-timeline-dot "></div>
@@ -1107,21 +1112,16 @@
 <span class="nt-timeline-sub-title">2025-01-08</span><p class="nt-timeline-content">Wasserstein GAN是GAN的变种。JS散度的问题在于当分布<span class="arithmatex">\(P\)</span>和<span class="arithmatex">\(Q\)</span>没有重叠或重叠很小时，会导致损失函数退化的现象。因此，Wasserstein GAN提出了使用Wasserstein距离来衡量生成分布和真实分布之间的差异。</p>
 <div class="nt-timeline-dot "></div>
 </div>
-<div class="nt-timeline-item">
-<p class="nt-timeline-title"><a href="coding/leetcode/2274/">2274. 不含特殊楼层的最大连续楼层数</a></p>
-<span class="nt-timeline-sub-title">2025-01-06</span><p class="nt-timeline-content">难度：中等</p>
-<div class="nt-timeline-dot "></div>
-</div>
 </div>
 <div class="nt-timeline-after"></div>
 </div>
 <h3 id="recent-updates"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> Recent updates<a class="headerlink" href="#recent-updates" title="Permanent link">&para;</a></h3>
 <ul>
+<li>2025-01-14：<a href="coding/machine-learning/vae/">Variational AE</a></li>
 <li>2025-01-13：<a href="coding/leetcode/2270/">2270. 分割数组的方案数</a>，<a href="coding/machine-learning/activation/">激活函数</a>，<a href="coding/machine-learning/attention/">注意力机制</a>，<a href="coding/machine-learning/bert/">BERT</a>，<a href="coding/machine-learning/custom_transformer/">Custom transformer</a>，<a href="coding/machine-learning/encoder-decoder/">编码器与解码器</a>，<a href="coding/machine-learning/llama-2/">Llama-2</a>，<a href="coding/machine-learning/llm-inference/">KV-Cache</a>，<a href="coding/machine-learning/loss/">损失函数</a>，<a href="coding/machine-learning/mlp/">MLP</a>，<a href="coding/machine-learning/multi-armed-bandit/">多臂老虎机</a>，<a href="coding/machine-learning/normalization/">归一化</a>，<a href="coding/machine-learning/positional-embedding/">位置编码</a>，<a href="coding/machine-learning/transformer-variants/">transformer变种</a>，<a href="coding/machine-learning/transformer/">transformer</a>，<a href="coding/machine-learning/upper-confidence-bound/">置信上界算法</a></li>
 <li>2025-01-12：<a href="coding/leetcode/2275/">2275. 按位与结果大于零的最长组</a></li>
 <li>2025-01-11：<a href="coding/leetcode/3270/">3270. 求出数字答案</a>，<a href="coding/machine-learning/autoencoder/">Autoencoder</a></li>
 <li>2025-01-10：<a href="coding/leetcode/3298/">3298. 统计重新排列后包含另一个字符串的子字符串数目 II</a>，<a href="coding/machine-learning/cgan/">Conditional GAN</a>，<a href="coding/machine-learning/gan/">GAN</a></li>
-<li>2025-01-09：<a href="coding/leetcode/3297/">3297. 统计重新排列后包含另一个字符串的子字符串数目 I</a></li>
 </ul>
 <h3 id="currently-working-on"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 13h-4c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2H4l-2 5v2c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-2M6 20c-.89 0-1.34-1.08-.71-1.71S7 18.11 7 19c0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71S11 18.11 11 19c0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71S15 18.11 15 19c0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71S19 18.11 19 19c0 .55-.45 1-1 1m0-10V3H6v7H3v2h18v-2M8 5h8v1H8m0 1h6v1H8"/></svg></span> Currently working on<a class="headerlink" href="#currently-working-on" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1256,14 +1256,14 @@ build the site, execute the following command:</p>
 </ul>
 <p>Unless noted, content in this blog are shared under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0</a> license.</p>
 <h2 id="version-information"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1a6.887 6.887 0 0 0 0 9.8c2.73 2.7 7.15 2.7 9.88 0 1.36-1.35 2.04-2.92 2.04-4.9h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58a8.987 8.987 0 0 1 12.65 0L21 3zM12.5 8v4.25l3.5 2.08-.72 1.21L11 13V8z"/></svg></span> Version information<a class="headerlink" href="#version-information" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>commit ef6dd5c68df93d3443655a1b939f4e67284830a4
-Merge: 121df841 ffe8206c
+<div class="highlight"><pre><span></span><code>commit c43fbca79dcfee9d1f74d9dbcc00278d2fbb1f28
+Merge: ef6dd5c6 c9f54d15
 Author: github-actions[bot] &lt;41898282+github-actions[bot]@users.noreply.github.com&gt;
-Date:   Mon Jan 13 19:26:01 2025 +0800
+Date:   Wed Jan 15 00:06:18 2025 +0800
 
-    Merge pull request #443 from HuangFuSL/reorganize-ml
+    Merge pull request #444 from HuangFuSL/vae
 
-    Update: Re-organize ML section
+    Update: Variational Autoencoder
 </code></pre></div>
 
 
