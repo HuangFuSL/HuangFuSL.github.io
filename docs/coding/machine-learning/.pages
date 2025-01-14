@@ -17,6 +17,7 @@ nav:
     - 算法: bayesian-optimization.ipynb
   - 自编码器:
     - Autoencoder: autoencoder.ipynb
+    - Variational AE: vae.ipynb
   - 生成对抗网络:
     - GAN: gan.ipynb
     - Wasserstein GAN: wgan.ipynb
