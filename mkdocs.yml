@@ -65,7 +65,6 @@ extra:
     - icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/387905326
 watch:
-  - data
   - main
 plugins:
   - search:
