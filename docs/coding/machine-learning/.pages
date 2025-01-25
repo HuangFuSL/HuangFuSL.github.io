@@ -1,4 +1,5 @@
 nav:
+  - Glossary: index.md
   - 线性模型: linear-models.ipynb
   - 决策树: decision-tree.ipynb
   - 神经网络:
