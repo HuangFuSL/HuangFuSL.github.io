@@ -94,10 +94,13 @@ def build_todo() -> str:
         return '\n'.join([f"* {page['title']}" for page in pages])
     return 'TODO list is clear!'
 
-def filter_pages(category: str) -> List[Dict[str, str | Dict[str, str]]]:
-
+def filter_pages(category: str, **fields: Any) -> List[Dict[str, str | Dict[str, str]]]:
+    fields['category'] = category
     def helper(_):
-        return 'category' in _['meta'] and _['meta']['category'] == category
+        return all(
+            k in _['meta'] and _['meta'][k] == v
+            for k, v in fields.items()
+        )
     return [item for item in _page_meta_original.values() if helper(item)]
 
 
