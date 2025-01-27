@@ -10,4 +10,4 @@ mkdocs-jupyter==0.25.1
 pymdown-extensions==10.14.1
 jupyter==1.1.1
 jieba==0.42.1
-mkdocs-meta-descriptions-plugin==3.0.0
+mkdocs-meta-descriptions-plugin==4.0.0
