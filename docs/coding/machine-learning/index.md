@@ -6,25 +6,37 @@
 
 ### A/B Test
 
-### Activation
+### Activation Function
 
-**激活函数（Activation function）**是神经网络中用于引入非线性因素的函数。常用的激活函数为Sigmoid函数、ReLU函数等。
+**激活函数（Activation Function）**是神经网络中用于引入非线性因素的函数。常用的激活函数为[sigmoid](#sigmoid-function)、[ReLU](#rectified-linear-unit)等。
 
-* [激活函数](activation.md)
+[softmax](#softmax-function)严格意义上也算作激活函数，但它常用于神经网络的输出层，将输出值映射到概率空间。
 
 ### Action
 
 ### Active Learning
 
+### Actor-Critic
+
+### Adam
+
 ### Adaptor Tuning
+
+### Advantage
+
+### Adversarial Examples
+
+### Adversarial Training
 
 ### Agent (LLM)
 
 ### Agent (RL)
 
+### Alignment
+
 ### Attention
 
-**注意力机制（Attention Mechanism）**是一种序列建模方式。首先，序列被建模成查询（Query）、键（Key）和值（Key）三种表示。通过查询、键的匹配得分，为值分配权重，从而实现对序列的建模。其数学表达为：
+**注意力机制（Attention Mechanism）**是一种序列建模方式，由Vaswani等人提出[^transformer]。首先，序列被建模成查询（Query）、键（Key）和值（Key）三种表示。通过查询、键的匹配得分，通过[softmax](#softmax-function)为值分配权重，从而实现对序列的建模。其数学表达为：
 
 $$
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{\bsQ\bsK^\top}{\sqrt{d_k}}\right)\bsV
@@ -34,9 +46,11 @@ $$
 
 ### Autoencoder
 
-**自编码器（Autoencoder, AE）**是一种数据压缩方式，它通过编码器（encoder）将数据压缩为更低维度的隐向量表示，再尝试用解码器（decoder）复原为原始的数据输入。模型通过最小化低维隐向量重建后的数据和原数据之间的差异，以保证编码器生成的隐向量有重建原始数据所需的必要信息。
+**自编码器（Autoencoder, AE）**是一种数据压缩方式，它通过编码器（encoder）将数据压缩为更低维度的隐向量表示，再尝试用解码器（decoder）复原为原始的数据输入。模型通过[均方误差](#mean-squared-error)最小化低维隐向量重建后的数据和原数据之间的差异，以保证编码器生成的隐向量有重建原始数据所需的必要信息。
 
-* [Autoencoder](autoencoder.ipynb)
+相关实现：
+
+* [Autoencoder on MNIST](autoencoder.ipynb)
 
 ### Auto-regression
 
@@ -50,9 +64,13 @@ $$
 
 常用的对函数建模的方式为[高斯过程](#gaussian-process)。高斯过程通过核函数，假设了目标函数的形状。
 
-* [算法流程](bayesian-optimization.ipynb)
+相关实现：
+
+* [贝叶斯优化](bayesian-optimization.ipynb)
 
 ### Bayesian Preference Ranking
+
+### Beam Search
 
 ### Bernoulli Distribution
 
@@ -60,11 +78,17 @@ $$
 
 ### Beta Distribution
 
+### Bias-Variance Trade-off
+
 ### Bilingual Evaluation Understudy
 
 ### Bootstrap
 
+### Byte Pair Encoding
+
 ## C
+
+### Catastrophic Forgetting
 
 ### Chain-of-Thoughts
 
@@ -92,15 +116,57 @@ $$
 
 其中$x, x^\plus$为相似的样本，$x^-$为和$x, x^\plus$不相似的样本。
 
-### Convolution
+### Convolution Neural Network
 
 ### Cross Attention
 
 ### Cross Entropy
 
+**交叉熵（Cross Entropy）**是两个分布之间的差异度量。
+
+$$
+\text{CE}(P, Q) = -\int P(x)\log Q(x)dx
+$$
+
+交叉熵可以由[KL散度](#kl-divergence)推导而来，下式中$H(P)$为分布$P$的[熵](#entropy)。
+
+$$
+\begin{aligned}
+\text{KL}(P||Q) &= \int P(x)\log\frac{P(x)}{Q(x)}dx \\
+&= \int P(x)\log P(x)dx - \int P(x)\log Q(x)dx \\
+&= H(P) - \text{CE}(P, Q)
+\end{aligned}
+$$
+
+交叉熵损失是用于分类任务的[损失函数](#loss-function)，其中$P$为真实分布（经验分布），$Q$为模型预测分布，最小化交叉熵等价于最小化$\text{KL}(P\Vert Q)$。
+
+* 对于二分类任务，交叉熵定义为：
+
+    $$
+    \calL = -\frac{1}{n}\sum_{i=1}^{n} y_i\log p_i + (1 - y_i)\log(1 - p_i)
+    $$
+
+    其中，$y_i$是第$i$个样本的真实标签，$p_i$是模型预测第$i$个样本为正样本的概率，$n$是样本数量。
+
+* 对于多分类任务，交叉熵定义为：
+
+    $$
+    \calL = -\frac{1}{n}\sum_{i=1}^{n}\sum_{j=1}^{m} \boldsymbol1_{\{y_i = j\}}\cdot\log p_{ij}
+    $$
+
+    其中，$y_{i}$是第$i$个样本的真实标签，$p_{ij}$是模型预测第$i$个样本为第$j$类的概率，$n$是样本数量，$m$是类别数量。
+
+另外，从似然角度出发，交叉熵反映了模型预测概率的负对数[似然](#likelihood)。
+
 ### Cross Validation
 
+### Curse of Dimensionality
+
 ## D
+
+### Data Augmentation
+
+### Data Imbalance
 
 ### Data Parallelism
 
@@ -112,6 +178,8 @@ $$
 
 ### Decoder
 
+### Deep Q Network
+
 ### Diffusion Model
 
 ### Direct Preference Optimization
@@ -122,7 +190,11 @@ $$
 
 ### Dropout
 
+### Dynamic Programming
+
 ## E
+
+### Early Stopping
 
 ### Embedding
 
@@ -133,6 +205,8 @@ $$
 ### Environment
 
 ### Evidence Lower Bound
+
+### Experience Replay
 
 ### Experimental Distribution
 
@@ -148,6 +222,8 @@ $$
 
 ### Feedback Loop
 
+### Feedforward Neural Network
+
 ### Few-shot Learning
 
 ### Few-shot Prompting
@@ -158,13 +234,43 @@ $$
 
 ### Gaussian Distribution
 
+**高斯分布（Gaussian Distribution）**，又称正态分布（Normal Distribution），是一种连续概率分布。
+
+* 均值为$\mu$，方差为$\sigma^2$的一元高斯分布的概率密度函数为：
+
+    $$
+    f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x - \mu)^2}{2\sigma^2}}
+    $$
+
+    标准正态分布的均值为0，方差为1，概率密度函数简写作$\phi(x)$，累积分布函数简写作$\Phi(x)$。
+
+* 均值为$\boldsymbol\mu$，方差为$\Sigma$的多元高斯分布的概率密度函数为：
+
+    $$
+    f(\bsx) = \frac{1}{(2\pi)^{d/2}|\Sigma|^{1/2}}e^{-\frac{1}{2}(\bsx - \boldsymbol\mu)^\top\Sigma^{-1}(\bsx - \boldsymbol\mu)}
+    $$
+
+高斯分布满足如下性质：
+
+1. 若随机变量$X$服从高斯分布$\mathcal N(\mu, \sigma^2)$，经过线性变换$Y = aX + b$后，$Y$仍然服从高斯分布$\mathcal N(a\mu + b, a^2\sigma^2)$。
+2. 若随机变量$X_1, X_2$相互独立且分别服从高斯分布$\mathcal N(\mu_1, \sigma_1^2)$和$\mathcal N(\mu_2, \sigma_2^2)$，则$X_1 + X_2$服从高斯分布$\mathcal N(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)$。
+3. 多元高斯分布的条件分布依然是高斯分布。设随机变量$X = (X_1, X_2)$服从多元高斯分布$\mathcal N(\mu, \Sigma)$，其中$\mu = (\mu_1, \mu_2)$，$\Sigma = \begin{bmatrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{bmatrix}$，则给定$X_1 = x_1$后，$X_2$的条件分布为：
+
+    $$
+    (X_2\mid X_1 = x_1) \sim \mathcal N(\mu_2 + \Sigma_{21}\Sigma_{11}^{-1}(x_1 - \mu_1), \Sigma_{22} - \Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12})
+    $$
+
 ### Gaussian Process
 
+**高斯过程（Gaussian Process，GP）**是将[多变量高斯分布](#gaussian-distribution)推广到无限维度$\mathcal X\subseteq \mathbb R^n$的概率分布。它的核心思想是用概率的方法描述函数在每一个点处的分布，从而能够对任意位置函数值进行推断和不确定性量化。总体来看，高斯分布研究的是函数的概率分布，常用于[贝叶斯优化](#bayesian-optimization)、[回归任务](#regression)等。
+
+具体地，对于$\bsx = \{x_1, \ldots, x_n\}\subseteq \mathcal X$，高斯分布假设函数在这些点的观测值$Y_1 = f(x_1), \ldots, Y_n = f(x_n)$是随机变量，并且服从某个受自变量$\bsx$影响的多元高斯分布$\mathcal N(\mu(\bsx), \Sigma(\bsx))$。其中，$\mu(\bsx)$为均值函数，$\Sigma(\bsx)$为协方差函数。
+
+高斯过程的核心是[核函数](#kernel-function)。核函数定义了自变量之间的相似性，通过协方差矩阵反映函数值之间的相关性。高斯分布的条件分布依然是高斯分布，借助于均值函数和协方差矩阵，我们就可以推断函数在新位置的分布。
+
+相关实现：
+
 * [高斯过程](gaussian-process.ipynb)
-
-相关主题：
-
-* [Bayesian Optimization](#bayesian-optimization)
 
 ### Generalized Linear Models
 
@@ -172,15 +278,29 @@ $$
 
 ### Generative Adversarial Network
 
-* [生成对抗网络](gan.ipynb)
-* [WGAN](wgan.ipynb)
-* [Conditional GAN](cgan.ipynb)
+* [生成对抗网络](gan.ipynb)[^gan]
+* [WGAN](wgan.ipynb)[^wgan][^wgan-gp]
+* [Conditional GAN](cgan.ipynb)[^cgan]
 
 ### Generative Model
 
 ### Generator
 
+### Gibbs Sampling
+
 ### Gradient Boosted Trees
+
+### Gradient Clipping
+
+### Gradient Exploding
+
+### Gradient Vanishing
+
+### Graph Convolution
+
+### Graph Neural Network
+
+### Group Relative Policy Optimization
 
 ### Grouped Query Attention
 
@@ -191,6 +311,8 @@ $$
 ### Hyperparameter
 
 ## I
+
+### Importance Sampling
 
 ### In-Context Learning
 
@@ -206,11 +328,17 @@ $$
 
 ### Knowledge Distillation
 
+### Knowledge Graph
+
 ### KV-Cache
 
 ## L
 
+### Label Smoothing
+
 ### Language Model
+
+### Lasso Regression
 
 ### Latent Dirichlet Allocation
 
@@ -236,6 +364,12 @@ $$
 
 ### Loss Function
 
+**损失函数（Loss Function）**是用来评价模型预测值与真实值之间的差异的函数。可以借助随机梯度下降等优化算法来调整模型的参数，使得损失函数的值最小。对于不同的机器学习任务，损失函数的选择也不同。常用的损失函数有：
+
+* 回归任务：[平均绝对误差](#mean-absolute-error)、[均方误差](#mean-squared-error)或[均方根误差](#root-mean-squared-error)
+* 多分类任务：[交叉熵](#cross-entropy)
+* 二分类任务：[二分类交叉熵](#cross-entropy)
+
 ### Low Rank Adaptation
 
 ## M
@@ -250,15 +384,56 @@ $$
 
 ### Mean Absolute Error
 
+**平均绝对误差（Mean Absolute Error, MAE）**，又称L1 Loss。计算预测值与真实值之间的绝对差的均值。是在[回归任务](#regression)中使用的[损失函数](#loss-function)。
+
+$$
+\begin{aligned}
+L(y, t) &= \frac{1}{2} \sum_{i=1}^{n} |y_i - t_i| \\
+\frac{\partial L}{\partial y_i} &= \begin{cases}
+1, & y_i > t_i \\
+-1, & y_i < t_i \\
+0, & y_i = t_i
+\end{cases}
+\end{aligned}
+$$
+
+其中，$y_i$ 是模型对第$i$个样本的预测值，$t_i$ 是第$i$个样本真实值，$n$ 是样本数量。
+
 ### Mean Squared Error
+
+**均方误差（Mean Squared Error, MSE）**，又称L2 Loss，是[回归任务](#regression)中常用的[损失函数](#loss-function)。它计算的是预测值与真实值之间的平方差的均值。
+
+$$
+\begin{aligned}
+L(y, t) &= \frac{1}{2} \sum_{i=1}^{n} (y_i - t_i)^2 \\
+\frac{\partial L}{\partial y_i} &= y_i - t_i
+\end{aligned}
+$$
+
+其中，$y_i$ 是模型对第$i$个样本的预测值，$t_i$ 是第$i$个样本真实值，$n$ 是样本数量。
+
+[最小二乘法](#ordinary-least-squares)即是通过均方误差进行优化的线性回归方法。
+
+### Meta Learning
+
+**元学习（Meta Learning）**，又称为“学会学习”（Learning to Learn），是一种机器学习范式。元学习针对机器学习模型难以适应新任务或新场景的问题。其核心目标是让模型具备快速适应新任务或新场景的能力，尤其是在数据稀缺的情况下。通过学习多个任务中的共性知识（元知识），使模型在面对新任务时仅需少量样本即可高效调整参数。元学习通常分为如下三个范式：
+
+1. **Optimization-based Meta Learning**：通过在多个任务上迭代优化模型参数，使模型只需要少量的迭代更新，即具备适应新任务的能力。
+2. **Memory-based Meta Learning**：通过记忆历史任务的信息，使模型在面对新任务时能够检索利用相关历史任务的知识辅助适应新的任务。
+3. **Black-box Adaptation Meta Learning**：元模型直接为子任务的模型生成参数。
+4. **Metric-based Meta Learning**：通过度量学习的方式，学习任务之间的相似性，从而在新任务上快速适应。
 
 ### Mixture-of-Experts
 
 ### Model Parallelism
 
+### Monte Carlo Sampling
+
 ### Multi-armed Bandit
 
 ### Multi-Head Attention
+
+### Multi-Head Latent Attention
 
 ### Multi-Layer Perceptron
 
@@ -280,13 +455,21 @@ $$
 
 ### Online
 
+### Ordinary Least Squares
+
 ### Overfitting
 
+### Overflow
+
 ## P
+
+### Parameter Efficient Fine-Tuning
 
 ### Perplexity
 
 ### Policy
+
+### Policy Gradient
 
 ### Pooling
 
@@ -310,13 +493,29 @@ $$
 
 ### Recall
 
-### Reward
-
 ### Recommender System
 
 ### Rectified Linear Unit
 
+**ReLU（Rectified Linear Unit）**是一种常用的[激活函数](#activation-function)，由Hinton等人在2010年提出[^relu]。ReLU函数将输入值小于0的部分置为0，大于0的部分保持不变。
+
+$$
+\begin{aligned}
+\text{ReLU}(x) &= \max(0, x) \\
+\text{ReLU}'(x) &= \begin{cases}
+1, & x > 0 \\
+0, & x \leq 0
+\end{cases}
+\end{aligned}
+$$
+
 ### Recurrent Neural Network
+
+### Residual (Regression)
+
+### Residual Connection
+
+### Reward
 
 ### Regression
 
@@ -326,7 +525,13 @@ $$
 
 ### Reinforcement Learning from Human Feedback
 
+### Rejection Sampling
+
+### Representation Learning
+
 ### Retrieval Augmented Generation
+
+### Ridge Regression
 
 ### ROC Curve
 
@@ -344,11 +549,43 @@ $$
 
 ### Self-Supervised Learning
 
+### Sequence-to-Sequence
+
 ### Sigmoid Function
+
+**Sigmoid函数**是一个将输入值压缩到0到1之间的函数，用$\sigma$表示。Sigmoid函数常用于二分类问题中，将输出值映射到概率空间。Sigmoid也常作为[激活函数](#activation-function)，用于引入非线性因素。
+
+$$
+\begin{aligned}
+\sigma(x) &= \frac{1}{1 + e^{-x}} \\
+\sigma'(x) &= \sigma(x)(1 - \sigma(x))
+\end{aligned}
+$$
+
+Sigmoid函数在输入值较大或较小时，梯度会接近于0，导致[梯度消失](#gradient-vanishing)问题。
 
 ### Softmax Function
 
+Softmax函数是一个将输入值压缩到0到1之间的函数，常用于多分类问题中，将模型在多个分类上的预测评分映射到在多个分类上的概率分布，所有类别的概率之和为1。
+
+$$
+\begin{aligned}
+\text{softmax}(\bsz)_i &= \frac{e^{z_i}}{\sum_{j=1}^n e^{z_j}} \\
+\text{softmax}'(\bsz)_i &= \text{softmax}(\bsz)_i(1 - \text{softmax}(\bsz)_i)
+\end{aligned}
+$$
+
+相对应的，softmin函数是softmax函数的对称函数，用于最小化输出值，$\text{softmin}(\bsz) = \text{softmax}(-\bsz)$。
+
+Softmax函数在输入值较大或较小时，梯度会接近于0，导致[梯度消失](#gradient-vanishing)问题。另外，输入值过大可能会导致[上溢](#overflow)问题。
+
+### Speculative Sampling
+
 ### State-of-the-Art
+
+**State of the Art**指当前最先进的模型或方法，能够在特定给定的任务或数据集上取得最好的性能。
+
+### Stochastic Gradient Descent
 
 ### Supervised Fine-Tuning
 
@@ -358,7 +595,11 @@ $$
 
 ## T
 
+### Token
+
 ### Topic Model
+
+### Transfer Learning
 
 ### Transformer
 
@@ -368,9 +609,11 @@ $$
 
 ## V
 
+### Value Function
+
 ### Variational Autoencoder
 
-相关主题：
+相关主题[^vae-tutorial]：
 
 * [Autoencoder](#autoencoder)
 
@@ -380,8 +623,22 @@ $$
 
 ### Wasserstein Distance
 
+## X
+
+### XGBoost
+
 ## Z
+
+### ZeRO
 
 ### Zero-Shot Learning
 
 ### Zero-Shot Prompting
+
+[^cgan]: M. Mirza and S. Osindero, “Conditional generative adversarial nets,” 11 2014.
+[^gan]: I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Ben- gio, “Generative adversarial nets,” in Advances in Neural Information Processing Systems (Z. Ghahra- mani, M. Welling, C. Cortes, N. Lawrence, and K. Weinberger, eds.), vol. 27, Curran Associates, Inc., 2014.
+[^relu]: V. Nair and G. E. Hinton, “Rectified linear units improve restricted boltzmann machines,” in Proceedings of the 27th international conference on machine learning (ICML-10), pp. 807–814, 2010.
+[^transformer]: A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin, “Attention is all you need,” 06 2017.
+[^vae-tutorial]: D. P. Kingma and M. Welling, “An introduction to variational autoencoders,” Foundations and Trends in Machine Learning: Vol. 12 (2019): No. 4, pp 307-392, 06 2019.
+[^wgan]: M. Arjovsky, S. Chintala, and L. Bottou, “Wasserstein gan,” 01 2017.
+[^wgan-gp]: I. Gulrajani, F. Ahmed, M. Arjovsky, V. Dumoulin, and A. Courville, “Improved training of wasserstein gans,” 04 2017.
