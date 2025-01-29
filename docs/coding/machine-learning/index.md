@@ -4,6 +4,8 @@
 
 ### Ablation
 
+**消融实验（Ablation Study）**是一种通过逐步剔除模型的某些组件，来评估组件对模型性能的影响的实验。消融实验常用于评估模型的可解释性，或者验证模型的某些组件对模型性能的贡献。
+
 ### A/B Test
 
 ### Activation Function
@@ -42,6 +44,8 @@ $$
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{\bsQ\bsK^\top}{\sqrt{d_k}}\right)\bsV
 $$
 
+### Attention Mask
+
 ### AUC
 
 ### Autoencoder
@@ -74,9 +78,21 @@ $$
 
 ### Bernoulli Distribution
 
+### Bernoulli Trial
+
 ### BERT
 
 ### Beta Distribution
+
+**Beta分布（Beta Distribution）**是一个定义在区间$[0, 1]$上的连续概率分布。Beta分布的概率密度函数为：
+
+$$
+f(x\mid\alpha, \beta) = \frac{x^{\alpha - 1}(1 - x)^{\beta - 1}}{B(\alpha, \beta)}
+$$
+
+其中，$B(\alpha, \beta)$为Beta函数，$\alpha, \beta$为分布的两个参数。Beta分布是二项分布的[共轭先验](#conjugate-prior)。Beta分布$\calB(\alpha, \beta)$的均值为$\frac{\alpha}{\alpha + \beta}$，方差为$\frac{\alpha\beta}{(\alpha + \beta)^2(\alpha + \beta + 1)}$。Beta分布描述了在[博努利试验](#bernoulli-trial)试验中，观测到$\alpha - 1$次成功和$\beta - 1$次失败后，成功概率$p$的分布。
+
+### Bias (Parameter)
 
 ### Bias-Variance Trade-off
 
@@ -90,6 +106,8 @@ $$
 
 ### Catastrophic Forgetting
 
+### Causal Decoder
+
 ### Chain-of-Thoughts
 
 ### Classification
@@ -99,6 +117,12 @@ $$
 ### Cold-Start Problem
 
 ### Collaborative Filtering
+
+### Conditional Random Field
+
+### Confidence Interval
+
+### Conjugate Prior
 
 ### Contrastive Learning
 
@@ -116,7 +140,11 @@ $$
 
 其中$x, x^\plus$为相似的样本，$x^-$为和$x, x^\plus$不相似的样本。
 
+### Controlled Decoding
+
 ### Convolution Neural Network
+
+### Cosine Similarity
 
 ### Cross Attention
 
@@ -178,6 +206,8 @@ $$
 
 ### Decoder
 
+### Decoder-only
+
 ### Deep Q Network
 
 ### Diffusion Model
@@ -199,6 +229,12 @@ $$
 ### Embedding
 
 ### Encoder
+
+### Encoder-Decoder
+
+### Encoder-only
+
+### End-to-End
 
 ### Entropy
 
@@ -296,6 +332,8 @@ $$
 
 ### Gradient Vanishing
 
+### Graph
+
 ### Graph Convolution
 
 ### Graph Neural Network
@@ -316,6 +354,8 @@ $$
 
 ### In-Context Learning
 
+### Inner Product
+
 ## K
 
 ### Kernel Function
@@ -329,6 +369,12 @@ $$
 ### Knowledge Distillation
 
 ### Knowledge Graph
+
+**知识图谱（Knowledge Graph）**是一种用于表示实体之间关系的[图](#graph)结构[^knowledge-graph]。知识图谱中的节点表示实体，边表示实体之间的关系。知识图谱常用于知识表示、知识推理等任务。
+
+两个节点$L, R$和连接他们的边$E$构成一个三元组$(L, E, R)$，表示$L$和$R$之间存在关系$E$。如三元组$(\text{北京}, \text{首都}, \text{中国})$表示“北京是中国的首都”。
+
+知识图谱的构建可以通过自动化的方式，如从文本中抽取实体和关系，或者通过人工标注的方式。
 
 ### KV-Cache
 
@@ -427,6 +473,8 @@ $$
 
 ### Model Parallelism
 
+### Model Pruning
+
 ### Monte Carlo Sampling
 
 ### Multi-armed Bandit
@@ -463,7 +511,13 @@ $$
 
 ## P
 
+### Padding
+
 ### Parameter Efficient Fine-Tuning
+
+**参数高效微调（Parameter Efficient Fine-Tuning）**是一种用于[预训练模型](#pretrained-model)的微调方法。传统的微调方法是直接在预训练模型的基础上添加一个分类头，然后在目标任务上进行端到端的微调。此类微调方法在预训练模型参数较多时，由于优化器需要保存所有训练参数的中间状态，训练的空间和时间开销较大。为解决这一问题，出现了参数高效微调方法。这类方法在预训练模型的基础上添加一个小的参数集，然后锁定预训练模型的参数，只训练新添加的参数集。通过减少需要微调的参数数量，参数高效微调实现了在利用预训练模型的基础上，减少微调的计算量和存储需求。
+
+常见的参数高效微调方法有[LoRA](#low-rank-adaptation)、[Adaptor Tuning](#adaptor-tuning)等。
 
 ### Perplexity
 
@@ -476,6 +530,12 @@ $$
 ### Positional Embedding
 
 ### Precision
+
+### Prefix Decoder
+
+### Prefix Tuning
+
+### Pretrained Model
 
 ### Prompt
 
@@ -491,7 +551,9 @@ $$
 
 ### Random Forest
 
-### Recall
+### Recall (Metric)
+
+### Recall (Recommender System)
 
 ### Recommender System
 
@@ -548,6 +610,8 @@ $$
 ### Self Attention
 
 ### Self-Supervised Learning
+
+### Sequence Mask
 
 ### Sequence-to-Sequence
 
@@ -619,6 +683,8 @@ Softmax函数在输入值较大或较小时，梯度会接近于0，导致[梯�
 
 ### Variational Distribution
 
+### Vector Quantization
+
 ## W
 
 ### Wasserstein Distance
@@ -637,6 +703,7 @@ Softmax函数在输入值较大或较小时，梯度会接近于0，导致[梯�
 
 [^cgan]: M. Mirza and S. Osindero, “Conditional generative adversarial nets,” 11 2014.
 [^gan]: I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Ben- gio, “Generative adversarial nets,” in Advances in Neural Information Processing Systems (Z. Ghahra- mani, M. Welling, C. Cortes, N. Lawrence, and K. Weinberger, eds.), vol. 27, Curran Associates, Inc., 2014.
+[^knowledge-graph]: Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia D’amato, Gerard De Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, and Antoine Zimmermann. 2021. Knowledge Graphs. ACM Comput. Surv. 54, 4, Article 71 (May 2022), 37 pages. https://doi.org/10.1145/3447772
 [^relu]: V. Nair and G. E. Hinton, “Rectified linear units improve restricted boltzmann machines,” in Proceedings of the 27th international conference on machine learning (ICML-10), pp. 807–814, 2010.
 [^transformer]: A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin, “Attention is all you need,” 06 2017.
 [^vae-tutorial]: D. P. Kingma and M. Welling, “An introduction to variational autoencoders,” Foundations and Trends in Machine Learning: Vol. 12 (2019): No. 4, pp 307-392, 06 2019.
