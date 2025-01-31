@@ -13,6 +13,8 @@ nav:
       - transformer: transformer.ipynb
       - 位置编码: positional-embedding.md
       - transformer变种: transformer-variants.md
+  - 概率分布采样:
+    - Box-Muller变换: box-muller-transform.ipynb
   - 贝叶斯优化:
     - 高斯过程: gaussian-process.ipynb
     - 算法: bayesian-optimization.ipynb
