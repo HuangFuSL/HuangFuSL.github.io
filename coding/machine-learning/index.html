@@ -2440,6 +2440,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#disentangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disentangle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#dropout" class="md-nav__link">
     <span class="md-ellipsis">
       Dropout
@@ -2911,6 +2920,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#instruct-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruct Tuning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#inverse-transform-sampling" class="md-nav__link">
     <span class="md-ellipsis">
       Inverse Transform Sampling
@@ -2947,6 +2965,15 @@
   <a href="#jacobian-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       Jacobian Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jensen-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jensen Inequality
     </span>
   </a>
   
@@ -3289,6 +3316,15 @@
   <a href="#meta-learning" class="md-nav__link">
     <span class="md-ellipsis">
       Meta Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meteor" class="md-nav__link">
+    <span class="md-ellipsis">
+      METEOR
     </span>
   </a>
   
@@ -3730,6 +3766,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#recall-oriented-understudy-for-gisting-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recall-Oriented Understudy for Gisting Evaluation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#recommender-system" class="md-nav__link">
     <span class="md-ellipsis">
       Recommender System
@@ -3874,7 +3919,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recall-oriented-understudy-for-gisting-evaluation" class="md-nav__link">
+  <a href="#recall-oriented-understudy-for-gisting-evaluation_1" class="md-nav__link">
     <span class="md-ellipsis">
       Recall-Oriented Understudy for Gisting Evaluation
     </span>
@@ -4257,6 +4302,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#zero-sum-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zero Sum Game
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4319,6 +4373,7 @@
 <h2 id="b">B<a class="headerlink" href="#b" title="Permanent link">&para;</a></h2>
 <h3 id="bag-of-words">Bag-of-Words<a class="headerlink" href="#bag-of-words" title="Permanent link">&para;</a></h3>
 <h3 id="baseline">Baseline<a class="headerlink" href="#baseline" title="Permanent link">&para;</a></h3>
+<p><strong>基线（Baseline）</strong>是一种用于评估模型性能的方法。基线模型通常是一种简单的模型，用于评估新模型的性能是否优于基线模型。基线模型可以是一个简单的线性模型、随机模型，或是已有的<a href="#state-of-the-art">SOTA</a>模型。</p>
 <h3 id="bayesian-optimization">Bayesian Optimization<a class="headerlink" href="#bayesian-optimization" title="Permanent link">&para;</a></h3>
 <p><strong>贝叶斯优化（Bayesian Optimization, BO）</strong>是一类仅依赖于对函数值的观测，寻找函数最值的优化算法。贝叶斯优化算法的核心是通过有限次对函数的观测，对<em>目标函数</em>建立概率估计，通过此概率估计找到下一个用于观测的点。优化算法通过不断尝试，借助概率估计找到函数的最优值。贝叶斯算法是一种<a href="#active-learning">主动学习</a>算法，适合于目标函数为黑盒且计算复杂的情况，如<a href="#hyperparameter">超参数</a>优化。</p>
 <p>常用的对函数建模的方式为<a href="#gaussian-process">高斯过程</a>。高斯过程通过核函数，假设了目标函数的形状。</p>
@@ -4329,7 +4384,12 @@
 <h3 id="bayesian-preference-ranking">Bayesian Preference Ranking<a class="headerlink" href="#bayesian-preference-ranking" title="Permanent link">&para;</a></h3>
 <h3 id="beam-search">Beam Search<a class="headerlink" href="#beam-search" title="Permanent link">&para;</a></h3>
 <h3 id="bernoulli-distribution">Bernoulli Distribution<a class="headerlink" href="#bernoulli-distribution" title="Permanent link">&para;</a></h3>
+<p><strong>伯努利分布（Bernoulli Distribution）</strong>是一种只有两种结果的离散概率分布。参数<span class="arithmatex">\(p\)</span>为成功（<span class="arithmatex">\(X = 1\)</span>）的概率。伯努利分布的概率质量函数为：</p>
+<div class="arithmatex">\[
+f(X = x\mid p) = p^x(1 - p)^{1 - x}
+\]</div>
 <h3 id="bernoulli-trial">Bernoulli Trial<a class="headerlink" href="#bernoulli-trial" title="Permanent link">&para;</a></h3>
+<p><strong>伯努利试验（Bernoulli Trial）</strong>是一种只有两种结果的随机试验，如抛硬币、掷骰子等。伯努利试验的特点是每次试验的结果只有两种可能，成功（概率为<span class="arithmatex">\(p\)</span>）和失败（概率为<span class="arithmatex">\(1 - p\)</span>），服从<a href="#bernoulli-distribution">伯努利分布</a><span class="arithmatex">\(\text{Bernoulli}(p)\)</span>。</p>
 <h3 id="bert">BERT<a class="headerlink" href="#bert" title="Permanent link">&para;</a></h3>
 <h3 id="beta-distribution">Beta Distribution<a class="headerlink" href="#beta-distribution" title="Permanent link">&para;</a></h3>
 <p><strong>Beta分布（Beta Distribution）</strong>是一个定义在区间<span class="arithmatex">\([0, 1]\)</span>上的连续概率分布。Beta分布的概率密度函数为：</p>
@@ -4371,7 +4431,7 @@ f(x\mid\alpha, \beta) = \frac{x^{\alpha - 1}(1 - x)^{\beta - 1}}{B(\alpha, \beta
 <h3 id="cosine-similarity">Cosine Similarity<a class="headerlink" href="#cosine-similarity" title="Permanent link">&para;</a></h3>
 <h3 id="cross-attention">Cross Attention<a class="headerlink" href="#cross-attention" title="Permanent link">&para;</a></h3>
 <h3 id="cross-entropy">Cross Entropy<a class="headerlink" href="#cross-entropy" title="Permanent link">&para;</a></h3>
-<p><strong>交叉熵（Cross Entropy）</strong>是两个分布之间的差异度量。</p>
+<p><strong>交叉熵（Cross Entropy）</strong>是两个分布之间的差异度量。从信息论的角度出发理解，交叉熵衡量的是用分布<span class="arithmatex">\(Q\)</span>来表示分布<span class="arithmatex">\(P\)</span>的平均编码长度。由于<span class="arithmatex">\(P\)</span>和<span class="arithmatex">\(Q\)</span>的分布不同，用<span class="arithmatex">\(Q\)</span>来编码<span class="arithmatex">\(P\)</span>的信息会导致信息损失，即平均编码长度要高于<span class="arithmatex">\(P\)</span>的<a href="#entropy">熵</a>。</p>
 <div class="arithmatex">\[
 \text{CE}(P, Q) = -\int P(x)\log Q(x)dx
 \]</div>
@@ -4419,6 +4479,7 @@ f(x\mid\alpha, \beta) = \frac{x^{\alpha - 1}(1 - x)^{\beta - 1}}{B(\alpha, \beta
 <h3 id="direct-preference-optimization">Direct Preference Optimization<a class="headerlink" href="#direct-preference-optimization" title="Permanent link">&para;</a></h3>
 <h3 id="discriminative-model">Discriminative Model<a class="headerlink" href="#discriminative-model" title="Permanent link">&para;</a></h3>
 <h3 id="discriminator">Discriminator<a class="headerlink" href="#discriminator" title="Permanent link">&para;</a></h3>
+<h3 id="disentangle">Disentangle<a class="headerlink" href="#disentangle" title="Permanent link">&para;</a></h3>
 <h3 id="dropout">Dropout<a class="headerlink" href="#dropout" title="Permanent link">&para;</a></h3>
 <h3 id="dynamic-programming">Dynamic Programming<a class="headerlink" href="#dynamic-programming" title="Permanent link">&para;</a></h3>
 <h2 id="e">E<a class="headerlink" href="#e" title="Permanent link">&para;</a></h2>
@@ -4428,6 +4489,8 @@ f(x\mid\alpha, \beta) = \frac{x^{\alpha - 1}(1 - x)^{\beta - 1}}{B(\alpha, \beta
 <h3 id="encoder-decoder">Encoder-Decoder<a class="headerlink" href="#encoder-decoder" title="Permanent link">&para;</a></h3>
 <h3 id="encoder-only">Encoder-only<a class="headerlink" href="#encoder-only" title="Permanent link">&para;</a></h3>
 <h3 id="end-to-end">End-to-End<a class="headerlink" href="#end-to-end" title="Permanent link">&para;</a></h3>
+<p><strong>端到端（End-to-End）</strong>是一种将整个系统作为一个整体进行优化的方法。在机器学习中，端到端学习指的是将输入数据直接映射到输出数据的过程，而<strong>不需要人工进行特征提取等特征工程</strong>。端到端学习的优点是无需人工干预，可以直接从训练数据中学习到模型所需的特征。端到端学习的缺点是模型的复杂度较高，训练时间较长；模型的可解释性较差；要求更高质量的训练数据。</p>
+<p>如：transformer模型<sup id="fnref2:transformer"><a class="footnote-ref" href="#fn:transformer">5</a></sup>最初的设计用于机器翻译任务，将输入的源语言句子直接映射到目标语言句子，不需要人工提取特征。</p>
 <h3 id="entropy">Entropy<a class="headerlink" href="#entropy" title="Permanent link">&para;</a></h3>
 <h3 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h3>
 <h3 id="euclidean-distance">Euclidean Distance<a class="headerlink" href="#euclidean-distance" title="Permanent link">&para;</a></h3>
@@ -4486,10 +4549,15 @@ f(\bsx) = \frac{1}{(2\pi)^{d/2}|\Sigma|^{1/2}}e^{-\frac{1}{2}(\bsx - \boldsymbol
 <li><a href="linear-models/">线性模型</a></li>
 </ul>
 <h3 id="generative-adversarial-network">Generative Adversarial Network<a class="headerlink" href="#generative-adversarial-network" title="Permanent link">&para;</a></h3>
+<p><strong>生成对抗网络（Generative Adversarial Networks, GAN）</strong>是一种生成模型，它由两个神经网络组成：生成器（Generator）和判别器（Discriminator）。生成网络的目标是从样本空间<span class="arithmatex">\(\mathcal X\)</span>中生成尽可能逼真的样本<span class="arithmatex">\(\mathbb P_g\)</span>，而判别网络的目标是尽可能准确地区分真实样本的分布<span class="arithmatex">\(\mathbb P\)</span>和生成样本的分布<span class="arithmatex">\(\mathbb P_g\)</span>。两个网络的训练目标相互对抗，在对抗训练中，生成器可以学习到如何从随机噪声中重建样本。GAN的训练过程是一个<a href="#zero-sum-game">零和博弈</a>的过程，生成器和判别器的损失函数是相互对抗的。</p>
+<p>在最初的GAN模型<sup id="fnref:gan"><a class="footnote-ref" href="#fn:gan">2</a></sup>中，判别器使用<a href="#cross-entropy">二分类交叉熵</a>作为损失函数，生成器使用判别器输出的负对数概率作为损失函数。通过优化二分类交叉熵，判别器提供了生成器分布和真实分布的<a href="#kl-divergence">JS散度</a>的下界，从而使生成器生成的样本更加逼真。</p>
+<p>当生成器分布和真实分布相差较大时，JS散度面临梯度消失的问题，导致训练不稳定、模式崩塌等问题，表现为生成器生成的样本质量较差。为解决这一问题，后续的GAN模型提出了多种改进方法，如使用<a href="#wasserstein-distance">Wasserstein距离</a>衡量生成器分布和真实分布的差异<sup id="fnref:wgan"><a class="footnote-ref" href="#fn:wgan">7</a></sup>，使用<a href="#gradient-penalty">梯度惩罚</a>的方式辅助估算Wasserstein距离<sup id="fnref:wgan-gp"><a class="footnote-ref" href="#fn:wgan-gp">8</a></sup>。</p>
+<p>对于有明确分类标签的样本，可以将分类标签作为生成器和判别器的条件输入，得到条件生成对抗网络（Conditional GAN）<sup id="fnref:cgan"><a class="footnote-ref" href="#fn:cgan">1</a></sup>。</p>
+<p>相关实现：</p>
 <ul>
-<li><a href="gan/">生成对抗网络</a><sup id="fnref:gan"><a class="footnote-ref" href="#fn:gan">2</a></sup></li>
-<li><a href="wgan/">WGAN</a><sup id="fnref:wgan"><a class="footnote-ref" href="#fn:wgan">7</a></sup><sup id="fnref:wgan-gp"><a class="footnote-ref" href="#fn:wgan-gp">8</a></sup></li>
-<li><a href="cgan/">Conditional GAN</a><sup id="fnref:cgan"><a class="footnote-ref" href="#fn:cgan">1</a></sup></li>
+<li><a href="gan/">GAN on MNIST</a></li>
+<li><a href="wgan/">Wasserstein GAN on MNIST</a></li>
+<li><a href="cgan/">Conditional GAN on MNIST</a></li>
 </ul>
 <h3 id="generative-model">Generative Model<a class="headerlink" href="#generative-model" title="Permanent link">&para;</a></h3>
 <h3 id="generator">Generator<a class="headerlink" href="#generator" title="Permanent link">&para;</a></h3>
@@ -4510,15 +4578,35 @@ f(\bsx) = \frac{1}{(2\pi)^{d/2}|\Sigma|^{1/2}}e^{-\frac{1}{2}(\bsx - \boldsymbol
 <h3 id="importance-sampling">Importance Sampling<a class="headerlink" href="#importance-sampling" title="Permanent link">&para;</a></h3>
 <h3 id="in-context-learning">In-Context Learning<a class="headerlink" href="#in-context-learning" title="Permanent link">&para;</a></h3>
 <h3 id="inner-product">Inner Product<a class="headerlink" href="#inner-product" title="Permanent link">&para;</a></h3>
+<h3 id="instruct-tuning">Instruct Tuning<a class="headerlink" href="#instruct-tuning" title="Permanent link">&para;</a></h3>
 <h3 id="inverse-transform-sampling">Inverse Transform Sampling<a class="headerlink" href="#inverse-transform-sampling" title="Permanent link">&para;</a></h3>
 <h2 id="j">J<a class="headerlink" href="#j" title="Permanent link">&para;</a></h2>
 <h3 id="jaccard-coefficient">Jaccard Coefficient<a class="headerlink" href="#jaccard-coefficient" title="Permanent link">&para;</a></h3>
 <h3 id="jacobian-matrix">Jacobian Matrix<a class="headerlink" href="#jacobian-matrix" title="Permanent link">&para;</a></h3>
+<h3 id="jensen-inequality">Jensen Inequality<a class="headerlink" href="#jensen-inequality" title="Permanent link">&para;</a></h3>
 <h2 id="k">K<a class="headerlink" href="#k" title="Permanent link">&para;</a></h2>
 <h3 id="kernel-function">Kernel Function<a class="headerlink" href="#kernel-function" title="Permanent link">&para;</a></h3>
 <h3 id="k-means">K-Means<a class="headerlink" href="#k-means" title="Permanent link">&para;</a></h3>
 <h3 id="k-nearest-neighbor">K-Nearest Neighbor<a class="headerlink" href="#k-nearest-neighbor" title="Permanent link">&para;</a></h3>
 <h3 id="kl-divergence">KL Divergence<a class="headerlink" href="#kl-divergence" title="Permanent link">&para;</a></h3>
+<p><strong>KL散度（Kullback-Leibler Divergence, KL Divergence）</strong>是两个概率分布之间的差异度量。KL散度的定义为：</p>
+<div class="arithmatex">\[
+\text{KL}(P\Vert Q) = \int P(x)\log\frac{P(x)}{Q(x)}\mathrm dx = \mathbb E_P\left[\log\frac{P(x)}{Q(x)}\right]
+\]</div>
+<p>KL散度不是对称的，即<span class="arithmatex">\(\text{KL}(P\Vert Q)\neq\text{KL}(Q\Vert P)\)</span>。KL散度可以理解为用分布<span class="arithmatex">\(Q\)</span>来近似分布<span class="arithmatex">\(P\)</span>时的信息损失。<span class="arithmatex">\(P\)</span>本身的信息量为分布<span class="arithmatex">\(P\)</span>的<a href="#entropy">熵</a><span class="arithmatex">\(\mathbb E_P[-\log P(x)]\)</span>，用<span class="arithmatex">\(Q\)</span>来近似<span class="arithmatex">\(P\)</span>时的信息量为<a href="#cross-entropy">交叉熵</a><span class="arithmatex">\(\mathbb E_P[-\log Q(x)]\)</span>，两者的差异即为KL散度。为了保证KL散度的非负性，KL散度的定义中通常要求<span class="arithmatex">\(Q\)</span>的支撑集包含<span class="arithmatex">\(P\)</span>的支撑集，即<span class="arithmatex">\(Q(x) = 0\)</span>时，<span class="arithmatex">\(P(x) = 0\)</span>。</p>
+<details class="proof" open="open">
+<summary>KL散度的非负性</summary>
+<p>对于任意两个概率分布<span class="arithmatex">\(P, Q\)</span>，KL散度<span class="arithmatex">\(\text{KL}(P\Vert Q)\geq 0\)</span>，且当且仅当<span class="arithmatex">\(P = Q\)</span>时，KL散度等于0。</p>
+<p>注意到<span class="arithmatex">\(-\log x\)</span>是凸函数，由<a href="#jensen-inequality">Jensen不等式</a>可得：</p>
+<div class="arithmatex">\[
+\mathbb E_P\left[\log\frac{P(x)}{Q(x)}\right] = \mathbb E_P\left[-\log\frac{Q(x)}{P(x)}\right] \geq -\log\mathbb E_P\left[\frac{Q(x)}{P(x)}\right] = -\log 1 = 0
+\]</div>
+</details>
+<p><strong>JS散度（Jensen-Shannon Divergence）</strong>是KL散度的对称形式，定义为：</p>
+<div class="arithmatex">\[
+\text{JS}(P\Vert Q) = \frac{1}{2}\text{KL}(P\Vert M) + \frac{1}{2}\text{KL}(Q\Vert M)
+\]</div>
+<p>其中，<span class="arithmatex">\(M = \frac{1}{2}(P + Q)\)</span>为<span class="arithmatex">\(P\)</span>和<span class="arithmatex">\(Q\)</span>的均值分布。JS散度同样满足非负性，且当且仅当<span class="arithmatex">\(P = Q\)</span>时，JS散度等于0。</p>
 <h3 id="knowledge-distillation">Knowledge Distillation<a class="headerlink" href="#knowledge-distillation" title="Permanent link">&para;</a></h3>
 <h3 id="knowledge-graph">Knowledge Graph<a class="headerlink" href="#knowledge-graph" title="Permanent link">&para;</a></h3>
 <p><strong>知识图谱（Knowledge Graph）</strong>是一种用于表示实体之间关系的<a href="#graph">图</a>结构<sup id="fnref:knowledge-graph"><a class="footnote-ref" href="#fn:knowledge-graph">3</a></sup>。知识图谱中的节点表示实体，边表示实体之间的关系。知识图谱常用于知识表示、知识推理等任务。</p>
@@ -4569,6 +4657,11 @@ L(y, t) &amp;= \frac{1}{2} \sum_{i=1}^{n} |y_i - t_i| \\
 \]</div>
 <p>其中，<span class="arithmatex">\(y_i\)</span> 是模型对第<span class="arithmatex">\(i\)</span>个样本的预测值，<span class="arithmatex">\(t_i\)</span> 是第<span class="arithmatex">\(i\)</span>个样本真实值，<span class="arithmatex">\(n\)</span> 是样本数量。</p>
 <h3 id="mean-reciprocal-rank">Mean Reciprocal Rank<a class="headerlink" href="#mean-reciprocal-rank" title="Permanent link">&para;</a></h3>
+<p><strong>平均倒数排名（Mean Reciprocal Rank, MRR）</strong>是用于评估排序模型的指标。衡量的是模型在给定查询时，返回的第一个相关文档的排名的倒数。MRR的计算公式为：</p>
+<div class="arithmatex">\[
+\text{MRR} = \frac{1}{n}\sum_{i=1}^{n}\frac{1}{\text{rank}_i}
+\]</div>
+<p>其中，<span class="arithmatex">\(n\)</span>是查询的数量，<span class="arithmatex">\(\text{rank}_i\)</span>是第<span class="arithmatex">\(i\)</span>个查询的第一个相关文档的排名。MRR指标强调相关文档的排名位置，鼓励模型将相关文档排在前面。</p>
 <h3 id="mean-squared-error">Mean Squared Error<a class="headerlink" href="#mean-squared-error" title="Permanent link">&para;</a></h3>
 <p><strong>均方误差（Mean Squared Error, MSE）</strong>，又称L2 Loss，是<a href="#regression">回归任务</a>中常用的<a href="#loss-function">损失函数</a>。它计算的是预测值与真实值之间的平方差的均值。</p>
 <div class="arithmatex">\[
@@ -4587,6 +4680,7 @@ L(y, t) &amp;= \frac{1}{2} \sum_{i=1}^{n} (y_i - t_i)^2 \\
 <li><strong>Black-box Adaptation Meta Learning</strong>：元模型直接为子任务的模型生成参数。</li>
 <li><strong>Metric-based Meta Learning</strong>：通过度量学习的方式，学习任务之间的相似性，从而在新任务上快速适应。</li>
 </ol>
+<h3 id="meteor">METEOR<a class="headerlink" href="#meteor" title="Permanent link">&para;</a></h3>
 <h3 id="metric">Metric<a class="headerlink" href="#metric" title="Permanent link">&para;</a></h3>
 <h3 id="metroplis-hastings-sampling">Metroplis-Hastings Sampling<a class="headerlink" href="#metroplis-hastings-sampling" title="Permanent link">&para;</a></h3>
 <h3 id="mixture-of-experts">Mixture-of-Experts<a class="headerlink" href="#mixture-of-experts" title="Permanent link">&para;</a></h3>
@@ -4613,7 +4707,7 @@ L(y, t) &amp;= \frac{1}{2} \sum_{i=1}^{n} (y_i - t_i)^2 \\
 <h2 id="p">P<a class="headerlink" href="#p" title="Permanent link">&para;</a></h2>
 <h3 id="padding">Padding<a class="headerlink" href="#padding" title="Permanent link">&para;</a></h3>
 <h3 id="parameter-efficient-fine-tuning">Parameter Efficient Fine-Tuning<a class="headerlink" href="#parameter-efficient-fine-tuning" title="Permanent link">&para;</a></h3>
-<p><strong>参数高效微调（Parameter Efficient Fine-Tuning）</strong>是一种用于<a href="#pretrained-model">预训练模型</a>的微调方法。传统的微调方法是直接在预训练模型的基础上添加一个分类头，然后在目标任务上进行端到端的微调。此类微调方法在预训练模型参数较多时，由于优化器需要保存所有训练参数的中间状态，训练的空间和时间开销较大。为解决这一问题，出现了参数高效微调方法。这类方法在预训练模型的基础上添加一个小的参数集，然后锁定预训练模型的参数，只训练新添加的参数集。通过减少需要微调的参数数量，参数高效微调实现了在利用预训练模型的基础上，减少微调的计算量和存储需求。</p>
+<p><strong>参数高效微调（Parameter Efficient Fine-Tuning）</strong>是一种用于<a href="#pretrained-model">预训练模型</a>的微调方法。传统的微调方法是直接在预训练模型的基础上添加一个分类头，然后在目标任务上进行<a href="#end-to-end">端到端</a>的微调。此类微调方法在预训练模型参数较多时，由于优化器需要保存所有训练参数的中间状态，训练的空间和时间开销较大。为解决这一问题，出现了参数高效微调方法。这类方法在预训练模型的基础上添加一个小的参数集，然后锁定预训练模型的参数，只训练新添加的参数集。通过减少需要微调的参数数量，参数高效微调实现了在利用预训练模型的基础上，减少微调的计算量和存储需求。</p>
 <p>常见的参数高效微调方法有<a href="#low-rank-adaptation">LoRA</a>、<a href="#adaptor-tuning">Adaptor Tuning</a>等。</p>
 <h3 id="pearson-correlation-coefficient">Pearson Correlation Coefficient<a class="headerlink" href="#pearson-correlation-coefficient" title="Permanent link">&para;</a></h3>
 <h3 id="perplexity">Perplexity<a class="headerlink" href="#perplexity" title="Permanent link">&para;</a></h3>
@@ -4634,6 +4728,7 @@ L(y, t) &amp;= \frac{1}{2} \sum_{i=1}^{n} (y_i - t_i)^2 \\
 <h3 id="random-forest">Random Forest<a class="headerlink" href="#random-forest" title="Permanent link">&para;</a></h3>
 <h3 id="recall-metric">Recall (Metric)<a class="headerlink" href="#recall-metric" title="Permanent link">&para;</a></h3>
 <h3 id="recall-recommender-system">Recall (Recommender System)<a class="headerlink" href="#recall-recommender-system" title="Permanent link">&para;</a></h3>
+<h3 id="recall-oriented-understudy-for-gisting-evaluation">Recall-Oriented Understudy for Gisting Evaluation<a class="headerlink" href="#recall-oriented-understudy-for-gisting-evaluation" title="Permanent link">&para;</a></h3>
 <h3 id="recommender-system">Recommender System<a class="headerlink" href="#recommender-system" title="Permanent link">&para;</a></h3>
 <h3 id="rectified-linear-unit">Rectified Linear Unit<a class="headerlink" href="#rectified-linear-unit" title="Permanent link">&para;</a></h3>
 <p><strong>ReLU（Rectified Linear Unit）</strong>是一种常用的<a href="#activation-function">激活函数</a>，由Hinton等人在2010年提出<sup id="fnref:relu"><a class="footnote-ref" href="#fn:relu">4</a></sup>。ReLU函数将输入值小于0的部分置为0，大于0的部分保持不变。</p>
@@ -4660,7 +4755,7 @@ L(y, t) &amp;= \frac{1}{2} \sum_{i=1}^{n} (y_i - t_i)^2 \\
 <h3 id="ridge-regression">Ridge Regression<a class="headerlink" href="#ridge-regression" title="Permanent link">&para;</a></h3>
 <h3 id="roc-curve">ROC Curve<a class="headerlink" href="#roc-curve" title="Permanent link">&para;</a></h3>
 <h3 id="root-mean-squared-error">Root Mean Squared Error<a class="headerlink" href="#root-mean-squared-error" title="Permanent link">&para;</a></h3>
-<h3 id="recall-oriented-understudy-for-gisting-evaluation">Recall-Oriented Understudy for Gisting Evaluation<a class="headerlink" href="#recall-oriented-understudy-for-gisting-evaluation" title="Permanent link">&para;</a></h3>
+<h3 id="recall-oriented-understudy-for-gisting-evaluation_1">Recall-Oriented Understudy for Gisting Evaluation<a class="headerlink" href="#recall-oriented-understudy-for-gisting-evaluation_1" title="Permanent link">&para;</a></h3>
 <h2 id="s">S<a class="headerlink" href="#s" title="Permanent link">&para;</a></h2>
 <h3 id="selection-bias">Selection Bias<a class="headerlink" href="#selection-bias" title="Permanent link">&para;</a></h3>
 <h3 id="semi-supervised-learning">Semi-Supervised Learning<a class="headerlink" href="#semi-supervised-learning" title="Permanent link">&para;</a></h3>
@@ -4720,6 +4815,7 @@ L(y, t) &amp;= \frac{1}{2} \sum_{i=1}^{n} (y_i - t_i)^2 \\
 <h3 id="zero">ZeRO<a class="headerlink" href="#zero" title="Permanent link">&para;</a></h3>
 <h3 id="zero-shot-learning">Zero-Shot Learning<a class="headerlink" href="#zero-shot-learning" title="Permanent link">&para;</a></h3>
 <h3 id="zero-shot-prompting">Zero-Shot Prompting<a class="headerlink" href="#zero-shot-prompting" title="Permanent link">&para;</a></h3>
+<h3 id="zero-sum-game">Zero Sum Game<a class="headerlink" href="#zero-sum-game" title="Permanent link">&para;</a></h3>
 <div class="footnote">
 <hr />
 <ol>
@@ -4736,7 +4832,7 @@ L(y, t) &amp;= \frac{1}{2} \sum_{i=1}^{n} (y_i - t_i)^2 \\
 <p>V. Nair and G. E. Hinton, “Rectified linear units improve restricted boltzmann machines,” in Proceedings of the 27<sup>th</sup> international conference on machine learning (ICML-10), pp. 807–814, 2010.&#160;<a class="footnote-backref" href="#fnref:relu" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:transformer">
-<p>A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin, “Attention is all you need,” 06 2017.&#160;<a class="footnote-backref" href="#fnref:transformer" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<p>A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin, “Attention is all you need,” 06 2017.&#160;<a class="footnote-backref" href="#fnref:transformer" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:transformer" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:vae-tutorial">
 <p>D. P. Kingma and M. Welling, “An introduction to variational autoencoders,” Foundations and Trends in Machine Learning: Vol. 12 (2019): No. 4, pp 307-392, 06 2019.&#160;<a class="footnote-backref" href="#fnref:vae-tutorial" title="Jump back to footnote 6 in the text">&#8617;</a></p>
@@ -4771,7 +4867,7 @@ L(y, t) &amp;= \frac{1}{2} \sum_{i=1}^{n} (y_i - t_i)^2 \\
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-01-31T06:36:24+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-31</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-02-02T06:05:09+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-02</span>
   </span>
 
     
