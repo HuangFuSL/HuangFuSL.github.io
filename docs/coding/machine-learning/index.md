@@ -66,6 +66,8 @@ $$
 
 ### Baseline
 
+**基线（Baseline）**是一种用于评估模型性能的方法。基线模型通常是一种简单的模型，用于评估新模型的性能是否优于基线模型。基线模型可以是一个简单的线性模型、随机模型，或是已有的[SOTA](#state-of-the-art)模型。
+
 ### Bayesian Optimization
 
 **贝叶斯优化（Bayesian Optimization, BO）**是一类仅依赖于对函数值的观测，寻找函数最值的优化算法。贝叶斯优化算法的核心是通过有限次对函数的观测，对*目标函数*建立概率估计，通过此概率估计找到下一个用于观测的点。优化算法通过不断尝试，借助概率估计找到函数的最优值。贝叶斯算法是一种[主动学习](#active-learning)算法，适合于目标函数为黑盒且计算复杂的情况，如[超参数](#hyperparameter)优化。
@@ -82,7 +84,15 @@ $$
 
 ### Bernoulli Distribution
 
+**伯努利分布（Bernoulli Distribution）**是一种只有两种结果的离散概率分布。参数$p$为成功（$X = 1$）的概率。伯努利分布的概率质量函数为：
+
+$$
+f(X = x\mid p) = p^x(1 - p)^{1 - x}
+$$
+
 ### Bernoulli Trial
+
+**伯努利试验（Bernoulli Trial）**是一种只有两种结果的随机试验，如抛硬币、掷骰子等。伯努利试验的特点是每次试验的结果只有两种可能，成功（概率为$p$）和失败（概率为$1 - p$），服从[伯努利分布](#bernoulli-distribution)$\text{Bernoulli}(p)$。
 
 ### BERT
 
@@ -160,7 +170,7 @@ $$
 
 ### Cross Entropy
 
-**交叉熵（Cross Entropy）**是两个分布之间的差异度量。
+**交叉熵（Cross Entropy）**是两个分布之间的差异度量。从信息论的角度出发理解，交叉熵衡量的是用分布$Q$来表示分布$P$的平均编码长度。由于$P$和$Q$的分布不同，用$Q$来编码$P$的信息会导致信息损失，即平均编码长度要高于$P$的[熵](#entropy)。
 
 $$
 \text{CE}(P, Q) = -\int P(x)\log Q(x)dx
@@ -228,6 +238,8 @@ $$
 
 ### Discriminator
 
+### Disentangle
+
 ### Dropout
 
 ### Dynamic Programming
@@ -245,6 +257,10 @@ $$
 ### Encoder-only
 
 ### End-to-End
+
+**端到端（End-to-End）**是一种将整个系统作为一个整体进行优化的方法。在机器学习中，端到端学习指的是将输入数据直接映射到输出数据的过程，而**不需要人工进行特征提取等特征工程**。端到端学习的优点是无需人工干预，可以直接从训练数据中学习到模型所需的特征。端到端学习的缺点是模型的复杂度较高，训练时间较长；模型的可解释性较差；要求更高质量的训练数据。
+
+如：transformer模型[^transformer]最初的设计用于机器翻译任务，将输入的源语言句子直接映射到目标语言句子，不需要人工提取特征。
 
 ### Entropy
 
@@ -326,9 +342,20 @@ $$
 
 ### Generative Adversarial Network
 
-* [生成对抗网络](gan.ipynb)[^gan]
-* [WGAN](wgan.ipynb)[^wgan][^wgan-gp]
-* [Conditional GAN](cgan.ipynb)[^cgan]
+
+**生成对抗网络（Generative Adversarial Networks, GAN）**是一种生成模型，它由两个神经网络组成：生成器（Generator）和判别器（Discriminator）。生成网络的目标是从样本空间$\mathcal X$中生成尽可能逼真的样本$\mathbb P_g$，而判别网络的目标是尽可能准确地区分真实样本的分布$\mathbb P$和生成样本的分布$\mathbb P_g$。两个网络的训练目标相互对抗，在对抗训练中，生成器可以学习到如何从随机噪声中重建样本。GAN的训练过程是一个[零和博弈](#zero-sum-game)的过程，生成器和判别器的损失函数是相互对抗的。
+
+在最初的GAN模型[^gan]中，判别器使用[二分类交叉熵](#cross-entropy)作为损失函数，生成器使用判别器输出的负对数概率作为损失函数。通过优化二分类交叉熵，判别器提供了生成器分布和真实分布的[JS散度](#kl-divergence)的下界，从而使生成器生成的样本更加逼真。
+
+当生成器分布和真实分布相差较大时，JS散度面临梯度消失的问题，导致训练不稳定、模式崩塌等问题，表现为生成器生成的样本质量较差。为解决这一问题，后续的GAN模型提出了多种改进方法，如使用[Wasserstein距离](#wasserstein-distance)衡量生成器分布和真实分布的差异[^wgan]，使用[梯度惩罚](#gradient-penalty)的方式辅助估算Wasserstein距离[^wgan-gp]。
+
+对于有明确分类标签的样本，可以将分类标签作为生成器和判别器的条件输入，得到条件生成对抗网络（Conditional GAN）[^cgan]。
+
+相关实现：
+
+* [GAN on MNIST](gan.ipynb)
+* [Wasserstein GAN on MNIST](wgan.ipynb)
+* [Conditional GAN on MNIST](cgan.ipynb)
 
 ### Generative Model
 
@@ -368,6 +395,8 @@ $$
 
 ### Inner Product
 
+### Instruct Tuning
+
 ### Inverse Transform Sampling
 
 ## J
@@ -375,6 +404,8 @@ $$
 ### Jaccard Coefficient
 
 ### Jacobian Matrix
+
+### Jensen Inequality
 
 ## K
 
@@ -385,6 +416,32 @@ $$
 ### K-Nearest Neighbor
 
 ### KL Divergence
+
+**KL散度（Kullback-Leibler Divergence, KL Divergence）**是两个概率分布之间的差异度量。KL散度的定义为：
+
+$$
+\text{KL}(P\Vert Q) = \int P(x)\log\frac{P(x)}{Q(x)}\mathrm dx = \mathbb E_P\left[\log\frac{P(x)}{Q(x)}\right]
+$$
+
+KL散度不是对称的，即$\text{KL}(P\Vert Q)\neq\text{KL}(Q\Vert P)$。KL散度可以理解为用分布$Q$来近似分布$P$时的信息损失。$P$本身的信息量为分布$P$的[熵](#entropy)$\mathbb E_P[-\log P(x)]$，用$Q$来近似$P$时的信息量为[交叉熵](#cross-entropy)$\mathbb E_P[-\log Q(x)]$，两者的差异即为KL散度。为了保证KL散度的非负性，KL散度的定义中通常要求$Q$的支撑集包含$P$的支撑集，即$Q(x) = 0$时，$P(x) = 0$。
+
+???+ proof "KL散度的非负性"
+
+    对于任意两个概率分布$P, Q$，KL散度$\text{KL}(P\Vert Q)\geq 0$，且当且仅当$P = Q$时，KL散度等于0。
+
+    注意到$-\log x$是凸函数，由[Jensen不等式](#jensen-inequality)可得：
+
+    $$
+    \mathbb E_P\left[\log\frac{P(x)}{Q(x)}\right] = \mathbb E_P\left[-\log\frac{Q(x)}{P(x)}\right] \geq -\log\mathbb E_P\left[\frac{Q(x)}{P(x)}\right] = -\log 1 = 0
+    $$
+
+**JS散度（Jensen-Shannon Divergence）**是KL散度的对称形式，定义为：
+
+$$
+\text{JS}(P\Vert Q) = \frac{1}{2}\text{KL}(P\Vert M) + \frac{1}{2}\text{KL}(Q\Vert M)
+$$
+
+其中，$M = \frac{1}{2}(P + Q)$为$P$和$Q$的均值分布。JS散度同样满足非负性，且当且仅当$P = Q$时，JS散度等于0。
 
 ### Knowledge Distillation
 
@@ -471,6 +528,14 @@ $$
 
 ### Mean Reciprocal Rank
 
+**平均倒数排名（Mean Reciprocal Rank, MRR）**是用于评估排序模型的指标。衡量的是模型在给定查询时，返回的第一个相关文档的排名的倒数。MRR的计算公式为：
+
+$$
+\text{MRR} = \frac{1}{n}\sum_{i=1}^{n}\frac{1}{\text{rank}_i}
+$$
+
+其中，$n$是查询的数量，$\text{rank}_i$是第$i$个查询的第一个相关文档的排名。MRR指标强调相关文档的排名位置，鼓励模型将相关文档排在前面。
+
 ### Mean Squared Error
 
 **均方误差（Mean Squared Error, MSE）**，又称L2 Loss，是[回归任务](#regression)中常用的[损失函数](#loss-function)。它计算的是预测值与真实值之间的平方差的均值。
@@ -494,6 +559,8 @@ $$
 2. **Memory-based Meta Learning**：通过记忆历史任务的信息，使模型在面对新任务时能够检索利用相关历史任务的知识辅助适应新的任务。
 3. **Black-box Adaptation Meta Learning**：元模型直接为子任务的模型生成参数。
 4. **Metric-based Meta Learning**：通过度量学习的方式，学习任务之间的相似性，从而在新任务上快速适应。
+
+### METEOR
 
 ### Metric
 
@@ -547,7 +614,7 @@ $$
 
 ### Parameter Efficient Fine-Tuning
 
-**参数高效微调（Parameter Efficient Fine-Tuning）**是一种用于[预训练模型](#pretrained-model)的微调方法。传统的微调方法是直接在预训练模型的基础上添加一个分类头，然后在目标任务上进行端到端的微调。此类微调方法在预训练模型参数较多时，由于优化器需要保存所有训练参数的中间状态，训练的空间和时间开销较大。为解决这一问题，出现了参数高效微调方法。这类方法在预训练模型的基础上添加一个小的参数集，然后锁定预训练模型的参数，只训练新添加的参数集。通过减少需要微调的参数数量，参数高效微调实现了在利用预训练模型的基础上，减少微调的计算量和存储需求。
+**参数高效微调（Parameter Efficient Fine-Tuning）**是一种用于[预训练模型](#pretrained-model)的微调方法。传统的微调方法是直接在预训练模型的基础上添加一个分类头，然后在目标任务上进行[端到端](#end-to-end)的微调。此类微调方法在预训练模型参数较多时，由于优化器需要保存所有训练参数的中间状态，训练的空间和时间开销较大。为解决这一问题，出现了参数高效微调方法。这类方法在预训练模型的基础上添加一个小的参数集，然后锁定预训练模型的参数，只训练新添加的参数集。通过减少需要微调的参数数量，参数高效微调实现了在利用预训练模型的基础上，减少微调的计算量和存储需求。
 
 常见的参数高效微调方法有[LoRA](#low-rank-adaptation)、[Adaptor Tuning](#adaptor-tuning)等。
 
@@ -588,6 +655,8 @@ $$
 ### Recall (Metric)
 
 ### Recall (Recommender System)
+
+### Recall-Oriented Understudy for Gisting Evaluation
 
 ### Recommender System
 
@@ -738,6 +807,8 @@ Softmax函数在输入值较大或较小时，梯度会接近于0，导致[梯�
 ### Zero-Shot Learning
 
 ### Zero-Shot Prompting
+
+### Zero Sum Game
 
 [^cgan]: M. Mirza and S. Osindero, “Conditional generative adversarial nets,” 11 2014.
 [^gan]: I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Ben- gio, “Generative adversarial nets,” in Advances in Neural Information Processing Systems (Z. Ghahra- mani, M. Welling, C. Cortes, N. Lawrence, and K. Weinberger, eds.), vol. 27, Curran Associates, Inc., 2014.
