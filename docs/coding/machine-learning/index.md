@@ -20,6 +20,17 @@
 
 ### Active Learning
 
+**主动学习（Active Learning）**是一类机器学习范式。主动学习首先在一个小规模的标注数据集上训练模型，随后要求模型从未标注数据集上自主选择对提升性能最有价值的数据，交由专家标注，以提升模型对数据的使用效率。主动学习适合于标注数据成本较高，或是有大量未标注数据，或是数据集的标签分布不均匀的情况。但由于主动学习依赖于模型选择标注的样本点，次优的样本选择策略可能会引入[选择偏差](#selection-bias)。
+
+常见的样本选择策略有
+
+* 不确定性采样（Uncertainty Sampling），即选择模型预测结果最不确定的样本进行标注，可以进一步细分为：
+    * 最小置信度（Least Confidence），即选择预测概率中最高概率最小的样本
+    * 边缘采样（Margin Sampling），即选择预测概率中最高概率和次高概率差最小的样本（接近决策边缘）
+    * 熵采样（Entropy Sampling），即选择预测概率分布熵最大的样本
+* 预期模型变化（Expected Model Change），即选择对模型影响最大的样本
+* 信息增益（Information Gain），即选择最大化模型参数信息增益的样本
+
 ### Actor-Critic
 
 ### Adam
@@ -49,6 +60,10 @@ $$
 ### Attention Mask
 
 ### AUC
+
+**Area Under Curve (AUC)**指[ROC曲线](#roc-curve)下的面积，是一类用于评估二分类问题的评价指标，其主要衡量模型区分正样本和负样本的能力。AUC不会受到模型标签不平衡的影响。值为$0.5$时说明模型和随机分类相当，值为$1$时说明模型能够完美分类。
+
+可以遍历所有的预测概率，计算每个概率阈值下的TPR和FPR，使用梯形法计算曲线下的面积。
 
 ### Autoencoder
 
@@ -383,6 +398,8 @@ $$
 
 ## H
 
+### Hadamard product
+
 ### Hinge Loss
 
 ### Hyperparameter
@@ -700,6 +717,12 @@ $$
 
 ### ROC Curve
 
+**ROC曲线（ROC Curve**，全称为Receiver operating characteristic curve，是一个反映二分类任务性能的曲线。在二分类任务中，模型通常输出样本为正例的概率$P(y = 1 | x)$，由外部设定一个阈值$t$，规定概率高于$t$的样本为正例，低于$t$的样本为负例。阈值$t$可以在区间$[0, 1]$上自由选择，在选择的过程中，[第一类错误](#type-i-error)和[第二类错误](#type-ii-error)会相继出现。定义**真正例率（True Positive Rate, TPR）**为所有正例（TP+FN）中被预测为正例（TP）的比例，**假正例率（False Positive Rate, FPR）**为所有负例（FP+TN）中被预测为正例（FP）的比例。ROC曲线即为在$[0, 1]$上移动，以TPR为$y$轴、FPR为$x$轴，作出的曲线。
+
+ROC曲线开始于$(0, 0)$，结束于$(1, 1)$。直线$y = x$表示模型的预测是随机的，曲线中离左上角越近的点预测准确率越高。有预测效果的模型，其ROC曲线高于$y = x$；折线$(0, 0) - (0, 1) - (1, 1)$表示模型能够完美分类。
+
+ROC曲线下的面积称为[AUC](#auc)，是用于衡量分类器分类效果的评价指标。
+
 ### Root Mean Squared Error
 
 ### Recall-Oriented Understudy for Gisting Evaluation
@@ -773,6 +796,14 @@ Softmax函数在输入值较大或较小时，梯度会接近于0，导致[梯�
 ### Transfer Learning
 
 ### Transformer
+
+### Type-I Error
+
+**第一类错误（Type-I Error）**指统计模型或机器学习模型错误地将负例视为正例，或者错误地*拒绝原假设*，即**False Positive (FP)**。
+
+### Type-II Error
+
+**第二类错误（Type-II Error）**指统计模型或机器学习模型错误地将正例视为负例，或者错误地*接受原假设*，即**False Negative (FN)**
 
 ## U
 
