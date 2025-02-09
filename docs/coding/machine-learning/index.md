@@ -709,6 +709,10 @@ $$
 
 ### Rejection Sampling
 
+**拒绝采样（Rejection Sampling）**是一种从给定的概率密度函数$f(x)$所对应的概率分布中采样的方法。其核心思想是从一个容易采样的分布（提议分布，proposal distribution，概率密度函数为$g(x)$）中采样样本，通过选择性接受和拒绝采样结果，控制采样结果接近于期望的分布。从离散概率分布的概率密度概念出发，将概率密度在某一点取值的含义延伸到连续概率分布上，如果能保证$f(x) / g(x)$是一个介于$[0, 1]$之间的概率，则按照概率$f(x) / g(x)$接受采样结果即可。然而，$f(x) / g(x)$并不能保证是一个概率，此时可以引入一个系数$M$满足$f(x)\leq Mg(x)$对于所有的$x\in \{x\mid g(x) > 0\}$成立。系数$M$存在的必要条件是提议分布$g(x)$的域包含目标分布$f(x)$的域。具体的代码实现参见[Jupyter Notebook](rejection-sampling.ipynb)。
+
+拒绝采样的缺点在于采样效率不高。当系数$M$非常大时，会拒绝大量的样本。
+
 ### Representation Learning
 
 ### Retrieval Augmented Generation
