@@ -1235,6 +1235,8 @@
       
         
       
+        
+      
     
     
       
@@ -4792,6 +4794,8 @@ L(y, t) &amp;= \frac{1}{2} \sum_{i=1}^{n} (y_i - t_i)^2 \\
 <h3 id="reinforcement-learning">Reinforcement Learning<a class="headerlink" href="#reinforcement-learning" title="Permanent link">&para;</a></h3>
 <h3 id="reinforcement-learning-from-human-feedback">Reinforcement Learning from Human Feedback<a class="headerlink" href="#reinforcement-learning-from-human-feedback" title="Permanent link">&para;</a></h3>
 <h3 id="rejection-sampling">Rejection Sampling<a class="headerlink" href="#rejection-sampling" title="Permanent link">&para;</a></h3>
+<p><strong>拒绝采样（Rejection Sampling）</strong>是一种从给定的概率密度函数<span class="arithmatex">\(f(x)\)</span>所对应的概率分布中采样的方法。其核心思想是从一个容易采样的分布（提议分布，proposal distribution，概率密度函数为<span class="arithmatex">\(g(x)\)</span>）中采样样本，通过选择性接受和拒绝采样结果，控制采样结果接近于期望的分布。从离散概率分布的概率密度概念出发，将概率密度在某一点取值的含义延伸到连续概率分布上，如果能保证<span class="arithmatex">\(f(x) / g(x)\)</span>是一个介于<span class="arithmatex">\([0, 1]\)</span>之间的概率，则按照概率<span class="arithmatex">\(f(x) / g(x)\)</span>接受采样结果即可。然而，<span class="arithmatex">\(f(x) / g(x)\)</span>并不能保证是一个概率，此时可以引入一个系数<span class="arithmatex">\(M\)</span>满足<span class="arithmatex">\(f(x)\leq Mg(x)\)</span>对于所有的<span class="arithmatex">\(x\in \{x\mid g(x) &gt; 0\}\)</span>成立。系数<span class="arithmatex">\(M\)</span>存在的必要条件是提议分布<span class="arithmatex">\(g(x)\)</span>的域包含目标分布<span class="arithmatex">\(f(x)\)</span>的域。具体的代码实现参见<a href="rejection-sampling/">Jupyter Notebook</a>。</p>
+<p>拒绝采样的缺点在于采样效率不高。当系数<span class="arithmatex">\(M\)</span>非常大时，会拒绝大量的样本。</p>
 <h3 id="representation-learning">Representation Learning<a class="headerlink" href="#representation-learning" title="Permanent link">&para;</a></h3>
 <h3 id="retrieval-augmented-generation">Retrieval Augmented Generation<a class="headerlink" href="#retrieval-augmented-generation" title="Permanent link">&para;</a></h3>
 <h3 id="ridge-regression">Ridge Regression<a class="headerlink" href="#ridge-regression" title="Permanent link">&para;</a></h3>
@@ -4916,7 +4920,7 @@ L(y, t) &amp;= \frac{1}{2} \sum_{i=1}^{n} (y_i - t_i)^2 \\
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-02-03T05:21:12+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-02-09T03:26:18+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-09</span>
   </span>
 
     
