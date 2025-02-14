@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../1552/">
+        <link rel="prev" href="../1300/">
       
       
-        <link rel="next" href="../1603/">
+        <link rel="next" href="../1561/">
       
       
       <link rel="icon" href="../../../img/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>1561. 你可以获得的最大硬币数目 - HuangFuSL's Blog</title>
+        <title>1552. 两球之间的磁力 - HuangFuSL's Blog</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1561" class="md-skip">
+        <a href="#1552" class="md-skip">
           跳转至
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1561. 你可以获得的最大硬币数目
+              1552. 两球之间的磁力
             
           </span>
         </div>
@@ -2247,28 +2247,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../1552/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    1552. 两球之间的磁力
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2285,7 +2263,7 @@
           
   
   <span class="md-ellipsis">
-    1561. 你可以获得的最大硬币数目
+    1552. 两球之间的磁力
     
   </span>
   
@@ -2297,7 +2275,7 @@
         
   
   <span class="md-ellipsis">
-    1561. 你可以获得的最大硬币数目
+    1552. 两球之间的磁力
     
   </span>
   
@@ -2341,6 +2319,28 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1561/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1561. 你可以获得的最大硬币数目
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3707,57 +3707,62 @@
   
 
 
-<h1 id="1561">1561. 你可以获得的最大硬币数目<a class="headerlink" href="#1561" title="Permanent link">&para;</a></h1>
+<h1 id="1552">1552. 两球之间的磁力<a class="headerlink" href="#1552" title="Permanent link">&para;</a></h1>
 <p>难度：<font color=orange><strong>中等</strong></font></p>
 <h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>有 3n 堆数目不一的硬币，你和你的朋友们打算按以下方式分硬币：</p>
-<ul>
-<li>每一轮中，你将会选出 <strong>任意</strong> 3 堆硬币（不一定连续）。</li>
-<li>Alice 将会取走硬币数量最多的那一堆。</li>
-<li>你将会取走硬币数量第二多的那一堆。</li>
-<li>Bob 将会取走最后一堆。</li>
-<li>重复这个过程，直到没有更多硬币。</li>
-</ul>
-<p>给你一个整数数组 <code>piles</code> ，其中 <code>piles[i]</code> 是第 <code>i</code> 堆中硬币的数目。</p>
-<p>返回你可以获得的最大硬币数目。</p>
+<p>在代号为 C-137 的地球上，Rick 发现如果他将两个球放在他新发明的篮子里，它们之间会形成特殊形式的磁力。Rick 有 <code>n</code> 个空的篮子，第 <code>i</code> 个篮子的位置在 <code>position[i]</code> ，Morty 想把 m 个球放到这些篮子里，使得任意两球间 <strong>最小磁力</strong> 最大。</p>
+<p>已知两个球如果分别位于 <code>x</code> 和 <code>y</code> ，那么它们之间的磁力为 <code>|x - y|</code> 。</p>
+<p>给你一个整数数组 <code>position</code> 和一个整数 <code>m</code> ，请你返回最大化的最小磁力。</p>
 <p><strong>示例 1：</strong></p>
 <blockquote>
-<p>输入：<code>piles = [2,4,1,2,7,8]</code></p>
-<p>输出：<code>9</code></p>
-<p>解释：选出 (2, 7, 8) ，Alice 取走 8 枚硬币的那堆，你取走 7 枚硬币的那堆，Bob 取走最后一堆。</p>
-<p>选出 (1, 2, 4) , Alice 取走 4 枚硬币的那堆，你取走 2 枚硬币的那堆，Bob 取走最后一堆。</p>
-<p>你可以获得的最大硬币数目：7 + 2 = 9.</p>
-<p>考虑另外一种情况，如果选出的是 (1, 2, 8) 和 (2, 4, 7) ，你就只能得到 2 + 4 = 6 枚硬币，这不是最优解。</p>
+<p>输入：<code>position = [1,2,3,4,7], m = 3</code></p>
+<p>输出：<code>3</code></p>
+<p>解释：将 3 个球分别放入位于 1，4 和 7 的三个篮子，两球间的磁力分别为 [3, 3, 6]。最小磁力为 3 。我们没办法让最小磁力大于 3 。</p>
 </blockquote>
 <p><strong>示例 2：</strong></p>
 <blockquote>
-<p>输入：<code>piles = [2,4,5]</code></p>
-<p>输出：<code>4</code></p>
-</blockquote>
-<p><strong>示例 3：</strong></p>
-<blockquote>
-<p>输入：<code>piles = [9,8,7,6,5,1,2,3,4]</code></p>
-<p>输出：<code>18</code></p>
+<p>输入：<code>position = [5,4,3,2,1,1000000000], m = 2</code></p>
+<p>输出：<code>999999999</code></p>
+<p>解释：我们使用位于 1 和 1000000000 的篮子时最小磁力最大。</p>
 </blockquote>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>3 &lt;= piles.length &lt;= 10^5</code></li>
-<li><code>piles.length % 3 == 0</code></li>
-<li><code>1 &lt;= piles[i] &lt;= 10^4</code></li>
+<li><code>n == position.length</code></li>
+<li><code>2 &lt;= n &lt;= 10^5</code></li>
+<li><code>1 &lt;= position[i] &lt;= 10^9</code></li>
+<li>所有 <code>position</code> 中的整数 <strong>互不相同</strong> 。</li>
+<li><code>2 &lt;= m &lt;= position.length</code></li>
 </ul>
-<p><a href="https://leetcode.cn/problems/maximum-number-of-coins-you-can-get">Reference</a></p>
+<p><a href="https://leetcode.cn/problems/magnetic-force-between-two-balls">Reference</a></p>
 <h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>假设<code>piles</code>有序。由于Bob只会拿到最少数量的硬币，和我们最大化自己获得硬币数量的目标不冲突，因此在每次分配中，Bob只需要拿走剩余堆中最小的数量即可。考虑一共有<code>A&lt;B&lt;...&lt;F</code>6堆硬币的情况：</p>
+<p>和<a href="../1760/">1760. 袋子里最少数目的球</a>的思路类似，对于一个最小磁力<code>distance</code>约束，如果我们能用<code>x</code>个小球满足该约束，则对于所有的小球数<code>y &gt; x</code>，该约束同样可以被满足。反之，如果我们不能用<code>x</code>个小球满足该约束，对于所有的小球数<code>y &lt; x</code>，该约束同样不可以被满足。因此，该<code>distance</code>数组（如果把满足该<code>distance</code>要求所需的小球数量存储为数组）满足单调递减的性质。可以使用二分查找的方式进行搜索，注意边界条件。</p>
 <ul>
-<li>Bob会在两轮挑选中分别拿走最少的两堆<code>A</code>和<code>B</code></li>
-<li>无论如何挑选，Alice总会拿走最多的一堆<code>F</code>。同理，我们总会拿走第四多的一堆<code>C</code>。</li>
-<li>剩下对我们更优的选择方式为<code>E</code>给我们，Alice拿<code>D</code>。</li>
+<li>初始边界为<span class="arithmatex">\([lo, hi)\)</span>，其中左边界<code>[lo)</code>为排序后<code>position</code>数组相邻元素的最小差值；右边界为<code>position</code>数组最大最小元素之差<span class="arithmatex">\(\color{red}+1\)</span>（因为右边界为开）。</li>
+<li>如果当前区间中点<code>(lo + hi) &gt;&gt; 1</code>所需球的数量不多于已有球的数量，则说明当前的距离偏小（或正合适），正确答案落在右半区间。</li>
+<li>如果当前区间中点<code>(lo + hi) &gt;&gt; 1</code>所需球的数量多于已有球的数量，则说明当前的距离严格偏大，正确答案落在左半区间。</li>
 </ul>
-<p>扩展到更多堆的情况，我们采取贪心策略，让Alice拿当前最大的，我们拿第二大的，永远是最优策略。因为Alice一旦拿走当前最大的，如果我们没有在同一轮中拿走第二大的，那么第二大的会变成第一大的，我们就再也拿不到了。这样，从最小的开始，拿取方案为Bob拿走开始的<code>1 / 3</code>，之后我们和Alice轮流拿走剩下中最小的。</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">maxCoins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">piles</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="n">piles</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">piles</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">piles</span><span class="p">)</span> <span class="o">//</span> <span class="mi">3</span><span class="p">::</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">distance</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">last_pos</span> <span class="o">=</span> <span class="o">-</span><span class="n">distance</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">position</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">-</span> <span class="n">last_pos</span> <span class="o">&gt;=</span> <span class="n">distance</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">last_pos</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">def</span> <span class="nf">maxDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">position</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+        <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">position</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">position</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">lo</span> <span class="o">&lt;</span> <span class="n">hi</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">med</span> <span class="o">=</span> <span class="p">(</span><span class="n">lo</span> <span class="o">+</span> <span class="n">hi</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span>
+            <span class="n">numBalls</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">med</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">numBalls</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">:</span>
+                <span class="n">hi</span> <span class="o">=</span> <span class="n">med</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">lo</span> <span class="o">=</span> <span class="n">med</span>
+
+        <span class="k">return</span> <span class="n">lo</span>
 </code></pre></div>
 
 
@@ -3781,7 +3786,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-01-21T16:25:20+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-21</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-02-14T01:52:26+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-14</span>
   </span>
 
     
@@ -3791,7 +3796,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-01-21T16:25:20+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-21</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-02-14T01:52:26+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-14</span>
   </span>
 
     
