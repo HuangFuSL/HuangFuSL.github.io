@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="难度：简单">
+        <meta name="description" content="难度：中等">
       
       
       
@@ -2153,6 +2153,8 @@
       
         
       
+        
+      
     
     
       
@@ -3732,7 +3734,7 @@
 
 
 <h1 id="1706">1706. 球会落何处<a class="headerlink" href="#1706" title="Permanent link">&para;</a></h1>
-<p>难度：<font color=green><strong>简单</strong></font></p>
+<p>难度：<font color=orange><strong>中等</strong></font></p>
 <h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>用一个大小为 <code>m x n</code> 的二维网格 <code>grid</code> 表示一个箱子。你有 <code>n</code> 颗球。箱子的顶部和底部都是开着的。</p>
 <p>箱子中的每个单元格都有一个对角线挡板，跨过单元格的两个角，可以将球导向左侧或者右侧。</p>
@@ -3777,7 +3779,7 @@
 <p>逐列模拟小球的行为，当小球处于<code>i</code>行<code>j</code>列位置时，小球下一次所在的列为<code>j + grid[i][j]</code>。当出现以下条件时，小球不能移动：</p>
 <ul>
 <li><code>j + grid[i][j]</code>小于<code>0</code>或大于等于<code>len(grid[0])</code>（总列数），此时小球会被边界卡住。</li>
-<li><code>grid[i][j]</code>和<code>j + grid[i][j]</code>符号不同，此时说明隔板构成一个V型凹槽卡住小球。</li>
+<li><code>grid[i][j]</code>和<code>grid[i][j + grid[i][j]]</code>符号不同，此时说明隔板构成一个V型凹槽卡住小球。</li>
 </ul>
 <p>当以上两个条件都通过时，小球可以向下移动到<code>i + 1</code>行<code>j + grid[i][j]</code>列处，重复以上过程直到小球离开盒子或小球卡住。</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
@@ -3821,7 +3823,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-02-15T02:06:08+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-02-16T01:16:11+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-16</span>
   </span>
 
     
