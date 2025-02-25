@@ -1,5 +1,14 @@
 # Machine Learning Glossary
 
+## Topic Subsections
+
+* Statistical Machine Learning
+* General Machine Learning
+* Deep Learning
+* Reinforcement Learning
+* Natural Language Processing
+* Recommender Systems
+
 ## A
 
 ### Ablation
@@ -181,6 +190,8 @@ $$
 
 ### Cosine Similarity
 
+### Covariate Shift
+
 ### Cross Attention
 
 ### Cross Entropy
@@ -247,6 +258,8 @@ $$
 
 ### Diffusion Model
 
+**扩散模型（Diffusion Model）**，全称扩散概率模型（Diffusion Probabilistic Model），是一类基于[变分推断](#variational-inference)和[马尔可夫链](#markov-chain)的模型。最初由Jascha等人于2015年提出[^dpm]，由Jonathan等人改进[^ddpm]。
+
 ### Direct Preference Optimization
 
 ### Discriminative Model
@@ -284,6 +297,21 @@ $$
 ### Euclidean Distance
 
 ### Evidence Lower Bound
+
+### Expectation-Maximization Algorithm
+
+**EM算法（Expectation-Maximization Algorithm）**是一种用于优化含有隐变量或参数$\theta$的概率模型的一类方法。设概率模型为$P(X, Z; \theta)$和输入数据$x$，我们可以通过最大化对数似然$\log P(X = x;\theta)$的方式优化模型参数$\theta$，然而，由于隐变量$Z$的存在（$\log P(x; \theta) = \log\int_{Z} P(x, z; \theta)$），该对数似然难以优化。因此，EM算法采取交替的方式进行优化：
+
+* Expectation步骤：根据当前估计的参数$\theta^{(t)}$，在隐变量的条件分布$Z \mid X = x, \theta^{(t)}$下估计对数似然$\log P(x, z;\theta)$的期望
+    $$
+    Q(\theta, \theta^{(t)}) = \mathbb E_{z\sim Z \mid X = x, \theta^{(t)}} \log P(x, z;\theta)
+    $$
+* Maximization步骤：优化该对数似然，更新参数$\theta$
+    $$
+    \theta^{(t + 1)} = \arg\max_{\theta} Q(\theta, \theta^{(t)})
+    $$
+
+以上步骤不断重复，直至参数收敛。EM算法可以保证模型参数收敛到局部最优解，但无法保证全局最优性。
 
 ### Experience Replay
 
@@ -482,6 +510,8 @@ $$
 
 ### Latent Dirichlet Allocation
 
+### Latent Variable Model
+
 ### Learning Rate
 
 ### Learning to Rank
@@ -647,6 +677,10 @@ $$
 
 ### Positional Embedding
 
+### Positive-Unlabeled Learning
+
+**正样本和无标签学习（Positive-Unlabeled Learning，PU Learning）**是一类特殊的[有监督学习](#supervised-learning)方式。和二分类问题不同，PU Learning的标签划分并不可靠，无标签的样本中既可能存在负样本，也可能存在正样本。PU Learning的核心问题是如何借助正样本的信息，识别出无标签样本中可能存在的正样本。
+
 ### Precision
 
 ### Prefix Decoder
@@ -704,6 +738,10 @@ $$
 ### Regularization
 
 ### Reinforcement Learning
+
+**强化学习（Reinforcement Learning）**是一种机器学习范式，用于解决顺序决策问题。在强化学习中，智能体（Agent）通过与环境（Environment）的交互，学习到在某个状态下采取某个动作的策略，以最大化累积奖励。强化学习的核心是建模智能体与环境之间的交互，以及智能体如何根据环境的反馈调整策略。
+
+强化学习的核心概念包括：状态（State）、动作（Action）、奖励（Reward）、策略（Policy）、价值函数（Value Function）、模型（Model）等。
 
 ### Reinforcement Learning from Human Feedback
 
@@ -825,6 +863,8 @@ Softmax函数在输入值较大或较小时，梯度会接近于0，导致[梯�
 
 ### Variational Distribution
 
+### Variational Inference
+
 ### Vector Quantization
 
 ## W
@@ -846,6 +886,8 @@ Softmax函数在输入值较大或较小时，梯度会接近于0，导致[梯�
 ### Zero Sum Game
 
 [^cgan]: M. Mirza and S. Osindero, “Conditional generative adversarial nets,” 11 2014.
+[^dpm]: Sohl-Dickstein, J., Weiss, E. A., Maheswaranathan, N., and Ganguli, S. Deep unsupervised learning using nonequilibrium thermodynamics. In Proceedings of the 32nd International Conference on International Conference on Machine Learning - Volume 37 (2015), ICML’15, JMLR.org, pp. 2256–2265.
+[^ddpm]: Ho, J., Jain, A., and Abbeel, P. Denoising diffusion probabilistic models. In Advances in Neural Information Processing Systems (2020), H. Larochelle, M. Ranzato, R. Hadsell, M. Balcan, and H. Lin, Eds., vol. 33, Curran Associates, Inc., pp. 6840–6851.
 [^gan]: I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Ben- gio, “Generative adversarial nets,” in Advances in Neural Information Processing Systems (Z. Ghahra- mani, M. Welling, C. Cortes, N. Lawrence, and K. Weinberger, eds.), vol. 27, Curran Associates, Inc., 2014.
 [^knowledge-graph]: Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia D’amato, Gerard De Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, and Antoine Zimmermann. 2021. Knowledge Graphs. ACM Comput. Surv. 54, 4, Article 71 (May 2022), 37 pages. https://doi.org/10.1145/3447772
 [^relu]: V. Nair and G. E. Hinton, “Rectified linear units improve restricted boltzmann machines,” in Proceedings of the 27th international conference on machine learning (ICML-10), pp. 807–814, 2010.
