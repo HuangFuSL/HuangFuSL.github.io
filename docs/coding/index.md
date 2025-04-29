@@ -24,6 +24,7 @@ hide:
 ## 机器学习
 
 * [Machine Learning Glossary](machine-learning/index.md)
+* [强化学习](machine-learning/reinforcement-learning.md)
 
 ## 其他
 
