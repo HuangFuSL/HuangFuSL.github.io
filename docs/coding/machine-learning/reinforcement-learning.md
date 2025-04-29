@@ -3,6 +3,7 @@
 本页按照主题记录并梳理强化学习的有关内容。
 
 1. [基础概念](rl-1-basics.md)
+    * [RL Lab 1: Environment](rl_env.py)
 2. [老虎机问题](bandit.md)
     * [多臂老虎机](multi-armed-bandit.ipynb)
 
