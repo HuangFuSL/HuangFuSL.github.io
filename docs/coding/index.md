@@ -23,7 +23,7 @@ hide:
 
 ## 机器学习
 
-* [机器学习](machine-learning/index.md)
+* [Machine Learning Glossary](machine-learning/index.md)
 
 ## 其他
 

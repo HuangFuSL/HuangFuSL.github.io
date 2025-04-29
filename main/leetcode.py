@@ -1,10 +1,6 @@
 from __future__ import annotations
 
-import csv
-import operator
 from typing import Iterable, Iterator, List, Optional
-
-from . import util
 
 
 def display_difficulty(diff):
@@ -91,33 +87,23 @@ def get_md_table(
 
 def get_whole_table(
     pages,
-    data: str = 'data/leetcode.csv',
     indent: int = 0,
     col_names: Optional[List[str]] = None,
     col_align: Optional[List[str] | str] = None
 ):
-    with open(data, 'r', encoding='utf-8', newline='') as file:
-        content = list(csv.DictReader(file))
+    pages_list = [
+        (int(page['title'].split('. ')[0]), page) for page in pages
+    ]
+    pages_list.sort(key=lambda x: x[0])
 
-    pages_dict = {int(_['title'].split('. ')[0]): _ for _ in pages}
-    new_page = []
-    for page in content:
-        if int(page['编号']) in pages_dict:
-            page['linked'] = True
-            page['link'] = pages_dict[int(page['编号'])]['url']
-            new_page.append(page)
-    content = new_page
+    links = []
+    for _, content in pages_list:
+        stars = get_difficulty(content['meta']['difficulty'])
+        links.append('[{stars}{title}](/{url})'.format(
+            stars=stars, **content
+        ))
 
-    content.sort(key=util.wrap(operator.itemgetter('编号'), int))
-
-    def build_link(content):
-        stars = get_difficulty(content['难度'])
-        if content['linked']:
-            return '[{1}{0[编号]}. {0[名称]}](/{0[link]})'.format(content, stars)
-        else:
-            return '{1}{0[编号]}. {0[名称]}'.format(content, stars)
-
-    return build_table(map(build_link, content), indent, col_names, col_align)
+    return build_table(links, indent, col_names, col_align)
 
 
 def build_tag_mapping(pages):
