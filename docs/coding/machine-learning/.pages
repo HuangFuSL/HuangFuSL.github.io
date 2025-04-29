@@ -31,5 +31,8 @@ nav:
     - Llama-2: llama-2.ipynb
     - KV-Cache: llm-inference.md
   - 强化学习:
+    - 目录: reinforcement-learning.md
+    - 强化学习基础概念: rl-1-basics.md
+    - "RL Lab 1: Environment": rl_env.py
     - 多臂老虎机: multi-armed-bandit.ipynb
     - 置信上界算法: upper-confidence-bound.md
