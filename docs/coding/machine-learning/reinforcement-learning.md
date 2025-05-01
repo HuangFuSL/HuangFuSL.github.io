@@ -4,6 +4,9 @@
 
 1. [基础概念](rl-1-basics.md)
     * [RL Lab 1: Environment](rl_env.py)
+2. [动态规划](rl-2-dp-methods.md)
+    * [RL Lab 2: Value Iteration](rl-value-iteration.ipynb)
+    * [RL Lab 3: Policy Iteration](rl-policy-iteration.ipynb)
 2. [老虎机问题](bandit.md)
     * [多臂老虎机](multi-armed-bandit.ipynb)
 

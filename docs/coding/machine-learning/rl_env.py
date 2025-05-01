@@ -33,7 +33,6 @@ import abc
 import torch
 import random
 from matplotlib import pyplot as plt
-from matplotlib.axes import Axes
 import functools
 
 from typing import TypeVar, overload, Generic, Iterable, Tuple
@@ -122,6 +121,26 @@ class BaseGridEnvironment(abc.ABC, Generic[StateType, ActionType]):
 
     def get_action(self, action: ActionType | int) -> ActionType | int:
         return self.actions[action]
+
+    @overload
+    def get_state_action(self, obj: Tuple[StateType, ActionType]) -> int:
+        pass
+
+    @overload
+    def get_state_action(self, obj: int) -> Tuple[StateType, ActionType]:
+        pass
+
+    def get_state_action(
+        self, obj: Tuple[StateType, ActionType] | int
+    ) -> Tuple[StateType, ActionType] | int:
+        if isinstance(obj, tuple):
+            state, action = obj
+            return self.get_state(state) * self.num_actions + self.get_action(action)
+        else:
+            idx = obj
+            state_idx = idx // self.num_actions
+            action_idx = idx % self.num_actions
+            return self.get_state(state_idx), self.get_action(action_idx)
 
     @abc.abstractmethod
     def state_transition(self, state: StateType, action: ActionType) -> Iterable[Tuple[StateType, float]]:
@@ -219,6 +238,9 @@ class State():
 
     def __iter__(self):
         return iter([self.row, self.col])
+
+    def __add__(self, other: 'Action'):
+        return State(self.row + other.value[0], self.col + other.value[1])
 
 # %% [markdown]
 # ### 动作
