@@ -7,6 +7,8 @@
 2. [动态规划](rl-2-dp-methods.md)
     * [RL Lab 2: Value Iteration](rl-value-iteration.ipynb)
     * [RL Lab 3: Policy Iteration](rl-policy-iteration.ipynb)
+3. [时序差分学习](rl-3-temporal-difference-learning.md)
+    * [RL Lab 4: Temporal Difference Learning](rl-td-learning.ipynb)
 2. [老虎机问题](bandit.md)
     * [多臂老虎机](multi-armed-bandit.ipynb)
 

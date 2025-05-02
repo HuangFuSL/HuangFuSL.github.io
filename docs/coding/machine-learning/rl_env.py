@@ -123,7 +123,7 @@ class BaseGridEnvironment(abc.ABC, Generic[StateType, ActionType]):
         return self.actions[action]
 
     @overload
-    def get_state_action(self, obj: Tuple[StateType, ActionType]) -> int:
+    def get_state_action(self, obj: Tuple[StateType | int, ActionType | int]) -> int:
         pass
 
     @overload
@@ -131,11 +131,15 @@ class BaseGridEnvironment(abc.ABC, Generic[StateType, ActionType]):
         pass
 
     def get_state_action(
-        self, obj: Tuple[StateType, ActionType] | int
+        self, obj: Tuple[StateType | int, ActionType | int] | int
     ) -> Tuple[StateType, ActionType] | int:
         if isinstance(obj, tuple):
             state, action = obj
-            return self.get_state(state) * self.num_actions + self.get_action(action)
+            if not isinstance(state, int):
+                state = self.get_state(state)
+            if not isinstance(action, int):
+                action = self.get_action(action)
+            return state * self.num_actions + action
         else:
             idx = obj
             state_idx = idx // self.num_actions
@@ -148,6 +152,48 @@ class BaseGridEnvironment(abc.ABC, Generic[StateType, ActionType]):
         Given a state and an action, return a list of tuples (next_state, probability).
         '''
         pass
+
+    @staticmethod
+    def sparse_index(tensor: torch.Tensor, index: torch.Tensor) -> torch.Tensor:
+        '''
+        Get the value of a sparse tensor at a given index.
+        '''
+        device = tensor.device
+        k, D = index.shape[0], tensor.shape[1]
+
+        # Build a (k, N) one-hot selector matrix in sparse format
+        row_idx = torch.arange(k)
+        col_idx = index.view(-1)
+        selector_indices = torch.stack([row_idx, col_idx])  # shape (2, k)
+        selector_values = torch.ones(k)
+        selector = torch.sparse_coo_tensor(
+            selector_indices, selector_values, size=(k, tensor.shape[0])
+        ).to(device)
+
+        # Do sparse matrix multiplication: (k x N) @ (N x D) => (k x D)
+        result = torch.sparse.mm(selector, tensor)
+
+        return result
+
+    def sample_state_transition(
+        self, state: StateType | int | torch.Tensor, action: ActionType | int | torch.Tensor
+    ) -> Tuple[torch.Tensor, torch.Tensor]:
+        '''
+        Sample a state transition and reward given a state and an action.
+        '''
+        if isinstance(state, torch.Tensor):
+            assert isinstance(action, torch.Tensor)
+            transition_prob = self.sparse_index(self.state_transition_np, state * self.num_actions + action).to_dense()
+            reward_prob = self.sparse_index(self.step_reward_np, state * self.num_actions + action).to_dense()
+        else:
+            assert not isinstance(action, torch.Tensor)
+            state_action_idx = self.get_state_action((state, action))
+
+            transition_prob = self.state_transition_np[state_action_idx].to_dense()
+            reward_prob = self.step_reward_np[state_action_idx].to_dense()
+        next_state = torch.multinomial(transition_prob, 1).reshape(-1)
+        next_reward = reward_prob[torch.arange(next_state.shape[0]), next_state]
+        return next_state, next_reward
 
     @property
     @functools.lru_cache()
