@@ -1517,6 +1517,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1800,6 +1804,50 @@
   
   <span class="md-ellipsis">
     RL Lab 3: Policy Iteration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rl-3-temporal-difference-learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    时序差分学习
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rl-td-learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RL Lab 4: Temporal Difference Learning
     
   </span>
   
@@ -2628,7 +2676,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=40e2bc37">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ad63a79a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2651,7 +2699,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=43656d36">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0425ea25">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2662,7 +2710,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=460e4d30">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=58963263">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2711,7 +2759,7 @@ ActionType = TypeVar('ActionType')</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b880c4b6">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5b2c1b64">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2809,7 +2857,7 @@ ActionType = TypeVar('ActionType')</div>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">actions</span><span class="p">[</span><span class="n">action</span><span class="p">]</span>
 
     <span class="nd">@overload</span>
-    <span class="k">def</span> <span class="nf">get_state_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">StateType</span><span class="p">,</span> <span class="n">ActionType</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">get_state_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">StateType</span> <span class="o">|</span> <span class="nb">int</span><span class="p">,</span> <span class="n">ActionType</span> <span class="o">|</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
         <span class="k">pass</span>
 
     <span class="nd">@overload</span>
@@ -2817,11 +2865,15 @@ ActionType = TypeVar('ActionType')</div>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">get_state_action</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">StateType</span><span class="p">,</span> <span class="n">ActionType</span><span class="p">]</span> <span class="o">|</span> <span class="nb">int</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">StateType</span> <span class="o">|</span> <span class="nb">int</span><span class="p">,</span> <span class="n">ActionType</span> <span class="o">|</span> <span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="nb">int</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">StateType</span><span class="p">,</span> <span class="n">ActionType</span><span class="p">]</span> <span class="o">|</span> <span class="nb">int</span><span class="p">:</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
             <span class="n">state</span><span class="p">,</span> <span class="n">action</span> <span class="o">=</span> <span class="n">obj</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_actions</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_action</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_action</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">state</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_actions</span> <span class="o">+</span> <span class="n">action</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">idx</span> <span class="o">=</span> <span class="n">obj</span>
             <span class="n">state_idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_actions</span>
@@ -2834,6 +2886,48 @@ ActionType = TypeVar('ActionType')</div>
 <span class="sd">        Given a state and an action, return a list of tuples (next_state, probability).</span>
 <span class="sd">        '''</span>
         <span class="k">pass</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">sparse_index</span><span class="p">(</span><span class="n">tensor</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">'''</span>
+<span class="sd">        Get the value of a sparse tensor at a given index.</span>
+<span class="sd">        '''</span>
+        <span class="n">device</span> <span class="o">=</span> <span class="n">tensor</span><span class="o">.</span><span class="n">device</span>
+        <span class="n">k</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="n">index</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tensor</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># Build a (k, N) one-hot selector matrix in sparse format</span>
+        <span class="n">row_idx</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">col_idx</span> <span class="o">=</span> <span class="n">index</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">selector_indices</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">row_idx</span><span class="p">,</span> <span class="n">col_idx</span><span class="p">])</span>  <span class="c1"># shape (2, k)</span>
+        <span class="n">selector_values</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">selector</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sparse_coo_tensor</span><span class="p">(</span>
+            <span class="n">selector_indices</span><span class="p">,</span> <span class="n">selector_values</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">tensor</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+        <span class="c1"># Do sparse matrix multiplication: (k x N) @ (N x D) =&gt; (k x D)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sparse</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">selector</span><span class="p">,</span> <span class="n">tensor</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">def</span> <span class="nf">sample_state_transition</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">StateType</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">|</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">ActionType</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">|</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">'''</span>
+<span class="sd">        Sample a state transition and reward given a state and an action.</span>
+<span class="sd">        '''</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span>
+            <span class="n">transition_prob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sparse_index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">state_transition_np</span><span class="p">,</span> <span class="n">state</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_actions</span> <span class="o">+</span> <span class="n">action</span><span class="p">)</span><span class="o">.</span><span class="n">to_dense</span><span class="p">()</span>
+            <span class="n">reward_prob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sparse_index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">step_reward_np</span><span class="p">,</span> <span class="n">state</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_actions</span> <span class="o">+</span> <span class="n">action</span><span class="p">)</span><span class="o">.</span><span class="n">to_dense</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span>
+            <span class="n">state_action_idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_state_action</span><span class="p">((</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">))</span>
+
+            <span class="n">transition_prob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_transition_np</span><span class="p">[</span><span class="n">state_action_idx</span><span class="p">]</span><span class="o">.</span><span class="n">to_dense</span><span class="p">()</span>
+            <span class="n">reward_prob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">step_reward_np</span><span class="p">[</span><span class="n">state_action_idx</span><span class="p">]</span><span class="o">.</span><span class="n">to_dense</span><span class="p">()</span>
+        <span class="n">next_state</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="n">transition_prob</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">next_reward</span> <span class="o">=</span> <span class="n">reward_prob</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">next_state</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">next_state</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">next_reward</span>
 
     <span class="nd">@property</span>
     <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">()</span>
@@ -2990,7 +3084,7 @@ class BaseGridEnvironment(abc.ABC, Generic[StateType, ActionType]):
         return self.actions[action]
 
     @overload
-    def get_state_action(self, obj: Tuple[StateType, ActionType]) -&gt; int:
+    def get_state_action(self, obj: Tuple[StateType | int, ActionType | int]) -&gt; int:
         pass
 
     @overload
@@ -2998,11 +3092,15 @@ class BaseGridEnvironment(abc.ABC, Generic[StateType, ActionType]):
         pass
 
     def get_state_action(
-        self, obj: Tuple[StateType, ActionType] | int
+        self, obj: Tuple[StateType | int, ActionType | int] | int
     ) -&gt; Tuple[StateType, ActionType] | int:
         if isinstance(obj, tuple):
             state, action = obj
-            return self.get_state(state) * self.num_actions + self.get_action(action)
+            if not isinstance(state, int):
+                state = self.get_state(state)
+            if not isinstance(action, int):
+                action = self.get_action(action)
+            return state * self.num_actions + action
         else:
             idx = obj
             state_idx = idx // self.num_actions
@@ -3015,6 +3113,48 @@ class BaseGridEnvironment(abc.ABC, Generic[StateType, ActionType]):
         Given a state and an action, return a list of tuples (next_state, probability).
         '''
         pass
+
+    @staticmethod
+    def sparse_index(tensor: torch.Tensor, index: torch.Tensor) -&gt; torch.Tensor:
+        '''
+        Get the value of a sparse tensor at a given index.
+        '''
+        device = tensor.device
+        k, D = index.shape[0], tensor.shape[1]
+
+        # Build a (k, N) one-hot selector matrix in sparse format
+        row_idx = torch.arange(k)
+        col_idx = index.view(-1)
+        selector_indices = torch.stack([row_idx, col_idx])  # shape (2, k)
+        selector_values = torch.ones(k)
+        selector = torch.sparse_coo_tensor(
+            selector_indices, selector_values, size=(k, tensor.shape[0])
+        ).to(device)
+
+        # Do sparse matrix multiplication: (k x N) @ (N x D) =&gt; (k x D)
+        result = torch.sparse.mm(selector, tensor)
+
+        return result
+
+    def sample_state_transition(
+        self, state: StateType | int | torch.Tensor, action: ActionType | int | torch.Tensor
+    ) -&gt; Tuple[torch.Tensor, torch.Tensor]:
+        '''
+        Sample a state transition and reward given a state and an action.
+        '''
+        if isinstance(state, torch.Tensor):
+            assert isinstance(action, torch.Tensor)
+            transition_prob = self.sparse_index(self.state_transition_np, state * self.num_actions + action).to_dense()
+            reward_prob = self.sparse_index(self.step_reward_np, state * self.num_actions + action).to_dense()
+        else:
+            assert not isinstance(action, torch.Tensor)
+            state_action_idx = self.get_state_action((state, action))
+
+            transition_prob = self.state_transition_np[state_action_idx].to_dense()
+            reward_prob = self.step_reward_np[state_action_idx].to_dense()
+        next_state = torch.multinomial(transition_prob, 1).reshape(-1)
+        next_reward = reward_prob[torch.arange(next_state.shape[0]), next_state]
+        return next_state, next_reward
 
     @property
     @functools.lru_cache()
@@ -3094,7 +3234,7 @@ class BaseGridEnvironment(abc.ABC, Generic[StateType, ActionType]):
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cd0a7cde">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1bde6173">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3105,7 +3245,7 @@ class BaseGridEnvironment(abc.ABC, Generic[StateType, ActionType]):
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=901eb348">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9d94d244">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3152,7 +3292,7 @@ class State():
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7d5d0a6c">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0a00c0bc">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3163,7 +3303,7 @@ class State():
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=893b4071">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=605bfaf5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3200,7 +3340,7 @@ class Action(enum.Enum):
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e0a84479">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7765183b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3211,7 +3351,7 @@ class Action(enum.Enum):
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7ae49f13">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=bbdf2490">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3452,7 +3592,7 @@ class GridEnvironment(BaseGridEnvironment[State, Action]):
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4649c96d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d85b3ad5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3463,7 +3603,7 @@ class GridEnvironment(BaseGridEnvironment[State, Action]):
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9a443b96">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7686e5ea">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3520,7 +3660,7 @@ class GridEnvironment(BaseGridEnvironment[State, Action]):
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7044b630">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a13104c8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3531,7 +3671,7 @@ class GridEnvironment(BaseGridEnvironment[State, Action]):
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ebbe1f43">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0d7157e5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3562,7 +3702,7 @@ class GridEnvironment(BaseGridEnvironment[State, Action]):
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0de4bffb">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0433c15a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3573,7 +3713,7 @@ class GridEnvironment(BaseGridEnvironment[State, Action]):
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e4d1a65f">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=67b8bb6b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3631,7 +3771,7 @@ class GridEnvironment(BaseGridEnvironment[State, Action]):
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月1日 09:54:31"><span class="timeago" datetime="2025-05-01T09:54:31+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月1日 09:54:31">2025-05-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月2日 04:38:30"><span class="timeago" datetime="2025-05-02T04:38:30+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月2日 04:38:30">2025-05-02</span>
   </span>
 
     
