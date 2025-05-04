@@ -39,5 +39,9 @@ nav:
     - "RL Lab 3: Policy Iteration": rl-policy-iteration.ipynb
     - 时序差分学习: rl-3-temporal-difference-learning.md
     - "RL Lab 4: Temporal Difference Learning": rl-td-learning.ipynb
+    - 深度Q网络: rl-4-dqn.md
+    - "RL Lab 5: Jimbo Game": rl_jimbo_env.py
+    - "RL Lab 6: Deep Q Networks": rl-q-networks.ipynb
+    - "RL Lab 7: Dueling DQN": rl-dueling-q-networks.ipynb
     - 多臂老虎机: multi-armed-bandit.ipynb
     - 置信上界算法: upper-confidence-bound.md
