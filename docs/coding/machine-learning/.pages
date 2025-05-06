@@ -43,5 +43,7 @@ nav:
     - "RL Lab 5: Jimbo Game": rl_jimbo_env.py
     - "RL Lab 6: Deep Q Networks": rl-q-networks.ipynb
     - "RL Lab 7: Dueling DQN": rl-dueling-q-networks.ipynb
+    - 策略梯度方法: rl-5-policy-gradient-methods.md
+    - "RL Lab 8: REINFORCE": rl-reinforce.ipynb
     - 多臂老虎机: multi-armed-bandit.ipynb
     - 置信上界算法: upper-confidence-bound.md
