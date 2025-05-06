@@ -13,7 +13,9 @@
     * [RL Lab 5: Jimbo Game](rl_jimbo_env.py)
     * [RL Lab 6: Deep Q Networks](rl-q-networks.ipynb)
     * [RL Lab 7: Dueling DQN](rl-dueling-q-networks.ipynb)
-5. [老虎机问题](bandit.md)
+5. [策略梯度方法](rl-5-policy-gradient-methods.md)
+    * [RL Lab 8: REINFORCE](rl-reinforce.ipynb)
+6. [老虎机问题](bandit.md)
     * [多臂老虎机](multi-armed-bandit.ipynb)
 
 ## Reference
