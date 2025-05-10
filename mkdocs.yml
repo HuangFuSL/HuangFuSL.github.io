@@ -44,7 +44,7 @@ theme:
     # Search section
     - search.suggest
   font:
-    code: Source Code Pro
+    code: Maple Mono
     text: PingFang SC
   favicon: img/favicon.png
   icon:
