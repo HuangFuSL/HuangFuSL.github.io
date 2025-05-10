@@ -163,6 +163,7 @@ The blog relies on the following open-source projects:
 * [Python Markdown](https://github.com/Python-Markdown/markdown)
 * [Python Markdown Extension](https://github.com/facelessuser/pymdown-extensions)
 * [jupyter](https://github.com/jupyter/jupyter)
+* [Maple Font](https://github.com/subframe7536/maple-font)
 
 The blog uses the following mkdocs plugins to function correctly.
 
