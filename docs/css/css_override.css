@@ -358,3 +358,20 @@ button[data-md-color-accent=deep-orange] {
     margin: 0 !important;
 }
 
+/* Maple Mono Font */
+/*
+https: //github.com/subframe7536/maple-font/blob/variable/woff2/var/MapleMono%5Bwght%5D-VF.woff2
+https: //github.com/subframe7536/maple-font/blob/variable/woff2/var/MapleMono-Italic%5Bwght%5D-VF.woff2
+*/
+@font-face {
+    font-family: 'Maple Mono';
+    src: url('https://cdn.jsdelivr.net/gh/subframe7536/maple-font@vvariable/woff2/var/MapleMono%5Bwght%5D-VF.woff2') format('woff2-variations');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Maple Mono';
+    src: url('https://cdn.jsdelivr.net/gh/subframe7536/maple-font@vvariable/woff2/var/MapleMono-Italic%5Bwght%5D-VF.woff2') format('woff2-variations');
+    font-weight: normal;
+    font-style: italic;
+}
