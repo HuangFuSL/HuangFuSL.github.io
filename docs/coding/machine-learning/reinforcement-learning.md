@@ -15,6 +15,7 @@
     * [RL Lab 7: Dueling DQN](rl-dueling-q-networks.ipynb)
 5. [策略梯度方法](rl-5-policy-gradient-methods.md)
     * [RL Lab 8: REINFORCE](rl-reinforce.ipynb)
+    * [RL Lab 9: Advantage Actor-Critic](rl-a2c.ipynb)
 6. [老虎机问题](bandit.md)
     * [多臂老虎机](multi-armed-bandit.ipynb)
 
