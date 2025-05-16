@@ -4,13 +4,16 @@
 
 ## 序列决策任务
 
-序列决策（Sequential Decision Making）是强化学习的核心概念。它涉及到在一个环境中，智能体（Agent）通过与环境的交互来学习如何做出决策。智能体自身有一个状态（State）$s$，并根据当前状态选择一个动作（Action）$a$。环境根据智能体的动作返回一个奖励（Reward）$r$和下一个状态$s'$。策略（Policy）$\pi(\theta)$是智能体在给定状态下选择动作的规则，可以是确定性的（Deterministic）或随机的（Stochastic）。
+序列决策（Sequential Decision Making）是强化学习的核心概念。它涉及到在一个环境中，智能体（Agent）通过与环境的交互来学习如何做出决策。智能体自身有一个状态（State）$s\in \calS$，并根据当前状态选择一个动作（Action）$a\in \calA$。环境根据智能体的动作返回一个奖励（Reward）$\in \bbR$和下一个状态$s'$。策略（Policy）$\pi_\theta(a\mid s): \calS\times\calA \rightarrow [0, 1]$是智能体在给定状态下选择动作的概率分布，可以是确定性的或随机的。
 
-智能体的目标是最大化其在$T$周期内的累积奖励（Cumulative Reward），通常表示为折扣奖励（Discounted Reward）$r_t$。状态价值（State Value）$V_\pi(s)$表示在策略$\pi$下，从状态$s$出发，智能体在未来的所有时间步内所能获得的期望奖励。
+智能体的目标是最大化其在$T$周期内的累积奖励（Cumulative Reward），通常表示为折扣奖励（Discounted Reward）$\gamma^t r_t$之和。其中，折扣因子（Discount Factor）$\gamma$是一个介于0和1之间的值，用于平衡智能体关注短期奖励和长期奖励的程度。当$\gamma$接近1时，智能体更关注长期奖励；当$\gamma$接近0时，智能体更关注短期奖励。
+
+状态价值（State Value）$V_\pi(s)$表示在策略$\pi$下，从状态$s$出发，智能体在未来的所有时间步内所能获得的期望奖励。动作价值（Action Value）$Q_\pi(s, a)$表示从状态$s$出发，选择动作$a$，之后的后续决策按照策略$\pi$进行时，智能体在未来的所有时间步内所能获得的期望奖励。
 
 $$
 \begin{aligned}
-& \max_\pi V_\pi (s_0):= \bbE_{a_0, \ldots, s_T, a_T\mid s_0}\left[\sum_{t=0}^{T} \gamma^t r_t(s_t, a_t)\middle| s_0\right] \\
+& V_\pi (s_0):= \bbE_{a_0, \ldots, s_T, a_T\mid s_0}\left[\sum_{t=0}^{T} \gamma^t r_t(s_t, a_t)\middle| s_0\right] \\
+& Q_\pi (s_0, a_0):= \bbE_{s_1, a_1\mid s_0, a_0}\left[\sum_{t=0}^{T} \gamma^t r_t(s_t, a_t)\middle| s_0, a_0\right] \\
 s.t. & \left\{
 \begin{aligned}
 & s_{t+1} \sim P(s_{t+1} | s_t, a_t) \\
@@ -20,45 +23,82 @@ s.t. & \left\{
 \end{aligned}
 $$
 
-折扣因子（Discount Factor）$\gamma$是一个介于0和1之间的值，用于平衡智能体关注短期奖励和长期奖励的程度。当$\gamma$接近1时，智能体更关注长期奖励；当$\gamma$接近0时，智能体更关注短期奖励。
+智能体的优化目标是最大化其在$T$个时间步内的累积奖励，即
+
+$$
+\pi^* = \arg\max_\pi V_\pi (s_0)
+$$
 
 另一种定义智能体优化目标的方式为最小化后悔值（Regret），即在$T$个时间步内，智能体所获得的奖励与最优策略所能获得的奖励之间的差值，即
 
 $$
-\min_\pi V_{\pi^*} (S_0) - V_\pi (S_0)
+\min_\pi V_{\pi^*} (s_0) - V_\pi (s_0)
+$$
+
+当智能体可能永远和环境交互而不停止时，称为持续性任务（Continuing Task），反之则称为周期性任务（Episodic Task）。在周期性任务中，终止状态（Terminal State）$s_T$是一个特殊的状态，进入该状态相当于当前任务执行完成。终止状态满足：
+
+$$
+\begin{aligned}
+& P(s_T \mid s_T, a) = 1 & \forall a \in \calA \\
+& R(s_T, a) = 0 & \forall a \in \calA \\
+\end{aligned}
 $$
 
 ## 问题建模
 
-强化学习可以被建模成马尔可夫决策过程（Markov Decision Process, MDP）的变种。考虑到交互过程中环境自身的变化。智能体和环境的交互过程可以更一般地被建模为如下流程：
-
-1. 智能体的内部状态是对环境的信念，每个时间步内，智能体根据策略选择一个动作$a_t = \pi(s_t; \theta_t)$。
-2. 环境根据动作$a_t$，更新自身状态$e_{t+1} = W(e_t, a_t)$，并返回一个智能体观测到的状态$o_{t + 1} = O(e_{t + 1})$，以及一个奖励$r_t = R(e_t, a_t, e_{t + 1})$。
-3. 智能体根据当前状态$s_t$，动作$a_t$，预测对下一个状态的信念估计$\hat s_{t + 1} = P(s_t, a_t)$，
-4. 智能体根据观测状态$o_{t + 1}$预测环境的内部状态$\hat e_{t + 1} = D(o_{t + 1})$
-5. 智能体根据信念估计和环境估计，更新自身的信念$s_{t + 1} = U(\hat s_{t + 1}, \hat e_{t + 1})$。
-5. 智能体根据算法更新策略参数$\theta_{t+1} = \pi^{\text{RL}}(\theta_t, s_t, a_t, r_{t}, o_{t + 1})$。
-
-智能体侧包含策略更新模型$\pi^{\text{RL}}$、策略模型$\pi$、预测模块$P$、状态解码$D$和信念更新模型$U$，环境模型包含状态转移模型$W$、观测模型$O$和奖励模型$R$。整体来看，更新过程包含三个随机过程，即内部状态更新$s_t$，环境状态更新$e_t$和策略更新$\theta_t$。
-
-### POMDP
-
-部分可观测马尔可夫决策过程（Partially Observable Markov Decision Process, POMDP）中，环境的完整状态$e_t$是不可观测的，智能体只能通过部分观测环境，更新自身对环境的信念。在以上表示下，POMDP可以被表示为五元组$(S, A, O, W, R)$，其中$S$是状态空间，$A$是动作空间，$O$是观测空间，$W$是环境状态转移函数，$R$是奖励函数。
-
-POMDP的一个特例是上下文DP。在POMDP中，若存在一个不变的因素$C$影响和控制MDP的状态转移和奖励函数时，则为上下文MDP（Contextual MDP）。相比于POMDP，Contextual MDP更强调的是“跨环境的泛化”。
-
+强化学习可以被建模成马尔可夫决策过程（Markov Decision Process, MDP）的变种。
 
 ### MDP
 
-马尔可夫决策过程（Markov Decision Process, MDP）是强化学习的基本模型，在MDP中，智能体可以完整观测到环境状态，即$s_t\equiv e_t\equiv o_t$。此时问题可以简化为四元组$(S, A, W, R)$，其中$S$是状态空间，$A$是动作空间，$R$是奖励函数，$W$是状态转移函数。
+MDP问题假设
+
+1. 智能体能够完全观测到环境变化。
+2. 系统的未来状态只与当前状态和当前动作有关，与过去的状态和动作无关。
+
+MDP问题可以由五元组$\langle \calS, \calA, T, R, \gamma\rangle$定义，其中：
+
+* $\calS$是状态空间，$\calA$是动作空间。
+* $T(s_{t + 1} | s_t, a_t)$是状态转移函数，表示在当前状态$s_t$下，采取动作$a_t$后，转移到下一个状态$s_{t + 1}$的概率。
+* $R(s_t, a_t, s_{t + 1})$是奖励函数，表示在当前状态$s_t$下，采取动作$a_t$后，转移到下一个状态$s_{t + 1}$时，获得的奖励。
+* $\gamma$是折扣因子。
+
+### POMDP
+
+放松智能体可以完全观测环境的假设，在部分可观测马尔可夫决策过程（Partially Observable Markov Decision Process, POMDP）中，环境的完整状态$e_t$是不可观测的。POMDP可以用七元组$\langle \calE, \calA, \calO, T, R, O, \gamma\rangle$表示：
+
+* $\calE$是环境状态空间，$\calA$是动作空间，$\calO$是观测空间。
+* $T(e_{t + 1} | e_t, a_t)$是状态转移函数，表示在当前状态$e_t$下，采取动作$a_t$后，转移到下一个状态$e_{t + 1}$的概率。
+* $R(e_t, a_t)$是奖励函数，表示在当前状态$e_t$下，采取动作$a_t$后，获得的奖励。
+* $O(o_{t + 1} | e_{t + 1}, a_t)$是观测函数，表示采取动作$a_t$后，环境到达状态$e_{t + 1}$时，观测状态$o_{t + 1}$的分布。
+* $\gamma$是折扣因子。
+
+### Universal model
+
+在POMDP的基础上，假设智能体有一个内部状态，这个内部状态并不一定等价于环境的观测状态。考虑到交互过程中环境自身的变化。智能体和环境的交互过程可以更一般地被建模为
+
+$$
+\langle
+\calS, \calA, \calE, \calO,
+T, R, O, U,
+\gamma
+\rangle
+$$
+
+1. $\calS$是智能体的内部状态空间，$\calA$是动作空间，$\calE$是环境状态空间，$\calO$是观测空间。
+2. 环境状态转移函数$T(e_{t + 1} \mid e_t, a_t)$，表示在当前状态$e_t$下，采取动作$a_t$后，转移到下一个状态$e_{t + 1}$的概率。
+3. 奖励函数$R(e_t, a_t, e_{t + 1})$，表示在当前状态$e_t$下，采取动作$a_t$后，转移到下一个状态$e_{t + 1}$时，获得的奖励。
+4. 观测函数$O(o_{t + 1} \mid e_{t + 1}, a_t)$，表示采取动作$a_t$后，环境到达状态$e_{t + 1}$时，观测状态$o_{t + 1}$的分布。
+5. 状态更新函数$U(s_{t + 1}\mid s_t, o_{t + 1})$，表示智能体根据当前状态$s_t$和观测状态$o_{t + 1}$，更新自身状态$s_{t + 1}$。
+
+智能体侧包含策略更新模型$\pi^{\text{RL}}$、策略模型$\pi$、预测模块$P$、状态解码$D$和信念更新模型$U$，环境模型包含状态转移模型$W$、观测模型$O$和奖励模型$R$。整体来看，更新过程包含三个随机过程，即内部状态更新$s_t$，环境状态更新$e_t$和策略更新$\theta_t$。
 
 ### Contextual MDP
 
-上下文MDP（Contextual MDP）是强化学习的一个特例。智能体需要应对一系列的MDP问题，每个问题都有一个常量$C$影响和控制该MDP的状态转移和奖励函数。因此，智能体需要借助上下文信息，将策略泛化到一类MDP问题上。
+上下文MDP（Contextual MDP）是POMDP的一个特例。智能体需要应对一系列的MDP问题，每个问题都有一个常量$C$影响和控制该MDP的状态转移和奖励函数。因此，智能体需要借助上下文信息，将策略泛化到一类MDP问题上。
 
 ### Contextual Bandit
 
-上下文Bandit（Contextual Bandit）是POMDP的一个特例，相当于环境转移后状态$s_{t + 1}$独立于当前状态$s_t$和动作$a_t$，并且智能体能够完全观测到环境状态（$s_t\equiv o_t$），则是一个上下文bandit问题。该状态$s_t$称为“上下文”。智能体的决策仅能影响其在每一步中获得的奖励。进一步地，如果上下文不存在变化，则退化为普通多臂老虎机问题。
+上下文Bandit（Contextual Bandit）是MDP的一个特例，相当于环境转移后状态$s_{t + 1}$服从一个独立先验，与当前状态$s_t$和动作$a_t$无关。状态$s_t$称为“上下文”。智能体的决策仅能影响其在每一步中获得的奖励。进一步地，如果上下文不存在变化，则退化为普通多臂老虎机问题。
 
 ### Belief State MDP
 
