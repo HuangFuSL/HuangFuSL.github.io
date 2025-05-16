@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1738,6 +1738,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#mdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      MDP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pomdp" class="md-nav__link">
     <span class="md-ellipsis">
       POMDP
@@ -1747,9 +1756,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mdp" class="md-nav__link">
+  <a href="#universal-model" class="md-nav__link">
     <span class="md-ellipsis">
-      MDP
+      Universal model
     </span>
   </a>
   
@@ -2449,6 +2458,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#mdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      MDP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pomdp" class="md-nav__link">
     <span class="md-ellipsis">
       POMDP
@@ -2458,9 +2476,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mdp" class="md-nav__link">
+  <a href="#universal-model" class="md-nav__link">
     <span class="md-ellipsis">
-      MDP
+      Universal model
     </span>
   </a>
   
@@ -2530,11 +2548,13 @@
 <h1 id="_1">强化学习基础概念<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>强化学习是用于解决序列决策任务的一种机器学习方式。</p>
 <h2 id="_2">序列决策任务<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>序列决策（Sequential Decision Making）是强化学习的核心概念。它涉及到在一个环境中，智能体（Agent）通过与环境的交互来学习如何做出决策。智能体自身有一个状态（State）<span class="arithmatex">\(s\)</span>，并根据当前状态选择一个动作（Action）<span class="arithmatex">\(a\)</span>。环境根据智能体的动作返回一个奖励（Reward）<span class="arithmatex">\(r\)</span>和下一个状态<span class="arithmatex">\(s'\)</span>。策略（Policy）<span class="arithmatex">\(\pi(\theta)\)</span>是智能体在给定状态下选择动作的规则，可以是确定性的（Deterministic）或随机的（Stochastic）。</p>
-<p>智能体的目标是最大化其在<span class="arithmatex">\(T\)</span>周期内的累积奖励（Cumulative Reward），通常表示为折扣奖励（Discounted Reward）<span class="arithmatex">\(r_t\)</span>。状态价值（State Value）<span class="arithmatex">\(V_\pi(s)\)</span>表示在策略<span class="arithmatex">\(\pi\)</span>下，从状态<span class="arithmatex">\(s\)</span>出发，智能体在未来的所有时间步内所能获得的期望奖励。</p>
+<p>序列决策（Sequential Decision Making）是强化学习的核心概念。它涉及到在一个环境中，智能体（Agent）通过与环境的交互来学习如何做出决策。智能体自身有一个状态（State）<span class="arithmatex">\(s\in \calS\)</span>，并根据当前状态选择一个动作（Action）<span class="arithmatex">\(a\in \calA\)</span>。环境根据智能体的动作返回一个奖励（Reward）<span class="arithmatex">\(\in \bbR\)</span>和下一个状态<span class="arithmatex">\(s'\)</span>。策略（Policy）<span class="arithmatex">\(\pi_\theta(a\mid s): \calS\times\calA \rightarrow [0, 1]\)</span>是智能体在给定状态下选择动作的概率分布，可以是确定性的或随机的。</p>
+<p>智能体的目标是最大化其在<span class="arithmatex">\(T\)</span>周期内的累积奖励（Cumulative Reward），通常表示为折扣奖励（Discounted Reward）<span class="arithmatex">\(\gamma^t r_t\)</span>之和。其中，折扣因子（Discount Factor）<span class="arithmatex">\(\gamma\)</span>是一个介于0和1之间的值，用于平衡智能体关注短期奖励和长期奖励的程度。当<span class="arithmatex">\(\gamma\)</span>接近1时，智能体更关注长期奖励；当<span class="arithmatex">\(\gamma\)</span>接近0时，智能体更关注短期奖励。</p>
+<p>状态价值（State Value）<span class="arithmatex">\(V_\pi(s)\)</span>表示在策略<span class="arithmatex">\(\pi\)</span>下，从状态<span class="arithmatex">\(s\)</span>出发，智能体在未来的所有时间步内所能获得的期望奖励。动作价值（Action Value）<span class="arithmatex">\(Q_\pi(s, a)\)</span>表示从状态<span class="arithmatex">\(s\)</span>出发，选择动作<span class="arithmatex">\(a\)</span>，之后的后续决策按照策略<span class="arithmatex">\(\pi\)</span>进行时，智能体在未来的所有时间步内所能获得的期望奖励。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-&amp; \max_\pi V_\pi (s_0):= \bbE_{a_0, \ldots, s_T, a_T\mid s_0}\left[\sum_{t=0}^{T} \gamma^t r_t(s_t, a_t)\middle| s_0\right] \\
+&amp; V_\pi (s_0):= \bbE_{a_0, \ldots, s_T, a_T\mid s_0}\left[\sum_{t=0}^{T} \gamma^t r_t(s_t, a_t)\middle| s_0\right] \\
+&amp; Q_\pi (s_0, a_0):= \bbE_{s_1, a_1\mid s_0, a_0}\left[\sum_{t=0}^{T} \gamma^t r_t(s_t, a_t)\middle| s_0, a_0\right] \\
 s.t. &amp; \left\{
 \begin{aligned}
 &amp; s_{t+1} \sim P(s_{t+1} | s_t, a_t) \\
@@ -2543,31 +2563,66 @@ s.t. &amp; \left\{
 \right.
 \end{aligned}
 \]</div>
-<p>折扣因子（Discount Factor）<span class="arithmatex">\(\gamma\)</span>是一个介于0和1之间的值，用于平衡智能体关注短期奖励和长期奖励的程度。当<span class="arithmatex">\(\gamma\)</span>接近1时，智能体更关注长期奖励；当<span class="arithmatex">\(\gamma\)</span>接近0时，智能体更关注短期奖励。</p>
+<p>智能体的优化目标是最大化其在<span class="arithmatex">\(T\)</span>个时间步内的累积奖励，即</p>
+<div class="arithmatex">\[
+\pi^* = \arg\max_\pi V_\pi (s_0)
+\]</div>
 <p>另一种定义智能体优化目标的方式为最小化后悔值（Regret），即在<span class="arithmatex">\(T\)</span>个时间步内，智能体所获得的奖励与最优策略所能获得的奖励之间的差值，即</p>
 <div class="arithmatex">\[
-\min_\pi V_{\pi^*} (S_0) - V_\pi (S_0)
+\min_\pi V_{\pi^*} (s_0) - V_\pi (s_0)
+\]</div>
+<p>当智能体可能永远和环境交互而不停止时，称为持续性任务（Continuing Task），反之则称为周期性任务（Episodic Task）。在周期性任务中，终止状态（Terminal State）<span class="arithmatex">\(s_T\)</span>是一个特殊的状态，进入该状态相当于当前任务执行完成。终止状态满足：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; P(s_T \mid s_T, a) = 1 &amp; \forall a \in \calA \\
+&amp; R(s_T, a) = 0 &amp; \forall a \in \calA \\
+\end{aligned}
 \]</div>
 <h2 id="_3">问题建模<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>强化学习可以被建模成马尔可夫决策过程（Markov Decision Process, MDP）的变种。考虑到交互过程中环境自身的变化。智能体和环境的交互过程可以更一般地被建模为如下流程：</p>
+<p>强化学习可以被建模成马尔可夫决策过程（Markov Decision Process, MDP）的变种。</p>
+<h3 id="mdp">MDP<a class="headerlink" href="#mdp" title="Permanent link">&para;</a></h3>
+<p>MDP问题假设</p>
 <ol>
-<li>智能体的内部状态是对环境的信念，每个时间步内，智能体根据策略选择一个动作<span class="arithmatex">\(a_t = \pi(s_t; \theta_t)\)</span>。</li>
-<li>环境根据动作<span class="arithmatex">\(a_t\)</span>，更新自身状态<span class="arithmatex">\(e_{t+1} = W(e_t, a_t)\)</span>，并返回一个智能体观测到的状态<span class="arithmatex">\(o_{t + 1} = O(e_{t + 1})\)</span>，以及一个奖励<span class="arithmatex">\(r_t = R(e_t, a_t, e_{t + 1})\)</span>。</li>
-<li>智能体根据当前状态<span class="arithmatex">\(s_t\)</span>，动作<span class="arithmatex">\(a_t\)</span>，预测对下一个状态的信念估计<span class="arithmatex">\(\hat s_{t + 1} = P(s_t, a_t)\)</span>，</li>
-<li>智能体根据观测状态<span class="arithmatex">\(o_{t + 1}\)</span>预测环境的内部状态<span class="arithmatex">\(\hat e_{t + 1} = D(o_{t + 1})\)</span></li>
-<li>智能体根据信念估计和环境估计，更新自身的信念<span class="arithmatex">\(s_{t + 1} = U(\hat s_{t + 1}, \hat e_{t + 1})\)</span>。</li>
-<li>智能体根据算法更新策略参数<span class="arithmatex">\(\theta_{t+1} = \pi^{\text{RL}}(\theta_t, s_t, a_t, r_{t}, o_{t + 1})\)</span>。</li>
+<li>智能体能够完全观测到环境变化。</li>
+<li>系统的未来状态只与当前状态和当前动作有关，与过去的状态和动作无关。</li>
+</ol>
+<p>MDP问题可以由五元组<span class="arithmatex">\(\langle \calS, \calA, T, R, \gamma\rangle\)</span>定义，其中：</p>
+<ul>
+<li><span class="arithmatex">\(\calS\)</span>是状态空间，<span class="arithmatex">\(\calA\)</span>是动作空间。</li>
+<li><span class="arithmatex">\(T(s_{t + 1} | s_t, a_t)\)</span>是状态转移函数，表示在当前状态<span class="arithmatex">\(s_t\)</span>下，采取动作<span class="arithmatex">\(a_t\)</span>后，转移到下一个状态<span class="arithmatex">\(s_{t + 1}\)</span>的概率。</li>
+<li><span class="arithmatex">\(R(s_t, a_t, s_{t + 1})\)</span>是奖励函数，表示在当前状态<span class="arithmatex">\(s_t\)</span>下，采取动作<span class="arithmatex">\(a_t\)</span>后，转移到下一个状态<span class="arithmatex">\(s_{t + 1}\)</span>时，获得的奖励。</li>
+<li><span class="arithmatex">\(\gamma\)</span>是折扣因子。</li>
+</ul>
+<h3 id="pomdp">POMDP<a class="headerlink" href="#pomdp" title="Permanent link">&para;</a></h3>
+<p>放松智能体可以完全观测环境的假设，在部分可观测马尔可夫决策过程（Partially Observable Markov Decision Process, POMDP）中，环境的完整状态<span class="arithmatex">\(e_t\)</span>是不可观测的。POMDP可以用七元组<span class="arithmatex">\(\langle \calE, \calA, \calO, T, R, O, \gamma\rangle\)</span>表示：</p>
+<ul>
+<li><span class="arithmatex">\(\calE\)</span>是环境状态空间，<span class="arithmatex">\(\calA\)</span>是动作空间，<span class="arithmatex">\(\calO\)</span>是观测空间。</li>
+<li><span class="arithmatex">\(T(e_{t + 1} | e_t, a_t)\)</span>是状态转移函数，表示在当前状态<span class="arithmatex">\(e_t\)</span>下，采取动作<span class="arithmatex">\(a_t\)</span>后，转移到下一个状态<span class="arithmatex">\(e_{t + 1}\)</span>的概率。</li>
+<li><span class="arithmatex">\(R(e_t, a_t)\)</span>是奖励函数，表示在当前状态<span class="arithmatex">\(e_t\)</span>下，采取动作<span class="arithmatex">\(a_t\)</span>后，获得的奖励。</li>
+<li><span class="arithmatex">\(O(o_{t + 1} | e_{t + 1}, a_t)\)</span>是观测函数，表示采取动作<span class="arithmatex">\(a_t\)</span>后，环境到达状态<span class="arithmatex">\(e_{t + 1}\)</span>时，观测状态<span class="arithmatex">\(o_{t + 1}\)</span>的分布。</li>
+<li><span class="arithmatex">\(\gamma\)</span>是折扣因子。</li>
+</ul>
+<h3 id="universal-model">Universal model<a class="headerlink" href="#universal-model" title="Permanent link">&para;</a></h3>
+<p>在POMDP的基础上，假设智能体有一个内部状态，这个内部状态并不一定等价于环境的观测状态。考虑到交互过程中环境自身的变化。智能体和环境的交互过程可以更一般地被建模为</p>
+<div class="arithmatex">\[
+\langle
+\calS, \calA, \calE, \calO,
+T, R, O, U,
+\gamma
+\rangle
+\]</div>
+<ol>
+<li><span class="arithmatex">\(\calS\)</span>是智能体的内部状态空间，<span class="arithmatex">\(\calA\)</span>是动作空间，<span class="arithmatex">\(\calE\)</span>是环境状态空间，<span class="arithmatex">\(\calO\)</span>是观测空间。</li>
+<li>环境状态转移函数<span class="arithmatex">\(T(e_{t + 1} \mid e_t, a_t)\)</span>，表示在当前状态<span class="arithmatex">\(e_t\)</span>下，采取动作<span class="arithmatex">\(a_t\)</span>后，转移到下一个状态<span class="arithmatex">\(e_{t + 1}\)</span>的概率。</li>
+<li>奖励函数<span class="arithmatex">\(R(e_t, a_t, e_{t + 1})\)</span>，表示在当前状态<span class="arithmatex">\(e_t\)</span>下，采取动作<span class="arithmatex">\(a_t\)</span>后，转移到下一个状态<span class="arithmatex">\(e_{t + 1}\)</span>时，获得的奖励。</li>
+<li>观测函数<span class="arithmatex">\(O(o_{t + 1} \mid e_{t + 1}, a_t)\)</span>，表示采取动作<span class="arithmatex">\(a_t\)</span>后，环境到达状态<span class="arithmatex">\(e_{t + 1}\)</span>时，观测状态<span class="arithmatex">\(o_{t + 1}\)</span>的分布。</li>
+<li>状态更新函数<span class="arithmatex">\(U(s_{t + 1}\mid s_t, o_{t + 1})\)</span>，表示智能体根据当前状态<span class="arithmatex">\(s_t\)</span>和观测状态<span class="arithmatex">\(o_{t + 1}\)</span>，更新自身状态<span class="arithmatex">\(s_{t + 1}\)</span>。</li>
 </ol>
 <p>智能体侧包含策略更新模型<span class="arithmatex">\(\pi^{\text{RL}}\)</span>、策略模型<span class="arithmatex">\(\pi\)</span>、预测模块<span class="arithmatex">\(P\)</span>、状态解码<span class="arithmatex">\(D\)</span>和信念更新模型<span class="arithmatex">\(U\)</span>，环境模型包含状态转移模型<span class="arithmatex">\(W\)</span>、观测模型<span class="arithmatex">\(O\)</span>和奖励模型<span class="arithmatex">\(R\)</span>。整体来看，更新过程包含三个随机过程，即内部状态更新<span class="arithmatex">\(s_t\)</span>，环境状态更新<span class="arithmatex">\(e_t\)</span>和策略更新<span class="arithmatex">\(\theta_t\)</span>。</p>
-<h3 id="pomdp">POMDP<a class="headerlink" href="#pomdp" title="Permanent link">&para;</a></h3>
-<p>部分可观测马尔可夫决策过程（Partially Observable Markov Decision Process, POMDP）中，环境的完整状态<span class="arithmatex">\(e_t\)</span>是不可观测的，智能体只能通过部分观测环境，更新自身对环境的信念。在以上表示下，POMDP可以被表示为五元组<span class="arithmatex">\((S, A, O, W, R)\)</span>，其中<span class="arithmatex">\(S\)</span>是状态空间，<span class="arithmatex">\(A\)</span>是动作空间，<span class="arithmatex">\(O\)</span>是观测空间，<span class="arithmatex">\(W\)</span>是环境状态转移函数，<span class="arithmatex">\(R\)</span>是奖励函数。</p>
-<p>POMDP的一个特例是上下文DP。在POMDP中，若存在一个不变的因素<span class="arithmatex">\(C\)</span>影响和控制MDP的状态转移和奖励函数时，则为上下文MDP（Contextual MDP）。相比于POMDP，Contextual MDP更强调的是“跨环境的泛化”。</p>
-<h3 id="mdp">MDP<a class="headerlink" href="#mdp" title="Permanent link">&para;</a></h3>
-<p>马尔可夫决策过程（Markov Decision Process, MDP）是强化学习的基本模型，在MDP中，智能体可以完整观测到环境状态，即<span class="arithmatex">\(s_t\equiv e_t\equiv o_t\)</span>。此时问题可以简化为四元组<span class="arithmatex">\((S, A, W, R)\)</span>，其中<span class="arithmatex">\(S\)</span>是状态空间，<span class="arithmatex">\(A\)</span>是动作空间，<span class="arithmatex">\(R\)</span>是奖励函数，<span class="arithmatex">\(W\)</span>是状态转移函数。</p>
 <h3 id="contextual-mdp">Contextual MDP<a class="headerlink" href="#contextual-mdp" title="Permanent link">&para;</a></h3>
-<p>上下文MDP（Contextual MDP）是强化学习的一个特例。智能体需要应对一系列的MDP问题，每个问题都有一个常量<span class="arithmatex">\(C\)</span>影响和控制该MDP的状态转移和奖励函数。因此，智能体需要借助上下文信息，将策略泛化到一类MDP问题上。</p>
+<p>上下文MDP（Contextual MDP）是POMDP的一个特例。智能体需要应对一系列的MDP问题，每个问题都有一个常量<span class="arithmatex">\(C\)</span>影响和控制该MDP的状态转移和奖励函数。因此，智能体需要借助上下文信息，将策略泛化到一类MDP问题上。</p>
 <h3 id="contextual-bandit">Contextual Bandit<a class="headerlink" href="#contextual-bandit" title="Permanent link">&para;</a></h3>
-<p>上下文Bandit（Contextual Bandit）是POMDP的一个特例，相当于环境转移后状态<span class="arithmatex">\(s_{t + 1}\)</span>独立于当前状态<span class="arithmatex">\(s_t\)</span>和动作<span class="arithmatex">\(a_t\)</span>，并且智能体能够完全观测到环境状态（<span class="arithmatex">\(s_t\equiv o_t\)</span>），则是一个上下文bandit问题。该状态<span class="arithmatex">\(s_t\)</span>称为“上下文”。智能体的决策仅能影响其在每一步中获得的奖励。进一步地，如果上下文不存在变化，则退化为普通多臂老虎机问题。</p>
+<p>上下文Bandit（Contextual Bandit）是MDP的一个特例，相当于环境转移后状态<span class="arithmatex">\(s_{t + 1}\)</span>服从一个独立先验，与当前状态<span class="arithmatex">\(s_t\)</span>和动作<span class="arithmatex">\(a_t\)</span>无关。状态<span class="arithmatex">\(s_t\)</span>称为“上下文”。智能体的决策仅能影响其在每一步中获得的奖励。进一步地，如果上下文不存在变化，则退化为普通多臂老虎机问题。</p>
 <h3 id="belief-state-mdp">Belief State MDP<a class="headerlink" href="#belief-state-mdp" title="Permanent link">&para;</a></h3>
 <p>在belief state MDP中，智能体维护一个环境状态<span class="arithmatex">\(w\)</span>的估计分布，也称为信念（Belief State）<span class="arithmatex">\(B_t\)</span>，而不是直接维护环境状态<span class="arithmatex">\(e_t\)</span>。智能体根据该信念分布<span class="arithmatex">\(w\sim B_t\)</span>估计奖励函数<span class="arithmatex">\(R(o, a; w)\)</span>。在观测到新的状态后，智能体按照贝叶斯更新的方式更新信念状态。</p>
 <h2 id="_4">强化学习<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
@@ -2601,7 +2656,7 @@ s.t. &amp; \left\{
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年4月28日 11:29:00"><span class="timeago" datetime="2025-04-28T11:29:00+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年4月28日 11:29:00">2025-04-28</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月16日 09:58:29"><span class="timeago" datetime="2025-05-16T09:58:29+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月16日 09:58:29">2025-05-16</span>
   </span>
 
     
@@ -2769,10 +2824,10 @@ s.t. &amp; \left\{
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../js/timeago.min.js"></script>
       

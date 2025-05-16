@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -2471,9 +2471,9 @@ Q^*(s, a) &amp;= R(s, a) + \gamma \sum_{s'} P(s'|s, a)V^*(s')
 \end{aligned}\right.
 \end{aligned}
 \]</div>
-<p>最优策略可以通过动作-价值函数导出。</p>
+<p>策略可以通过动作-价值函数导出，是一个确定性策略。当<span class="arithmatex">\(Q\)</span>为最优的动作-价值函数时，策略<span class="arithmatex">\(\pi\)</span>也是最优的。</p>
 <div class="arithmatex">\[
-\pi^*(s) = \arg \max_a Q^*(s, a)
+\pi(s) = \arg \max_a Q(s, a)
 \]</div>
 <p>更新策略的过程称为策略优化，根据策略计算状态价值函数和动作价值函数的过程称为策略评估。</p>
 <h2 id="_3">价值迭代<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
@@ -2488,21 +2488,64 @@ V_{s + 1}(s) = \max_{a} \left[R(s, a) + \gamma \sum_{s'} P(s'|s, a)V_s(s')\right
 \Delta_{k + 1} &amp;= \max_s [V^*(s) - V_{k + 1}(s)] \\
 &amp;= \max_s \left[\max_{a} \left[R(s, a) + \gamma \sum_{s'} P(s'|s, a)V^*(s')\right] - \max_{a} \left[R(s, a) + \gamma \sum_{s'} P(s'|s, a)V_k(s')\right]\right] \\
 &amp;\leq \max_s \left[ \max_a \gamma \sum_{s'} P(s'|s, a)(V^*(s') - V_k(s')) \right] \\
-&amp;=\max_s \left[V^*(s) - V_k(s)\right] \\
-&amp;\leq \gamma \Delta_k
+&amp;\leq \max_s \left[ \max_a \gamma \sum_{s'} P(s'|s, a)\max_{s''}(V^*(s'') - V_k(s'')) \right] \\
+&amp;\leq \max_s \left[ \max_a \gamma \sum_{s'} P(s'|s, a)\right]\max_{s''}(V^*(s'') - V_k(s'')) \\
+&amp;=\gamma\max_{s''} \left[V^*(s'') - V_k(s'')\right] \\
+&amp;= \gamma \Delta_k
 \end{aligned}
 \]</div>
 <p>因此，价值迭代算法能保证对价值函数的估计逐渐趋近最优。价值迭代无论是同时更新所有状态的价值函数，还是逐个更新状态的价值函数，都是收敛的。</p>
 <h2 id="_4">策略迭代<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>策略迭代是一种常用的求解动态规划问题的方法。它包含两个步骤，即策略评估和策略提升。在策略评估阶段，算法根据当前策略和上一次迭代的状态价值函数，计算当前的状态价值函数。</p>
-<div class="arithmatex">\[
-\bsv_{k + 1} = \bsr_{\pi_k} + \gamma \bsP_{\pi_k} \bsv_k
-\]</div>
+<p>策略迭代是一种常用的求解动态规划问题的方法。它包含两个步骤，即策略提升和策略评估。</p>
 <p>在策略提升阶段，算法根据当前的状态价值函数，计算出一个新的策略。</p>
 <div class="arithmatex">\[
-\pi_{k + 1}(s) = \arg \max_a \left[R(s, a) + \gamma \sum_{s'} P(s'|s, a)V_k(s')\right]
+\pi_{k + 1}(s) = \arg \max_a \left[R(s, a) + \gamma \sum_{s'} P(s'|s, a)V_{\pi_k}(s')\right]
 \]</div>
-<p>可以证明，<span class="arithmatex">\(\bsv_{k + 1}\geq \bsv_k\)</span>。</p>
+<p>在策略评估阶段，算法根据当前策略和上一次迭代的状态价值函数，计算当前的状态价值函数。</p>
+<div class="arithmatex">\[
+V_{\pi_{k + 1}}(s) = \sum_a \pi_{k + 1}(a|s) \left[R(s, a) + \gamma \sum_{s'} P(s'|s, a)V_{\pi_k}(s')\right]
+\]</div>
+<details class="proof" open="open">
+<summary>策略改进引理</summary>
+<p><strong>引理：</strong> 对于确定性策略<span class="arithmatex">\(\pi, \pi'\)</span>，若</p>
+<div class="arithmatex">\[
+Q_\pi(s, \pi'(s)) \geq V_\pi(s)
+\]</div>
+<p>则<span class="arithmatex">\(V_{\pi'}(s) \geq V_\pi(s)\)</span>。</p>
+<p><strong>证明：</strong> 已知</p>
+<div class="arithmatex">\[
+Q_\pi(s, \pi'(s)) \geq V_\pi(s) = Q_\pi(s, \pi(s))
+\]</div>
+<p>定义值函数序列<span class="arithmatex">\(V^{(k + 1)}(s) = R(s, \pi'(s)) +\gamma\sum_{s'} P(s'|s, \pi'(s))V^{(k)}(s')\)</span>，且<span class="arithmatex">\(V^{(0)}(s) = V_\pi(s)\)</span>。</p>
+<ul>
+<li><strong>初始条件</strong>：根据已知，有<span class="arithmatex">\(V^{(1)}(s)\geq V^{(0)}(s)\)</span></li>
+<li>
+<p><strong>归纳假设</strong>：假设<span class="arithmatex">\(V^{(k)}(s) \geq V^{(k - 1)}(s)\)</span>，即</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; V^{(k)}(s) \geq V^{(k - 1)}(s) \\
+\Rightarrow &amp;V^{(k)}(s') \geq V^{(k - 1)}(s') \\
+\Rightarrow &amp;\gamma \sum_{s'} P(s'\mid s, \pi'(s)) V^{(k)}(s')\geq \gamma\sum_{s'} P(s'\mid s, \pi'(s))V^{(k - 1)}(s') \\
+\Rightarrow &amp;R(s, \pi'(s)) + \gamma\sum_{s'} P(s'\mid s, \pi'(s))V^{(k)}(s') \\
+&amp;\geq R(s, \pi'(s)) + \gamma\sum_{s'} P(s'\mid s, \pi'(s))V^{(k - 1)}(s') \\
+\Rightarrow &amp;V^{(k + 1)}(s) \geq V^{(k)}(s)
+\end{aligned}
+\]</div>
+</li>
+</ul>
+<p>根据归纳法，有</p>
+<div class="arithmatex">\[
+V_{\pi'}(s) = \lim_{k\rightarrow\infty} V^{(k)}(s) \geq V^{(0)}(s) = V_{\pi}(s)
+\]</div>
+</details>
+<p>据引理，由于<span class="arithmatex">\(\pi_{k + 1}(s) = \arg \max_a \left[R(s, a) + \gamma \sum_{s'} P(s'|s, a)V_{\pi_k}(s')\right]\)</span>，有</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;Q(s, \pi_{k + 1}(s)) \geq V_{\pi_k}(s) \\
+\Rightarrow &amp;V_{\pi_{k + 1}}(s) \geq V_{\pi_k}(s) \\
+\end{aligned}
+\]</div>
+<p>当且仅当<span class="arithmatex">\(\pi_{k + 1}(s) = \pi_k(s)\)</span>时，<span class="arithmatex">\(V_{\pi_{k + 1}}(s) = V_{\pi_k}(s)\)</span>。由于确定性策略的策略空间<span class="arithmatex">\(\calS\times \calA\)</span>是有限的，因此策略迭代算法保证有限步内收敛到最优策略。</p>
 
 
 
@@ -2525,7 +2568,7 @@ V_{s + 1}(s) = \max_{a} \left[R(s, a) + \gamma \sum_{s'} P(s'|s, a)V_s(s')\right
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月1日 09:54:31"><span class="timeago" datetime="2025-05-01T09:54:31+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月1日 09:54:31">2025-05-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月16日 09:58:29"><span class="timeago" datetime="2025-05-16T09:58:29+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月16日 09:58:29">2025-05-16</span>
   </span>
 
     
@@ -2693,10 +2736,10 @@ V_{s + 1}(s) = \max_{a} \left[R(s, a) + \gamma \sum_{s'} P(s'|s, a)V_s(s')\right
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../js/timeago.min.js"></script>
       
